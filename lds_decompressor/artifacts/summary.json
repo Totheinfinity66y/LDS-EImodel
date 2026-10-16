@@ -1,0 +1,77 @@
+{
+  "model": "handcrafted L/D/S rate circuit; no training",
+  "parameters": {
+    "location_kappa": 8.0,
+    "direction_slope": 6.0,
+    "step_slope": 6.0,
+    "direction_gains": [
+      1.0,
+      1.0
+    ],
+    "step_gains": [
+      1.0,
+      1.0
+    ],
+    "joint_gains": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "readout_gains": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "tau_tuning": 0.02,
+    "tau_readout": 0.02,
+    "tau_gate": 0.02,
+    "tau_relay": 0.03,
+    "tau_e": 0.1,
+    "tau_i": 0.05,
+    "encoding_duration": 0.2,
+    "readout_duration": 0.2,
+    "gate_duration": 0.2,
+    "rank_duration": 0.8,
+    "dt": 0.002,
+    "w_ee": 0.15,
+    "w_ei": 0.2,
+    "w_ie": 0.25,
+    "gate_strength": 2.0
+  },
+  "runtime": {
+    "python": "3.12.12 | packaged by conda-forge | (main, Jan 26 2026, 23:38:32) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\Totheinfinity\\.conda\\envs\\analysis\\python.exe",
+    "numpy": "2.3.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "backend": "CPU"
+  },
+  "conditions": 24,
+  "correct": 24,
+  "rank_accuracy": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "maximum_blocked_relay": 0.0,
+  "spatial_probe_conditions": 288,
+  "spatial_probe_correct": 288,
+  "representative": {
+    "L": 1,
+    "D": 1,
+    "S": 2,
+    "predicted": [
+      1,
+      2,
+      4,
+      5
+    ]
+  },
+  "claims": [
+    "Supplied symbolic code and fixed ring/rank operators",
+    "No evidence of learned rules, continuous attractors, or autonomous rank timing",
+    "Off-site probes test quantized decoding on a finite angular grid"
+  ]
+}
