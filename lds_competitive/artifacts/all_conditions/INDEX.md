@@ -1,0 +1,28 @@
+# 全部24条件的29率变量原始活动
+
+各图共用原始率色标，不逐行归一化。
+
+- [L=1, D=+1, S=1 | E1 -> E2 -> E3 -> E4](L1_DCW_S1.png)
+- [L=1, D=+1, S=2 | E1 -> E2 -> E4 -> E5](L1_DCW_S2.png)
+- [L=1, D=-1, S=1 | E1 -> E6 -> E5 -> E4](L1_DCCW_S1.png)
+- [L=1, D=-1, S=2 | E1 -> E6 -> E4 -> E3](L1_DCCW_S2.png)
+- [L=2, D=+1, S=1 | E2 -> E3 -> E4 -> E5](L2_DCW_S1.png)
+- [L=2, D=+1, S=2 | E2 -> E3 -> E5 -> E6](L2_DCW_S2.png)
+- [L=2, D=-1, S=1 | E2 -> E1 -> E6 -> E5](L2_DCCW_S1.png)
+- [L=2, D=-1, S=2 | E2 -> E1 -> E5 -> E4](L2_DCCW_S2.png)
+- [L=3, D=+1, S=1 | E3 -> E4 -> E5 -> E6](L3_DCW_S1.png)
+- [L=3, D=+1, S=2 | E3 -> E4 -> E6 -> E1](L3_DCW_S2.png)
+- [L=3, D=-1, S=1 | E3 -> E2 -> E1 -> E6](L3_DCCW_S1.png)
+- [L=3, D=-1, S=2 | E3 -> E2 -> E6 -> E5](L3_DCCW_S2.png)
+- [L=4, D=+1, S=1 | E4 -> E5 -> E6 -> E1](L4_DCW_S1.png)
+- [L=4, D=+1, S=2 | E4 -> E5 -> E1 -> E2](L4_DCW_S2.png)
+- [L=4, D=-1, S=1 | E4 -> E3 -> E2 -> E1](L4_DCCW_S1.png)
+- [L=4, D=-1, S=2 | E4 -> E3 -> E1 -> E6](L4_DCCW_S2.png)
+- [L=5, D=+1, S=1 | E5 -> E6 -> E1 -> E2](L5_DCW_S1.png)
+- [L=5, D=+1, S=2 | E5 -> E6 -> E2 -> E3](L5_DCW_S2.png)
+- [L=5, D=-1, S=1 | E5 -> E4 -> E3 -> E2](L5_DCCW_S1.png)
+- [L=5, D=-1, S=2 | E5 -> E4 -> E2 -> E1](L5_DCCW_S2.png)
+- [L=6, D=+1, S=1 | E6 -> E1 -> E2 -> E3](L6_DCW_S1.png)
+- [L=6, D=+1, S=2 | E6 -> E1 -> E3 -> E4](L6_DCW_S2.png)
+- [L=6, D=-1, S=1 | E6 -> E5 -> E4 -> E3](L6_DCCW_S1.png)
+- [L=6, D=-1, S=2 | E6 -> E5 -> E3 -> E2](L6_DCCW_S2.png)
