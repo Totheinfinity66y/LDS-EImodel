@@ -67,6 +67,7 @@ class Transition:
     gate_i_rates: Array
     relay_raw_drive: Array
     relay_inhibitory_drive: Array
+    relay_path_targets: Array  # [4, 6] static gated inputs, not dynamic rates
     relay_target: Array
     time: Array
     relay_rates: Array
@@ -98,7 +99,7 @@ class Decompression:
 
 
 class RateDecompressor:
-    """Six position E groups, four shared relay paths, explicit inhibitory gates.
+    """Six position E groups, six summed relay states, four gated input paths.
 
     External rank pulses select one of three connection slices. The model
     does not claim an autonomous rank clock or persistent symbolic memory.
@@ -120,7 +121,7 @@ class RateDecompressor:
 
     @property
     def rate_potentials(self) -> Array:
-        """All 47 current raw rates, in ``unit_names`` order; safe to print."""
+        """All 29 current raw rates, in ``unit_names`` order; safe to print."""
         return _frozen(np.concatenate([n.rate_potentials for n in self.neurons.values()]))
 
     @property
@@ -178,8 +179,7 @@ class RateDecompressor:
         drives = np.zeros((steps + 1, 6))
         for k in range(steps):
             if relay_target is not None:
-                drives[k] = np.einsum("pij,pj->i", self.connections.relay_to_e,
-                                      self.relay.rates.reshape(4, 6))
+                drives[k] = self.relay.rates
             else:
                 drives[k] = drive
             # Compute both targets before either step: synchronous Euler.
@@ -188,21 +188,20 @@ class RateDecompressor:
             self.e.step(e_target, p.dt)
             self.i.step(i_target, p.dt)
             if relay_target is not None:
-                self.relay.step(relay_target.reshape(24), p.dt)
+                self.relay.step(relay_target, p.dt)
             else:
                 # During initialization these unused paths remain exactly zero.
                 self.relay.hold()
         es = self.e.history
         ins = self.i.history[:, 0]
-        relays = self.relay.history.reshape(steps + 1, 4, 6)
-        drives[-1] = (drive if relay_target is None else
-                      np.einsum("pij,pj->i", self.connections.relay_to_e, relays[-1]))
+        relays = self.relay.history
+        drives[-1] = drive if relay_target is None else relays[-1]
         return time, es, ins, relays, drives
 
     def _record_rates(self, time, e, i, relay):
         """Record all current neuron values; plotting never constructs rates."""
         samples = {name: neurons.rates for name, neurons in self.neurons.items()}
-        samples.update({"Position E": e, "Relay": relay.reshape(len(time), 24),
+        samples.update({"Position E": e, "Relay": relay,
                         "Global I": i[:, None]})
         return RateRecording.from_groups(time, samples)
 
@@ -216,13 +215,14 @@ class RateDecompressor:
         gate_target = self.connections.winner_to_gate @ pulse
         gate_rates = self.gate_i.gate(gate_target)
         source = normalize(state.e_rates)
-        raw, inhibition, target = self.relay.target(
-            source, self.connections.e_to_relay, gate_rates, self.connections.gate_to_relay)
+        raw, inhibition, path_targets, target = self.relay.target(
+            source, self.connections.e_to_relay, gate_rates, self.connections.gate_to_relay,
+            self.connections.relay_to_e)
         time, e, i, relay, drive = self._integrate_ei(
             None, state.e_rates, state.i_rate, relay_target=target)
         following = NeuralState(e[-1], float(i[-1]), state.encoding, state.rank + 1)
         trace = Transition(state.rank, source, readout, PATH_NAMES[winner], SHIFTS[winner],
-                           gate_target, gate_rates, raw, inhibition, target,
+                           gate_target, gate_rates, raw, inhibition, path_targets, target,
                            time, relay, drive, e, i, self._record_rates(time, e, i, relay))
         return following, trace
 

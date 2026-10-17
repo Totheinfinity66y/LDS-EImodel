@@ -32,8 +32,6 @@ class UnitGroup:
 
     @property
     def groups(self):
-        if self.attribute == "relay":
-            return tuple(f"Relay {path}" for path in PATH_NAMES for _ in range(6))
         return (self.name,) * len(self.labels)
 
 
@@ -44,8 +42,7 @@ UNIT_GROUPS = (
     UnitGroup("Joint", "j", tuple(f"J_{p}" for p in PATH_NAMES)),
     UnitGroup("Displacement", "v", tuple(f"DISP_{p}" for p in PATH_NAMES)),
     UnitGroup("Gate I", "gate_i", tuple(f"I_gate_{p}" for p in PATH_NAMES)),
-    UnitGroup("Relay", "relay", tuple(f"R_{p}_E{k}" for p in PATH_NAMES
-                                      for k in range(1, 7)), "integrated"),
+    UnitGroup("Relay", "relay", tuple(f"M{k}" for k in range(1, 7)), "integrated"),
     UnitGroup("Global I", "i", ("I_global",), "integrated"),
 )
 
@@ -161,7 +158,7 @@ class Connections:
     """Editable matrices, independently allocated for each model instance."""
 
     e_to_relay: Array        # [path, relay_site, source_E], nonnegative
-    relay_to_e: Array        # [path, target_E, relay_site], nonnegative
+    relay_to_e: Array        # [path, target_E, relay_site]; projects input before aggregation
     rank_to_displacement: Array  # [transition, displacement, joint], nonnegative
     winner_to_gate: Array    # [gate_I, winning_displacement], nonnegative
     gate_to_relay: Array     # [path, relay_site, gate_I], nonpositive

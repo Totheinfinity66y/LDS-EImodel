@@ -81,12 +81,8 @@ def plot_sequence_artifacts(output: Path):
     axes[2].set_ylabel("Readout\n(held)")
     _lines(axes[3], timeline, "Gate I", PATH_COLORS, held=True)
     axes[3].set_ylabel("Gate I\n(held)")
-    for path, color in zip(PATHS, PATH_COLORS):
-        axes[4].plot(timeline.time, timeline.columns(f"Relay {path}").sum(axis=1),
-                     color=color, lw=1.7, label=path)
-    axes[4].legend(loc="upper right", ncol=4, fontsize=8)
-    axes[4].set_ylabel("Relay sum")
-    _boundaries(axes[4], timeline)
+    _lines(axes[4], timeline, "Relay", E_COLORS)
+    axes[4].set_ylabel("Relay M1..M6")
     _lines(axes[5], timeline, "Global I", ("#334155",))
     axes[5].set_ylabel("Global I")
     axes[5].set_xticks(np.arange(0, timeline.time[-1] + 1e-8, 0.2))
@@ -102,12 +98,13 @@ def plot_sequence_artifacts(output: Path):
 
     fig, ax = plt.subplots(figsize=(15, 14))
     fig.subplots_adjust(left=0.18, right=0.82, top=0.90, bottom=0.105)
-    im = ax.pcolormesh(timeline.time, np.arange(47), timeline.rates.T, shading="nearest",
+    unit_count = len(timeline.labels)
+    im = ax.pcolormesh(timeline.time, np.arange(unit_count), timeline.rates.T, shading="nearest",
                        cmap="viridis", vmin=0, vmax=float(timeline.rates.max()), rasterized=True)
-    ax.set_yticks(range(47), timeline.labels, fontsize=8.5)
+    ax.set_yticks(range(unit_count), timeline.labels, fontsize=8.5)
     ax.invert_yaxis()
     starts = np.r_[0, np.flatnonzero(timeline.groups[1:] != timeline.groups[:-1]) + 1]
-    ends = np.r_[starts[1:], 47]
+    ends = np.r_[starts[1:], unit_count]
     for start, end in zip(starts, ends):
         held = timeline.modes[start] == "held"
         color = "#ad5b17" if held else "#156a76"
@@ -122,14 +119,14 @@ def plot_sequence_artifacts(output: Path):
     ax.set_xlim(timeline.time[0], timeline.time[-1])
     ax.set_xticks(np.arange(0, timeline.time[-1] + 1e-8, 0.2))
     ax.set_xlabel("Cumulative E/I integration time after initialization (s)", fontsize=11)
-    ax.set_ylabel("Every scalar rate unit (47 rows; no per-row rescaling)", fontsize=11)
+    ax.set_ylabel(f"Every scalar rate variable ({unit_count} rows; no per-row rescaling)", fontsize=11)
     top = ax.secondary_xaxis("top")
     top.set_xticks(timeline.rank_times,
                   [f"R{r + 1}: E{int(site)}" for r, site in enumerate(timeline.positions)])
     top.tick_params(labelsize=10, pad=8)
     cax = fig.add_axes([0.925, 0.35, 0.012, 0.30])
     fig.colorbar(im, cax=cax, label="raw rate (model units)")
-    fig.suptitle("All 47 rate units | " + decoded, y=0.965, fontsize=17, weight="bold")
+    fig.suptitle(f"All {unit_count} rate variables | " + decoded, y=0.965, fontsize=17, weight="bold")
     fig.legend(handles=[Patch(color="#156a76", label="Integrated E / I / relay activity"),
                         Patch(color="#ad5b17", label="Held encoding / rank-control snapshots")],
                loc="upper center", bbox_to_anchor=(0.5, 0.945), ncol=2, frameon=False, fontsize=10)

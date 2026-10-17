@@ -55,7 +55,9 @@
     1.0,
     1.0
   ],
-  "maximum_blocked_relay": 0.0,
+  "relay_states": 6,
+  "total_rate_units": 29,
+  "maximum_blocked_path_input": 0.0,
   "spatial_probe_conditions": 288,
   "spatial_probe_correct": 288,
   "representative": {

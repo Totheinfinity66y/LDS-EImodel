@@ -17,9 +17,9 @@ class SequenceTimelineTests(unittest.TestCase):
 
     def test_every_rate_unit_is_present_and_unscaled(self):
         line = build_sequence_timeline(self.recorded)
-        self.assertEqual(line.rates.shape, (1201, 47))
-        self.assertEqual(len(set(line.labels)), 47)
-        self.assertEqual(np.count_nonzero(line.modes == "integrated"), 31)
+        self.assertEqual(line.rates.shape, (1201, 29))
+        self.assertEqual(len(set(line.labels)), 29)
+        self.assertEqual(np.count_nonzero(line.modes == "integrated"), 13)
         self.assertEqual(np.count_nonzero(line.modes == "held"), 16)
         np.testing.assert_array_equal(line.positions, [1, 2, 4, 5])
         np.testing.assert_array_equal(line.condition, [1, 1, 2])
@@ -35,11 +35,10 @@ class SequenceTimelineTests(unittest.TestCase):
             self.assertAlmostEqual(line.time[index], rank * 0.8)
             np.testing.assert_array_equal(line.columns("Position E")[index], self.recorded["example_e"][rank, 0])
             self.assertEqual(line.columns("Global I")[index, 0], self.recorded["example_i"][rank, 0])
-            for path, name in enumerate(("CW1", "CW2", "CCW1", "CCW2")):
-                np.testing.assert_array_equal(line.columns(f"Relay {name}")[index],
-                                              self.recorded["example_relays"][rank, 0, path])
+            np.testing.assert_array_equal(line.columns("Relay")[index],
+                                          self.recorded["example_relays"][rank, 0])
         np.testing.assert_array_equal(line.columns("Position E")[-1], self.recorded["example_e"][-1, -1])
-        np.testing.assert_array_equal(line.columns("Relay CW1")[-1], self.recorded["example_relays"][-1, -1, 0])
+        np.testing.assert_array_equal(line.columns("Relay")[-1], self.recorded["example_relays"][-1, -1])
 
     def test_control_snapshots_are_held_not_interpolated(self):
         line = build_sequence_timeline(self.recorded)
@@ -72,11 +71,27 @@ class SequenceTimelineTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             build_sequence_timeline(data)
 
+    def test_legacy_path_history_import_projects_before_summing(self):
+        data = self.recorded.copy()
+        rng = np.random.default_rng(612)
+        n = len(data["example_time"])
+        legacy = rng.random((3, n, 4, 6))
+        weights = rng.random((4, 6, 6))
+        data["example_relays"] = legacy
+        data["relay_to_e"] = weights
+        # Independent per-path matrix products, rather than importer einsum.
+        expected = sum(legacy[:, :, path] @ weights[path].T for path in range(4))
+        joined = np.concatenate([expected[r, :-1] for r in range(3)] + [expected[-1, -1:]])
+        line = build_sequence_timeline(data)
+        np.testing.assert_allclose(line.columns("Relay"), joined, rtol=1e-14, atol=1e-14)
+        self.assertEqual(line.rates.shape, (1201, 29))
+        self.assertFalse(any(label.startswith("R_") for label in line.labels))
+
 
 class RecordingBoundaryTests(unittest.TestCase):
     def record(self, time=(0, 1), rates=((1, 0), (2, 3)), labels=("E1", "R")):
         return RateRecording(time, rates, labels,
-                             ("Position E", "Relay CW1"), ("integrated",) * 2)
+                             ("Position E", "Relay"), ("integrated",) * 2)
 
     def test_boundary_uses_next_control_and_relay_sample(self):
         a = self.record()

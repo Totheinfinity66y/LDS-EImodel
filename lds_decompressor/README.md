@@ -10,7 +10,7 @@ rate_ei_model 或 basis_sequence_model，也不修改它们。输入与任务以
 `Population` 快照；[neurons.py](neurons.py) 持有各群的率状态并实现响应方程；
 [model.py](model.py) 管理神经状态、初始化及逐秩调度。
 
-[timeline.py](timeline.py) 统一管理 `RateRecording` 的47列组装与跨秩拼接，
+[timeline.py](timeline.py) 统一管理 `RateRecording` 的29列组装与跨秩拼接，
 同时支持旧活动文件导入和 `SequenceTimeline` 保存。新运行与旧文件共用同一条
 记录路径，绘图只消费保存值。包级导入和原模块中的公开类型导入保持可用。
 
@@ -38,16 +38,16 @@ D=+1 表示顺时针，D=-1 表示逆时针，S 仅取 1 或 2。
 - 六个位置 E 率单元。
 - 新增 12 个：D_CW / D_CCW 两个方向群；S1 / S2 两个步长群；
   J_CW1 / J_CW2 / J_CCW1 / J_CCW2 四个联合群；同序的四个位移读出群。
-- 四条共享中继，每条六个率单元，共 24 个；各起点复用同一组路径。
+- 四条输入通路仍保留各自的环移和门控；它们对六个位置的总作用由六个 M 状态保存。
 - 四个路径门控 I，加一个调节总 E 活动的 I_global，共五个 I。
-- 完整实现共 47 个标量率变量；“新增12个”专指上述调谐/联合/读出扩展。
+- 完整实现共 29 个标量率变量：E×6、D×2、S×2、J×4、V×4、门控 I×4、M×6、全局 I×1。
 
 矩阵均以 `[突触后, 突触前]` 为约定，各实例独立分配，允许单独干预：
 
 | 字段 | 形状 | 含义 |
 | --- | --- | --- |
 | `connections.e_to_relay` | 4×6×6 | 共享 +1、+2、-1、-2 环移；非负 |
-| `connections.relay_to_e` | 4×6×6 | 中继到六个 E 的同位置投射；非负 |
+| `connections.relay_to_e` | 4×6×6 | 汇总前的四路输出投影；默认单位阵，允许逐实例非负干预 |
 | `connections.rank_to_displacement` | 3×4×4 | 每次转移的联合群到位移群连接；非负 |
 | `connections.winner_to_gate` | 4×4 | 选中路径不激活自身门控 I，其余路径激活门控 I |
 | `connections.gate_to_relay` | 4×6×4 | 门控 I 对相应路径的负连接 |
@@ -65,9 +65,10 @@ flowchart LR
     W --> DISP[位移读出×4]
     DISP --> PEAK[解码活动峰值]
     PEAK --> I[门控 I×4]
-    E --> R[共享中继路径×4]
+    E --> R[四路静态输入：各六维]
     I -->|负连接| R
-    R --> EI[泄漏 E/I 动力学]
+    R --> M[整流后投影求和：六个 M 状态]
+    M --> EI[泄漏 E/I 动力学]
     EI -->|下一秩的位置活动| E
 ```
 
@@ -83,13 +84,14 @@ flowchart LR
 每秩只根据联合活动和对应连接片读出位移群，取唯一正峰值，然后生成门控 I。
 门控先经过自身率时间常数的响应，再通过负连接压制未选中继；不以正向乘法直接选路。
 
-对四条路径并行计算：
+四路分别计算输入，先整流，再做输出投影并求和：
 
 [
-\tau_R\dot R_p=-R_p+[P_p\bar E+W^{I\to R}*p I*{gate}]_+,
+F_p=[P_p\bar E+W^{I\to R}_p I_{gate}]_+,\qquad
+T_M=\sum_p B_p F_p,\qquad \tau_R\dot M=-M+T_M,
 ]
 [
-u_E=\sum_p W^{R\to E}_pR_p,
+u_E=M,
 \quad \tau_E\dot E=-E+[u_E+w_{EE}E-w_{EI}I_{global}]_+,
 ]
 [
@@ -97,6 +99,11 @@ u_E=\sum_p W^{R\to E}_pR_p,
 ]
 
 这里 `[ ]_+` 为整流，`Ebar` 为上一秩实际 E 末态的归一化活动。
+`B_p` 是 `relay_to_e[p]`。默认 `B_p=I`，因此 `M_i` 就是四路在位置 i 的总和。
+共同时间常数、固定输出投影及匹配初值使 `M=Σ B_p R_p` 成为闭合状态；
+Euler 更新沿用先读 M、再同步计算 E/I 目标、最后更新 M 的原有时序。
+四路各六维的 `F_p` 仍可检查，但它们只是输入分量，没有独立的率历史。
+时间常数不同、路径内部反馈、路径专有噪声或积分期间改变输出投影时，此闭合关系不能直接使用。
 每秩持有该源活动，重置中继并进行一次转移；当前 E 和 I_global 从上一秩连续接续。
 更新采用同步前向 Euler，默认 dt=0.002 s；调谐和门控的恒定目标响应用解析解。
 
@@ -125,19 +132,20 @@ u_E=\sum_p W^{R\to E}_pR_p,
 from lds_decompressor import CompressedCode, RateDecompressor
 
 model = RateDecompressor()
-print(model.rate_potentials)                # 初始化后的 47 个零率
+print(model.rate_potentials)                # 初始化后的 29 个零率
 state = model.initialize(CompressedCode(1, 1, 2))
 print(model.e.rate_potentials)              # 当前 E1…E6
 state, transition = model.advance(state)
 print(model.v.rate_potentials)              # 当前四个位移读出
 print(model.gate_i.rate_potentials)         # 当前四个门控 I
 rates = dict(zip(model.unit_names, model.rate_potentials))
-print(rates)                               # 全部 47 个有名称的当前率快照
+print(rates)                               # 全部 29 个有名称的当前率快照
+print(model.relay.rate_potentials)          # 六个总作用 M1…M6
 print(model.e.history)                     # 最近一段 E 积分：时间 × 六单元
 
 result = model.decompress(CompressedCode(1, 1, 2))
 recording = result.recording
-print(recording.rate_potentials)           # 全检索记录：1201 × 47
+print(recording.rate_potentials)           # 全检索记录：1201 × 29
 print(recording.labels)                    # 每列对应的单元名
 ```
 
@@ -145,7 +153,7 @@ print(recording.labels)                    # 每列对应的单元名
 快照不会随下一次运行变化。每次 `advance(state)` 都从传入的神经状态恢复所需值，
 前一次运行或打印用对象的残留值不会成为推断输入。跨实例恢复时应使用相同参数和连接。
 
-模型在每次转移结束时生成包含全部 47 个单元的 `Transition.recording`；
+模型在每次转移结束时生成包含全部 29 个率变量的 `Transition.recording`；
 `result.recording` 只拼接这些记录，在公共边界保留下一段的采样。
 E/I/中继使用积分值，D/S/J 和读出/门控按原有保持规则记录。
 评估层把记录保存为 `sequence_timeline.npz`，绘图层只加载已保存的率数组。
@@ -176,7 +184,10 @@ print(model.connections.rank_to_displacement)
 ```
 
 `result.position_activity` 保存四秩真实 E 活动；每个 `Transition` 保存读出、门控、
-原始/抑制中继驱动，以及完整的中继、E、I 时间过程。结果数组为只读快照。
+原始/抑制通路驱动、`relay_path_targets`（4×6 静态输入）、`relay_target`（六维总目标），
+以及 `relay_rates`（时间×6 的 M）、E、I 时间过程。结果数组为只读快照。
+`activities.npz` 的 `example_relays` 为三段×时间×6；旧的三段×时间×4×6 文件可由
+`build_sequence_timeline` 按其保存的输出投影导入成六维总作用，无法反向恢复通路率。
 需要做因果干预时，可改实例的连接矩阵，或用 `dataclasses.replace` 构造新的神经状态。
 
 ## 运行与复现
@@ -204,11 +215,12 @@ python -m lds_decompressor
 
 ## 验证证据与解释范围
 
-已运行31项测试，其中15项回路行为测试覆盖全部24个合法条件、四种调谐峰、两个变量对联合响应的影响、
+已运行36项测试，其中15项回路行为测试覆盖全部24个合法条件、四种调谐峰、两个变量对联合响应的影响、
 三次秩选择、每个起点的共享接线、初始化只读一次符号码、历史状态隔离、
 联合活动/秩连接因果干预、中继断路、负向门控消融及减半 dt 的数值比较。
 另完成72个非边界角度×4种D/S的288条位置群诊断。
 其余测试覆盖神经元状态所有权、记录与绘图保真、跨秩边界及新旧文件兼容。
+新增独立四路参考验证含时变输入、非零初值、非单位输出投影、整流顺序及不同时间常数的反例。
 
 实际结果及可复查图、CSV、NPZ 见 [运行报告](artifacts/REPORT.md)。
 完整验证说明见 [VALIDATION.md](VALIDATION.md)。

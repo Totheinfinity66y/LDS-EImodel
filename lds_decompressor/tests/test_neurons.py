@@ -16,7 +16,7 @@ from lds_decompressor.timeline import SequenceTimeline
 
 
 class NeuronOwnershipTests(unittest.TestCase):
-    def test_subclasses_initialize_all_47_printable_rate_variables(self):
+    def test_subclasses_initialize_all_29_printable_rate_variables(self):
         model = RateDecompressor()
         for cls, neurons in ((ENeurons, model.e), (INeurons, model.i),
                              (INeurons, model.gate_i), (VNeurons, model.v),
@@ -24,8 +24,8 @@ class NeuronOwnershipTests(unittest.TestCase):
             self.assertIsInstance(neurons, cls)
             self.assertIsInstance(neurons, Neurons)
         self.assertTrue(all(isinstance(n, Neurons) for n in model.neurons.values()))
-        self.assertEqual(len(set(model.unit_names)), 47)
-        np.testing.assert_array_equal(model.rate_potentials, np.zeros(47))
+        self.assertEqual(len(set(model.unit_names)), 29)
+        np.testing.assert_array_equal(model.rate_potentials, np.zeros(29))
         output = StringIO()
         print(dict(zip(model.unit_names, model.rate_potentials)), file=output)
         for name in model.unit_names:
@@ -39,21 +39,21 @@ class NeuronOwnershipTests(unittest.TestCase):
         final, trace = model.advance(initial)
         np.testing.assert_array_equal(model.e.history, trace.e_rates)
         np.testing.assert_array_equal(model.i.history[:, 0], trace.i_rates)
-        np.testing.assert_array_equal(model.relay.history.reshape(-1, 4, 6), trace.relay_rates)
+        np.testing.assert_array_equal(model.relay.history, trace.relay_rates)
         np.testing.assert_array_equal(model.v.rates, trace.readout.rates)
         np.testing.assert_array_equal(model.gate_i.rates, trace.gate_i_rates)
         np.testing.assert_array_equal(model.rate_potentials, trace.recording.rates[-1])
         np.testing.assert_array_equal(model.e.rates, final.e_rates)
         self.assertFalse(model.rate_potentials.flags.writeable)
 
-    def test_model_recording_exactly_preserves_original_visualization(self):
+    def test_model_recording_matches_exported_29_variable_visualization(self):
         result = RateDecompressor().decompress(CompressedCode(1, 1, 2))
         recording = result.recording
         path = Path(__file__).parents[1] / "artifacts" / "sequence_timeline.npz"
         with np.load(path, allow_pickle=False) as saved:
             for key in ("time", "rates", "labels", "groups", "modes"):
                 np.testing.assert_array_equal(getattr(recording, key), saved[key])
-        self.assertEqual(recording.rates.shape, (1201, 47))
+        self.assertEqual(recording.rates.shape, (1201, 29))
         self.assertGreater(recording.rates.max(), 1)
         self.assertIs(recording.rate_potentials, recording.rates)
         self.assertFalse(recording.rates.flags.writeable)
@@ -67,8 +67,7 @@ class NeuronOwnershipTests(unittest.TestCase):
                 return record.rates[:, record.groups == name]
             np.testing.assert_array_equal(group("Position E"), trace.e_rates)
             np.testing.assert_array_equal(group("Global I")[:, 0], trace.i_rates)
-            for path, name in enumerate(("CW1", "CW2", "CCW1", "CCW2")):
-                np.testing.assert_array_equal(group(f"Relay {name}"), trace.relay_rates[:, path, :])
+            np.testing.assert_array_equal(group("Relay"), trace.relay_rates)
             for name, expected in (("Direction", result.initial_state.encoding.direction.rates),
                                    ("Step", result.initial_state.encoding.step.rates),
                                    ("Joint", result.initial_state.encoding.joint.rates),
@@ -91,7 +90,7 @@ class NeuronOwnershipTests(unittest.TestCase):
         np.testing.assert_array_equal(actual.recording.rates, expected.recording.rates)
         np.testing.assert_array_equal(first.recording.rates, saved)
         other = RateDecompressor()
-        np.testing.assert_array_equal(other.rate_potentials, np.zeros(47))
+        np.testing.assert_array_equal(other.rate_potentials, np.zeros(29))
 
     def test_plotter_reads_saved_values_without_activity_file_or_rate_generation(self):
         from lds_decompressor.sequence_plotting import plot_sequence_artifacts

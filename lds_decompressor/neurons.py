@@ -150,11 +150,20 @@ class VNeurons(Neurons):
 
 
 class RelayNeurons(Neurons):
+    """Six downstream effects M=sum_p W_p R_p; no path-specific rate state.
+
+    All paths share tau_relay and have no independent recurrent feedback.
+    W_p is constant during a transition. With the default W_p=identity,
+    M is simply the sum of four path rates at each position.
+    """
     def __init__(self, params):
         super().__init__(unit_names("relay"),
                          params.tau_relay)
 
-    def target(self, source, e_to_relay, gate_rates, gate_to_relay):
+    def target(self, source, e_to_relay, gate_rates, gate_to_relay, relay_to_e):
         raw = np.einsum("pij,j->pi", e_to_relay, source)
         inhibition = np.einsum("pjg,g->pj", gate_to_relay, gate_rates)
-        return raw, inhibition, np.maximum(raw + inhibition, 0)
+        # Rectify each path BEFORE projecting/summing; these are inputs, not states.
+        path_targets = np.maximum(raw + inhibition, 0)
+        target = np.einsum("pij,pj->i", relay_to_e, path_targets)
+        return raw, inhibition, path_targets, target

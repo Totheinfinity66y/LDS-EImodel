@@ -32,8 +32,8 @@ def evaluate_conditions(model: RateDecompressor):
             shifts=[t.selected_shift for t in result.transitions],
             correct=result.positions == target,
             rank_correct=[int(a == b) for a, b in zip(result.positions, target)],
-            maximum_blocked_relay=float(max(
-                t.relay_rates[-1, np.arange(4) != np.argmax(t.readout.activity)].max()
+            maximum_blocked_path_input=float(max(
+                t.relay_path_targets[np.arange(4) != np.argmax(t.readout.activity)].max()
                 for t in result.transitions)),
         ))
         results.append(result)
@@ -107,6 +107,8 @@ def run(output: Path, *, n_angles: int = 72):
         example_relay_raw=np.stack([t.relay_raw_drive for t in example.transitions]),
         example_relay_inhibition=np.stack([t.relay_inhibitory_drive for t in example.transitions]),
         example_relay_target=np.stack([t.relay_target for t in example.transitions]),
+        example_path_targets=np.stack([t.relay_path_targets for t in example.transitions]),
+        relay_representation=np.array("aggregate_e_input"),
         **{name: getattr(model.connections, name) for name in vars(model.connections)},
     )
     np.savez_compressed(output / "activities.npz", **payload)
@@ -124,7 +126,8 @@ def run(output: Path, *, n_angles: int = 72):
                      numpy=np.__version__, platform=platform.platform(), backend="CPU"),
         conditions=len(rows), correct=sum(r["correct"] for r in rows),
         rank_accuracy=np.mean([r["rank_correct"] for r in rows], axis=0).tolist(),
-        maximum_blocked_relay=max(r["maximum_blocked_relay"] for r in rows),
+        relay_states=6, total_rate_units=len(model.unit_names),
+        maximum_blocked_path_input=max(r["maximum_blocked_path_input"] for r in rows),
         spatial_probe_conditions=len(spatial), spatial_probe_correct=sum(r["correct"] for r in spatial),
         representative=dict(L=1, D=1, S=2, predicted=list(example.positions)),
         claims=["Supplied symbolic code and fixed ring/rank operators",
@@ -139,7 +142,8 @@ def run(output: Path, *, n_angles: int = 72):
 
 - 六位置 × 两方向 × 两步长：{summary['correct']}/24 条完整序列正确。
 - 四秩准确率：{summary['rank_accuracy']}。
-- 未选中继的最大末态率：{summary['maximum_blocked_relay']}。
+- 未选通路整流后的最大输入：{summary['maximum_blocked_path_input']}（不是通路中继率）。
+- 中继只保存六个位置总作用 M；全回路共 {summary['total_rate_units']} 个率变量。
 - 环周诊断：{summary['spatial_probe_correct']}/{len(spatial)} 条通过；使用 {n_angles} 个非边界角度、4 个 D/S 组合。
 - 示例 L=1,D=+1,S=2：实际输出 {list(example.positions)}。
 
@@ -154,7 +158,7 @@ def run(output: Path, *, n_angles: int = 72):
 - [三秩位移读出和门控](rank_readout.png)
 - [真实 E/I 与中继时间过程](ei_dynamics.png)
 - [完整序列时间轴：E1…E6、读出、门控与中继](sequence_dynamics.png)
-- [全部47个率单元的活动总览](all_units_timeline.png)
+- [全部29个率变量的活动总览](all_units_timeline.png)
 - [时间轴解释与复现](../VISUALIZATION.md)
 - [时间轴原始数组](sequence_timeline.npz)
 - [24 条条件与实际输出](conditions.csv)

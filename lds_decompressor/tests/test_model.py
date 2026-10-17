@@ -86,7 +86,7 @@ class RateCircuitTests(unittest.TestCase):
         result = m.decompress(CompressedCode(1, 1, 2))
         self.assertEqual(result.positions, (1, 6, 5, 4))
 
-    def test_inhibitory_drive_is_negative_and_unselected_relays_are_silent(self):
+    def test_inhibitory_drive_is_negative_and_unselected_path_inputs_are_zero(self):
         m = RateDecompressor()
         result = m.decompress(CompressedCode(3, -1, 2))
         for t in result.transitions:
@@ -94,10 +94,10 @@ class RateCircuitTests(unittest.TestCase):
             self.assertEqual(t.gate_i_rates[winner], 0)
             self.assertTrue(np.all(t.gate_i_rates[np.arange(4) != winner] > 0.99))
             self.assertTrue(np.all(t.relay_inhibitory_drive <= 0))
-            np.testing.assert_array_equal(t.relay_target[np.arange(4) != winner], 0)
-            self.assertGreater(float(t.relay_rates[-1, winner].sum()), 0)
-            np.testing.assert_allclose(t.e_drive[-1],
-                np.einsum("pij,pj->i", m.connections.relay_to_e, t.relay_rates[-1]))
+            np.testing.assert_array_equal(t.relay_path_targets[np.arange(4) != winner], 0)
+            self.assertGreater(float(t.relay_rates[-1].sum()), 0)
+            self.assertEqual(t.relay_rates.shape, (401, 6))
+            np.testing.assert_array_equal(t.e_drive, t.relay_rates)
             self.assertTrue(np.all(t.e_rates >= 0))
             self.assertTrue(np.all(t.i_rates >= 0))
             self.assertGreater(float(t.i_rates.max()), 0)
@@ -113,7 +113,7 @@ class RateCircuitTests(unittest.TestCase):
         m.connections.gate_to_relay[:] = 0
         state = m.initialize(CompressedCode(1, 1, 2))
         following, trace = m.advance(state)
-        self.assertTrue(np.all(trace.relay_target.sum(axis=1) > 0))
+        self.assertTrue(np.all(trace.relay_path_targets.sum(axis=1) > 0))
         opposite, _ = m.advance(m.initialize(CompressedCode(1, -1, 2)))
         # With gates disconnected D cannot affect transmission. A residual
         # numerical peak can accidentally match one command, but not both.

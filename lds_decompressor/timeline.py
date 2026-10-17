@@ -151,7 +151,13 @@ def build_sequence_timeline(data: Mapping) -> SequenceTimeline:
     i = np.asarray(data["example_i"], dtype=float)
     relay = np.asarray(data["example_relays"], dtype=float)
     n = len(local)
-    if e.shape != (3, n, 6) or i.shape != (3, n) or relay.shape != (3, n, 4, 6):
+    if relay.shape == (3, n, 4, 6):
+        # Explicit legacy conversion into the observable; never infer path rates.
+        weights = np.asarray(data["relay_to_e"], dtype=float)
+        if weights.shape != (4, 6, 6):
+            raise ValueError("Legacy relay projection must have shape (4, 6, 6)")
+        relay = np.einsum("pij,rtpj->rti", weights, relay)
+    if e.shape != (3, n, 6) or i.shape != (3, n) or relay.shape != (3, n, 6):
         raise ValueError("Unexpected E/I/relay trace shapes")
     # Reject stale example metadata instead of silently labelling another run.
     positions = np.asarray(data["positions"])[1]
@@ -168,7 +174,7 @@ def build_sequence_timeline(data: Mapping) -> SequenceTimeline:
             "Joint": np.asarray(data["joint_rates"])[1],
             "Displacement": np.asarray(data["displacement_rates"])[1, rank],
             "Gate I": np.asarray(data["gate_i_rates"])[1, rank],
-            "Relay": relay[rank].reshape(n, 24),
+            "Relay": relay[rank],
             "Global I": i[rank, :, None],
         }))
     recording = RateRecording.concatenate(records)
