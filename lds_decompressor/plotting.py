@@ -71,3 +71,6 @@ def plot_artifacts(output: Path):
         decoded = " -> ".join(str(int(site)) for site in data["positions"][1])
         fig.suptitle(f"Actual dynamics: L=1, D=+1, S=2; decoded {decoded}")
         _save(fig, output, "ei_dynamics.png")
+
+    from .sequence_plotting import plot_sequence_artifacts
+    plot_sequence_artifacts(output)
