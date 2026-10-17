@@ -8,9 +8,9 @@ rate_ei_model 或 basis_sequence_model，也不修改它们。输入与任务以
 
 仅有六个合法任务位置，标签是 1…6，位置群为 E1…E6。在单位圆上：
 
-\[
+[
 \theta_k=(k-1)\pi/3,\qquad (x_k,y_k)=(\cos\theta_k,-\sin\theta_k).
-\]
+]
 
 所以 E1 在 (1,0)，E2 在其右下方；标签递增是物理顺时针。
 D=+1 表示顺时针，D=-1 表示逆时针，S 仅取 1 或 2。
@@ -73,16 +73,16 @@ flowchart LR
 
 对四条路径并行计算：
 
-\[
-\tau_R\dot R_p=-R_p+[P_p\bar E+W^{I\to R}_p I_{gate}]_+,
-\]
-\[
+[
+\tau_R\dot R_p=-R_p+[P_p\bar E+W^{I\to R}*p I*{gate}]_+,
+]
+[
 u_E=\sum_p W^{R\to E}_pR_p,
 \quad \tau_E\dot E=-E+[u_E+w_{EE}E-w_{EI}I_{global}]_+,
-\]
-\[
+]
+[
 \tau_I\dot I_{global}=-I_{global}+w_{IE}\sum_iE_i.
-\]
+]
 
 这里 `[ ]_+` 为整流，`Ebar` 为上一秩实际 E 末态的归一化活动。
 每秩持有该源活动，重置中继并进行一次转移；当前 E 和 I_global 从上一秩连续接续。
