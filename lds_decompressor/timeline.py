@@ -10,10 +10,99 @@ from typing import Mapping
 
 import numpy as np
 
-from .neurons import RateRecording
+from .core import Array, PATH_NAMES, UNIT_GROUPS, _frozen
 
 
-PATHS = ("CW1", "CW2", "CCW1", "CCW2")
+PATHS = PATH_NAMES
+
+
+@dataclass(frozen=True)
+class RateRecording:
+    """Owned raw rates for every unit, recorded by the model before plotting."""
+
+    time: Array
+    rates: Array
+    labels: np.ndarray
+    groups: np.ndarray
+    modes: np.ndarray
+
+    def __post_init__(self):
+        time = _frozen(self.time)
+        rates = _frozen(self.rates, nonnegative=True)
+        if time.ndim != 1 or len(time) == 0 or not np.all(np.diff(time) > 0):
+            raise ValueError("Recording times must be nonempty and strictly increasing")
+        if rates.shape != (len(time), len(self.labels)):
+            raise ValueError("Recording must have one rate per time and unit")
+        if np.shape(self.labels) != (len(self.labels),):
+            raise ValueError("Recording labels must be one-dimensional")
+        if len(set(self.labels)) != len(self.labels):
+            raise ValueError("Recording labels must be unique")
+        for name in ("groups", "modes"):
+            if np.shape(getattr(self, name)) != (len(self.labels),):
+                raise ValueError("Recording metadata must have one entry per unit")
+        object.__setattr__(self, "time", time)
+        object.__setattr__(self, "rates", rates)
+        for name in ("labels", "groups", "modes"):
+            value = np.array(getattr(self, name), dtype=str, copy=True)
+            value.setflags(write=False)
+            object.__setattr__(self, name, value)
+
+    @property
+    def rate_potentials(self):
+        return self.rates
+
+    @classmethod
+    def from_groups(cls, time, samples: Mapping):
+        """Assemble the circuit's canonical columns from actual group rates.
+
+        Integrated groups provide time-by-unit arrays. Held controls provide
+        one vector; only this explicit mode allows broadcasting over time.
+        """
+        expected = {group.name for group in UNIT_GROUPS}
+        if set(samples) != expected:
+            raise ValueError("Samples must contain exactly the circuit's unit groups")
+        values, labels, groups, modes = [], [], [], []
+        for group in UNIT_GROUPS:
+            width = len(group.labels)
+            rates = np.asarray(samples[group.name], dtype=float)
+            if group.mode == "held":
+                if rates.shape != (width,):
+                    raise ValueError(f"Unexpected held rate shape for {group.name}")
+                rates = np.repeat(rates[None], len(time), axis=0)
+            elif rates.shape != (len(time), width):
+                raise ValueError(f"Unexpected integrated rate shape for {group.name}")
+            values.append(rates)
+            labels.extend(group.labels)
+            groups.extend(group.groups)
+            modes.extend([group.mode] * width)
+        return cls(time, np.concatenate(values, axis=1), labels, groups, modes)
+
+    @classmethod
+    def concatenate(cls, recordings):
+        """Retain the next transition's sample at a shared boundary."""
+        if not recordings:
+            raise ValueError("No retrieval transitions were recorded")
+        first = recordings[0]
+        continuous = np.isin(first.groups, ("Position E", "Global I"))
+        previous = None
+        times, values, offset = [], [], 0.0
+        for record in recordings:
+            if len(record.time) < 2 or record.time[0] != 0:
+                raise ValueError("Transition times must start at zero and include an endpoint")
+            for name in ("labels", "groups", "modes"):
+                if not np.array_equal(getattr(record, name), getattr(first, name)):
+                    raise ValueError("Recording unit metadata changed between transitions")
+            if previous is not None and not np.allclose(
+                    previous.rates[-1, continuous], record.rates[0, continuous],
+                    rtol=0, atol=1e-12):
+                raise ValueError("Cannot join discontinuous E/I transition boundaries")
+            previous = record
+            times.append(record.time[:-1] + offset)
+            values.append(record.rates[:-1])
+            offset += record.time[-1]
+        return cls(np.r_[np.concatenate(times), offset],
+                   np.concatenate(values + [recordings[-1].rates[-1:]]),
+                   first.labels, first.groups, first.modes)
 
 
 @dataclass(frozen=True)
@@ -64,55 +153,25 @@ def build_sequence_timeline(data: Mapping) -> SequenceTimeline:
     n = len(local)
     if e.shape != (3, n, 6) or i.shape != (3, n) or relay.shape != (3, n, 4, 6):
         raise ValueError("Unexpected E/I/relay trace shapes")
-    if not (np.allclose(e[1:, 0], e[:-1, -1], rtol=0, atol=1e-12)
-            and np.allclose(i[1:, 0], i[:-1, -1], rtol=0, atol=1e-12)):
-        raise ValueError("Cannot join discontinuous E/I transition boundaries")
     # Reject stale example metadata instead of silently labelling another run.
     positions = np.asarray(data["positions"])[1]
     observed = np.r_[e[0, 0].argmax() + 1, e[:, -1].argmax(axis=1) + 1]
     if not np.array_equal(positions, observed):
         raise ValueError("Saved positions do not match the representative E trace")
 
-    def join(block):
-        # Each block is [transition, time, ...]. Last endpoint is retained once.
-        return np.concatenate([block[r, :-1] for r in range(3)] + [block[-1, -1:]])
-
-    time = np.concatenate([local[:-1] + r * local[-1] for r in range(3)]
-                          + [np.array([3 * local[-1]])])
-    count = len(time)
-    values, labels, groups, modes = [], [], [], []
-
-    def add(group, names, rates, mode):
-        rates = np.asarray(rates, dtype=float)
-        if rates.shape != (count, len(names)):
-            raise ValueError(f"Unexpected shape for {group}: {rates.shape}")
-        values.append(rates)
-        labels.extend(names)
-        groups.extend([group] * len(names))
-        modes.extend([mode] * len(names))
-
-    def held_encoding(key):
-        return np.repeat(np.asarray(data[key])[1:2], count, axis=0)
-
-    def held_by_rank(key):
-        snapshots = np.asarray(data[key])[1]
-        return join(np.repeat(snapshots[:, None, :], n, axis=1))
-
-    add("Position E", [f"E{k}" for k in range(1, 7)], join(e), "integrated")
-    add("Direction", ["D_CW", "D_CCW"], held_encoding("direction_rates"), "held")
-    add("Step", ["S1", "S2"], held_encoding("step_rates"), "held")
-    add("Joint", [f"J_{p}" for p in PATHS], held_encoding("joint_rates"), "held")
-    add("Displacement", [f"DISP_{p}" for p in PATHS], held_by_rank("displacement_rates"), "held")
-    add("Gate I", [f"I_gate_{p}" for p in PATHS], held_by_rank("gate_i_rates"), "held")
-    for path, name in enumerate(PATHS):
-        add(f"Relay {name}", [f"R_{name}_E{k}" for k in range(1, 7)],
-            join(relay[:, :, path]), "integrated")
-    add("Global I", ["I_global"], join(i[:, :, None]), "integrated")
-    rates = np.concatenate(values, axis=1)
-    if not np.isfinite(rates).all() or np.any(rates < 0):
-        raise ValueError("Rates must be finite and nonnegative")
-    if len(labels) != 47:
-        raise ValueError("Expected all 47 rate units")
-    return SequenceTimeline(time, rates, np.asarray(labels), np.asarray(groups),
-                            np.asarray(modes), np.arange(4) * local[-1],
-                            positions.copy(), np.asarray(data["conditions"])[1].copy())
+    records = []
+    for rank in range(3):
+        records.append(RateRecording.from_groups(local, {
+            "Position E": e[rank],
+            "Direction": np.asarray(data["direction_rates"])[1],
+            "Step": np.asarray(data["step_rates"])[1],
+            "Joint": np.asarray(data["joint_rates"])[1],
+            "Displacement": np.asarray(data["displacement_rates"])[1, rank],
+            "Gate I": np.asarray(data["gate_i_rates"])[1, rank],
+            "Relay": relay[rank].reshape(n, 24),
+            "Global I": i[rank, :, None],
+        }))
+    recording = RateRecording.concatenate(records)
+    return SequenceTimeline.from_recording(
+        recording, np.arange(4) * local[-1], positions.copy(),
+        np.asarray(data["conditions"])[1].copy())

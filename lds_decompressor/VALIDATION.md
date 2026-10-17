@@ -18,6 +18,49 @@
 .\lds_decompressor\run.ps1
 ```
 
+## 架构合并验证（2026-10-17）
+
+工作目录为本独立仓库；本次重构前提交是
+`c56c80d2972da7689425aaf85b910db2d8287d41`。
+实际环境再次核验为 analysis 的 Python 3.12.12、NumPy 2.3.5、
+Matplotlib 3.10.7，CPU；没有安装或修改依赖。
+
+静态参数、连接和单元布局集中在 [core.py](core.py)，
+[neurons.py](neurons.py) 保留率响应，[model.py](model.py) 保留运行状态与调度。
+[timeline.py](timeline.py) 合并记录组装、边界检查和新旧数据的拼接入口。
+数组验证和只读复制合并为一次构造；未更改浮点运算、同步积分次序或率方程。
+本任务没有进行运行时间基准测试，不据此宣称特定加速比例。
+
+验证结果：
+
+- `run.ps1 -Test`：31/31 项通过。新增4项检查覆盖下一段边界采样、中继重置、
+  E/I连续性、局部时间轴、元数据/非有限率拒绝，以及新旧记录的逐字段一致性。
+- 固定重构前版本：四组参数×24个合法码，共96条序列；另有288条非边界空间探针。
+  原有字段及各转移/完整序列记录的31,872个数组全部逐值一致，无数值容差。
+- 固定早期版本 `4424b97d8b4f5ff30b0fedc2d6a2ccb7ac9efd34`：同样输入与参数组合，
+  24,192个原有数组全部逐值一致。
+- 临时目录完整评估：24/24合法码、288/288空间探针通过。
+  `activities.npz` 的29个数组、`sequence_timeline.npz` 的8个数组逐值一致；
+  两份CSV逐字节一致，六张PNG逐像素一致，两张PDF成功导出并具有有效文件头。
+- 运行前后既有产物的全部SHA-256相同；未覆盖活动数据或图像。
+- 保留包级导入，以及原 `model` / `neurons` 模块中的公开类型导入；
+  所有连接仍可逐实例修改。`NeuralState` 仍不包含 L/D/S 或评估目标。
+
+独立等价检查把指定Git版本的Python源码装载为临时独立包，
+相对导入只解析该快照，结束后清理；不切换工作区或读取当前模块充当基线。
+下面的命令在已补齐Conda DLL路径的 analysis 环境运行：
+
+```powershell
+.\lds_decompressor\run.ps1 -Test
+python -m lds_decompressor.tests.check_refactor_equivalence --baseline c56c80d2972da7689425aaf85b910db2d8287d41
+python -m lds_decompressor.tests.check_refactor_equivalence
+```
+
+完整导出检查通过 `evaluation.run` 写入仓库内自动清理的临时目录，
+使用 `np.testing.assert_array_equal` 核对NPZ与PNG解码像素，
+使用字节比较核对CSV，使用SHA-256核对既有产物未变。
+验证限于列出的输入、参数与文件，不代表任意参数下的数学等价证明。
+
 ## 测试与因果检查
 
 [15项 unittest](tests/test_model.py) 全部通过，覆盖：

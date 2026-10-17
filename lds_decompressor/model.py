@@ -13,13 +13,15 @@ from numbers import Integral
 
 import numpy as np
 
-from .neurons import (
-    Array, PATH_NAMES, Population, RateRecording, Neurons,
-    ENeurons, INeurons, DNeurons, SNeurons, JNeurons, VNeurons, RelayNeurons,
+from .core import (
+    Array, PATH_NAMES, SHIFTS, JOINT_PREFERENCES, UNIT_GROUPS,
+    CompressedCode, ModelParameters, Connections, Population,
     _array, _frozen, normalize,
 )
-SHIFTS = (1, 2, -1, -2)
-JOINT_PREFERENCES = ((1, 1), (1, 2), (-1, 1), (-1, 2))
+from .neurons import (
+    Neurons, ENeurons, INeurons, DNeurons, SNeurons, JNeurons, VNeurons, RelayNeurons,
+)
+from .timeline import RateRecording
 
 
 def _peak(value) -> int:
@@ -28,67 +30,6 @@ def _peak(value) -> int:
     if largest <= 0 or np.count_nonzero(np.isclose(out, largest, rtol=1e-9, atol=1e-12)) != 1:
         raise ValueError("Activity has no unique positive peak")
     return int(np.argmax(out))
-
-
-@dataclass(frozen=True)
-class CompressedCode:
-    """Only allowed symbolic input. L is a label 1..6, D is +/-1, S is 1/2."""
-
-    location: int
-    direction: int
-    step: int
-
-    def __post_init__(self):
-        for value, allowed in ((self.location, range(1, 7)),
-                               (self.direction, (-1, 1)), (self.step, (1, 2))):
-            if isinstance(value, bool) or not isinstance(value, Integral) or value not in allowed:
-                raise ValueError("Require integer L in 1..6, D in {-1,+1}, S in {1,2}")
-
-
-@dataclass(frozen=True)
-class ModelParameters:
-    """Instance-local numerical choices; none are fitted to evaluation targets."""
-
-    location_kappa: float = 8.0
-    direction_slope: float = 6.0
-    step_slope: float = 6.0
-    direction_gains: tuple[float, float] = (1.0, 1.0)
-    step_gains: tuple[float, float] = (1.0, 1.0)
-    joint_gains: tuple[float, float, float, float] = (1.0, 1.0, 1.0, 1.0)
-    readout_gains: tuple[float, float, float, float] = (1.0, 1.0, 1.0, 1.0)
-    tau_tuning: float = 0.020
-    tau_readout: float = 0.020
-    tau_gate: float = 0.020
-    tau_relay: float = 0.030
-    tau_e: float = 0.100
-    tau_i: float = 0.050
-    encoding_duration: float = 0.200
-    readout_duration: float = 0.200
-    gate_duration: float = 0.200
-    rank_duration: float = 0.800
-    dt: float = 0.002
-    w_ee: float = 0.15
-    w_ei: float = 0.20
-    w_ie: float = 0.25
-    gate_strength: float = 2.0
-
-    def __post_init__(self):
-        nonnegative = {"w_ee", "w_ei", "w_ie", "gate_strength"}
-        for item in fields(self):
-            value = getattr(self, item.name)
-            if item.name.endswith("_gains"):
-                size = 2 if item.name in {"direction_gains", "step_gains"} else 4
-                arr = _array(value, (size,), nonnegative=True)
-                object.__setattr__(self, item.name, tuple(float(x) for x in arr))
-            elif not np.isfinite(value) or value < 0 or (value == 0 and item.name not in nonnegative):
-                raise ValueError(f"Invalid parameter {item.name}")
-        if self.w_ee >= 1:
-            raise ValueError("Require w_ee < 1 for this leaky E/I response layer")
-        if self.dt > 0.2 * min(self.tau_e, self.tau_i, self.tau_relay):
-            raise ValueError("dt must be <= 0.2 times the fastest integrated time constant")
-        ratio = self.rank_duration / self.dt
-        if round(ratio) < 1 or not np.isclose(ratio, round(ratio)):
-            raise ValueError("rank_duration must be an integer multiple of dt")
 
 
 @dataclass(frozen=True)
@@ -108,47 +49,11 @@ class NeuralState:
     rank: int = 1
 
     def __post_init__(self):
-        object.__setattr__(self, "e_rates", _frozen(_array(self.e_rates, (6,), nonnegative=True)))
+        object.__setattr__(self, "e_rates", _frozen(self.e_rates, (6,), nonnegative=True))
         if not np.isfinite(self.i_rate) or self.i_rate < 0:
             raise ValueError("i_rate must be finite and nonnegative")
         if isinstance(self.rank, bool) or not isinstance(self.rank, Integral) or self.rank not in range(1, 5):
             raise ValueError("rank must be 1..4")
-
-
-@dataclass
-class Connections:
-    """Editable matrices, independently allocated for each model instance."""
-
-    e_to_relay: Array        # [path, relay_site, source_E], nonnegative
-    relay_to_e: Array        # [path, target_E, relay_site], nonnegative
-    rank_to_displacement: Array  # [transition, displacement, joint], nonnegative
-    winner_to_gate: Array    # [gate_I, winning_displacement], nonnegative
-    gate_to_relay: Array     # [path, relay_site, gate_I], nonpositive
-
-    @classmethod
-    def build(cls, gate_strength: float):
-        paths = np.zeros((4, 6, 6))
-        for path, shift in enumerate(SHIFTS):
-            for source in range(6):
-                paths[path, (source + shift) % 6, source] = 1.0
-        rank = np.zeros((3, 4, 4))
-        for transition in range(3):
-            for joint, (direction, step) in enumerate(JOINT_PREFERENCES):
-                displacement = direction * (step if transition == 1 else 1)
-                rank[transition, SHIFTS.index(displacement), joint] = 1.0
-        return cls(
-            paths, np.repeat(np.eye(6)[None], 4, axis=0), rank,
-            np.ones((4, 4)) - np.eye(4),
-            -gate_strength * np.repeat(np.eye(4)[:, None, :], 6, axis=1),
-        )
-
-    def validate(self):
-        for name, shape in (("e_to_relay", (4, 6, 6)), ("relay_to_e", (4, 6, 6)),
-                            ("rank_to_displacement", (3, 4, 4)),
-                            ("winner_to_gate", (4, 4)), ("gate_to_relay", (4, 6, 4))):
-            arr = _array(getattr(self, name), shape)
-            if (name == "gate_to_relay" and np.any(arr > 0)) or (name != "gate_to_relay" and np.any(arr < 0)):
-                raise ValueError(f"Connection sign violation in {name}")
 
 
 @dataclass(frozen=True)
@@ -207,9 +112,7 @@ class RateDecompressor:
         self.d, self.s, self.j = DNeurons(p), SNeurons(p), JNeurons(p)
         self.v, self.gate_i, self.relay = VNeurons(p), INeurons(p, gate=True), RelayNeurons(p)
         self.neurons: dict[str, Neurons] = {
-            "Position E": self.e, "Direction": self.d, "Step": self.s,
-            "Joint": self.j, "Displacement": self.v, "Gate I": self.gate_i,
-            "Relay": self.relay, "Global I": self.i,
+            group.name: getattr(self, group.attribute) for group in UNIT_GROUPS
         }
         self.site_angles = self.e.site_angles
         self.site_coordinates = self.e.site_coordinates
@@ -298,18 +201,10 @@ class RateDecompressor:
 
     def _record_rates(self, time, e, i, relay):
         """Record all current neuron values; plotting never constructs rates."""
-        count = len(time)
-        values, labels, groups, modes = [], [], [], []
-        integrated = {"Position E": e, "Relay": relay.reshape(count, 24),
-                      "Global I": i[:, None]}
-        for group, neurons in self.neurons.items():
-            values.append(integrated[group] if group in integrated else
-                          np.repeat(neurons.rates[None], count, axis=0))
-            labels.extend(neurons.names)
-            groups.extend([f"Relay {p}" for p in PATH_NAMES for _ in range(6)]
-                          if group == "Relay" else [group] * len(neurons.names))
-            modes.extend(["integrated" if group in integrated else "held"] * len(neurons.names))
-        return RateRecording(time, np.concatenate(values, axis=1), labels, groups, modes)
+        samples = {name: neurons.rates for name, neurons in self.neurons.items()}
+        samples.update({"Position E": e, "Relay": relay.reshape(len(time), 24),
+                        "Global I": i[:, None]})
+        return RateRecording.from_groups(time, samples)
 
     def advance(self, state: NeuralState) -> tuple[NeuralState, Transition]:
         """One rank pulse; only neural state and instance wiring are available."""

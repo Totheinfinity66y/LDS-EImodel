@@ -7,8 +7,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
+from .core import PATH_NAMES as PATHS
 
-PATHS = ("CW1", "CW2", "CCW1", "CCW2")
+
 CONDITIONS = ("D=+1,S=1", "D=+1,S=2", "D=-1,S=1", "D=-1,S=2")
 
 

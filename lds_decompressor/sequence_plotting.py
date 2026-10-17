@@ -9,7 +9,8 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 import numpy as np
 
-from .timeline import PATHS, SequenceTimeline
+from .core import PATH_NAMES as PATHS
+from .timeline import SequenceTimeline
 
 
 E_COLORS = ("#0072B2", "#E69F00", "#009E73", "#D55E00", "#CC79A7", "#56B4E9")

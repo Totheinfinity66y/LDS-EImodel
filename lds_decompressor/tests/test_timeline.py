@@ -5,7 +5,7 @@ import unittest
 
 import numpy as np
 
-from lds_decompressor.timeline import build_sequence_timeline
+from lds_decompressor.timeline import RateRecording, build_sequence_timeline
 
 
 class SequenceTimelineTests(unittest.TestCase):
@@ -71,6 +71,59 @@ class SequenceTimelineTests(unittest.TestCase):
         data["positions"][1, -1] = 6
         with self.assertRaises(ValueError):
             build_sequence_timeline(data)
+
+
+class RecordingBoundaryTests(unittest.TestCase):
+    def record(self, time=(0, 1), rates=((1, 0), (2, 3)), labels=("E1", "R")):
+        return RateRecording(time, rates, labels,
+                             ("Position E", "Relay CW1"), ("integrated",) * 2)
+
+    def test_boundary_uses_next_control_and_relay_sample(self):
+        a = self.record()
+        b = self.record(rates=((2, 0), (4, 5)))
+        joined = RateRecording.concatenate((a, b))
+        np.testing.assert_array_equal(joined.time, [0, 1, 2])
+        np.testing.assert_array_equal(joined.rates, [[1, 0], [2, 0], [4, 5]])
+        self.assertFalse(joined.rates.flags.writeable)
+
+    def test_model_recording_rejects_discontinuous_ei_and_nonlocal_time(self):
+        a = self.record()
+        for b in (self.record(rates=((9, 0), (4, 5))),
+                  self.record(time=(1, 2), rates=((2, 0), (4, 5))),
+                  self.record(time=(0,), rates=((2, 0),))):
+            with self.subTest(time=b.time), self.assertRaises(ValueError):
+                RateRecording.concatenate((a, b))
+        # The same continuity requirement applies to global inhibition.
+        a = RateRecording([0, 1], [[0], [1]], ["I_global"], ["Global I"], ["integrated"])
+        with self.assertRaises(ValueError):
+            RateRecording.concatenate((a, a))
+
+    def test_incompatible_metadata_and_invalid_rates_fail_before_join(self):
+        a = self.record()
+        b = self.record(rates=((2, 0), (4, 5)), labels=("E2", "R"))
+        with self.assertRaises(ValueError):
+            RateRecording.concatenate((a, b))
+        for time, rates in (((0, 0), ((1, 0), (2, 3))),
+                            ((0, 1), ((1, 0), (-2, 3))),
+                            ((0, 1), ((1, 0), (np.nan, 3)))):
+            with self.subTest(time=time, rates=rates), self.assertRaises(ValueError):
+                self.record(time=time, rates=rates)
+
+    def test_legacy_import_and_model_recordings_are_identical(self):
+        from lds_decompressor import CompressedCode, RateDecompressor
+
+        result = RateDecompressor().decompress(CompressedCode(1, 1, 2))
+        path = Path(__file__).parents[1] / "artifacts" / "activities.npz"
+        with np.load(path, allow_pickle=False) as data:
+            line = build_sequence_timeline(data)
+        for key in ("time", "rates", "labels", "groups", "modes"):
+            np.testing.assert_array_equal(getattr(result.recording, key), getattr(line, key))
+        samples = {name: neurons.rates for name, neurons in RateDecompressor().neurons.items()}
+        with self.assertRaises(ValueError):  # Integrated groups need sampled histories.
+            RateRecording.from_groups([0, 1], samples)
+        samples.pop("Joint")
+        with self.assertRaises(ValueError):
+            RateRecording.from_groups([0, 1], samples)
 
 
 if __name__ == "__main__":

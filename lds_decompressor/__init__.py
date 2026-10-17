@@ -1,13 +1,12 @@
 """Independent, handcrafted L/D/S rate-circuit decompressor."""
 
-from .model import (
-    CompressedCode, Connections, Decompression, Encoding, ModelParameters,
-    NeuralState, Population, RateDecompressor, Transition,
-)
+from .core import CompressedCode, Connections, ModelParameters, Population
+from .model import Decompression, Encoding, NeuralState, RateDecompressor, Transition
 from .neurons import (
     Neurons, ENeurons, INeurons, DNeurons, SNeurons, JNeurons, VNeurons,
-    RelayNeurons, RateRecording,
+    RelayNeurons,
 )
+from .timeline import RateRecording
 
 __all__ = [
     "CompressedCode", "Connections", "Decompression", "Encoding",
