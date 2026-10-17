@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 import numpy as np
 
-from .timeline import PATHS, build_sequence_timeline
+from .timeline import PATHS, SequenceTimeline
 
 
 E_COLORS = ("#0072B2", "#E69F00", "#009E73", "#D55E00", "#CC79A7", "#56B4E9")
@@ -44,9 +44,7 @@ def _lines(ax, timeline, group, colors, *, held=False):
 
 def plot_sequence_artifacts(output: Path):
     output = Path(output)
-    with np.load(output / "activities.npz", allow_pickle=False) as data:
-        timeline = build_sequence_timeline(data)
-    timeline.save(output / "sequence_timeline.npz")
+    timeline = SequenceTimeline.load(output / "sequence_timeline.npz")
     location, direction, step = (int(v) for v in timeline.condition)
     decoded = " -> ".join(f"E{int(site)}" for site in timeline.positions)
     heading = f"Full retrieval: L={location}, D={direction:+d}, S={step} | {decoded}"

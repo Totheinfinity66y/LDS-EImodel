@@ -96,6 +96,57 @@ u_E=\sum_p W^{R\to E}_pR_p,
 
 ## 信息边界与使用
 
+### 神经元对象与可打印状态
+
+[neurons.py](neurons.py) 定义 `Neurons` 基类，以及继承它的 `ENeurons`、
+`INeurons`、`DNeurons`、`SNeurons`、`JNeurons`、`VNeurons` 和 `RelayNeurons`。
+`VNeurons` 对应四个位移读出 `DISP_*`。全局 I 与门控 I 是分别初始化的两个
+`INeurons` 实例，使用各自的时间常数。每个对象初始化自己的率变量，负责原有的
+调谐、解析响应或 Euler 更新；`RateDecompressor` 负责连接、同步调度和状态传递。
+
+每组的 `rate_potentials` 数组保存每个标量单元当前的未归一化率，`rates` 是它的别名。
+此名称指原方程中的率变量 r；模型没有新增膜电位变量或电压方程。
+`history` 保存该对象最近一次响应/积分的记录；解析响应只记录起点和终点，
+不补造中间采样。`Population` 与 `NeuralState` 继续作为独立、只读的传递快照。
+
+```python
+from lds_decompressor import CompressedCode, RateDecompressor
+
+model = RateDecompressor()
+print(model.rate_potentials)                # 初始化后的 47 个零率
+state = model.initialize(CompressedCode(1, 1, 2))
+print(model.e.rate_potentials)              # 当前 E1…E6
+state, transition = model.advance(state)
+print(model.v.rate_potentials)              # 当前四个位移读出
+print(model.gate_i.rate_potentials)         # 当前四个门控 I
+rates = dict(zip(model.unit_names, model.rate_potentials))
+print(rates)                               # 全部 47 个有名称的当前率快照
+print(model.e.history)                     # 最近一段 E 积分：时间 × 六单元
+
+result = model.decompress(CompressedCode(1, 1, 2))
+recording = result.recording
+print(recording.rate_potentials)           # 全检索记录：1201 × 47
+print(recording.labels)                    # 每列对应的单元名
+```
+
+`model.rate_potentials` 每次读取都汇总当前对象值，返回只读快照；已赋给其他变量的
+快照不会随下一次运行变化。每次 `advance(state)` 都从传入的神经状态恢复所需值，
+前一次运行或打印用对象的残留值不会成为推断输入。跨实例恢复时应使用相同参数和连接。
+
+模型在每次转移结束时生成包含全部 47 个单元的 `Transition.recording`；
+`result.recording` 只拼接这些记录，在公共边界保留下一段的采样。
+E/I/中继使用积分值，D/S/J 和读出/门控按原有保持规则记录。
+评估层把记录保存为 `sequence_timeline.npz`，绘图层只加载已保存的率数组。
+
+```mermaid
+flowchart LR
+    N[Neurons 子类实例] --> R[rate_potentials 与 history]
+    R --> T[Transition.recording]
+    T --> F[result.recording]
+    F --> S[sequence_timeline.npz]
+    S --> P[Matplotlib 忠实绘图]
+```
+
 `decompress(code)` 仅调用初始化读取一次 L、D、S；`NeuralState` 只保存 E、I、
 调谐/联合率状态及秩编号。之后 `advance(state)` / `resume(state)` 不接收符号码。
 三次输出来自真实 E 末态峰值，没有把目标序列写回 E。

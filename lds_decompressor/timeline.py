@@ -10,6 +10,8 @@ from typing import Mapping
 
 import numpy as np
 
+from .neurons import RateRecording
+
 
 PATHS = ("CW1", "CW2", "CCW1", "CCW2")
 
@@ -31,9 +33,22 @@ class SequenceTimeline:
     def save(self, path):
         np.savez_compressed(path, **vars(self))
 
+    @classmethod
+    def load(cls, path):
+        """Read recorded values verbatim; no model response or held-rate synthesis."""
+        with np.load(path, allow_pickle=False) as data:
+            return cls(**{key: data[key].copy() for key in cls.__dataclass_fields__})
+
+    @classmethod
+    def from_recording(cls, recording: RateRecording, rank_times, positions, condition):
+        """Attach presentation labels to a recording already produced by neurons."""
+        return cls(recording.time, recording.rates, recording.labels,
+                   recording.groups, recording.modes, np.asarray(rank_times),
+                   np.asarray(positions), np.asarray(condition))
+
 
 def build_sequence_timeline(data: Mapping) -> SequenceTimeline:
-    """Use the representative trace already exported in activities.npz.
+    """Legacy importer for activities.npz; new runs export neuron recordings directly.
 
     The saved example is condition row 1 (L=1,D=+1,S=2). At a rank switch
     E/I continue, relays reset, and readout/gates switch to the next snapshots.

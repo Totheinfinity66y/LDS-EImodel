@@ -65,3 +65,42 @@
 固定环移、秩连接、乘积交互、硬峰值解码、保持的调谐活动及外部秩脉冲都是显式先验。
 这些测试验证工程执行和信息隔离，不证明学习到规则、连续吸引子、
 持续记忆机制或自主序列时钟；有限环周网格也不是任意连续位置的数学证明。
+
+## 神经元封装与绘图保真验证（2026-10-17）
+
+`Neurons` 及 E/I/D/S/J/V/Relay 子类拥有各自的 `rate_potentials` 和历史记录。
+连接、参数、调谐公式、解析响应、同步 Euler 更新和中继重置语义保持原定义。
+模型输出全部单元的记录，评估层负责保存，绘图只读取保存的值。
+
+使用上述 analysis 环境重新核验，未安装或改动依赖：
+
+- `run.ps1 -Test`：27/27 项通过，包含15项回路、6项时间线、6项神经元封装测试。
+- [神经元封装测试](tests/test_neurons.py) 检查全部47个率变量的初始化与打印、
+  单元历史与真实积分的对应、每列记录的来源、只读快照、交错调用时的状态恢复，
+  以及在只有时间轴文件时直接绘图。绘图测试改动一个保存值并确认曲线与热图忠实使用它，
+  同时禁止响应生成和记录回写。
+- [独立等价检查](tests/check_refactor_equivalence.py) 从固定 Git 提交
+  `4424b97d8b4f5ff30b0fedc2d6a2ccb7ac9efd34` 读取模型源码，在独立模块执行原实现。
+  四组参数各运行全部24个合法码：默认、dt=0.001、改变调谐斜率/逐单元增益、
+  改变响应时长/E-I权重/门控强度，共96条完整序列；另比较288条空间探针。
+  对原有数据类的每个字段递归检查，24,192个数组逐值完全一致，无容差放宽。
+  该检查覆盖已列出的输入和参数组合，不声称穷尽任意参数。
+- 在临时输出目录完整运行评估和绘图：24/24合法码、288/288空间探针通过。
+  新导出的 `activities.npz` 全部29个数组、`sequence_timeline.npz` 全部8个数组
+  与本包既有保存值逐值一致；完整时间轴为1201×47。
+- 六张新导出的PNG与既有对应图逐像素一致；两张序列PDF成功导出。
+  既有活动数据和图像未被覆盖。
+
+等价检查的复现命令如下；它只读 Git 中的固定源码，不切换工作区、不导入评估目标。
+Git 可执行文件已核验为 `C:\Program Files\Git\cmd\git.exe`。
+
+```powershell
+$taskEnv = 'C:\Users\Totheinfinity\.conda\envs\analysis'
+$previousPath = $env:PATH
+try {
+    $env:PATH = "$taskEnv;$taskEnv\Library\bin;$taskEnv\Scripts;$previousPath"
+    & "$taskEnv\python.exe" -m lds_decompressor.tests.check_refactor_equivalence
+} finally {
+    $env:PATH = $previousPath
+}
+```

@@ -110,6 +110,13 @@ def run(output: Path, *, n_angles: int = 72):
         **{name: getattr(model.connections, name) for name in vars(model.connections)},
     )
     np.savez_compressed(output / "activities.npz", **payload)
+    # The model owns every raw rate, including held controls. Plotters only read.
+    from .timeline import SequenceTimeline
+    recording = example.recording
+    rank_times = np.r_[0.0, np.cumsum([t.time[-1] for t in example.transitions])]
+    SequenceTimeline.from_recording(
+        recording, rank_times, example.positions, [1, 1, 2],
+    ).save(output / "sequence_timeline.npz")
     summary = dict(
         model="handcrafted L/D/S rate circuit; no training",
         parameters=asdict(model.params),

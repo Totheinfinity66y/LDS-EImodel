@@ -40,9 +40,13 @@ E1交给E2、再交给E4、最后交给E5。S=2是直接的两位置投射，不
 
 ## 原始数据、导出与复现
 
-输入为 [activities.npz](artifacts/activities.npz) 中保存的真实记录。
-拼接后额外保存 [sequence_timeline.npz](artifacts/sequence_timeline.npz)，
-含1201个唯一时刻×47个原始率值，以及单元名称、群名称、保持/积分标记和读出时刻。
+神经元对象在模型执行时持有 `rate_potentials`，每次转移输出 `Transition.recording`。
+`result.recording` 拼接这些实际记录，评估层保存为
+[sequence_timeline.npz](artifacts/sequence_timeline.npz)，含1201个唯一时刻×47个原始率值，
+以及单元名称、群名称、保持/积分标记和读出时刻。
+[sequence_plotting.py](sequence_plotting.py) 只读取此文件，不生成率、不填充控制快照，
+也不覆盖原始记录。各条件的分组数据仍保存于 [activities.npz](artifacts/activities.npz)。
+`build_sequence_timeline` 仅保留为旧活动文件的导入接口，当前绘图入口不调用它。
 两图均提供PNG与PDF导出：[序列PDF](artifacts/sequence_dynamics.pdf)、
 [全单元PDF](artifacts/all_units_timeline.pdf)。
 

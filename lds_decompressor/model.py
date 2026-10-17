@@ -12,35 +12,14 @@ from dataclasses import dataclass, fields
 from numbers import Integral
 
 import numpy as np
-from numpy.typing import NDArray
 
-Array = NDArray[np.float64]
-PATH_NAMES = ("CW1", "CW2", "CCW1", "CCW2")
+from .neurons import (
+    Array, PATH_NAMES, Population, RateRecording, Neurons,
+    ENeurons, INeurons, DNeurons, SNeurons, JNeurons, VNeurons, RelayNeurons,
+    _array, _frozen, normalize,
+)
 SHIFTS = (1, 2, -1, -2)
 JOINT_PREFERENCES = ((1, 1), (1, 2), (-1, 1), (-1, 2))
-
-
-def _array(value, shape=None, *, nonnegative=False) -> Array:
-    out = np.array(value, dtype=float, copy=True)
-    if shape is not None and out.shape != shape:
-        raise ValueError(f"Expected shape {shape}, got {out.shape}")
-    if not np.isfinite(out).all() or (nonnegative and np.any(out < 0)):
-        raise ValueError("Activity must be finite and, where required, nonnegative")
-    return out
-
-
-def _frozen(value) -> Array:
-    out = _array(value)
-    out.setflags(write=False)
-    return out
-
-
-def normalize(value) -> Array:
-    out = _array(value, nonnegative=True)
-    total = float(out.sum())
-    if total <= 0:
-        raise ValueError("Cannot normalize silent activity")
-    return out / total
 
 
 def _peak(value) -> int:
@@ -110,24 +89,6 @@ class ModelParameters:
         ratio = self.rank_duration / self.dt
         if round(ratio) < 1 or not np.isclose(ratio, round(ratio)):
             raise ValueError("rank_duration must be an integer multiple of dt")
-
-
-@dataclass(frozen=True)
-class Population:
-    """Inspectable raw input, unnormalized rate, and sum-normalized activity."""
-
-    names: tuple[str, ...]
-    raw_drive: Array
-    rates: Array
-    activity: Array
-
-    def __post_init__(self):
-        n = len(self.names)
-        for name in ("raw_drive", "rates", "activity"):
-            arr = _array(getattr(self, name), (n,), nonnegative=name != "raw_drive")
-            object.__setattr__(self, name, _frozen(arr))
-        if not np.isclose(self.activity.sum(), 1):
-            raise ValueError("Population activity must sum to one")
 
 
 @dataclass(frozen=True)
@@ -207,6 +168,7 @@ class Transition:
     e_drive: Array
     e_rates: Array
     i_rates: Array
+    recording: RateRecording
 
     def __post_init__(self):
         for item in fields(self):
@@ -225,6 +187,10 @@ class Decompression:
     def __post_init__(self):
         object.__setattr__(self, "position_activity", _frozen(self.position_activity))
 
+    @property
+    def recording(self) -> RateRecording:
+        return RateRecording.concatenate(tuple(t.recording for t in self.transitions))
+
 
 class RateDecompressor:
     """Six position E groups, four shared relay paths, explicit inhibitory gates.
@@ -236,41 +202,44 @@ class RateDecompressor:
     def __init__(self, params: ModelParameters | None = None):
         self.params = params or ModelParameters()
         self.connections = Connections.build(self.params.gate_strength)
-        # E1=(1,0); labels increase clockwise in Cartesian coordinates.
-        self.site_angles = np.arange(6) * np.pi / 3
-        self.site_coordinates = np.column_stack((np.cos(self.site_angles), -np.sin(self.site_angles)))
-        self.position_names = tuple(f"E{i}" for i in range(1, 7))
+        p = self.params
+        self.e, self.i = ENeurons(p), INeurons(p)
+        self.d, self.s, self.j = DNeurons(p), SNeurons(p), JNeurons(p)
+        self.v, self.gate_i, self.relay = VNeurons(p), INeurons(p, gate=True), RelayNeurons(p)
+        self.neurons: dict[str, Neurons] = {
+            "Position E": self.e, "Direction": self.d, "Step": self.s,
+            "Joint": self.j, "Displacement": self.v, "Gate I": self.gate_i,
+            "Relay": self.relay, "Global I": self.i,
+        }
+        self.site_angles = self.e.site_angles
+        self.site_coordinates = self.e.site_coordinates
+        self.position_names = self.e.names
 
-    @staticmethod
-    def _population(names, raw, target, duration, tau):
-        # Exact solution of tau*dr/dt = -r + target, r(0)=0.
-        rates = np.asarray(target) * (-np.expm1(-duration / tau))
-        return Population(tuple(names), raw, rates, normalize(rates))
+    @property
+    def rate_potentials(self) -> Array:
+        """All 47 current raw rates, in ``unit_names`` order; safe to print."""
+        return _frozen(np.concatenate([n.rate_potentials for n in self.neurons.values()]))
+
+    @property
+    def unit_names(self):
+        return tuple(name for n in self.neurons.values() for name in n.names)
+
+    def _restore_encoding(self, encoding):
+        self.d.restore(encoding.direction)
+        self.s.restore(encoding.step)
+        self.j.restore(encoding.joint)
 
     def encode_tuning(self, direction: int, step: int) -> Encoding:
         # Validation uses a local code but no task sequence or start position.
         CompressedCode(1, direction, step)
-        p = self.params
-        d_raw = p.direction_slope * direction * np.array([1, -1])
-        s_raw = p.step_slope * (2 * step - 3) * np.array([-1, 1])
-        d = self._population(("D_CW", "D_CCW"), d_raw,
-                             np.asarray(p.direction_gains) * np.exp(-np.logaddexp(0, -d_raw)),
-                             p.encoding_duration, p.tau_tuning)
-        s = self._population(("S1", "S2"), s_raw,
-                             np.asarray(p.step_gains) * np.exp(-np.logaddexp(0, -s_raw)),
-                             p.encoding_duration, p.tau_tuning)
-        joint_raw = np.outer(d.activity, s.activity).reshape(4)
-        joint = self._population(tuple(f"J_{name}" for name in PATH_NAMES), joint_raw,
-                                 joint_raw * np.asarray(p.joint_gains),
-                                 p.encoding_duration, p.tau_tuning)
+        d = self.d.encode(direction)
+        s = self.s.encode(step)
+        joint = self.j.encode(d.activity, s.activity)
         return Encoding(d, s, joint)
 
     def encode_angle(self, clockwise_angle: float) -> Array:
         """Diagnostic position tuning for any angle (radians), not a new L domain."""
-        if not np.isfinite(clockwise_angle):
-            raise ValueError("Angle must be finite")
-        drive = np.exp(self.params.location_kappa * (np.cos(clockwise_angle - self.site_angles) - 1))
-        return normalize(drive)
+        return self.e.encode_angle(clockwise_angle)
 
     def initialize(self, code: CompressedCode) -> NeuralState:
         # This is the ONLY reading of symbolic input in the inference path.
@@ -283,6 +252,9 @@ class RateDecompressor:
         """Initialize from E population for independent spatial/state probes."""
         source = normalize(_array(position_activity, (6,), nonnegative=True))
         self.connections.validate()
+        self._restore_encoding(encoding)
+        self.v.initialize()
+        self.gate_i.initialize()
         _, e, i, _, _ = self._integrate_ei(source)
         return NeuralState(e[-1], float(i[-1]), encoding)
 
@@ -290,56 +262,73 @@ class RateDecompressor:
         if state.rank >= 4:
             raise ValueError("All three transitions have already been executed")
         self.connections.validate()
-        p = self.params
-        raw = self.connections.rank_to_displacement[state.rank - 1] @ state.encoding.joint.activity
-        return self._population(tuple(f"DISP_{name}" for name in PATH_NAMES), raw,
-                                raw * np.asarray(p.readout_gains),
-                                p.readout_duration, p.tau_readout)
+        return self.v.read(self.connections.rank_to_displacement[state.rank - 1],
+                           state.encoding.joint.activity)
 
     def _integrate_ei(self, drive, initial_e=None, initial_i=0.0, *, relay_target=None):
         p = self.params
         steps = round(p.rank_duration / p.dt)
         time = np.arange(steps + 1, dtype=float) * p.dt
-        es = np.zeros((steps + 1, 6))
-        ins = np.zeros(steps + 1)
-        relays = np.zeros((steps + 1, 4, 6))
-        drives = np.zeros_like(es)
-        es[0] = np.zeros(6) if initial_e is None else initial_e
-        ins[0] = initial_i
+        self.e.initialize(initial_e)
+        self.i.initialize([initial_i])
+        self.relay.initialize()
+        drives = np.zeros((steps + 1, 6))
         for k in range(steps):
             if relay_target is not None:
-                drives[k] = np.einsum("pij,pj->i", self.connections.relay_to_e, relays[k])
+                drives[k] = np.einsum("pij,pj->i", self.connections.relay_to_e,
+                                      self.relay.rates.reshape(4, 6))
             else:
                 drives[k] = drive
-            e_target = np.maximum(drives[k] + p.w_ee * es[k] - p.w_ei * ins[k], 0)
-            i_target = p.w_ie * float(es[k].sum())
-            es[k + 1] = es[k] + p.dt / p.tau_e * (e_target - es[k])
-            ins[k + 1] = ins[k] + p.dt / p.tau_i * (i_target - ins[k])
+            # Compute both targets before either step: synchronous Euler.
+            e_target = self.e.target(drives[k], float(self.i.rates[0]))
+            i_target = self.i.feedback_target(self.e.rates)
+            self.e.step(e_target, p.dt)
+            self.i.step(i_target, p.dt)
             if relay_target is not None:
-                relays[k + 1] = relays[k] + p.dt / p.tau_relay * (relay_target - relays[k])
+                self.relay.step(relay_target.reshape(24), p.dt)
+            else:
+                # During initialization these unused paths remain exactly zero.
+                self.relay.hold()
+        es = self.e.history
+        ins = self.i.history[:, 0]
+        relays = self.relay.history.reshape(steps + 1, 4, 6)
         drives[-1] = (drive if relay_target is None else
                       np.einsum("pij,pj->i", self.connections.relay_to_e, relays[-1]))
         return time, es, ins, relays, drives
 
+    def _record_rates(self, time, e, i, relay):
+        """Record all current neuron values; plotting never constructs rates."""
+        count = len(time)
+        values, labels, groups, modes = [], [], [], []
+        integrated = {"Position E": e, "Relay": relay.reshape(count, 24),
+                      "Global I": i[:, None]}
+        for group, neurons in self.neurons.items():
+            values.append(integrated[group] if group in integrated else
+                          np.repeat(neurons.rates[None], count, axis=0))
+            labels.extend(neurons.names)
+            groups.extend([f"Relay {p}" for p in PATH_NAMES for _ in range(6)]
+                          if group == "Relay" else [group] * len(neurons.names))
+            modes.extend(["integrated" if group in integrated else "held"] * len(neurons.names))
+        return RateRecording(time, np.concatenate(values, axis=1), labels, groups, modes)
+
     def advance(self, state: NeuralState) -> tuple[NeuralState, Transition]:
         """One rank pulse; only neural state and instance wiring are available."""
+        self._restore_encoding(state.encoding)
         readout = self.read_displacement(state)
         winner = _peak(readout.activity)
         pulse = np.zeros(4)
         pulse[winner] = 1.0
         gate_target = self.connections.winner_to_gate @ pulse
-        p = self.params
-        gate_rates = gate_target * (-np.expm1(-p.gate_duration / p.tau_gate))
+        gate_rates = self.gate_i.gate(gate_target)
         source = normalize(state.e_rates)
-        raw = np.einsum("pij,j->pi", self.connections.e_to_relay, source)
-        inhibition = np.einsum("pjg,g->pj", self.connections.gate_to_relay, gate_rates)
-        target = np.maximum(raw + inhibition, 0)
+        raw, inhibition, target = self.relay.target(
+            source, self.connections.e_to_relay, gate_rates, self.connections.gate_to_relay)
         time, e, i, relay, drive = self._integrate_ei(
             None, state.e_rates, state.i_rate, relay_target=target)
         following = NeuralState(e[-1], float(i[-1]), state.encoding, state.rank + 1)
         trace = Transition(state.rank, source, readout, PATH_NAMES[winner], SHIFTS[winner],
                            gate_target, gate_rates, raw, inhibition, target,
-                           time, relay, drive, e, i)
+                           time, relay, drive, e, i, self._record_rates(time, e, i, relay))
         return following, trace
 
     def resume(self, state: NeuralState) -> Decompression:
