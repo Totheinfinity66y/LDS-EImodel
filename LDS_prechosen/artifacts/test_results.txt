@@ -1,0 +1,21 @@
+test_all_conditions_and_geometry (test_model.BranchTests.test_all_conditions_and_geometry) ... ok
+test_branch_relocation_changes_future_without_direction_code (test_model.BranchTests.test_branch_relocation_changes_future_without_direction_code) ... ok
+test_connection_cut_and_wrong_wiring_fail (test_model.BranchTests.test_connection_cut_and_wrong_wiring_fail) ... ok
+test_consumed_codes_absent_and_forbidden (test_model.BranchTests.test_consumed_codes_absent_and_forbidden) ... ok
+test_evaluation_controls (test_model.BranchTests.test_evaluation_controls) ... ok
+test_gate_truth_table_and_input_sweep (test_model.BranchTests.test_gate_truth_table_and_input_sweep) ... ok
+test_immutability_and_history_independence (test_model.BranchTests.test_immutability_and_history_independence) ... ok
+test_invalid_inputs_and_weights (test_model.BranchTests.test_invalid_inputs_and_weights) ... ok
+test_mixed_response_uses_all_branches_no_winner (test_model.BranchTests.test_mixed_response_uses_all_branches_no_winner) ... ok
+test_no_content_no_output (test_model.BranchTests.test_no_content_no_output) ... ok
+test_no_old_model_or_evaluation_dependency (test_model.BranchTests.test_no_old_model_or_evaluation_dependency) ... ok
+test_remove_direction_blocks_r2_and_downstream (test_model.BranchTests.test_remove_direction_blocks_r2_and_downstream) ... ok
+test_restart_in_fresh_model_every_boundary (test_model.BranchTests.test_restart_in_fresh_model_every_boundary) ... ok
+test_step_branch_relocation_changes_r4 (test_model.BranchTests.test_step_branch_relocation_changes_r4) ... ok
+test_step_is_only_needed_before_r3 (test_model.BranchTests.test_step_is_only_needed_before_r3) ... ok
+test_time_step_and_analytic_solution (test_model.BranchTests.test_time_step_and_analytic_solution) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.764s
+
+OK
