@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "experiments": 39,
+  "trials_recomputed": 936,
+  "checks": [
+    "archive SHA256/CRC",
+    "input regeneration",
+    "104 rates per step/bounds",
+    "timestamp spacing",
+    "four Y decisions from saved trajectories",
+    "readout ordering",
+    "independent truth and summary reconstruction"
+  ]
+}
