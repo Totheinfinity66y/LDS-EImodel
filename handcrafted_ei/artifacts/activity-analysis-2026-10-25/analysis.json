@@ -171,7 +171,7 @@
     "pyyaml": "6.0.3"
   },
   "source_files": {
-    "plot_activity.py": "b357bed278dcdfc523df6b0c2ac988f9b49ee7062116868c27cf74da98a84ef3",
+    "plot_activity.py": "e8ce1934307d548de3e9b538ebbff413c4d0c5a930b307dce31f14a236baf458",
     "connectivity.py": "fc391cde5093cab83921d39b8a5963b2195cdb442ac7eb1f8d6bb0fe0d4c11a4",
     "ei_network.py": "3366aa095ab8f53d0f2e7ebad6d8d7660138366252bfc672f1ebccff59da4267",
     "neuron.py": "3df2ba64dc92bfe2db41a3081a829c077f945856686e68101558bf86d27b5c54",
@@ -721,6 +721,22 @@
       "projected_speed_median": 0.0011785113019775813,
       "interpretation": "2D projection/slice for visualization; arrows are not full 104D trajectories or a basin estimate."
     }
+  },
+  "delay_state_condition_map": {
+    "n_delay_states": 24,
+    "unique_full_states_rounded_1e-10": 24,
+    "minimum_pairwise_full_state_distance": 1.9999999999999996,
+    "maximum_pairwise_full_state_distance": 3.5355339059327373,
+    "r1_state_count": 6,
+    "r1_state_repeats_per_location": 4,
+    "max_within_location_r1_distance_across_DS": 0.0,
+    "column_order_within_location": [
+      "D+S1",
+      "D+S2",
+      "D-S1",
+      "D-S2"
+    ],
+    "interpretation": "Six R1 location patterns are each repeated across four D/S conditions; all 24 full 104-neuron delay states are distinct in the saved baseline data. This is not an exhaustive attractor count or basin measurement."
   },
   "recurrence_controls": {
     "0.0": {

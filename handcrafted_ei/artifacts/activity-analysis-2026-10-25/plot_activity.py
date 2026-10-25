@@ -392,6 +392,66 @@ def jacobian_and_vector_field(archive):
     }
 
 
+def delay_state_condition_map(archive):
+    """Show six R1 patterns alongside pairwise distances of full delay states."""
+    net = EINetwork()
+    labels = None
+    records = []
+    for i in range(24):
+        trial, _, task = read_trial(archive, i)
+        late = (trial["times_ms"] >= 1400) & (trial["times_ms"] <= 1750)
+        state = trial["rates"][late].mean(axis=0)
+        labels = trial["labels"]
+        records.append({"L": int(task["L"]), "D": int(task["D"]), "S": int(task["S"]), "state": state})
+    records.sort(key=lambda x: (x["L"], -x["D"], x["S"]))
+    states = np.asarray([x["state"] for x in records])
+    r1_rows = [i for i, name in enumerate(labels) if str(name).startswith("R1[")]
+    r1 = states[:, r1_rows].T
+    distances = np.linalg.norm(states[:, None, :] - states[None, :, :], axis=2)
+    off_diagonal = distances[~np.eye(24, dtype=bool)]
+    unique = int(len(np.unique(np.round(states, 10), axis=0)))
+    minimum_distance = float(off_diagonal.min())
+    maximum_distance = float(off_diagonal.max())
+
+    fig, axes = plt.subplots(1, 2, figsize=(13, 5.8), constrained_layout=True,
+                             gridspec_kw={"width_ratios": [1, 1.18]})
+    im0 = axes[0].imshow(r1, cmap="viridis", vmin=0, vmax=1, interpolation="nearest", aspect="auto")
+    for boundary in range(4, 24, 4):
+        axes[0].axvline(boundary - .5, color="white", lw=1.2)
+    axes[0].set(yticks=np.arange(6), yticklabels=[f"R1[{i}]" for i in range(6)],
+                xticks=[1.5 + 4 * i for i in range(6)], xticklabels=[f"L={i}" for i in range(6)],
+                xlabel="Starting location (each block has 4 D/S combinations)", ylabel="R1 neuron",
+                title="Six position patterns in R1")
+    fig.colorbar(im0, ax=axes[0], shrink=.8, label="Mean rate (1400–1750 ms)")
+
+    im1 = axes[1].imshow(distances, cmap="magma", interpolation="nearest", aspect="equal",
+                         vmin=0, vmax=maximum_distance)
+    for boundary in range(4, 24, 4):
+        axes[1].axhline(boundary - .5, color="white", lw=.8, alpha=.8)
+        axes[1].axvline(boundary - .5, color="white", lw=.8, alpha=.8)
+    axes[1].set(xticks=[1.5 + 4 * i for i in range(6)], xticklabels=[f"L={i}" for i in range(6)],
+                yticks=[1.5 + 4 * i for i in range(6)], yticklabels=[f"L={i}" for i in range(6)],
+                xlabel="Full 104-neuron delay state", ylabel="Full 104-neuron delay state",
+                title=f"Pairwise full-state distance: {unique}/24 unique")
+    fig.colorbar(im1, ax=axes[1], shrink=.8, label="Euclidean distance in 104D rate space")
+    fig.suptitle("Delay states grouped by L; within each block: D+S1, D+S2, D−S1, D−S2")
+    save(fig, "delay-state-condition-map")
+    return {
+        "n_delay_states": int(len(states)),
+        "unique_full_states_rounded_1e-10": unique,
+        "minimum_pairwise_full_state_distance": minimum_distance,
+        "maximum_pairwise_full_state_distance": maximum_distance,
+        "r1_state_count": 6,
+        "r1_state_repeats_per_location": 4,
+        "max_within_location_r1_distance_across_DS": float(max(
+            np.linalg.norm(r1[:, i:i+4, None] - r1[:, None, i:i+4], axis=0).max()
+            for i in range(0, 24, 4)
+        )),
+        "column_order_within_location": ["D+S1", "D+S2", "D-S1", "D-S2"],
+        "interpretation": "Six R1 location patterns are each repeated across four D/S conditions; all 24 full 104-neuron delay states are distinct in the saved baseline data. This is not an exhaustive attractor count or basin measurement."
+    }
+
+
 def recurrence_control_summary():
     net = EINetwork()
     output = {}
@@ -445,6 +505,7 @@ def main():
     subspace = subspace_plot(states)
     attractor = attractor_analysis(baseline)
     local_dynamics = jacobian_and_vector_field(baseline)
+    delay_states = delay_state_condition_map(baseline)
     recurrence_controls = recurrence_control_summary()
     config = json.loads((ARCHIVES / "config.json").read_text(encoding="utf-8"))
     env = json.loads((ARCHIVES / "environment.json").read_text(encoding="utf-8"))
@@ -465,6 +526,7 @@ def main():
                                    "baseline.yaml": sha256(PACKAGE / "config" / "baseline.yaml")},
                   "config": config, "subspace_analysis": subspace, "attractor_analysis": attractor,
                   "local_dynamics_visualization": local_dynamics,
+                  "delay_state_condition_map": delay_states,
                   "recurrence_controls": recurrence_controls}
     (OUT / "analysis.json").write_text(json.dumps(provenance, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     local = attractor["perturbation_results"]["0.005"]
@@ -481,6 +543,7 @@ The figures use checksum-verified `handcrafted_ei/artifacts/v1` rates. Its recei
 4. [Delay fixed-point probe](delay-state-attractor-probe.png) — local Euler-map stability and zero-input/zero-clock perturbation return from 24 saved delay states.
 5. [Local Jacobian](delay-state-jacobian.png) — full 104 × 104 continuous-time piecewise Jacobian at baseline condition 00, organized by population, plus its eigenvalue spectrum.
 6. [Projected vector field](delay-state-vector-field.png) — zero-input dynamics projected onto the PC1–PC2 plane of 24 observed delay states, with the other 102 coordinates fixed at condition 00.
+7. [Delay-state count map](delay-state-condition-map.png) — the R1 rate pattern for six L values and pairwise distances among all 24 full 104-neuron delay states, grouped by L and D/S.
 
 ## Population-state result
 
@@ -495,6 +558,8 @@ The archived recurrence scan is consistent with recurrence-dependent holding: at
 This supports **locally stable fixed points for the delay states** in the zero-stimulus, zero-clock dynamics. The larger perturbations show that return is not guaranteed for the broader perturbation scale. These analyses do not establish global basins, a continuous attractor, or autonomous stage switching. They test archived v1 dynamics and do not imply learned or biological dynamics.
 
 The new Jacobian is the derivative of the implemented clipped rate field in the active linear region at condition 00; units at either clip boundary are assigned zero slope, so the derivative is piecewise and boundary states have one-sided alternatives. Its continuous-time eigenvalues and Euler-map spectrum are stored in `analysis.json`. The vector-field arrows show the field component in a two-dimensional activity slice. This projection aids intuition but cannot establish full-space flow topology or attractor basins.
+
+The delay-state count map makes the distinction visible: the same one-of-six R1 rate pattern repeats across the four D/S combinations for each L, while every full 104-neuron state differs from the others. These are 24 observed condition-specific delay states, not proof that the network has exactly 24 attractors.
 
 ## Reproduction
 

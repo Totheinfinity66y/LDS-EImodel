@@ -10,6 +10,7 @@ The figures use checksum-verified `handcrafted_ei/artifacts/v1` rates. Its recei
 4. [Delay fixed-point probe](delay-state-attractor-probe.png) — local Euler-map stability and zero-input/zero-clock perturbation return from 24 saved delay states.
 5. [Local Jacobian](delay-state-jacobian.png) — full 104 × 104 continuous-time piecewise Jacobian at baseline condition 00, organized by population, plus its eigenvalue spectrum.
 6. [Projected vector field](delay-state-vector-field.png) — zero-input dynamics projected onto the PC1–PC2 plane of 24 observed delay states, with the other 102 coordinates fixed at condition 00.
+7. [Delay-state count map](delay-state-condition-map.png) — the R1 rate pattern for six L values and pairwise distances among all 24 full 104-neuron delay states, grouped by L and D/S.
 
 ## Population-state result
 
@@ -24,6 +25,8 @@ The archived recurrence scan is consistent with recurrence-dependent holding: at
 This supports **locally stable fixed points for the delay states** in the zero-stimulus, zero-clock dynamics. The larger perturbations show that return is not guaranteed for the broader perturbation scale. These analyses do not establish global basins, a continuous attractor, or autonomous stage switching. They test archived v1 dynamics and do not imply learned or biological dynamics.
 
 The new Jacobian is the derivative of the implemented clipped rate field in the active linear region at condition 00; units at either clip boundary are assigned zero slope, so the derivative is piecewise and boundary states have one-sided alternatives. Its continuous-time eigenvalues and Euler-map spectrum are stored in `analysis.json`. The vector-field arrows show the field component in a two-dimensional activity slice. This projection aids intuition but cannot establish full-space flow topology or attractor basins.
+
+The delay-state count map makes the distinction visible: the same one-of-six R1 rate pattern repeats across the four D/S combinations for each L, while every full 104-neuron state differs from the others. These are 24 observed condition-specific delay states, not proof that the network has exactly 24 attractors.
 
 ## Reproduction
 
