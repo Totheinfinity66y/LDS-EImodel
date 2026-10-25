@@ -289,6 +289,109 @@ def attractor_analysis(archive):
             "interpretation": "Local stable fixed-point evidence for the saved delay states under zero stimulus and clock; not a global basin, continuous-attractor, or autonomous stage-transition test."}
 
 
+def jacobian_and_vector_field(archive):
+    """Plot the piecewise local Jacobian and a two-dimensional slice of the 104D field."""
+    net = EINetwork()
+    W, tau = net.signed_weights, net.tau
+    dt = float(net.config["dt_ms"])
+    states, labels = [], None
+    for i in range(24):
+        trial, _, _ = read_trial(archive, i)
+        late = (trial["times_ms"] >= 1400) & (trial["times_ms"] <= 1750)
+        states.append(trial["rates"][late].mean(axis=0))
+        labels = trial["labels"]
+    states = np.asarray(states)
+    rstar = states[0]
+    drive = W @ rstar + net.tonic - net.theta
+    slope = ((drive > 0) & (drive < 1)).astype(float)
+    # f(r)=(-r+clip(Wr+b,0,1))/tau in the zero-input, zero-clock delay.
+    A = (-np.eye(len(rstar)) + slope[:, None] * W) / tau[:, None]
+    J = np.eye(len(rstar)) + dt * A
+    eig_A, eig_J = np.linalg.eigvals(A), np.linalg.eigvals(J)
+
+    groups = [str(x).split("[")[0] for x in labels]
+    boundaries = [i for i in range(1, len(groups)) if groups[i] != groups[i - 1]]
+    centers, names, start = [], [], 0
+    for end in boundaries + [len(groups)]:
+        centers.append((start + end - 1) / 2)
+        names.append(groups[start])
+        start = end
+    fig, axes = plt.subplots(1, 2, figsize=(13, 6.2), constrained_layout=True,
+                             gridspec_kw={"width_ratios": [1.35, 1]})
+    lim = float(np.quantile(np.abs(A), .995))
+    im = axes[0].imshow(A, cmap="coolwarm", vmin=-lim, vmax=lim, interpolation="nearest", aspect="auto")
+    for b in boundaries:
+        axes[0].axhline(b - .5, color="black", lw=.45, alpha=.45)
+        axes[0].axvline(b - .5, color="black", lw=.45, alpha=.45)
+    axes[0].set(xticks=centers, xticklabels=names, yticks=centers, yticklabels=names,
+                xlabel="Presynaptic activity coordinate", ylabel="Postsynaptic rate derivative",
+                title="Continuous-time local Jacobian A (ms⁻¹)")
+    axes[0].tick_params(axis="x", labelrotation=70, labelsize=7)
+    axes[0].tick_params(axis="y", labelsize=7)
+    fig.colorbar(im, ax=axes[0], shrink=.78, label="∂fᵢ / ∂rⱼ (ms⁻¹)")
+    axes[1].scatter(eig_A.real, eig_A.imag, s=22, alpha=.7, color="#4477AA", label="Eigenvalues of A")
+    axes[1].axvline(0, color="#AA3377", ls="--", lw=1, label="Stability boundary Re(λ)=0")
+    axes[1].set(xlabel="Real part (ms⁻¹)", ylabel="Imaginary part (ms⁻¹)",
+                title=f"Local eigenvalues; max Re(λ)={eig_A.real.max():.4f} ms⁻¹")
+    axes[1].grid(alpha=.18)
+    axes[1].legend(frameon=False, fontsize=8)
+    fig.suptitle("Piecewise-linear Jacobian at baseline condition 00 delay state")
+    save(fig, "delay-state-jacobian")
+
+    # PCA basis from all 24 delay states. Evaluate the field on a 2D slice through
+    # condition 00; remaining coordinates are fixed at that saved activity vector.
+    _, _, vh = np.linalg.svd(states - states.mean(axis=0), full_matrices=False)
+    basis = vh[:2].T
+    coords = (states - states.mean(axis=0)) @ basis
+    spread = float(np.max(np.abs(coords - coords[0])))
+    half_width = max(.06, min(.25, spread * 1.25))
+    grid = np.linspace(-half_width, half_width, 31)
+    xx, yy = np.meshgrid(grid, grid)
+    vx, vy = np.zeros_like(xx), np.zeros_like(yy)
+    for row in range(xx.shape[0]):
+        for col in range(xx.shape[1]):
+            r = np.clip(rstar + basis[:, 0] * xx[row, col] + basis[:, 1] * yy[row, col], 0, 1)
+            field = (-r + np.clip(W @ r + net.tonic - net.theta, 0, 1)) / tau
+            projected = basis.T @ field
+            vx[row, col], vy[row, col] = projected
+    speeds = np.hypot(vx, vy)
+    fig, ax = plt.subplots(figsize=(7.8, 6.6), constrained_layout=True)
+    norm = np.maximum(speeds, np.finfo(float).tiny)
+    q = ax.quiver(xx, yy, vx / norm, vy / norm, speeds, cmap="viridis",
+                  angles="xy", pivot="mid", scale=30, width=.0032)
+    ax.scatter(coords[:, 0] - coords[0, 0], coords[:, 1] - coords[0, 1],
+               s=22, facecolors="none", edgecolors="#EE6677", linewidths=.9,
+               label="24 observed delay states (projected)")
+    ax.scatter(0, 0, marker="*", color="#AA3377", s=120, zorder=4, label="Condition 00 state")
+    ax.set(xlim=(-half_width, half_width), ylim=(-half_width, half_width),
+           xlabel="PC1 displacement from condition 00 (rate units)",
+           ylabel="PC2 displacement from condition 00 (rate units)",
+           title="Projected zero-input vector field on a local 2D slice")
+    ax.legend(frameon=True, fontsize=8, loc="upper right")
+    ax.grid(alpha=.16)
+    fig.colorbar(q, ax=ax, shrink=.82, label="Projected speed ‖Uᵀf(r)‖ (rate/ms)")
+    fig.suptitle("104-neuron dynamics: other coordinates held at the saved delay state")
+    save(fig, "delay-state-vector-field")
+    return {
+        "state": "baseline condition 00 mean rates at 1400-1750 ms",
+        "continuous_jacobian_units": "ms^-1",
+        "continuous_jacobian_max_real_eigenvalue": float(eig_A.real.max()),
+        "continuous_jacobian_matrix_shape": list(A.shape),
+        "continuous_jacobian_saturated_units_zero_slope": int(np.sum((drive <= 0) | (drive >= 1))),
+        "continuous_jacobian_active_slope_units": int(slope.sum()),
+        "continuous_jacobian_eigenvalues": [[float(x.real), float(x.imag)] for x in eig_A],
+        "euler_map_spectral_radius_condition_00": float(np.max(np.abs(eig_J))),
+        "vector_field": {
+            "basis": "PC1-PC2 of the 24 saved delay states; centered on condition 00",
+            "slice": "other 102 activity coordinates fixed at condition 00 state; plotted states clipped to [0,1]",
+            "grid_points_per_axis": int(len(grid)), "half_width_rate_units": half_width,
+            "projected_speed_min": float(speeds.min()), "projected_speed_max": float(speeds.max()),
+            "projected_speed_median": float(np.median(speeds)),
+            "interpretation": "2D projection/slice for visualization; arrows are not full 104D trajectories or a basin estimate."
+        }
+    }
+
+
 def recurrence_control_summary():
     net = EINetwork()
     output = {}
@@ -341,6 +444,7 @@ def main():
     states, _ = endpoint_states(baseline)
     subspace = subspace_plot(states)
     attractor = attractor_analysis(baseline)
+    local_dynamics = jacobian_and_vector_field(baseline)
     recurrence_controls = recurrence_control_summary()
     config = json.loads((ARCHIVES / "config.json").read_text(encoding="utf-8"))
     env = json.loads((ARCHIVES / "environment.json").read_text(encoding="utf-8"))
@@ -360,6 +464,7 @@ def main():
                                    "neuron.py": sha256(PACKAGE / "model" / "neuron.py"),
                                    "baseline.yaml": sha256(PACKAGE / "config" / "baseline.yaml")},
                   "config": config, "subspace_analysis": subspace, "attractor_analysis": attractor,
+                  "local_dynamics_visualization": local_dynamics,
                   "recurrence_controls": recurrence_controls}
     (OUT / "analysis.json").write_text(json.dumps(provenance, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     local = attractor["perturbation_results"]["0.005"]
@@ -374,6 +479,8 @@ The figures use checksum-verified `handcrafted_ei/artifacts/v1` rates. Its recei
 2. [Disinhibitory gating](disinhibitory-gating.png) — recorded activity in baseline trial 00. `I_release` rises after the stage clock, suppresses the selected `I_gate` through I→I inhibition, and the selected E branch becomes active while the competing branch stays suppressed.
 3. [All-neuron subspace](all-neuron-subspace.png) — common PCA basis from all 104 neuron coordinates, using 24 archived four-readout trajectories (96 population-state vectors).
 4. [Delay fixed-point probe](delay-state-attractor-probe.png) — local Euler-map stability and zero-input/zero-clock perturbation return from 24 saved delay states.
+5. [Local Jacobian](delay-state-jacobian.png) — full 104 × 104 continuous-time piecewise Jacobian at baseline condition 00, organized by population, plus its eigenvalue spectrum.
+6. [Projected vector field](delay-state-vector-field.png) — zero-input dynamics projected onto the PC1–PC2 plane of 24 observed delay states, with the other 102 coordinates fixed at condition 00.
 
 ## Population-state result
 
@@ -387,6 +494,8 @@ The archived recurrence scan is consistent with recurrence-dependent holding: at
 
 This supports **locally stable fixed points for the delay states** in the zero-stimulus, zero-clock dynamics. The larger perturbations show that return is not guaranteed for the broader perturbation scale. These analyses do not establish global basins, a continuous attractor, or autonomous stage switching. They test archived v1 dynamics and do not imply learned or biological dynamics.
 
+The new Jacobian is the derivative of the implemented clipped rate field in the active linear region at condition 00; units at either clip boundary are assigned zero slope, so the derivative is piecewise and boundary states have one-sided alternatives. Its continuous-time eigenvalues and Euler-map spectrum are stored in `analysis.json`. The vector-field arrows show the field component in a two-dimensional activity slice. This projection aids intuition but cannot establish full-space flow topology or attractor basins.
+
 ## Reproduction
 
 Run from the repository root with the project's verified `analysis` environment:
@@ -397,7 +506,7 @@ $env:PATH="$envRoot\\Library\\bin;$envRoot\\Scripts;$envRoot;$env:PATH"
 & (Join-Path $envRoot 'python.exe') 'handcrafted_ei\\artifacts\\activity-analysis-2026-10-25\\plot_activity.py'
 ```
 
-`analysis.json` stores input archive checksums, source hashes, configuration, environment versions, numerical summaries, and the exact analysis scope.
+`analysis.json` stores input archive checksums, source hashes, configuration, environment versions, Jacobian/eigenvalue and vector-field summaries, and the exact analysis scope.
 """
     (OUT / "REPORT.md").write_text(report, encoding="utf-8")
     print(json.dumps({"output": str(OUT), "subspace": subspace, "attractor": attractor}, ensure_ascii=False, indent=2))

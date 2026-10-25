@@ -8,6 +8,8 @@ The figures use checksum-verified `handcrafted_ei/artifacts/v1` rates. Its recei
 2. [Disinhibitory gating](disinhibitory-gating.png) — recorded activity in baseline trial 00. `I_release` rises after the stage clock, suppresses the selected `I_gate` through I→I inhibition, and the selected E branch becomes active while the competing branch stays suppressed.
 3. [All-neuron subspace](all-neuron-subspace.png) — common PCA basis from all 104 neuron coordinates, using 24 archived four-readout trajectories (96 population-state vectors).
 4. [Delay fixed-point probe](delay-state-attractor-probe.png) — local Euler-map stability and zero-input/zero-clock perturbation return from 24 saved delay states.
+5. [Local Jacobian](delay-state-jacobian.png) — full 104 × 104 continuous-time piecewise Jacobian at baseline condition 00, organized by population, plus its eigenvalue spectrum.
+6. [Projected vector field](delay-state-vector-field.png) — zero-input dynamics projected onto the PC1–PC2 plane of 24 observed delay states, with the other 102 coordinates fixed at condition 00.
 
 ## Population-state result
 
@@ -21,6 +23,8 @@ The archived recurrence scan is consistent with recurrence-dependent holding: at
 
 This supports **locally stable fixed points for the delay states** in the zero-stimulus, zero-clock dynamics. The larger perturbations show that return is not guaranteed for the broader perturbation scale. These analyses do not establish global basins, a continuous attractor, or autonomous stage switching. They test archived v1 dynamics and do not imply learned or biological dynamics.
 
+The new Jacobian is the derivative of the implemented clipped rate field in the active linear region at condition 00; units at either clip boundary are assigned zero slope, so the derivative is piecewise and boundary states have one-sided alternatives. Its continuous-time eigenvalues and Euler-map spectrum are stored in `analysis.json`. The vector-field arrows show the field component in a two-dimensional activity slice. This projection aids intuition but cannot establish full-space flow topology or attractor basins.
+
 ## Reproduction
 
 Run from the repository root with the project's verified `analysis` environment:
@@ -31,4 +35,4 @@ $env:PATH="$envRoot\Library\bin;$envRoot\Scripts;$envRoot;$env:PATH"
 & (Join-Path $envRoot 'python.exe') 'handcrafted_ei\artifacts\activity-analysis-2026-10-25\plot_activity.py'
 ```
 
-`analysis.json` stores input archive checksums, source hashes, configuration, environment versions, numerical summaries, and the exact analysis scope.
+`analysis.json` stores input archive checksums, source hashes, configuration, environment versions, Jacobian/eigenvalue and vector-field summaries, and the exact analysis scope.
