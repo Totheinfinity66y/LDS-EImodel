@@ -1,0 +1,38 @@
+{
+  "scope": "Remove superseded project implementations and project instructions; retain current handcrafted_ei and literature sources",
+  "removed": [
+    {
+      "relative": "lds_decompressor",
+      "files": 58
+    },
+    {
+      "relative": "LDS_prechosen",
+      "files": 27
+    },
+    {
+      "relative": "LDS_disinhibitory",
+      "files": 25
+    },
+    {
+      "relative": "PLAN.md",
+      "files": 1
+    },
+    {
+      "relative": "docs\\47单元原版与Yang2016_导师机制对照.md",
+      "files": 1
+    },
+    {
+      "relative": ".validation-precheck",
+      "files": 2819
+    }
+  ],
+  "scientific_code_changed": false,
+  "validation": {
+    "tests_passed": 16,
+    "experiments_recomputed": 39,
+    "trials_recomputed": 936,
+    "readme_links_checked": 26,
+    "scientific_fingerprints_unchanged": 12,
+    "legacy_entry_reference_matches": 0
+  }
+}

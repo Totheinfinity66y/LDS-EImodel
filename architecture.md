@@ -181,7 +181,7 @@ M4通过后才进行M5：delay 1.6–4 s、位置噪声、gate幅度与recurrenc
 
 neural subspace是观察对象。稀疏活跃不等于低秩；1→2→4→4是固定L遍历D/S时潜在分支数，不是同时活动分支数或PCA rank。分支使用独立坐标，分离角受固定拓扑影响，不能宣称涌现正交几何。有限delay保持不是连续吸引子、自主阶段转换或生理复现证据。
 
-历史包lds_decompressor、LDS_prechosen、LDS_disinhibitory不导入v1，不充当其验收证据。根目录README以v1为主，保留历史入口并标明边界。
+仓库当前模型入口统一为 `handcrafted_ei/`，根目录 README、本文和 todo.md 共同描述这一实现。文献阅读资料是独立背景材料，不充当 v1 的实现或验收证据。
 
 ## 10. Open design decisions
 
