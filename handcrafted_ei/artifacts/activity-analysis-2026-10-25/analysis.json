@@ -1,0 +1,323 @@
+{
+  "created_utc_date": "2026-10-25",
+  "analysis_scope": "post-hoc plots plus local delay-state stability probes",
+  "verification_receipt": {
+    "status": "PASS",
+    "experiments": 39,
+    "trials_recomputed": 936,
+    "checks": [
+      "archive SHA256/CRC",
+      "input regeneration",
+      "104 rates per step/bounds",
+      "timestamp spacing",
+      "four Y decisions from saved trajectories",
+      "readout ordering",
+      "independent truth and summary reconstruction"
+    ]
+  },
+  "verified_archives": {
+    "baseline.zip": {
+      "sha256": "0f1d894ca0eb724da7714d14145168faba4d8faccac89e774d22c37d0a4d0d74",
+      "zip_crc": "PASS"
+    },
+    "recurrence_0.0.zip": {
+      "sha256": "b65ef1089ab730efda32f331911b1d75229fb27221c8a4200db8c2194c1b9d26",
+      "zip_crc": "PASS"
+    },
+    "recurrence_1.6.zip": {
+      "sha256": "d1e478a260f7a8b7acc17d1518ab69580a474281a84c4506969a1ccaade83cfb",
+      "zip_crc": "PASS"
+    },
+    "recurrence_2.2.zip": {
+      "sha256": "9de202c6212ee4bd53405705393ad72ed63fdecdf103c2899f2cd870555c484b",
+      "zip_crc": "PASS"
+    }
+  },
+  "baseline_activity_shape_per_trial": [
+    663,
+    104
+  ],
+  "baseline_data_audit": {
+    "trials_checked": 24,
+    "rate_min": 0.0,
+    "rate_max": 0.9999999999999998,
+    "fixed_timestamps": true,
+    "fixed_labels": true
+  },
+  "all_neuron_labels": [
+    "R1[0]",
+    "R1[1]",
+    "R1[2]",
+    "R1[3]",
+    "R1[4]",
+    "R1[5]",
+    "R2[0]",
+    "R2[1]",
+    "R2[2]",
+    "R2[3]",
+    "R2[4]",
+    "R2[5]",
+    "R2[6]",
+    "R2[7]",
+    "R2[8]",
+    "R2[9]",
+    "R2[10]",
+    "R2[11]",
+    "R3[0]",
+    "R3[1]",
+    "R3[2]",
+    "R3[3]",
+    "R3[4]",
+    "R3[5]",
+    "R3[6]",
+    "R3[7]",
+    "R3[8]",
+    "R3[9]",
+    "R3[10]",
+    "R3[11]",
+    "R3[12]",
+    "R3[13]",
+    "R3[14]",
+    "R3[15]",
+    "R3[16]",
+    "R3[17]",
+    "R3[18]",
+    "R3[19]",
+    "R3[20]",
+    "R3[21]",
+    "R3[22]",
+    "R3[23]",
+    "R4[0]",
+    "R4[1]",
+    "R4[2]",
+    "R4[3]",
+    "R4[4]",
+    "R4[5]",
+    "R4[6]",
+    "R4[7]",
+    "R4[8]",
+    "R4[9]",
+    "R4[10]",
+    "R4[11]",
+    "R4[12]",
+    "R4[13]",
+    "R4[14]",
+    "R4[15]",
+    "R4[16]",
+    "R4[17]",
+    "R4[18]",
+    "R4[19]",
+    "R4[20]",
+    "R4[21]",
+    "R4[22]",
+    "R4[23]",
+    "M_D[0]",
+    "M_D[1]",
+    "M_S[0]",
+    "M_S[1]",
+    "Y[0]",
+    "Y[1]",
+    "Y[2]",
+    "Y[3]",
+    "Y[4]",
+    "Y[5]",
+    "gate12[0]",
+    "gate12[1]",
+    "gate23[0]",
+    "gate23[1]",
+    "gate23[2]",
+    "gate23[3]",
+    "gate34[0]",
+    "gate34[1]",
+    "gate34[2]",
+    "gate34[3]",
+    "release12[0]",
+    "release12[1]",
+    "release23[0]",
+    "release23[1]",
+    "release34[0]",
+    "comp_R1[0]",
+    "comp_R1[1]",
+    "comp_R1[2]",
+    "comp_R1[3]",
+    "comp_R1[4]",
+    "comp_R1[5]",
+    "comp_D[0]",
+    "comp_D[1]",
+    "comp_S[0]",
+    "comp_S[1]",
+    "retire[0]",
+    "retire[1]",
+    "retire[2]"
+  ],
+  "condition_00": {
+    "L": 0,
+    "D": 1,
+    "S": 1
+  },
+  "saved_experiment_environment": {
+    "python": "3.12.12 | packaged by conda-forge | (main, Jan 26 2026, 23:38:32) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\Totheinfinity\\.conda\\envs\\analysis\\python.exe",
+    "numpy": "2.3.5",
+    "yaml": "6.0.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "compute": "CPU NumPy; no GPU or training"
+  },
+  "analysis_environment": {
+    "python": "3.12.12 | packaged by conda-forge | (main, Jan 26 2026, 23:38:32) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\Totheinfinity\\.conda\\envs\\analysis\\python.exe",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.7",
+    "pyyaml": "6.0.3"
+  },
+  "source_files": {
+    "plot_activity.py": "4b98b8a1ad6b764ef1396b167fb02d2deccd8f5d5f59131f8d4f77b99a0f4991",
+    "connectivity.py": "fc391cde5093cab83921d39b8a5963b2195cdb442ac7eb1f8d6bb0fe0d4c11a4",
+    "ei_network.py": "3366aa095ab8f53d0f2e7ebad6d8d7660138366252bfc672f1ebccff59da4267",
+    "neuron.py": "3df2ba64dc92bfe2db41a3081a829c077f945856686e68101558bf86d27b5c54",
+    "baseline.yaml": "f53dd98fa2e59b90483d6c5dee7a6bc99ee2dc5206a21d27c6861e73c38c1c25"
+  },
+  "config": {
+    "dt_ms": 5,
+    "tau_e_ms": 40,
+    "tau_i_ms": 20,
+    "sample_ms": 200,
+    "delay_ms": 1600,
+    "transfer_ms": 200,
+    "retire_ms": 160,
+    "readout_ms": 100,
+    "decision_ms": 20,
+    "gap_ms": 10,
+    "w_rec": 2.0,
+    "tonic_e": 0.15,
+    "theta_e": 0.25,
+    "w_input": 0.8,
+    "w_projection": 0.8,
+    "w_out": 0.8,
+    "theta_y": 0.3,
+    "w_mem": 0.9,
+    "clock_release": 0.9,
+    "theta_release": 1.0,
+    "clock_release3": 1.0,
+    "theta_release3": 0.3,
+    "w_release": 0.8,
+    "tonic_gate": 0.6,
+    "theta_gate": 0.1,
+    "w_gate": 1.6,
+    "w_comp": 0.3,
+    "w_comp_drive": 1.0,
+    "w_retire": 3.2,
+    "clock_retire": 1.1,
+    "theta_retire": 0.1,
+    "decision_threshold": 0.1,
+    "seed": 7,
+    "noise_sigma": 0.0
+  },
+  "subspace_analysis": {
+    "n_neurons": 104,
+    "n_endpoint_states": 96,
+    "common_centered_rank": 67,
+    "common_participation_ratio": 6.978428866346841,
+    "common_vaf_first_10": [
+      0.24725884852361063,
+      0.22587335234510222,
+      0.15616776826005793,
+      0.052505196670725125,
+      0.027803125291205214,
+      0.024411972724919417,
+      0.019279140803660413,
+      0.01927914080366038,
+      0.019260348075566196,
+      0.01926034807556618
+    ],
+    "stage_specific": {
+      "R1": {
+        "centered_rank": 7,
+        "participation_ratio": 5.5549132947976885
+      },
+      "R2": {
+        "centered_rank": 12,
+        "participation_ratio": 3.6950965334751342
+      },
+      "R3": {
+        "centered_rank": 23,
+        "participation_ratio": 3.5900392957089693
+      },
+      "R4": {
+        "centered_rank": 23,
+        "participation_ratio": 3.590029182617187
+      }
+    }
+  },
+  "attractor_analysis": {
+    "candidate_states": 24,
+    "probes_per_state_per_amplitude": 4,
+    "perturbation_sd_values": [
+      0.005,
+      0.05
+    ],
+    "probe_duration_ms": 1000,
+    "max_fixed_point_residual": 2.220446049250313e-16,
+    "median_fixed_point_residual": 2.220446049250313e-16,
+    "local_euler_spectral_radius_min": 0.875,
+    "local_euler_spectral_radius_median": 0.875,
+    "local_euler_spectral_radius_max": 0.875,
+    "perturbation_results": {
+      "0.005": {
+        "median_distance_ratio_at_1000ms": 3.0714535532017164e-11,
+        "max_distance_ratio_at_1000ms": 5.960619286888472e-11,
+        "fraction_within_1e-3_of_original_state": 1.0,
+        "fraction_nearest_to_different_saved_state": 0.0,
+        "max_final_distance_to_nearest_saved_state": 2.5104928394806716e-12,
+        "median_absolute_final_state_change": 0.038123155428978955
+      },
+      "0.05": {
+        "median_distance_ratio_at_1000ms": 2.6285809890675686e-11,
+        "max_distance_ratio_at_1000ms": 3.197731994522074,
+        "fraction_within_1e-3_of_original_state": 0.9375,
+        "fraction_nearest_to_different_saved_state": 0.0,
+        "max_final_distance_to_nearest_saved_state": 1.118033988514325,
+        "median_absolute_final_state_change": 0.3731687271932924
+      }
+    },
+    "interpretation": "Local stable fixed-point evidence for the saved delay states under zero stimulus and clock; not a global basin, continuous-attractor, or autonomous stage-transition test."
+  },
+  "recurrence_controls": {
+    "0.0": {
+      "sequences_correct": 0,
+      "n": 24,
+      "median_late_max_activity": {
+        "R1": 8.412896790971637e-15,
+        "M_D": 8.412896790971637e-15,
+        "M_S": 8.412896790971637e-15
+      }
+    },
+    "1.6": {
+      "sequences_correct": 24,
+      "n": 24,
+      "median_late_max_activity": {
+        "R1": 0.9999999999999996,
+        "M_D": 0.9999999999999996,
+        "M_S": 0.9999999999999996
+      }
+    },
+    "2.0": {
+      "sequences_correct": 24,
+      "n": 24,
+      "median_late_max_activity": {
+        "R1": 0.9999999999999996,
+        "M_D": 0.9999999999999996,
+        "M_S": 0.9999999999999996
+      }
+    },
+    "2.2": {
+      "sequences_correct": 24,
+      "n": 24,
+      "median_late_max_activity": {
+        "R1": 0.9999999999999996,
+        "M_D": 0.9999999999999996,
+        "M_S": 0.9999999999999996
+      }
+    }
+  }
+}
