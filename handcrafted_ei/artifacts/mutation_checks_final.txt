@@ -1,0 +1,116 @@
+RED Dale sign error: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_all_four_synapse_types (test_dale_constraints.DaleTests.test_all_four_synapse_types)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_dale_constraints.py", line 15, in test_all_four_synapse_types
+    self.assertTrue(np.all(m.signed_weights[:, indices] * pre >= 0))
+AssertionError: np.False_ is not true
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+OK
+GREEN restored: Dale sign error
+RED no internal memory: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_pulse_removed_memory_at_both_delays (test_memory_delay.MemoryTests.test_pulse_removed_memory_at_both_delays)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_memory_delay.py", line 17, in test_pulse_removed_memory_at_both_delays
+    self.assertGreater(r[selected], .9)
+AssertionError: np.float64(1.930144407592658e-19) not greater than 0.9
+
+----------------------------------------------------------------------
+Ran 1 test in 0.016s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 1.183s
+
+OK
+GREEN restored: no internal memory
+RED no I-to-I release: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_default_closed_and_release_chain (test_disinhibition.GateTests.test_default_closed_and_release_chain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_disinhibition.py", line 19, in test_default_closed_and_release_chain
+    self.assertLess(r.rates[window][:,g['gate12'][selected]].min(), .05)
+AssertionError: np.float64(0.5) not less than 0.05
+
+----------------------------------------------------------------------
+Ran 1 test in 0.797s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.644s
+
+OK
+GREEN restored: no I-to-I release
+RED early routing: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_default_closed_and_release_chain (test_disinhibition.GateTests.test_default_closed_and_release_chain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_disinhibition.py", line 14, in test_default_closed_and_release_chain
+    self.assertLess(r.rates[first][:,g['R2']].max(), .01)
+AssertionError: np.float64(0.9999999999999996) not less than 0.01
+
+----------------------------------------------------------------------
+Ran 1 test in 2.105s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 2.174s
+
+OK
+GREEN restored: early routing
+RED broken branch inheritance: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_memory_output_cuts_preserve_downstream_responses (test_pathway_inheritance.InheritanceTests.test_memory_output_cuts_preserve_downstream_responses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_pathway_inheritance.py", line 12, in test_memory_output_cuts_preserve_downstream_responses
+    self.assertEqual(control.outputs,target(*c))
+AssertionError: Tuples differ: (0, 1, 2, -1) != (0, 1, 2, 3)
+
+First differing element 3:
+-1
+3
+
+- (0, 1, 2, -1)
+?           ^^
+
++ (0, 1, 2, 3)
+?           ^
+
+
+----------------------------------------------------------------------
+Ran 1 test in 2.533s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 7.718s
+
+OK
+GREEN restored: broken branch inheritance

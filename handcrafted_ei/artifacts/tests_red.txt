@@ -1,0 +1,125 @@
+test_24_sequences (unittest.loader._FailedTest.test_24_sequences) ... ERROR
+test_dale_constraints (unittest.loader._FailedTest.test_dale_constraints) ... ERROR
+test_disinhibition (unittest.loader._FailedTest.test_disinhibition) ... ERROR
+test_information_boundary (unittest.loader._FailedTest.test_information_boundary) ... ERROR
+test_memory_delay (unittest.loader._FailedTest.test_memory_delay) ... ERROR
+test_pathway_inheritance (unittest.loader._FailedTest.test_pathway_inheritance) ... ERROR
+test_readout_order (unittest.loader._FailedTest.test_readout_order) ... ERROR
+
+======================================================================
+ERROR: test_24_sequences (unittest.loader._FailedTest.test_24_sequences)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_24_sequences
+Traceback (most recent call last):
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_24_sequences.py", line 2, in <module>
+    from common import baseline
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\common.py", line 2, in <module>
+    from handcrafted_ei.model.ei_network import EINetwork
+ModuleNotFoundError: No module named 'handcrafted_ei.model'
+
+
+======================================================================
+ERROR: test_dale_constraints (unittest.loader._FailedTest.test_dale_constraints)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_dale_constraints
+Traceback (most recent call last):
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_dale_constraints.py", line 3, in <module>
+    from handcrafted_ei.model.neuron import ExcitatoryNeuron, InhibitoryNeuron, euler
+ModuleNotFoundError: No module named 'handcrafted_ei.model'
+
+
+======================================================================
+ERROR: test_disinhibition (unittest.loader._FailedTest.test_disinhibition)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_disinhibition
+Traceback (most recent call last):
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_disinhibition.py", line 3, in <module>
+    from common import baseline
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\common.py", line 2, in <module>
+    from handcrafted_ei.model.ei_network import EINetwork
+ModuleNotFoundError: No module named 'handcrafted_ei.model'
+
+
+======================================================================
+ERROR: test_information_boundary (unittest.loader._FailedTest.test_information_boundary)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_information_boundary
+Traceback (most recent call last):
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_information_boundary.py", line 6, in <module>
+    from handcrafted_ei.model.ei_network import EINetwork
+ModuleNotFoundError: No module named 'handcrafted_ei.model'
+
+
+======================================================================
+ERROR: test_memory_delay (unittest.loader._FailedTest.test_memory_delay)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_memory_delay
+Traceback (most recent call last):
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_memory_delay.py", line 3, in <module>
+    from handcrafted_ei.model.ei_network import EINetwork
+ModuleNotFoundError: No module named 'handcrafted_ei.model'
+
+
+======================================================================
+ERROR: test_pathway_inheritance (unittest.loader._FailedTest.test_pathway_inheritance)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_pathway_inheritance
+Traceback (most recent call last):
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_pathway_inheritance.py", line 3, in <module>
+    from common import baseline
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\common.py", line 2, in <module>
+    from handcrafted_ei.model.ei_network import EINetwork
+ModuleNotFoundError: No module named 'handcrafted_ei.model'
+
+
+======================================================================
+ERROR: test_readout_order (unittest.loader._FailedTest.test_readout_order)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_readout_order
+Traceback (most recent call last):
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_readout_order.py", line 3, in <module>
+    from common import baseline
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\common.py", line 2, in <module>
+    from handcrafted_ei.model.ei_network import EINetwork
+ModuleNotFoundError: No module named 'handcrafted_ei.model'
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.000s
+
+FAILED (errors=7)

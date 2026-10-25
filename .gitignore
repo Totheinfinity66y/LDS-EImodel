@@ -1,2 +1,5 @@
 __pycache__/
 *.py[cod]
+.validation-precheck/
+# Expanded experiment folders are local convenience copies; ZIP receipts are versioned.
+handcrafted_ei/artifacts/v1/*/

@@ -1,0 +1,15 @@
+{
+  "scientific_sources_match_execution": true,
+  "finalized_after_execution_snapshot": [
+    "handcrafted_ei/tests/test_pathway_inheritance.py",
+    "handcrafted_ei/tests/verify_mutations.py",
+    "handcrafted_ei/run.ps1",
+    "handcrafted_ei/requirements.txt",
+    "AGENTS.md",
+    "todo.md",
+    "README.md",
+    ".gitignore"
+  ],
+  "tests": "16/16 PASS",
+  "mutations": "5/5 detected; restored tests pass"
+}

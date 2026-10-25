@@ -1,0 +1,332 @@
+[
+  {
+    "experiment": "baseline",
+    "config_overrides": {},
+    "intervention": null,
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "lesion_A",
+    "config_overrides": {},
+    "intervention": "A",
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "random_A_7",
+    "config_overrides": {},
+    "intervention": "A",
+    "random_seed": 7,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "random_A_11",
+    "config_overrides": {},
+    "intervention": "A",
+    "random_seed": 11,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "random_A_19",
+    "config_overrides": {},
+    "intervention": "A",
+    "random_seed": 19,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "lesion_B",
+    "config_overrides": {},
+    "intervention": "B",
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "random_B_7",
+    "config_overrides": {},
+    "intervention": "B",
+    "random_seed": 7,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "random_B_11",
+    "config_overrides": {},
+    "intervention": "B",
+    "random_seed": 11,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "random_B_19",
+    "config_overrides": {},
+    "intervention": "B",
+    "random_seed": 19,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "lesion_C",
+    "config_overrides": {},
+    "intervention": "C",
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "random_C_7",
+    "config_overrides": {},
+    "intervention": "C",
+    "random_seed": 7,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "random_C_11",
+    "config_overrides": {},
+    "intervention": "C",
+    "random_seed": 11,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "random_C_19",
+    "config_overrides": {},
+    "intervention": "C",
+    "random_seed": 19,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "lesion_D",
+    "config_overrides": {},
+    "intervention": "D",
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "random_D_7",
+    "config_overrides": {},
+    "intervention": "D",
+    "random_seed": 7,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "random_D_11",
+    "config_overrides": {},
+    "intervention": "D",
+    "random_seed": 11,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "random_D_19",
+    "config_overrides": {},
+    "intervention": "D",
+    "random_seed": 19,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "null_no_i_to_i",
+    "config_overrides": {},
+    "intervention": "no_i_to_i",
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "delay_2400",
+    "config_overrides": {
+      "delay_ms": 2400
+    },
+    "intervention": null,
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "delay_3200",
+    "config_overrides": {
+      "delay_ms": 3200
+    },
+    "intervention": null,
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "delay_4000",
+    "config_overrides": {
+      "delay_ms": 4000
+    },
+    "intervention": null,
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "noise_0.03_7",
+    "config_overrides": {},
+    "intervention": null,
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.03
+  },
+  {
+    "experiment": "noise_0.03_11",
+    "config_overrides": {},
+    "intervention": null,
+    "random_seed": null,
+    "seed": 11,
+    "noise_sigma_L": 0.03
+  },
+  {
+    "experiment": "noise_0.03_19",
+    "config_overrides": {},
+    "intervention": null,
+    "random_seed": null,
+    "seed": 19,
+    "noise_sigma_L": 0.03
+  },
+  {
+    "experiment": "noise_0.1_7",
+    "config_overrides": {},
+    "intervention": null,
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.1
+  },
+  {
+    "experiment": "noise_0.1_11",
+    "config_overrides": {},
+    "intervention": null,
+    "random_seed": null,
+    "seed": 11,
+    "noise_sigma_L": 0.1
+  },
+  {
+    "experiment": "noise_0.1_19",
+    "config_overrides": {},
+    "intervention": null,
+    "random_seed": null,
+    "seed": 19,
+    "noise_sigma_L": 0.1
+  },
+  {
+    "experiment": "noise_0.2_7",
+    "config_overrides": {},
+    "intervention": null,
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.2
+  },
+  {
+    "experiment": "noise_0.2_11",
+    "config_overrides": {},
+    "intervention": null,
+    "random_seed": null,
+    "seed": 11,
+    "noise_sigma_L": 0.2
+  },
+  {
+    "experiment": "noise_0.2_19",
+    "config_overrides": {},
+    "intervention": null,
+    "random_seed": null,
+    "seed": 19,
+    "noise_sigma_L": 0.2
+  },
+  {
+    "experiment": "noise_0.4_7",
+    "config_overrides": {},
+    "intervention": null,
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.4
+  },
+  {
+    "experiment": "noise_0.4_11",
+    "config_overrides": {},
+    "intervention": null,
+    "random_seed": null,
+    "seed": 11,
+    "noise_sigma_L": 0.4
+  },
+  {
+    "experiment": "noise_0.4_19",
+    "config_overrides": {},
+    "intervention": null,
+    "random_seed": null,
+    "seed": 19,
+    "noise_sigma_L": 0.4
+  },
+  {
+    "experiment": "gate_0.0",
+    "config_overrides": {
+      "w_release": 0.0
+    },
+    "intervention": null,
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "gate_0.4",
+    "config_overrides": {
+      "w_release": 0.4
+    },
+    "intervention": null,
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "gate_1.2",
+    "config_overrides": {
+      "w_release": 1.2
+    },
+    "intervention": null,
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "recurrence_0.0",
+    "config_overrides": {
+      "w_rec": 0.0
+    },
+    "intervention": null,
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "recurrence_1.6",
+    "config_overrides": {
+      "w_rec": 1.6
+    },
+    "intervention": null,
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  },
+  {
+    "experiment": "recurrence_2.2",
+    "config_overrides": {
+      "w_rec": 2.2
+    },
+    "intervention": null,
+    "random_seed": null,
+    "seed": 7,
+    "noise_sigma_L": 0.0
+  }
+]

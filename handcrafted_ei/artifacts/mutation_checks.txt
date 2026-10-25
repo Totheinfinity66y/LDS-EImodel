@@ -1,0 +1,94 @@
+RED Dale sign error: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_all_four_synapse_types (test_dale_constraints.DaleTests.test_all_four_synapse_types)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_dale_constraints.py", line 15, in test_all_four_synapse_types
+    self.assertTrue(np.all(m.signed_weights[:, indices] * pre >= 0))
+AssertionError: np.False_ is not true
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+OK
+GREEN restored: Dale sign error
+RED no internal memory: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_pulse_removed_memory_at_both_delays (test_memory_delay.MemoryTests.test_pulse_removed_memory_at_both_delays)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_memory_delay.py", line 17, in test_pulse_removed_memory_at_both_delays
+    self.assertGreater(r[selected], .9)
+AssertionError: np.float64(1.930144407592658e-19) not greater than 0.9
+
+----------------------------------------------------------------------
+Ran 1 test in 0.017s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 1.374s
+
+OK
+GREEN restored: no internal memory
+RED no I-to-I release: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_default_closed_and_release_chain (test_disinhibition.GateTests.test_default_closed_and_release_chain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_disinhibition.py", line 19, in test_default_closed_and_release_chain
+    self.assertLess(r.rates[window][:,g['gate12'][selected]].min(), .05)
+AssertionError: np.float64(0.5) not less than 0.05
+
+----------------------------------------------------------------------
+Ran 1 test in 0.860s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 1.728s
+
+OK
+GREEN restored: no I-to-I release
+RED early routing: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_default_closed_and_release_chain (test_disinhibition.GateTests.test_default_closed_and_release_chain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_disinhibition.py", line 14, in test_default_closed_and_release_chain
+    self.assertLess(r.rates[first][:,g['R2']].max(), .01)
+AssertionError: np.float64(0.9999999999999996) not less than 0.01
+
+----------------------------------------------------------------------
+Ran 1 test in 2.286s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 2.702s
+
+OK
+GREEN restored: early routing
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\verify_mutations.py", line 44, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\verify_mutations.py", line 35, in main
+    if red.wasSuccessful(): raise AssertionError(f'mutant escaped: {name}')
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: mutant escaped: broken branch inheritance

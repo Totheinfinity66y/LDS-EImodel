@@ -1,0 +1,21 @@
+test_all_24_and_each_stage (test_24_sequences.SequenceTests.test_all_24_and_each_stage) ... ok
+test_zero_noise_seed_independence (test_24_sequences.SequenceTests.test_zero_noise_seed_independence) ... ok
+test_all_four_synapse_types (test_dale_constraints.DaleTests.test_all_four_synapse_types) ... ok
+test_unified_update_and_bounds (test_dale_constraints.DaleTests.test_unified_update_and_bounds) ... ok
+test_default_closed_and_release_chain (test_disinhibition.GateTests.test_default_closed_and_release_chain) ... ok
+test_no_release_and_no_i_to_i_are_negative_controls (test_disinhibition.GateTests.test_no_release_and_no_i_to_i_are_negative_controls) ... ok
+test_fixed_topology_across_trials_and_phases (test_information_boundary.BoundaryTests.test_fixed_topology_across_trials_and_phases) ... ok
+test_imports_and_runtime_shifts (test_information_boundary.BoundaryTests.test_imports_and_runtime_shifts) ... ok
+test_interface_and_target_isolation (test_information_boundary.BoundaryTests.test_interface_and_target_isolation) ... ok
+test_matched_lesions_same_count_magnitude_and_window (test_interventions.InterventionTests.test_matched_lesions_same_count_magnitude_and_window) ... ok
+test_projection_permutations_and_composition (test_interventions.InterventionTests.test_projection_permutations_and_composition) ... ok
+test_no_recurrence_cannot_pass_as_memory (test_memory_delay.MemoryTests.test_no_recurrence_cannot_pass_as_memory) ... ok
+test_pulse_removed_memory_at_both_delays (test_memory_delay.MemoryTests.test_pulse_removed_memory_at_both_delays) ... ok
+test_memory_output_cuts_preserve_downstream_responses (test_pathway_inheritance.InheritanceTests.test_memory_output_cuts_preserve_downstream_responses) ... ok
+test_relocating_response_changes_inherited_output (test_pathway_inheritance.InheritanceTests.test_relocating_response_changes_inherited_output) ... ok
+test_four_distinct_readouts_before_transitions (test_readout_order.OrderTests.test_four_distinct_readouts_before_transitions) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 13.912s
+
+OK
