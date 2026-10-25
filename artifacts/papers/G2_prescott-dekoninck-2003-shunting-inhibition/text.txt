@@ -1,0 +1,636 @@
+
+===== PDF PAGE 1 =====
+Gain control of firing rate by shunting inhibition:
+Roles of synaptic noise and dendritic saturation
+Steven A. Prescott* and Yves De Koninck
+Neurobiologie Cellulaire, Centre de Recherche Universite´ Laval Robert-Giffard, Beauport, QC, Canada G1J 2G3; and Department of Pharmacology and
+Therapeutics, McGill University, Montre´al, QC, Canada H3G 1Y6
+Communicated by William T. Newsome, Stanford University School of Medicine, Stanford, CA, December 12, 2002 (received for review June 11, 2002)
+Adjusting input–output gain is crucial for information processing
+by the brain. Gain control of subthreshold depolarization is com-
+monly ascribed to increased membrane conductance caused by
+shunting inhibition. But contrary to its divisive effect on depolar-
+ization, shunting inhibition on its own fails to divisively modulate
+ﬁring rate, apparently upsetting a critical tenet of neural models
+that use shunting inhibition to achieve gain control. Using a
+biophysically realistic neuron model, we show that divisive mod-
+ulation of ﬁring rate by shunting inhibition requires synaptic noise
+to smooth the relation between ﬁring rate and somatic depolar-
+ization; although necessary, noise alone endows shunting inhibi-
+tion with only a modest divisive effect on ﬁring rate. In addition to
+introducing noise, synaptic input is associated with a nonlinear
+relation between somatic depolarization and excitation because of
+dendritic saturation; this nonlinearity dramatically enhances divi-
+sive modulation of ﬁring rate by shunting inhibition under noisy
+conditions. Thus, shunting inhibition can act as a mechanism for
+ﬁring rate gain control, but its modulatory effects (which include
+both divisive and subtractive components) are fully explained only
+when both synaptic noise and dendritic saturation are taken into
+account.
+G
+ain control refers to modulation of a neuron’s responsive-
+ness to input; it is critically important for normal sensory,
+cognitive, and motor functions (1–5). Gain control is achieved
+through a divisive process and is observed as a change in the
+slope of the input–output curve. A longstanding and widely cited
+candidate mechanism for gain control is shunting inhibition (6,
+7) such as that mediated by GABA-gated Cl conductance,
+which decreases input resistance with little direct effect on
+membrane potential (Vm). Whereas hyperpolarization has a
+subtractive effect on the depolarization caused by concurrent
+excitation, shunting has a divisive effect (Fig. 1A), thereby
+modulating gain of synaptic depolarization.
+However, neurons communicate with each other through
+spike trains. One must, therefore, consider how Vm translates
+into firing rate. Contrary to initial intuition, modeling studies
+(8–10) supported by in vitro electrophysiological data (11, 12)
+concluded that shunting inhibition modulates firing rate in a
+purely subtractive manner. However, electrophysiological stud-
+ies that analyzed responses in the presence of background
+synaptic input (13–15) provide circumstantial evidence support-
+ing a role for shunting inhibition in gain control. These dichot-
+omous findings suggest that properties of synaptic input such as
+its noisiness or its effect on membrane conductance (16, 17),
+which were neglected in past modeling, may explain the discrep-
+ancy regarding the role of shunting inhibition in gain control.
+Only recently did Chance et al. (18) independently demonstrate
+that background synaptic noise was key for achieving firing rate
+gain control by shunting.
+This study was therefore undertaken to examine whether
+shunting inhibition can divisively modulate firing rate when a
+neuron is bombarded by synaptic input comparable to that
+recorded in the intact brain. The data demonstrate that shunting
+inhibition can indeed mediate firing rate gain control so long as
+both synaptic noise and dendritic saturation are taken into
+account.
+Methods
+Compartmental Model. A compartmental model was constructed
+from a layer V neocortical pyramidal neuron described in ref. 19.
+An axon morphologically identical to that in ref. 20 was attached
+to the soma. A passive leak conductance reversing at 70 mV
+was inserted at 0.02 mScm2 in all compartments except axonal
+nodes, where it was 10-fold higher, giving an input resistance of
+59 M and membrane time constant of 40 ms. Axial resistivity
+was set to 200 cm, and membrane capacitance was set to 1 F
+cm2 except in axon internodes, where it was 0.04 Fcm2.
+Voltage-dependent Na and K conductances [Hodgkin–
+Huxley (HH) channels] were inserted at different densities
+depending on the compartment (Na, K in mScm2): soma
+and primary dendrites, 48, 40; distal dendrites ( secondary), 6,
+5; initial segment, axon hillock, and nodes, 240, 200; axon
+internodes, 6, 5. Kinetics of these currents were taken from
+ref. 21.
+Synaptic Input. Synaptic input was modeled as a nonsaturating
+conductance with a dual exponential time course of the form
+[1-exp(-trise)]exp(-tdecay). For excitatory input, rise  0.2 ms,
+decay  2 ms, gmax  1 nS, and Erev  0 mV; for inhibitory input,
+rise  0.8 ms, decay  8 ms, gmax  0.5 nS, and Erev  70 mV
+(10, 16, 17, 22–24). Two sets of eight inhibitory synapses were
+positioned randomly in the perisomatic region. One set of 24
+excitatory synapses was positioned on the basal dendrites, and
+another set was positioned on the apical tuft. The number of
+synapses per set reflects a combination of the number of contacts
+per presynaptic cell (23, 25) and the coordination of presynaptic
+activity (17, 26–28) and was adjusted to generate Vm fluctuations
+of appropriate amplitude (17). Each set was driven by an
+independent Poisson process. The total number of synapses is
+estimated to be 24,000 excitatory (26 synapses per 100 m2 of
+dendritic surface area; ref. 29) and 4,800 inhibitory (one-fifth the
+number of excitatory synapses; ref. 17); the 48 excitatory and 16
+inhibitory model synapses were therefore driven, respectively, at
+500 times and 300 times the event frequency of real synapses,
+essentially replacing spatial summation with temporal summa-
+tion. Validity of this assumption was tested in a model cell with
+a 10-fold increase in the number of sets of synapses and
+equivalent decrease in frequency of events per synapse; this
+more complex model reproduced all critical findings reported in
+Figs. 1 and 2. Data from the more computationally efficient
+model are reported throughout. Reported frequencies refer to
+events per synapse after correction for synapse number.
+Nonsynaptic Stimulation. Constant current (Iclamp) was injected
+into the soma to simulate the typical electrophysiological exper-
+Abbreviations: fexc, rate of excitatory synaptic events; finh, rate of inhibitory synaptic events;
+fout, output ﬁring rate; gexc, excitatory conductance; ginh, inhibitory conductance; HH,
+Hodgkin–Huxley; Iclamp, injected current; Vm, membrane potential.
+*To whom correspondence should be addressed. E-mail: prescott@pharma.mcgill.ca.
+2076–2081 
+PNAS 
+February 18, 2003 
+vol. 100 
+no. 4
+www.pnas.orgcgidoi10.1073pnas.0337591100
+
+===== PDF PAGE 2 =====
+iment. In some cases, to remove noise but still mimic the
+conductance-altering properties of synaptic input, fluctuating
+synaptic conductances were replaced with constant excitatory
+conductance (gexc) andor inhibitory conductance (ginh) simu-
+lated as either a single-point process in the soma or as multiple-
+point processes at synaptic sites. Reported values of gexc and ginh
+refer to total excitatory or inhibitory conductance, based on the
+time-averaged synaptic conductances scaled by the number of
+synapses. Contrariwise, to recreate Vm fluctuations caused by
+synaptic input without the associated conductance change, noisy
+current was generated by an Ornstein–Uhlenbeck process and
+injected into the soma. We used a process like that described in
+ref. 30 where current fluctuates according to dIdt  1 (I 
+Iavg)   dt N (0, 1), where N (0, 1) is a number drawn from
+a Gaussian distribution with average 0 and unit variance with a
+scaling factor , which adjusts noise amplitude. The power
+spectrum of Vm generated with   5 ms reasonably approxi-
+mates that generated by synaptic input.
+All simulations were conducted with NEURON 4.3.1 by using a
+10-s time step and simulated temperature of 36°C. Segmenta-
+tion of compartments was defined by using the dlamba criterion
+in NEURON (31), such that grid points were spaced no further
+than 10% of the length constant at 100 Hz. Each datum is based
+on 10 s of simulated time for output firing rate (fout) values and
+1 s for Vm values.
+Results
+Morphology of the model cell and a representative response to
+synaptic input are shown in Fig. 1B. Under conditions approx-
+imating in vivo background synaptic input [rate of excitatory
+synaptic events (fexc)  1.0 Hzsynapse and rate of inhibitory
+synaptic events (finh)  5.6 Hzsynapse] (17), our model neuron
+was depolarized to 60.7 mV, standard deviation of Vm was 2.5
+mV, and Rin was reduced by 89%. This is comparable to
+previously reported values (16, 17) indicating that model pa-
+rameters were set within reasonable bounds.
+A critical finding of this study was that shunting inhibition
+mediates firing rate gain control when the model cell was
+bombarded by realistically simulated synaptic input. Slope of the
+relationship between output firing rate and frequency of exci-
+tatory input was clearly reduced as the frequency of inhibitory
+input was increased (Fig. 1 C and D). However, the effect of
+shunting was not purely divisive; the rightward shift in the fout-fexc
+curves points to a subtractive component. Equivalent divisive
+subtractive modulation was observed when the number of sim-
+ulated synapses was increased (see Methods) and in two different
+model neurons tested (data not shown). When spike frequency
+adaptation was incorporated into the model neuron by addition
+of an M-type K current, the divisive effect was still evident in
+both the preadapted and adapted firing rates (data not shown).
+This result is inconsistent with previous modeling studies that
+concluded shunting inhibition had a purely subtractive effect on
+fout (8–10). The main difference between models was the manner
+in which synaptic input was simulated. We therefore tested our
+model neuron in the absence of synaptic noise by generating
+excitation with constant somatic Iclamp and shunting with con-
+stant somatic ginh. Under these conditions, shunting inhibition
+had a purely subtractive effect on fout (Fig. 1E), implicating
+properties of the synaptic stimulation as key factors for achieving
+division.
+Neuronal Behavior in the Presence of Synaptic Input. How does
+synaptic input alter neuronal behavior to allow divisive modu-
+lation of fout by shunting inhibition? To first investigate the
+impact of synaptic input without the added complexity of spike
+generation, we removed HH channels from all compartments
+except distal dendrites. This reduced HH condition prevented
+spiking while still encouraging propagation of distally evoked
+depolarization into the soma. Fig. 2A shows the noisy fluctua-
+tions in somatic Vm produced by random synaptic input. In-
+creased shunting had two effects: reduction of average somatic
+depolarization caused by excitatory input (Fig. 2B) and reduc-
+tion of Vm fluctuation amplitude (Fig. 2C). Notably, standard
+deviation of Vm did not reduce to 0 mV, showing that fluctua-
+tions remain even in the presence of strong shunting. The
+near-horizontal regression lines in Fig. 2C indicate that Vm
+fluctuation amplitude was relatively unaffected by the strength
+of excitation, consistent with previously reported data (17,
+18, 30).
+Because of its fluctuations, somatic Vm occasionally crosses
+spike threshold despite average Vm remaining below threshold
+(Fig. 2A). Therefore, probability of crossing threshold depends
+jointly on average Vm (i.e., distance from threshold) and ampli-
+tude of Vm fluctuations. The consequences of this for spiking are
+seen in Fig. 2D after reinsertion of HH channels. Constant Iclamp
+gives rise to an abrupt increase in fout at rheobase (i.e., minimum
+constant Iclamp eliciting spikes), where probability of spiking
+jumps from 0 to 1. By contrast, fout increases more gradually in
+response to noisy input because the Vm fluctuations allow for
+probabilistic or noise-driven spiking before average depolariza-
+tion reaches threshold. This amounts to smoothing the threshold
+nonlinearity, allowing fout to encode the average underlying Vm
+even while average Vm remains below threshold (32–35). Given
+Fig. 1.
+Effect of shunting inhibition on ﬁring rate depends on stimulus
+conditions. (A) Hyperpolarization has a subtractive effect on subthreshold
+depolarization, whereas shunting has a divisive effect. (B) Image of the model
+cell with a sample of Poisson-distributed excitatory and inhibitory synaptic
+inputs and the resultant output. (C) Gain of the relationship between output
+ﬁring (fout) and excitatory synaptic input (fexc) was reduced by increasing
+inhibitory synaptic input (finh). Although this qualiﬁes as a divisive effect, a
+subtractive effect is also evident as a shift in the curves, i.e., position along
+abscissa where fout rises above 0 Hz increases as finh increases. (D) Reduction in
+slope of fout-fexc curves was nonlinearly related to finh. Slope was determined
+from linear regressions of data in C using all values of fout  5 Hz. (E) Effect of
+shunting inhibition on fout was purely subtractive when excitatory and inhib-
+itory synaptic input were replaced with constant current injection (Iclamp) and
+constant conductance change (ginh) applied to the soma. Values of ginh cor-
+respond to the sum of time-averaged conductances of all inhibitory synapses
+for finh levels illustrated in C and D.
+Prescott and De Koninck
+PNAS 
+February 18, 2003 
+vol. 100 
+no. 4 
+2077
+NEUROSCIENCE
+
+===== PDF PAGE 3 =====
+that smoothing allows fout to more closely parallel Vm, divisive
+modulation of Vm may be predicted to manifest as divisive
+modulation of fout under noisy conditions.
+Spiking recorded in vivo is normally highly irregular (36, 37).
+Fig. 2E shows that spiking caused by Vm fluctuations (which we
+refer to as probabilistic spiking) is irregular compared with
+spiking generated by raising average Vm above threshold (27,
+38–41). Under in vivo conditions, neurons typically operate in
+the lower range of fout, in a regime where spiking is driven by
+noise (42, 43). We therefore paid particular attention to this
+regime of probabilistic spiking.
+Role of Synaptic Noise. Having identified noisy fluctuations in Vm
+as important for determining spiking elicited by synaptic input,
+an obvious question was whether noise alone is sufficient to
+allow shunting inhibition to divisively modulate fout. To isolate
+the influence of noise, Vm fluctuations with amplitude and
+frequency content similar to that generated by synaptic input
+were reconstituted in the model neuron by directly injecting
+noisy current into the soma (Fig. 3A). As with synaptic input
+(Fig. 2D), Vm fluctuations generated by noisy Iclamp smoothed
+the threshold nonlinearity in proportion to the intensity of the
+noise (Fig. 3B).
+Under noisy conditions, shunting had some divisive effect on
+fout (Fig. 3C) in contrast to the purely subtractive effect observed
+with constant Iclamp (Fig. 1E). However, Fig. 3C shows that the
+reduction in slope of fout-Iclamp curves was restricted to proba-
+bilistic firing (i.e., lower values of fout), with curves becoming
+parallel at fout  40 Hz. Furthermore, based on responses with
+Fig. 2.
+Synaptic input introduces signiﬁcant noise into the postsynaptic
+neuron, with ramiﬁcations for spike generation. (A) Sample of somatic Vm
+ﬂuctuations in model neuron excited by random synaptic input (fexc  2
+Hzsynapse) for two levels of finh. HH channels were removed from all com-
+partments except distal dendrites (reduced HH condition; see text) to prevent
+spiking. (B) Increasing inhibition divisively reduced the average somatic de-
+polarization caused by synaptic excitation. The somatic Vm-fexc curves are
+nonlinear because of dendritic saturation; Inset shows Vm averaged across
+four different dendritic locations (see also Fig. 4). (C) Inhibition also reduced
+the standard deviation of Vm (SDVm), although this reduction appeared to
+asymptote near 2 mV. Excitation appeared to have relatively little inﬂuence on
+SDVm, as evidenced by the near-horizontal regression lines (see text). (D) This
+graph was generated by plotting fout in the normal HH condition (from Fig. 1C)
+against somatic Vm for equivalent stimulation in the reduced HH condition
+(from B). It illustrates that fout depends on both average Vm and SDVm (which
+is modulated by shunting inhibition; see C). Furthermore, ﬂuctuations in Vm
+allow spiking to occur despite average Vm being below threshold (i.e., 48
+mV), which we refer to as smoothing the threshold nonlinearity; compare with
+dashed line showing response to constant Iclamp, which falls abruptly to fout 
+0 Hz. (E) Spiking caused by Vm ﬂuctuations is associated with high variability
+[quantiﬁed as the coefﬁcient of variation of the interspike interval (ISI), CVISI,
+calculated as the standard deviation of the ISI divided by the average ISI],
+which decreases as the average Vm approaches and rises above spike thresh-
+old, which occurs at fout  50 Hz (see D). Given fout values observed in vivo,
+neurons often operate in this subrheobasic regime where ‘‘probabilistic’’
+spiking is driven by noise.
+Fig. 3.
+Effect of Vm ﬂuctuations on spike generation (smoothing the thresh-
+old nonlinearity) is critical for allowing divisive modulation of ﬁring rate by
+shunting inhibition but cannot fully account for the divisive effect seen with
+synaptic input. (A) Sample responses of the model neuron stimulated by noisy
+Iclamp, where  determines noise amplitude. Effect of  on the distribution of
+Vm is shown on the right; values of Vm during spikes were excluded from the
+calculation. (B) Vm ﬂuctuations generated by injection of noisy Iclamp smoothed
+the increase of fout. Reducing Vm ﬂuctuations by reducing input noise (de-
+creasing ) altered fout-Iclamp curves in the same manner as reducing Vm
+ﬂuctuations by increasing inhibition altered fout-Vm curves in Fig. 2D. This
+demonstrates that modulating Vm ﬂuctuation amplitude does not mediate a
+divisive effect on fout; on the contrary, this modulation subtractively inﬂuences
+fout. (C) With excitation by noisy Iclamp and inhibition by constant ginh applied
+to the soma, a modest divisive effect on fout was observed, being greatest
+when  was high (  0.9 nAms for illustrated curves) and degenerating
+into a purely subtractive effect as  was reduced, with   0 nA ms
+corresponding to constant Iclamp conditions in Fig. 1E. (D) Under noisy Iclamp and
+constant ginh stimulus conditions, the relative change in slope (calculated from
+linear regressions of data in C using fout  40 Hz) with increasing ginh was far
+less than observed under synaptic conditions (data from Fig. 1D).
+2078 
+www.pnas.orgcgidoi10.1073pnas.0337591100
+Prescott and De Koninck
+
+===== PDF PAGE 4 =====
+fout  40 Hz, the reduction in slope was modest compared with
+that observed under synaptic conditions for the same amount of
+shunting (Fig. 3D). Thus, the divisive effect of shunting inhibi-
+tion under synaptic conditions is not fully explained simply by
+adding noise and, except under certain circumstances (e.g., with
+precisely balanced excitation and inhibition), the subtractive
+component predominates (Fig. 6, which is published as support-
+ing information on the PNAS web site, www.pnas.org). What
+other aspect of synaptic input is responsible for the remaining
+division?
+Role of Dendritic Saturation. We have argued that noisy Vm
+fluctuations allow fout to more accurately encode average Vm by
+smoothing the threshold nonlinearity. However, the relationship
+between excitatory input and somatic depolarization depends on
+the stimulus. Somatic depolarization is linearly related to so-
+matic Iclamp (Fig. 4A Upper), and the relationship becomes only
+modestly sublinear for excitation by somatic gexc (Fig. 4B Upper).
+In contrast, somatic depolarization is nonlinearly related to
+dendritic gexc (Fig. 4C Upper), which is particularly important
+given that most excitatory synapses occur on dendrites. The
+strong nonlinearity results from a complex interplay between
+multiple factors (see Discussion), which we simply refer to as
+dendritic saturation.
+Analysis of the effects of shunting inhibition on somatic
+Vm-excitation curves (Fig. 4 A Upper–C Upper) allows one to
+roughly predict the subtractive effect of shunting inhibition on
+fout for comparison to fout-excitation curves (Fig. 4 A Lower–C
+Lower). Without noise, the subtractive effect of shunting on fout
+is predicted by where Vm-excitation curves cross spike threshold.
+Introducing noise reduces the effective threshold for spiking
+such that the subtractive effect on fout can be predicted from
+where Vm-excitation curves enter the region of probabilistic
+spiking. The subtractive effect is therefore reduced in noisy
+conditions.
+Insight into the divisive effect of shunting can be similarly
+gained by considering alteration in the trajectory of Vm-
+excitation curves through the region of probabilistic spiking.
+Acting on the linear Vm-somatic Iclamp curves and near-linear
+Vm-somatic gexc curves (Fig. 4 A and B, respectively), shunting
+causes a rather modest change in trajectory compared with the
+strong change observed when shunting acts on the nonlinear
+Vm-dendritic gexc curves (Fig. 4C). The relative changes in
+trajectory for Vm-somatic Iclamp and Vm-dendritic gexc curves are
+summarized in Fig. 4D and correctly predict the enhanced
+divisive effect of shunting on fout (compare with Fig. 3D),
+depending on stimulus conditions. The critical observation is
+that the nonlinearity caused by dendritic saturation enhances the
+divisive effect of shunting on fout much more than it enhances the
+subtractive effect because of the shape of the nonlinearity
+relative to the region of probabilistic firing.
+Thus the combined effects of two factors, threshold smooth-
+ing by synaptic noise and the nonlinearity caused by dendritic
+Fig. 4.
+The nonlinearity caused by dendritic saturation enhances divisive
+modulation of fout by shunting inhibition. Gray shading in A–C represents the
+probability of spiking within an arbitrary time interval: darkest gray 3 prob-
+ability  1; white 3 probability  0. The gradient of gray shading below
+threshold (dotted white line) results from threshold smoothing (see Fig. 2D)
+and exists only in the presence of noise; it is referred to as the region of
+probabilistic ﬁring. (A) In the reduced HH condition, somatic Vm is linearly
+related to somatic Iclamp (Upper). The divisive effect of shunting on these linear
+curves manifests as a subtractive effect on fout-Iclamp curves (Lower) under
+noise-free conditions (solid lines) and becomes only mildly divisive in noisy
+conditions (dashed lines). (B) The relation between somatic Vm and somatic
+gexc is nearly linear (Upper) and gives rise to fout-gexc curves (Lower), very
+similar to those observed in A. (C) In contrast, excitation by dendritic gexc
+produces a highly nonlinear relation between somatic Vm and gexc (Upper).
+Note the difference in scale in the abscissa between B and C. The difference
+between solid and dashed lines (constant and noisy stimulation, respectively)
+reﬂects the differential electrotonic attenuation of signals depending on their
+frequency content. The nonlinearity results from dendritic saturation (see
+text). Because of the nonlinearity, the divisive effect of shunting dramatically
+alters the trajectory of those curves through the region of probabilistic ﬁring,
+which manifests as enhanced divisive modulation of the fout-gexc curves
+(Lower). (D) The relative change in trajectory with increasing ginh is summa-
+rized for somatic Iclamp and dendritic gexc stimulus conditions. The difference
+between curves predicts the amount of divisive modulation of fout before and
+after taking into account the effects of dendritic saturation and should be
+compared with data in Fig. 3D. (E) To test whether threshold smoothing by
+noise together with the nonlinearity caused by dendritic saturation can fully
+explain the divisive effects of shunting observed under synaptic conditions, it
+is necessary to combine these independently measured effects to see how,
+together, they inﬂuence fout. The schematic shown here illustrates how fout-
+gexc curves in F were generated; example curves corresponding to weakest and
+strongest inhibition (solid and dotted lines, respectively) are shown. Vm-gexc
+curves (corresponding to dashed lines in C Upper) were combined with
+Iclamp-Vm curves (corresponding to mirror image of A Upper) to produce
+Iclamp-gexc curves, allowing one to infer the value of somatic Iclamp necessary to
+produce equivalent somatic depolarization as that produced by noisy gexc in
+the dendrites; this introduces the nonlinearity caused by dendritic saturation.
+These Iclamp-gexc curves were then combined with fout-Iclamp curves with
+smoothed threshold (corresponding to dashed lines in A Lower, showing
+response to   0.4 nA ms noise level, which best reproduces the values of
+standard deviation of Vm reported in Fig. 2C) to produce the fout-gexc curves
+shown in F as solid lines. This introduces the effect of threshold smoothing
+caused by noise. Thus, calculated fout-gexc curves are directly comparable to
+measured fout-fexc curves but represent the spiking response to artiﬁcial noise
+(i.e., noisy somatic Iclamp) with the values of Iclamp converted to values of gexc by
+nonlinear scaling. (F) The calculated fout-gexc curves (solid lines) closely approx-
+imate the fout-fexc curves generated by synaptic input (dashed lines), which
+correspond to the data in Fig. 1C.
+Prescott and De Koninck
+PNAS 
+February 18, 2003 
+vol. 100 
+no. 4 
+2079
+NEUROSCIENCE
+
+===== PDF PAGE 5 =====
+saturation, appear to explain how shunting inhibition modu-
+lates fout. We sought to quantitatively test the adequacy of this
+explanation by reconstituting a family of fout-gexc curves rep-
+resenting different levels of inhibition for comparison to the
+fout-fexc curves in Fig. 1C. In other words, these fout-gexc curves
+do not represent results of additional simulations but rather
+are calculated from earlier simulations aimed at independently
+measuring the threshold smoothing caused by noise (Fig. 3)
+and the nonlinearity introduced by dendritic saturation (Fig.
+4C). The manner in which the multiple different relationships
+described earlier in the paper were combined to generate
+fout-gexc curves directly comparable to fout-fexc curves is ex-
+plained in Fig. 4E. The calculated fout-gexc curves exhibit a
+pattern of mixed divisive and subtractive change (Fig. 4F, solid
+lines) closely resembling that seen in response to synaptic
+excitation (dashed lines; data from Fig. 1C). By comparison,
+applying the modest nonlinearity associated with somatic gexc
+(which circumvents the effects of dendritic saturation; see Fig.
+4B) could not accurately reproduce the data in Fig. 1 C and D
+(Fig. 6). Thus, synaptic noise and dendritic saturation both
+influence how synaptic input is transduced into firing rate, and
+both must be taken into account to fully explain the outcome
+of shunting inhibition on firing rate.
+Discussion
+Data presented here indicate that shunting inhibition can
+indeed divisively modulate firing rate, but that this ability
+relies on two effects of synaptic input: the noise it causes in
+somatic Vm and the saturation it causes in dendrites. In the
+absence of those effects, shunting has a purely subtractive
+effect on fout (Fig. 5A). Threshold smoothing by noise allows
+a modest divisive reduction of fout by shunting (Fig. 5B). On its
+own, the nonlinearity caused by dendritic saturation does not
+allow a divisive effect of shunting on fout (Fig. 5C). However,
+when combined with threshold smoothing by noise, the effects
+of dendritic saturation serve to dramatically enhance divisive
+modulation of fout by shunting inhibition relative to the residual
+subtractive effect (Fig. 5D).
+The results of this study explain the enigmatic link between
+shunting inhibition and gain control of firing rate. The dis-
+crepancy between our results and those of past modeling
+studies, which concluded that shunting inhibition could not
+mediate firing rate gain control (8–10), is accounted for by the
+presence or absence of synaptic noise in the model. This is
+supported by a recent modeling study that has also implicated
+noise in determining the effect of shunting inhibition (44) and
+is consistent with data in ref. 17. Neurons in vivo experience
+significant levels of synaptic noise (17, 33, 34, 40) and therefore
+exist under conditions where shunting is likely to act divisively
+on fout.
+How does noise allow introduction of a divisive effect? Studies
+on stochastic resonance have shown that noise can enhance the
+detection of weak signals (45, 46). This increased sensitivity
+reflects altered transduction of graded input into spikes: Noise
+smoothes the threshold nonlinearity, converting the probability
+of spiking in response to a given input from a step function into
+a sigmoidal one (34), with the result that firing rate more
+smoothly encodes the underlying depolarization (32, 35, 47).
+This smoothing allows for the contrast invariance of orientation
+tuning in the visual cortex (33) and, as shown in the present study
+and by Chance et al. (18), it also allows firing rate to reflect the
+divisive influence of shunting on Vm.
+One benefit of our approach was that we made no assump-
+tions a priori as to what factors might be involved in allowing
+gain control by shunting. Instead, we dissected out those
+factors and tested whether and to what degree shunting
+inhibition could divisively modulate fout when factors were
+taken into account independently or in combination. This
+approach revealed that a second factor, the nonlinearity
+caused by dendritic saturation, combined with synaptic noise
+to determine the final outcome of shunting inhibition on fout.
+This nonlinearity stems from the fact that electrotonic atten-
+uation causes only a fraction of the excitation produced in
+dendrites to make it to the soma to mediate somatic depolar-
+ization (48, 49); therefore, strong dendritic excitation is nec-
+essary to achieve even moderate somatic excitation. But the
+necessity for strong dendritic excitation results in dendritic
+saturation; in other words, dendrites becomes depolarized to
+the extent that the driving force associated with excitatory
+synaptic conductance becomes significantly reduced (50).
+Consequently, excitatory conductance becomes progressively
+less capable of generating excitatory current as overall exci-
+tation (and, by extension, dendritic saturation) increases.
+Compounding this, the requisite high level of synaptic input
+significantly alters the electrotonic structure of the neuron and
+exacerbates the attenuation (16). The end result is a highly
+nonlinear relation between somatic Vm and dendritic gexc,
+which, because of the shape of that nonlinearity relative to the
+region of probabilistic firing, enhances the divisive modulation
+of fout by shunting inhibition.
+During revisions of this paper, Chance et al. (18) indepen-
+dently demonstrated the role of noise in firing rate gain control
+using dynamic clamp. Our data are consistent with their findings
+but argue that in addition to synaptic noise, dendritic saturation,
+which they did not consider, enhances shunting inhibition’s
+divisive effect on fout relative to its subtractive effect and thereby
+Fig. 5.
+Effect of shunting inhibition on fout under different conditions. (A)
+Without noise or dendritic saturation, the divisive effect of shunting on
+Vm-Iclamp curves manifests as a subtractive effect on fout-Iclamp curves. (B)
+Smoothing the threshold nonlinearity in the fout-Vm curve by noise (highlight-
+ed with gray) endows shunting with some capacity to divisively modulate the
+fout-Iclamp curve. (C) Excitatory conductance in the dendrites results in dendritic
+saturation, which introduces a strong nonlinearity into relation between
+somatic Vm and gexc (highlighted with gray), but, in the absence of threshold
+smoothing by noise, the divisive effect of shunting on the nonlinear Vm-gexc
+curves manifests as a subtractive effect on the fout-gexc curves. (D) When both
+threshold smoothing by noise and the nonlinearity caused by dendritic satu-
+ration are taken into account, the divisive action of shunting on the nonlinear
+Vm-gexc curves manifests as predominantly divisive modulation of the fout-gexc
+curves, accurately recreating the modulation observed under synaptic condi-
+tions (Fig. 1C).
+2080 
+www.pnas.orgcgidoi10.1073pnas.0337591100
+Prescott and De Koninck
+
+===== PDF PAGE 6 =====
+diminishes the necessity of some of the assumptions they made
+to demonstrate gain control (see Fig. 6).
+The present study has shown that the ability of shunting
+inhibition to divisively modulate firing rate depends critically on
+synaptic noise. Moreover, divisive modulation of firing rate is
+greatly enhanced relative to the residual subtractive effect by the
+nonlinearity caused by dendritic saturation. The consequences of
+noise and dendritic saturation, both of which result from the
+strong background synaptic input characteristic of in vivo con-
+ditions, demonstrate the impact of network activity on the
+computational capabilities of individual neurons.
+We thank Drs. A. Destexhe, P. Drapeau, H. Kro¨ger, S. Ratte´, M.
+Rudolph, and M. W. Salter for helpful comments on the manuscript and
+N. T. Carnevale and M. L. Hines for assistance with NEURON. S.A.P. is
+a recipient of an M.D.Ph.D. studentship from the Canadian Institutes
+of Health Research. Y.D.K. is a Scholar of the Fonds de la Recherche
+en Sante´ du Que´bec. This work was supported by the Natural Sciences
+and Engineering Research Council of Canada.
+1. Prochazka, A. (1989) Prog. Neurobiol. 33, 281–307.
+2. Treue, S. & Martinez Trujillo, J. C. (1999) Nature 399, 575–579.
+3. Trotter, Y. & Celebrini, S. (1999) Nature 398, 239–242.
+4. Salinas, E. & Thier, P. (2000) Neuron 27, 15–21.
+5. Schwartz, O. & Simoncelli, E. P. (2001) Nat. Neurosci. 4, 819–825.
+6. Eccles, J. C. (1964) The Physiology of Synapses (Springer, Berlin).
+7. Blomfield, S. (1974) Brain Res. 69, 115–124.
+8. Douglas, R. J. & Martin, K. A. C. (1990) Neural Comput. 2, 283–292.
+9. Gabbiani, F., Midtgaard, J. & Knopfel, T. (1994) J. Neurophysiol. 72, 999–1009.
+10. Holt, G. R. & Koch, C. (1997) Neural Comput. 9, 1001–1013.
+11. Connors, B. W., Malenka, R. C. & Silva, L. R. (1988) J. Physiol. 406, 443–468.
+12. Berman, N. J., Douglas, R. J. & Martin, K. A. (1992) Prog. Brain Res. 90,
+443–476.
+13. Rose, D. (1977) Exp. Brain Res. 28, 221–223.
+14. Single, S., Haag, J. & Borst, A. (1997) J. Neurosci. 17, 6023–6030.
+15. Bruckner, S. & Hyson, R. L. (1998) Eur. J. Neurosci. 10, 3438–3450.
+16. Bernander, O¨ ., Douglas, R. J., Martin, K. A. & Koch, C. (1991) Proc. Natl.
+Acad. Sci. USA 88, 11569–11573.
+17. Destexhe, A. & Pare´, D. (1999) J. Neurophysiol. 81, 1531–1547.
+18. Chance, F. S., Abbott, L. F. & Reyes, A. D. (2002) Neuron 35, 773–782.
+19. Contreras, D., Destexhe, A. & Steriade, M. (1997) J. Neurophysiol. 78, 335–350.
+20. Mainen, Z. F., Joerges, J., Huguenard, J. R. & Sejnowski, T. J. (1995) Neuron
+15, 1427–1439.
+21. Traub, R. D. & Miles, R. (1991) Neuronal Networks of the Hippocampus (Univ.
+of Cambridge Press, Cambridge, U.K.).
+22. Salin, P. A. & Prince, D. A. (1996) J. Neurophysiol. 75, 1573–1588.
+23. Markram, H., Lu¨bke, J., Frotscher, M., Roth, A. & Sakmann, B. (1997)
+J. Physiol. 500, 409–440.
+24. Destexhe, A., Mainen, Z. F. & Sejnowski, T. J. (1998) in Methods in Neuronal
+Modeling, eds. Koch, C. & Segev, I. (MIT Press, Cambridge, MA), pp. 1–25.
+25. Buhl, E. H., Halasy, K. & Somogyi, P. (1994) Nature 368, 823–828.
+26. Stevens, C. F. & Zador, A. M. (1998) Nat. Neurosci. 1, 210–217.
+27. Salinas, E. & Sejnowski, T. J. (2000) J. Neurosci. 20, 6193–6209.
+28. Salinas, E. & Sejnowski, T. J. (2001) Nat. Rev. Neurosci. 2, 539–550.
+29. DeFelipe, J. & Farin˜as, I. (1992) Prog. Neurobiol. 39, 563–607.
+30. Destexhe, A., Rudolph, M., Fellous, J. M. & Sejnowski, T. J. (2001) Neuro-
+science 107, 13–24.
+31. Hines, M. L. & Carnevale, N. T. (2001) Neuroscientist 7, 123–135.
+32. Stemmler, M. (1996) Network 7, 687–716.
+33. Anderson, J. S., Lampl, I., Gillespie, D. C. & Ferster, D. (2000) Science 290,
+1968–1972.
+34. Hoˆ, N. & Destexhe, A. (2000) J. Neurophysiol. 84, 1488–1496.
+35. Miller, K. D. & Troyer, T. W. (2002) J. Neurophysiol. 87, 653–659.
+36. Softky, W. R. & Koch, C. (1993) J. Neurosci. 13, 334–350.
+37. Shadlen, M. N. & Newsome, W. T. (1994) Curr. Opin. Neurobiol. 4, 569–579.
+38. Calvin, W. H. & Stevens, C. F. (1968) J. Neurophysiol. 31, 574–587.
+39. Calvin, W. H. (1975) Brain Res. 84, 1–22.
+40. Azouz, R. & Gray, C. M. (1999) J. Neurosci. 19, 2209–2223.
+41. Feng, J. F. & Brown, D. (1999) Biol. Cybern. 80, 291–297.
+42. Shadlen, M. N. & Newsome, W. T. (1998) J. Neurosci. 18, 3870–3896.
+43. Tiesinga, P. H., Jose´, J. V. & Sejnowski, T. J. (2000) Phys. Rev. E. Stat. Phys.
+Plasmas Fluids Relat. Interdiscip. Top. 62, 8413–8419.
+44. Doiron, B., Longtin, A., Berman, N. & Maler, L. (2001) Neural Comput. 13,
+227–248.
+45. Bulsara, A., Jacobs, E. W., Zhou, T., Moss, F. & Kiss, L. (1991) J. Theor. Biol.
+152, 531–555.
+46. Wiesenfeld, K. & Moss, F. (1995) Nature 373, 33–36.
+47. Jack, J. J. B., Noble, D. & Tsien, R. Y. (1975) Electric Current Flow in Excitable
+Cells (Clarendon, Oxford).
+48. Rall, W. (1977) in Handbook of Physiology, The Nervous System: Cellular Biology
+of Neurons (Am. Physiol. Soc., Bethesda, MD), pp. 39–97.
+49. Mainen, Z. F., Carnevale, N. T., Zador, A. M., Claiborne, B. J. & Brown, T. H.
+(1996) J. Neurophysiol. 76, 1904–1923.
+50. Bush, P. C. & Sejnowski, T. J. (1994) J. Neurophysiol. 71, 2183–2193.
+Prescott and De Koninck
+PNAS 
+February 18, 2003 
+vol. 100 
+no. 4 
+2081
+NEUROSCIENCE

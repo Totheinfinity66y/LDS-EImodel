@@ -1,0 +1,1731 @@
+
+===== PDF PAGE 1 =====
+Mechanisms underlying gain modulation in the cortex
+Katie A. Ferguson1, Jessica A. Cardin1,2,*
+1Department of Neuroscience, Yale University, New Haven, CT, USA.
+2Kavli Institute for Neuroscience, Yale University, New Haven, CT, USA.
+Abstract
+Cortical gain regulation allows neurons to respond adaptively to changing inputs. Neural gain is 
+modulated by internal and external influences, including attentional and arousal states, motor 
+activity and neuromodulatory input. These influences converge to a common set of mechanisms 
+for gain modulation, including GABAergic inhibition, synaptically driven fluctuations in 
+membrane potential, changes in cellular conductance and changes in other biophysical neural 
+properties. Recent work has identified GABAergic interneurons as targets of neuromodulatory 
+input and mediators of state-dependent gain modulation. Here, we review the engagement and 
+effects of gain modulation in the cortex. We highlight key recent findings that link 
+phenomenological observations of gain modulation to underlying cellular and circuit-level 
+mechanisms. Finally, we place these cellular and circuit interactions in the larger context of their 
+impact on perception and cognition.
+Patterns of neural activity in the cerebral cortex differ dramatically with changes in cognitive 
+demand and in different behavioural states, such as during sleep or wakefulness, or under 
+anaesthesia. Neural representations also rapidly adapt in response to changes in 
+environmental context. Together, these flexible modes of operation in the cortex determine 
+how we attend to different kinds of environmental input1, discriminate between these 
+different inputs2 and integrate sensory stimuli3. Information from multiple input streams of 
+cognitive, sensory or motor origin must be integrated and transformed to perform these 
+complex tasks. Increasing evidence suggests that these diverse cortical functions are 
+performed through a canonical neural computation called gain modulation4–6.
+Neural gain is a metric describing the sensitivity of a neuron to changes in input and can be 
+measured as the slope of the neural input–output (I/O) relationship. Gain modulation allows 
+this input sensitivity to be actively regulated while maintaining the neuron’s selectivity for 
+input features5. Regulation of neural gain thus provides an integration mechanism whereby 
+information from multiple sources can be non-linearly combined via multiplicative 
+modulation of the cell’s response to inputs (BOX 1).
+* jess.cardin@ yale.edu.
+Author contributions
+Both authors researched data for article, made substantial contributions to discussions of the content, wrote the manuscript and 
+reviewed or edited the manuscript before submission.
+Competing interests
+The authors declare no competing interests.
+HHS Public Access
+Author manuscript
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Published in final edited form as:
+Nat Rev Neurosci. 2020 February ; 21(2): 80–92. doi:10.1038/s41583-019-0253-y.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 2 =====
+Gain-modulated cells are ideally suited to perform multimodal computations, such as 
+conversions from sensory-centred into motor-centred reference frames, and for the 
+generation of invariant responses to input features despite contextual variability6–9. Contrast-
+invariant orientation tuning of cortical neurons for visual stimuli is a well-characterized 
+example of stable encoding of one feature (in this case, orientation), regardless of changes in 
+stimulus context (in this case, contrast)10–12.
+Neurons in many cortical and subcortical brain areas exhibit robust gain modulation that 
+may contribute to multiple cognitive functions, including attention, learning, sensory 
+processing and multimodal integration1–3,7,8,13–17. As the encoding of sensory information 
+by single neurons gives rise to the population-level representation of that information18,19, 
+the sensitivity of individual neurons to changes in sensory input should correlate with 
+psychophysical performance on sensory tasks. Indeed, several studies have found good 
+agreement between the population-level responses of gain-modulated neurons (such as the 
+population-average contrast response function) and psychophysical performance (for 
+example, in visual contrast discrimination) in humans and non-human primates12,20–24. 
+Correlations between the gain of neural responses and psychophysical performance support 
+the hypothesis that gain modulation may mediate the trade-off between sensitivity to all 
+salient signals and selectivity for specific signals25. However, a causal relationship remains 
+to be fully established.
+Here, we review how distinct environmental and internal sources of input modulate cortical 
+gain. We examine how multiple influences on the gain of excitatory cortical neurons, 
+including attention, locomotion, arousal and neuromodulation, converge to regulate common 
+cellular mechanisms. We highlight the crucial role of GABAergic synaptic inhibition in 
+these mechanisms and identify potential cell type-specific roles for diverse GABAergic 
+populations in mediating gain modulation at the cellular and network levels. Last, we 
+examine the intersection between behavioural state and neuromodulatory control of cortical 
+gain.
+Multiple modes of gain control
+Neural gain is strongly regulated by both externally imposed and internally generated 
+influences. Gain dynamically adapts in response to variations in the surrounding sensory 
+environment and behavioural context26. In this way, neuronal responses are continuously 
+rescaled to match the dynamically changing range of their inputs, and overall firing rates can 
+be maintained across stimuli with different statistics.
+Contrast-invariant tuning is an example of gain modulation that is induced by changes in 
+sensory stimulation, in which neurons respond to stimuli of different levels of contrast while 
+preserving their selectivity for other properties, such as orientation and spatial 
+frequency27–29. Contrast invariance thus enables simultaneous overall signal amplification of 
+visual responses and discrimination between stimulus features. Gain modulation has also 
+been proposed to be crucial for multisensory integration3,30. In the high-order visual cortex 
+of non-human primates, properties that must be decoded separately (for example, object 
+identity and image attributes) are combined multiplicatively, whereas those that must be 
+Ferguson and Cardin
+Page 2
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 3 =====
+integrated (for example, parts of an object) are combined additively31. Importantly, subtle 
+differences in the relative balance of additive versus multiplicative components of neural 
+modulation at the single-neuron level may produce substantial differences in the downstream 
+decoding of object properties at the population level31.
+Gain modulation mechanisms are also robustly engaged by changes in internal state32–35. In 
+the visual cortex, the onset of arousal (as measured by pupil diameter) and locomotion 
+increase neuronal gain32,33,36,37. By contrast, locomotion is correlated with reductions in 
+response gain in the primary auditory cortex (A1), suggesting that state-dependent gain 
+modulation may vary between different brain areas38,39. Arousal and locomotion are 
+associated with reduced and enhanced spontaneous firing rates in the mouse primary visual 
+cortex (V1)33, respectively, indicating that mechanisms by which gain is enhanced during 
+these two behavioural states may differ. In the primary somatosensory cortex (S1), whisker 
+movement is correlated with gain changes that are heterogeneous across subpopulations of 
+cells and across cortical layers40, further highlighting the complexity of gain regulation 
+across circuits.
+Enhancement of cortical responses during attention-demanding tasks is a prominent example 
+of gain control by internally generated cognitive engagement41. Attentional modulation of 
+neural gain has been particularly well studied in the non-human primate visual system1,42,43, 
+in which visual spatial attention within the receptive field of a recorded neuron enhances 
+both contrast gain (that is, scaling of that neuron’s stimulus-response relationship along the 
+contrast axis)43 and response gain (that is, multiplicative transformation of responses to all 
+contrasts)1,14,42,44–48 (BOX 1). This attentional mechanism for gain modulation enhances 
+encoding of the salient (attended) signals, focusing perception on particular aspects of the 
+incoming information49. Experiments and computational models further demonstrate that 
+attention amplifies and stabilizes target cell responses, reducing their variance across 
+trials50,51. Specific regimes of cell–network interactions, such as enhanced synchrony of 
+inhibitory inputs, may be particularly permissive of attentional increases in contrast gain or 
+response gain5,52,53.
+Like attention, learning and plasticity also modulate neural gain and may be strongly tied to 
+behavioural state. In non-human primates trained to identify the orientation of a visual 
+stimulus, neural gain increases with learning specifically in cells tuned to the learned 
+orientation54. In mice trained on an orientation-discrimination task, the learning phase 
+immediately before attaining expert performance is associated with increased contrast gain 
+in V1 neurons55. Locomotion paired with visual stimuli dramatically enhances the recovery 
+of visual responses in mice with monocular deprivation in an NMDA receptor-dependent 
+manner, whereas locomotion or visual stimuli alone are insufficient to rescue such 
+responses56. As locomotion elicits gain increases in visually responsive cells32, these results 
+point to a direct relationship between gain modulation and stimulus-specific synaptic 
+plasticity.
+Ferguson and Cardin
+Page 3
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 4 =====
+Cellular mechanisms
+Several lines of evidence link phenomenological observations of gain modulation to a 
+common set of underlying cellular mechanisms. Variations in the statistics of synaptic input 
+robustly modulate the gain of postsynaptic neurons, and GABAergic inhibition plays a 
+crucial role in regulating neural gain.
+Synaptic input regulation.
+The sensitivity of individual neurons to input is regulated by several cellular mechanisms, 
+including fluctuations in membrane potential (Vm) that are driven by temporally correlated 
+synaptic inputs, changes in the conductance state of the cell and depolarization (FIG. 1). 
+Each of these mechanisms is affected by both synaptic excitation and inhibition.
+Changes in the level of synaptically driven fluctuations in Vm (also called synaptic 
+fluctuations or synaptic noise) may regulate the gain of the I/O curve for individual 
+neurons57–60 (but see REF.61). Under conditions of a tight balance between excitatory and 
+inhibitory input, synaptically driven Vm fluctuations alone can produce gain control57, and 
+this interaction is stable even across conditions in which synaptic inputs have different 
+temporal statistics62. Synaptically driven fluctuations in the Vm smooth the transformation 
+from Vm depolarization to spike output, creating a power-law relationship between the mean 
+Vm and the mean firing rate13,63. These fluctuations may contribute to contrast-invariant 
+tuning in neurons of the visual cortex of cats and rodents10,13,63,64. Importantly, Vm 
+fluctuations are regulated by environmental factors and stimulus conditions, as well as by 
+several neuromodulatory influences61.
+Noisy background synaptic input can multiplicatively regulate tuned neural responses under 
+different environmental conditions. Stochastic resonance can increase the sensitivity of 
+sensory detectors, including neurons, enhancing the detection of weak signals65,66. 
+Similarly, background synaptic noise that is uncorrelated with ongoing visual stimulation 
+contributes to maintaining stable orientation tuning in visual cortex neurons across varying 
+levels of visual contrast13. Computational and in vitro dynamic clamp studies demonstrate 
+that, under in vivo-like conditions with noisy background synaptic inputs, pyramidal neurons 
+can exhibit a broad dynamic range of firing rates67. In turn, this dynamic range can be 
+adjusted through gain control that is mediated by the overall level of synaptic 
+inhibition4,59,68,69.
+The degree to which the synaptic input underlying Vm fluctuations is temporally correlated 
+can vary with overall drive to a network or with firing rates70 and is regulated by behavioural 
+state transitions during wakefulness29,71–74. Neuromodulatory inputs, such as acetylcholine 
+(ACh), also alter the correlation statistics of synaptic activity in the cortex73,75. Correlations 
+between pairs of excitatory inputs or pairs of inhibitory inputs increase fluctuations in 
+synaptic drive, whereas excitatory–inhibitory correlations decrease fluctuations9.
+However, the effects of synaptic input patterns on cellular I/O gain are not limited to 
+independent changes in excitation or inhibition. Balanced changes in excitatory and 
+inhibitory synaptic plasticity may further enhance the amplitude of membrane fluctuations to 
+Ferguson and Cardin
+Page 4
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 5 =====
+regulate the I/O gain of individual neurons76. Moreover, shunting inhibition combined with 
+excitatory drive can modulate gain77, and excitatory or inhibitory synaptic input can 
+modulate the gain of a larger, non-linear driving input to a cell78. Balanced synaptic input 
+thus provides a potential mechanism for gain modulation57,79–82.
+Unlike synaptically driven Vm fluctuations, changes in membrane conductance and 
+depolarization cause lateral, or additive, shifts in the I/O transfer function of a neuron 
+without changes in neuronal gain57,58,60,61,83,84. Together, temporally coincident changes in 
+conductance state and synaptic fluctuations exert a powerful effect on neuronal gain at the 
+single-cell level57,58,60,61,83,84. In addition to regulating gain at the level of individual cells, 
+synaptic fluctuations also decrease pairwise correlations in output from neurons with shared 
+inputs85–88. Furthermore, the sensitivity of individual neurons to synaptic fluctuations can 
+vary with neural subtype or cortical area and with biophysical cellular properties, such as 
+membrane capacitance and conductance89–93. Some subpopulations of neurons may be 
+relatively insensitive or sensitive to synaptic fluctuations, biasing them towards encoding the 
+mean or the variance, respectively, of stimulus-driven synaptic input.
+Previous work has also suggested that different cellular mechanisms of gain regulation may 
+be spatially segregated within individual neurons. For example, inputs to dendrites non-
+linearly engage active dendritic processes, increasing I/O gain in pyramidal neurons94. In 
+turn, the gain enhancement conferred by dendritic action potentials may be counterbalanced 
+in part by the distinct multiplicative effects and subtractive effects of dendritic inhibition and 
+somatic inhibition, respectively95. Dendritic saturation, in combination with noisy shunting 
+somatic inhibition, may further contribute to gain control59. In addition, morphological 
+features of the dendrites regulate the extent to which gain control of individual neurons is 
+possible, with moderate branching in pyramidal neurons potentially promoting the greatest 
+possible range of gain modulation96.
+Inhibitory regulation of neural sensitivity.
+Although recent work has identified some potential mechanisms for excitatory regulation of 
+cortical gain97,98, several lines of evidence suggest that cortical GABAergic inhibition has a 
+crucial role in regulating the gain of sensory responses5,99,100 (FIG. 1). Local application of 
+gabazine, a GABAA receptor antagonist, enhances responsiveness of cat V1 to visual 
+stimuli69. GABAergic inhibition controls the sensitivity of V1 neurons in rodents and cats 
+by specifically adjusting their response gain without altering local selectivity or input 
+gain2,68,69,101–104.
+Experiments in which GABAergic interneurons have been activated or suppressed have 
+provided insight into the various ways in which interneuron activity can modulate the gain of 
+their postsynaptic targets2,68,103,105–107. However, the diversity of GABAergic interneurons 
+presents a major challenge to identifying their role in regulating the gain of excitatory cells. 
+Cortical inhibitory cells exhibit varied morphology, physiological properties, connectivity 
+patterns and biochemical composition, suggesting that they may contribute to distinct 
+computational functions108,109. Most recent work has focused on three major GABAergic 
+cell groups: fast-spiking cells that express the calcium-binding protein parvalbumin and 
+target the perisomatic and axonic regions of excitatory neurons (PV+ interneurons); low-
+Ferguson and Cardin
+Page 5
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 6 =====
+threshold spiking cells that express somatostatin and target dendrites (SST+ interneurons); 
+and sparse, dendrite-targeting cells that express vasoactive intestinal peptide (VIP+ 
+interneurons).
+Optogenetic manipulations of interneurons provide evidence of cell type-specific effects of 
+inhibitory interneurons on gain regulation2,68,104,105,107. However, initial studies of the roles 
+of PV+ interneurons and SST+ interneurons in modulating visual response gain and tuning 
+were conflicting, probably owing to differences in stimulation conditions2,68,104,107 (BOX 
+2). These discrepancies highlight the difficulty in identifying and controlling for numerous 
+influences on gain modulation. Indeed, interneuron contributions to gain control are likely to 
+be dynamic and affected by several factors, including behavioural state, cellular responses, 
+sensory stimulation regime and manipulation parameters, such as optogenetic 
+control103,106,107,110,111. Furthermore, synaptic interactions between different interneuron 
+populations provide additional potential circuit-level mechanisms for gain regulation112 
+(BOX 2). Under the active neural network conditions observed in vivo, the spatiotemporal 
+patterns of excitation, inhibition and neuromodulation vary with context, such that different 
+interneuron populations may contribute in distinct ways to cortical gain110 and ultimately to 
+perceptual and cognitive processes such as visual contrast perception113.
+Most research investigating the roles of distinct interneuron populations in shaping cortical 
+gain has used transient stimulation2,26,68,104,105,107,110,114. However, recent work has 
+demonstrated that acute manipulations (such as optogenetic silencing) and chronic 
+manipulations (for example, ablation) have considerably different effects on downstream 
+neural targets115–117. For example, learned motor skills are unaffected by motor cortex 
+lesions but severely affected by transient inactivation of the motor cortex116. In addition, 
+relatively small changes in key parameters, such as the spontaneous firing rate or strength of 
+optogenetic manipulation, may produce inconsistency in responses to transient 
+manipulations106. Transiently activating or silencing a specific cell type, such as GABAergic 
+interneurons, may have unanticipated indirect effects on cortical circuit dynamics, yielding 
+mixed effects on the gain of individual neurons (BOX 2).
+Recent work using parallel optogenetic and computational approaches has provided support 
+for a more nuanced and internally consistent model for the role of GABAergic inhibition in 
+gain control. In the auditory cortex, optogenetically activating PV+ interneurons or SST+ 
+interneurons evokes a mixture of divisive and subtractive modulation of postsynaptic 
+excitatory neurons107. Variations in spike threshold and the strength of inhibitory 
+suppression of individual excitatory neurons can also translate subtractive modulation of the 
+individual neurons into divisive modulation at the population level, or vice versa107. The 
+gain effects of a specific interneuron population may thus be altered by the cellular and 
+synaptic properties of the surrounding network.
+Furthermore, distinct interneuron populations may have unique roles in context-dependent 
+modes of gain modulation such as adaptation105 and forward suppression118. A network 
+model incorporating a biologically realistic mix of neuronal populations can account for 
+these additional modes through short-term dynamic adjustments of synaptic inputs onto 
+distinct interneuron populations106.
+Ferguson and Cardin
+Page 6
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 7 =====
+The effect of synaptic inhibition on neural gain may be strongly regulated by behavioural 
+state. Recent work has highlighted state-dependent modulation of the activity of PV+ 
+interneurons, SST+ interneurons and VIP+ interneurons, but the circuit-level effects of such 
+modulation are probably complex. VIP+ interneurons are important regulators of cortical 
+function119–123 and are activated by arousal and locomotion119,124. The increased firing of 
+VIP+ interneurons in vivo during locomotion suppresses SST+ interneurons40, potentially 
+leading to an overall decrease in the response gain of downstream excitatory cells. Indeed, 
+optogenetic activation of VIP+ interneurons increases the response gain of local excitatory 
+cells, mimicking some of the effects of locomotion16. However, locomotion may also 
+increase the response gain of SST+ interneurons, which may potentially decrease the 
+response gain of downstream excitatory neurons36,125. Given these complex and 
+heterogeneous interactions between distinct interneuron populations112, the respective roles 
+of these cell types in state-dependent and context-dependent gain modulation at the single-
+neuron and network levels remain to be fully explored.
+Theoretical work suggests that, in an inhibition-stabilized network, feedback inhibition can 
+balance excitatory recurrent activity, thereby maintaining stability during stimulus-evoked 
+activity126,127. Experimental evidence further suggests that visual and auditory cortices 
+operate like inhibition-stabilized networks126,128. Although few computational models of 
+cortical networks take into account the extensive diversity of interneuron populations, some 
+have extended inhibition-stabilized network regimes to include multiple distinct interneuron 
+subpopulations129,130. Cell type-specific non-linear I/O relationships and diverse synaptic 
+interactions between populations may each contribute to the influence of different 
+interneurons on gain modulation. For example, regulation of the shape of the tuning curves 
+of excitatory neurons may depend on both the I/O non-linearity and tuning of PV+ 
+interneurons129,130.
+Although inhibition may stabilize cortical networks, inhibitory gain regulation can be 
+heterogeneous even within a local circuit. Indeed, functionally distinct subtypes of SST+ 
+interneurons have been found in different layers of S140,119,122. In S1, VIP+ interneurons 
+preferentially inhibit layer 2/3 (L2/3) SST+ interneurons and only weakly inhibit many L5 
+SST+ interneurons. This selective VIP+ inhibition causes state-dependent differential 
+modulation of SST+ interneurons in L2/3 and L5, leading to distinct modes of gain 
+regulation in superficial and deep cortical layers during whisking behaviour40. Laminar 
+differences in gain modulation have also been observed in A1. Locomotion decreases the 
+gain of responses in L2/3 of A1 but not in L4, potentially as a result of enhanced inhibition 
+in the superficial cortical layers131.
+Arousal and neuromodulation
+Behavioural state.
+In humans, fluctuations in behavioural state during wakefulness, such as from quiescence to 
+arousal, potently regulate patterns of brain activity132–136 and perceptual and cognitive 
+performance137,138. Brain states, which are typically distinguished by canonical patterns of 
+rhythmic activity (such as alpha oscillations or gamma oscillations) or by arousal level 
+(measured by pupillometry), strongly regulate the expression of task-evoked neural 
+Ferguson and Cardin
+Page 7
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 8 =====
+activity139. In humans, spontaneous changes in brain state are correlated with alterations in 
+electroencephalography signals140,141 and functional magnetic resonance imaging 
+signals132,134,135, and with changes in cognitive and perceptual task performance133–136,142 
+and sensory detection132. Thus, behavioural or arousal states may be associated with 
+different widespread modulations of neural gain. However, a detailed mechanistic 
+understanding of these interactions remains incomplete.
+Work in rodents has largely examined this state-dependent modulation of cortical processing 
+during wakefulness by measuring spontaneous motor activity (such as locomotion or 
+whisking) as a proxy for arousal, as locomotion correlates with pupil diameter (an indicator 
+of arousal)28,33 and changes in cortical electroencephalography and local field potential 
+signals33,73. Although the precise pathways that link changes in pupil diameter to arousal 
+remain poorly understood, locus coeruleus firing is highly correlated with pupil 
+dynamics143,144, and locus coeruleus stimulation causes pupil dilation145. Cortical imaging 
+of cholinergic and noradrenergic axons from the basal forebrain and locus coeruleus, 
+respectively, found high correlations between the activity of these afferents and sustained 
+pupil dilation and locomotion146. Pupil size itself does not regulate neural sensitivity to 
+inputs, as atropine-induced pupil dilation does not affect the tuning of thalamic neurons147 
+or visual perceptual behaviour148 in mice.
+During running, neurons in mouse V1 exhibit increased synaptic input, elevated firing rates 
+and enhanced visual-response amplitudes28,29,32,33,111,147,149, resulting in a higher signal-to-
+noise ratio for visually evoked activity. Comparison of tuning curves during quiescence and 
+locomotion reveals an increase in gain during running27,32,73,80,148. Locomotion increases 
+the amplitude of visual responses in both excitatory and inhibitory neurons in mouse V1, 
+suggesting a circuit-wide modulation of sensitivity to inputs, although this modulation varies 
+across layers and depends on the sensory context in some cell classes27,33,36,125,147,148.
+One prediction arising from studies in rodent V1 is that the increase in visual response gain 
+associated with an enhanced arousal state (indexed by pupil diameter and locomotion) 
+strengthens cortical visual encoding. Indeed, mice exhibit increased visual perceptual 
+performance during locomotion29. However, visual response gain may not be monotonically 
+correlated with visual perceptual performance. Some recent observations from V1 of mice 
+performing a visual detection task suggest that visual response gain modulation increases at 
+both moderate and high arousal levels and may be partly dissociable from behavioural 
+performance, which peaks at moderate arousal levels150. Interestingly, in humans, 
+locomotion may enhance visually evoked neural responses140,151 but not visual 
+psychophysical performance152, further suggesting a dissociation between modulation of 
+neural response gain and perceptual ability.
+Substantial evidence suggests behavioural state-dependent regulation of sensory responses, 
+but the direction of the resulting gain modulation may vary across cortical areas. In contrast 
+to visual response gain in V1, A1 auditory response gain is reduced during locomotion, 
+owing to increases in the activity of inhibitory interneurons38. Measures of auditory task 
+performance suggest complex relationships between arousal, gain control in A1 and 
+perception, with neuronal gain potentially decreasing with high arousal and psychophysical 
+Ferguson and Cardin
+Page 8
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 9 =====
+performance adversely affected by locomotion39,153. State-dependent regulation of neuronal 
+activity levels and response gain in different brain areas may thus be mediated by different 
+local circuit mechanisms and differentially relate to perceptual performance. In support of 
+this idea, large-scale imaging approaches find varying effects of arousal on activity patterns 
+across cortical areas. These approaches also reveal heterogeneity of the effects of arousal on 
+the long-range functional connectivity of neighbouring individual neurons that reside within 
+a cortical area154–156.
+The complex interactions between motor and sensory areas that occur during motor action 
+may cause simultaneous arousal-related and motor-related signals to arise in primary 
+sensory cortical areas, potentially confounding the use of locomotion or whisking as 
+indicators of arousal155,157. However, experiments in which motor activity and arousal are 
+dissociated suggest that they regulate cortical gain independently. During locomotion, 
+excitatory neurons in mouse V1 exhibit increased excitatory and inhibitory conductance 
+associated with Vm depolarization and synaptic fluctuations, along with increased 
+spontaneous and visually evoked firing29,32,33,73,149. By contrast, arousal induced by an air 
+puff in the absence of locomotion causes a decrease, rather than an increase, in spontaneous 
+firing without reducing visually evoked responses, thereby increasing the signal-to-noise 
+ratio and enhancing stimulus sensitivity33. Locomotion and arousal thus seem to engage 
+distinct cellular and network mechanisms for modulating cortical sensory response gain 
+(FIG. 2).
+Neuromodulatory control.
+Neuromodulators engage many cellular mechanisms of gain modulation and provide a 
+crucial link between behavioural state and neuronal gain control. Although there are a large 
+number of neuromodulatory systems that probably regulate cortical gain, only a few have 
+been studied in detail. In particular, cholinergic modulation of cortical networks, mediated 
+largely by widespread projections from cholinergic neurons in the basal forebrain, has been 
+proposed to underlie state-dependent regulation of neuronal sensitivity to sensory inputs.
+Cholinergic receptors are expressed by inhibitory and excitatory cortical 
+neurons119,124,158–164, as well as on the terminals of thalamocortical neurons165–169. 
+Stimulation of nicotinic ACh receptors (nAChRs) with nicotine in macaque V1 causes 
+increases in firing rates and gain modulation of sensory-evoked activity in the thalamo-
+recipient cortical layers and has various effects in other layers165,170,171 (for further 
+discussion, see REF.172). Similarly, systemically applied nicotine enhances response gain in 
+mouse A1 (REF.173). Other work in non-human-primate cortex suggests that activation of 
+muscarinic ACh receptors (mAChRs), but not nAChRs, may in part mediate the attentional 
+modulation of neural response gain174. However, the effects of cholinergic modulation on 
+neuronal response gain may vary across classes of excitatory neurons172. In contrast to the 
+effects of pharmacological agents, optogenetic stimulation of endogenous ACh release in 
+mouse V1 desynchronizes spiking and enhances visual perceptual performance, without 
+altering overall firing rates175. Together, these findings suggest that the effects of cholinergic 
+transmission on neural gain and stimulus encoding vary, potentially owing to the 
+heterogeneity of cholinergic receptor expression across cortical populations.
+Ferguson and Cardin
+Page 9
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 10 =====
+Earlier work showed that cholinergic transmission acts on multiple cellular targets and 
+functional pathways that may potentially contribute to gain modulation at the single-neuron 
+level. Activation of mAChRs on cortical pyramidal neurons reduces the activity of multiple 
+types of Ca2+ channels176, increases excitability via Ca2+-dependent potassium 
+channels177–179 and can enhance bursting activity180, all potentially contributing to gain 
+regulation at the single-neuron level. Furthermore, the effects of cholinergic signalling are 
+heterogeneous across cortical layers: ACh suppresses excitatory neuron activity in L4, but 
+increases the activity of excitatory neurons in L2/3 and L5 by promoting mAChR-mediated 
+opening of GIRK channels (G protein-coupled inwardly-rectifying potassium channels)181. 
+However, mAChR activation also suppresses L5 pyramidal neuron activity by triggering 
+internal release of calcium, which activates inhibitory SK channels (small-conductance 
+Ca2+-activated potassium channels)182,183. Optical stimulation of endogenous ACh release 
+in S1 leads to activation of mAChRs on excitatory and inhibitory neurons in L4 and 
+activation of nAChRs, presumably on inhibitory interneurons, in the superficial layers, 
+causing overall suppression of cortical activity184.
+In addition to these influences on overall neural activity, mAChRs at excitatory synapses 
+may decrease presynaptic release185 and increase postsynaptic responses186 through 
+independent mechanisms, further contributing to neural gain control. ACh release is likely to 
+simultaneously affect excitatory and inhibitory cells and their synapses, and thus the 
+cumulative impact of these various cellular mechanisms on response gain in vivo remains 
+unclear.
+In contrast to ACh, less is known about the impact of other neuromodulators on gain 
+modulation in local cortical circuits. Noradrenaline increases the excitability of neurons that 
+express β-adrenergic receptors187–189 and reduces excitatory synaptic transmission by acting 
+on α-adrenergic receptors190,191, suggesting potential for noradrenergic regulation of neural 
+gain. However, similar to ACh, the effects of noradrenaline on individual pyramidal neurons 
+are heterogeneous192,193. Local application of noradrenaline or stimulation of noradrenergic 
+afferents in vivo reduces spontaneous firing194,195, but enhances evoked responses196–198 
+(but see REF.199), potentially increasing the signal-to-noise ratio of sensory responses143. 
+The depolarization and increased firing of mouse V1 neurons associated with locomotion 
+require noradrenergic transmission, and blocking noradrenergic receptors results in 
+hyperpolarization of pyramidal neurons, decreases their firing and prevents locomotion-
+induced increases in visual response gain73.
+In contrast to the largely gain-enhancing effects of ACh and noradrenaline, serotonin seems 
+to predominantly reduce neural gain. In macaque V1, locally applied serotonin reduces the 
+gain of responses of excitatory neurons to visual stimuli200. However, cortical pyramidal 
+neurons show heterogeneous expression of serotonin receptors and therefore may exhibit 
+varied responses to activation of serotonergic afferents201. Nevertheless, consistent with the 
+notion that serotonin reduces neural gain, increases in serotonin levels reduce behavioural 
+sensitivity to mechanosensory stimuli202 and reduce startle responses203.
+Evidence from non-human-primate studies suggests that dopamine may also regulate 
+cortical response gain. Dopaminergic signalling has a role in the top-down regulation of 
+Ferguson and Cardin
+Page 10
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 11 =====
+spatial attention, and D1 dopaminergic receptors modulate response amplitude and 
+selectivity in the dorsolateral prefrontal cortex for preferred spatial locations during working 
+memory tasks204,205. Moreover, D1 dopaminergic receptor activation in the frontal eye fields 
+enhances the amplitude and selectivity of neural responses in cortical area V4 (REF.206). 
+However, little is known about the cell type-specific effects or underlying cellular and 
+network mechanisms of dopaminergic regulation of cortical gain.
+Overall, these findings suggest crucial roles for several neuromodulatory systems in 
+regulating cortical gain. However, many of these effects have not yet been examined in 
+detail, and the in vivo impacts of other potential neuromodulatory influences on gain, such 
+as signalling through GABAB receptors, are poorly understood. In addition, the cellular 
+mechanisms of potential interactions between neuromodulatory inputs, such as convergence 
+to a small number of G protein-coupled receptor (GPCR) signalling pathways207, remain to 
+be explored.
+Interneurons as targets of neuromodulation.
+A key portion of the impact of neuromodulation on neural response gain may occur via 
+actions on inhibitory interneurons170. In particular, VIP+ interneurons express nAChRs and 
+are strongly depolarized by nicotine or ACh119,124,163. In turn, SST+ interneurons receive 
+strong GABAergic input from VIP+ interneurons and themselves exhibit mAChR-mediated 
+depolarization, and connections from pyramidal neurons to SST+ interneurons are 
+selectively enhanced by activation of presynaptic nAChRs164. Cholinergic input to the cortex 
+increases SST+ interneuron activity, thus increasing inhibition of PV+ cells and pyramidal 
+neurons and desynchronizing cortical networks75 and synaptic inputs to individual neurons. 
+Cholinergic signalling can thus promote competing increases in the activity of presynaptic 
+VIP+ cells and postsynaptic SST+ cells. The activity of interneurons in L1 is also enhanced 
+by nAChR activation, potentially leading to reductions in the activity of postsynaptic PV+ 
+interneurons in L2/3162.
+L1 interneurons and VIP+ interneurons are characterized by robust expression of serotonin 
+3A receptors (5-HT3ARs)108, although the cellular actions of serotonin on these cells are not 
+well understood. Recent work has also revealed that serotonin regulates the excitability of 
+PV+ interneurons via 5-HT2ARs (REF.208). In addition to being influenced by cholinergic 
+and serotonergic signalling, SST+ interneurons and a subset of PV+ interneurons are also 
+depolarized by activation of α-adrenergic receptors209. Each population of inhibitory 
+interneurons is thus subject to regulation by multiple streams of neuromodulatory input, 
+potentially increasing the flexibility of their roles in modulating the gain of nearby 
+pyramidal neurons.
+Functions of gain modulation
+The brain faces an ever-evolving challenge to support stable but flexible encoding of 
+environmental information in the face of continually changing input regimes. Successfully 
+meeting this challenge requires rapid adaptation to varying ranges of input and enhancing 
+the salience of relevant information. Gain modulation serves both of these functions.
+Ferguson and Cardin
+Page 11
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 12 =====
+As individual neurons receive a broad range of inputs, neural encoding processes must be 
+sensitive to weak inputs but not saturated in response to stronger ones. One mechanism by 
+which this may occur is through adaptation-regulated changes in gain, whereby neurons 
+dynamically maintain their firing rates to efficiently encode both weak and strong stimuli. 
+Adaptation enables high sensitivity to small changes in stimulus features over a large range 
+of intensities, and is found across sensory systems5,17,26,105,210–216. Moreover, within a 
+cortical area, distinct cell populations may regulate gain modulation differently over time or 
+as stimuli change. For example, in response to repeated auditory tones, excitatory neuron 
+activity in mouse A1 adapts in a frequency-dependent manner, whereas the responses of PV+ 
+interneurons are stable and those of SST+ interneurons increase. The increase in SST+ 
+interneuron activity following adaptation results in enhanced gain modulation of excitatory 
+neuron auditory responses, whereas PV+ interneurons do not affect the adaptation-induced 
+response gain105. Increased inhibitory input reduces the sensitivity of excitatory neurons to 
+changes in auditory input and expands the dynamic range of neural responses (BOX 1), and 
+also potentially increases the efficiency of encoding217. SST+ interneurons may thus be key 
+regulators of sensory adaptation, an important computation exhibited by many cortical 
+regions that allows environmental changes to be detected across a wide range of 
+backgrounds.
+Gain modulation may also enhance encoding of relevant information during specific 
+behavioural states. Decoders that predict the presence of visual stimuli on the basis of neural 
+responses are more accurate when they use neural activity recorded in the mouse cortex 
+during locomotion than that during quiescence27,37, suggesting that stimulus-invariant 
+increases in neural gain produce more robust encoding during locomotion. Using two 
+separate decoders during still and active periods does not improve stimulus prediction, 
+indicating that a model with a single mode of gain modulation best reflects the 
+improvements in encoding between the two states27,37. Gain increases mediated by spatial 
+attention similarly contribute to improved neural encoding and perceptual performance18.
+Gain increases may optimize signal discrimination in the presence of external noise by 
+facilitating attractor dynamics218 and promoting a winner-take-all mechanism219,220. In 
+network models of local cortical circuits, state-dependent increases in inhibitory and 
+excitatory drive can cause convergence of competing, unstable patterns of activity to a 
+single, stable representation221, prioritizing one stimulus over others. In the visual and 
+auditory systems, neural representations of stimuli are relatively invariant to contrast or 
+intensity changes but remain robustly responsive to the variance of other features, such as 
+orientation or spatial frequency, allowing separation of distinct stimulus features. A cortical 
+circuit model of decision-making indicates that dynamic co-modulation of both excitatory 
+and inhibitory gain produces a more stable and robust network, allowing for more flexible 
+and cognitively demanding decision-making, and that gain modulation can compensate for 
+weaker recurrent excitation218.
+Finally, a key role of gain modulation may be to increase information transmission and 
+provide computational efficiency within a neural network222 under the constraint of limited 
+resources. Gain regulation has been suggested to enable networks of neurons to produce 
+distributed representations of stimulus features223, and to allow downstream decoders to be 
+Ferguson and Cardin
+Page 12
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 13 =====
+optimized for diverse stimuli by separating those features224. However, it remains unclear 
+precisely how gain modulation at the single-cell level contributes to population coding that 
+might be read out by a downstream target. In addition, given the diversity of cellular 
+properties, receptor expression and connectivity, it is unclear whether cortical networks 
+could exhibit uniform gain modulation, suggesting that a downstream decoder may receive a 
+noisy population signal. Indeed, recent work suggests that spontaneous fluctuations in 
+network activity modulate the gain of neuronal responses homogeneously across excitatory 
+cells, whereas visual stimulus contrast modulates the gain of individual neurons 
+independently225. Variability in stimulus-tuning preferences may further contribute to the 
+heterogeneous distribution of gain modulation27, and different interneuron populations may 
+also differentially influence this heterogeneity114. Similarly, whether individual neurons 
+exhibit reliable gain modulation in response to repeated changes in internal or external 
+influences, such as behavioural state or neuromodulatory input, is not clear. These complex 
+relationships between different modes of gain modulation at the cellular and circuit levels 
+remain to be fully explored.
+Conclusions
+Increasing evidence suggests that cortical gain is regulated by a wide range of influences, 
+including attention, learning, locomotion, arousal and neuromodulatory activity, and that 
+these may act through a common set of cellular and circuit mechanisms. Recent work 
+highlights a key but complex role for GABAergic inhibition in gain modulation and suggests 
+that the sensitivity of individual neurons to sensory stimuli is profoundly modulated by 
+changes in arousal state and locomotion. Neuromodulatory inputs to the cortex have been 
+implicated as linking behavioural state and the modulation of the I/O gain of principal 
+neurons, in many cases by targeting inhibitory interneurons. Further elucidating how 
+neuromodulators regulate specific inhibitory and excitatory cell types in the cortex during 
+perceptual behaviour will be crucial for advancing our understanding of the mechanisms and 
+functions of neuronal gain modulation.
+The impact of the different mechanisms that underlie gain regulation at the network level 
+remains unclear. In addition, the precise relationship between gain modulation of single 
+neurons and the encoding and transmission of information at the population level is not well 
+understood. Further complicating matters, the reliability and repeatability of gain 
+modulation of single neurons and cortical networks is unknown. In particular, a more 
+comprehensive understanding of the interactions between inhibitory interneuron populations 
+may provide insight into the complex circuit-level mechanisms that link gain control at the 
+single-cell and population levels. Finally, the contribution of neural gain control to 
+perceptual and cognitive performance remains to be fully explored.
+Understanding the complexity of gain modulation through modelling, dimensionality 
+reduction and analyses of distributed variability in activity levels and encoding across 
+cortical populations may provide additional insight into the contributions of different 
+neuronal classes to population encoding of behaviourally relevant information and the 
+behavioural consequences of gain modulation of neural sensory responses. Together with 
+Ferguson and Cardin
+Page 13
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 14 =====
+analyses of data from large-scale population recordings, such approaches should inform our 
+understanding of the role of gain modulation in perception and cognition.
+Acknowledgements
+This work was supported by US National Institutes of Health (NIH) R01 MH102365, NIH R01 EY022951, NIH 
+R01 MH113852, a Simons Foundation Autism Research Initiative (SFARI) Research Grant, a Smith Family Award 
+for Excellence in Biomedical Research, a Klingenstein Fellowship Award, an Alfred P. Sloan Fellowship, a US 
+National Alliance for Research on Schizophrenia & Depression (NARSAD) Young Investigator Award, a McKnight 
+Fellowship and a grant from the Ludwig Family Foundation to J.A.C.; and a Brown-Coxe fellowship and a 
+NARSAD Young Investigator Award to K.A.F. The authors thank M. J. Higley and members of the Cardin and 
+Higley laboratories for insightful discussions, and Q. Perrenoud for help with illustration.
+References
+1. Reynolds JH & Heeger DJ The normalization model of attention. Neuron 61, 168–185 (2009). 
+[PubMed: 19186161] 
+2. Lee SH et al. Activation of specific interneurons improves V1 feature selectivity and visual 
+perception. Nature 488, 379–383 (2012). [PubMed: 22878719] 
+3. Ohshiro T, Angelaki DE & DeAngelis GC A normalization model of multisensory integration. Nat. 
+Neurosci 14, 775–782 (2011). [PubMed: 21552274] 
+4. Carandini M & Heeger DJ Summation and division by neurons in primate visual cortex. Science 
+264, 1333–1336 (1994). [PubMed: 8191289] 
+5. Carandini M & Heeger DJ Normalization as a canonical neural computation. Nat. Rev. Neurosci 13, 
+51–62 (2011). [PubMed: 22108672] 
+6. Salinas E & Thier P Gain modulation: a major computational principle of the central nervous 
+system. Neuron 27, 15–21 (2000). [PubMed: 10939327] 
+7. Andersen RA, Snyder LH, Bradley DC & Xing J Multimodal representation of space in the posterior 
+parietal cortex and its use in planning movements. Annu. Rev. Neurosci 20, 303–330 (1997). 
+[PubMed: 9056716] 
+8. Pouget A & Snyder LH Computational approaches to sensorimotor transformations. Nat. Neurosci 
+3, 1192–1198 (2000). [PubMed: 11127837] 
+9. Salinas E & Sejnowski TJ Impact of correlated synaptic input on output firing rate and variability in 
+simple neuronal models. J. Neurosci 20, 6193–6209 (2000). [PubMed: 10934269] 
+10. Finn IM, Priebe NJ & Ferster D The emergence of contrast-invariant orientation tuning in simple 
+cells of cat visual cortex. Neuron 54, 137–152 (2007). [PubMed: 17408583] 
+11. Sclar G & Freeman RD Orientation selectivity in the cat’s striate cortex is invariant with stimulus 
+contrast. Exp. Brain Res 46, 457–461 (1982). [PubMed: 7095050] 
+12. Skottun BC, Bradley A, Sclar G, Ohzawa I & Freeman RD The effects of contrast on visual 
+orientation and spatial frequency discrimination: a comparison of single cells and behavior. J. 
+Neurophysiol 57, 773–786 (1987). [PubMed: 3559701] 
+13. Anderson JS, Lampl I, Gillespie DC & Ferster D The contribution of noise to contrast invariance of 
+orientation tuning in cat visual cortex. Science 290, 1968–1972 (2000). [PubMed: 11110664] 
+14. McAdams CJ & Maunsell JH Effects of attention on the reliability of individual neurons in 
+monkey visual cortex. Neuron 23, 765–773 (1999). [PubMed: 10482242] 
+15. Somers DC, Nelson SB & Sur M An emergent model of orientation selectivity in cat visual cortical 
+simple cells. J. Neurosci 15, 5448–5465 (1995). [PubMed: 7643194] 
+16. Treue S & Martinez Trujillo JC Feature-based attention influences motion processing gain in 
+macaque visual cortex. Nature 399, 575–579 (1999). [PubMed: 10376597] 
+17. Baccus SA & Meister M Fast and slow contrast adaptation in retinal circuitry. Neuron 36, 909–919 
+(2002). [PubMed: 12467594] 
+18. Ruff DA, Ni AM & Cohen MR Cognition as a window into neuronal population space. Annu. Rev. 
+Neurosci 41, 77–97 (2018). [PubMed: 29799773] 
+Ferguson and Cardin
+Page 14
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 15 =====
+19. Shadlen MN, Britten KH, Newsome WT & Movshon JA A computational analysis of the 
+relationship between neuronal and behavioral responses to visual motion. J. Neurosci 16, 1486–
+1510 (1996). [PubMed: 8778300] 
+20. Barlow HB, Kaushal TP, Hawken M & Parker AJ Human contrast discrimination and the threshold 
+of cortical neurons. J. Opt. Soc. Am. A 4, 2366–2371 (1987). [PubMed: 3430223] 
+21. Boynton GM, Demb JB, Glover GH & Heeger DJ Neuronal basis of contrast discrimination. Vis. 
+Res 39, 257–269 (1999). [PubMed: 10326134] 
+22. Clatworthy PL, Chirimuuta M, Lauritzen JS & Tolhurst DJ Coding of the contrasts in natural 
+images by populations of neurons in primary visual cortex (V1). Vis. Res 43, 1983–2001 (2003). 
+[PubMed: 12831760] 
+23. Parker A & Hawken M Capabilities of monkey cortical cells in spatial-resolution tasks. J. Opt. Soc. 
+Am. A 2, 1101–1114 (1985). [PubMed: 3926970] 
+24. Watson AB Gain, noise, and contrast sensitivity of linear visual neurons. Vis. Neurosci 4, 147–157 
+(1990). [PubMed: 2271445] 
+25. Eldar E, Cohen JD & Niv Y Amplified selectivity in cognitive processing implements the neural 
+gain model of norepinephrine function. Behav. Brain Sci 39, e206 (2016). [PubMed: 28347392] 
+26. Natan RG, Carruthers IM, Mwilambwe-Tshilobo L & Geffen MN Gain control in the auditory 
+cortex evoked by changing temporal correlation of sounds. Cereb. Cortex 27, 2385–2402 (2017). 
+[PubMed: 27095823] 
+27. Mineault PJ, Tring E, Trachtenberg JT & Ringach DL Enhanced spatial resolution during 
+locomotion and heightened attention in mouse primary visual cortex. J. Neurosci 36, 6382–6392 
+(2016). [PubMed: 27307228] This paper demonstrates that the relative gain of visual responses 
+between quiescence and locomotion is heterogeneous across cells and depends on the (spatial-
+frequency) tuning properties of the cell.
+28. Reimer J et al. Pupil fluctuations track fast switching of cortical states during quiet wakefulness. 
+Neuron 84, 355–362 (2014). [PubMed: 25374359] 
+29. Bennett C, Arroyo S & Hestrin S Subthreshold mechanisms underlying state-dependent 
+modulation of visual responses. Neuron 80, 350–357 (2013). [PubMed: 24139040] 
+30. Ohshiro T, Angelaki DE & DeAngelis GC A neural signature of divisive normalization at the level 
+of multisensory integration in primate cortex. Neuron 95, 399–411.e8 (2017). [PubMed: 
+28728025] 
+31. Ratan Murty NA & Arun SP Multiplicative mixing of object identity and image attributes in single 
+inferior temporal neurons. Proc. Natl Acad. Sci. USA 115, E3276–E3285 (2018). [PubMed: 
+29559530] 
+32. Niell CM & Stryker MP Modulation of visual responses by behavioral state in mouse visual cortex. 
+Neuron 65, 472–479 (2010). [PubMed: 20188652] 
+33. Vinck M, Batista-Brito R, Knoblich U & Cardin JA Arousal and locomotion make distinct 
+contributions to cortical activity patterns and visual encoding. Neuron 86, 740–754 (2015). 
+[PubMed: 25892300] This paper shows that arousal and locomotion differentially regulate neural 
+activity and sensory response gain in mouse V1.
+34. Destexhe A, Contreras D & Steriade M Spatiotemporal analysis of local field potentials and unit 
+discharges in cat cerebral cortex during natural wake and sleep states. J. Neurosci 19, 4595–4608 
+(1999). [PubMed: 10341257] 
+35. Livingstone MS & Hubel DH Effects of sleep and arousal on the processing of visual information 
+in the cat. Nature 291, 554–561 (1981). [PubMed: 6165893] 
+36. Pakan JM et al. Behavioral-state modulation of inhibition is context-dependent and cell type 
+specific in mouse visual cortex. eLife 5, e14985 (2016). [PubMed: 27552056] This paper shows 
+that locomotion-induced gain modulation of neuronal activity is context dependent, and varies 
+across light and dark conditions and across distinct cell populations.
+37. Dadarlat MC & Stryker MP Locomotion enhances neural encoding of visual stimuli in mouse V1 
+J. Neurosci 37, 3764–3775 (2017). [PubMed: 28264980] This paper demonstrates that locomotion 
+enhances neural encoding of visual stimuli through increased firing rates and decreased noise 
+correlations across the population.
+Ferguson and Cardin
+Page 15
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 16 =====
+38. Schneider DM, Nelson A & Mooney R A synaptic and circuit basis for corollary discharge in the 
+auditory cortex. Nature 513, 189–194 (2014). [PubMed: 25162524] This article shows that 
+locomotion decreases the response gain in the mouse primary auditory cortex via inhibitory 
+interneuron actions in the local cortical circuit.
+39. Schneider DM, Sundararajan J & Mooney R A cortical filter that learns to suppress the acoustic 
+consequences of movement. Nature 561, 391–395 (2018). [PubMed: 30209396] 
+40. Munoz W, Tremblay R, Levenstein D & Rudy B Layer-specific modulation of neocortical dendritic 
+inhibition during active wakefulness. Science 355, 954–959 (2017). [PubMed: 28254942] This 
+paper shows that distinct SST+ interneuron populations demonstrate lamina-dependent and state-
+dependent differences in gain modulation in S1.
+41. Maunsell JHR Neuronal mechanisms of visual attention. Annu. Rev. Vis. Sci 1, 373–391 (2015). 
+[PubMed: 28532368] 
+42. McAdams CJ & Reid RC Attention modulates the responses of simple cells in monkey primary 
+visual cortex. J. Neurosci 25, 11023–11033 (2005). [PubMed: 16306415] 
+43. Reynolds JH, Pasternak T & Desimone R Attention increases sensitivity of V4 neurons. Neuron 
+26, 703–714 (2000). [PubMed: 10896165] 
+44. Connor CE, Gallant JL, Preddie DC & Van Essen DC Responses in area V4 depend on the spatial 
+relationship between stimulus and attention. J. Neurophysiol 75, 1306–1308 (1996). [PubMed: 
+8867139] 
+45. Connor CE, Preddie DC, Gallant JL & Van Essen DC Spatial attention effects in macaque area V4. 
+J. Neurosci 17, 3201–3214 (1997). [PubMed: 9096154] 
+46. Lee J & Maunsell JH A normalization model of attentional modulation of single unit responses. 
+PLOS ONE 4, e4651 (2009). [PubMed: 19247494] 
+47. Martinez-Trujillo JC & Treue S Feature-based attention increases the selectivity of population 
+responses in primate visual cortex. Curr. Biol 14, 744–751 (2004). [PubMed: 15120065] 
+48. Williford T & Maunsell JH Effects of spatial attention on contrast response functions in macaque 
+area V4. J. Neurophysiol 96, 40–54 (2006). [PubMed: 16772516] 
+49. Reynolds JH, Chelazzi L & Desimone R Competitive mechanisms subserve attention in macaque 
+areas V2 and V4. J. Neurosci 19, 1736–1753 (1999). [PubMed: 10024360] 
+50. Ecker AS, Denfield GH, Bethge M & Tolias AS On the structure of neuronal population activity 
+under fluctuations in attentional state. J. Neurosci 36, 1775–1789 (2016). [PubMed: 26843656] 
+51. Rabinowitz NC, Goris RL, Cohen M & Simoncelli EP Attention stabilizes the shared gain of V4 
+populations. eLife 4, e08998 (2015). [PubMed: 26523390] 
+52. Tiesinga PH & Sejnowski TJ Rapid temporal modulation of synchrony by competition in cortical 
+interneuron networks. Neural Comput 16, 251–275 (2004). [PubMed: 15006096] 
+53. Reynolds JH & Chelazzi L Attentional modulation of visual processing. Annu. Rev. Neurosci 27, 
+611–647 (2004). [PubMed: 15217345] 
+54. Schoups A, Vogels R, Qian N & Orban G Practising orientation identification improves orientation 
+coding in V1 neurons. Nature 412, 549–553 (2001). [PubMed: 11484056] 
+55. Jurjut O, Georgieva P, Busse L & Katzner S Learning enhances sensory processing in mouse V1 
+before improving behavior. J. Neurosci 37, 6460–6474 (2017). [PubMed: 28559381] 
+56. Kaneko M & Stryker MP Sensory experience during locomotion promotes recovery of functionin 
+adult visual cortex. eLife 3, e02798 (2014). [PubMed: 24970838] 
+57. Chance FS, Abbott LF & Reyes AD Gain modulation from background synaptic input. Neuron 35, 
+773–782 (2002). [PubMed: 12194875] 
+58. Ho N & Destexhe A Synaptic background activity enhances the responsiveness of neocortical 
+pyramidal neurons. J. Neurophysiol 84, 1488–1496 (2000). [PubMed: 10980021] 
+59. Prescott SA & De Koninck Y Gain control of firing rate by shunting inhibition: roles of synaptic 
+noise and dendritic saturation. Proc. Natl Acad. Sci. USA 100, 2076–2081 (2003). [PubMed: 
+12569169] 
+60. Shu Y, Hasenstaub A, Badoual M, Bal T & McCormick DA Barrages of synaptic activity control 
+the gain and sensitivity of cortical neurons. J. Neurosci 23, 10388–10401 (2003). [PubMed: 
+14614098] 
+Ferguson and Cardin
+Page 16
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 17 =====
+61. Cardin JA, Palmer LA & Contreras D Cellular mechanisms underlying stimulus-dependent gain 
+modulation in primary visual cortex neurons in vivo. Neuron 59, 150–160 (2008). [PubMed: 
+18614036] 
+62. Ly C & Doiron B Divisive gain modulation with dynamic stimuli in integrate-and-fire neurons. 
+PLOS Comput. Biol 5, e1000365 (2009). [PubMed: 19390603] 
+63. Miller KD & Troyer TW Neural noise can explain expansive, power-law nonlinearities in neural 
+response functions. J. Neurophysiol 87, 653–659 (2002). [PubMed: 11826034] 
+64. Hansel D & van Vreeswijk C How noise contributes to contrast invariance of orientation tuning in 
+cat visual cortex. J. Neurosci 22, 5118–5128 (2002). [PubMed: 12077207] 
+65. Bulsara A, Jacobs EW, Zhou T, Moss F & Kiss L Stochastic resonance in a single neuron model: 
+theory and analog simulation. J. Theor. Biol 152, 531–555 (1991). [PubMed: 1758197] 
+66. Wiesenfeld K & Moss F Stochastic resonance and the benefits of noise: from ice ages to crayfish 
+and SQUIDs. Nature 373, 33–36 (1995). [PubMed: 7800036] 
+67. Khubieh A, Ratte S, Lankarany M & Prescott SA Regulation of cortical dynamic range by 
+background synaptic noise and feedforward inhibition. Cereb. Cortex 26, 3357–3369 (2016). 
+[PubMed: 26209846] 
+68. Atallah BV, Bruns W, Carandini M & Scanziani M Parvalbumin-expressing interneurons linearly 
+transform cortical responses to visual stimuli. Neuron 73, 159–170 (2012). [PubMed: 22243754] 
+69. Katzner S, Busse L & Carandini M GABAA inhibition controls response gain in visual cortex. J. 
+Neurosci 31, 5931–5941 (2011). [PubMed: 21508218] 
+70. de la Rocha J, Doiron B, Shea-Brown E, Josic K & Reyes A Correlation between neural spike 
+trains increases with firing rate. Nature 448, 802–806 (2007). [PubMed: 17700699] 
+71. Gentet LJ, Avermann M, Matyas F, Staiger JF & Petersen CC Membrane potential dynamics of 
+GABAergic neurons in the barrel cortex of behaving mice. Neuron 65, 422–435 (2010). [PubMed: 
+20159454] 
+72. Pala A & Petersen CC State-dependent cell-type-specific membrane potential dynamics and 
+unitary synaptic inputs in awake mice. eLife 7, e35869 (2018). [PubMed: 30052198] 
+73. Polack PO, Friedman J & Golshani P Cellular mechanisms of brain state-dependent gain 
+modulation in visual cortex. Nat. Neurosci 16, 1331–1339 (2013). [PubMed: 23872595] 
+74. Poulet JF & Petersen CC Internal brain state regulates membrane potential synchrony in barrel 
+cortex of behaving mice. Nature 454, 881–885 (2008). [PubMed: 18633351] 
+75. Chen N, Sugihara H & Sur M An acetylcholine-activated microcircuit drives temporal dynamics of 
+cortical activity. Nat. Neurosci 18, 892–902 (2015). [PubMed: 25915477] 
+76. Carvalho TP & Buonomano DV Differential effects of excitatory and inhibitory plasticity on 
+synaptically driven neuronal input–output functions. Neuron 61, 774–785 (2009). [PubMed: 
+19285473] 
+77. Mitchell SJ & Silver RA Shunting inhibition modulates neuronal gain during synaptic excitation. 
+Neuron 38, 433–445 (2003). [PubMed: 12741990] 
+78. Murphy BK & Miller KD Multiplicative gain changes are induced by excitation or inhibition 
+alone. J. Neurosci 23, 10040–10051 (2003). [PubMed: 14602818] 
+79. Abbott LF & Chance FS Drivers and modulators from push–pull and balanced synaptic input. 
+Prog. Brain Res 149, 147–155 (2005). [PubMed: 16226582] 
+80. Ayaz A & Chance FS Gain modulation of neuronal responses by subtractive and divisive 
+mechanisms of inhibition. J. Neurophysiol 101, 958–968 (2009). [PubMed: 19073814] 
+81. Brozovic M, Abbott LF & Andersen RA Mechanism of gain modulation at single neuron and 
+network levels. J. Comput. Neurosci 25, 158–168 (2008). [PubMed: 18214663] 
+82. Vogels TP & Abbott LF Gating multiple signals through detailed balance of excitation and 
+inhibition in spiking networks. Nat. Neurosci 12, 483–491 (2009). [PubMed: 19305402] 
+83. Fellous JM, Rudolph M, Destexhe A & Sejnowski TJ Synaptic background noise controls the 
+input/output characteristics of single cells in an in vitro model of in vivo activity. Neuroscience 
+122, 811–829 (2003). [PubMed: 14622924] 
+84. Holt GR & Koch C Shunting inhibition does not have a divisive effect on firing rates. Neural 
+Comput 9, 1001–1013 (1997). [PubMed: 9188191] 
+Ferguson and Cardin
+Page 17
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 18 =====
+85. Litwin-Kumar A, Oswald AM, Urban NN & Doiron B Balanced synaptic input shapes the 
+correlation between neural spike trains. PLOS Comput. Biol 7, e1002305 (2011). [PubMed: 
+22215995] 
+86. Rosenbaum R & Josic K Membrane potential and spike train statistics depend distinctly on input 
+statistics. Phys. Rev. E Stat. Nonlin. Soft Matter Phys 84, 051902 (2011). [PubMed: 22181439] 
+87. Shea-Brown E, Josic K, de la Rocha J & Doiron B Correlation and synchrony transfer in integrate-
+and-fire neurons: basic properties and consequences for coding. Phys. Rev. Lett 100, 108102 
+(2008). [PubMed: 18352234] 
+88. Tchumatchenko T & Wolf F Representation of dynamical stimuli in populations of threshold 
+neurons. PLOS Comput. Biol 7, e1002239 (2011). [PubMed: 22028642] 
+89. Arsiero M, Luscher HR, Lundstrom BN & Giugliano M The impact of input fluctuations on the 
+frequency–current relationships of layer 5 pyramidal neurons in the rat medial prefrontal cortex. J. 
+Neurosci 27, 3274–3284 (2007). [PubMed: 17376988] 
+90. Higgs MH, Slee SJ & Spain WJ Diversity of gain modulation by noise in neocortical neurons: 
+regulation by the slow afterhyperpolarization conductance. J. Neurosci 26, 8787–8799 (2006). 
+[PubMed: 16928867] 
+91. Hong S, Ratte S, Prescott SA & De Schutter E Single neuron firing properties impact correlation-
+based population coding. J. Neurosci 32, 1413–1428 (2012). [PubMed: 22279226] 
+92. Lundstrom BN, Famulare M, Sorensen LB, Spain WJ & Fairhall AL Sensitivity of firing rate to 
+input fluctuations depends on time scale separation between fast and slow variables in single 
+neurons. J. Comput. Neurosci 27, 277–290 (2009). [PubMed: 19353260] 
+93. Rauch A, La Camera G, Luscher HR, Senn W & Fusi S Neocortical pyramidal cells respond as 
+integrate-and-fire neurons to in vivo-like input currents. J. Neurophysiol 90, 1598–1612 (2003). 
+[PubMed: 12750422] 
+94. Larkum ME, Senn W & Luscher HR Top-down dendritic input increases the gain of layer 5 
+pyramidal neurons. Cereb. Cortex 14, 1059–1070 (2004). [PubMed: 15115747] 
+95. Mehaffey WH, Doiron B, Maler L & Turner RW Deterministic multiplicative gain control with 
+active dendrites. J. Neurosci 25, 9968–9977 (2005). [PubMed: 16251445] 
+96. Jarvis S, Nikolic K & Schultz SR Neuronal gain modulability is determined by dendritic 
+morphology: a computational optogenetic study. PLOS Comput. Biol 14, e1006027 (2018). 
+[PubMed: 29522509] 
+97. Quiquempoix M et al. Layer 2/3 pyramidal neurons control the gain of cortical output. Cell Rep 
+24, 2799–2807.e4 (2018). [PubMed: 30208307] 
+98. Sato TK, Haider B, Hausser M & Carandini M An excitatory basis for divisive normalization in 
+visual cortex. Nat. Neurosci 19, 568–570 (2016). [PubMed: 26878671] 
+99. Haider B & McCormick DA Rapid neocortical dynamics: cellular and network mechanisms. 
+Neuron 62, 171–189 (2009). [PubMed: 19409263] 
+100. Silver RA Neuronal arithmetic. Nat. Rev. Neurosci 11, 474–489 (2010). [PubMed: 20531421] 
+101. Nelson S, Toth L, Sheth B & Sur M Orientation selectivity of cortical neurons during intracellular 
+blockade of inhibition. Science 265, 774–777 (1994). [PubMed: 8047882] 
+102. Atallah BV, Scanziani M & Carandini M Atallah et al. reply. Nature 508, E3 (2014).
+103. El-Boustani S, Wilson NR, Runyan CA & Sur M El-Boustani et al. reply. Nature 508, E3–E4 
+(2014).
+104. Wilson NR, Runyan CA, Wang FL & Sur M Division and subtraction by distinct cortical 
+inhibitory networks in vivo. Nature 488, 343–348 (2012). [PubMed: 22878717] 
+105. Natan RG, Rao W & Geffen MN Cortical interneurons differentially shape frequency tuning 
+following adaptation. Cell Rep 21, 878–890 (2017). [PubMed: 29069595] This paper shows that 
+distinct cortical interneuron populations differently modulate the gain of frequency-tuned 
+excitatory responses during adaptation.
+106. Phillips EA & Hasenstaub AR Asymmetric effects of activating and inactivating cortical 
+interneurons. eLife 5, e18383 (2016). [PubMed: 27719761] This paper shows that optogenetic 
+activation of GABAergic interneurons in the cortex does not fully capture the impact of inhibition 
+on excitatory neuron response gain.
+Ferguson and Cardin
+Page 18
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 19 =====
+107. Seybold BA, Phillips EAK, Schreiner CE & Hasenstaub AR Inhibitory actions unified by network 
+integration. Neuron 87, 1181–1192 (2015). [PubMed: 26402602] 
+108. Fishell G & Rudy B Mechanisms of inhibition within the telencephalon: “where the wild things 
+are”. Annu. Rev. Neurosci 34, 535–567 (2011). [PubMed: 21469958] 
+109. Markram H et al. Interneurons of the neocortical inhibitory system. Nat. Rev. Neurosci 5, 793–
+807 (2004). [PubMed: 15378039] 
+110. El-Boustani S & Sur M Response-dependent dynamics of cell-specific inhibition in cortical 
+networks in vivo. Nat. Commun 5, 5689 (2014). [PubMed: 25504329] 
+111. Lee AM et al. Identification of a brainstem circuit regulating visual cortical state in parallel with 
+locomotion. Neuron 83, 455–466 (2014). [PubMed: 25033185] 
+112. Cardin JA Inhibitory interneurons regulate temporal precision and correlations in cortical circuits. 
+Trends Neurosci 41, 689–700 (2018). [PubMed: 30274604] 
+113. Cone JJ, Scantlen MD, Histed MH & Maunsell JHR Different inhibitory interneuron cell classes 
+make distinct contributions to visual contrast perception. eNeuro 10.1523/
+ENEURO.0337-18.2019 (2019).
+114. Ayzenshtat I, Karnani MM, Jackson J & Yuste R Cortical control of spatial resolution by VIP+ 
+interneurons. J. Neurosci 36, 11498–11509 (2016). [PubMed: 27911754] 
+115. Hong YK, Lacefield CO, Rodgers CC & Bruno RM Sensation, movement and learning in the 
+absence of barrel cortex. Nature 561, 542–546 (2018). [PubMed: 30224746] 
+116. Otchy TM et al. Acute off-target effects of neural circuit manipulations. Nature 528, 358–363 
+(2015). [PubMed: 26649821] 
+117. Wolff SB & Olveczky BP The promise and perils of causal circuit manipulations. Curr. Opin. 
+Neurobiol 49, 84–94 (2018). [PubMed: 29414070] 
+118. Phillips EAK, Schreiner CE & Hasenstaub AR Cortical interneurons differentially regulate the 
+effects of acoustic context. Cell Rep 20, 771–778 (2017). [PubMed: 28746863] 
+119. Fu Y et al. A cortical circuit for gain control by behavioral state. Cell 156, 1139–1152 (2014). 
+[PubMed: 24630718] This paper provides evidence that VIP+ interneurons are activated by 
+locomotion and may contribute to state-dependent visual response gain modulation in mouse V1.
+120. Karnani MM et al. Opening holes in the blanket of inhibition: localized lateral disinhibition by 
+VIP interneurons. J. Neurosci 36, 3471–3480 (2016). [PubMed: 27013676] 
+121. Karnani MM et al. Cooperative subnetworks of molecularly similar interneurons in mouse 
+neocortex. Neuron 90, 86–100 (2016). [PubMed: 27021171] 
+122. Lee S, Kruglikov I, Huang ZJ, Fishell G & Rudy B A disinhibitory circuit mediates motor 
+integration in the somatosensory cortex. Nat. Neurosci 16, 1662–1670 (2013). [PubMed: 
+24097044] 
+123. Pi HJ et al. Cortical interneurons that specialize in disinhibitory control. Nature 503, 521–524 
+(2013). [PubMed: 24097352] 
+124. Batista-Brito R et al. Developmental dysfunction of VIP interneurons impairs cortical circuits. 
+Neuron 95, 884–895.e9 (2017). [PubMed: 28817803] 
+125. Dipoppa M et al. Vision and locomotion shape the interactions between neuron types in mouse 
+visual cortex. Neuron 98, 602–615.e8 (2018). [PubMed: 29656873] 
+126. Ozeki H, Finn IM, Schaffer ES, Miller KD & Ferster D Inhibitory stabilization of the cortical 
+network underlies visual surround suppression. Neuron 62, 578–592 (2009). [PubMed: 
+19477158] 
+127. Tsodyks MV, Skaggs WE, Sejnowski TJ & McNaughton BL Paradoxical effects of external 
+modulation of inhibitory interneurons. J. Neurosci 17, 4382–4388 (1997). [PubMed: 9151754] 
+128. Kato HK, Asinof SK & Isaacson JS Network-level control of frequency tuning in auditory cortex. 
+Neuron 95, 412–423.e4 (2017). [PubMed: 28689982] 
+129. Garcia Del Molino LC, Yang GR, Mejias JF & Wang XJ Paradoxical response reversal of top-
+down modulation in cortical circuits with three interneuron types. eLife 6, e29742 (2017). 
+[PubMed: 29256863] 
+Ferguson and Cardin
+Page 19
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 20 =====
+130. Litwin-Kumar A, Rosenbaum R & Doiron B Inhibitory stabilization and visual coding in cortical 
+circuits with multiple interneuron subtypes. J. Neurophysiol 115, 1399–1409 (2016). [PubMed: 
+26740531] 
+131. Zhou M et al. Scaling down of balanced excitation and inhibition by active behavioral states in 
+auditory cortex. Nat. Neurosci 17, 841–850 (2014). [PubMed: 24747575] 
+132. Boly M et al. Baseline brain activity fluctuations predict somatosensory perception in humans. 
+Proc. Natl Acad. Sci. USA 104, 12187–12192 (2007). [PubMed: 17616583] 
+133. Fox MD, Snyder AZ, Vincent JL & Raichle ME Intrinsic fluctuations within cortical systems 
+account for intertrial variability in human behavior. Neuron 56, 171–184 (2007). [PubMed: 
+17920023] 
+134. Hesselmann G, Kell CA, Eger E & Kleinschmidt A Spontaneous local variations in ongoing 
+neural activity bias perceptual decisions. Proc. Natl Acad. Sci. USA 105, 10984–10989 (2008). 
+[PubMed: 18664576] 
+135. Hesselmann G, Kell CA & Kleinschmidt A Ongoing activity fluctuations in hMT+ bias the 
+perception of coherent visual motion. J. Neurosci 28, 14481–14485 (2008). [PubMed: 19118182] 
+136. Palva JM & Palva S Roles of multiscale brain activity fluctuations in shaping the variability and 
+dynamics of psychophysical performance. Prog. Brain Res 193, 335–350 (2011). [PubMed: 
+21854973] 
+137. Diamond DM, Campbell AM, Park CR, Halonen J & Zoladz PR The temporal dynamics model of 
+emotional memory processing: a synthesis on the neurobiological basis of stress-induced 
+amnesia, flashbulb and traumatic memories, and the Yerkes–Dodson law. Neural. Plast 2007, 
+60803 (2007). [PubMed: 17641736] 
+138. Yerkes RM & Dodson JD The relation of strength of stimulus to rapidity of habit-formation. J. 
+Comp. Neurol. Psychol 18, 459–482 (1908).
+139. He BJ Spontaneous and task-evoked brain activity negatively interact. J. Neurosci 33, 4672–4682 
+(2013). [PubMed: 23486941] 
+140. Bullock T, Elliott JC, Serences JT & Giesbrecht B Acute exercise modulates feature-selective 
+responses in human cortex. J. Cognit. Neurosci 29, 605–618 (2017). [PubMed: 27897672] 
+141. He BJ & Zempel JM Average is optimal: an inverted-U relationship between trial-to-trial brain 
+activity and behavioral performance. PLOS Comput. Biol 9, e1003348 (2013). [PubMed: 
+24244146] 
+142. Murphy PR, Vandekerckhove J & Nieuwenhuis S Pupil-linked arousal determines variability in 
+perceptual decision making. PLOS Comput. Biol 10, e1003854 (2014). [PubMed: 25232732] 
+143. Aston-Jones G & Cohen JD An integrative theory of locus coeruleus–norepinephrine function: 
+adaptive gain and optimal performance. Annu. Rev. Neurosci 28, 403–450 (2005). [PubMed: 
+16022602] 
+144. Murphy PR, O’Connell RG, O’Sullivan M, Robertson IH & Balsters JH Pupil diameter covaries 
+with BOLD activity in human locus coeruleus. Hum. Brain Mapp 35, 4140–4154 (2014). 
+[PubMed: 24510607] 
+145. Joshi S, Li Y, Kalwani RM & Gold JI Relationships between pupil diameter and neuronal activity 
+in the locus coeruleus, colliculi, and cingulate cortex. Neuron 89, 221–234 (2016). [PubMed: 
+26711118] 
+146. Reimer J et al. Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in 
+cortex. Nat. Commun 7, 13289 (2016). [PubMed: 27824036] 
+147. Erisken S et al. Effects of locomotion extend throughout the mouse early visual system. Curr. Biol 
+24, 2899–2907 (2014). [PubMed: 25484299] 
+148. Tang L & Higley MJ Layer 5 circuits in V1 differentially control visuomotor behavior. bioRxiv 
+10.1101/540807 (2019).
+149. Saleem AB, Ayaz A, Jeffery KJ, Harris KD & Carandini M Integration of visual motion and 
+locomotion in mouse visual cortex. Nat. Neurosci 16, 1864–1869 (2013). [PubMed: 24185423] 
+150. Neske GT, Nestvogel D, Steffan PJ & McCormick DA Distinct waking states for strong evoked 
+responses in primary visual cortex and optimal visual detection performance. J. Neurosci 39, 
+10044–10059 (2019). [PubMed: 31672787] 
+Ferguson and Cardin
+Page 20
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 21 =====
+151. Bullock T, Cecotti H & Giesbrecht B Multiple stages of information processing are modulated 
+during acute bouts of exercise. Neuroscience 307, 138–150 (2015). [PubMed: 26318337] 
+152. Benjamin AV, Wailes-Newson K, Ma-Wyatt A, Baker DH & Wade AR The effect of locomotion 
+on early visual contrast processing in humans. J. Neurosci 38, 3050–3059 (2018). [PubMed: 
+29463642] 
+153. McGinley MJ, David SV & McCormick DA Cortical membrane potential signature of optimal 
+states for sensory signal detection. Neuron 87, 179–192 (2015). [PubMed: 26074005] 
+154. Barson D et al. Simultaneous mesoscopic and two-photon imaging of neuronal activity in cortical 
+circuits. Nat. Methods 10.1038/s41592-019-0625-2 (2019).
+155. Clancy KB, Orsolic I & Mrsic-Flogel TD Locomotion-dependent remapping of distributed 
+cortical networks. Nat. Neurosci 22, 778–786 (2019). [PubMed: 30858604] 
+156. Shimaoka D, Harris KD & Carandini M Effects of arousal on mouse sensory cortex depend on 
+modality. Cell Rep 22, 3160–3167 (2018). [PubMed: 29562173] 
+157. Musall S, Kaufman MT, Juavinett AL, Gluf S & Churchland AK Single-trial neural dynamics are 
+dominated by richly varied movements. Nat. Neurosci 22, 1677–1686 (2019). [PubMed: 
+31551604] This study reports that animal movements capture the majority of neural variability 
+across the cortex, and those that are task-aligned account for features commonly attributed to 
+cognitive task demands.
+158. Disney AA, Alasady HA & Reynolds JH Muscarinic acetylcholine receptors are expressed by 
+most parvalbumin-immunoreactive neurons in area MT of the macaque. Brain Behav 4, 431–445 
+(2014). [PubMed: 24944872] 
+159. Disney AA & Aoki C Muscarinic acetylcholine receptors in macaque V1 are most frequently 
+expressed by parvalbumin-immunoreactive neurons. J. Comp. Neurol 507, 1748–1762 (2008). 
+[PubMed: 18265004] 
+160. Disney AA, Domakonda KV & Aoki C Differential expression of muscarinic acetylcholine 
+receptors across excitatory and inhibitory cells in visual cortical areas V1 and V2 of the macaque 
+monkey. J. Comp. Neurol 499, 49–63 (2006). [PubMed: 16958109] 
+161. Disney AA & Reynolds JH Expression of m1-type muscarinic acetylcholine receptors by 
+parvalbumin-immunoreactive neurons in the primary visual cortex: a comparative study of rat, 
+guinea pig, ferret, macaque, and human. J. Comp. Neurol 522, 986–1003 (2014). [PubMed: 
+23983014] 
+162. Letzkus JJ et al. A disinhibitory microcircuit for associative fear learning in the auditory cortex. 
+Nature 480, 331–335 (2011). [PubMed: 22158104] 
+163. Porter JT et al. Selective excitation of subtypes of neocortical interneurons by nicotinic receptors. 
+J. Neurosci 19, 5228–5235 (1999). [PubMed: 10377334] 
+164. Urban-Ciecko J, Jouhanneau JS, Myal SE, Poulet JFA & Barth AL Precisely timed nicotinic 
+activation drives SST inhibition in neocortical circuits. Neuron 97, 611–625.e5 (2018). [PubMed: 
+29420933] 
+165. Disney AA, Aoki C & Hawken MJ Gain modulation by nicotine in macaque V1. Neuron 56, 701–
+713 (2007). [PubMed: 18031686] 
+166. Gil Z, Connors BW & Amitai Y Differential regulation of neocortical synapses by 
+neuromodulators and activity. Neuron 19, 679–686 (1997). [PubMed: 9331357] 
+167. Hasselmo ME & Bower JM Cholinergic suppression specific to intrinsic not afferent fiber 
+synapses in rat piriform (olfactory) cortex. J. Neurophysiol 67, 1222–1229 (1992). [PubMed: 
+1597708] 
+168. Kimura F Cholinergic modulation of cortical function: a hypothetical role in shifting the 
+dynamics in cortical network. Neurosci. Res 38, 19–26 (2000). [PubMed: 10997574] 
+169. Kimura F, Fukuda M & Tsumoto T Acetylcholine suppresses the spread of excitation in the visual 
+cortex revealed by optical recording: possible differential effect depending on the source of input. 
+Eur. J. Neurosci 11, 3597–3609 (1999). [PubMed: 10564367] 
+170. Disney AA, Aoki C & Hawken MJ Cholinergic suppression of visual responses in primate V1 is 
+mediated by GABAergic inhibition. J. Neurophysiol 108, 1907–1923 (2012). [PubMed: 
+22786955] 
+Ferguson and Cardin
+Page 21
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 22 =====
+171. Soma S, Shimegi S, Osaki H & Sato H Cholinergic modulation of response gain in the primary 
+visual cortex of the macaque. J. Neurophysiol 107, 283–291 (2012). [PubMed: 21994270] 
+172. Herrero JL, Gieselmann MA & Thiele A Muscarinic and nicotinic contribution to contrast 
+sensitivity of macaque area V1 neurons. Front. Neural Circuits 11, 106 (2017). [PubMed: 
+29311843] 
+173. Askew C, Intskirveli I & Metherate R Systemic nicotine increases gain and narrows receptive 
+fields in A1 via integrated cortical and subcortical actions. eNeuro 10.1523/
+ENEURO.0192-17.2017 (2017).
+174. Herrero JL et al. Acetylcholine contributes through muscarinic receptors to attentional modulation 
+in V1. Nature 454, 1110–1114 (2008). [PubMed: 18633352] 
+175. Pinto L et al. Fast modulation of visual perception by basal forebrain cholinergic neurons. Nat. 
+Neurosci 16, 1857–1863 (2013). [PubMed: 24162654] 
+176. Stewart AE, Yan Z, Surmeier DJ & Foehring RC Muscarine modulates Ca2+ channel currents in 
+rat sensorimotor pyramidal cells via two distinct pathways. J. Neurophysiol 81, 72–84 (1999). 
+[PubMed: 9914268] 
+177. Lorenzon NM & Foehring RC Relationship between repetitive firing and afterhyperpolarizations 
+in human neocortical neurons. J. Neurophysiol 67, 350–363 (1992). [PubMed: 1373765] 
+178. McCormick DA & Prince DA Mechanisms of action of acetylcholine in the guinea-pig cerebral 
+cortex in vitro. J. Physiol 375, 169–194 (1986). [PubMed: 2879035] 
+179. Schwindt PC, Spain WJ & Crill WE Influence of anomalous rectifier activation on 
+afterhyperpolarizations of neurons from cat sensorimotor cortex in vitro. J. Neurophysiol 59, 
+468–481 (1988). [PubMed: 3351571] 
+180. Wang Z & McCormick DA Control of firing mode of corticotectal and corticopontine layer V 
+burst-generating neurons by norepinephrine, acetylcholine, and 1S,3R-ACPD. J. Neurosci 13, 
+2199–2216 (1993). [PubMed: 8386756] 
+181. Eggermann E & Feldmeyer D Cholinergic filtering in the recurrent excitatory microcircuit of 
+cortical layer 4. Proc. Natl Acad. Sci. USA 106, 11753–11758 (2009). [PubMed: 19564614] 
+182. Gulledge AT, Park SB, Kawaguchi Y & Stuart GJ Heterogeneity of phasic cholinergic signaling 
+in neocortical neurons. J. Neurophysiol 97, 2215–2229 (2007). [PubMed: 17122323] 
+183. Gulledge AT & Stuart GJ Cholinergic inhibition of neocortical pyramidal neurons. J. Neurosci 25, 
+10308–10320 (2005). [PubMed: 16267239] 
+184. Dasgupta R, Seibt F & Beierlein M Synaptic release of acetylcholine rapidly suppresses cortical 
+activity by recruiting muscarinic receptors in layer 4. J. Neurosci 38, 5338–5350 (2018). 
+[PubMed: 29739869] 
+185. Higley MJ, Soler-Llavina GJ & Sabatini BL Cholinergic modulation of multivesicular release 
+regulates striatal synaptic potency and integration. Nat. Neurosci 12, 1121–1128 (2009). 
+[PubMed: 19668198] 
+186. Giessel AJ & Sabatini BL M1 muscarinic receptors boost synaptic potentials and calcium influx 
+in dendritic spines by inhibiting postsynaptic SK channels. Neuron 68, 936–947 (2010). 
+[PubMed: 21145006] 
+187. Foehring RC, Schwindt PC & Crill WE Norepinephrine selectively reduces slow Ca2+- and Na+-
+mediated K+ currents in cat neocortical neurons. J. Neurophysiol 61, 245–256 (1989). [PubMed: 
+2918353] 
+188. Madison DV & Nicoll RA Actions of noradrenaline recorded intracellularly in rat hippocampal 
+CA1 pyramidal neurones, in vitro. J. Physiol 372, 221–244 (1986). [PubMed: 2873241] 
+189. Mueller D, Porter JT & Quirk GJ Noradrenergic signaling in infralimbic cortex increases cell 
+excitability and strengthens memory for fear extinction. J. Neurosci 28, 369–375 (2008). 
+[PubMed: 18184779] 
+190. Dodt HU, Pawelzik H & Zieglgansberger W Actions of noradrenaline on neocortical neurons in 
+vitro. Brain Res 545, 307–311 (1991). [PubMed: 1677604] 
+191. Mynlieff M & Dunwiddie TV Noradrenergic depression of synaptic responses in hippocampus of 
+rat: evidence for mediation by α1-receptors. Neuropharmacology 27, 391–398 (1988). [PubMed: 
+2843779] 
+Ferguson and Cardin
+Page 22
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 23 =====
+192. Guan D, Armstrong WE & Foehring RC Electrophysiological properties of genetically identified 
+subtypes of layer 5 neocortical pyramidal neurons: Ca2+ dependence and differential modulation 
+by norepinephrine. J. Neurophysiol 113, 2014–2032 (2015). [PubMed: 25568159] 
+193. Waterhouse BD, Mouradian R, Sessler FM & Lin RC Differential modulatory effects of 
+norepinephrine on synaptically driven responses of layer V barrel field cortical neurons. Brain 
+Res 868, 39–47 (2000). [PubMed: 10841886] 
+194. Armstrong-James M & Fox K Effects of ionophoresed noradrenaline on the spontaneous activity 
+of neurones in rat primary somatosensory cortex. J. Physiol 335, 427–447 (1983). [PubMed: 
+6875887] 
+195. Bassant MH, Ennouri K & Lamour Y Effects of iontophoretically applied monoamines on 
+somatosensory cortical neurons of unanesthetized rats. Neuroscience 39, 431–439 (1990). 
+[PubMed: 2087265] 
+196. Foote SL, Freedman R & Oliver AP Effects of putative neurotransmitters on neuronal activity in 
+monkey auditory cortex. Brain Res 86, 229–242 (1975). [PubMed: 234774] 
+197. Waterhouse BD, Moises HC & Woodward DJ Noradrenergic modulation of somatosensory 
+cortical neuronal responses to iontophoretically applied putative neurotransmitters. Exp. Neurol 
+69, 30–49 (1980). [PubMed: 7389849] 
+198. Waterhouse BD, Moises HC & Woodward DJ Alpha-receptor-mediated facilitation of 
+somatosensory cortical neuronal responses to excitatory synaptic inputs and iontophoretically 
+applied acetylcholine. Neuropharmacology 20, 907–920 (1981). [PubMed: 6272150] 
+199. Ego-Stengel V, Bringuier V & Shulz DE Noradrenergic modulation of functional selectivity in the 
+cat visual cortex: an in vivo extracellular and intracellular study. Neuroscience 111, 275–289 
+(2002). [PubMed: 11983314] 
+200. Seillier L et al. Serotonin decreases the gain of visual responses in awake macaque V1. J. 
+Neurosci 37, 11390–11405 (2017). [PubMed: 29042433] 
+201. Watakabe A et al. Enriched expression of serotonin 1B and 2A receptor genes in macaque visual 
+cortex and their bidirectional modulatory effects on neuronal responses. Cereb. Cortex 19, 1915–
+1928 (2009). [PubMed: 19056862] 
+202. Dugue GP et al. Optogenetic recruitment of dorsal raphe serotonergic neurons acutely decreases 
+mechanosensory responsivity in behaving mice. PLOS ONE 9, e105941 (2014). [PubMed: 
+25148042] 
+203. Davis M, Strachan DI & Kass E Excitatory and inhibitory effects of serotonin on sensorimotor 
+reactivity measured with acoustic startle. Science 209, 521–523 (1980). [PubMed: 7394520] 
+204. Vijayraghavan S, Wang M, Birnbaum SG, Williams GV & Arnsten AF Inverted-U dopamine D1 
+receptor actions on prefrontal neurons engaged in working memory. Nat. Neurosci 10, 376–384 
+(2007). [PubMed: 17277774] 
+205. Williams GV & Goldman-Rakic PS Modulation of memory fields by dopamine D1 receptors in 
+prefrontal cortex. Nature 376, 572–575 (1995). [PubMed: 7637804] 
+206. Noudoost B & Moore T Control of visual cortical signals by prefrontal dopamine. Nature 474, 
+372–375 (2011). [PubMed: 21572439] 
+207. Lur G & Higley MJ Glutamate receptor modulation is restricted to synaptic microdomains. Cell 
+Rep 12, 326–334 (2015). [PubMed: 26146087] 
+208. Athilingam JC, Ben-Shalom R, Keeshen CM, Sohal VS & Bender KJ Serotonin enhances 
+excitability and gamma frequency temporal integration in mouse prefrontal fast-spiking 
+interneurons. eLife 6, e31991 (2017). [PubMed: 29206101] 
+209. Kawaguchi Y & Shindou T Noradrenergic excitation and inhibition of GABAergic cell types in 
+rat frontal cortex. J. Neurosci 18, 6963–6976 (1998). [PubMed: 9712665] 
+210. Demb JB Multiple mechanisms for contrast adaptation in the retina. Neuron 36, 781–783 (2002). 
+[PubMed: 12467580] 
+211. Farley BJ, Quirk MC, Doherty JJ & Christian EP Stimulus-specific adaptation in auditory cortex 
+is an NMDA-independent process distinct from the sensory novelty encoded by the mismatch 
+negativity. J. Neurosci 30, 16475–16484 (2010). [PubMed: 21147987] 
+Ferguson and Cardin
+Page 23
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 24 =====
+212. Fishman YI & Steinschneider M Searching for the mismatch negativity in primary auditory cortex 
+of the awake monkey: deviance detection or stimulus specific adaptation? J. Neurosci 32, 15747–
+15758 (2012). [PubMed: 23136414] 
+213. Kohn A & Movshon JA Neuronal adaptation to visual motion in area MT of the macaque. Neuron 
+39, 681–691 (2003). [PubMed: 12925281] 
+214. Szymanski FD, Garcia-Lazaro JA & Schnupp JW Current source density profiles of stimulus-
+specific adaptation in rat auditory cortex. J. Neurophysiol 102, 1483–1490 (2009). [PubMed: 
+19571199] 
+215. Ulanovsky N, Las L & Nelken I Processing of low-probability sounds by cortical neurons. Nat. 
+Neurosci 6, 391–398 (2003). [PubMed: 12652303] 
+216. Dean I, Robinson BL, Harper NS & McAlpine D Rapid neural adaptation to sound level statistics. 
+J. Neurosci 28, 6430–6438 (2008). [PubMed: 18562614] 
+217. Barlow H in Sensory Communication (MIT Press, 1961).
+218. Niyogi RK & Wong-Lin K Dynamic excitatory and inhibitory gain modulation can produce 
+flexible, robust and optimal decision-making. PLOS Comput. Biol 9, e1003099 (2013). 
+[PubMed: 23825935] 
+219. Busse L, Wade AR & Carandini M Representation of concurrent stimuli by population activity in 
+visual cortex. Neuron 64, 931–942 (2009). [PubMed: 20064398] 
+220. Hahnloser RH, Douglas RJ & Hepp K Attentional recruitment of inter-areal recurrent networks 
+for selective gain control. Neural Comput 14, 1669–1689 (2002). [PubMed: 12079551] 
+221. Thiele A & Bellgrove MA Neuromodulation of attention. Neuron 97, 769–785 (2018). [PubMed: 
+29470969] 
+222. Schwartz O & Simoncelli EP Natural signal statistics and sensory gain control. Nat. Neurosci 4, 
+819–825 (2001). [PubMed: 11477428] 
+223. Willmore BD, Bulstrode H & Tolhurst DJ Contrast normalization contributes to a biologically-
+plausible model of receptive-field development in primary visual cortex (V1). Vis. Res 54, 49–60 
+(2012). [PubMed: 22230381] 
+224. Ni AM, Ruff DA, Alberts JJ, Symmonds J & Cohen MR Learning and attention reveal a general 
+relationship between population activity and behavior. Science 359, 463–465 (2018). [PubMed: 
+29371470] 
+225. Lee S, Park J & Smirnakis SM Internal gain modulations, but not changes in stimulus contrast, 
+preserve the neural code. J. Neurosci 39, 1671–1687 (2019). [PubMed: 30647148] 
+226. McGinley MJ et al. Waking state: rapid variations modulate neural and behavioral responses. 
+Neuron 87, 1143–1161 (2015). [PubMed: 26402600] 
+227. Rose D & Blakemore C Effects of bicuculline on functions of inhibition in visual cortex. Nature 
+249, 375–377 (1974). [PubMed: 4842746] 
+228. Carandini M & Ferster D Membrane potential and firing rate in cat primary visual cortex. J. 
+Neurosci 20, 470–484 (2000). [PubMed: 10627623] 
+229. Isaacson JS & Scanziani M How inhibition shapes cortical activity. Neuron 72, 231–243 (2011). 
+[PubMed: 22017986] 
+230. Zhang YP & Oertner TG Optical induction of synaptic plasticity using a light-sensitive channel. 
+Nat. Methods 4, 139–141 (2007). [PubMed: 17195846] 
+231. Allen BD, Singer AC & Boyden ES Principles of designing interpretable optogenetic behavior 
+experiments. Learn. Mem 22, 232–238 (2015). [PubMed: 25787711] 
+232. Cottam JC, Smith SL & Hausser M Target-specific effects of somatostatin-expressing 
+interneurons on neocortical visual processing. J. Neurosci 33, 19567–19578 (2013). [PubMed: 
+24336721] 
+233. Pfeffer CK, Xue M, He M, Huang ZJ & Scanziani M Inhibition of inhibition in visual cortex: the 
+logic of connections between molecularly distinct interneurons. Nat. Neurosci 16, 1068–1076 
+(2013). [PubMed: 23817549] 
+Ferguson and Cardin
+Page 24
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 25 =====
+Gain modulation
+A phenomenon whereby the gain or sensitivity of a neuron to inputs, such as visual 
+stimuli, is altered without changing selectivity.
+Ferguson and Cardin
+Page 25
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 26 =====
+Input–output (I/O) relationship
+The relationship between the inputs a neuron receives (such as synaptic inputs, direct 
+currents or sensory stimulation) and the firing rate responses of that neuron.
+Ferguson and Cardin
+Page 26
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 27 =====
+Synaptic summation
+The summation of synaptic inputs to a neuron either spatially (when nearby synapses are 
+coactive on a dendritic branch) or temporally (when synaptic inputs occur within a short 
+time window mediated by the membrane time constant, τ).
+Ferguson and Cardin
+Page 27
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 28 =====
+Iceberg effect
+An effect whereby, if subthreshold responses to a stimulus are less selective than the 
+neuron’s firing, a linear increase or decrease in activity may alter the neuron’s selectivity 
+by raising or lowering the tuning curve of the neuron across the threshold.
+Ferguson and Cardin
+Page 28
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 29 =====
+Monocular deprivation
+An experimental paradigm in which an animal is deprived of vision from one eye during 
+a critical developmental period. The mature binocular visual cortex then responds 
+predominantly to inputs from the non-deprived eye.
+Ferguson and Cardin
+Page 29
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 30 =====
+Stochastic resonance
+A phenomenon in which the addition of noise non-linearly enhances the information 
+content of a signal, by boosting resonant frequencies over a sensor’s detection threshold 
+(such as a cell’s spike threshold).
+Ferguson and Cardin
+Page 30
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 31 =====
+Shunting inhibition
+A GABAergic synaptic input that minimally affects the membrane potential of a cell that 
+is near the inhibitory synaptic reversal potential, but that leads to a reduction of nearby 
+excitatory postsynaptic potential amplitudes.
+Ferguson and Cardin
+Page 31
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 32 =====
+Pairwise correlations
+A normalized measure of covariation between pairs of neurons that can give insight into 
+their tuning similarity (signal correlations) or shared trial-to-trial variability (noise 
+correlations).
+Ferguson and Cardin
+Page 32
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 33 =====
+Dendritic saturation
+A phenomenon in which an already depolarized dendritic branch shows reduced 
+excitatory responses to temporally correlated excitatory inputs due to reduced driving 
+force.
+Ferguson and Cardin
+Page 33
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 34 =====
+Synaptic efficacy
+The influence that a presynaptic input has on a postsynaptic cell’s probability of firing an 
+action potential.
+Ferguson and Cardin
+Page 34
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 35 =====
+Adaptation
+A decrease in sensitivity to constant or repeated stimuli, leading to reduced stimulus-
+evoked neural responses over time.
+Ferguson and Cardin
+Page 35
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 36 =====
+Forward suppression
+A rapid form of sensory adaptation whereby the response to a stimulus is reduced when 
+preceded by a stimulus with similar features.
+Ferguson and Cardin
+Page 36
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 37 =====
+Feedback inhibition
+A type of inhibition delivered through recurrent connections: that is, local inhibitory cells 
+target the same population of excitatory cells that drive local inhibitory activity.
+Ferguson and Cardin
+Page 37
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 38 =====
+Brain states
+Spatiotemporal patterns of neural-network activity across the brain that are dynamically 
+regulated by behaviour, the environment and the internal state.
+Ferguson and Cardin
+Page 38
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 39 =====
+Pupil diameter
+The diameter of the pupil of the eye. The diameter is tightly coupled to various emotional 
+and cognitive factors, including global arousal and attention, even when controlling for 
+changes in luminance and depth accommodation.
+Ferguson and Cardin
+Page 39
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 40 =====
+Attractor dynamics
+Temporal patterns that evolve towards a stable state from a large range of starting 
+conditions. Attractor network characterization facilitates the identification of key network 
+properties.
+Ferguson and Cardin
+Page 40
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 41 =====
+Winner-take-all mechanism
+A computational principle in which non-linearities in a recurrent neural network create 
+strong competition between neurons. Only neurons (or sets thereof) with the strongest 
+responses remain active, providing a mechanism for input selection or segregation.
+Ferguson and Cardin
+Page 41
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 42 =====
+Dimensionality reduction
+Reduction of the number of random variables of a system to a smaller set of principal 
+variables to aid analysis.
+Ferguson and Cardin
+Page 42
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 43 =====
+Box 1 |
+Divisive versus additive modulation
+Neurons respond flexibly to changes in external and internal drives (such as changes in 
+state) by transforming how they process and encode input (see hypothetical traces of 
+neural responses in figure, part a). These transformations are captured by changes in the 
+cell’s input–output (I/O) relationship and may comprise a complex combination of 
+additive and multiplicative components, or even dynamically switch between the two. 
+Varying modes of arithmetic transformation of the I/O relationship may arise naturally 
+from a neural network owing to its connectivity, synaptic summation and overlap 
+between the stimulus–response times of a cell and those of its target cells68.
+Neural gain modulation occurs when a neuron’s I/O relationship is multiplied by a 
+constant to produce a change in slope without a change in rheobase (the minimum current 
+needed to generate an action potential)6,100. If the operation produces a gain increase, it 
+is a multiplicative modulation (see blue arrows in the figure, part b), whereas a gain 
+decrease is a divisive modulation (green arrows in figure, part b). The transformation 
+may occur on the input (input gain) or on the output (response gain) and affects the 
+sensitivity of the neuron to input without changing its selectivity. Response gain 
+modulation, but not input gain modulation, alters the maximum possible neuronal output. 
+Local inhibitory interactions may control the type of gain modulation that occurs (input 
+gain or response gain)80. Normalization is a special case of gain modulation in which 
+responses are adjusted to a ratio of the summed activity of a local population, widening 
+the effective dynamic range5.
+Alternatively, a transformation of I/O relationships may maintain the shape of the curve 
+and shift the I/O relationship equally for all input values, performing an additive (blue 
+arrows in the figure, part c) or subtractive operation (green arrows in the figure, part c). 
+By uniformly modulating the I/O operation, additive or subtractive transformations 
+maintain the sensitivity of a neuron to different inputs but alter the input required to reach 
+the threshold for a response, thereby changing stimulus selectivity. These linear 
+transformations may operate on either the input or the neuron’s output100.
+Divisive input modulation may produce subtractive effects due to threshold non-
+linearities. Changes in spike threshold (Vthr) can create an iceberg effect on neural I/O 
+responses227 whereby the tuning curve of firing-rate responses to stimulus features 
+relative to underlying subthreshold membrane potential (Vm) responses is sharpened (see 
+the figure, part d)228. Inhibitory synaptic input can produce these effects by changing the 
+relationship between the Vm and spike threshold and by suppressing responses to non-
+preferred stimuli229. Ginhibition and Gexcitation represent inhibitory and excitatory synaptic 
+input conductance, respectively.
+Ferguson and Cardin
+Page 43
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 44 =====
+Ferguson and Cardin
+Page 44
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 45 =====
+Box 2 |
+Causal manipulations and cortical gain modulation
+The design and interpretation of causal manipulation experiments to probe neural gain 
+control is hampered by the fact that external manipulations cause a cascade of interacting 
+changes in the activity of the local circuit that may obscure the mechanisms of gain 
+modulation106,116. The examples below are drawn from experiments using optogenetic 
+tools, but apply to all techniques for causal manipulation.
+Bidirectional optogenetic manipulations are widely used to infer the role of distinct cell 
+populations in gain modulation2,68,103,104,107. However, the seemingly symmetrical 
+optogenetic activation and inhibition of such populations may produce paradoxical 
+results. For example, two inhibitory cell populations (parvalbumin-positive (PV+) 
+interneurons and somatostatin-positive (SST+) interneurons; see figure) may perform 
+opposing operations when inhibited and the same operation when activated106. Relatively 
+small changes in baseline inhibitory activity, neural spiking threshold or the strength of 
+manipulation may elicit an iceberg effect on tuned neural spiking responses (see BOX 1).
+Likewise, short-term synaptic dynamics constrain the neural response to exogenous 
+stimulation. Inhibitory postsynaptic responses at synapses from PV+ interneurons onto 
+excitatory pyramidal neurons (PYRs) depress rapidly with repeated activation, whereas 
+those elicited by SST+ interneurons are more sustained with repetition108. These short-
+term synaptic dynamics may be engaged differentially by repeated or sustained 
+stimulation in experimental manipulations than by endogenous activity patterns. 
+Furthermore, the precise impact of this short-term synaptic plasticity on neural gain may 
+be difficult to determine in vivo, as presynaptic spiking may remain unchanged even 
+when plasticity is engaged at the presynaptic or postsynaptic side of the synapse.
+Owing to the highly non-linear connectivity of neural networks, experimental 
+perturbation of a neuron or neural population may affect downstream targets in an 
+undesirable or non-physiological manner. Experimental manipulations that activate 
+neurons may increase synaptic efficacy between a subset of populations230, either by 
+driving or depriving another cell population of activity in a non-physiological manner or 
+by transiently shifting the balance of excitation and inhibition in the network231.
+In the example in the figure, activation of SST+ interneurons may increase inhibition on 
+the dendrites of the PYR while simultaneously inhibiting PV+ interneurons and thus 
+reducing inhibition of the soma of the PYR232,233. The precise balance between dendritic 
+and somatic inhibition may thus be affected by several factors associated with artificial 
+manipulations (including stimulation power, frequency and duration of optogenetic 
+stimulation, among others.).
+Ferguson and Cardin
+Page 45
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 46 =====
+Ferguson and Cardin
+Page 46
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 47 =====
+Fig. 1 |. Cellular and network-level mechanisms of gain modulation.
+GABAergic inhibition is a key mediator of gain modulation at both the cellular and network 
+levels. a | Changes in external and internal influences converge to modulate neural gain at 
+the single-cell level via a common set of mechanisms. The mechanisms include changes in 
+the relative positions and amplitudes of active excitatory and inhibitory synaptic inputs to 
+the dendrites, shunting inhibition at the soma and the overall conductance and depolarization 
+state of the neuron10,57,59–61,64,83,84. Gain is also affected by the statistics of synaptic input, 
+including short-term synaptic dynamics and the relative timing of inhibitory and excitatory 
+inputs that give rise to synaptically driven fluctuations in the membrane potential 
+(Vm)10,57,58,61. b | Cellular mechanisms converge to produce multiplicative gain modulation. 
+As highlighted by computational models57,58 and experimental data59–61, divisive gain 
+modulation of pyramidal neuron (PYR) responses can arise from a combination of increased 
+shunting conductance and increased synaptically driven Vm fluctuations, both of which are 
+driven by GABAergic inhibition. c | GABAergic inhibition can regulate gain at the network 
+Ferguson and Cardin
+Page 47
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 48 =====
+level flexibly over time, as different sources of synaptic inhibition are recruited into circuit 
+activity105,106. Over time, or over repeated sensory stimulation, some GABAergic 
+populations maintain or increase their responses (darker shading signifies more activity), 
+whereas others show adaptation (that is, reduce their responses to repeated stimulation), 
+altering the relative amount of inhibition from each population onto postsynaptic PYRs. d | 
+Schematic of hypothetical Ca+ fluorescence traces from somatostatin-positive (SST+) 
+interneurons (blue) and parvalbumin-positive (PV+) interneurons (orange) in the primary 
+visual cortex in response to repeated visual stimulation. e | Gain modulation of different 
+neural populations may change independently over time. Schematic shows one possible 
+trajectory of the relative visual response gain of a PV+ interneuron–SST+ interneuron pair 
+(upper panel) or a vasoactive intestinal peptide-expressing (VIP+) interneuron–PYR pair 
+(lower panel) over time.
+Ferguson and Cardin
+Page 48
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 49 =====
+Fig. 2 |. Multiple modes of state-dependent cortical gain modulation.
+Different behavioural states during wakefulness are associated with discrete modes of gain 
+modulation226. Arousal and locomotion increase the gain of visually evoked responses in the 
+rodent primary visual cortex through different mechanisms33. a | During quiescence, arousal 
+is low, as denoted by a constricted pupil, and cortical neurons typically show moderate 
+spontaneous firing and moderate firing in response to a visual stimulus. b | During periods of 
+locomotion, arousal increases, as denoted by pupil dilation. In association with locomotion 
+cortical neurons depolarize and exhibit enhanced spontaneous and visually evoked 
+Ferguson and Cardin
+Page 49
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 50 =====
+firing28,32,33,73. c | By contrast, during periods of high arousal without motor activity, 
+spontaneous firing decreases whereas sensory-evoked responses increase33.
+Ferguson and Cardin
+Page 50
+Nat Rev Neurosci. Author manuscript; available in PMC 2020 August 06.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript

@@ -1,0 +1,590 @@
+{
+  "source_sha256": "64c935c184bd727da43799f95031cfd2aeab73a55c6f7f010f38b50dcc9e5e27",
+  "annotations": [
+    {
+      "id": "E01",
+      "step": 1,
+      "page": 1,
+      "title": "通路门控的问题定义",
+      "kind": "background",
+      "quote": "In the mammalian neocortex, an area typically receives inputs from, and projects to, dozens of other areas",
+      "explanation": "开篇给出问题的规模前提：每个皮层区与数十个脑区双向连接，因此需要一种机制决定信息何时流向何处，这构成全文的动机。",
+      "layer": "author",
+      "rects": [
+        [
+          107.99604797363281,
+          239.56399536132812,
+          484.8660888671875,
+          250.72398376464844
+        ],
+        [
+          107.99604797363281,
+          253.5640106201172,
+          154.0860595703125,
+          264.7239990234375
+        ]
+      ],
+      "anchor_status": "matched",
+      "normalized_rects": [
+        [
+          0.1764641306758706,
+          0.30247979212288906,
+          0.7922648510901756,
+          0.3165706865715258
+        ],
+        [
+          0.1764641306758706,
+          0.3201565790658045,
+          0.2517746071410335,
+          0.3342474735144413
+        ]
+      ]
+    },
+    {
+      "id": "E02",
+      "step": 1,
+      "page": 2,
+      "title": "去抑制 motif 的细胞构成",
+      "kind": "background",
+      "quote": "When VIP neurons are activated, they inhibit SST cells, thereby disinhibiting pyramidal dendrites",
+      "explanation": "一句话给出去抑制链条的三段结构：VIP 抑制 SST，SST 抑制锥体细胞树突，因而 VIP 活动即释放树突输入，是全篇机制的核心陈述。",
+      "layer": "author",
+      "rects": [
+        [
+          348.6700744628906,
+          173.4199981689453,
+          500.2000732421875,
+          184.57998657226562
+        ],
+        [
+          150.0001220703125,
+          187.4199981689453,
+          389.35009765625,
+          198.57998657226562
+        ]
+      ],
+      "anchor_status": "matched",
+      "normalized_rects": [
+        [
+          0.5697223438936121,
+          0.21896464415270872,
+          0.8173203811146854,
+          0.23305553860134548
+        ],
+        [
+          0.24509823867698122,
+          0.2366414118294764,
+          0.6361929700265523,
+          0.25073230627811316
+        ]
+      ]
+    },
+    {
+      "id": "E03",
+      "step": 1,
+      "page": 3,
+      "title": "三类细胞按突触靶标而非标记物理解",
+      "kind": "method",
+      "quote": "the three interneuron types in our model should be more appropriately interpreted according to their synaptic targets",
+      "explanation": "作者引用模型原始作者的告诫，限定了细胞类型分类的解释边界，对按分子标记跨研究比较结论的做法构成直接约束。",
+      "layer": "author",
+      "rects": [
+        [
+          275.5599670410156,
+          145.4199981689453,
+          500.24993896484375,
+          156.57998657226562
+        ],
+        [
+          149.9999237060547,
+          159.4199981689453,
+          386.9899597167969,
+          170.57998657226562
+        ]
+      ],
+      "anchor_status": "matched",
+      "normalized_rects": [
+        [
+          0.4502613840539471,
+          0.18361110879917336,
+          0.8174018610536663,
+          0.19770200324781012
+        ],
+        [
+          0.24509791455237695,
+          0.20128787647594104,
+          0.6323365354849622,
+          0.2153787709245778
+        ]
+      ]
+    },
+    {
+      "id": "E04",
+      "step": 2,
+      "page": 4,
+      "title": "四项必要条件中的第一项",
+      "kind": "background",
+      "quote": "First, dendritic responses need to be nonlinear so that dendritic inhibition mediated by SST cells and its suppression would have a strong impact",
+      "explanation": "作者把机制成立的前提写成条件清单，第一项即树突非线性；这一写法使“通路门控”成为可逐条核对的命题而非笼统描述。",
+      "layer": "author",
+      "rects": [
+        [
+          149.9960174560547,
+          193.4239959716797,
+          513.8660278320312,
+          204.583984375
+        ],
+        [
+          149.9960174560547,
+          207.4239959716797,
+          362.0260009765625,
+          218.583984375
+        ]
+      ],
+      "anchor_status": "matched",
+      "normalized_rects": [
+        [
+          0.24509153179093904,
+          0.2442222171359592,
+          0.8396503722745609,
+          0.25831311158459597
+        ],
+        [
+          0.24509153179093904,
+          0.2618989848127269,
+          0.5915457532296773,
+          0.27598987926136365
+        ]
+      ]
+    },
+    {
+      "id": "E05",
+      "step": 2,
+      "page": 4,
+      "title": "关键条件仍缺直接实验证据",
+      "kind": "question",
+      "quote": "Although direct experimental evidence supporting synaptic clustering of different pathways is still lacking",
+      "explanation": "作者明确写出整条推理链中最关键的一环尚无直接证据，这是本文最应随引用一并转述的限定。",
+      "layer": "author",
+      "rects": [
+        [
+          363.86602783203125,
+          305.4239807128906,
+          519.2660522460938,
+          316.583984375
+        ],
+        [
+          149.9960174560547,
+          319.4239807128906,
+          419.34600830078125,
+          330.583984375
+        ]
+      ],
+      "anchor_status": "matched",
+      "normalized_rects": [
+        [
+          0.5945523330588746,
+          0.3856363392839528,
+          0.8484739415785846,
+          0.39972725299873735
+        ],
+        [
+          0.24509153179093904,
+          0.4033131069607205,
+          0.6852058959163092,
+          0.417404020675505
+        ]
+      ]
+    },
+    {
+      "id": "E06",
+      "step": 3,
+      "page": 4,
+      "title": "随机连接即可产生分支特异性",
+      "kind": "result",
+      "quote": "Even random connectivity between them, together with random activation/deactivation of SST neurons, suffice to provide branch-specific inhibition/disinhibition",
+      "explanation": "这是本文最重要的机制性结论：特异性可由稀疏连接密度自然涌现，无需精细剪裁连接，直接改变建模策略。",
+      "layer": "author",
+      "rects": [
+        [
+          204.98594665527344,
+          553.4240112304688,
+          503.7659606933594,
+          564.583984375
+        ],
+        [
+          149.99594116210938,
+          567.4240112304688,
+          499.22589111328125,
+          578.583984375
+        ]
+      ],
+      "anchor_status": "matched",
+      "normalized_rects": [
+        [
+          0.33494435727985855,
+          0.6987676909475615,
+          0.8231469945969925,
+          0.7128585661300505
+        ],
+        [
+          0.2450914071276297,
+          0.7164444586243293,
+          0.8157285802504596,
+          0.7305353338068182
+        ]
+      ]
+    },
+    {
+      "id": "E07",
+      "step": 3,
+      "page": 4,
+      "title": "SST 失活削弱分支特异性",
+      "kind": "result",
+      "quote": "inactivating SST neurons drastically reduced the branch-specificity in dendritic activity",
+      "explanation": "引自 Cichon 与 Gan 的在体结果，是本文关于 SST 具备分支特异控制能力这一条件的主要实验依据，但它本身是相关而非因果的证据。",
+      "layer": "author",
+      "rects": [
+        [
+          448.8759765625,
+          389.4239807128906,
+          515.3259887695312,
+          400.583984375
+        ],
+        [
+          149.9959716796875,
+          403.4239807128906,
+          431.6159362792969,
+          414.583984375
+        ]
+      ],
+      "anchor_status": "matched",
+      "normalized_rects": [
+        [
+          0.7334574780433006,
+          0.4916969453445589,
+          0.8420359293619791,
+          0.5057878590593434
+        ],
+        [
+          0.24509145699295343,
+          0.5093737130213265,
+          0.7052547978419884,
+          0.5234646267361112
+        ]
+      ]
+    },
+    {
+      "id": "E08",
+      "step": 3,
+      "page": 3,
+      "title": "层次与状态的方向差异",
+      "kind": "result",
+      "quote": "In contrast to L2/3, activity of SST cells in the deep layers of somatosensory cortex increases rather than decreases when mice started whisking",
+      "explanation": "同一行为状态下 SST 活动方向随层次反转，说明 motif 运作的符号不是固定常数，模型必须包含层次参数。",
+      "layer": "author",
+      "rects": [
+        [
+          201.37985229492188,
+          459.41998291015625,
+          507.2098693847656,
+          470.5799865722656
+        ],
+        [
+          149.9998016357422,
+          473.41998291015625,
+          417.2698669433594,
+          484.5799865722656
+        ]
+      ],
+      "anchor_status": "matched",
+      "normalized_rects": [
+        [
+          0.32905204623353246,
+          0.580075735997672,
+          0.828774296380336,
+          0.5941666497124566
+        ],
+        [
+          0.245097715091082,
+          0.5977525036744397,
+          0.6818135080773846,
+          0.6118434173892243
+        ]
+      ]
+    },
+    {
+      "id": "E09",
+      "step": 3,
+      "page": 5,
+      "title": "去抑制的许可性优势",
+      "kind": "result",
+      "quote": "Disinhibition can not activate dendrites by itself",
+      "explanation": "去抑制不能单独激活树突，因而控制输入不会自行制造输出；这是把去抑制与直接兴奋区分开的操作性差别，也是抑制性可塑性能够改进对齐的前提。",
+      "layer": "author",
+      "rects": [
+        [
+          232.6600799560547,
+          197.4199981689453,
+          426.8700866699219,
+          208.57998657226562
+        ]
+      ],
+      "anchor_status": "matched",
+      "normalized_rects": [
+        [
+          0.3801635293399586,
+          0.24926767445573902,
+          0.6975001416175194,
+          0.2633585689043758
+        ]
+      ]
+    },
+    {
+      "id": "E10",
+      "step": 3,
+      "page": 5,
+      "title": "SST/PV 梯度的量化",
+      "kind": "result",
+      "quote": "there is a more than 7-times change in the balance between SST and PV neurons across the cortex",
+      "explanation": "引自 Kim 等的全脑细胞计数，是把 motif 与脑区功能需求联系起来的解剖学量化证据，也是本仓库中“层级化门控需求”的主要量化依据。",
+      "layer": "author",
+      "rects": [
+        [
+          474.1902160644531,
+          375.41998291015625,
+          510.29022216796875,
+          386.5799865722656
+        ],
+        [
+          150.00021362304688,
+          389.41998291015625,
+          503.1102294921875,
+          400.5799865722656
+        ]
+      ],
+      "anchor_status": "matched",
+      "normalized_rects": [
+        [
+          0.7748206144844005,
+          0.47401512993706596,
+          0.8338075525620404,
+          0.48810604365185056
+        ],
+        [
+          0.2450983882729524,
+          0.49169189761383364,
+          0.8220755383859273,
+          0.5057828113286182
+        ]
+      ]
+    },
+    {
+      "id": "E11",
+      "step": 3,
+      "page": 6,
+      "title": "皮层下门控缺乏支持",
+      "kind": "question",
+      "quote": "Their experimental support at the circuit level remains lacking and could be an interesting direction for future research",
+      "explanation": "作者对丘脑与基底节参与的皮层下门控明确标注证据缺口，说明本文覆盖的机制范围是有边界的。",
+      "layer": "author",
+      "rects": [
+        [
+          333.5299377441406,
+          319.41998291015625,
+          516.2799072265625,
+          330.5799865722656
+        ],
+        [
+          149.9999542236328,
+          333.41998291015625,
+          440.7598876953125,
+          344.5799865722656
+        ]
+      ],
+      "anchor_status": "matched",
+      "normalized_rects": [
+        [
+          0.5449835584054585,
+          0.40330805922999524,
+          0.8435946196512459,
+          0.41739897294477984
+        ],
+        [
+          0.24509796441770068,
+          0.4209848269067629,
+          0.7201958949269812,
+          0.4350757406215475
+        ]
+      ]
+    },
+    {
+      "id": "E12",
+      "step": 4,
+      "page": 5,
+      "title": "输出门控假说待检验",
+      "kind": "question",
+      "quote": "they found that a subset of chandelier cells specifically target pyramidal cells projecting to amygdala while avoiding pyramidal cells projecting to the contralateral side of the same cortical area",
+      "explanation": "输出门控的唯一具体证据来自单一解剖分析，作者随即指出它需要专属的 chandelier 细胞亚群与基本不重叠的投射群体，因而把它列为待检验假说。",
+      "layer": "author",
+      "rects": [
+        [
+          193.8682861328125,
+          631.424072265625,
+          505.1182861328125,
+          642.5840454101562
+        ],
+        [
+          149.9982452392578,
+          645.424072265625,
+          517.7782592773438,
+          656.5840454101562
+        ],
+        [
+          149.9982452392578,
+          659.424072265625,
+          239.40826416015625,
+          670.5840454101562
+        ]
+      ],
+      "anchor_status": "matched",
+      "normalized_rects": [
+        [
+          0.3167782453150531,
+          0.7972526164970013,
+          0.8253566766876022,
+          0.8113434916794903
+        ],
+        [
+          0.2450951719595716,
+          0.8149293841737689,
+          0.8460429073159211,
+          0.8290202593562579
+        ],
+        [
+          0.2450951719595716,
+          0.8326061518505367,
+          0.39118997411790235,
+          0.8466970270330255
+        ]
+      ]
+    },
+    {
+      "id": "E13",
+      "step": 3,
+      "page": 14,
+      "title": "图 4 的机制分类",
+      "kind": "implication",
+      "quote": "Input gating can be achieved by dendrite-targeting interneurons that selectively control inputs to pyramidal dendrites",
+      "explanation": "图 4 把输入门控、同步门控、递归门控与输出门控并列，给出一套可直接沿用的机制命名维度，避免把不同机制混称门控。",
+      "layer": "author",
+      "rects": [
+        [
+          376.875,
+          363.82000732421875,
+          503.885009765625,
+          374.9800109863281
+        ],
+        [
+          149.9949951171875,
+          377.82000732421875,
+          489.0050354003906,
+          388.9800109863281
+        ]
+      ],
+      "anchor_status": "matched",
+      "normalized_rects": [
+        [
+          0.6158088235294118,
+          0.4593686961164378,
+          0.8233415192248774,
+          0.47345960983122237
+        ],
+        [
+          0.24508986130259394,
+          0.4770454637932055,
+          0.7990278356215533,
+          0.49113637750799005
+        ]
+      ]
+    },
+    {
+      "id": "E14",
+      "step": 5,
+      "page": 6,
+      "title": "通路门控与同通路内注意的区别",
+      "kind": "implication",
+      "quote": "selective attention to a spatial location but not other locations represent a form of gating within the same pathway, which is different from pathway gating",
+      "explanation": "作者明确区分路径层级的门控与同一路径内的空间选择，直接影响本仓库把注意类文献与门控类文献并置时的比较口径。",
+      "layer": "author",
+      "rects": [
+        [
+          150.0,
+          361.41998291015625,
+          500.969970703125,
+          372.5799865722656
+        ],
+        [
+          150.0000457763672,
+          375.41998291015625,
+          412.4200134277344,
+          386.5799865722656
+        ]
+      ],
+      "anchor_status": "matched",
+      "normalized_rects": [
+        [
+          0.24509803921568626,
+          0.4563383622602983,
+          0.8185783835018382,
+          0.4704292759750829
+        ],
+        [
+          0.24509811401367188,
+          0.47401512993706596,
+          0.6738889108296313,
+          0.48810604365185056
+        ]
+      ]
+    },
+    {
+      "id": "E15",
+      "step": 5,
+      "page": 6,
+      "title": "决定性检验的提出",
+      "kind": "implication",
+      "quote": "cognitive control signals, such as those representing behavioral rule or context, act through targeting specific subclasses of inhibitory neurons",
+      "explanation": "作者给出的核心预测——控制信号作用于中间神经元而非锥体细胞——以及所需的实验，构成把本综述从论证推进到验证的具体路径。",
+      "layer": "author",
+      "rects": [
+        [
+          150.00418090820312,
+          631.424072265625,
+          513.0841674804688,
+          642.5840454101562
+        ],
+        [
+          150.00418090820312,
+          645.424072265625,
+          349.87420654296875,
+          656.5840454101562
+        ]
+      ],
+      "anchor_status": "matched",
+      "normalized_rects": [
+        [
+          0.24510487076503779,
+          0.7972526164970013,
+          0.8383728226805045,
+          0.8113434916794903
+        ],
+        [
+          0.24510487076503779,
+          0.8149293841737689,
+          0.5716898799721711,
+          0.8290202593562579
+        ]
+      ]
+    }
+  ]
+}

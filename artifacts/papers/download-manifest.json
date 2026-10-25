@@ -1,0 +1,206 @@
+[
+  {
+    "id": "R1",
+    "slug": "salinas-sejnowski-2001-gain-modulation",
+    "title": "Gain modulation in the central nervous system: where behavior, neurophysiology, and computation meet",
+    "pmcid": "PMC2887717",
+    "status": "ok",
+    "pdf": "artifacts\\papers\\R1_salinas-sejnowski-2001-gain-modulation\\R1.pdf",
+    "bytes": 1158991,
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2887717/pdf/nihms-211682.pdf",
+    "attempts": [
+      {
+        "kind": "pmc",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2887717/pdf/nihms-211682.pdf"
+      }
+    ]
+  },
+  {
+    "id": "R2",
+    "slug": "silver-2010-neuronal-arithmetic",
+    "title": "Neuronal arithmetic",
+    "pmcid": "PMC4750293",
+    "status": "cached",
+    "pdf": "artifacts\\papers\\R2_silver-2010-neuronal-arithmetic\\R2.pdf",
+    "bytes": 2626407,
+    "source": "cached"
+  },
+  {
+    "id": "R3",
+    "slug": "ferguson-cardin-2020-cortical-gain-mechanisms",
+    "title": "Mechanisms underlying gain modulation in the cortex",
+    "pmcid": "PMC7408409",
+    "status": "ok",
+    "pdf": "artifacts\\papers\\R3_ferguson-cardin-2020-cortical-gain-mechanisms\\R3.pdf",
+    "bytes": 1116925,
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7408409/pdf/nihms-1614816.pdf",
+    "attempts": [
+      {
+        "kind": "pmc",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7408409/pdf/nihms-1614816.pdf"
+      }
+    ]
+  },
+  {
+    "id": "R4",
+    "slug": "wang-yang-2018-disinhibitory-motif",
+    "title": "A disinhibitory circuit motif and flexible information routing in the brain",
+    "pmcid": "PMC6599531",
+    "status": "ok",
+    "pdf": "artifacts\\papers\\R4_wang-yang-2018-disinhibitory-motif\\R4.pdf",
+    "bytes": 865278,
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6599531/pdf/nihms-1036508.pdf",
+    "attempts": [
+      {
+        "kind": "pmc",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6599531/pdf/nihms-1036508.pdf"
+      }
+    ]
+  },
+  {
+    "id": "G1",
+    "slug": "chance-abbott-reyes-2002-background-synaptic-input",
+    "title": "Gain modulation from background synaptic input",
+    "pmcid": "",
+    "status": "cached",
+    "pdf": "artifacts\\papers\\G1_chance-abbott-reyes-2002-background-synaptic-input\\G1.pdf",
+    "bytes": 187965,
+    "source": "cached"
+  },
+  {
+    "id": "G2",
+    "slug": "prescott-dekoninck-2003-shunting-inhibition",
+    "title": "Gain control of firing rate by shunting inhibition: roles of synaptic noise and dendritic saturation",
+    "pmcid": "PMC149961",
+    "status": "cached",
+    "pdf": "artifacts\\papers\\G2_prescott-dekoninck-2003-shunting-inhibition\\G2.pdf",
+    "bytes": 382931,
+    "source": "cached"
+  },
+  {
+    "id": "G3",
+    "slug": "rothman-2009-synaptic-depression-gain-control",
+    "title": "Synaptic depression enables neuronal gain control",
+    "pmcid": "PMC2689940",
+    "status": "cached",
+    "pdf": "artifacts\\papers\\G3_rothman-2009-synaptic-depression-gain-control\\G3.pdf",
+    "bytes": 1917777,
+    "source": "cached"
+  },
+  {
+    "id": "G4",
+    "slug": "reynolds-heeger-2009-normalization-attention",
+    "title": "The normalization model of attention",
+    "pmcid": "PMC2752446",
+    "status": "cached",
+    "pdf": "artifacts\\papers\\G4_reynolds-heeger-2009-normalization-attention\\G4.pdf",
+    "bytes": 648214,
+    "source": "cached"
+  },
+  {
+    "id": "P1",
+    "slug": "vogels-abbott-2005-signal-propagation-logic-gating",
+    "title": "Signal propagation and logic gating in networks of integrate-and-fire neurons",
+    "pmcid": "PMC6725859",
+    "status": "cached",
+    "pdf": "artifacts\\papers\\P1_vogels-abbott-2005-signal-propagation-logic-gating\\P1.pdf",
+    "bytes": 812132,
+    "source": "cached"
+  },
+  {
+    "id": "P2",
+    "slug": "vogels-abbott-2009-detailed-balance-gating",
+    "title": "Gating multiple signals through detailed balance of excitation and inhibition in spiking networks",
+    "pmcid": "",
+    "status": "cached",
+    "pdf": "artifacts\\papers\\P2_vogels-abbott-2009-detailed-balance-gating\\P2.pdf",
+    "bytes": 825599,
+    "source": "cached"
+  },
+  {
+    "id": "P3",
+    "slug": "kremkow-2010-gating-balanced-correlated",
+    "title": "Gating of signal propagation in spiking neural networks by balanced and correlated excitation and inhibition",
+    "pmcid": "PMC6633769",
+    "status": "cached",
+    "pdf": "artifacts\\papers\\P3_kremkow-2010-gating-balanced-correlated\\P3.pdf",
+    "bytes": 1289145,
+    "source": "cached"
+  },
+  {
+    "id": "F1",
+    "slug": "sherman-guillery-1998-drivers-modulators",
+    "title": "On the actions that one nerve cell can have on another: distinguishing drivers from modulators",
+    "pmcid": "PMC22761",
+    "status": "cached",
+    "pdf": "artifacts\\papers\\F1_sherman-guillery-1998-drivers-modulators\\F1.pdf",
+    "bytes": 152193,
+    "source": "cached"
+  },
+  {
+    "id": "F2",
+    "slug": "pi-2013-disinhibitory-control",
+    "title": "Cortical interneurons that specialize in disinhibitory control",
+    "pmcid": "PMC4017628",
+    "status": "ok",
+    "pdf": "artifacts\\papers\\F2_pi-2013-disinhibitory-control\\F2.pdf",
+    "bytes": 3764603,
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4017628/pdf/nihms525949.pdf",
+    "attempts": [
+      {
+        "kind": "pmc",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4017628/pdf/nihms525949.pdf"
+      }
+    ]
+  },
+  {
+    "id": "F3",
+    "slug": "lee-2013-disinhibitory-motor-integration",
+    "title": "A disinhibitory circuit mediates motor integration in the somatosensory cortex",
+    "pmcid": "PMC4100076",
+    "status": "cached",
+    "pdf": "artifacts\\papers\\F3_lee-2013-disinhibitory-motor-integration\\F3.pdf",
+    "bytes": 1456299,
+    "source": "cached"
+  },
+  {
+    "id": "F4",
+    "slug": "wilson-2012-division-subtraction",
+    "title": "Division and subtraction by distinct cortical inhibitory networks in vivo",
+    "pmcid": "",
+    "status": "cached",
+    "pdf": "artifacts\\papers\\F4_wilson-2012-division-subtraction\\F4.pdf",
+    "bytes": 1732405,
+    "source": "cached"
+  },
+  {
+    "id": "F5",
+    "slug": "elboustani-sur-2014-cell-specific-inhibition",
+    "title": "Response-dependent dynamics of cell-specific inhibition in cortical networks in vivo",
+    "pmcid": "PMC4268659",
+    "status": "cached",
+    "pdf": "artifacts\\papers\\F5_elboustani-sur-2014-cell-specific-inhibition\\F5.pdf",
+    "bytes": 6604744,
+    "source": "cached"
+  },
+  {
+    "id": "C1",
+    "slug": "yang-2016-dendritic-disinhibitory-gating",
+    "title": "A dendritic disinhibitory circuit mechanism for pathway-specific gating",
+    "pmcid": "PMC5034308",
+    "status": "cached",
+    "pdf": "artifacts\\papers\\C1_yang-2016-dendritic-disinhibitory-gating\\C1.pdf",
+    "bytes": 960283,
+    "source": "cached"
+  },
+  {
+    "id": "C2",
+    "slug": "mante-2013-context-dependent-recurrent",
+    "title": "Context-dependent computation by recurrent dynamics in prefrontal cortex",
+    "pmcid": "PMC4121670",
+    "status": "cached",
+    "pdf": "artifacts\\papers\\C2_mante-2013-context-dependent-recurrent\\C2.pdf",
+    "bytes": 5005347,
+    "source": "cached"
+  }
+]

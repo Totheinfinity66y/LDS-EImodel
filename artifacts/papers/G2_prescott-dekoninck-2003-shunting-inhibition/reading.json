@@ -1,0 +1,421 @@
+{
+  "schema": "jzks-pdf-viewer/v1",
+  "paper": {
+    "title": "Gain control of firing rate by shunting inhibition: roles of synaptic noise and dendritic saturation",
+    "authors": "Steven A. Prescott, Yves De Koninck",
+    "doi": "10.1073/pnas.0337591100"
+  },
+  "summary": "Prescott 与 De Koninck 用生物物理计算模型说明，分流抑制（shunting inhibition）对发放率的作用并非如既往模型所认为的纯减性。它能产生除性（divisive）增益控制，但前提是同时具备两个条件：突触噪声把发放率的阈值非线性平滑掉，使发放率能编码尚未达到阈值的平均去极化；以及树突饱和（dendritic saturation）造成树突兴奋电导到胞体去极化之间的强非线性，并因该非线性在概率性放电区的形状而大幅放大除性成分、相对少地放大减性成分。作者用去噪（恒定电流加恒定电导）、仅加噪声（Ornstein–Uhlenbeck 噪声电流）、仅树突饱和、以及两者组合四种条件构成近似 2×2 的证据矩阵，并用把两个独立测得的效应重新组合的计算复核了突触条件下的实测曲线。结论是分流抑制可以作为发放率增益控制的机制，但其调制效果同时含有除性与减性成分，只有在噪声与树突饱和都被计入时才能完整解释。",
+  "steps": [
+    {
+      "id": 1,
+      "title": "作者想解决什么问题",
+      "paragraphs": [
+        {
+          "title": "问题与全局地图",
+          "text": "本文要解决的是一个具体的矛盾。经典立场是：分流抑制通过 GABA 门控氯电导降低输入电阻而几乎不直接影响膜电位，因此对兴奋性去极化呈除性作用，这就是实现增益控制的长期候选机制。但神经元之间以脉冲序列通信，因此必须考虑膜电位如何转化为发放率。此时出现了分歧：既往建模研究得出分流抑制对发放率是纯减性的结论，而在存在背景突触输入条件下分析响应的电生理研究却给出了支持分流抑制参与增益控制的间接证据。作者的诊断是，突触输入本身的噪声性以及它对膜电导的影响这些性质在既往建模中被忽略，可能正是分歧的来源。\n\n研究类型是生物物理计算建模（单细胞、多区室、多突触）。对象是 V 层新皮层锥体细胞。输入是 Poisson 分布的兴奋与抑制突触事件频率，输出是稳态发放率 fout 与胞体膜电位 Vm。主要比较是四种刺激条件的对照：真实化突触输入、恒定电流加恒定电导（无噪声）、仅噪声电流加恒定电导、以及两者组合。关键图表为 Figure 1（突触条件下斜率降低但曲线右移）、Figure 2（Vm 波动与阈值平滑）、Figure 3（仅噪声的除性效应有限）、Figure 4（树突饱和的非线性及其轨迹效应）、Figure 5（四条件总结）。\n\n作者给出的可检验预测是：若除性增益控制真实存在且由分流抑制介导，则在接近实测强度的背景输入下应当观察到斜率下降；去除噪声后该效应应消失；仅加噪声不足以恢复；仅树突非线性也不足以恢复；两者同时具备时应以除性为主且能重构实测曲线。若这些预测不成立，特别是若模型在无噪声条件下也给出除性效应，则“噪声与树突饱和共同决定”这一解释即被削弱。",
+          "layer": "analysis",
+          "refs": [
+            "E01",
+            "E02",
+            "E03"
+          ]
+        },
+        {
+          "title": "作者声称的缺口与贡献",
+          "text": "作者把缺口说得很具体：既往建模与电生理在分流抑制能否介导发放率增益控制上结论相左，且既往建模忽略了突触输入的噪声性等性质。作者同时指出 Chance 等（2002）独立证明了背景突触噪声是关键，这使噪声成为当时最自然的候选解释。\n\n本文的贡献因此有两层。第一层是诊断：把分歧归因于模型中有无突触噪声，从而解释了既往模型结论的来源与局限。第二层是补全：Chance 等（2002）未考虑树突饱和，本文通过独立操纵与组合，证明树突饱和的加入使除性效应相对减性效应被显著放大，从而减少了为证明增益控制所需的一些假设。\n\n作者特别说明其方法优势在于不先验假定哪些因素在起作用，而是把这些因素拆出来独立测试再组合测试。这实际上把一个模糊的机制争论转化为可分解、可证伪的因子矩阵，这是本文最值得借鉴的思路。",
+          "layer": "author",
+          "refs": [
+            "E04",
+            "E05",
+            "E06",
+            "E18"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "用了什么方法",
+      "paragraphs": [
+        {
+          "title": "模型构造与参数校验",
+          "text": "细胞模型由 Contreras 等描述的 V 层新皮层锥体神经元重建，附加与 Mainen 等形态相同的轴突；被动参数包括反转到 -70 mV 的漏电导、各区室 0.02 mS/cm²（轴突节点高 10 倍）、轴向电阻率 200 Ω·cm、膜电容 1 μF/cm²（轴突间结 0.04），由此得到 59 MΩ 输入电阻与约 40 ms 膜时间常数。HH 通道密度按区室分配：胞体与初级树突 Na⁺ 48、K⁺ 40 mS/cm²，远端树突 6 与 5，初始段、轴丘与节点 240 与 200，轴突间结 6 与 5。\n\n突触输入建模为非饱和电导加双指数时间程，兴奋侧 τrise 0.2 ms、τdecay 2 ms、gmax 1 nS、Erev 0 mV；抑制侧 τrise 0.8 ms、τdecay 8 ms、gmax 0.5 nS、Erev -70 mV。两组各 8 个抑制突触随机置于胞体周，24 个兴奋突触置于基树突、另 24 个置于顶树突，每组由独立 Poisson 过程驱动。参数标定的依据被作者明确交代：每组突触数来自每突触前细胞的接触数与突触前活动协调性的组合，并调整到产生适当幅度的 Vm 波动。\n\n参数合理性的外部校验是本文方法上的一处亮点：模型在接近在体背景条件下（fexc 1.0 Hz/突触、finh 5.6 Hz/突触）去极化至 -60.7 mV，Vm 标准差 2.5 mV，输入电阻降低 89%，作者认为这与既往实测可比，说明参数设定落在合理范围内。",
+          "layer": "author",
+          "refs": [
+            "E11"
+          ]
+        },
+        {
+          "title": "关键解耦装置：用突触数替代空间求和",
+          "text": "本文方法的核心是一组解耦装置，用以把噪声、电导改变与去极化三件事分开。\n\n第一，用突触数替代空间求和、以每突触事件频率替代突触数量：真实突触总数估计为 24,000 个兴奋性与 4,800 个抑制性，而模型只用 48 个兴奋与 16 个抑制突触，因此分别以真实突触事件频率的 500 倍与 300 倍驱动。作者对这一假设做了敏感性检验：在突触组数增加 10 倍、每突触频率相应降低的更复杂模型中，Figures 1 与 2 的全部关键发现都得到复现，因此报告的是计算更经济的版本。\n\n第二，三种去耦刺激：（a）恒定胞体电流 Iclamp 加恒定胞体电导 ginh，用来去掉噪声但保留电导改变；（b）把波动电导替换为单点或多点过程的恒定电导；（c）用 Ornstein–Uhlenbeck 过程在胞体注入噪声电流，在不伴随电导改变的前提下重建突触造成的 Vm 波动，并检验其功率谱可近似突触输入。\n\n第三，reduced HH 条件：仅保留远端树突的 HH 通道，抑制放电但仍允许远端去极化传向胞体，以便在无放电干扰下单独考察 Vm 行为。\n\n仿真在 NEURON 4.3.1 上以 10 μs 步长、36 °C 运行，d-lambda 准则划分区室；每个数据点基于 10 s 仿真时间（fout）与 1 s（Vm）。",
+          "layer": "author",
+          "refs": [
+            "E07"
+          ]
+        },
+        {
+          "title": "重构检验与该方法的边界",
+          "text": "最后的定量检验是重构而非新模拟：作者把两条独立测得的曲线——来自 Figure 3 的噪声阈值平滑，与来自 Figure 4C 的树突饱和非线性——按 Figure 4E 所示方式组合，先由树突 gexc 与噪声条件下的 Vm 曲线反推出等效胞体电流以引入树突饱和，再与经噪声平滑的 fout-Iclamp 曲线组合以引入阈值平滑，得到可与实测 fout-fexc 曲线直接比较的 fout-gexc 曲线。\n\n这一方法的边界需要如实说明：它是模型内部的自洽性检验，检验的是两个机制是否足以解释观察到的曲线形状，而不是对真实神经元的独立验证。作为对照，作者用绕过树突饱和的胞体 gexc 温和非线性做同样计算，结果无法复现实测曲线。\n\n此外，本文是纯计算研究，全部证据来自模型。本文未提供可独立运行的模型文件，也未报告对细胞形态与通道密度组合的敏感性检验，这两点构成其外部效度的主要限制。",
+          "layer": "analysis",
+          "refs": [
+            "E17",
+            "E19"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "得到了什么结果",
+      "paragraphs": [
+        {
+          "title": "突触条件下的除性与减性并存",
+          "text": "在真实化突触输入下，输出发放率与兴奋突触事件频率之间关系的斜率，随抑制突触事件频率升高而明确降低，这构成除性效应。但效应并非纯粹：fout-fexc 曲线出现右移，即曲线上开始出现非零发放率的位置随抑制增强而右移，作者据此指出存在减性成分。作者报告该结果在突触数增加的模型与两个不同模型神经元中都同样出现。当在模型中加入 M 型钾电流以实现放电适应时，除性效应在适应前后仍然存在（数据未展示）。\n\n作为关键对照，作者用恒定 Iclamp 与恒定胞体 ginh 取代突触刺激以去除噪声，此时分流抑制对 fout 呈纯减性效应。这把差异直接归因于突触刺激的性质而非模型其他设定。作者同时明确指出，这一结果与既往建模研究不一致，差异的来源正在于突触输入的模拟方式。",
+          "layer": "author",
+          "refs": [
+            "E08",
+            "E09"
+          ]
+        },
+        {
+          "title": "噪声如何平滑阈值并单独只带来有限除性",
+          "text": "机制线索来自 Vm 层面。突触输入在胞体造成显著波动，且即使在强分流下波动也不消失——标准差并未归零——这与兴奋强度对波动幅度影响很小的近水平回归线一致。由于平均 Vm 仍低于阈值而波动偶尔越过阈值，放电概率同时取决于平均 Vm 与波动幅度。\n\n机制在于：恒定电流下 fout 在 rheobase 处从 0 突跳到 1，而噪声输入下 fout 随输入渐进上升，使发放率能更贴近地编码底层平均 Vm。这就是阈值非线性被平滑。\n\n但单独加入噪声只能得到有限的除性效应：噪声条件下 fout-Iclamp 曲线斜率的下降仅限于概率性放电区（较低的 fout 值），fout 高于 40 Hz 后曲线转为平行；同等分流幅度下，噪声条件下斜率下降远小于突触条件下的观察值。因此作者明确判定：突触条件下的除性效应不能仅用加噪声完全解释。",
+          "layer": "author",
+          "refs": [
+            "E10",
+            "E12",
+            "E13",
+            "E14"
+          ]
+        },
+        {
+          "title": "树突饱和的机制与四条件总结",
+          "text": "树突饱和指树突兴奋电导与胞体去极化之间的非线性关系。作者给出的对照是：胞体 Vm 与胞体 Iclamp 线性，与胞体 gexc 略次线性，但与树突 gexc 高度非线性——由于多数兴奋性突触位于树突，这一情形最贴近实际。其成因被作者归为三个因素的复杂交互：电紧张衰减使只有部分树突兴奋到达胞体，因此需要强树突兴奋才能获得中等胞体兴奋；而强树突兴奋本身导致树突去极化，使兴奋电导的驱动力显著下降，兴奋电导因而越来越难以产生兴奋电流；此外高水平突触输入本身显著改变神经元的电紧张结构并加重衰减。其净效果是胞体 Vm 与树突 gexc 之间高度非线性。\n\n关键的几何论断是：正因该非线性相对于概率性放电区的形状，它增强除性调制的程度远大于增强减性调制的程度。\n\n四条件总结见 Figure 5：无噪声且无树突饱和时，除性作用在 Vm-Iclamp 曲线上表现为 fout-Iclamp 曲线上的减性作用；仅由噪声平滑阈值时，分流获得一些除性能力；仅树突饱和（无阈值平滑）时，对 fout-gexc 曲线仍表现为减性；两者同时计入时，除性作用才在非线性 Vm-gexc 曲线上表现为以除性为主的发放率调制，并准确重现突触条件下观察到的调制。\n\n作者进一步指出，由于体内神经元经历显著水平的突触噪声，故处于分流很可能对 fout 起除性作用的条件中。修稿期间 Chance 等独立用 dynamic clamp 演示了噪声的作用，本文数据与之相符，但作者主张树突饱和（对方未考虑）增强了除性相对减性的比例，从而减弱了对方为证明增益控制所需的一些假设。",
+          "layer": "author",
+          "refs": [
+            "E15",
+            "E16",
+            "E20",
+            "E21",
+            "E24"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "结果能否支持结论",
+      "paragraphs": [
+        {
+          "title": "证据结构与最强环节",
+          "text": "最强环节是机制被拆解为可独立操纵的两个因子，并构成近似 2×2 的条件矩阵。无噪声无饱和给出纯减性；仅噪声给出有限除性；仅饱和而无语义平滑仍为减性；两者兼有则以除性为主。这个矩阵不是各案例的堆叠，而是对单一因果假设的交叉验证：若除性来自任一单独因素，则相应条件应已产生除性；事实是两者缺一不可。\n\n此外，重构计算提供了独立于新模拟的定量自洽性检验：把两个机制各自独立测得的效应组合后得到的曲线与实测曲线高度接近，而绕过树突饱和的对照版本无法复现实测结果。这一步把机制解释从定性叙事推进到可证伪的定量预言。\n\n作者的表述也保持了恰当的克制：噪声与树突饱和不仅必须计入，而且结论是“除性相对减性被放大”，而不是“纯除性”。\n\n最薄弱环节是外部效度而非内部效度。全部证据来自单一形态、单一通道组合的多区室模型；突触数替代空间求和这一关键近似虽做了 10 倍突触组的检验，但形态与通道参数的敏感性在本文中未报告。此外，作者自述在兴奋与抑制精确平衡等特定情形下减性成分仍占主导，相关的 Figure 6 作为 supporting information 未随 PDF 提供，本次未核对其内容。",
+          "layer": "analysis",
+          "refs": [
+            "E14",
+            "E17",
+            "E24"
+          ]
+        },
+        {
+          "title": "逐项对照作者主张",
+          "text": "主张一：“分流抑制确可除性调制发放率。”支持强度：强，但带条件。证据是突触条件下的斜率降低与 Figure 5 的组合；限制是必须同时有噪声与树突饱和，且在精确平衡的兴奋抑制等情形下减性仍占主导。差异类型：一致，但作者自身的措辞已是相对增强而非绝对除性。\n\n主张二：“与既往建模结论的分歧由模型中有无突触噪声解释。”支持强度：强。差异类型：一致，但需注意对照对象是模型而非实验，且既往模型之间的参数差异可能不止噪声一项。\n\n主张三：“树突饱和进一步增强除性相对减性的比例，因而减少 Chance 等所需的一些假设。”支持强度：中到强。差异类型：作者更强之处在于本文给出的树突饱和机制是本文自己的模型内产物，未在真实细胞上独立测量；因此这是一条模型内的增量主张。\n\n主张四：“体内神经元处于分流可能起除性作用的条件中。”支持强度：中。差异类型：范围不同。作者由模型的噪声水平推断体内条件，而本文的模型本身是按特定在体参数标定的，这一推断依赖于标定本身。\n\n需要特别防止的误读：本文与 Chance 等（2002）给出的不是同一解释路径。Chance 等的机制是平衡兴奋抑制输入产生近似乘法调制，本文的机制是树突饱和非线性叠加阈值平滑。把二者混为“同一结论的重复”会丢掉本文真正的贡献，即第二个因子的识别。",
+          "layer": "analysis",
+          "refs": [
+            "E21",
+            "E22",
+            "E23",
+            "E06"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "有哪些局限与启发",
+      "paragraphs": [
+        {
+          "title": "本文自身的局限与未报告项",
+          "text": "作者自述的方法优势是因子拆解而非先验假定，这在同类建模研究中值得借鉴。但同样应看到若干本文未报告或未提供的内容：未报告模型对细胞形态与 HH 通道组合的敏感性；未提供可独立运行的模型文件；Fig. 6 这一 supporting information 未随 PDF 提供，而作者用它支撑“在精确平衡的兴奋与抑制下减性占主导”的限定；本文未做任何电生理验证，全部结论均来自计算。\n\n还需指出一个解释学上的限制：作者把增益控制定义为输入—输出曲线斜率的改变，这在数学上要求斜率与交点两个量都被报告。本文确实报告了曲线的右移，这使减性成分可被识别，这一点比多数同类工作更严谨；但“除性”与“减性”在一族带偏移的曲线上的分解方式并不唯一，不同研究采用不同定义时结论可能不完全可比。",
+          "layer": "analysis",
+          "refs": [
+            "E13",
+            "E23"
+          ]
+        },
+        {
+          "title": "替代解释与区分检验",
+          "text": "替代解释一：观察到的除性效应可能主要来自模型中突触位置与数量的具体安排，而不是普适的树突饱和机制——本文模型把兴奋突触放在基树突与顶树突两处、抑制突触限于胞体周，这种分布本身就会制造树突到胞体的非线性传递。区分检验：随机化突触位置，并分别只放在基树突或只放在顶树突，同时改变胞体周与远端抑制的比例，重复 Figure 1，观察斜率下降是否保持。若只在特定分布下出现除性效应，则机制应归因于分布而非饱和本身。\n\n替代解释二：阈值平滑可能不是必要条件，模型中初始段与轴丘的高 Na⁺ 通道密度决定了阈值锐度，换一组通道参数可能让除性效应由其他路径涌现。区分检验：在不同 HH 通道密度组合下重复 Figure 3C 与 Figure 1C，比较同等分流下的斜率下降幅度。若结论对通道参数稳健，则该替代被削弱。\n\n替代解释三：本文与 Chance 等（2002）的差异可能部分源于对“除性”的操作定义不同，而非机制不同。区分检验：对两方使用的同一类原始数据，同时报告斜率与交点，并比较两种分解是否给出一致的除性/减性比例。\n\n本任务未实施上述任何检验；以上为可执行的检验方案，不是已得结论。",
+          "layer": "analysis",
+          "refs": [
+            "E15",
+            "E19",
+            "E06"
+          ]
+        },
+        {
+          "title": "可借鉴的思路与使用建议",
+          "text": "本文最值得借鉴的思路是因果分解的写法：把一个含糊的机制争论拆成一组可独立操纵的因子，用正交条件矩阵证明“缺一不可”，再用重构计算做定量自洽性检验。这套写法对理解增益调制文献中的分歧尤其有用——本文说明，当两篇论文结论冲突时，先检查各自模型中有无背景噪声，比争论机制更可能找到原因。\n\n引用建议：本文适合作为“分流抑制能否实现发放率除性增益控制”的机制来源引用，且引用时应同时保留三个限定：需要噪声、需要树突饱和、结果仍含减性成分。它不适合作为“分流抑制在皮层中实现乘法增益控制”的一般性证据，也不应与 Chance 等（2002）并列引用为同一结论的重复证据。\n\n最关键的待补材料：树突饱和非线性在真实锥体细胞中的定量强度，以及本文模型关键参数（形态、通道密度、突触分布）对结论的敏感性。这两项是把这套机制从模型推进到生理的必经步骤。\n\n与本仓库其他文献的衔接：清单中的 G3（Rothman 等 2009）以突触抑郁实现增益控制，G4（Reynolds 与 Heeger 2009）给出注意的归一化模型，二者与本文的关系是同属“如何改变输入—输出变换”的不同候选机制；本文的贡献在于证明单靠一个乘性权重或一个负权重不足以确定除性行为，必须把噪声状态与输入位置纳入解释。",
+          "layer": "analysis",
+          "refs": [
+            "E22",
+            "E25",
+            "E01"
+          ]
+        }
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "id": "E01",
+      "step": 1,
+      "page": 1,
+      "title": "反直觉的核心结论",
+      "kind": "background",
+      "quote": "shunting inhibition on its own fails to divisively modulate firing rate",
+      "explanation": "摘要开篇即指出分流抑制单独作用时不能除性调制发放率，这与初始直觉相反，也构成全文要解释的张力。",
+      "layer": "author"
+    },
+    {
+      "id": "E02",
+      "step": 1,
+      "page": 1,
+      "title": "增益控制的操作性定义",
+      "kind": "background",
+      "quote": "Gain control is achieved through a divisive process and is observed as a change in the slope of the input",
+      "explanation": "作者把增益控制定义为通过除性过程实现、并以输入—输出曲线斜率的改变来观察，这确立了本文的判据，也意味着斜率与交点需分别报告。",
+      "layer": "author"
+    },
+    {
+      "id": "E03",
+      "step": 1,
+      "page": 1,
+      "title": "分流与超极化的对比",
+      "kind": "background",
+      "quote": "Whereas hyperpolarization has a subtractive effect on the depolarization caused by concurrent excitation, shunting has a divisive effect",
+      "explanation": "作者先给出经典区分：超极化是减性的，分流是除性的，后续全部论证都是在这个经典立场之上展开并加以修正。",
+      "layer": "author"
+    },
+    {
+      "id": "E04",
+      "step": 1,
+      "page": 1,
+      "title": "分歧的诊断",
+      "kind": "question",
+      "quote": "which were neglected in past modeling, may explain the discrepancy regarding the role of shunting inhibition in gain control",
+      "explanation": "作者把既往建模与电生理结论冲突的原因归结为忽略突触输入的噪声性及对膜电导的影响，这是本文的解释起点。",
+      "layer": "author"
+    },
+    {
+      "id": "E05",
+      "step": 1,
+      "page": 1,
+      "title": "本文的研究目的",
+      "kind": "background",
+      "quote": "This study was therefore undertaken to examine whether shunting inhibition can divisively modulate firing rate",
+      "explanation": "作者明确界定研究问题为：在接近完整脑内实测条件的突触输入下，分流抑制究竟能否除性调制发放率。",
+      "layer": "author"
+    },
+    {
+      "id": "E06",
+      "step": 1,
+      "page": 1,
+      "title": "与 Chance 等（2002）的关系",
+      "kind": "background",
+      "quote": "Only recently did Chance et al.",
+      "explanation": "作者指出 Chance 等独立证明了背景突触噪声是关键，这是本文出发时最新的工作，也是本文随后主张树突饱和为增量贡献的参照。",
+      "layer": "author"
+    },
+    {
+      "id": "E07",
+      "step": 2,
+      "page": 1,
+      "title": "突触数替代空间求和的敏感性检验",
+      "kind": "method",
+      "quote": "this more complex model reproduced all critical findings reported in Figs. 1 and 2",
+      "explanation": "作者对以突触数替代空间求和这一关键近似做了检验：突触组数增十倍、每突触频率相应降低的模型复现了全部关键发现，说明该近似不影响结论。",
+      "layer": "author"
+    },
+    {
+      "id": "E08",
+      "step": 3,
+      "page": 2,
+      "title": "突触条件下除性与减性并存",
+      "kind": "result",
+      "quote": "the effect of shunting was not purely divisive",
+      "explanation": "实测突触条件下斜率降低但曲线右移，说明除性效应伴随减性成分，作者没有把结果表述为纯除性。",
+      "layer": "author"
+    },
+    {
+      "id": "E09",
+      "step": 3,
+      "page": 2,
+      "title": "去噪对照给出纯减性",
+      "kind": "result",
+      "quote": "Under these conditions, shunting inhibition had a purely subtractive effect on fout",
+      "explanation": "用恒定电流与恒定电导去除噪声后，分流对发放率只剩减性效应，这是把差异归因于突触刺激性质的关键对照。",
+      "layer": "author"
+    },
+    {
+      "id": "E10",
+      "step": 3,
+      "page": 2,
+      "title": "强分流下波动不消失",
+      "kind": "result",
+      "quote": "standard deviation of Vm did not reduce to 0 mV",
+      "explanation": "即使在强分流下 Vm 波动仍不归零，这解释了为何平均 Vm 低于阈值时仍可能放电，是后续阈值平滑论证的前提。",
+      "layer": "author"
+    },
+    {
+      "id": "E11",
+      "step": 2,
+      "page": 2,
+      "title": "模型参数的外部校验",
+      "kind": "method",
+      "quote": "our model neuron was depolarized to",
+      "explanation": "作者报告模型在接近在体背景下去极化至 -60.7 mV、Vm 标准差 2.5 mV、输入电阻降低 89%，并认为与既往实测可比，是参数合理性的外部锚点。",
+      "layer": "author"
+    },
+    {
+      "id": "E12",
+      "step": 3,
+      "page": 3,
+      "title": "概率性放电的概念",
+      "kind": "result",
+      "quote": "Fig. 2E shows that spiking caused by Vm fluctuations",
+      "explanation": "作者把由波动驱动的放电称为概率性放电，并指出它比把平均 Vm 推过阈值所产生的放电更不规则，这决定了体内常见工作区间的性质。",
+      "layer": "author"
+    },
+    {
+      "id": "E13",
+      "step": 3,
+      "page": 3,
+      "title": "仅噪声的除性效应受限",
+      "kind": "result",
+      "quote": "the reduction in slope of fout-Iclamp curves was restricted to probabilistic firing",
+      "explanation": "仅加噪声时斜率下降只出现在低发放率的概率性放电区，高发放率区曲线转为平行，说明噪声单独不足以产生全面除性调制。",
+      "layer": "author"
+    },
+    {
+      "id": "E14",
+      "step": 3,
+      "page": 4,
+      "title": "噪声不足以完全解释",
+      "kind": "question",
+      "quote": "the divisive effect of shunting inhibition under synaptic conditions is not fully explained simply by adding noise",
+      "explanation": "作者明确排除噪声单独解释的可能，把问题推进到突触输入还有什么其他性质在起作用，这一步引出树突饱和。",
+      "layer": "author"
+    },
+    {
+      "id": "E15",
+      "step": 3,
+      "page": 4,
+      "title": "树突饱和的输入输出非线性",
+      "kind": "result",
+      "quote": "Somatic depolarization is nonlinearly related to dendritic gexc",
+      "explanation": "胞体去极化与胞体电流线性、与胞体电导略次线性、却与树突电导高度非线性，这是树突饱和的操作性定义及其关键性所在。",
+      "layer": "author"
+    },
+    {
+      "id": "E16",
+      "step": 3,
+      "page": 4,
+      "title": "非线性形状决定除性与减性的比例",
+      "kind": "result",
+      "quote": "the nonlinearity caused by dendritic saturation enhances the divisive effect of shunting on fout much more than it enhances the subtractive effect",
+      "explanation": "这是全文最关键的机制论断：树突饱和因其在概率性放电区附近的形状，大幅放大除性成分而相对少地放大减性成分。",
+      "layer": "author"
+    },
+    {
+      "id": "E17",
+      "step": 3,
+      "page": 5,
+      "title": "重构曲线复现实测形态",
+      "kind": "result",
+      "quote": "The calculated fout-gexc curves exhibit a pattern of mixed divisive and subtractive change",
+      "explanation": "把两个独立测得的效应组合后得到的计算曲线，其除性加减性的混合形态与突触实测曲线高度接近，构成对双因子解释的定量自洽性检验。",
+      "layer": "author"
+    },
+    {
+      "id": "E18",
+      "step": 1,
+      "page": 5,
+      "title": "方法学优势：不先验假定因素",
+      "kind": "implication",
+      "quote": "One benefit of our approach was that we made no assumptions a priori as to what factors might be involved in allowing gain control by shunting",
+      "explanation": "作者自述的核心方法优势是先把候选因子拆出来再独立与组合测试，这把机制争论转化为可证伪的因子矩阵。",
+      "layer": "author"
+    },
+    {
+      "id": "E19",
+      "step": 5,
+      "page": 5,
+      "title": "树突饱和的成因",
+      "kind": "result",
+      "quote": "this nonlinearity stems from the fact that electrotonic attenuation causes only a fraction of the excitation produced in dendrites",
+      "explanation": "作者解释非线性来源：电紧张衰减使树突兴奋只有一部分到达胞体，因而需要强树突兴奋，而这又导致树突去极化与兴奋驱动力下降。",
+      "layer": "author"
+    },
+    {
+      "id": "E20",
+      "step": 3,
+      "page": 5,
+      "title": "体内条件的相关性论证",
+      "kind": "implication",
+      "quote": "Neurons in vivo experience significant levels of synaptic noise",
+      "explanation": "作者据体内神经元存在显著突触噪声，推出体内条件属于分流可能起除性作用的情形，把模型结论与生理条件联系起来。",
+      "layer": "author"
+    },
+    {
+      "id": "E21",
+      "step": 4,
+      "page": 5,
+      "title": "与 Chance 等（2002）的增量关系",
+      "kind": "implication",
+      "quote": "During revisions of this paper, Chance et al.",
+      "explanation": "作者说明 Chance 等在修稿期间独立用 dynamic clamp 演示噪声作用，本文数据与之相符，但主张树突饱和进一步增强了除性相对减性的比例。",
+      "layer": "author"
+    },
+    {
+      "id": "E22",
+      "step": 5,
+      "page": 6,
+      "title": "结论的最终表述",
+      "kind": "implication",
+      "quote": "the ability of shunting inhibition to divisively modulate firing rate depends critically on synaptic noise",
+      "explanation": "结论落在关键依赖噪声上，并紧接着说明树突饱和进一步放大除性相对减性的比例，两句共同构成作者主张的准确表述。",
+      "layer": "author"
+    },
+    {
+      "id": "E23",
+      "step": 5,
+      "page": 6,
+      "title": "对单细胞计算能力的推论",
+      "kind": "implication",
+      "quote": "demonstrate the impact of network activity on the computational capabilities of individual neurons",
+      "explanation": "作者把结论提升到网络活动改变单细胞计算能力这一层次，是本文最具普适性的推论，也是引用时最容易被过度延伸的一句。",
+      "layer": "author"
+    },
+    {
+      "id": "E24",
+      "step": 3,
+      "page": 5,
+      "title": "双因素共同决定",
+      "kind": "result",
+      "quote": "this ability relies on two effects of synaptic input",
+      "explanation": "作者把除性能力的来源明确归结为突触输入的两个效应，即噪声与树突饱和，这与 Figure 5 的四条件矩阵互为印证。",
+      "layer": "author"
+    },
+    {
+      "id": "E25",
+      "step": 5,
+      "page": 5,
+      "title": "分歧归因于模型设定",
+      "kind": "implication",
+      "quote": "the presence or absence of synaptic noise in the model",
+      "explanation": "作者把与既往建模结论的分歧明确归因于模型中有无突触噪声，这提示阅读增益调制文献时首先应检查各模型的状态设定。",
+      "layer": "author"
+    }
+  ]
+}

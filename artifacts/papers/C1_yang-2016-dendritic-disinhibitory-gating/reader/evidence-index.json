@@ -1,0 +1,799 @@
+{
+  "source_sha256": "4587dae5dc7e8159cdcc4e1a6264d0f7d7a7508448399c4ab21a6c89ead427f5",
+  "claims": [
+    {
+      "step": 1,
+      "title": "三类门控的界定与本文要填的位置",
+      "claim": "作者先把「门控」按特异性分成三类，这一分类本身就界定了本文的位置。第一类是对某皮层区的全部输入做均匀的上下调制，作者指出这正是近年 VIP／SOM 去抑制 motif 研究的重点，并且报告的状态相关反应在同一类中间神经元的局部群体内相当均一。第二类是对特定刺激属性或空间位置的选择性门控，作者指出 SOM 神经元在感觉皮层的刺激特征选择性上高于 PV 神经元、在运动皮层对前向与后向运动高度异质且高度选择性，但「SOM 还是 VIP 神经元是否具备所需选择性」仍知之甚少。第三类是本文要处理的：对某条传入通路「开门」、对其余通路「关门」，作者称之为通路特异门控，给出的例子是在嘈杂的咖啡馆里把视觉通路打开、把听觉通路关掉，以及 Stroop 任务中为命名颜色而打开颜色通路、为抑制自动的读词而关闭读词通路。这一分类使本文的问题可检验：要证明的不是「去抑制存在」，而是「去抑制能否按通路而不是按细胞类型均匀地工作」。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E06",
+          "page": 2,
+          "quote": "Interneurons expressing parvalbumin (PV) specifically target the perisomatic area of pyramidal neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E07",
+          "page": 2,
+          "quote": "Interneurons expressing somatostatin (SOM) specifically target thin basal and apical tuft dendrites",
+          "status": "matched"
+        },
+        {
+          "id": "E08",
+          "page": 2,
+          "quote": "Interneurons expressing vasoactive intestinal peptide (VIP) avoid pyramidal neurons and specifically target SOM neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E09",
+          "page": 2,
+          "quote": "which we call 'pathway-specific gating'",
+          "status": "matched"
+        },
+        {
+          "id": "E10",
+          "page": 2,
+          "quote": "information flow across the complex cortical circuit needs to be flexibly gated (or routed) according to behavioural demands",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "title": "核心假说与本文的贡献结构",
+      "claim": "本文的假说是功能性的：若来自不同通路的兴奋输入在树突上按分支聚簇，那么「专门去抑制这条通路所靶向的分支」就能把它打开，同时让其他通路保持关闭。作者称之为分支特异（branch-specific）的兴奋—去抑制对齐，并指出这有别于仅仅「输入来自不同区域」——一条通路可以占据多个分支。作者给出了支持该假说的现有证据：树突分支可近乎独立地处理输入并具有非线性，树突抑制可以非常局部地作用（甚至通过突触前受体或直接靶向棘突来逐个兴奋突触施控），以及突触在树突分支上聚簇的解剖与生理证据。四条贡献分别是：其一，在单神经元层面刻画分支特异去抑制如何高效门控树突兴奋输入；其二，在受实验数据约束的中间神经元回路模型中检验该机制在密集连接限制下是否可行；其三，用可塑性模型说明对齐关系可以自发形成；其四，把机制放进一个情境依赖决策任务中作为概念验证。作者明确把工作定位为「用计算建模探索树突去抑制的功能角色」，因此全部证据类型都是模型内的性质，不含新实验。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E02",
+          "page": 1,
+          "quote": "a pathway can be gated-on by a disinhibitory circuit motif",
+          "status": "matched"
+        },
+        {
+          "id": "E11",
+          "page": 2,
+          "quote": "We hypothesize that excitatory inputs from different pathways can cluster onto parts of dendrites of pyramidal neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E13",
+          "page": 2,
+          "quote": "Each of the many branches of a pyramidal dendrite processes its inputs quasi-independently",
+          "status": "matched"
+        },
+        {
+          "id": "E12",
+          "page": 2,
+          "quote": "even though the connectivity from SOM neurons to pyramidal neurons is dense",
+          "status": "matched"
+        },
+        {
+          "id": "E90",
+          "page": 2,
+          "quote": "This hypothesis is supported by mounting evidence for synaptic clustering on dendritic branches",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "title": "可检验预测，以及什么结果会削弱它",
+      "claim": "作者给出的最直接预测是细胞类型的：SOM 神经元在某些情境依赖或规则依赖的任务中应表现出情境／规则选择性（p.9）；更反直觉的是，只要 SOM 神经元直接接受情境选择性的兴奋性控制输入，VIP 神经元就不必具情境选择性（p.9）。因此削弱条件一：若在任务切换范式中测不到 SOM 神经元的亚群选择性变化，而只有群体均一的活动，则「SOM 承担情境选择」这一支不成立。第二个预测是回路层的：抑制这些情境选择性的中间神经元应损害动物执行情境或规则依赖选择任务的能力（p.9），若操纵后行为不受影响，则该机制在行为上不必需。第三个预测更细：若对锥体细胞树突做在体膜片钳记录、分离单个分支上的抑制电流（p.10），应能看到分支特异的抑制分布；若抑制在分支间高度均匀，则树突门控的前提不成立。第四个是行为学层面的定量预测：在模型中无关通路的影响应在相关信息更模糊时更强（p.8），这是一个不依赖任何自由参数即可检验的方向性预测。此外，作者自己指出反向证据：某项小鼠前额叶听觉辨别任务中发现 SOM 与 VIP 群体内反应高度均一，因此情境选择性并非在每个行为任务中都存在——这既是本文的自我限制，也提示实验结果需要按任务条件解读。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E72",
+          "page": 9,
+          "quote": "One of the most straightforward and testable predictions is that SOM neurons should show context/rule selectivity in some context-dependent or rule-based tasks",
+          "status": "matched"
+        },
+        {
+          "id": "E73",
+          "page": 9,
+          "quote": "Surprisingly, we found that VIP neurons need not be context-selective, as long as SOM neurons are directly receiving context-selective excitatory control inputs",
+          "status": "matched"
+        },
+        {
+          "id": "E74",
+          "page": 9,
+          "quote": "The context-selectivity of SOM or VIP neurons is not necessarily present in every behavioural task",
+          "status": "matched"
+        },
+        {
+          "id": "E75",
+          "page": 9,
+          "quote": "Experimental disruption of these context-selective interneurons should impair the animal's ability to perform context- or rule-dependent choice tasks",
+          "status": "matched"
+        },
+        {
+          "id": "E85",
+          "page": 10,
+          "quote": "It is however unknown whether SOM-mediated inhibition is also branch-specific",
+          "status": "matched"
+        },
+        {
+          "id": "E54",
+          "page": 8,
+          "quote": "Our model shows that the impact of the irrelevant information should be stronger when the relevant information is more ambiguous",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "单神经元模型与门控的物理原理",
+      "claim": "模型分两个层次。第一层是简化多房室脉冲神经元模型：一个胞体室加多个树突室，树突室之间不直接耦合而只通过胞体耦合，室本身无空间延展；作者说这是受「不同树突分支可彼此独立整合局部输入」这一既往研究启发的。关键技术点是 NMDA 平台电位：由于电压依赖的镁阻断解除，NMDAR 输入可使树突膜电位非线性甚至陡峭地上升，于是树突平均膜电位对 Poisson 输入速率呈 S 形。施加作用于同一树突的适度 GABA_A 抑制即可阻止平台电位；作者进一步指出抑制对这条非线性的控制特别有效，前提是兴奋输入由带实验观测饱和的 NMDAR 介导，与 AMPAR 介导或无饱和的 NMDAR 形成鲜明对比。低强度抑制还会因随机进出平台电位而把膜电位—输入速率关系线性化。结论是：兴奋输入到一根树突分支可以被抑制高效门控。生理参数按 Nevian 等的体外数据标定（单突触树突 EPSP 1 mV 传到胞体衰减到约 0.05 mV；树突 NMDA 平台电位在胞体引起约 10 mV 峰去极化），并在需要时切换到在体参数集（胞体—树突耦��减至五分之一，并加入 500 Hz 的 AMPAR 背景与 150 Hz 的 GABAR 背景以逼近兴奋—抑制平衡的基线发放率约 3 Hz）。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E14",
+          "page": 3,
+          "quote": "The NMDA plateau potential is a regenerative event in which the membrane potential increases nonlinearly and sometimes sharply",
+          "status": "matched"
+        },
+        {
+          "id": "E15",
+          "page": 3,
+          "quote": "The NMDA plateau potential can be prevented by applying a moderate synaptic inhibition",
+          "status": "matched"
+        },
+        {
+          "id": "E16",
+          "page": 3,
+          "quote": "Inhibition is particularly effective in controlling this dendritic nonlinearity when excitatory inputs are mediated by NMDARs with experimentally observed saturation",
+          "status": "matched"
+        },
+        {
+          "id": "E17",
+          "page": 3,
+          "quote": "Therefore, excitatory inputs to a dendritic branch can be efficiently gated by inhibition",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "评价指标与计算策略：门控选择性与率模型",
+      "claim": "评价门控的指标是门控选择性 (gating selectivity)：神经元对某条通路最优刺激的发放率在通路被打开时为 ron、被关闭时为 roff，选择性 = (ron − roff)/(ron + roff)，取值 0 表示没有门控、1 表示完美门控。作者特意指出这一量「could be readily measured experimentally」，这使模型指标与在体可测量之间存在接口。计算上作者开发了一个多房室率模型，用以「greatly improves the efficiency of the circuit model simulation」，该率模型由脉冲模型的数据拟合而来：树突时间平均电压被写成总兴奋输入电导的 S 形函数，其中半幅点与总抑制电导加漏电导成正比、宽度随抑制指数增长以刻画稀疏抑制带来的线性化；胞体发放率写成输入电流的幂律函数。这一点对解读结果很关键：Figs 3–6 的全部回路级数字都出自在体参数下标定过的这个率模型，而不是直接来自脉冲模型；因此回路级结论继承了两层近似（形态简化与率模型替代），本文没有给出率模型与脉冲模型在回路规模下的误差对照。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E18",
+          "page": 4,
+          "quote": "which ranges from 0 (no gating) to 1 (perfect gating)",
+          "status": "matched"
+        },
+        {
+          "id": "E19",
+          "page": 4,
+          "quote": "greatly improves the efficiency of the circuit model simulation",
+          "status": "matched"
+        },
+        {
+          "id": "E62",
+          "page": 10,
+          "quote": "Typically, the gating selectivity is 0.5 or lower",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "回路模型的结构、约束数据与「最坏情形」假设",
+      "claim": "第二层是中间神经元回路模型：约 3000 个锥体细胞、160 个 SOM、140 个 VIP、200 个 PV，锥体细胞通常有 30 根树突，尺度约相当于一个 L2/3 皮层柱。作者对「没有数据的地方」统一采用「最坏情形」假设：VIP→SOM 与 SOM→树突的连接完全随机，并说明这「most likely not the case」且任何结构性只会让机制更容易成立。具体地，SOM 神经元在默认状态发放约 10 Hz 以关闭所有门；打开某条通路时抑制随机选取的 50% 的 SOM 神经元；同时假设该通路的兴奋输入模式与对应的去抑制模式对齐。SOM→树突的连接不是按固定概率独立抽取，而是设定每根树突恰好被 NSOM→dend 个 SOM 神经元靶向，使默认状态下每根树突得到的净抑制相同。需要指出的是，Methods 明确写出「the connection probability from VIP to SOM neurons on a column scale is unknown」（p.12），因此 VIP→SOM 的取值（控制只打 VIP 时 0.1，同时打 VIP 与 SOM 时 0.6）属于假设而非实测。作者对缺环的说明是模型只含回答问题所必需的最小成分，缺失的包括锥体到中间神经元与 SOM→VIP 的连接。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E21",
+          "page": 5,
+          "quote": "In a default state, SOM neurons fire at a relatively high baseline rate around 10 Hz",
+          "status": "matched"
+        },
+        {
+          "id": "E22",
+          "page": 5,
+          "quote": "we assume for now that control input for each pathway suppresses a random subset of SOM neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E23",
+          "page": 4,
+          "quote": "We considered 'worst-case' conditions in which interneuronal connectivity is completely random",
+          "status": "matched"
+        },
+        {
+          "id": "E24",
+          "page": 12,
+          "quote": "the connection probability from VIP to SOM neurons on a column scale is unknown",
+          "status": "matched"
+        },
+        {
+          "id": "E25",
+          "page": 12,
+          "quote": "we assume that each dendrite is targeted by precisely NSOM-dend SOM neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E26",
+          "page": 9,
+          "quote": "Our model contains only the minimal elements to answer this question",
+          "status": "matched"
+        },
+        {
+          "id": "E27",
+          "page": 9,
+          "quote": "among the missing connections are the pyramidal-to-interneuron and the SOM-to-VIP connections",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "可塑性模型与行为模型的拟合策略",
+      "claim": "对齐关系的来源用基于钙的可塑性模型检验：突触前与突触后发放都引起树突钙瞬变，钙水平在抑制阈值与增强阈值之上停留的时间决定权重变化，模型参数按实验数据标定并能预测未参与拟合的数据点。行为模型包含两部分：混合选择的感知网络（运动与颜色通路汇聚，按四组偏好分池，使用 Fig. 5d 的随机连接、控制同时打 VIP 与 SOM 的方案）与一个两池率模型的决策网络（强递归、胜者通吃）。整套模型只有三个自由参数——投射到决策网络的感觉神经元比例、输入通路到感知网络的连接强度、感知网络到决策网络的连接强度，按猕猴分别拟合。方法的诚实之处在于作者明说用于拟合的数据远不充分、这些拟合值「do not reflect our estimates of these quantities in the brain」，它们只用来展示「proposed circuit architecture can potentially capture behavioural performance」；此外还有一处本文未报告：全部模型的随机种子、重复次数与误差估计。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E56",
+          "page": 8,
+          "quote": "A subset of pyramidal neurons with high gating selectivity projects to the decision network",
+          "status": "matched"
+        },
+        {
+          "id": "E66",
+          "page": 13,
+          "quote": "the data used to fit the model are far from being sufficient",
+          "status": "matched"
+        },
+        {
+          "id": "E67",
+          "page": 13,
+          "quote": "these fitted parameter values do not reflect our estimates of these quantities in the brain",
+          "status": "matched"
+        },
+        {
+          "id": "E53",
+          "page": 8,
+          "quote": "By fitting these three parameters, we obtained a quantitative match of the empirical psychometric performance",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "单神经元层面：门控如何工作，以及它为何不是开关",
+      "claim": "在单神经元模型中，默认条件下所有树突分支都接受树突靶向 SOM 神经元的高基线抑制，所有通路的门都是关的。解除某条通路所靶向分支的抑制后，该通路被打开而其他通路保持关闭，神经元的输出发放率随即传递出该通路的刺激选择性（Fig. 2e）。当两条通路同时被激活时，可以画出神经元的二维调节曲线：默认条件下两条通路都关闭时，神经元对任一刺激特征都只有很弱的响应；打开通路 1 的门时，响应主要被通路 1 的刺激特征主导。作者同时点明了残余效应：通路 2 仍有一点影响，因为「the impact of excitatory inputs can never be fully counteracted by dendritic inhibition」。这一点直接决定了后续所有门控选择性都达不到 1，也解释了为什么本文的机制被称为「非线性但非二元」。此外作者说明，若一部分兴奋输入改由 AMPAR 介导则门控变差，若一部分抑制改由 GABABR 介导则门控变好；出于简约考虑，后文兴奋输入只用 NMDAR、抑制输入只用 GABA_A。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E30",
+          "page": 4,
+          "quote": "branches receive a high baseline inhibition from dendrite-targeting SOM neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E31",
+          "page": 4,
+          "quote": "The remaining impact of pathway 2 stimuli is due to the fact that the impact of excitatory inputs can never be fully counteracted by dendritic inhibition",
+          "status": "matched"
+        },
+        {
+          "id": "E61",
+          "page": 10,
+          "quote": "The gating mechanism as studied here is nonlinear but not binary",
+          "status": "matched"
+        },
+        {
+          "id": "E62",
+          "page": 10,
+          "quote": "Typically, the gating selectivity is 0.5 or lower",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "稀疏度是单神经元层面的决定因素",
+      "claim": "在单神经元设定下，每条通路随机靶向 Ndend 根树突中的 Ndisinh 根，打开该通路的门就是去抑制这同一组树突，因而不同通路的兴奋—去抑制模式会重叠。结果是门控选择性「depends critically on the sparseness of the disinhibition」：去抑制模式越稀疏，选择性越高，原因是接收重叠输入的树突比例下降。在 Ndisinh/Ndend → 0 的非重叠极限下选择性最高，但仍然低于 1，原因还是被抑制树突上残余的输入影响；此外选择性还随去抑制水平（强度）提高而升高。这一结果的含义是双向的：一方面它把「树突数量」与「每条通路占用几根树突」变成可调的旋钮；另一方面它意味着门控选择性被树突分支数硬性封顶——作者在讨论中明确指出锥体细胞只有约二十几根准独立计算单元，这构成该机制的上限。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E32",
+          "page": 4,
+          "quote": "gating selectivity depends critically on the sparseness of the disinhibition",
+          "status": "matched"
+        },
+        {
+          "id": "E33",
+          "page": 4,
+          "quote": "Gating selectivity improves when disinhibition patterns are sparsened, because the proportion of dendrites that receive overlapping inputs is reduced",
+          "status": "matched"
+        },
+        {
+          "id": "E34",
+          "page": 4,
+          "quote": "the gating selectivity is highest but below 1, due to the remaining impact of inputs targeting inhibited dendrites",
+          "status": "matched"
+        },
+        {
+          "id": "E63",
+          "page": 10,
+          "quote": "Gating selectivity is also limited by the number of dendritic branches",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "回路层面：密集连接下的可行性与唯一关键参数",
+      "claim": "这是本文最实质的回路级结果。在「最坏情形」的完全随机连接下，作者「Surprisingly」发现仍可获得相当高的门控性能，电路级平均门控选择性约 0.5，等价于 ron 约为 roff 的三倍。作者随后把这一结果压缩成一个关键参数：每根树突被多少个 SOM 神经元靶向（NSOM→dend），在实测的 PSOM→pyr ≈ 0.6、Ndend ≈ 30、NSOM ≈ 160 下约为 5。扫描显示，只要把 NSOM→dend 固定住，锥体细胞数、树突数、SOM 数量与连接概率的影响都很弱；而当 NSOM→dend 增大时选择性下降，即每根树突被越多 SOM 神经元覆盖就越难实现分支特异去抑制。作者补充了一个会加强结论的观察：每根树突更应被理解为独立的计算单元，若抑制是通过突触前受体或直接靶向棘突来逐个兴奋突触施加的，单元就退化为单个突触，NSOM→dend 随之下降，选择性反而更高。作者也指出随机选取抑制的 50% SOM 神经元会使不同通路的去抑制模式相互重叠，而这种重叠可以用结构化连接或抑制可塑性来减少。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E35",
+          "page": 4,
+          "quote": "Surprisingly, we found that relatively high gating performance is achievable under these conditions",
+          "status": "matched"
+        },
+        {
+          "id": "E36",
+          "page": 5,
+          "quote": "the circuit achieves a mean gating selectivity",
+          "status": "matched"
+        },
+        {
+          "id": "E37",
+          "page": 5,
+          "quote": "the impact of these circuit parameters is determined by one critical parameter: the number of SOM neurons targeting each dendrite",
+          "status": "matched"
+        },
+        {
+          "id": "E38",
+          "page": 5,
+          "quote": "When we vary parameters while keeping NSOM-dend fixed, the gating selectivity remains largely constant",
+          "status": "matched"
+        },
+        {
+          "id": "E39",
+          "page": 5,
+          "quote": "gating selectivity is highest when NSOM-dend is small",
+          "status": "matched"
+        },
+        {
+          "id": "E40",
+          "page": 5,
+          "quote": "Each dendrite should more appropriately be interpreted as an independent computational unit",
+          "status": "matched"
+        },
+        {
+          "id": "E41",
+          "page": 5,
+          "quote": "This overlap can be reduced with either structured connections or inhibitory plasticity",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "控制方案的选择性要求与 PV 的贡献",
+      "claim": "作者比较了两种控制方案。第一种是控制输入只打 VIP 神经元：此时门控选择性高只在被控制输入命中的 VIP 比例很小时才出现，意味着「VIP neurons must be context-selective, and VIP-to-SOM connections need to be sparse」；作者指出 VIP 轴突分布空间受限，因此 VIP→SOM 在柱面尺度上可能确实稀疏。第二种是控制输入同时打 VIP 与 SOM 神经元：此时选择性不再依赖被命中的 VIP 比例，而只依赖被命中的 SOM 比例，也不依赖 VIP→SOM 的连接概率；结论是「SOM neurons need to be context-selective, but VIP neurons need not be」。两种方案相比，同时打 VIP 与 SOM 能在宽得多的参数范围内取得高选择性，从而显著降低对控制输入特异性的要求。加入 PV 神经元后，抑制 SOM 会去抑制 PV、进而增强对锥体细胞的胞体抑制；这一改动「strictly improve gating selectivity in a wide range of parameters」。作者的直觉解释是：门控选择性基于开与关两种状态发放率的相对差，而在这两种状态下施加相同的胞体抑制，等效于从两个数里减去同一个常数，从而放大相对差；并称已证明均匀的胞体抑制总会改善选择性，除非胞体抑制强到不合理。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E42",
+          "page": 5,
+          "quote": "Gating selectivity is high only if a small proportion of VIP neurons is targeted by control",
+          "status": "matched"
+        },
+        {
+          "id": "E43",
+          "page": 5,
+          "quote": "indicating that VIP neurons must be context-selective, and VIP-to-SOM connections need to be sparse",
+          "status": "matched"
+        },
+        {
+          "id": "E44",
+          "page": 6,
+          "quote": "gating selectivity no longer depends on the proportion of VIP neurons targeted by control inputs, but does depend on the proportion of SOM neurons targeted",
+          "status": "matched"
+        },
+        {
+          "id": "E45",
+          "page": 6,
+          "quote": "Therefore, SOM neurons need to be context-selective, but VIP neurons need not be",
+          "status": "matched"
+        },
+        {
+          "id": "E46",
+          "page": 6,
+          "quote": "Suppression of SOM neurons therefore also leads to the disinhibition of PV neurons and an increase of somatic inhibition onto pyramidal neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E47",
+          "page": 6,
+          "quote": "this inclusion and the consequent increase in somatic inhibition strictly improve gating selectivity in a wide range of parameters",
+          "status": "matched"
+        },
+        {
+          "id": "E50",
+          "page": 7,
+          "quote": "we proved that a uniform increase in somatic inhibition will always improve gating selectivity, except when the somatic inhibition is unreasonably strong",
+          "status": "matched"
+        },
+        {
+          "id": "E51",
+          "page": 7,
+          "quote": "Providing an equal amount of somatic inhibition in these two conditions is equivalent to subtracting both values by the same constant, which will enhance the relative difference",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "学习：去抑制调控的可塑性如何生成兴奋—去抑制对齐",
+      "claim": "作者指出对齐关系是整个方案的关键特征，因为被某通路兴奋输入靶向的树突，必须在该通路开门时恰好被去抑制。既然树突去抑制可以调控突触可塑性，对齐就可能作为受调控可塑性的副产品而出现。模型结果显示，树突抑制能在突触前兴奋输入速率与突触后发放率都保持不变的情况下把可塑性从增强推到抑制，作者指出仅依赖突触前后神经元发放的可塑性模型根本预测不到这种抑制性调制。学习范式中，各通路的兴奋突触起初均匀分布在所有分支上，每次只激活一条通路并只对该通路的分支去抑制，于是被去抑制分支上的激活突触被增强、被抑制分支上的被抑制，未激活的突触权重不变。学习后兴奋与去抑制模式对齐，支持通路特异门控，门控选择性约 0.7。作者由此把该结果表述为：门控架构的关键方面可以「emerge naturally from the interaction between excitatory synaptic plasticity and context-dependent disinhibition」。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E48",
+          "page": 7,
+          "quote": "We found that dendritic inhibition can shift the plasticity from potentiation to depression, even when the pre-synaptic excitatory input rate and the post-synaptic firing rate are both kept constant",
+          "status": "matched"
+        },
+        {
+          "id": "E49",
+          "page": 7,
+          "quote": "plasticity models based solely on pre- and post-synaptic neuronal firing would not predict the inhibitory modulation of synaptic plasticity",
+          "status": "matched"
+        },
+        {
+          "id": "E52",
+          "page": 8,
+          "quote": "the alignment of excitation and disinhibition patterns can emerge naturally from the interaction between excitatory synaptic plasticity and context-dependent disinhibition",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "行为层面：情境依赖决策任务",
+      "claim": "最后作者把机制用于一项情境依赖决策任务：被试的行为反应应基于随机点运动刺激的运动方向还是颜色，取决于规则信号提示的情境。模型包含感知网络（运动与颜色通路汇聚的四组感觉神经元池，其树突受 VIP–SOM 回路控制，其中门控选择性最高的一部分神经元投射到决策网络）与决策网络（强递归、基于输入产生胜者通吃决策的两池率模型）。用三个自由参数拟合猕猴心理物理数据后，模型在相关特征与无关特征上均得到定量吻合。模型给出一个不依赖拟合的方向性预测：无关信息的影响应在相关信息更模糊时更强。此外作者给出一个稳健性陈述：若显著降低神经门控选择性，则无论怎样设这组参数都无法拟合行为表现，因此「这一模拟构成一个概念验证」，用来说明树突去抑制作为通路门控机制的潜力，以及用神经门控选择性评估其行为效用的途径。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E53",
+          "page": 8,
+          "quote": "By fitting these three parameters, we obtained a quantitative match of the empirical psychometric performance",
+          "status": "matched"
+        },
+        {
+          "id": "E54",
+          "page": 8,
+          "quote": "Our model shows that the impact of the irrelevant information should be stronger when the relevant information is more ambiguous",
+          "status": "matched"
+        },
+        {
+          "id": "E55",
+          "page": 8,
+          "quote": "it can no longer fit the empirical performance if we significantly degrade the neural gating selectivity",
+          "status": "matched"
+        },
+        {
+          "id": "E56",
+          "page": 8,
+          "quote": "A subset of pyramidal neurons with high gating selectivity projects to the decision network",
+          "status": "matched"
+        },
+        {
+          "id": "E57",
+          "page": 8,
+          "quote": "the impact of the irrelevant pathway (colour) is strongest when the relevant pathway signal is weak",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "逐项对照：主张、直接证据与可支持的表述",
+      "claim": "主张一「密集抑制连接不妨碍分支特异门控」，直接证据是在完全随机连接下取得约 0.5 的平均门控选择性，并识别出 NSOM→dend 为唯一关键参数；可支持的表述是：在 SOM→树突连接随机、每根树突被约 5 个 SOM 神经元覆盖的条件下，分支特异去抑制可以达到中等门控选择性。差异类型为「一致」，但附带一个必须一并写出的条件：同一段分析在 Fig. 3 指出，当不同通路的去抑制模式重叠较多时选择性会明显下降，而回路模型正是用随机选取 50% SOM 神经元来制造重叠。主张二「对齐可由可塑性习得」，直接证据是学习后门控选择性升到约 0.7；可支持的表述是：在作者设定的学习协议下（每次只激活一条通路、只对该通路的分支去抑制、抑制强度取本文一贯使用的现实水平），对齐可以形成。差异类型为「范围不同」：这是单神经元、稳态、无循环兴奋的条件性结果，不是回路级涌现。主张三「可解释行为表现」，直接证据是三个自由参数对猕猴心理物理数据的定量吻合；可支持的表述是：这套回路架构足以复现该任务的行为表现。差异类型为「证据不足」——拟合优度在此类模型中几乎不能约束机制本身，作者本人也说这些参数值不能被读作脑内的估计。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E35",
+          "page": 4,
+          "quote": "Surprisingly, we found that relatively high gating performance is achievable under these conditions",
+          "status": "matched"
+        },
+        {
+          "id": "E37",
+          "page": 5,
+          "quote": "the impact of these circuit parameters is determined by one critical parameter: the number of SOM neurons targeting each dendrite",
+          "status": "matched"
+        },
+        {
+          "id": "E38",
+          "page": 5,
+          "quote": "When we vary parameters while keeping NSOM-dend fixed, the gating selectivity remains largely constant",
+          "status": "matched"
+        },
+        {
+          "id": "E52",
+          "page": 8,
+          "quote": "the alignment of excitation and disinhibition patterns can emerge naturally from the interaction between excitatory synaptic plasticity and context-dependent disinhibition",
+          "status": "matched"
+        },
+        {
+          "id": "E53",
+          "page": 8,
+          "quote": "By fitting these three parameters, we obtained a quantitative match of the empirical psychometric performance",
+          "status": "matched"
+        },
+        {
+          "id": "E66",
+          "page": 13,
+          "quote": "the data used to fit the model are far from being sufficient",
+          "status": "matched"
+        },
+        {
+          "id": "E67",
+          "page": 13,
+          "quote": "these fitted parameter values do not reflect our estimates of these quantities in the brain",
+          "status": "matched"
+        },
+        {
+          "id": "E89",
+          "page": 9,
+          "quote": "These connections are unlikely to influence our results, since none affect our essential requirements",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "最关键的条件性：电路级结果以对齐为前提",
+      "claim": "全文最需要读者注意的一处结构性问题，是第 4 页明写的一句：单神经元层面的分析「we assume an alignment of excitation and disinhibition patterns, which can be achieved through synaptic plasticity as shown later」。也就是说，Figs 3–6 的全部回路级数字——包括 0.5 的平均选择性、NSOM→dend 的关键性、VIP 与 SOM 选择性要求的对比、以及 PV 的改善作用——都建立在「兴奋输入模式与去抑制模式已对齐」这一被当作给定的条件上，而对齐本身是本文要解释的第三项要求；Fig. 7 只表明对齐是可习得的，并未表明它必然发生。因此本卡的判断是：本文证明的是「在已对齐的条件下，密集抑制连接下门控仍然可行」以及「在特定学习协议下对齐可以形成」，而不是「门控与对齐在真实皮层中会自发同时出现」。与之相关的一处印刷不一致也应记录：关键参数 NSOM→dend 的公式在第 5 页正文与 Fig. 4b 图注中为 NSOM × [1 − (1 − PSOM→pyr)^(1/Ndend)]，而第 12 页 Methods 式 (28) 印为 NSOM × [1 − (1 − PSOM→pyr)^Ndend]；代入论文自己的参数，前者算得约 5 并与正文报告的数值一致，后者算得约 160，故 Methods 版指数应为排印问题。凡引用该公式者须注明版本。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E70",
+          "page": 12,
+          "quote": "Given the connection probability from SOM to pyramidal neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E71",
+          "page": 5,
+          "quote": "Given experimental measurements of PSOM-pyr",
+          "status": "matched"
+        },
+        {
+          "id": "E88",
+          "page": 4,
+          "quote": "we assume an alignment of excitation and disinhibition patterns, which can be achieved through synaptic plasticity as shown later",
+          "status": "matched"
+        },
+        {
+          "id": "E38",
+          "page": 5,
+          "quote": "When we vary parameters while keeping NSOM-dend fixed, the gating selectivity remains largely constant",
+          "status": "matched"
+        },
+        {
+          "id": "E41",
+          "page": 5,
+          "quote": "This overlap can be reduced with either structured connections or inhibitory plasticity",
+          "status": "matched"
+        },
+        {
+          "id": "E52",
+          "page": 8,
+          "quote": "the alignment of excitation and disinhibition patterns can emerge naturally from the interaction between excitatory synaptic plasticity and context-dependent disinhibition",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "作者自身承认的范围差异与被低估的贡献",
+      "claim": "作者对自己结论的限定写得相当坦白，这些限定应与结论同等引用。其一，门控「nonlinear but not binary」，典型选择性为 0.5 或更低而完美门控应为 1；原因是分流抑制下树突膜电位仍能被突触输入抬高并影响胞体。差异类型为「作者明确弱于可能的读法」，读者容易把「门控」理解成开关，本文不是。其二，选择性受限于锥体细胞约二十几根准独立计算单元，并且「Only in the limit of one dendrite per pyramidal neuron does our mechanism become conceptually similar to gating mechanisms operating on the neuronal level」——即只有当每根锥体细胞只剩一根树突时，本机制才在概念上等同于群体层面的门控。其三，与既有模型的关系：作者指出这些提案「most of these models implement a form of soft gating」，而本文的贡献正是在于用树突与专门的中间神经元类型去实现同样的软门控，并因此在神经元数量上省下数倍。差异类型为「一致但属增量」。其四，作者提出三种机制可能共同贡献门控功能，这与「本机制是主导机制」的主张不冲突。综合看，本文最强的一环是把「密集连接」这一看似致命的前提转化成一个可量化的关键参数并证明其可满足，最弱的一环是对齐前提的循环性以及行为拟合几乎不构成机制证据这一点。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E61",
+          "page": 10,
+          "quote": "The gating mechanism as studied here is nonlinear but not binary",
+          "status": "matched"
+        },
+        {
+          "id": "E62",
+          "page": 10,
+          "quote": "Typically, the gating selectivity is 0.5 or lower",
+          "status": "matched"
+        },
+        {
+          "id": "E63",
+          "page": 10,
+          "quote": "Gating selectivity is also limited by the number of dendritic branches",
+          "status": "matched"
+        },
+        {
+          "id": "E64",
+          "page": 10,
+          "quote": "Only in the limit of one dendrite per pyramidal neuron does our mechanism become conceptually similar to gating mechanisms operating on the neuronal level",
+          "status": "matched"
+        },
+        {
+          "id": "E65",
+          "page": 10,
+          "quote": "most of these models implement a form of soft gating, which modulates the effective strength of incoming pathways instead of performing a binary on-off switch on them",
+          "status": "matched"
+        },
+        {
+          "id": "E83",
+          "page": 10,
+          "quote": "Harnessing dendrites rather than populations of intermediate neurons saves the number of neurons needed by manyfold",
+          "status": "matched"
+        },
+        {
+          "id": "E84",
+          "page": 10,
+          "quote": "Multiple mechanisms may jointly contribute to gating function",
+          "status": "matched"
+        },
+        {
+          "id": "E92",
+          "page": 9,
+          "quote": "Our alternative proposal is fundamentally grounded in consideration of dendritic branches as functional units of computation",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "title": "可检验的预测与最直接的实验路径",
+      "claim": "本文留下的可操作预测主要有三层，按可检验程度排序。最强的是对实验设计的要求最具体的一层：在任务切换范式中考察不同通路进入联结皮层区时的门控与 SOM 亚群的选择性变化（p.9）；以及「对锥体细胞树突做在体膜片钳以分离单个分支上的抑制电流」这一直接检验（p.10）。作者自评这一实验「technically difficult at present」，因此它同时是最有价值的与最困难的。次强的是细胞类型层面：SOM 神经元应在某些情境或规则任务中表现出情境／规则选择性，而 VIP 神经元不必具情境选择性（p.9）——后者是一个可以与前人关于 VIP 群体均一性的结果正面区分的判据，因为若只打 VIP 的方案成立，VIP 的活动本就不应随情境分化。第三层是行为层面：无关通路的影响应在相关信息更模糊时更强（p.8），这不依赖任何拟合参数，可直接用心理物理数据检验。此外作者建议研究三项要求中哪一项对门控最敏感，并指出三项要求只需「fulﬁlled to a certain degree」，例如树突抑制需要有效调控但不必完全取消兴奋输入的影响——这实际上给出了一个可调的实验操纵量。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E72",
+          "page": 9,
+          "quote": "One of the most straightforward and testable predictions is that SOM neurons should show context/rule selectivity in some context-dependent or rule-based tasks",
+          "status": "matched"
+        },
+        {
+          "id": "E73",
+          "page": 9,
+          "quote": "Surprisingly, we found that VIP neurons need not be context-selective, as long as SOM neurons are directly receiving context-selective excitatory control inputs",
+          "status": "matched"
+        },
+        {
+          "id": "E75",
+          "page": 9,
+          "quote": "Experimental disruption of these context-selective interneurons should impair the animal's ability to perform context- or rule-dependent choice tasks",
+          "status": "matched"
+        },
+        {
+          "id": "E77",
+          "page": 9,
+          "quote": "It would be of interest to investigate which requirements pathway-specific gating is most sensitive to",
+          "status": "matched"
+        },
+        {
+          "id": "E78",
+          "page": 9,
+          "quote": "A direct test of our model awaits future experiments in a task-switching paradigm",
+          "status": "matched"
+        },
+        {
+          "id": "E79",
+          "page": 10,
+          "quote": "Direct patch-clamping of pyramidal neuron dendrites in vivo",
+          "status": "matched"
+        },
+        {
+          "id": "E85",
+          "page": 10,
+          "quote": "It is however unknown whether SOM-mediated inhibition is also branch-specific",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "title": "替代解释与区分检验",
+      "claim": "替代解释一：门控的选择性其实来自树突抑制的非线性本身，而非「分支特异」的对齐。机制预期是：若成立，则把两条通路的靶向树突人为完全重叠、但保持去抑制模式不变，选择性应保持不变；而本文的模型预测会下降。区分检验是在单神经元模型中固定去抑制模式、系统扫描两条通路靶向树突的重叠度——这正是 Fig. 3 做的扫描，而它得到了选择性随重叠上升而下降的结果，因此该替代解释被作者的证据部分排除，但排除范围限于模型内。替代解释二：观察到的门控其实由胞体侧的整合（而非树突侧）承担。机制预期是：若成立，则去掉树突—胞体耦合并改变胞体兴奋性不应改变选择性。区分检验是把胞体—树突耦合并降到接近零，或加入 PV 的胞体抑制并单独扫描，作者的结果显示加入胞体抑制反而提高选择性（与替代预测相反），因此这一解释不太可能。替代解释三：对齐不是习得的，而是被强加的。机制预期是：若对齐只是被假定，则在无学习、只有随机权重的条件下，Fig. 7e 的强通路选择性不应出现；区分检验是把塑性关掉再测选择性——本文未做这一对照（本文未报告），这是最容易补上的一项检验，也是判断「学习是否必要」的最小实验。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E33",
+          "page": 4,
+          "quote": "Gating selectivity improves when disinhibition patterns are sparsened, because the proportion of dendrites that receive overlapping inputs is reduced",
+          "status": "matched"
+        },
+        {
+          "id": "E41",
+          "page": 5,
+          "quote": "This overlap can be reduced with either structured connections or inhibitory plasticity",
+          "status": "matched"
+        },
+        {
+          "id": "E47",
+          "page": 6,
+          "quote": "this inclusion and the consequent increase in somatic inhibition strictly improve gating selectivity in a wide range of parameters",
+          "status": "matched"
+        },
+        {
+          "id": "E52",
+          "page": 8,
+          "quote": "the alignment of excitation and disinhibition patterns can emerge naturally from the interaction between excitatory synaptic plasticity and context-dependent disinhibition",
+          "status": "matched"
+        },
+        {
+          "id": "E48",
+          "page": 7,
+          "quote": "We found that dendritic inhibition can shift the plasticity from potentiation to depression, even when the pre-synaptic excitatory input rate and the post-synaptic firing rate are both kept constant",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "title": "局限清单与最关键的待补材料",
+      "claim": "作者自陈的局限有三类：回路模型只含回答问题所需的最小成分，缺失锥体到中间神经元与 SOM→VIP 的连接；锥体细胞的循环兴奋是否干扰基于可塑性的对齐尚未测试；由于聚焦稳态行为，未模拟突触动力学与短时程可塑性。除此以外还有几项本文未报告但影响解读的事项：本文未报告随机种子、每组重复次数与显著性检验（门控选择性曲线只以「均值 + 底部 10% 至顶部 10% 阴影」呈现）；SOM→树突连接在本文中按「每根树突恰好被 NSOM→dend 个 SOM 靶向」的规则设定，因此默认状态下每根树突的净抑制被强制相同，这在真实皮层中未必成立；VIP→SOM 的连接概率在柱面尺度上明确未知，其取值是假设。最关键的待补材料按优先级是：其一，Supplementary Figs 1–8 与 Notes 1–2（本文的六处以上论证依赖它们，其中 Note 1、Note 2 是关于胞体抑制必然改善门控选择性的证明）；其二，代码仓库（github.com/gyyang/DisinhibitoryCircuit2016）的运行结果，以确认文中全部数值；其三，本文自己提出的实验：树突在体膜片钳测量分支特异抑制电流、以及任务切换范式中 SOM 亚群的选择性。就引用范围而言，可以直接引用的是机制骨架（VIP→SOM→锥体树突的去抑制链、门控选择性的定义、NSOM→dend 作为关键参数、胞体抑制的改善作用与直觉解释）；需要加限定语引用的是「门控选择性约 0.5」与「可门控数百条信号」式的强表述（前者是非二元的上限，后者需注明对齐前提与同时存在的刺激数）；不宜当作已证实的则是「真实皮层就以树突去抑制做通路门控」以及任何把本文的环路级数字当作脑内测量值来使用的做法。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E26",
+          "page": 9,
+          "quote": "Our model contains only the minimal elements to answer this question",
+          "status": "matched"
+        },
+        {
+          "id": "E27",
+          "page": 9,
+          "quote": "among the missing connections are the pyramidal-to-interneuron and the SOM-to-VIP connections",
+          "status": "matched"
+        },
+        {
+          "id": "E28",
+          "page": 9,
+          "quote": "We did not model synaptic dynamics or short-term plasticity, because we focused on the steady-state behaviour",
+          "status": "matched"
+        },
+        {
+          "id": "E76",
+          "page": 9,
+          "quote": "It remains to be tested whether the pyramidal-to-pyramidal recurrent excitation will interfere with the plasticity-based induction of excitation-disinhibition alignment",
+          "status": "matched"
+        },
+        {
+          "id": "E87",
+          "page": 13,
+          "quote": "Code that supports the findings of this study is publicly available on Github",
+          "status": "matched"
+        },
+        {
+          "id": "E24",
+          "page": 12,
+          "quote": "the connection probability from VIP to SOM neurons on a column scale is unknown",
+          "status": "matched"
+        },
+        {
+          "id": "E25",
+          "page": 12,
+          "quote": "we assume that each dendrite is targeted by precisely NSOM-dend SOM neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E91",
+          "page": 9,
+          "quote": "much less is known experimentally about the dependence of inhibitory plasticity on pre- and post-synaptic spike timing",
+          "status": "matched"
+        }
+      ]
+    }
+  ]
+}

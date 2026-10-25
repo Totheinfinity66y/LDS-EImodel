@@ -1,0 +1,857 @@
+{
+  "source_sha256": "0e733a3e50581338b8c83a8f13d355c5110375cfa236f59c8b25b4d1687a2d88",
+  "claims": [
+    {
+      "step": 1,
+      "title": "研究类型、对象与输入输出",
+      "claim": "本文是一次纯计算模拟研究，没有新实验。对象是一个 10,000 单元的稀疏随机递归 LIF 网络，其自发自持的不规则异步活动被用作噪声源。要检验的问题是：在这个自带噪声的网络里，信号能不能真的被传下去。输入是作者注入的一层泊松发放（layer 0），输出是通路上第 1 到第 6 层神经元的群体发放率与 layer 0 之间的相似度。核心比较有两组：同一网络在「通路突触未改动 / 去极化 / 增益调制 / 突触增强」四种干预下的传播成败（Fig. 4），以及同一种网络里 rate 传播与 synfire 传播这两种模式的成败对比（Fig. 6、Fig. 7）。三个关键图表各自回答一件事：Fig. 4 回答哪种干预能打开传播，Fig. 5 回答打开传播需要多大的突触强度以及这个强度对输入速率是否敏感，Fig. 7 回答信号被打开之后传输质量有多好（相似度、时延、频率响应、多通路并行）。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E01",
+          "page": 1,
+          "quote": "but it is not clear how neural circuits support reliable and",
+          "status": "matched"
+        },
+        {
+          "id": "E02",
+          "page": 1,
+          "quote": "Two modes of propagation have been studied: synfire chains, in",
+          "status": "matched"
+        },
+        {
+          "id": "E03",
+          "page": 1,
+          "quote": "In both cases, it has proven surprisingly difficult to",
+          "status": "matched"
+        },
+        {
+          "id": "E05",
+          "page": 3,
+          "quote": "adjustments are made",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "title": "作者陈述的知识缺口",
+      "claim": "作者把缺口写得很明确：信号传播对认知功能是必要的，但神经回路如何在一个足够大的动态范围上支持可靠而准确的传播，「并不清楚」（E01）。具体到已有方法 they've 做到哪一步：两种传播模式都被研究过，但作者指出两者都很难构造出「稳定、稳健、动态范围宽到足以支撑显著信息流」的网络（E03），而且都必须大量加入噪声——synfire 需要噪声来阻止同步扩散到全网，rate 传播需要噪声来阻止携带信号的神经元自身同步。已有做法的具体缺陷也被点名：早期研究靠向所有神经元注入随机电流来提供噪声，这种外部噪声源虽然便于调参且与信号互不干扰，但「在生物学上不现实」。本文新增的是：把噪声换成网络内部自发的混沌活动，并在这种背景下同时检验两种传播模式与由通路交互产生的计算。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E01",
+          "page": 1,
+          "quote": "but it is not clear how neural circuits support reliable and",
+          "status": "matched"
+        },
+        {
+          "id": "E03",
+          "page": 1,
+          "quote": "In both cases, it has proven surprisingly difficult to",
+          "status": "matched"
+        },
+        {
+          "id": "E04",
+          "page": 1,
+          "quote": "However, an external source of noise is not biologically realistic.",
+          "status": "matched"
+        },
+        {
+          "id": "E06",
+          "page": 1,
+          "quote": "arise within the architecture of the random network through the strengthening of specific synapses.",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "title": "架构选择的含义，以及可检验的预测与削弱条件",
+      "claim": "作者的方法学选择限定了本文全部结论的适用范围：他们刻意不向前馈网络那样嵌入前馈结构，而是把信号喂进一组随机选出的神经元，在既有随机架构中搜索最可能的传输路径，再修改这条候选路径上的性质（E07、E08）。因此本文的主张是「在给定稀疏随机架构中通路存在且可被打开」，而不是「通路会自行形成」。由此得到三个可检验的预测及其削弱条件。预测一：若内部自发活动确实足以支撑传播，那么未经改动的网络应当传播失败、而选择性增强通路突触应当成功——削弱条件是两种网络都失败，或增强后出现全网同步（作者预告的失败模式）。预测二：若增益调制在本网络中有效，那么把通路神经元接收的全部突触一起增强应当能传播信号——E33 显示这一预测被作者自己的实验否定，因此本文的实际结论比这个预测更强也更具体。预测三：若六层传播可推广，那么更高连通度不应减少可用层数——E10 明确指出相反方向，说明六层是该架构下的上限附近而非任意深度。这三条里，第一条被 Fig. 4 直接检验，第二条被作者自己的结果推翻，第三条被作者以限定条件的形式承认。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E07",
+          "page": 2,
+          "quote": "we do not embed a feedforward",
+          "status": "matched"
+        },
+        {
+          "id": "E08",
+          "page": 2,
+          "quote": "of a sparsely and randomly connected network, not an",
+          "status": "matched"
+        },
+        {
+          "id": "E09",
+          "page": 3,
+          "quote": "Usually there are not enough cells available to support a",
+          "status": "matched"
+        },
+        {
+          "id": "E10",
+          "page": 3,
+          "quote": "Increasing the connectivity of the network decreases the",
+          "status": "matched"
+        },
+        {
+          "id": "E33",
+          "page": 5,
+          "quote": "Even with gain modulation of pathway neurons, the",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "神经元模型与两种突触模型",
+      "claim": "神经元是单舱室 LIF，时间常数 20 ms，静息电位 −60 mV，阈值 −50 mV，不应期 5 ms，积分步长 0.1 ms。突触以两种方式建模并都做了：电流型（CUBA，突触事件注入指数衰减的电流脉冲）与电导型（COBA，突触事件瞬时改变突触后电导），反转电位分别为 0 mV 与 −80 mV，突触时间常数 5 ms 与 10 ms。作者对「哪种更真实」的处理值得注意：生物突触确实涉及电导变化、COBA 看似更真实，但单舱室模型在 CUBA、COBA 或两者混合中哪一种更准确，取决于突触在真实树突上的位置，因此作者两种都做，并明确说明所报结果主要来自 COBA，而每一个被报告的现象都在对应的 CUBA 模型中复现过。这条陈述是后文比较 COBA 与 CUBA 时必须记住的前提——「每个效应都在 CUBA 中也出现」，但不等于两个模型的定量表现相同。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E11",
+          "page": 2,
+          "quote": "The network we study is composed of 10,000 leaky",
+          "status": "matched"
+        },
+        {
+          "id": "E12",
+          "page": 3,
+          "quote": "we consider both CUBA and COBA models in our studies.",
+          "status": "matched"
+        },
+        {
+          "id": "E13",
+          "page": 2,
+          "quote": "The results we",
+          "status": "matched"
+        },
+        {
+          "id": "E22",
+          "page": 4,
+          "quote": "The black square in these",
+          "status": "matched"
+        },
+        {
+          "id": "E23",
+          "page": 4,
+          "quote": "the network stays",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "网络架构、通路搜索准则与输入",
+      "claim": "背景网络取 10,000 个神经元、兴奋与抑制之比 4:1、各向随机连接概率 2%，作者说明这一连接概率是「邻近神经元之间的较高值与相距较远神经元之间的较低值之间的折中」，并称结论应适用于连接概率最高到 10% 的模型。通路的构造是本文方法的核心：每层 33 个神经元；第 2 层要求每个神经元从第 1 层接收三条以上突触；第 3 层起额外要求不得从第 1 层接收任何直接连接，以防止多层传播被「短路」；此后每层 i 要求接收来自第 i−1 层的至少三条突触，且不接受来自第 i−2、i−3…1 层的任何突触。作者明确说明网络结构本身不被改动——不添加前馈通路，也不要求通路层之间全连通。输入侧，layer 0 是泊松输入，其突触强度被调到使 layer 1 的发放率复现输入速率；测试信号按顺序为 180 Hz、持续 30 ms 的方波脉冲，然后是恒定速率，最后是由 50 ms 低通滤波并半波整流的高斯白噪声构成的时变速率。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E14",
+          "page": 2,
+          "quote": "we chose a 4:1 ratio of excitatory to inhibitory neurons in",
+          "status": "matched"
+        },
+        {
+          "id": "E15",
+          "page": 3,
+          "quote": "network, and then",
+          "status": "matched"
+        },
+        {
+          "id": "E16",
+          "page": 2,
+          "quote": "We do not change the network",
+          "status": "matched"
+        },
+        {
+          "id": "E17",
+          "page": 1,
+          "quote": "the neurons in the network.",
+          "status": "matched"
+        },
+        {
+          "id": "E18",
+          "page": 2,
+          "quote": "At first, square-wave",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "计算单元的搜索方式与分析指标",
+      "claim": "逻辑门与记忆单元沿用同一套程序：先在既有随机架构中按预先写定的连接条件搜索候选子电路，再只调整电路内部突触强度使其工作，作者强调这些电路「不是手工搭建的，而是在随机网络的架构中被找到的」，且「不新增任何连接、也不删除任何已���连接」。搜索条件按目标分别写定，例如 NOT 门要找一组与一个自发发放率 30–40 Hz 的输出层高度连接（每个细胞至少三条突触）的抑制性细胞，再找一层对这些抑制细胞有三条以上突触的兴奋细胞，整体约 60 个神经元；XOR 用两个互绕的开关汇入同一输出层，约 220 个神经元；触发器用两条递归连接的兴奋环路经抑制性中间细胞互相压制，约 200 个神经元。分析侧的核心指标是相似度（similarity）：把层 i 神经元发放率与 layer 0 发放率求相关系数，扫描时延后取其最大值即为相似度，其对应时延即该层的传播延迟；作者特意用 layer 0 而非 layer 1 作参考，以便把「信号被传入」与「layer 1 中自发产生的涨落被传播」区分开。这些方法层面的选择共同决定了后面所有结论的适用边界，其中最需要读者记住的两条是：通路的层数上限来自人为的无短路规则，而电路能否工作取决于作者写定的连接条件——两者都是搜索准则，不是生物学机制。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E19",
+          "page": 3,
+          "quote": "The circuits we discuss are not constructed by hand, but",
+          "status": "matched"
+        },
+        {
+          "id": "E20",
+          "page": 1,
+          "quote": "adjustments are made in synaptic strengths.",
+          "status": "matched"
+        },
+        {
+          "id": "E21",
+          "page": 3,
+          "quote": "We use the activity of",
+          "status": "matched"
+        },
+        {
+          "id": "E26",
+          "page": 5,
+          "quote": "the CUBA model includes a constant current injected into all of",
+          "status": "matched"
+        },
+        {
+          "id": "E27",
+          "page": 5,
+          "quote": "In contrast, the",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "背景活动的性质与 CUBA／COBA 差异",
+      "claim": "参数搜索给出一组满足三项要求（活动持续、发放率较低、ISI 变异系数接近 1）的 COBA 参数，约为 1 mV 的 EPSP 与 −2.6 mV 的 IPSP。在这些参数下网络平均发放率 9 Hz、平均 ISI CV 为 1.2，作者用栅格图、群体发放率、自相关以及与同率泊松过程的对比来论证其异步性，量化结果之一是网络在 0.1 ms 分箱下的发放率方差是泊松列车的 1.5 倍，说明网络确有少量时间结构但涨落量级相当；兴奋与抑制电流互相抵消、平均膜电位被稳定在约 −70 mV。与之相比，CUBA 模型需要向所有神经元注入足以去极化 11 mV 的恒流才能自持，去掉该注入后网络不再自持，平均膜电位约 −55 mV；作者据此把 COBA 的自持归因于电导型突触的驱动力效应（去极化时 EPSP 变小、IPSP 变大），这提供了比 CUBA 更稳的稳定化机制。这组对比的数字全部来自正文文字，Fig. 1 与 Fig. 3 的坐标轴范围本次未从位图读取。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E23",
+          "page": 4,
+          "quote": "the network stays",
+          "status": "matched"
+        },
+        {
+          "id": "E24",
+          "page": 4,
+          "quote": "the variance of the",
+          "status": "matched"
+        },
+        {
+          "id": "E25",
+          "page": 4,
+          "quote": "Excitatory and inhibitory currents are",
+          "status": "matched"
+        },
+        {
+          "id": "E26",
+          "page": 5,
+          "quote": "the CUBA model includes a constant current injected into all of",
+          "status": "matched"
+        },
+        {
+          "id": "E27",
+          "page": 5,
+          "quote": "In contrast, the",
+          "status": "matched"
+        },
+        {
+          "id": "E28",
+          "page": 5,
+          "quote": "This provides a",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "三种干预失败与突触增强成功，以及最优突触因子",
+      "claim": "传播实验是本文的主结果，分四档。基线：不做任何改动时 rate 信号过不了第 1 层，作者给出的机制解释是信噪比——第 1 层到某个第 2 层神经元通常只有三条突触，而该神经元还从约 140 个兴奋与 40 个抑制性神经元接收输入，即便第 1 层发放率高于网络约 10 Hz 的平均水平，信号也只占其 EPSP 的少数。去极化：把通路神经元去极化 15 mV 使其发放率普遍升高，但信号仍不过第 1 层。增益调制：对 LIF 神经元而言，提高增益等价于同时提高它接收的全部突触（兴奋与抑制）强度，作者明确说这会「使通路神经元对所有输入同样敏化，而不只是携带信号的那些」，由于去极化与超极化电流仍保持平衡，平均发放率并不显著升高，信号同样失败。突触增强：只把逐层携带信号的兴奋突触提高约 10 倍后，六层全部传播且不出现同步，Fig. 5 的虚线标出各层发放率曲线交汇处即最优突触因子，COBA 模型中该因子取 12 并在层 0 速率 30–160 Hz 之间保持平台，相当于非通路突触的 13 倍、活跃网络中约 8 mV 的 EPSP；低于最优值时信号淹没在 9 Hz 背景中，高于最优值时自发活动被一并沿通路传导而淹没信号，CUBA 模型则没有这个平台。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E29",
+          "page": 5,
+          "quote": "If we make no modifications to the synapses or neurons along",
+          "status": "matched"
+        },
+        {
+          "id": "E30",
+          "page": 5,
+          "quote": "only three synapses typically extend from layer 1 to a particular",
+          "status": "matched"
+        },
+        {
+          "id": "E31",
+          "page": 5,
+          "quote": "Depolarization of the pathway",
+          "status": "matched"
+        },
+        {
+          "id": "E32",
+          "page": 5,
+          "quote": "This sensitizes the pathway neurons to all",
+          "status": "matched"
+        },
+        {
+          "id": "E33",
+          "page": 5,
+          "quote": "Even with gain modulation of pathway neurons, the",
+          "status": "matched"
+        },
+        {
+          "id": "E34",
+          "page": 6,
+          "quote": "The result in Figure 4e indicates that the",
+          "status": "matched"
+        },
+        {
+          "id": "E35",
+          "page": 6,
+          "quote": "If the synapse enhancement is further",
+          "status": "matched"
+        },
+        {
+          "id": "E36",
+          "page": 6,
+          "quote": "the curve of optimal synapse factor versus firing",
+          "status": "matched"
+        },
+        {
+          "id": "E37",
+          "page": 6,
+          "quote": "The plateau value of",
+          "status": "matched"
+        },
+        {
+          "id": "E38",
+          "page": 6,
+          "quote": "In the active network, these synapses",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "synfire 传播的四种情形与包长增长",
+      "claim": "作者在同一网络中改用亚毫秒精度的同步刺激检验 synfire，结果与 rate 传播截然不同。原始网络：synfire 波过不了第 1 层，与早期文献「远多于三个 spike 单位才可能成功」的结论一致。突触因子 9：前几层出现活动脉冲，但波最终被背景活动冲散。突触因子 12：传播发生了，但紧致的 synfire 包在逐层传播中不断变长；作者指出这种全网爆发式的「synfire explosion」在本网络中并未出现（活动被限制在通路内），取而代之的是包长的逐层累积。更关键的是作者把它确立为一种普遍性质：同样的包长增长在 rate 脉冲（Fig. 4e）中也可见，因为单个同步齐射会引起二三发同步发放，进而在下一层引发更长的串，概率虽随同步前突触数线性上升，总发放数却增长得更快；这对 rate 传播只是把频率响应限制在现实水平，对 synfire 却是致命的，因为 synfire 要求忠实地重现含大量高频成分的信号。作者因此指出，同一个突触因子既让 synfire 包的前沿传得动，又让后沿逐层滞后（Fig. 6h 中 off 信号比 on 信号上升更慢）。可行的解法只有一条：把负增益调制（减弱通路神经元接收的全部突触）与通路突触增强结合，前者压制背景沿通路的影响、后者让包的前沿传得动。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E39",
+          "page": 10,
+          "quote": "a synfire wave",
+          "status": "matched"
+        },
+        {
+          "id": "E40",
+          "page": 7,
+          "quote": "Strengthening pathway synapses by a",
+          "status": "matched"
+        },
+        {
+          "id": "E41",
+          "page": 7,
+          "quote": "It is possible to achieve synfire propagation in the network by",
+          "status": "matched"
+        },
+        {
+          "id": "E42",
+          "page": 7,
+          "quote": "but it is fatal to synfire propagation, because this requires the",
+          "status": "matched"
+        },
+        {
+          "id": "E43",
+          "page": 7,
+          "quote": "These delays vary from 0 in layer 1 to 20 ms in layer 6.",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "时变信号的传输质量、时延、频率响应与多通路并行",
+      "claim": "用滤波白噪声输入检验时变信号时，各层发放率彼此跟随，但网络偶尔会自发产生作者称为「ghost signals」的活动；作者同时报告，沿通路被诱导出的涨落并未显著改变全网络的整体发放率。相似度方面，COBA 模型最优突触因子下第 6 层以 60% 的相似度匹配第 0 层，传播延迟从第 1 层的 0 ms 增至第 6 层的 20 ms，CUBA 模型的相似度更低，作者归因于 COBA 特有的最优增强平台。频率响应在约 5 Hz 最准、超过约 20 Hz 迅速衰减，机制被定位为网络是「差的时间边沿检测器」：方波响应随层推进不断展宽，第 6 层每层需要约 15 ms 才能从背景活动调整到 100 Hz 稳态、回落到背景还要更久，换算成最大变化率约 6 Hz/ms；作者还解释 5 Hz 处的峰是因为该频率的振荡最能掩盖自发产生的 ghost signals，并称这一频率响应的峰形与皮层神经元实测的频率响应吻合相当好——需要注意的是本文给出的是定性比对，未做拟合并报告参数。多通路方面，10 条通路可同时传输不同信号，精度因相互干扰而下降；当 4 条通路同时激活时，第 5 层重建的脉冲模式精度跌破 50%，此时每条通路约 200 个神经元，相当于占用网络 8% 的神经元，作者也说明层 6 的通路数少于 10 是因为连通度的概率性质不允许再凑出满足全部条件的 33 个神经元。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E44",
+          "page": 7,
+          "quote": "along the pathway do not significantly modify the",
+          "status": "matched"
+        },
+        {
+          "id": "E45",
+          "page": 8,
+          "quote": "the firing rate in layer 6",
+          "status": "matched"
+        },
+        {
+          "id": "E46",
+          "page": 8,
+          "quote": "Transmission is most accurate at 5 Hz,",
+          "status": "matched"
+        },
+        {
+          "id": "E47",
+          "page": 5,
+          "quote": "the network is",
+          "status": "matched"
+        },
+        {
+          "id": "E48",
+          "page": 8,
+          "quote": "it takes each layer 15 ms to",
+          "status": "matched"
+        },
+        {
+          "id": "E49",
+          "page": 8,
+          "quote": "The peak at 5 Hz occurs because",
+          "status": "matched"
+        },
+        {
+          "id": "E50",
+          "page": 8,
+          "quote": "Although transmission quality drops with multiple",
+          "status": "matched"
+        },
+        {
+          "id": "E51",
+          "page": 8,
+          "quote": "of the reproduced spike patterns in layer 5 falls below 50%",
+          "status": "matched"
+        },
+        {
+          "id": "E52",
+          "page": 8,
+          "quote": "this corresponds to using 8% of the",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "四种计算单元：NOT 门、开关、XOR 与触发器",
+      "claim": "在传播已经成立之后，作者按前述搜索准则在随机网络中找子电路并增强其突触。NOT 门：一组抑制性中间细胞控制上游一层，驱动抑制层即使本已活跃的输出层静默。开关：一条三层的兴奋通路加上一个对输出层有三条以上突触的抑制细胞群，驱动该抑制群即可阻碍兴奋通路上的传播；作者称同一电路通过改变抑制通路的发放率还可以做模拟调制，但注明「data not shown」，因此这一说法在本文中**没有**对应图。XOR：两个互绕的开关汇入同一输出层，单输入时输出层发放率高于 60 Hz、两条路径同时输入时低于 40 Hz。触发器：两条递归兴奋环路经抑制性中间细胞互相压制，在没有外部输入时也能维持一方高放电；被外部驱动过的环路在输入撤除后仍保持发放率，刺激另一环路即可翻转状态。作者同时给出四种电路的共同缺陷：响应相对迟缓，并被更长的抑制性突触时间常数进一步放大；触发器则明确不完美——因为背景活动的涨落，来自一个环路的抑制有时不足以静默另一个，Fig. 8d 的模拟在约 800 ms 处就自发翻转、丢失记忆状态。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E53",
+          "page": 9,
+          "quote": "the output layer fires above 60 Hz for single inputs and well",
+          "status": "matched"
+        },
+        {
+          "id": "E54",
+          "page": 9,
+          "quote": "changes its state, thus failing to maintain a memory.",
+          "status": "matched"
+        },
+        {
+          "id": "E55",
+          "page": 9,
+          "quote": "A common feature of all four circuits shown in",
+          "status": "matched"
+        },
+        {
+          "id": "E56",
+          "page": 9,
+          "quote": "Because of fluctuations in the",
+          "status": "matched"
+        },
+        {
+          "id": "E57",
+          "page": 9,
+          "quote": "the same circuit can be used to",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "主张一：内部自发活动足以支撑 rate 传播——支持，但有明确边界",
+      "claim": "作者的核心主张是「网络自发的活动足以支撑信号传播」，Fig. 4e 是最直接的证据：只增强通路突触就六层全通，而 Fig. 4b 的未改动基线与 Fig. 4c、4d 的两种失败干预共同构成对照。可支持的表述是：在 2% 连接概率、4:1 兴奋抑制比、按本文无短路规则搜出的六层通路中，内部噪声足以让 rate 信号穿过六层，条件是通路突触被增强到最优因子附近（COBA 中取 12，即 13 倍，对应约 8 mV EPSP），且延迟累计约 20 ms、终点相似度约 60%。差异类型是「范围不同」而非「一致」：作者在 Discussion 中自己列出三条限定——传播只用到 3 条通路突触（E61）；六层之上通常已无可用细胞（E09）；13 倍的 EPSP 幅度「相对偏大但并非闻所未闻」（E60）。也就是说，可支持的是「可达」而非「稳健」或「廉价」，且这一结论对本文的稀疏架构与搜索准则有依赖。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E34",
+          "page": 6,
+          "quote": "The result in Figure 4e indicates that the",
+          "status": "matched"
+        },
+        {
+          "id": "E36",
+          "page": 6,
+          "quote": "the curve of optimal synapse factor versus firing",
+          "status": "matched"
+        },
+        {
+          "id": "E37",
+          "page": 6,
+          "quote": "The plateau value of",
+          "status": "matched"
+        },
+        {
+          "id": "E38",
+          "page": 6,
+          "quote": "In the active network, these synapses",
+          "status": "matched"
+        },
+        {
+          "id": "E58",
+          "page": 9,
+          "quote": "With sufficiently strengthened pathway synapses, a",
+          "status": "matched"
+        },
+        {
+          "id": "E59",
+          "page": 9,
+          "quote": "A 13-fold increase in synapse",
+          "status": "matched"
+        },
+        {
+          "id": "E60",
+          "page": 9,
+          "quote": "This corresponds to evoked EPSPs, within the active",
+          "status": "matched"
+        },
+        {
+          "id": "E61",
+          "page": 9,
+          "quote": "In the 10,000 neuron, randomly connected",
+          "status": "matched"
+        },
+        {
+          "id": "E64",
+          "page": 9,
+          "quote": "Both models provide an",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "主张二：synfire 与 rate 不可兼得——最有价值的负结果",
+      "claim": "作者对 synfire 的结论是明确否定性的，且四个情形形成了完整的递进：原始网络不过第 1 层（E39）、因子 9 被背景冲散（E40）、因子 12 发生包长增长（E42）、必须叠加负增益调制才能过六层。Discussion 把原因讲清楚了：传播失败的根本原因是网络不能传输高频信号，而突触强到能把 synfire 前沿传出去时，就会产生二级发放的尾流；因此 synfire 传播需要在噪声与突触强度之间取得精细平衡，具体到本文网络必须用增益调制去压低噪声，代价是「可行的参数区域相当小」（E70、E71）。这一组结果是本文最值得单独引用的一段，因为它给出了一个与直觉相反但可检验的结论：噪声在这同一个网络里既必需又致命，两种编码模式不能靠同一套参数同时获得。可支持的表述限于本文的稀疏随机 LIF 架构；本文未检验在更高连通度或更接近皮层的结构化网络中该互斥是否仍成立。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E39",
+          "page": 10,
+          "quote": "a synfire wave",
+          "status": "matched"
+        },
+        {
+          "id": "E40",
+          "page": 7,
+          "quote": "Strengthening pathway synapses by a",
+          "status": "matched"
+        },
+        {
+          "id": "E41",
+          "page": 7,
+          "quote": "It is possible to achieve synfire propagation in the network by",
+          "status": "matched"
+        },
+        {
+          "id": "E42",
+          "page": 7,
+          "quote": "but it is fatal to synfire propagation, because this requires the",
+          "status": "matched"
+        },
+        {
+          "id": "E70",
+          "page": 10,
+          "quote": "For synfire chain",
+          "status": "matched"
+        },
+        {
+          "id": "E71",
+          "page": 10,
+          "quote": "The parameter regimen over which synfire propagation is",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "主张三：增强特定突触即可在随机网络中产生计算——部分支持，最弱的连接在这里",
+      "claim": "XOR 的定量结果（单输入 > 60 Hz、双输入 < 40 Hz）是这一主张最硬的一条证据，NOT 门与开关的逻辑也与预期一致。但这一部分与前两部分不同，它依赖一组**预先写定**的连接搜索条件（作者在 Methods 中逐条给出 NOT 门、开关、XOR、触发器各自的连接要求与增强倍数），因此它证明的是「在给定稀疏随机架构中、存在满足这些连接条件的子电路，且增强后可工作」，而不是「计算会自行涌现」。作者本人给两处限制：噪声是逻辑门正常工作的必要条件，但也导致它们偶尔失败（E72）；四种电路都在既有随机网络中被找到、只需要突触增强（E73），但这种增强是手工完成的，作者把「能否由某种可塑性机制自主完成」明确列为值得研究而未做的事（E74）。触发器的自发翻转（E54、E55）则说明记忆功能在本网络中只是概率性的。可支持的表述因此是存在性加成本的，不是稳定性的。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E53",
+          "page": 9,
+          "quote": "the output layer fires above 60 Hz for single inputs and well",
+          "status": "matched"
+        },
+        {
+          "id": "E54",
+          "page": 9,
+          "quote": "changes its state, thus failing to maintain a memory.",
+          "status": "matched"
+        },
+        {
+          "id": "E55",
+          "page": 9,
+          "quote": "A common feature of all four circuits shown in",
+          "status": "matched"
+        },
+        {
+          "id": "E72",
+          "page": 3,
+          "quote": "Logic gates. To",
+          "status": "matched"
+        },
+        {
+          "id": "E73",
+          "page": 10,
+          "quote": "Remarkably, all of these circuits could be",
+          "status": "matched"
+        },
+        {
+          "id": "E74",
+          "page": 10,
+          "quote": "We did this strengthening by hand, but it would be interesting to investigate whether various synaptic plasticity mechanisms could do this autonomously.",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "最强证据、最薄弱连接，以及一处需要警惕的归因",
+      "claim": "全篇最强的证据是 Fig. 4 的四档对照与 Fig. 5c 的最优因子平台：前者把「增强通路突触」与「去极化」「增益调制」「不改动」三种同样符合直觉的方案直接比掉，后者用一个覆盖 30–160 Hz 的平台证明存在可调的稳定工作点，而不是单一临界点。最薄弱的连接有三处：模拟调制只有「data not shown」一句话支撑（E57）；多通路并行只在 10 条通路、单次轨迹层面展示，本文未报告重复次数与误差；与皮层频率响应的「吻合相当好」是定性比对，没有拟合参数。最需要警惕的一处归因是 COBA 优于 CUBA：作者在 Discussion 中把原因归于「电导型突触的存在，而不是两个模型工作在不同参数区域」（E66），但 p.5 又说只有 COBA 能在高突触强度区域给出合理结果、p.9 还承认在 COBA 的低电导区域测试部分结果结论相似。因此更稳妥的读法是：在各自的自持活动区域内 COBA 的可调范围更宽，而不是参数区域差异已被排除。此外，作者用雪崩临界性做了一次数值自检：3 个突触靶点对应临界概率 0.33，Fig. 5d 实测在最优强度下约 0.25，把一级与二级发放概率相加约 0.3（E67、E68）——这是自洽性检查而非独立验证。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E13",
+          "page": 2,
+          "quote": "The results we",
+          "status": "matched"
+        },
+        {
+          "id": "E26",
+          "page": 5,
+          "quote": "the CUBA model includes a constant current injected into all of",
+          "status": "matched"
+        },
+        {
+          "id": "E27",
+          "page": 5,
+          "quote": "In contrast, the",
+          "status": "matched"
+        },
+        {
+          "id": "E63",
+          "page": 2,
+          "quote": "of firing rates",
+          "status": "matched"
+        },
+        {
+          "id": "E65",
+          "page": 9,
+          "quote": "Signal transmission in the",
+          "status": "matched"
+        },
+        {
+          "id": "E66",
+          "page": 9,
+          "quote": "This is because of the",
+          "status": "matched"
+        },
+        {
+          "id": "E67",
+          "page": 10,
+          "quote": "we would expect the probability that a presynaptic",
+          "status": "matched"
+        },
+        {
+          "id": "E68",
+          "page": 10,
+          "quote": "Figure 5d shows that the spiking probability",
+          "status": "matched"
+        },
+        {
+          "id": "E69",
+          "page": 8,
+          "quote": "The frequency maximum and fall-off seen in Figure",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "title": "替代解释一与二：COBA 的优势与路径搜索的选择性",
+      "claim": "替代解释一：COBA 的传播优势未必来自电导机制本身，也可能来自两个模型被放在了不同的参数区域。机制上，COBA 因驱动力效应在去极化时 EPSP 变小、IPSP 变大而具备稳定化（E28）；预期现象是若把两者调到同一膜电位工作点，COBA 的频率响应平台应当消失或明显变窄；区分检验是在 COBA 中扫描与 CUBA 相同的平均膜电位与发放率，比较最优突触因子平台是否还在；本文**没有**排除这一解释，反而承认在低电导区域测试部分结果结论相似，因此该替代解释未被排除。替代解释二：所谓「通路」是搜索准则的产物而非网络的内在结构。机制上，无短路规则与每层三条突触的要求共同决定了哪些神经元入选（E17、E10）；预期现象是若放宽无短路规则，六层通路的可用神经元数应当显著增加、层数上限应当上升；区分检验是取消或放松该规则后重跑层数统计；本文未做这一检验，也未报告若无该规则会发生什么，因此这一替代解释既未被证实也未被排除，但读者必须知道六层这个数字依赖一条人为规定。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E17",
+          "page": 1,
+          "quote": "the neurons in the network.",
+          "status": "matched"
+        },
+        {
+          "id": "E10",
+          "page": 3,
+          "quote": "Increasing the connectivity of the network decreases the",
+          "status": "matched"
+        },
+        {
+          "id": "E26",
+          "page": 5,
+          "quote": "the CUBA model includes a constant current injected into all of",
+          "status": "matched"
+        },
+        {
+          "id": "E27",
+          "page": 5,
+          "quote": "In contrast, the",
+          "status": "matched"
+        },
+        {
+          "id": "E28",
+          "page": 5,
+          "quote": "This provides a",
+          "status": "matched"
+        },
+        {
+          "id": "E65",
+          "page": 9,
+          "quote": "Signal transmission in the",
+          "status": "matched"
+        },
+        {
+          "id": "E66",
+          "page": 9,
+          "quote": "This is because of the",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "title": "替代解释三：通路选择本身可能就偏好了强连接区域",
+      "claim": "替代解释三：作者按「最可能被影响」来搜索候选通路，而受影响最强的神经元本就处在高连接区域，于是搜索天然偏好已经容易被驱动的位置，得到的传播结果偏乐观。机制上，通路搜索以「从第 1 层接收三条以上突触」为唯一准则，没有对第 i−1 层与第 i 层之间的连接概率是否显著高于网络均值做显著性检验；预期现象是在同等网络与同等增强倍数下，随机选取层间配对应当得到明显更差的相似度；区分检验是把通路搜索换成随机配对层作为对照；本文**没有**做这一对照，也未报告通路层连接度相对网络均值的统计量。结合作者提出的改进方向——用有结构的架构（皮层柱、靶向分支轴突）让更多突触参与传播从而降低单条强度（E62）——可以看出作者本人也认为当前稀疏连接下每条通路只有 3 条突触参与（E61）是这条主张的结构性弱点。判断哪些发现适合借鉴：Fig. 4 的四档对照设计可以直接搬用到任何「调节输入能否打开信号传递」的建模中——先做不改动基线，再逐一试去极化、增益、突触增强，把「失败」也作为结果报告。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E61",
+          "page": 9,
+          "quote": "In the 10,000 neuron, randomly connected",
+          "status": "matched"
+        },
+        {
+          "id": "E62",
+          "page": 9,
+          "quote": "One way to get more synapses involved in the signal",
+          "status": "matched"
+        },
+        {
+          "id": "E73",
+          "page": 10,
+          "quote": "Remarkably, all of these circuits could be",
+          "status": "matched"
+        },
+        {
+          "id": "E74",
+          "page": 10,
+          "quote": "We did this strengthening by hand, but it would be interesting to investigate whether various synaptic plasticity mechanisms could do this autonomously.",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "title": "使用决定：可引用的部分、必须附带的前提，以及最关键的待补材料",
+      "claim": "可以直接引用并有原文支撑的有三条。第一是负结果：在本网络中**同时提高全部突触的增益调制不能替代通路特异性增强**，因为它对携带信号的输入与背景输入一视同仁（E32、E33）；这一条对本仓库讨论增益调制与通路门控的关系最有用，引用时应同时给出作者对增益调制的定义（等价于同时增强该神经元接收的所有突触），否则容易被误读成对增益调制的一般性否定。第二是代价数字：六层传播需要约 13 倍的通路突触增强、活跃网络中约 8 mV 的 EPSP、约 20 ms 的累计延迟、第 6 层约 60% 的相似度（E37、E38、E43、E45）；凡在模型中实现跨层传播而未做类似扫描的，都应说明其工作点落在哪一段。第三是互斥结论：rate 与 synfire 在同一网络中不可兼得，synfire 的可行参数区域相当小（E70、E71）。必须附带的前提有三条：结论限于 2% 连接概率的随机 LIF 网络与本文的无短路搜索规则（E14、E17）；「模拟调制」在本文中无数据支撑（E57）；频率响应与皮层的吻合是定性比对（E69）。最关键的待补材料，按优先级排序是：一，可塑性机制能否自主完成作者手工做的 13 倍选择性增强，这是作者自己点名的问题（E74）；二，触发器与逻辑门在更长模拟下的失败率分布，本文只有 Fig. 8d 单次约 800 ms 的翻转（E55）；三，COBA 与 CUBA 在同一工作点下的对照扫描，用以判定前述替代解释；四，多通路并行结果的重复次数与误差范围。作者的未来工作只有第一条（E62、E74 附近的可塑性设想与结构化架构设想），其余三条是本次阅读提出的检验建议。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E14",
+          "page": 2,
+          "quote": "we chose a 4:1 ratio of excitatory to inhibitory neurons in",
+          "status": "matched"
+        },
+        {
+          "id": "E17",
+          "page": 1,
+          "quote": "the neurons in the network.",
+          "status": "matched"
+        },
+        {
+          "id": "E32",
+          "page": 5,
+          "quote": "This sensitizes the pathway neurons to all",
+          "status": "matched"
+        },
+        {
+          "id": "E33",
+          "page": 5,
+          "quote": "Even with gain modulation of pathway neurons, the",
+          "status": "matched"
+        },
+        {
+          "id": "E37",
+          "page": 6,
+          "quote": "The plateau value of",
+          "status": "matched"
+        },
+        {
+          "id": "E38",
+          "page": 6,
+          "quote": "In the active network, these synapses",
+          "status": "matched"
+        },
+        {
+          "id": "E43",
+          "page": 7,
+          "quote": "These delays vary from 0 in layer 1 to 20 ms in layer 6.",
+          "status": "matched"
+        },
+        {
+          "id": "E45",
+          "page": 8,
+          "quote": "the firing rate in layer 6",
+          "status": "matched"
+        },
+        {
+          "id": "E55",
+          "page": 9,
+          "quote": "A common feature of all four circuits shown in",
+          "status": "matched"
+        },
+        {
+          "id": "E57",
+          "page": 9,
+          "quote": "the same circuit can be used to",
+          "status": "matched"
+        },
+        {
+          "id": "E69",
+          "page": 8,
+          "quote": "The frequency maximum and fall-off seen in Figure",
+          "status": "matched"
+        },
+        {
+          "id": "E70",
+          "page": 10,
+          "quote": "For synfire chain",
+          "status": "matched"
+        },
+        {
+          "id": "E71",
+          "page": 10,
+          "quote": "The parameter regimen over which synfire propagation is",
+          "status": "matched"
+        },
+        {
+          "id": "E74",
+          "page": 10,
+          "quote": "We did this strengthening by hand, but it would be interesting to investigate whether various synaptic plasticity mechanisms could do this autonomously.",
+          "status": "matched"
+        }
+      ]
+    }
+  ]
+}

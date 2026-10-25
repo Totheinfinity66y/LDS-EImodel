@@ -1,0 +1,111 @@
+{
+  "pages": 16,
+  "annotations": 17,
+  "matched": 17,
+  "unresolved": [],
+  "anchors": [
+    {
+      "id": "E01",
+      "page": 1,
+      "status": "matched",
+      "rectangles": 4
+    },
+    {
+      "id": "E02",
+      "page": 2,
+      "status": "matched",
+      "rectangles": 3
+    },
+    {
+      "id": "E03",
+      "page": 1,
+      "status": "matched",
+      "rectangles": 3
+    },
+    {
+      "id": "E04",
+      "page": 2,
+      "status": "matched",
+      "rectangles": 3
+    },
+    {
+      "id": "E05",
+      "page": 2,
+      "status": "matched",
+      "rectangles": 4
+    },
+    {
+      "id": "E06",
+      "page": 2,
+      "status": "matched",
+      "rectangles": 4
+    },
+    {
+      "id": "E07",
+      "page": 5,
+      "status": "matched",
+      "rectangles": 2
+    },
+    {
+      "id": "E08",
+      "page": 6,
+      "status": "matched",
+      "rectangles": 5
+    },
+    {
+      "id": "E09",
+      "page": 7,
+      "status": "matched",
+      "rectangles": 3
+    },
+    {
+      "id": "E10",
+      "page": 8,
+      "status": "matched",
+      "rectangles": 3
+    },
+    {
+      "id": "E11",
+      "page": 9,
+      "status": "matched",
+      "rectangles": 2
+    },
+    {
+      "id": "E12",
+      "page": 10,
+      "status": "matched",
+      "rectangles": 4
+    },
+    {
+      "id": "E13",
+      "page": 10,
+      "status": "matched",
+      "rectangles": 4
+    },
+    {
+      "id": "E14",
+      "page": 13,
+      "status": "matched",
+      "rectangles": 2
+    },
+    {
+      "id": "E15",
+      "page": 12,
+      "status": "matched",
+      "rectangles": 3
+    },
+    {
+      "id": "E16",
+      "page": 12,
+      "status": "matched",
+      "rectangles": 3
+    },
+    {
+      "id": "E17",
+      "page": 13,
+      "status": "matched",
+      "rectangles": 2
+    }
+  ],
+  "source_sha256": "dfa833cd64012492ae7b7e5dec1f65bcbdf40c4b034d780a5ed15845fb4b7049"
+}

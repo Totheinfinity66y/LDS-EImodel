@@ -1,0 +1,1095 @@
+
+===== PDF PAGE 1 =====
+A disinhibitory circuit mediates motor integration in the
+somatosensory cortex
+Soohyun Lee1, Illya Kruglikov1, Z Josh Huang2, Gord Fishell1, and Bernardo Rudy1
+1New York University Neuroscience Institute, Department of Neuroscience and Physiology,
+Smilow Research Center, New York University School of Medicine, New York, New York, USA
+2Cold Spring Harbor Laboratory, Cold Spring Harbor, New York, USA
+Abstract
+The influence of motor activity on sensory processing is crucial for perception and motor
+execution. However, the underlying circuits are not known. To unravel the circuit by which
+activity in the primary vibrissal motor cortex (vM1) modulates sensory processing in the primary
+somatosensory barrel cortex (S1), we used optogenetics to examine the long-range inputs from
+vM1 to the various neuronal elements in S1. We found that S1-projecting vM1 pyramidal neurons
+strongly recruited vasointestinal peptide (VIP)-expressing GABAergic interneurons, a subset of
+serotonin receptor–expressing interneurons. These VIP interneurons preferentially inhibited
+somatostatin-expressing interneurons, neurons that target the distal dendrites of pyramidal cells.
+Consistent with this vM1-mediated disinhibitory circuit, the activity of VIP interneurons in vivo
+increased and that of somatostatin interneurons decreased during whisking. These changes in
+firing rates during whisking depended on vM1 activity. Our results suggest previously unknown
+circuitry by which inputs from motor cortex influence sensory processing in sensory cortex.
+The exquisite ability of the neocortex to perform complex functions depends on dense
+interconnections between functionally related cortical areas. The superficial layers of cortex,
+often referred to as the associative layers, are a major target of these projections1. In the
+whisker-related somatosensorimotor system of rodents, the S1 and vM1 cortices are heavily
+interconnected2–5. These reciprocal connections between vM1 and S1 are thought to be
+important for sensorimotor integration and active sensing, contributing to the precise
+execution of motor tasks6–8.
+© 2013 Nature America, Inc. All rights reserved.
+Correspondence should be addressed to B.R. (bernardo.rudy@nyumc.org) or S.L. (soohyun.lee@nyumc.org).
+Note: Any Supplementary Information and Source Data files are available in the online version of the paper.
+AUTHOR CONTRIBUTIONS
+S.L., G.F. and B.R. conceived the study. S.L. conducted all of the ChR2 and NpHR experiments and analysis. I.K. conducted local
+input experiments and analysis, and set up two-photon targeted in vivo recordings. S.L. and I.K. performed in vivo experiments. Z.J.H.
+provided Vip-cre and Sst-cre mice. S.L., I.K., G.F. and B.R. wrote the paper.
+COMPETING FINANCIAL INTERESTS
+The authors declare no competing financial interests.
+Reprints and permissions information is available online at http://www.nature.com/reprints/index.html.
+NIH Public Access
+Author Manuscript
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+Published in final edited form as:
+Nat Neurosci. 2013 November ; 16(11): 1662–1670. doi:10.1038/nn.3544.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 2 =====
+The axons of vM1 pyramidal neurons branch off in infragranular layers of S1, avoid the
+granular layer and extensively ramify in superficial layers5. These cortico-cortical
+interconnections in superficial layers are likely to be crucial for context-dependent sensory
+processing and sensorimotor integration7,9,10.
+However, an understanding of the circuit mechanisms by which motor activity in vM1
+modulates sensory processing is currently lacking. In particular, the vM1 projections to
+GABAergic interneurons and the relative weight of these inputs as compared with those
+onto principal cells have not been reported11,12. Given the large diversity of interneurons
+and their role in the precise spatiotemporal control of excitatory outputs and cortical network
+dynamics, determining the afferent connectivity of vM1 onto S1 interneurons is critical for
+understanding how vM1 modulates S1 activity. Tantalizing support for this notion comes
+from studies demonstrating that the activity of distinct types of interneurons is differentially
+correlated with whisking behavior13,14.
+We previously found that interneurons expressing the ionotropic serotonin 5HT3a receptor
+(5HT3aR), together with parvalbumin (PV)-expressing and somatostatin (SST)-expressing
+neurons, can account for most, if not all, cortical GABAergic interneurons in S1. We also
+found that the 5HT3aR interneuron population is the largest group of GABAergic cells in
+the superficial layers of S1 (refs. 15,16). Although all 5HT3aR interneurons are uniformly
+modulated by serotonin and acetylcholine via ionotropic receptors and share the same
+developmental origin, the caudal ganglionic eminence, this population is heterogeneous. For
+example, it includes the neurogliaform interneurons17–19 and the VIP-expressing
+interneurons19,20. The preponderance of 5HT3aR interneurons and the dense arborization of
+vM1 axons in S1 superficial layers suggest that 5HT3aR interneurons may be important for
+vM1 modulation of S1.
+We examined the long-range inputs from vM1 to the various neuronal elements of S1 and
+found that S1-projecting vM1 pyramidal neurons strongly recruited VIP interneurons, one of
+the subtypes of 5HT3aR interneurons in S1 superficial layers, and, in turn, that VIP
+interneurons preferentially inhibited SST cells, GABAergic interneurons that target the
+distal dendrites of pyramidal cells. The existence of this circuit is supported by the
+observation that in vivo VIP interneurons were strongly and specifically activated during
+whisking, whereas SST interneuron activity was suppressed. Furthermore, inactivation of
+vM1 diminished these changes in VIP and SST interneuron activity during whisking,
+suggesting a causal link between vM1 activity and the effect of whisking on VIP and SST
+interneurons in S1 superficial layers. Taken together, our results describe previously
+unknown circuitry by which inputs from motor cortex influence activity in somatosensory
+cortex.
+RESULTS
+5HT3aR neurons in S1 receive strong excitatory input from vM1
+To manipulate the activity of excitatory afferents from the vibrissal region of primary motor
+cortex (vM1), we expressed the light-sensitive cation channel channelrhodopsin 2 (ChR2) in
+vM1 of Emx1-cre mice using viral injection21. Emx1 is a pan-marker of pyramidal neurons
+Lee et al.
+Page 2
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 3 =====
+of the cerebral cortex and hippocampus21. Adeno-associated virus (AAV) directed the
+expression of ChR2 following Cre-mediated recombination22. ChR2 was specifically
+expressed in pyramidal neurons throughout the cortical layers of vM1 (Fig. 1). Photo-
+stimulation reliably elicited spikes from ChR2-expressing pyramidal neurons in vM1 with
+short latency (Supplementary Fig. 1). In S1, we observed ChR2-expressing vM1 axons in
+infragranular and supragranular layers and an especially dense arborization in layer 1 (Fig.
+1a), consistent with previous studies5. However, axonal density and the anatomical
+superposition of axons and dendrites does not necessarily indicate the strength of synaptic
+connections11,23.
+To investigate the vM1 inputs onto the different cellular elements of S1 superficial layers,
+we used whole-cell recording to measure the postsynaptic responses evoked by photo-
+stimulation of ChR2-expressing vM1 axons. To target most interneuron subtypes, we used
+three lines of transgenic mice expressing GFP-labeled PV interneurons (B13), SST
+interneurons (GIN) and 5HT3aR interneurons (5HT3aeGFP)15,24,25. Together, 5HT3aR-, PV-
+and SST-expressing interneurons include close to 100% of supragranular interneurons15,16.
+Thus, recording synaptic weights of vM1 inputs to these three types of interneurons and to
+pyramidal cells allowed us to characterize the vM1 connections to all known cellular
+elements of the S1 superficial layers. We crossed these mouse lines with Emx1-cre mice to
+express ChR2 specifically in vM1 pyramidal neurons and simultaneously identify specific
+types of interneurons in S1. To control for the variability in the level of ChR2-expression in
+vM1 pyramidal neurons in different brain slices, we simultaneously recorded from an
+identified interneuron and a nearby pyramidal neuron (Fig. 1b). We normalized the photo-
+stimulation–evoked response in a given interneuron type to the response in the pyramidal
+neuron (Fig. 1b).
+We found that vM1 axons provided similar excitatory inputs to fast-spiking interneurons and
+pyramidal neurons in S1. Photo-stimulation of vM1 axons evoked excitatory postsynaptic
+currents (EPSCs) of equivalent amplitudes in a representative fast-spiking interneuron and
+pyramidal neuron (fast spiking, −75.69 ± 3.03 pA; pyramidal, −81.07 ± 2.97 pA; P = 0.1,
+Mann-Whitney U test; Fig. 1c). Similarly, current-clamp recordings revealed that the
+excitatory postsynaptic potentials (EPSPs) evoked by photo-stimulation were of similar
+amplitude in these two types of neuron (fast spiking, 5.22 ± 0.51 mV; pyramidal, 6.01 ±
+0.64 mV, P = 0.18, Mann-Whitney U test; Fig. 1c). Population data indicated that vM1
+provided a similar degree of excitatory inputs onto fast-spiking and pyramidal neurons in S1
+superficial layers (fast spiking to pyramidal ratio, mean = 0.97 ± 0.76, median = 0.38, P =
+0.08, Wilcoxon signed-rank test; Fig. 1f,g). We also observed a similar degree of synaptic
+depression resulting from paired-pulse photo-stimulation (5 Hz) in both fast-spiking and
+pyramidal neurons (paired-pulse ratio: fast spiking, 0.90 ± 0.17; pyramidal, 0.95 ± 0.10).
+We found that vM1 axons provided substantially stronger inputs to 5HT3aR interneurons.
+Photo-stimulation–evoked EPSCs were significantly larger in a 5HT3aR interneuron than in
+a pyramidal neuron (5HT3aR, −523.61 ± 7.01; pyramidal, −80.53 ± 12.42 pA; P < 0.001,
+Mann-Whitney U test; Fig. 1d). Under current-clamp mode, photo-stimulation reliably
+elicited spikes from the 5HT3aR interneuron, yet the same stimulation evoked only
+subthreshold depolarization in the nearby pyramidal neuron (5HT3aR, 21.67 ± 0.11 mV;
+Lee et al.
+Page 3
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 4 =====
+pyramidal, 5.52 ± 0.47 mV; P < 0.001, Mann-Whitney U test; Fig. 1d,f). Significantly larger
+excitatory inputs to 5HT3aR interneurons were consistently found across the population. On
+average, 5HT3aR interneurons received vM1 inputs that were more than twice as large as
+those received by pyramidal neurons (5HT3aR to pyramidal ratio, 2.33 ± 1.02, P < 0.001,
+Wilcoxon signed-rank test; Fig. 1f). The observed differences in the responses to vM1 inputs
+between 5HT3aR interneurons and other types of neurons were even greater when recorded
+under current clamp (Fig. 1g). Excitatory inputs from vM1 led to spiking activity in 30% of
+5HT3aR interneurons (7 of 21 5HT3aR interneurons), yet we did not observe EPSP in other
+types of neurons reaching spike threshold in response to the same photo-stimulation.
+5HT3aR interneurons had significantly higher resting membrane potentials and membrane
+input resistance (Supplementary Fig. 2). These factors, in addition to stronger vM1 inputs,
+are likely responsible for the larger membrane depolarization in 5HT3aR interneurons.
+Paired-pulse stimulation resulted in synaptic depression in the 5HT3aR interneurons (paired-
+pulse ratio, 0.90 ± 0.17), similar to that observed in fast-spiking interneurons and pyramidal
+cells.
+We found that SST interneurons received the weakest input from vM1. In a representative
+SST interneuron, photo-stimulation elicited very small EPSCs, followed by a pronounced
+inhibitory postsynaptic current (IPSC; Fig. 1e). In contrast, the same photo-stimulation
+evoked substantially larger EPSCs in a neighboring pyramidal neuron (SST, −15.20 ± 2.00
+pA; pyramidal, −137.89 ± 9.03 pA; P < 0.001, Mann-Whitney U test; Fig. 1e). We did not
+detect IPSCs in the pyramidal neuron. Under current-clamp mode, activation of vM1 inputs
+hyperpolarized the SST interneuron, but depolarized the nearby pyramidal neuron (SST,
+−1.31 ± 0.63 mV; pyramidal, 4.77 ± 0.27 mV; P < 0.001, Mann-Whitney U test; Fig. 1e).
+On average, photo-stimulation–evoked ESPCs in SST interneurons were significantly
+smaller than in pyramidal neurons (SST to pyramidal ratio, 0.12 ± 0.10, P < 0.001,
+Wilcoxon signed-rank test; Fig. 1f). Of 13 SST interneurons, we recorded reliable IPSCs
+following EPSCs from four SST interneurons, detected only small EPSCs in another four
+interneurons and failed to detect a response in the rest of the SST interneurons (n = 5),
+despite clear responses in the nearby pyramidal neuron. Other than SST interneurons, we
+observed sequences of EPSCs and IPSCs in only 2 of 51 pyramidal neurons. The fact that
+IPSCs always followed EPSCs strongly suggests that the IPSCs are triggered in a
+feedforward fashion by the same population of excitatory axons, that is, by the vM1
+excitation of GABAergic interneurons in S1.
+In contrast with all of the other cell types examined, SST interneurons showed facilitation to
+paired-pulse stimulation delivered at 5 Hz (paired-pulse ratio, 2.35 ± 1.11, P = 0.03,
+Wilcoxon signed-rank test). Facilitation became more notable in response to repetitive
+photo-stimulation (ten pulses) delivered at 40 Hz. Despite this, the vM1 input from to SST
+interneurons remained smaller than the input onto the pyramidal cell (Supplementary Fig.
+3). We did not find differences in the latencies of the excitatory photo-stimulation evoked
+responses among the four groups of neurons (Supplementary Fig. 4a).
+Together, these data indicate that the excitatory projection from vM1 most strongly recruits
+5HT3aR interneurons compared with pyramidal cells or other interneurons. In contrast, vM1
+provides minimal input to SST interneurons.
+Lee et al.
+Page 4
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 5 =====
+vM1 inputs most strongly drive VIP 5HT3aR neurons
+Our data on the M1-to-S1 circuit suggest that that, among neurons in the superficial layers
+of S1 (that is, pyramidal neurons, and fast-spiking, SST and 5HT3aR interneurons), vM1
+provides the strongest excitatory inputs to 5HT3aR interneurons. Although stimulation-
+evoked EPSCs of 5HT3aR interneurons were, on average, larger than those of other
+neuronal types, the range of normalized EPSCs in this class had a broad distribution (Fig.
+1f). Thus, we asked whether the strength of vM1 input correlates with the specific subtype
+of 5HT3aR interneurons. 5HT3aR interneurons can be classified into two subgroups based
+on the expression of the neuropeptide VIP15,16,19. VIP-positive interneurons account for up
+to 40% of the 5HT3aR interneuron population. The most frequently observed VIP
+interneurons are the bipolar or bitufted neurons with an irregular-spiking firing pattern.
+Many VIP-negative 5HT3aR interneurons are reelin-positive, somatostatin-negative neurons
+with a late-spiking firing pattern and neurogliaform morphology15,16,19. We identified VIP
+and non-VIP interneurons on the basis of their firing patterns, as described in our previous
+studies15,19. We found that, of the 5HT3aR population, VIP interneurons received
+significantly stronger inputs from vM1 compared with nearby pyramidal neurons (VIP to
+pyramidal ratio = 2.88 ± 1.12, P < 0.001, Wilcoxon signed-rank test; Fig. 2). However, we
+found that EPSCs recorded from non-VIP 5HT3aR interneurons were similar to those
+recorded from pyramidal neurons (non-VIP to pyramidal ratio = 1.35 ± 0.45; P = 0.51,
+Wilcoxon signed-rank test; Fig. 2).
+Given the dense arborizations of vM1 afferent axons in layer 1, we also examined whether
+the vM1 inputs to 5HT3aR interneurons were related to their laminar locations. Despite
+dense vM1 axons in layer 1, we did not find a relationship between the depth of 5HT3aR
+interneurons and responses to photo-stimulation (linear correlation: non-VIP, r2 = 0.078;
+VIP, r2 = 0.001; Fig. 2h). Our previous immunostaining data15,19 and the visualization of
+VIP interneurons in a Vip-cre mouse crossed with a tdTomato-reporter line indicate that the
+somata of VIP interneurons are rarely observed in layer 1 and start to appear at the border
+between layer 1 and 2 (Supplementary Fig. 5). Although there were no somata of VIP
+interneurons in L1, their dendrites extended fully into L1 (Supplementary Fig. 5). Together,
+our results suggest that, of the 5HT3aR interneurons, VIP interneurons are most strongly
+excited by vM1 inputs.
+We next compared local and long-range excitatory inputs (from vM1) to VIP interneurons.
+We simultaneously recorded EPSPs from pyramidal cells and either fast-spiking
+interneurons (Pvalb-cre; tdTomato) or VIP interneurons (Vip-cre; tdTomato) evoked by
+local electrical stimulation in layer 2/3 (Supplementary Fig. 6). We found that, on average,
+local electrical stimulation depolarized VIP interneurons about 40% less than pyramidal
+neurons (VIP to pyramidal ratio = 0.61 ± 0.12; P = 0.02, Wilcoxon signed-rank test;
+Supplementary Fig. 6). In contrast, local stimulation depolarized fast-spiking interneurons
+five times more strongly than pyramidal neurons (fast spiking to pyramidal ratio = 4.97 ±
+0.64; P = 0.02, Wilcoxon signed-rank test; Supplementary Fig. 6)26. These results, together
+with the observed responses to the long-range inputs from vM1, provide evidence that local-
+and long-range excitatory inputs differentially recruit distinct types of GABAergic
+interneurons. Long-range vM1 excitatory inputs preferentially recruit VIP interneurons,
+Lee et al.
+Page 5
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 6 =====
+whereas local excitatory inputs strongly recruit fast-spiking interneurons in S1 superficial
+layers.
+VIP interneurons preferentially inhibit SST interneurons
+To understand how the strong recruitment of VIP interneurons by vM1 inputs affects the S1
+network, we examined the functional output connectivity of VIP interneurons in S1.
+Anatomical studies have suggested that VIP interneurons preferentially target other types of
+interneurons27,28. To examine the functional connectivity of VIP interneurons, we recorded
+from pyramidal neurons, fast-spiking interneurons and SST interneurons while selectively
+photo-stimulating local VIP interneurons using a Vip-cre mouse line in conjunction with
+Cre-dependent expression of ChR2 as described above (Fig. 3). We limited the expression of
+ChR2 to just the VIP neurons in superficial layers (Supplementary Fig. 5).
+We simultaneously recorded IPSCs from a fast-spiking interneuron and a nearby pyramidal
+neuron while photo-activating VIP interneurons in a Vip-cre B13 mouse. To isolate IPSCs,
+we used a cesium-based internal pipette solution under voltage-clamp mode while recording
+at the AMPA receptor reversal potential (0 mV). Photo-stimulation–evoked IPSCs in the
+pyramidal neuron were significantly larger than those in the fast-spiking neuron (pyramidal,
+92.81 ± 11.87 pA; fast-spiking, 61.48 ± 9.67 pA, P = 0.04, Mann-Whitney U test; Fig. 3b).
+On average, the amplitude of IPSCs and the total inhibitory charge recorded from fast-
+spiking interneurons were about 35% and 85% less, respectively, than those in the
+simultaneously recorded pyramidal neurons (fast spiking to pyramidal ratio: amplitude =
+0.66 ± 0.26, P = 0.02; charge = 0.16 ± 0.08, P < 0.001; Wilcoxon signed-rank test; Fig. 3d–
+f).
+We also recorded from pairs of SST interneurons and pyramidal neurons in Vip-cre GIN
+mice. In contrast with fast-spiking interneurons, photo-stimulation of VIP interneurons
+generated IPSCs more than fourfold larger in a SST interneuron than in the simultaneously
+recorded pyramidal neuron (pyramidal, 111.40 ± 6.11 pA; SST, 440.81 ± 6.96 pA; P <
+0.001, Mann-Whitney U test; Fig. 3c). As a population, VIP interneurons provided
+significantly larger inhibition to SST interneurons than to pyramidal neurons (SST to
+pyramidal ratio: amplitude = 5.06 ± 2.45, P = 0.01; charge = 6.44 ± 3.61, P = 0.01;
+Wilcoxon signed-rank test; Fig. 3d–f). IPSCs were completely blocked by GABAzine (data
+not shown), indicating that photo-stimulation evoked GABA release from VIP interneurons.
+Latencies of photo-stimulation–evoked responses from these three groups of neurons did not
+differ (pyramidal, 2.44 ± 0.18 ms; fast-spiking, 2.38 ± 0.26 ms; SST, 2.12 ± 0.15 ms; P =
+0.3, Kruskal-Wallis test; Supplementary Fig. 4b).
+These results indicate that, out of all of the excitatory and inhibitory elements in S1, VIP
+interneurons most strongly inhibit SST interneurons. The weakest connections of VIP
+interneurons were those with fast-spiking interneurons, the perisomatic targeting
+interneurons. The disynaptic feedforward inhibitory circuit created by the combination of
+the strong long-range vM1 excitatory inputs to VIP interneurons and the powerful local
+inhibitory connection of VIP interneurons with SST interneurons explains the pronounced
+delayed IPSCs recorded from SST interneurons in response to vM1 axon stimulation (Fig.
+1e). To directly examine this, we optogenitcally silenced VIP interneurons while monitoring
+Lee et al.
+Page 6
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 7 =====
+inhibition in SST interneurons during photo-activation of vM1 axons (Fig. 4). We
+accomplished this by using Vip-cre GIN mice to selectively express the light-sensitive
+chloride pump (NpHR-eYFP) in VIP interneurons while using the eGFP expression to
+selectively record from SST interneurons (Fig. 4a). We also expressed ChR2-mCherry in
+vM1 to activate vM1 axons, as described above. Under these conditions, NpHR activation
+(590-nm photo-stimulation) strongly hyperpolarized NpHR-expressing VIP interneurons,
+whereas photo-stimulation (470 nm) of vM1 axons reliably depolarized and evoked spikes
+from VIP interneurons. When both NpHR and ChR2 were co-activated (590-nm and 470-nm
+photo-stimulation), NpHR activation sufficiently hyper-polarized VIP interneurons such that
+activation of vM1 inputs did not evoked spikes from the VIP interneurons (Fig. 4b). When
+VIP interneurons were not inhibited, photo-stimulation (470 nm) of vM1 axons evoked
+small EPSCs, followed by prominent IPSCs, in SST interneurons, as described above (Fig.
+1e). Notably, optogenetic silencing of VIP interneurons strongly reduced the inhibitory
+current recorded from a SST interneuron during vM1 activation (470 nm + 590 nm, 0.27 ±
+0.07 pC; 470 nm, 0.46 ± 0.06 pC; P = 0.005, Mann-Whitney U test; Fig. 4c). On average,
+inactivation of VIP interneurons during vM1 activation reduced the inhibition of SST
+interneurons by about 50% (470 nm + 590 nm to 470 nm ratio, 0.53 ± 0.09, P = 0.008,
+Wilcoxon signed-rank test; Fig. 4d). Together, these results provide direct evidence that
+excitatory inputs from vM1 recruit VIP interneurons and that these VIP interneurons in turn
+strongly inhibit SST interneurons, thereby establishing VIP interneuron–mediated disynaptic
+inhibition of SST interneurons during vM1 activation.
+The activity of VIP interneurons increases during whisking
+Our results indicate that S1-projecting vM1 pyramidal neurons strongly recruit VIP
+interneurons in S1 superficial layers and that VIP interneurons preferentially inhibit SST
+cells. These observations predict that the activity of VIP interneurons in S1 superficial layers
+will be increased and, conversely, that of SST interneurons will be decreased during
+voluntary whisking, that is, when the activity of vM1 is elevated9,29–31.
+To investigate this, we crossed Vip-cre mice with a tdTomato reporter line and a
+5HT3aReGFP mouse (Fig. 5). This allowed us to visualize the 5HT3aR interneuron
+population and, more importantly, to distinguish VIP interneurons from non-VIP
+interneurons in the 5HT3aR interneuron population. We performed two-photon, targeted,
+loose-patch recordings from fluorescently labeled interneurons in S1 in awake behaving
+mice (Online Methods). Prior to in vivo recording, we habituated mice to the head-fixed
+condition under a microscope such that mice stayed quiet during the recording session, yet
+were fully awake and frequently showed whisking behavior32. Prior to the recordings, we
+mapped the barrel cortex with optical imaging of intrinsic signal induced by whisker
+stimulation. In parallel with recording spiking activity, we simultaneously recorded the
+electrocorticogram (ECoG) and whisker movement to monitor brain states and whisking
+behavior, respectively.
+Under such recording conditions, we compared the firing rates during active whisking to
+those during awake non-whisking periods from the two different subtypes of 5HT3aR
+interneurons: VIP and non-VIP interneurons. An example VIP interneuron recorded at a
+Lee et al.
+Page 7
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 8 =====
+depth of 240 μm from the pia showed more than a threefold increase in its firing rate during
+active whisking, as compared with awake non-whisking periods (from 2.39 ± 0.42 Hz to
+6.77 ± 1.63 Hz; Fig. 5b). In contrast with the VIP interneuron, a non-VIP interneuron (depth
+of 150 μm) recorded in the same mouse showed no changes in the firing rates between non-
+whisking and whisking periods (from 2.43 ± 0.45 Hz to 2.81 ± 0.52 Hz; Fig. 5c). The strong
+correlation between whisking behavior and the increased activity of VIP interneurons was
+also evident in the population data (whisking to non-whisking ratio = 3.3 ± 1.23, P = 0.001,
+Wilcoxon signed-rank test; Fig. 5e,h,i). Firing rates of non-VIP interneurons, however, did
+not differ in these two conditions (whisking to non-whisking ratio = 1.16 ± 0.28, P = 0.94,
+Wilcoxon signed-rank test; Fig. 5f,h,i). Spontaneous activity computed during non-whisking
+was similar between VIP interneurons and non-VIP interneurons (4.62 ± 3.20 Hz versus
+5.15 ± 2.22 Hz, respectively; P = 0.4, Mann-Whitney U test). Consistent with previous
+studies13,14,32, we also observed a correlation between whisking behavior and ECoG
+activity, with a predominant low-frequency component in the ECoG during non-whisking
+periods and the robust appearance of high-frequency ECoG during whisking (data not
+shown).
+We also asked whether the activity of SST interneurons is inversely correlated with
+whisking behavior. We targeted SST interneurons using a Sst-cre mouse crossed with the
+tdTomato reporter line. A spontaneously active SST interneuron during non-whisking
+substantially decreased spiking activity once the mouse start to whisk (from 4.75 ± 0.97 Hz
+to 1.74 ± 0.34 Hz; Fig. 5d). We found, on average, more than a fourfold decrease in the
+firing rates of SST interneurons during active whisking as compared with non-whisking
+periods (whisking to non-whisking ratio = 0.24 ± 0.06, P = 0.02, Wilcoxon signed-rank test;
+Fig. 5g–i). This result is consistent with a previous finding that SST interneurons become
+hyperpolarized and exhibit reduced spiking activity during active whisking14. The
+differences in spiking behavior between VIP, non-VIP and SST interneurons did not depend
+on recording depth (Fig. 5j).
+Given that vM1 activity is elevated during active whisking, these results suggest that vM1
+directly recruits VIP interneurons in S1 in awake mice and that these neurons inhibit SST
+interneurons. To test causality between vM1 activity and the changes in the firing rates of
+VIP interneurons and SST interneurons in S1 during whisking, we inactivated vM1 using
+local injections of the sodium channel blocker tetrodotoxin (TTX; Fig. 6a). Spontaneously
+occurring, synchronized neuronal activity recorded from vM1 was completely abolished for
+several hours following TTX injections. Local field potentials (LFPs) recorded from S1,
+however, were not affected by TTX injection in vM1 (Fig. 6a). Following vM1 inactivation,
+the strong correlation between increased firing rates of VIP interneurons and whisking
+behavior was significantly reduced, suggesting that direct excitatory inputs from vM1 are
+responsible for the increased activity of VIP interneurons (whisking to non-whisking ratio =
+1.42 ± 0.03, P = 0.08, Wilcoxon signed-rank test; Fig. 6b,d,e). Furthermore, we no longer
+observed the reduction of the activity of SST interneurons during whisking (whisking to
+non-whisking ratio = 0.98 ± 0.41, P = 0.2, Wilcoxon signed-rank test; Fig. 6c–e).
+In summary, our results demonstrate a causal relationship between vM1 activity and the
+enhanced spiking rate of VIP interneurons in S1 superficial layers during whisking.
+Lee et al.
+Page 8
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 9 =====
+Moreover, we found that strong vM1 recruitment of VIP interneurons provides a powerful
+inhibition to SST interneurons, resulting in reduced spiking activity of these cells during
+whisking (Supplementary Fig. 7).
+DISCUSSION
+Here we characterized the synaptic targets of the axonal projections from vM1 in the mouse
+S1. We found that a specific subtype of GABAergic interneurons, the VIP-expressing
+irregular-spiking neurons, were the primary targets of vM1 projections. We also found that
+that SST-expressing interneurons were the main targets of VIP interneurons. Consistent with
+these findings, we observed that the in vivo activity of VIP interneurons in S1 was tightly
+correlated with voluntary whisking behavior when the overall activity of vM1 was
+elevated9,29–31. Furthermore, we found that vM1 activity was required to produce the
+increased firing rate of VIP interneurons. These findings suggest an underlying circuit
+mechanism that can explain the observed hyperpolarization and silencing of SST
+interneurons during whisking (Fig. 5)13,14. Consistent with this conclusion, inactivation of
+vM1 suppressed the silencing of SST interneurons during whisking. Together, our results
+describe a previously unknown disinhibitory circuit by which signals from motor cortex
+influence information processing in sensory cortex.
+VIP neurons are a subtype of a family of interneurons that is characterized by the expression
+of 5HT3a receptors. Previously, we found that 5HT3aR interneurons account for ~30% of
+the GABAergic neurons in S1 and that, together with the interneurons expressing PV and
+SST, these can account for nearly all GABAergic neurons in the cortex15,16. Notably,
+5HT3aR interneurons are enriched in superficial or associative layers, where they represent
+the most abundant GABAergic interneuron population. However, the physiological function
+of this group of interneurons has largely remained unknown. One study reported that some
+non–fast-spiking GABAergic interneurons increased their activity during whisking13, but
+the interneuron subtype that these non–fast-spiking interneurons correspond to was not
+identified. Some of the observed non–fast-spiking GABArgic interneurons were presumably
+VIP interneurons, particularly those whose activity increases during whisking.
+Superficial cortical layers are the main targets of interareal cortical communication. In
+primary sensory cortex they are the layers in which sensory information from layer 4, the
+thalamic recipient zone, is integrated with information from other columns and other cortical
+areas. Specifically, in S1 the densest projection of vM1 axons is found in L1 (refs. 2–5). The
+enrichment of 5HT3aR interneurons in superficial layers suggests that these interneurons
+may be important in mediating interareal cortical interactions and thereby contribute to
+context-dependent sensory processing. The finding that VIP interneurons are the main
+recipients in S1 of vM1 activity supports this hypothesis.
+Although vM1 activity is necessary for increased activity of VIP interneurons, a trend in the
+same direction as that observed when vM1 was intact was still seen during M1 inactivation
+(Fig. 6). It is therefore possible that other factors, such as changes in the levels of
+neuromodulators, contribute to the activity of VIP interneurons during whisking.
+Lee et al.
+Page 9
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 10 =====
+Previous models of the mechanism by which vM1 activity influences S1 function have
+usually implied that vM1 effects are mediated by direct connections between vM1 axons and
+pyramidal cells in S19,10. Our results suggest that interneurons are important and,
+specifically, that changes in the activity of S1 pyramidal cells depend on the feed-forward
+inhibition of the SST interneurons by VIP interneurons13,14. Given that SST interneurons
+primarily target the distal dendrites of pyramidal cells, our results suggest that a key effect
+of motor-sensory communication in S1 is the disinhibition of the distal dendrites of
+pyramidal cells. How does this disynaptic disinhibitory circuit mediate the effect of motor
+signals on the activity of S1? A hypothesis is suggested by recent findings on the effects of
+whisker movements on the activity of pyramidal cells in S1 together with what is known
+about the effects of SST interneurons on pyramidal cell activity. A recent study10 found that
+the interaction between whisker sensory input and vM1 activity during the performance of
+an object localization task promotes large Ca2+ regenerative responses in the apical tuft
+dendrites of pyramidal cells in S1. On the other hand, SST interneurons have been shown to
+control the generation of Ca2+ regenerative activity in the distal dendrites of pyramidal
+cells33–35. Thus, the circuit unraveled in this study provides a mechanism to explain the
+generation of Ca2+ regenerative potentials during active sensing via the vM1-mediated
+feedforward inhibition of the SST interneurons by VIP interneurons. Ca2+ regenerative
+responses initiated in the distal dendrites of pyramidal neurons are known to promote burst
+spiking33–36. Bursts are more reliably transmitted across synapses than single spikes37, and
+consistent with a role of SST in controlling burst spiking, it has been shown that silencing
+SST interneurons increases burst generation by pyramidal cells14,33,35. Thus, bursting might
+be the signal representing the coincident detection of sensory information and changes in
+whisker movements, which in turn could provide an amplification of certain sensory signals.
+The axons of vM1 also branch in L5b/6 of S1. Increased vM1 activity enhances the activity
+of S1 L5b/6 pyramidal neurons8,38, suggesting direct inputs from vM1. The disinhibitory
+circuit that we observed for L2/3 pyramidal neurons may also occur on the distal dendrites
+of L5b pyramidal neurons. How this modulation interacts with the actions of vM1 axons in
+L5b to control the activity of these neurons will need to be addressed in the future.
+In addition to the projection from motor cortex, other cortical areas also project to S1. For
+example, the axons from the secondary somatosensory cortex (S2) reside for the most part in
+the same layers of S1 as the vM1 projections2,39. Furthermore, subcortical areas, such as the
+intralaminar and midline thalamic nuclei and the posteriomedial thalamic nucleus, also
+preferentially target the superficial layers11,40–42. Functionally, these nonspecific thalamic
+and higher order (association) nuclei are known to be involved in arousal and alertness43,44
+and serve as an interface between sensory and motor function in the whisker-to-barrel
+system7,45,46 (but see ref. 47). A recent study found that neurogliaform cells, a subtype of
+non-VIP 5HT3aR interneurons, in prefrontal cortex are targets of inputs from midline
+thalamic nuclei48. Together with our results, these observations suggest that strong
+engagement of subtypes of 5HTaR interneurons might a general principle of circuit wiring
+in cortico-cortical and subcortical interactions.
+Another recent study characterized the connectivity of two morphologically distinct
+subtypes of layer 1 interneurons49: L1 single-bouquet cells (SBCs) and elongated
+Lee et al.
+Page 10
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 11 =====
+neurogliaform cells. SBCs partly resemble the VIP interneurons characterized here, as both
+have a descending intracolumnar axon. Moreover, it was reported49 that SBCs preferentially
+form unidirectional inhibitory connections on all subtypes of L2/3 interneurons and can
+therefore produce disinhibition of L5 pyramidal neurons in the same column. This raises the
+question of whether VIP interneurons correspond to the SBC neurons described
+previously49. On the basis of the following observations, we believe that SBCs and VIP
+interneurons are not the same cell type and that the disinhibitory circuit we observed is
+therefore distinct from the one described previously49. Specifically, according to the
+previous study49, SBC interneurons are a prominent L1 interneuron. However, although the
+dendrites of VIP interneurons extended fully into layer 1 (Supplementary Fig. 5), VIP
+interneuron somas are rarely observed in this layer15. Furthermore, SBC cells and VIP
+interneurons appeared to have different output connectivity. According to the previous
+study49, SBC cells connect to all interneuron subtypes in L2/3 and not to pyramidal cells.
+Furthermore, that study49 found that the connection probability between SBCs and SST
+interneurons was the lowest for all supragranular interneurons. However, we observed small
+connectivity to all neurons, including pyramidal cells, but substantially stronger connectivity
+specifically to SST interneurons.
+It has been suggested that the large diversity of GABAergic interneurons contributes to the
+ability of cortical circuits to perform a broad range of complex computations50. Our results
+provide further evidence that different types of GABAergic interneurons interact to
+modulate cortical circuits during different contextual and behavioral states.
+ONLINE METHODS
+Transgenic mice
+We used the following transgenic mouse lines to target specific population of neurons:
+5HT3aR-BACeGFP (BX663, Gensat) for 5HT3aR interneurons, B13, G42 (007677, Jackson)
+and Pvalb-cre (008069, Jackson) for PV interneurons, Vip-cre (008069, Jackson) for VIP
+interneurons, GIN (003718, Jackson), X94 (006334, Jackson) and Sst-cre (013044, Jackson)
+for SST interneurons, and Emx1-cre (005628, Jackson) for pyramidal neurons. All
+procedures were carried out in accordance with the US National Institutes of Health Guide
+for the Care and Use of Laboratory Animals and with the approval of the Institutional
+Animal Care and Use Committee of the New York University School of Medicine. The mice
+used in this study were from mixed backgrounds that included C57BL/6, CB6 and Swiss-
+Webster. Heterozygous mice were used for experiments. Both male and female mice were
+used. Mice were group-housed in the vivarium under reversed light-dark (12 h and 12 h)
+conditions. After surgery, mice were housed individually. The mice used in this study had
+no previous history of drug administration, surgery or behavioral testing.
+Stereotactic virus injection
+Mice (postnatal day 18–22) were anesthetized with isoflurane (1.0–1.5% isoflurane (vol/vol)
+in 100% oxygen) and positioned in a stereotactic frame for virus injection. A small
+craniotomy was made to target neurons in S1 and vM1 (vM1, 0.5–1.5 mm anterior and 0.5–
+1.0 lateral to bregma; S1, 1.2–1.5 mm posterior and 3.0–3.5 mm lateral to bregma). Adeno-
+Lee et al.
+Page 11
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 12 =====
+associated virus (AAV) was used for the expression of ChR2-mCherry. AAV2/5 (EF1-
+dflox-hChR2(H134R)-mCherry, Penn Vector Core) was delivered through a small
+craniotomy (~150 μm in diameter) by a glass micropipette (6–12-μm inner diameter, back-
+filled with mineral oil) attached to an automated nanoliter injector (Drummond Nanoject).
+To target neurons in superficial layer of S1, a bolus of 0.03 μl of virus was injected at each
+50-μm step from a depth of 250 to 100 μm below the surface at the rate of 0.03 μl min−1. To
+target vM1 neurons, virus was injected sequentially from a depth of 1,000 to 100 μm from
+the cortical surface. The pipette was held in the final position for 5–10 min before being
+retracted from the brain. Mice’s eyes were protected with ointment (Vetropolycin) during
+the surgery.
+Immunohistochemistry
+2–3 weeks after (wt/vol) virus injection, mice were fixed by transcardiac perfusion with
+0.9% saline (wt/vol) containing heparin (1 unit ml−1), followed by 30–50 ml of 0.1 M
+phosphate buffer (pH 7.4) containing 4% paraformaldehyde (wt/vol). Dissected brains were
+further fixed in the same fixative solution for 1 h at 4 °C and then placed in a 30% sucrose
+(wt/vol) solution at 4 °C for 24–48 h. Using a sliding microtome, 40-μm-thick frozen
+coronal sections were collected in 0.1 M phosphate-buffered saline (PBS). Sections were
+washed in PBS and then incubated in a blocking solution (10% normal goat serum (vol/vol),
+1% BSA (vol/vol), 0.2% cold fish gelatin (vol/vol) and 0.2% Triton X-100 (vol/vol) in PBS)
+for 1 h at 20–23 °C. Sections were then incubated with primary antibodies (rabbit antibody
+to VIP, 1:500 dilution, AB982, Incstar) in a diluted (1:10) blocking solution overnight at 4
+°C, washed in PBS four times for 5 min each, followed by 1 h of secondary antibody
+incubation at 20–23 °C and washed four times in PBS for 5 min each. Cy2-conjugated
+secondary antibodies (1:200, 200-222-037, Jackson ImmunoResearch) were used to
+visualize the signals. Sections were mounted in Vectashield medium containing 4,6-
+diamidino-2-phenylindole (DAPI; Vector Laboratory) for nuclear counterstaining.
+Fluorescent images were taken using a Zeiss LSM 510 META confocal microscope.
+In vitro electrophysiology and photo-stimulation
+Brain slices were prepared and visualized, and whole-cell recordings were performed as
+described previously15. Briefly, 2–3 weeks after viral injection, mice were anesthetized with
+pentobarbital (100 mg per kg body weight) and transcardially perfused with cold perfusion
+solution containing 242.0 mM sucrose, 2.5 mM KCl, 0.0 or 0.5 mM CaCl2, 7.0 mM MgCl2,
+28.0 mM NaHCO3, 1.25 mM NaH2PO4 and 10.0 mM glucose saturated with 95% O2/5%
+CO2. Coronal slices (300 μm) were made using Vibratome 1000 Plus (Vibratome) in the
+same solution. Slices were incubated at 35 °C for 30 min and kept at 20–23 °C for at least 30
+min before recording.
+Whole-cell recordings were performed in oxygenated artificial cerebro-spinal fluid
+containing 125 mM NaCl, 26 mM NaHCO3, 2.5 mM KCl, 1.25 mM NaH2PO4, 2 mM
+CaCl2, 2 mM MgCl2 and 10 mM glucose. The artificial cerebro-spinal fluid was
+continuously equilibrated with 95% O2 and 5% CO2 throughout recording. For EPSP and
+EPSC recordings, glass pipettes (3–6 MΩ) were filled with internal solution containing 135
+mM potassium gluconate, 4 mM KCl, 2 mM NaCl, 10 mM HEPES, 0.2 mM EGTA, 4 mM
+Lee et al.
+Page 12
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 13 =====
+ATP-Mg, 0.3 mM GTP-Tris, 1.4 mM phosphocreatine-Tris (pH 7.25, 280 mOsm) and 0.2%
+biocytin (wt/vol). For IPSC recordings, pipettes were filled with 130 mM cesium gluconate,
+0.5 mM EGTA, 7 mM KCl, 10 mM HEPES, 4 mM Mg-ATP, 0.3 mM Na-GTP, 5 mM
+phosphocreatine, 5 mM QX-314 (pH 7.25 with CsOH) and 0.2% biocytin. Membrane
+potentials were not corrected for the liquid junction potential. Recordings were conducted at
+30–33 °C. During patching, cell-attached seal resistances were >1 GΩ and series resistance
+after achieving whole-cell configuration was between 5 and 28 MΩ. A series of
+hyperpolarizing and depolarizing step currents were injected to measure intrinsic properties
+of each neuron. Data was collected using an Axopatch 200B and 2B amplifiers (Molecular
+Devices), sampled at 20 kHz and low-pass filtered at 5 kHz (Digidata 1322A, Molecular
+Devices). pCLAMP 9 software (Molecular Devices) was used for data acquisition, and
+analysis was performed using the Clampfit module of pCLAMP. To visualize the
+morphology of recorded neurons, slices were fixed for 1–2 h with 4% paraformaldehyde in
+PBS, rinsed with PBS, and incubated in a blocking solution (1% normal goat serum and
+0.3% Triton X-100, pH 7.5, in PBS) for 2 h. After several washes with PBS, biocytin-filled
+neurons were stained using streptavidin-conjugated Alexa Fluor 555 (1:500 dilution,
+Invitrogen). Fluorescently labeled neurons were imaged and reconstructed using Zeiss LSM
+510 META confocal microscope and Neurolucida software (MicroBrightField).
+ChR2 and NpHR were excited with a 470- or 590-nm LED light source (Mightex),
+respectively. Collimated light from an LED was delivered through the epifluorescence
+pathway of Olympus BX61 microscope and fed into a 40× water-immersion objective.
+Photo-stimulation was delivered at 60-s intervals with the illumination intensity (2 mW) and
+duration (5 ms) controlled by a LED controller (Mightex).
+Surgical procedure for head-fixed awake recordings
+Mice (postnatal day 30–40) underwent aseptic surgeries under isoflurane anesthesia similar
+to virus injection procedure (see above). During surgical procedure, mice were kept on a
+heating pad (FHC) to maintain body temperature at 37 °C. A custom-built, T-shaped
+titanium headpost was mounted on the skull (overlaying the midline and the cerebellum)
+using cyanoacrylate glue (Vetbond) and subsequently covered by dental cement. Two
+screws were inserted in the skull above the left frontal and primary auditory cortex to secure
+dental cement. Two teflon-coated stainless steel wires (diameter = 0.1 mm, ~0.7 mm of a
+wire tip was exposed) were implanted to the left side of frontal cortex and to near secondary
+visual cortex for ECoG recording.
+1 or 2 d after surgery, intrinsic imaging was performed to identify primary barrel cortex
+under isoflurane anesthesia51. Intrinsic imaging signals were obtained by measuring the
+difference between images acquired during stimulus and baseline periods. Difference image
+was calculated over 40 epochs with each epoch lasting for 13 s, including 4 s of whisker
+stimulation (at 10 Hz) and 9 s of baseline. Images were taken by a 14-bit CCD camera
+(Pixelfly USB, PCO) at 10 fps through the intact skull over the primary somatosensory
+cortex (using a 600 nm LED for illumination) to identify a cortical area associated with
+stimulation of a single whisker.
+Lee et al.
+Page 13
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 14 =====
+4–6 d after the initial surgery, each mouse had undergone a habituation to in vivo recording
+set-up with their heads fixed under a two-photon microscope13,14. The daily habituation
+training lasted for 5–8 d, until the mouse could stay in the in vivo recording set-up calmly
+for up to 2 h. A mouse was rewarded with sweetened water during and after training
+sessions. Mice were not water deprived.
+Inactivation of vM1
+The sodium channel blocker TTX (Tocris) was used to inactivate vM1. TTX (50 μM) and
+micro-Ruby (10%, vol/vol, Invitrogen), dissolved in saline (total 90-nl injection), were
+slowly injected to vM1 (1.1 mm lateral to the midline and 0.9 mm anterior to bregma) in the
+ipsilateral side of the S1 recording site using a nanoliter injector. The injections were made
+every 100 μm (15 nl for each injection site with speed of 15 nl per min) from 800 to 300 μm
+below pia. Mice were anesthetized during the injection procedure (see above). LFP
+recordings from vM1 and S1 were made before and after TTX injection to vM1 to confirm
+the TTX effect. After each in vivo targeted recording, LFP recordings from vM1 were
+carried out to ensure that vM1 was silence. The location of the vM1 injection site was
+confirmed with micro-Ruby.
+In vivo electrophysiology
+On the day of recording, under the light isoflurane anesthesia described above, a small
+craniotomy (<0.6 mm in diameter) was made over right side of barrel cortex, which was
+marked previously by intrinsic imaging. A small chamber was made out of dental cement to
+surround the craniotomy and covered by 1.5% agar dissolved in normal rat ringer (NRR)
+solution (135 mM NaCl, 5.4 mM KCl, 1.0 mM MgCl2, 1.8 mM CaCl2 and 5 mM HEPES,
+pH 7.2–7.4). A slit was made in the cranial dura just big enough for the entrance of a
+recording pipette. Recordings began 2 h after making the craniotomy to allow for the mouse
+to recover from anesthesia.
+Targeted loose cell-attached recordings were performed under the guidance of two-photon
+imaging52. Pulled glass micropipettes (3–5 MΩ) were filled with the same internal pipette
+solution as for in vitro experiments (see above) supplemented with either Alexa Fluor 594 (5
+μM, Invitrogen) to target GFP-positive neurons or Alexa Fluor 488 (5 μM, Invitrogen) to
+target tdTomato-positive neurons. Two-photon laser was tuned to 860 nm, which allowed
+excitation of both GFP/Alexa Fluor 488 and tdTomato/Alexa Fluor 594 fluorophores
+simultaneously. Loose patch recordings (40–120 MΩ) were performed in voltage-clamp
+mode using Axopatch 200B amplifier (Molecular Devices) sampled at 10 kHz and low-pass
+filtered at 5 kHz (Digidata 1322A; Molecular Devices). All recorded neurons were located
+from 50 μm to 250 μm below the cortical surface.
+The ECoG signal was recorded using a differential amplifier (AC 1800, A-M system)
+bandpass filtered between 0.1 Hz and 10 kHz and digitized at 10 kHz using Digidata 1322A
+(Molecular Devices).
+Lee et al.
+Page 14
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 15 =====
+In vitro recording data analysis
+To characterize the intrinsic membrane properties of neurons, hyperpolarizing and
+depolarizing current steps of 500-ms duration were applied in 10-pA increments at 0.125 Hz
+as described previously15,19. Two parameters were measured: resting membrane potential
+(Vrest), defined as the stable membrane potential reached after break in with no holding
+current applied, and input resistance (Rm), defined as the slope of the linear regression of the
+steady-state I-V curve. We used the value of the spike threshold as the EPSP amplitude for
+the neurons that elicited spikes in Figure 1.
+Whisking behavior data analysis
+To better quantify whisker movement, some whiskers were trimmed right before a recording
+session, leaving two rows of whiskers. To film whisking behavior, we used a high-speed
+camera (120 fps, Basler, SCA640) combined with an infrared illumination (630-nm LED).
+Custom-written image analysis script in Matlab (Mathworks) was used to measure overall
+whisker movement. To quantify periods of active whisking, we computed a series of spatial
+derivatives between successive pairs of video frames, generating a series of two-dimensional
+motion estimates. We then chose an image motion threshold that best discriminated periods
+of whisking from periods of rest. The motion estimates for each experiment were
+subsequently resampled to 20 Hz for graphical display.
+In vivo recording data analysis
+Custom-written Matlab (Mathworks) scripts were used to analyze electrophysiology data.
+For cell-attached recordings, spikes were detected on the basis of their amplitude (at least
+threefold larger than s.d. of baseline noise). Spikes were assigned to whisking or non-
+whisking periods on the basis of the whisking activity (see above), but barring any other
+body movements. Spectrograms of the ECoG were generated using the Matlab with a 1-s
+sliding window.
+Data is presented throughout as mean ± s.d. except where otherwise noted. Unless stated
+otherwise, all statistical comparisons are non-parametric (two-sided). Specific statistical
+analyses are notified in the results. Data collection and analysis were not performed blind to
+the conditions of the experiments. Data were collected and processed without
+randomization. No statistical methods were used to pre-determine sample sizes.
+Statistical analyses
+Data is presented throughout as mean ± s.d. except where otherwise noted. Unless stated
+otherwise, all statistical comparisons are non-parametric (two-sided). Specific statistical
+analyses are notified in the results. Data collection and analysis were not performed blind to
+the conditions of the experiments. Data were collected and processed without
+randomization. No statistical methods were used to pre-determine sample sizes.
+Supplementary Material
+Refer to Web version on PubMed Central for supplementary material.
+Lee et al.
+Page 15
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 16 =====
+Acknowledgments
+We thank all of the members of the Rudy and Fishell laboratories for helpful discussions. We thank K. Deisseroth
+(Stanford University) for DIO-ChR2-mCherry plasmids, Z. Talbot for help with intrinsic imaging and setting-up a
+camera for whisking behavior, and E. Merriam for advice on in vivo data analysis. This work was supported by
+grants from the US National Institutes of Health (R01 NS30989 and P01 NS074972 to B.R., MH071679 and P01
+NS074972 to G.F., and 1F32NS076316 to S.L.). I.K. was supported by Epilepsy Foundation grant 260691.
+References
+1. Jones EG, Wise SP. Size, laminar and columnar distribution of efferent cells in the sensory-motor
+cortex of monkeys. J Comp Neurol. 1977; 175:391–438. [PubMed: 410849]
+2. White EL, DeAmicis RA. Afferent and efferent projections of the region in mouse SmL cortex
+which contains the posteromedial barrel subfield. J Comp Neurol. 1977; 175:455–482. [PubMed:
+915034]
+3. Porter LL, White EL. Afferent and efferent pathways of the vibrissal region of primary motor cortex
+in the mouse. J Comp Neurol. 1983; 214:279–289. [PubMed: 6853758]
+4. Donoghue JP, Parham C. Afferent connections of the lateral agranular field of the rat motor cortex. J
+Comp Neurol. 1983; 217:390–404. [PubMed: 6886060]
+5. Veinante P, Deschênes M. Single-cell study of motor cortex projections to the barrel field in rats. J
+Comp Neurol. 2003; 464:98–103. [PubMed: 12866130]
+6. Kleinfeld D, Ahissar E, Diamond ME. Active sensation: insights from the rodent vibrissa
+sensorimotor system. Curr Opin Neurobiol. 2006; 16:435–444. [PubMed: 16837190]
+7. Diamond ME, von Heimendahl M, Knutsen PM, Kleinfeld D, Ahissar E. ‘Where’ and ‘what’ in the
+whisker sensorimotor system. Nat Rev Neurosci. 2008; 9:601–612. [PubMed: 18641667]
+8. Lee S, Carvell GE, Simons DJ. Motor modulation of afferent somatosensory circuits. Nat Neurosci.
+2008; 11:1430–1438. [PubMed: 19011625]
+9. Petreanu L, et al. Activity in motor-sensory projections reveals distributed coding in
+somatosensation. Nature. 2012; 489:299–303. [PubMed: 22922646]
+10. Xu NL, et al. Nonlinear dendritic integration of sensory and motor input during an active sensing
+task. Nature. 2012; 492:247–251. [PubMed: 23143335]
+11. Petreanu L, Mao T, Sternson SM, Svoboda K. The subcellular organization of neocortical
+excitatory connections. Nature. 2009; 457:1142–1145. [PubMed: 19151697]
+12. Hooks BM, et al. Laminar analysis of excitatory local circuits in vibrissal motor and sensory
+cortical areas. PLoS Biol. 2011; 9:e1000572. [PubMed: 21245906]
+13. Gentet LJ, Avermann M, Matyas F, Staiger JF, Petersen CC. Membrane potential dynamics of
+GABAergic neurons in the barrel cortex of behaving mice. Neuron. 2010; 65:422–435. [PubMed:
+20159454]
+14. Gentet LJ, et al. Unique functional properties of somatostatin-expressing GABAergic neurons in
+mouse barrel cortex. Nat Neurosci. 2012; 15:607–612. [PubMed: 22366760]
+15. Lee S, Hjerling-Leffler J, Zagha E, Fishell G, Rudy B. The largest group of superficial neocortical
+GABAergic interneurons expresses ionotropic serotonin receptors. J Neurosci. 2010; 30:16796–
+16808. [PubMed: 21159951]
+16. Rudy B, Fishell G, Lee S, Hjerling-Leffler J. Three groups of interneurons account for nearly
+100% of neocortical GABAergic neurons. Dev Neurobiol. 2011; 71:45–61. [PubMed: 21154909]
+17. Kawaguchi Y. Physiological subgroups of nonpyramidal cells with specific morphological
+characteristics in layer II/III of rat frontal cortex. J Neurosci. 1995; 15:2638–2655. [PubMed:
+7722619]
+18. Tamás G, Lorincz A, Simon A, Szabadics J. Identified sources and targets of slow inhibition in the
+neocortex. Science. 2003; 299:1902–1905. [PubMed: 12649485]
+19. Miyoshi G, et al. Genetic fate mapping reveals that the caudal ganglionic eminence produces a
+large and diverse population of superficial cortical interneurons. J Neurosci. 2010; 30:1582–1594.
+[PubMed: 20130169]
+Lee et al.
+Page 16
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 17 =====
+20. Porter JT, et al. Properties of bipolar VIPergic interneurons and their excitation by pyramidal
+neurons in the rat neocortex. Eur J Neurosci. 1998; 10:3617–3628. [PubMed: 9875341]
+21. Chan CH, et al. Emx1 is a marker for pyramidal neurons of the cerebral cortex. Cereb Cortex.
+2001; 11:1191–1198. [PubMed: 11709490]
+22. Tsai HC, et al. Phasic firing in dopaminergic neurons is sufficient for behavioral conditioning.
+Science. 2009; 324:1080–1084. [PubMed: 19389999]
+23. Dantzker JL, Callaway EM. Laminar sources of synaptic input to cortical inhibitory interneurons
+and pyramidal neurons. Nat Neurosci. 2000; 3:701–707. [PubMed: 10862703]
+24. Oliva AA Jr, Jiang M, Lam T, Smith KL, Swann JW. Novel hippocampal interneuronal subtypes
+identified using transgenic mice that express green fluorescent protein in GABAergic interneurons.
+J Neurosci. 2000; 20:3354–3368. [PubMed: 10777798]
+25. Ma Y, Hu H, Berrebi AS, Mathers PH, Agmon A. Distinct subtypes of somatostatin containing
+neocortical interneurons revealed in transgenic mice. J Neurosci. 2006; 26:5069–5082. [PubMed:
+16687498]
+26. Mateo C, et al. In vivo optogenetic stimulation of neocortical excitatory neurons drives brain-state-
+dependent inhibition. Curr Biol. 2011; 21:1593–1602. [PubMed: 21945274]
+27. Gonchar Y, Burkhalter A. Differential subcellular localization of forward and feedback interareal
+inputs to parvalbumin expressing GABAergic neurons in rat visual cortex. J Comp Neurol. 1999;
+406:346–360. [PubMed: 10102500]
+28. Dávid C, Schleicher A, Zuschratter W, Staiger JF. The innervation of parvalbumin containing
+interneurons by VIP-immunopositive interneurons in the primary somatosensory cortex of the
+adult rat. Eur J Neurosci. 2007; 25:2329–2340. [PubMed: 17445231]
+29. Carvell GE, Miller SA, Simons DJ. The relationship of vibrissal motor cortex unit activity to
+whisking in the awake rat. Somatosens Mot Res. 1996; 13:115–127. [PubMed: 8844960]
+30. Huber D, et al. Multiple dynamic representations in the motor cortex during sensorimotor learning.
+Nature. 2012; 484:473–478. [PubMed: 22538608]
+31. Friedman WA, Zeigler HP, Keller A. Vibrissae motor cortex unit activity during whisking. J
+Neurophysiol. 2012; 107:551–563. [PubMed: 21994257]
+32. Crochet S, Petersen CC. Correlating whisker behavior with membrane potential in barrel cortex of
+awake mice. Nat Neurosci. 2006; 9:608–610. [PubMed: 16617340]
+33. Murayama M, et al. Dendritic encoding of sensory stimuli controlled by deep cortical interneurons.
+Nature. 2009; 457:1137–1141. [PubMed: 19151696]
+34. Larkum ME, Zhu JJ, Sakmann B. A new cellular mechanism for coupling inputs arriving at
+different cortical layers. Nature. 1999; 398:338–341. [PubMed: 10192334]
+35. Larkum M. A cellular mechanism for cortical associations: an organizing principle for the cerebral
+cortex. Trends Neurosci. 2013; 36:141–151. [PubMed: 23273272]
+36. Williams SR, Stuart GJ. Mechanisms and consequences of action potential burst firing in rat
+neocortical pyramidal neurons. J Physiol (Lond). 1999; 521:467–482. [PubMed: 10581316]
+37. Lisman JE. Bursts as a unit of neural information: making unreliable synapses reliable. Trends
+Neurosci. 1997; 20:38–43. [PubMed: 9004418]
+38. Kinnischtzke AK, Simons DJ, Fanselow EE. Motor cortex broadly engages excitatory and
+inhibitory neurons in somatosensory barrel cortex. Cereb Cortex. Mar 31.2013 published online.
+10.1093/cercor/bht085
+39. Fabri M, Burton H. Ipsilateral cortical connections of primary somatic sensory cortex in rats. J
+Comp Neurol. 1991; 311:405–424. [PubMed: 1720147]
+40. Herkenham M. Laminar organization of thalamic projections to the rat neocortex. Science. 1980;
+207:532–535. [PubMed: 7352263]
+41. Wimmer VC, Bruno RM, de Kock CP, Kuner T, Sakmann B. Dimensions of a projection column
+and architecture of VPM and POm axons in rat vibrissal cortex. Cereb Cortex. 2010; 20:2265–
+2276. [PubMed: 20453248]
+42. Ohno S, et al. A morphological analysis of thalamocortical axon fibers of rat posterior thalamic
+nuclei: a single neuron tracing study with viral vectors. Cereb Cortex. 2012; 22:2840–2857.
+[PubMed: 22190433]
+Lee et al.
+Page 17
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 18 =====
+43. Van der Werf YD, Witter MP, Groenewegen HJ. The intralaminar and midline nuclei of the
+thalamus. Anatomical and functional evidence for participation in processes of arousal and
+awareness. Brain Res Brain Res Rev. 2002; 39:107–140. [PubMed: 12423763]
+44. Shirvalkar P, Seth M, Schiff ND, Herrera DG. Cognitive enhancement with central thalamic
+electrical stimulation. Proc Natl Acad Sci USA. 2006; 103:17007–17012. [PubMed: 17065322]
+45. Yu C, Derdikman D, Haidarliu S, Ahissar E. Parallel thalamic pathways for whisking and touch
+signals in the rat. PLoS Biol. 2006; 4:e124. [PubMed: 16605304]
+46. Kleinfeld D, Ahissar E, Diamond ME. Active sensation: insights from the rodent vibrissa
+sensorimotor system. Curr Opin Neurobiol. 2006; 16:435–444. [PubMed: 16837190]
+47. Masri R, Bezdudnaya T, Trageser JC, Keller A. Encoding of stimulus frequency and sensor motion
+in the posterior medial thalamic nucleus. J Neurophysiol. 2008; 100:681–689. [PubMed:
+18234976]
+48. Cruikshank SJ. Thalamic control of layer 1 circuits in prefrontal cortex. J Neurosci. 2012;
+32:17813–17823. [PubMed: 23223300]
+49. Jiang X, Wang G, Lee AJ, Stornetta RL, Zhu JJ. The organization of two new cortical
+interneuronal circuits. Nat Neurosci. 2013; 16:210–218. [PubMed: 23313910]
+50. Klausberger T, Somogyi P. Neuronal diversity and temporal dynamics: the unity of hippocampal
+circuit operations. Science. 2008; 321:53–57. [PubMed: 18599766]
+51. Chen-Bee CH, et al. Visualizing and quantifying evoked cortical activity assessed with intrinsic
+signal imaging. J Neurosci Methods. 2000; 97:157–173. [PubMed: 10788670]
+52. Komai S, Denk W, Osten P, Brecht M, Margrie TW. Two-photon targeted patching (TPTP) in
+vivo. Nat Protoc. 2006; 1:647–652. [PubMed: 17406293]
+Lee et al.
+Page 18
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 19 =====
+Figure 1.
+Long-range excitatory inputs from vM1 to different types of neurons in the superficial layers
+of S1. (a) Expression of ChR2-mCherry in vM1 pyramidal neurons. Left, expression of
+ChR2 in vM1 after injection of AAV-DIO-ChR2-mCherry to vM1 in Emx1-cre mice. Scale
+bar represents 500 μm. Right, axons of vM1 pyramidal neurons innervating S1 expressed
+ChR2-mCherry. Scale bar represents 100 μm. Note the strong expression of ChR2-mCherry
+in layers 1 and 2 in S1 (blue, DAPI). (b) Schematic of slice recording configuration. Red
+lines indicate the innervation patterns of vM1 axons. A specific interneuron type was
+simultaneously recorded with a nearby pyramidal neuron. (c–e) Photo-stimulation–evoked
+synaptic currents (left) and voltage responses (right) recorded in a fast-spiking (FS)
+interneuron and a pyramidal (Pyr) neuron (c), a 5HT3aR interneuron and a pyramidal
+Lee et al.
+Page 19
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 20 =====
+neuron (d), and a SST interneuron and a pyramidal neuron (e). Gray traces represent
+individual sweeps and solid colored traces represent the average (red for fast spiking, orange
+for 5HT3aR, blue for SST and black for pyramidal neurons). Evoked synaptic currents were
+recorded at −70 mV in voltage-clamp mode. Voltage responses were recorded at the resting
+membrane potential (Vrest, indicated next to the voltage traces) under current-clamp mode.
+Light blue traces indicate photo-stimulation (LED, 470 nm, 5 ms) delivered at 5 Hz. (f,g)
+EPSCs (f) and EPSPs (g) of 5HT3aR (5HT), fast-spiking and SST interneurons normalized
+to simultaneously recorded nearby pyramidal neurons (normalized EPSCs: 5HT3aR, 25
+cells, 18 slices, 8 mice, P < 0.001; fast spiking, 13 cells, 8 slices, 4 mice, P = 0.1; SST, 13
+cells, 9 slices, 4 mice, P < 0.001; normalized EPSPs: 5HT3aR, 21 cells, 17 slices, 8 mice, P
+< 0.001; fast spiking, 6 cells, 4 slices, 2 mice, P = 0.18; SST, 6 cells, 4 slices, 2 mice, P =
+0.01). Statistical significance was computed using Wilcoxon signed-rank test; *P < 0.05,
+**P < 0.005. Bars indicate mean.
+Lee et al.
+Page 20
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 21 =====
+Figure 2.
+VIP interneurons receive the strongest input from vM1. (a,c) Representative firing patterns
+of an irregular spiking neuron (a, VIP-positive 5HT3aR interneuron) and a late spiking
+neuron (c, non-VIP, 5HT3aR interneuron) produced by increasing step current injections
+(500 ms) in current-clamp mode. (b,d) Examples of morphologies of the irregular-spiking
+(b) and late-spiking (d) interneurons reconstructed using Neurolucida tracing. Dendrite and
+soma are shown in blue and axon in red. Scale bars represent 100 μm. (e,f) EPSCs evoked
+by photo-stimulation of vM1 axons, recorded in the irregular-spiking neuron (e) and the
+late-spiking neuron (f). Blue traces indicate photo-stimulation (LED, 470 nm, 5 ms)
+delivered at 5 Hz. (g) VIP interneurons received significantly stronger vM1 inputs compared
+with non-VIP interneurons in the 5HT3aR population. EPSCs of VIP and non-VIP
+interneurons were normalized to simultaneously recorded nearby pyramidal neurons. Bars
+indicate mean value (VIP interneurons: 15 cells, 12 slices, 8 mice, VIP to pyramidal ratio, P
+< 0.001; non-VIP interneurons: 10 cells, 7 slices, 6 mice, non-VIP to pyramidal ratio, P =
+0.51). **P < 0.005, Wilcoxon signed-rank test. (h) We found no relationship between the
+recording depth (relative to pial surface) and the strength of the vM1 input. Recording depth
+is plotted against normalized EPSC. White circles represent non-VIP interneurons and gray
+circles represent VIP interneurons (correlation coefficient: non-VIP, r2 = 0.078; VIP, r2 =
+0.001).
+Lee et al.
+Page 21
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 22 =====
+Figure 3.
+VIP interneurons most strongly inhibit SST interneurons in S1 superficial layers. (a)
+Specific expression of ChR2-mCherry in VIP interneurons. ChR2-mCherry expression in
+Vip-cre mice was confined to VIP neurons. Antibody-stained VIP neurons (left) showed
+nearly 100% overlap (right) with neurons expressing ChR2-mCherry (middle). Scale bar
+represents 100 μm. (b) VIP interneurons provided weak inhibition to fast-spiking
+interneurons. Photo-stimulation–evoked inhibitory synaptic currents recorded in a fast-
+spiking interneuron and in a pyramidal neuron in the Vip-cre B13 mouse are shown. (c) VIP
+interneurons provided strong inhibition to SST interneurons. Photo-stimulation–evoked
+inhibitory synaptic currents in a SST interneuron and a simultaneously recorded pyramidal
+neuron in a Vip-cre GIN mouse are shown. Cesium-based internal pipette solution was used
+to record inhibitory currents at 0 mV in voltage-clamp mode. Gray traces indicate individual
+sweeps and colored traces indicate the average (red, fast spiking; blue, SST; black,
+pyramidal neurons). Light blue traces indicate photo-stimulation (LED, 470 nm, 5 ms)
+delivered at 5 Hz. (d,e) IPSC amplitude (d) and total charge (e) in fast-spiking (14 cells, 8
+slices, 4 mice) and SST (8 cells, 5 slices, 3 mice) interneurons normalized to the
+corresponding values in simultaneously recorded nearby pyramidal neurons. *P < 0.05, **P
+< 0.005, Wilcoxon signed-rank test. (f) Photo-stimulation–evoked total IPSC charge in fast-
+spiking interneurons (red) and SST interneurons (blue) plotted against total IPSC charge in
+simultaneously recorded pyramidal neurons. Dashed line indicates unity. + indicates mean
+Lee et al.
+Page 22
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 23 =====
+(fast spiking to pyramidal ratio: amplitude, P = 0.02; charge, P < 0.001; SST to pyramidal
+ratio: amplitude, P = 0.01; charge, P < 0.001).
+Lee et al.
+Page 23
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 24 =====
+Figure 4.
+VIP interneurons mediate disynaptic feedforward inhibition of SST interneurons following
+vM1 activation. (a) Specific expression of NpHR-eYFP in VIP interneurons. AAV-ChR2-
+mCherry was injected to vM1 and AAV-DIO-NpHR-eYFP in S1 of a Vip-cre GIN mouse
+(left). Middle, expression of NpHR-eYFP in VIP interneurons in S1. NpHR-eYFP–
+expressing VIP interneurons (arrow) were easily distinguishable from GIN neurons
+(arrowhead) as a result of the preferential labeling of the periphery of the cells resulting
+from membrane expression of eYFP in VIP interneurons. Note the mCherry-expressing vM1
+axons in layer 1 of S1. Scale bar represents 100 μm. Right, firing patterns of a NpHR-eYFP–
+expressing VIP interneuron and a GIN interneuron. (b) Activation of NpHR reduced vM1
+activation-evoked spikes from NpHR-expressing VIP interneurons. Photo-stimulation of
+vM1 axons (blue light, 470 nm) elicited reliable spikes from a VIP interneuron in S1 (top).
+Photo-stimulation (yellow light, 590 nm) of NpHR sufficiently hyperpolarized the VIP
+interneuron such that simultaneous photo-stimulation (blue light, 470 nm) of ChR2-
+expressing vM1 axons evoked only subthreshold EPSPs in the VIP interneuron (bottom). (c)
+VIP interneurons mediated disynaptic feedforward inhibition of SST interneurons during
+vM1 activation. Left, schematic of slice recording and photo-stimulation configuration.
+Right, evoked EPSCs followed by IPSCs recorded from a SST interneuron to blue light (top)
+and blue light combined with yellow light (bottom). Inset, overlay of averaged postsynaptic
+currents traces to blue light only (blue trace) and blue light combined with yellow light
+(green). Gray traces represent individual sweeps, and black traces show the average. Evoked
+synaptic currents were recorded at −55 mV in voltage-clamp mode. (d) Population data from
+c. Blue and yellow light stimulation–evoked total IPSC charge was normalized to blue light
+Lee et al.
+Page 24
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 25 =====
+only stimulation–evoked response in SST interneurons (9 cells, 6 slices, 3 mice; 470 nm +
+590 nm to 470 nm ratio, charge P = 0.008). *P < 0.05, Wilcoxon signed-rank test.
+Lee et al.
+Page 25
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 26 =====
+Figure 5.
+Spiking activity of VIP interneurons and SST interneurons in superficial layers of S1 during
+active whisking. (a) Image of an eGFP-positive and tdTomato-positive cell targeted for cell-
+attached in vivo recording in a Vip-cre tdTomato 5HT3aReGFP mouse. Arrow points to an
+eGFP-positive, tdTomato-negative interneuron (non-VIP interneuron) and the arrowhead
+points to an eGFP-positive, tdTomato-positive interneuron (VIP interneuron). Scale bars
+represent 50 μm. (b–d) Example recordings from a 5HT3aR-positive, VIP-positive
+interneuron (b), a 5HT3aR-positive, VIP-negative interneuron (c), and a SST interneuron
+(d). Whisking motion was computed from whisker video recordings to define whisking and
+non-whisking periods (top). Bottom, spikes in the corresponding interneuron type recorded
+under two-photon guidance in loose-patch configuration. (e–g) Spiking activity of VIP
+interneurons and SST interneurons in superficial layers of S1 during active whisking.
+Whisking onset triggered raster plots of representative VIP (e), non-VIP, 5HT3aR (f) and
+SST (g) interneurons. Bottom, population PSTHs of VIP, non-VIP, 5HT3aR and SST
+interneurons. Dotted vertical line at time 0 indicates whisking onset. Dark lines indicate
+smoothed PSTHs. (h) Firing rates of VIP (open circles, 11 cells, 5 mice), non-VIP (gray
+circles, 5 cells, 3 mice) and SST (black circles, 6 cells, 2 mice) interneurons during whisking
+plotted against their firing rates during non-whisking periods. Dashed line indicates unity. (i)
+Lee et al.
+Page 26
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 27 =====
+Firing rates of VIP, non-VIP and SST interneurons during whisking (W) normalized to the
+firing rates during non-whisking (NW) periods. Each line indicates an individual neuron
+(VIP interneurons, P = 0.001; non-VIP interneurons, P = 0.94; SST interneurons, P = 0.02).
+*P < 0.05, **P < 0.005, Wilcoxon signed-rank test. (j) Summary of recording depths of VIP
+(open circle), non-VIP (gray) and SST (black) interneurons.
+Lee et al.
+Page 27
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+===== PDF PAGE 28 =====
+Figure 6.
+vM1 activity is responsible for the increased activity of VIP interneurons and decreased
+activity of SST interneurons in S1 during whisking. (a) TTX injection to vM1 silenced the
+activity of vM1, but did not affect S1 activity, as evidenced by LFPs recorded in S1 and
+vM1 before and after TTX injection to vM1. TTX injection and LFP recordings were
+conducted under anesthesia. (b,c) Representative recordings from a VIP interneuron (b) and
+an SST interneuron (c) during vM1 inactivation. Whisking motion was computed from
+whisker video recordings to define whisking (W) and non-whisking (NW) periods (top).
+Bottom, spikes in the corresponding interneuron type recorded under two-photon guidance
+in loose-patch configuration. (d) Firing rates of VIP (open circles) and SST (black circles)
+interneurons during whisking plotted against their firing rates during non-whisking periods
+after vM1 inactivation. Dashed line indicates unity. (e) Summary data comparing firing rates
+of VIP (9 cells, 2 mice) and SST (8 cells, 3 mice) interneurons during whisking and non-
+whisking periods after inactivation of vM1 with TTX injection (VIP interneurons, P = 0.08;
+SST interneurons, P = 0.2, Wilcoxon signed-rank test).
+Lee et al.
+Page 28
+Nat Neurosci. Author manuscript; available in PMC 2014 November 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript

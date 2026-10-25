@@ -1,0 +1,586 @@
+
+===== PDF PAGE 1 =====
+A Disinhibitory Circuit Motif and Flexible Information Routing in 
+the Brain
+Xiao-Jing Wang and Guangyu Robert Yang
+Center for Neural Science, New York University, 4 Washington Place, New York, NY 10003
+Abstract
+In the mammalian neocortex, an area typically receives inputs from, and projects to, dozens of 
+other areas. Mechanisms are needed to flexibly route information to the right place at the right 
+time, which we term “pathway gating”. For instance, a region in your brain that receives signals 
+from both visual and auditory pathways may want to “gate in” the visual pathway while “gating 
+out” the auditory pathway when you try to read a book surrounded by people in a noisy cafe. In 
+this review, we marshall experimental and computational evidence in support of a circuit 
+mechanism for flexible pathway gating realized by a disinhibitory motif. Moreover, recent work 
+shows an increasing preponderance of this disinhibitory motif from sensory areas to association 
+areas of the mammalian cortex. Pathway input gating is briefly compared with alternative or 
+complementary gating mechanisms. Predictions and open questions for future research on this 
+puzzle about the complex brain system will be discussed.
+Keywords
+diversity of inhibitory interneurons; disinhibitory motif; pathway gating; computational modeling
+Introduction
+Recent years have witnessed substantial progress in the neuroscience of large-scale brain 
+circuits. Notably, a series of papers reported high-quality directed- and weighted inter-areal 
+connectivity of cortex in macaque monkey [1–3] and mouse [4, 5]. These datasets provided 
+an anatomical foundation for the development of computational models of the global cortical 
+dynamics [6–8]. With this advance, a new set of questions have gained urgency, one of 
+which is concerned with gating in the brain. In the mammalian neocortex, an area typically 
+receives inputs from several dozens of other areas, and projects to similarly numerous areas 
+downstream. Mechanisms are needed to flexibly route information to the right place at the 
+right time, which we term “pathway gating”.
+A parallel development in recent years is a dramatic increase in our knowledge about a 
+diversity of GABAergic inhibitory neurons in the cortex. Thanks to the availability of 
+genetic tools, researchers can label specific subtypes of GABAergic cells, quantify their 
+molecular fingerprints, measure their morphological and physiological properties, record 
+Corresponding author: xjwang@nyu.edu. 
+HHS Public Access
+Author manuscript
+Curr Opin Neurobiol. Author manuscript; available in PMC 2019 June 30.
+Published in final edited form as:
+Curr Opin Neurobiol. 2018 April ; 49: 75–83. doi:10.1016/j.conb.2018.01.002.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 2 =====
+their activity from behaving animals and assess their functional role by optogenetic 
+manipulations. Whereas classification of GABAergic interneurons continues to be refined 
+and debated, a consensus has emerged with regard to a canonical disinhibitory motif that 
+involves three non-overlapping sub-classes of interneurons, in empirical support of a model 
+prediction [9]. A first type of parvalbumin (PV) positive interneurons target perisomatic 
+regions of excitatory pyramidal (P) cells and control their spiking outputs; a second type of 
+somatostatin (SST) positive interneurons target pyramidal dendrites and are in an ideal 
+position to control their inputs; a third type of interneurons express vasoactive intestinal 
+peptide (VIP) and preferentially target SST cells. When VIP neurons are activated, they 
+inhibit SST cells, thereby disinhibiting pyramidal dendrites. Following the initial 
+breakthroughs (for a review of the work prior to 2015, see [10]), our knowledge about these 
+different inhibitory cell types [11–14], their interactions [15, 16] and their functions in 
+behaving mice [14, 17–25] continue to grow over the last few years.
+Built on the new barrage of experimental data, a computational model was developed to test 
+the hypothesis that the canonical disinhibitory motif provides a circuit substrate for pathway 
+gating [26]. In this short review, we first summarize recent experimental research on this 
+canonical disinhibitory motif. Then, we will discuss requirements and supporting evidence 
+for this circuit motif to implement pathway gating. Finally, we will contrast this mechanism 
+with other, potentially complimentary, gating scenarios within cortex and involving 
+subcortical structures, and suggest open questions for future research on the dynamical 
+operation and flexible functions of the cell-type specific large-scale brain systems.
+A disinhibitory motif
+One of the cognitive functions that depend on input gating is working memory, the brain’s 
+ability to internally store and manipulate information in the absence of sensory stimulation. 
+A cardinal requirement for a working memory circuit to function properly is that only 
+behavioral relevant stimuli are “gated in” while irrelevant distractors are filtered out and 
+ignored. Computational considerations of this problem have led to the publication, in 2004, 
+of a biologically-based local circuit model endowed with three subtypes of inhibitory 
+neurons (Figure 1A) [9]. The model was inspired by three lines of anatomical evidence. 
+First, a subpopulation of GABAergic cells labeled by VIP or calcium-binding protein 
+calretinin (CR) preferentially target other interneurons rather than pyramidal cells in the 
+hippocampus [27], as well as neocortex of rodents [28, 29] and monkeys [30–32]. Second, 
+statistically, VIP and CR cells preferentially target dendrite-targeting inhibitory neurons 
+expressing cal-bindin (CB) or SST, rather than PV cells (Figure 1B) [32]. Third, unlike 
+primary sensory areas where PV cells are the majority of GABAergic neurons, CB and CR 
+interneurons are predominant in the prefrontal cortex which plays a central role in working 
+memory (Figure 1C) [33]. The model has several predictions. In particular, dendrite-
+targeting interneurons should have a significant spontaneous activity, which was later 
+supported by empirical data [34]. Moreover, these cells display an “inverted tuning”, i.e. a 
+decrease in activity for specific stimulus features, which was found in single-unit recording 
+from behaving monkeys [9]. More direct support came recently in a mice experiment 
+showing that activation of VIP or SST neurons of dorsomedial frontal cortex, respectively 
+enhanced or impaired working memory retention and behavioral performance [25].
+Wang and Yang
+Page 2
+Curr Opin Neurobiol. Author manuscript; available in PMC 2019 June 30.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 3 =====
+Although the theoretical proposal of a disinhibitory microcircuit motif was originally 
+motivated by the need of gating for a working memory network, the local circuit 
+organization (Figure 1A) is in principle general for all cortical areas. Note that it appears that 
+PV, CB and CR positive interneurons do not have significant overlap in macaque monkey; 
+whereas the overlaps are more substantial in mice, for which PV, SST and VIP are better 
+markers of non-overlapping interneuron sub-populations. Importantly, Wang et al. explicitly 
+stated that “We emphasize that the three interneuron types in our model should be more 
+appropriately interpreted according to their synaptic targets rather than calcium-binding 
+protein expressions” [9].
+With the invention of genetic labeling and optogenetic tools, an avalanche of papers have 
+been published in recent years, demonstrating this disinhibitory motif in various cortical 
+areas of mouse cortex [35–38]. In layer 2/3 of primary somatosensory cortex of behaving 
+animals, onset of locomotion is correlated with an increase of activity in both pyramidal 
+cells and VIP interneurons, concomitantly with a decrease of activity in SST cells [37]. This 
+observation can be explained by the disinhibitory motif, which was rigorously established 
+for the same circuit by intracellular recording from pairs of neurons in vitro [35]. Similar 
+concurrent changes of activity in pyramidal cells, SST and VIP cells are observed in primary 
+visual cortex [38] and medial frontal cortex [36] of awake behaving mice.
+In a recurrent system where multiple cell types interact with each other, the collective 
+behavior depends on many factors, including their baseline states and the strengths of their 
+interconnectivity. In particular, the disinhibitory circuit may behave in counterintuitive ways. 
+Recently, Pakan et al. and Dipoppa et al. [21, 39] reported that, as mice made a transition 
+from rest to movement, SST cells in L2/3 of V1 showed an increase of activity, instead of a 
+previously reported decrease [38]. This apparent inconsistency can be explained 
+computationally by synaptic interactions between multiple neural populations and a 
+nonlinear neuronal input-output relationship [40]. Therefore, in the same disinhibitory 
+circuit, behavioral modulation of SST neural activity may change the sign depending on the 
+circuit state. In contrast to L2/3, activity of SST cells in the deep layers of somatosensory 
+cortex increases rather than decreases when mice started whisking, which could arise from 
+laminar differences in the strength of VIP to SST projections, among other factors [24]. A 
+notable recent work along these lines was that of Jiang et al. [15, 41, 42], where connections 
+between different cell types were assessed physiologically with simultaneous intracellular 
+recording from up to 8 neurons in slices of mouse V1. Layers within a local circuit may 
+show markedly different properties thus operate in distinct dynamical regimes.
+Another important aspect of the disinhibitory motif is concerned with the input signals. 
+Within a cortical area, long-range clustered horizontal connections from pyramidal cells 
+target SST cells [43], contributing to surround suppression [43, 44]. In addition, PV, SST 
+and VIP interneurons are all targets of long-distance cortico-cortical projections [45], but 
+finer grained differences remain to be elucidated. Particularly interesting is empirical 
+evidence that top-down excitation of VIP interneurons contributes to attention induced 
+amplification of neural responses in sensory areas [46]. Finally, variations may exist across 
+different cortical areas, we will come back to this point in a later section.
+Wang and Yang
+Page 3
+Curr Opin Neurobiol. Author manuscript; available in PMC 2019 June 30.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 4 =====
+The dendritic disinhibitory gating hypothesis
+Whereas the disinhibitory motif has been proposed as a gating mechanism for working 
+memory [9] or attention [47], can it also implement pathway routing of information in a 
+multi-regional brain system? Consider a cortical area that receives inputs from multiple 
+areas upstream, and assume that these cortico-cortical long-distance projections target 
+overlapping pyramidal neurons so that any individual cell is the recipient of inputs from 
+multiple pathways. In order for the disinhibitory motif to realize pathway gating, the 
+following four requirements need to be fulfilled.
+First, dendritic responses need to be nonlinear so that dendritic inhibition mediated by SST 
+cells and its suppression would have a strong impact. This is supported by ample evidence of 
+NMDA and calcium spikes in pyramidal dendrites that “is tightly controlled by local 
+microcircuits of inhibitory neurons targeting subcellular compartments” [48]. Second, for a 
+given target pyramidal cell, synaptic inputs from different pathways must be segregated onto 
+different parts of its dendritic tree, consistent with recent findings of synapse clustering in 
+sensory and motor cortices [49, 50]. Wilson et al. [50] showed that synapses with similar 
+orientation tunings tend to cluster onto the same dendrites, and this clustering is important 
+for explaining orientation selectivity observed in V1. Although direct experimental evidence 
+supporting synaptic clustering of different pathways is still lacking, it is not difficult to 
+imagine the principle of synaptic clustering being extended from sensory and motor areas to 
+association areas, and from feature- to pathway-specificity. Third, dendrite-targeting 
+interneurons should be able to exert selective control over individual dendritic branches. 
+Cichon and Gan [51] observed that different motor tasks induced neural activities on 
+different dendritic branches of pyramidal neurons in the motor cortex, and inactivating SST 
+neurons drastically reduced the branch-specificity in dendritic activity. This work strongly 
+suggests that SST neurons can provide branch-specific inhibition onto dendrites of 
+pyramidal neurons. Fourth and finally, there need to be an alignment between the clustering 
+of long-range synaptic inputs from different pathways and the branch-specific disinhibition. 
+In order to selectively open the gate for one pathway, dendrites targeted by that pathway 
+need to be disinhibited, while other dendrites remain inhibited.
+In a computational work, Yang et al. [26] showed that all four requirements can be fulfilled 
+with minimal assumptions about the underlying neural circuity (Figure 2). Surprisingly, this 
+model revealed that to achieve branch-specific disinhibition, it is unnecessary to assume 
+tailored connections from SST neurons to pyramidal neurons and from VIP to SST 
+interneurons. Even random connectivity between them, together with random activation/
+deactivation of SST neurons, suffice to provide branch-specific inhibition/disinhibition. The 
+core intuition is that, compared to the dense neuron-to-neuron connectivity [52], the 
+connectivity from SST neurons to dendrites of pyramidal neurons is much sparser, due to the 
+large number of thin dendritic branches per neuron. This sparse neuron-to-dendrite 
+connectivity easily allows for branch-specific disinhibition over the dendritic tree. The 
+alignment between excitation and disinhibition can also arise naturally through synaptic 
+plasticity, because excitatory synapses targeting disinhibited thus depolarized branches tend 
+to get strengthened, whereas those targeting hyperpolarized branches are depressed. In 
+support of this idea, a recent work showed that dendritic disinhibition is crucial for synaptic 
+Wang and Yang
+Page 4
+Curr Opin Neurobiol. Author manuscript; available in PMC 2019 June 30.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 5 =====
+potentiation in vivo [53]. In addition, the connections from SST neurons to dendrites are 
+subject to inhibitory plasticity [54] that can continue to improve SST neurons’ control over 
+individual dendritic branches.
+Besides being a plausible mechanism for pathway gating, dendritic disinhibition could also 
+be computationally favorable compared to a dendritic excitatory mechanism. When gating is 
+implemented with excitation, the latter depolarizes the dendritic membrane thus reduces its 
+dynamic range for information specific responses. In contrast, with an disinhibitory gating 
+mechanism, dendrites are inhibited in the default state, allowing for a wider dynamic range 
+from hyperpolarization to de-polarization. Another advantage of dendritic disinhibition is 
+that it is permissive. Disinhibition can not activate dendrites by itself. However, if gating is 
+implemented with direct dendritic (or somatic) excitation, the control inputs could get overly 
+strong, leading to spurious responses.
+Inasmuch as the disinhibitory motif offers a mechanism for pathway gating, it follows that 
+cortical areas with a greater need of input gating should be endowed with more inhibitory 
+neurons dedicated to such a disinhibitory motif. Frontal and association cortices receive 
+converging inputs from many different pathways in comparison to primary sensory or motor 
+areas, therefore these areas may need a larger repertoire of dendrite-targeting interneurons to 
+selectively gate inputs from different pathways. Anatomical data from monkeys hinted that 
+dendrite-targeting interneurons are more prevalent in prefrontal cortices [33]. The 
+dominance of SST neurons in mouse association and prefrontal cortices is recently 
+established by Kim et al. [55], who measured the number of PV, SST, and VIP neurons in 
+individual areas throughout the whole mouse brain. Remarkably, they found that there is a 
+more than 7-times change in the balance between SST and PV neurons across the cortex 
+(Figure 3). In primary somatosensory and motor cortices, SST neurons are less abundant 
+than PV neurons. However, in higher-order cortical areas, like the prelimbic area, there are 3 
+to 5 times more SST neurons than PV neurons.
+Taken together, a strong case can be made that the disinhibitory motif provides a plausible 
+circuit substrate within the cortex for routing information flow.
+Other gating mechanisms
+The current short review focuses on input gating by a disinhibitory motif. There are 
+alternative and/or complementary, gating mechanisms in the brain (Figure 4). One 
+possibility is that excitatory-inhibitory synaptic balance prevents input from entering a 
+cortical area thus must be broken to enable “gate in” [56]; another is that synchrony is 
+required whereas asynchronous inputs are “gated out” [57–59]. In contrast to input gating, a 
+different scenario involves output gating. In a recent paper [60], the authors conducted an 
+anatomical analysis in the mice prelimbic cortex focusing on chandelier cells which 
+selectively target the initial segment of axons of pyramidal cells where action potentials are 
+generated. They found that a subset of chandelier cells specifically target pyramidal cells 
+projecting to amygdala while avoiding pyramidal cells projecting to the contralateral side of 
+the same cortical area. Furthermore, these chandelier cells receive differential inputs from 
+the two populations of excitatory neurons, therefore can be selectively activated, which 
+Wang and Yang
+Page 5
+Curr Opin Neurobiol. Author manuscript; available in PMC 2019 June 30.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 6 =====
+would lead to suppression of output from the prelimbic area to one down-stream area but not 
+another. Such an output gating mechanism would require not only different groups of 
+chandelier cells dedicated to different output pathways, but also that principal neurons 
+dedicated to different projection pathways are largely non-overlapping. With the advance of 
+cell-type specific connectivity analysis, new information is expected in the coming years that 
+will support or disapprove such output gating proposal.
+In addition to input-gating and output-gating, it is conceivable that recurrent dynamics 
+within a local circuit can selectively process information from one pathway but not the other. 
+This was proposed in a study combining computational modeling and neurophysiology, in 
+which monkeys were trained to make a decision based on either color or direction of a 
+colored visual motion stimulus [61]. In each behavioral trial, the relevant feature, color or 
+direction, is indicated by a rule cue. The authors’ analysis suggested that the rule cue input 
+yields a “selection vector” to guide time integration of the relevant feature but not the 
+irrelevant one in a recurrent network. Yang et al. [26] showed that the same task can be 
+accomplished with moderate input gating by the disinhibitory motif mechanism. In 
+principle, recurrent network dynamic can work cooperatively with input and output gating.
+Finally, gating in the brain more than likely engages subcortical structures as well, including 
+the thalamus [62], and basal ganglia [63, 64]. Their experimental support at the circuit level 
+remains lacking and could be an interesting direction for future research. Moreover, it is 
+worth keeping in mind that there are several kinds of gating in the brain. For instance 
+selective attention to a spatial location but not other locations represent a form of gating 
+within the same pathway, which is different from pathway gating. Distinct gating 
+mechanisms may be suitable for various forms of information routing in the brain.
+Concluding remarks
+The complexity of inhibitory cells, which Cajal called “butterflies of the soul”, continues to 
+fascinate neuroscientists. Transcriptome analysis promises to systematically define 
+subclasses of inhibitory interneurons [12, 65]. It may also be proven as a powerful tool to 
+understand area-to-area variations. Even among sensory areas, locomotion induces an 
+enhancement of excitatory neurons in primary visual cortex [38] and somatosensory cortex 
+[37], but suppression in primary auditory cortex [66, 67]. This finding highlights the idea 
+that quantitative differences in a canonical disinhibitory motif could give rise to distinct 
+dynamical operation regimes. As shown by the work of Kim et al. [55], there are marked 
+differences between early sensory areas and association areas. This macroscopic gradient 
+may have evolved to accommodate varying degrees of functional needs for input control 
+across the brain’s hierarchy, the computational and functional implications await to be 
+elucidated.
+The disinhibitory motif model has several testable predictions. In particular, it suggests that 
+cognitive control signals, such as those representing behavioral rule or context, act through 
+targeting specific subclasses of inhibitory neurons like VIP- and SST-expressing 
+interneurons, rather than pyramidal cells. Although research results summarized above 
+present a strong case that the disinhibitory motif offers a circuit mechanism for pathway 
+Wang and Yang
+Page 6
+Curr Opin Neurobiol. Author manuscript; available in PMC 2019 June 30.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 7 =====
+gating, a direct test of this theoretical prediction requires that, in future experiments, cell-
+type specific neurophysiology and manipulation be carried out in animals performing tasks 
+that depend on flexible routing of information in the cortex. Decisive progress in this area 
+will not only shed insights into this major puzzle, but also into related deficits associated 
+with psychiatric illness [68].
+Acknowledgments.
+This work was supported by the NIH grant MH062349, ONR grant N00014–17–1–2041, STCSM grants 
+14JC1404900 and 15JC1400104.
+Reference annotations
+Special interests (*)
+Outstanding interests (**)
+1. Ercsey-Ravasz M et al. A predictive network model of cerebral cortical connectivity based on a 
+distance rule. Neuron 80, 184–197 (2013). [PubMed: 24094111] 
+2. Markov NT et al. A weighted and directed interareal connectivity matrix for macaque cerebral 
+cortex. Cereb. Cortex 24, 17–36 (2014). [PubMed: 23010748] 
+3. Song HF, Kennedy H & Wang X-J Spatial embedding of similarity structure in the cerebral cortex. 
+Proc. Natl. Acad. Sci. (USA) 111, 16580–16585 (2014). [PubMed: 25368200] 
+4. Oh SW et al. A mesoscale connectome of the mouse brain. Nature 508, 207–214 (2014). [PubMed: 
+24695228] 
+5. Zingg B et al. Neural networks of the mouse neocortex. Cell 156, 1096–1111 (2014). [PubMed: 
+24581503] 
+6. Chaudhuri R, Knoblauch K, Gariel MA, Kennedy H & Wang X-J A Large-Scale Circuit Mechanism 
+for Hierarchical Dynamical Processing in the Primate Cortex. Neuron 88, 419–431 (2015). 
+[PubMed: 26439530] 
+7. Mejias JF, Murray JD, Kennedy H & Wang XJ Feedforward and feedback frequency-dependent 
+interactions in a large-scale laminar network of the primate cortex. Sci Adv 2, e1601335 (2016). 
+[PubMed: 28138530] 
+8. Joglekar MR, Mejias JF, Yang GR & Wang X-J Inter-areal balanced amplification enhances signal 
+propagation in a large-scale circuit model of the primate cortex. bioRxiv. doi:10.1101/186007 . 
+eprint: https://www.biorxiv.org/content/early/2017/09/07/186007.full.pdf . <10.1101/186007https://
+www.biorxiv.org/content/early/2017/09/07/186007.full.pdfhttps://www.biorxiv.org/content/early/
+2017/09/07/186007. eprint: https://www.biorxiv.org/content/early/2017/09/07/186007.full.pdf . < 
+https://www.biorxiv.org/content/early/2017/09/07/186007 > (2017).
+9. Wang X-J, Tegnér J, Constantinidis C & Goldman-Rakic PS Division of labor among distinct 
+subtypes of inhibitory neurons in a cortical microcircuit of working memory. Proc Natl Acad Sci 
+USA 101, 1368–1373 (2004). [PubMed: 14742867] 
+10. Kepecs A & Fishell G Interneuron cell types are fit to function. Nature 505, 318–326 (2014). 
+[PubMed: 24429630] 
+11. Zeisel A et al. Cell types in the mouse cortex and hippocampus revealed by single-cell RNA-seq. 
+Science 347, 1138–42 (2015). [PubMed: 25700174] 
+12. Tasic B et al. Adult mouse cortical cell taxonomy revealed by single cell transcriptomics. Nat 
+Neurosci 19, 335–46 (2016). [PubMed: 26727548] 
+13. Hawrylycz M et al. Canonical genetic signatures of the adult human brain. Nat Neurosci 18, 1832–
+44 (2015). [PubMed: 26571460] 
+14. Tremblay R, Lee S & Rudy B GABAergic Interneurons in the Neocortex: From Cellular Properties 
+to Circuits. Neuron 91, 260–292 (2016). [PubMed: 27477017] 
+Wang and Yang
+Page 7
+Curr Opin Neurobiol. Author manuscript; available in PMC 2019 June 30.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 8 =====
+15. Jiang X et al. Principles of connectivity among morphologically defined cell types in adult 
+neocortex. Science 350, aac9462 (2015). [PubMed: 26612957] ** This paper provides quantitative 
+statistical connectivity between 15 morphologically-identified types of interneurons in V1 of 
+mature mouse cortex.
+16. Karnani MM et al. Cooperative Subnetworks of Molecularly Similar In-terneurons in Mouse 
+Neocortex. Neuron 90, 86–100 (2016). [PubMed: 27021171] 
+17. Letzkus JJ, Wolff SBE & Lüthi A Disinhibition, a Circuit Mechanism for Associative Learning and 
+Memory. Neuron 88, 264–76 (2015). [PubMed: 26494276] 
+18. Urban-Ciecko J & Barth AL Somatostatin-expressing neurons in cortical networks. Nat. Rev. 
+Neurosci 17, 401–409 (2016). [PubMed: 27225074] 
+19. Kim D et al. Distinct Roles of Parvalbumin- and Somatostatin-Expressing Interneurons in Working 
+Memory. Neuron 92, 902–915 (2016). [PubMed: 27746132] 
+20. Jackson J, Ayzenshtat I, Karnani MM & Yuste R VIP+ interneurons control neocortical activity 
+across brain states. J Neurophysiol 115, 3008–17 (2016). [PubMed: 26961109] 
+21. Dipoppa M et al. Vision and locomotion shape the interactions between neuron types in mouse 
+visual cortex. bioRxiv. doi:10.1101/058396 (2017).* This paper showed that locomotion can 
+increase the activity of both VIP and SST neurons in mouse V1, seemingly contradicting the VIP-
+SST disinhibitory circuit model. However, Garcia et al. [39] showed that a disinhibitory circuit can 
+operate in different regimes, including one consistent with the findings of [19].
+22. Kuchibhotla KV et al. Parallel processing by cortical inhibition enables context-dependent 
+behavior. Nat Neurosci 20, 62–71 (2017). [PubMed: 27798631] 
+23. Lee JH, Koch C & Mihalas S A Computational Analysis of the Function of Three Inhibitory Cell 
+Types in Contextual Visual Processing. Front Comput Neurosci 11, 28 (2017). [PubMed: 
+28487644] 
+24. Munoz W, Tremblay R, Levenstein D & Rudy B Layer-specific modulation of neocortical dendritic 
+inhibition during active wakefulness. Science 355, 954–959 (2017). [PubMed: 28254942] 
+25. Kamigaki T & Dan Y Delay activity of specific prefrontal interneuron sub-types modulates 
+memory-guided behavior. Nat Neurosci 20, 854–863 (2017). [PubMed: 28436982] 
+26. Yang GR, Murray JD & Wang X-J A dendritic disinhibitory circuit mechanism for pathway-
+specific gating. Nat Commun 7, 12815 (2016). [PubMed: 27649374] ** The authors proposed that 
+the dendritic disinhibitory circuit motif can support pathway gating. They used computational 
+models to show that assumptions about the circuit are minimal and plausible for the proposed 
+mechanism to work.
+27. Gulyás AI, Hájos N & Freund T Interneurons containing calretinin are specialized to control other 
+interneurons in the rat hippocampus. J. Neurosci 16, 3397–3411 (1996). [PubMed: 8627375] 
+28. Kawaguchi Y & Kubota Y GABAergic cell subtypes and their synaptic connections in rat frontal 
+cortex. Cereb. Cortex 7, 476–486 (1997). [PubMed: 9276173] 
+29. Gonchar Y & Burkhalter A Connectivity of GABAergic calretinin-immunoreactive neurons in rat 
+primary visual cortex. Cereb. Cortex 9, 683–696 (1999). [PubMed: 10554991] 
+30. Gabbott PLA & Bacon SJ Local circuit neurons in the medial prefrontal cortex (areas 24a,b,c, 25 
+and 32) in the monkey. J. Comp. Neurol 364, 567–636 (1996). [PubMed: 8821449] 
+31. Meskenaite V Calretinin-immunoreactive local circuit neurons in the area 17 of the cynomolgus 
+monkey, Macaca fascicularis. J. Comp. Neurol 379, 113–132 (1997). [PubMed: 9057116] 
+32. DeFelipe J, Gonzalez-Albo MC, Del Rio MR & Elston GN Distribution and patterns of 
+connectivity of interneurons containing calbindin, calretinin, and parvalbumin in visual areas of 
+occipital and temporal lobes of the macaque monkeys. J. Comp. Neurol 412, 515–26 (1999). 
+[PubMed: 10441237] 
+33. Condé F, and Jacobowitz DM, Baimbridge JSL, G. K & Lewis DA Local circuit neurons 
+immunoreactive for calretinin, calbindin D-28k or parvalbu-min in monkey prefrontal cortex: 
+distribution and morphology. J. Comp. Neurol 341, 95–116 (1994). [PubMed: 8006226] 
+34. Gentet LJ et al. Unique functional properties of somatostatin-expressing GABAergic neurons in 
+mouse barrel cortex. Nat. Neurosci 15, 607–612 (2012). [PubMed: 22366760] 
+Wang and Yang
+Page 8
+Curr Opin Neurobiol. Author manuscript; available in PMC 2019 June 30.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 9 =====
+35. Pfeffer CK, Xue M, He M, Huang ZJ & Scanziani M Inhibition of inhibition in visual cortex: the 
+logic of connections between molecularly distinct interneurons. Nat. Neurosci 16, 1068–1076 
+(2013). [PubMed: 23817549] 
+36. Pi HJ et al. Cortical interneurons that specialize in disinhibitory control. Nature 503, 521–524 
+(2013). [PubMed: 24097352] 
+37. Lee S, Kruglikov I, Huang ZJ, Fishell G & Rudy B A disinhibitory circuit mediates motor 
+integration in the somatosensory cortex. Nat Neurosci 16, 1662–70 (2013). [PubMed: 24097044] 
+38. Fu Y et al. A cortical circuit for gain control by behavioral state. Cell 156, 1139–1152 (2014). 
+[PubMed: 24630718] 
+39. Pakan JM et al. Behavioral-state modulation of inhibition is context-dependent and cell type 
+specific in mouse visual cortex. Elife 5. doi:10.7554/eLife.14985 (2016).
+40. Garcia Del Molino LC, Yang GR, Mejias JF & Wang X-J Paradoxical response reversal of top-
+down modulation in cortical circuits with three interneuron types. Elife 6. doi:10.7554/eLife.29742 
+(2017).
+41. Barth L et al. Comment on “Principles of connectivity among morphologically defined cell types in 
+adult neocortex”. Science 353, 1108 (2016).
+42. Jiang X et al. Response to Comment on ‘Principles of connectivity among morphologically defined 
+cell types in adult neocortex”. Science 353, 1108(2016).
+43. Adesnik H, Bruns W, Taniguchi H, Huang ZJ & Scanziani MA neural circuit for spatial summation 
+in visual cortex. Nature 490, 226–231 (2012). [PubMed: 23060193] 
+44. Litwin-Kumar A, Rosenbaum R & Doiron B Inhibitory stabilization and visual coding in cortical 
+circuits with multiple interneuron subtypes. J. Neurophysiol 115, 1399–1409 (2016). [PubMed: 
+26740531] 
+45. Wall NR et al. Brain-Wide Maps of Synaptic Input to Cortical Interneurons. J. Neurosci 36, 4000–
+4009 (2016). [PubMed: 27053207] * The authors mapped the brain-wide synaptic inputs onto PV, 
+SST, and VIP neurons in mouse V1. This data provides a starting point for building large-scale 
+models with multiple types of interneurons.
+46. Zhang S et al. Selective attention. Long-range and local circuits for top-down modulation of visual 
+cortex processing. Science 345, 660–665 (2014). [PubMed: 25104383] 
+47. Sridharan D & Knudsen EI Selective disinhibition: A unified neural mechanism for predictive and 
+post hoc attentional selection. Vision Res. 116, 194–209 (2015). [PubMed: 25542276] 
+48. Larkum M A cellular mechanism for cortical associations: an organizing principle for the cerebral 
+cortex. Trends Neurosci. 36, 141–151 (2013). [PubMed: 23273272] 
+49. Yang G et al. Sleep promotes branch-specific formation of dendritic spines after learning. Science 
+344, 1173–1178 (2014). [PubMed: 24904169] 
+50. Wilson DE, Whitney DE, Scholl B & Fitzpatrick D Orientation selectivity and the functional 
+clustering of synaptic inputs in primary visual cortex. Nature neuroscience 19, 1003 (2016). 
+[PubMed: 27294510] 
+51. Cichon J & Gan WB Branch-specific dendritic Ca(2+) spikes cause persistent synaptic plasticity. 
+Nature 520, 180–185 (2015). [PubMed: 25822789] ** The authors reported that different motor 
+tasks activate different dendritic branches of the same pyramidal neuron. Silencing SST neurons 
+strongly reduce this branch-specificity, suggesting branch-specific inhibition from SST neurons to 
+dendrites of pyramidal neurons.
+52. Fino E & Yuste R Dense inhibitory connectivity in neocortex. Neuron 69, 1188–1203 (2011). 
+[PubMed: 21435562] 
+53. Fu Y, Kaneko M, Tang Y, Alvarez-Buylla A & Stryker MP A cortical disinhibitory circuit for 
+enhancing adult plasticity. Elife 4, e05558 (2015). [PubMed: 25626167] 
+54. Chen SX, Kim AN, Peters AJ & Komiyama T Subtype-specific plasticity of inhibitory circuits in 
+motor cortex during motor learning. Nature neuroscience 18, 1109–1115 (2015). [PubMed: 
+26098758] 
+55. Kim Y et al. Brain-wide Maps Reveal Stereotyped Cell-Type-Based Cortical Architecture and 
+Subcortical Sexual Dimorphism. Cell 171, 456–469.e22(2017). [PubMed: 28985566] ** The first 
+study to quantify the density of specific types of inhibitory neurons across the mouse brain. The 
+authors found that SST neurons are dominant in frontal and other associational cortices.
+Wang and Yang
+Page 9
+Curr Opin Neurobiol. Author manuscript; available in PMC 2019 June 30.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 10 =====
+56. Vogels TP, Rajan K & Abbott LF Neural network dynamics. Annu Rev Neurosci 28, 357–376 
+(2005). [PubMed: 16022600] 
+57. Palmigiano A, Geisel T, Wolf F & Battaglia D Flexible information routing by transient synchrony. 
+Nat Neurosci 20, 1014–1022 (2017). [PubMed: 28530664] 
+58. Fries P A mechanism for cognitive dynamics: neuronal communication through neuronal 
+coherence. Trends in Cogn. Sci 9, 474–480 (2005). [PubMed: 16150631] 
+59. Wang X-J Neurophysiological and computational principles of cortical rhythms in cognition. 
+Physiol. Rev 90, 1195–1268 (2010). [PubMed: 20664082] 
+60. Lu J et al. Selective inhibitory control of pyramidal neuron ensembles and cortical subnetworks by 
+chandelier cells. Nat. Neurosci 20, 1377–1383 (2017). [PubMed: 28825718] * The authors showed 
+that a subset of Chandelier cells in mouse prelimbic cortex selectively inhibit pyramidal neurons 
+targeting amygdala, while sparing those targeting contralateral cortex. This work demonstrates the 
+exquisite output-control inhibitory neurons can exert over pyramidal neurons.
+61. Mante V, Sussillo D, Shenoy KV & Newsome WT Context-dependent computation by recurrent 
+dynamics in prefrontal cortex. Nature 503, 78–84 (2013). [PubMed: 24201281] 
+62. Wimmer RD et al. Thalamic control of sensory selection in divided attention. Nature 526, 705–709 
+(2015). [PubMed: 26503050] 
+63. Frank MJ, Loughry B & O’Reilly RC Interactions between frontal cortex and basal ganglia in 
+working memory: a computational model. Cogn Affect Behav Neurosci 1, 137–160 (2001). 
+[PubMed: 12467110] 
+64. Chatham CH & Badre D Multiple gates on working memory. Curr Opin Behav Sci 1, 23–31 
+(2015). [PubMed: 26719851] 
+65. Paul A et al. Transcriptional Architecture of Synaptic Communication Delineates GABAergic 
+Neuron Identity. Cell (2017).** This paper measured the transcriptional profile of six distinct types 
+of interneurons. They found that different cell types can be best distinguished by expressions of 
+genes linked to synaptic communications.
+66. Schneider DM, Nelson A & Mooney R A synaptic and circuit basis for corollary discharge in the 
+auditory cortex. Nature 513, 189–194 (2014). [PubMed: 25162524] 
+67. Zhou M et al. Scaling down of balanced excitation and inhibition by active behavioral states in 
+auditory cortex. Nat. Neurosci 17, 841–850 (2014). [PubMed: 24747575] 
+68. Hattori R, Kuchibhotla KV, Froemke RC & Komiyama T Functions and dysfunctions of 
+neocortical inhibitory neuron subtypes. Nat. Neurosci 20, 1199–1208 (2017). [PubMed: 
+28849791] 
+Wang and Yang
+Page 10
+Curr Opin Neurobiol. Author manuscript; available in PMC 2019 June 30.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 11 =====
+Figure 1: 
+A disinhibitory circuit motif. (a) A neural circuit model for working memory with three 
+types of inhibitory neurons, i.e. perisoma targeting, peridendrite-targeting, and interneuron-
+targeting neurons. Dendrite-targeting inhibitory neurons (blue) control the resistance to 
+distractors (adapted from [9]). (b) The circuit diagram of PV, CB, and CR neurons. The 
+connection probabilities between different types of neurons are measured in inferior 
+temporal cortex of maca que monkey (adapted from [32]). (c) Number of CR, CB, and PV 
+neurons in three subregions of the macaque monkey prefrontal cortex, showing that PV are 
+not predominant among the three interneuron types in the prefrontal cortex. (adapted from 
+[33]).
+Wang and Yang
+Page 11
+Curr Opin Neurobiol. Author manuscript; available in PMC 2019 June 30.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 12 =====
+Figure 2: 
+A disinhibitory circuit motif for pathway gating. (a) The disinhibitory circuit diagram with 
+PV, SST, and VIP neurons. (b) An area receives converging inputs from visual and auditory 
+pathways. The control input selectively opens the gate for one pathway. (c) To open the gate 
+for the visual pathway, the control input can target a subset of VIP and SST neurons, leading 
+to disinhibition of dendrites targeted by the visual pathway (adapted from [26]).
+Wang and Yang
+Page 12
+Curr Opin Neurobiol. Author manuscript; available in PMC 2019 June 30.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 13 =====
+Figure 3: 
+A cortical hierarchy based on SST/PV cell density ratio. Mouse cortical areas are ranked by 
+the ratio between their PV and SST cell densities. Primary somatosensory areas are abundant 
+in PV neurons, while prefrontal areas are dominated by SST neurons (adapted from [55]). 
+The color code indicates the cortical subnetwork each area belongs to [5].
+Wang and Yang
+Page 13
+Curr Opin Neurobiol. Author manuscript; available in PMC 2019 June 30.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+===== PDF PAGE 14 =====
+Figure 4: 
+Various mechanisms for information gating in the brain. Input gating can be achieved by 
+dendrite-targeting interneurons that selectively control inputs to pyramidal dendrites. In the 
+synchronous gating mechanism, communication between two areas depends on the degree of 
+temporal synchrony of neural activity between the source and target areas. Recurrent gating 
+mechanism involves selective integration of inputs based on context-dependent dynamics of 
+the network. Output gating is instantiated with perisoma-targeting interneurons that 
+specifically inhibit pyramidal neurons projecting to one pathway but not others. Gating may 
+also involve subcortical structures, especially basal ganglia and thalamus.
+Wang and Yang
+Page 14
+Curr Opin Neurobiol. Author manuscript; available in PMC 2019 June 30.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript

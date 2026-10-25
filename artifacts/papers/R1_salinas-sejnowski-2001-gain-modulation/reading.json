@@ -1,0 +1,291 @@
+{
+  "schema": "jzks-pdf-viewer/v1",
+  "paper": {
+    "title": "Gain Modulation in the Central Nervous System: Where Behavior, Neurophysiology, and Computation Meet",
+    "authors": "Emilio Salinas, Terrence J. Sejnowski",
+    "doi": "10.1177/107385840100700512"
+  },
+  "summary": "Salinas 与 Sejnowski 2001 年的综述主张，增益调制（gain modulation）是神经元把两个来源的信息非线性地组合起来的一类机制：其中一个输入改变另一个输入的增益或敏感度，却不改变该神经元的选择性与感受野。其功能意义在于，如果一群增益调制神经元驱动下游群体，只要下游权重满足一定数学约束，下游就能显式编码两个变量的和或差，从而把眼中心坐标转换为头中心、手中心或世界中心坐标。作者用四类证据互相印证这一主张：顶叶皮层的增益场记录、反传网络中隐藏单元自发形成的增益场、把坐标变换写成权重约束的数学推导、以及模拟顶叶损伤后复现 neglect 症状的模型。作者同时把两个关键问题明确排除在讨论之外：增益调制的生物物理基础如何产生，以及实际使用的学习规则是什么。四类候选机制（树突电压敏感通道、强递归连接、输入同步性变化、平衡兴奋抑制输入）在文中只是并列列举，未被区分。",
+  "steps": [
+    {
+      "id": 1,
+      "title": "作者想解决什么问题",
+      "paragraphs": [
+        {
+          "title": "问题与全局地图",
+          "text": "本文要回答的核心问题是：视觉系统如何把随眼球与头部运动而不断变化的视网膜输入，转换成与自身位置无关的空间表征。作者把这一困难定位在表征的层级递进上——视网膜与丘脑神经元编码简单局部图案，V1 编码带边缘的条形，V4 编码更复杂的形状，IT 神经元则对复杂图像作出位置、大小、方位都不敏感的反应，而人们对这些高层表征“如何以及为何”产生，理解相当有限。\n\n全文是综述与理论整合，不是原创实验，研究对象是顶叶皮层的增益调制神经元（gain-modulated neurons），输入为视觉刺激位置与眼位/头位，输出为神经元的反应幅度。四类比较贯穿全文：增益调制与感受野移动的对比（Figure 1）、头中心与眼中心参考系（Figure 2、3）、neglect 患者的多参考系缺陷（Figure 4）、注意中心坐标与 IT 平移不变性（Figure 5）。作者提出的可检验预测是：若增益调制确实是坐标变换的机制基础，则在下游群体中应能测到按 xtarget ± xgaze 组合编码的反应，且同一群体在换一组权重后应能改为编码别的线性组合。",
+          "layer": "analysis",
+          "refs": ["E01", "E02"]
+        },
+        {
+          "title": "作者声称的缺口与贡献",
+          "text": "作者用“gain field”这一术语及其配套概念，把一个此前被分开讨论的现象统一起来：该词最早由 Andersen 与 Mountcastle (1983) 用于描述视觉反应与眼位在顶叶皮层的交互，它与“receptive field”平行——感受野规定神经元在哪里、对什么敏感，增益场则给出反应幅度如何随眼位/头位变化的完整映射。作者明确指出使用“眼位”与“头位”的组合（注视角，gaze angle）才是相关量，而非单一眼位。\n\n本文的贡献不在提出新机制，而在把生理学、计算理论与行为后果三者连成一条链：作者明确说，增益调制之所以重要有两个理由，一是它是极为广泛的整合机制，在大量皮层区与部分皮层下结构中都能找到；二是它有理论基础，原则上构成坐标变换与不变性响应的一般计算基础。因此本文定位为“导航性综述”：为后续机制研究提供问题框架与判据。",
+          "layer": "author",
+          "refs": ["E03", "E17"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "用了什么方法",
+      "paragraphs": [
+        {
+          "title": "关键方法原理：把增益场写成乘法",
+          "text": "核心形式化在 Box 1。实验事实是：改变注视角只改变反应幅度，不改变反应曲线沿刺激位置轴的形状，也不改变峰值位置。作者把单个神经元的反应写成 f(xtarget − a) 与 g(xgaze) 的乘积，其中 a 是峰值位置、g 正是该神经元的增益场。对一群增益调制神经元，各自的 a 与 g 不同；下游神经元被这群神经元以突触权重驱动。作者给出的关键数学结果是：在关于函数形式与权重取值相当温和的假设下，下游反应 R 会具有特定形式，从而使下游群体显式表示 xtarget + xgaze，而改变权重即可改为表示 xtarget − xgaze。\n\n这一步是全文的承重结构：它把“反应幅度被调制”这一生理观察，转化为“下游坐标可被选择”这一计算后果。Box 1 的推导只依赖乘积形式与权重约束，不指定具体的突触实现方式。",
+          "layer": "author",
+          "refs": ["E17", "E06"]
+        },
+        {
+          "title": "证据来源与类型",
+          "text": "本文没有自己的实验或模拟，全部证据为转引。按类型可分为四组：一是猴神经记录，包括顶叶 7a 与 LIP 的眼位与头位调制（Andersen 等）、V4 的注意调制（Connor 等 1996, 1997）、顶盖前区头锚定感受野（Graziano 等 1994, 1997）、V4 距离调制（Dobbins 等 1998）、MSTd 注视与头旋转调制（Bradley 等 1996、Shenoy 等 1999）；二是连接主义网络，Zipser 与 Andersen (1988) 训练网络做眼中心到身体中心变换，隐藏单元自发形成增益场，Xing 与 Andersen (2000a,b) 扩展到听觉定位与时间域并给出与 Salinas & Abbott (1996) 递归模型一致的连接模式；三是数学与模拟，Salinas 与 Abbott (1995) 推导权重约束并以模拟确认，Pouget 与 Sejnowski (1997b) 证明“完备集”可综合任意非线性函数，Pouget 与 Sejnowski (1997a, 2001) 建立 neglect 模型并模拟顶叶损伤；四是行为与临床证据，包括 neglect 患者缺陷、人类顶叶成像的眼位调制。\n\n这些来源相互印证，但都不是本文自己的测量，因此本文不能用来在候选机制之间做取舍。",
+          "layer": "author",
+          "refs": ["E07", "E08"]
+        },
+        {
+          "title": "作者明确让出的方法边界",
+          "text": "作者在提出四类候选生物物理机制之后，声明不再进一步讨论生物物理基础问题，把剩下的篇幅用于“为什么这种乘法式的分布式表示有用”。这构成本文最重要的方法边界：文章的功能性结论以“存在某个尚未确定的机制能实现近乘法交互”为前提，本文自身不提供任何区分机制的证据。\n\n四类候选机制并列给出：（1）树突含电压敏感通道时邻近突触的非线性交互（无脊椎动物有证据，皮层是否如此不确定）；（2）足够强的递归连接按理论可产生几乎乘性的增益场，稳健但需要网络交互；（3）调制输入改变另一群神经元输入的同步性，但如何实现尚不清楚，作者只指出注意既改变增益也改变同步性这一关联可能性；（4）Chance 与 Abbott (2000) 提出的方案：皮层神经元接受主要产生选择性的兴奋驱动，加上由强烈同时兴奋与抑制构成的平衡输入，后者可对驱动输入产生近似乘法调制。作者对该方案的评价是它建立在充分记载的皮层神经元特性之上。\n\n因此本文的“方法”是理论框架加文献综合，既无样本量、也无不确定性报告，这些指标对综述类文章本不适用。",
+          "layer": "analysis",
+          "refs": ["E05", "E14", "E15"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "得到了什么结果",
+      "paragraphs": [
+        {
+          "title": "生理证据：增益场与多参考系",
+          "text": "Figure 1 所述的经典实验（Andersen 与 Mountcastle 1983，及其后在 7a 与 LIP 的扩展）在头转向右与转向左两种条件下分别测绘顶叶神经元的感受野。结果是：反应曲线峰值出现在同一位置，说明感受野未随头动而移动；曲线形状也未改变，改变的是幅度即增益。作者据此指出顶叶神经元虽然感受野简单（许多细胞基本只对光点反应），其活动却依赖头位与眼位。\n\n由此得到的关键推论在物理页 4 与 6：只要下游权重满足相应约束，下游神经元就能显式编码 xtarget + xgaze；换一组满足别的约束的权重，下游可改为编码 xtarget − xgaze 或两变量的任意其他线性组合。因此同一群增益调制神经元可作为多个参考系的平台。这条结论的实验对应物包括顶盖前区细胞的头锚定感受野、Graziano 等 (1997) 的实际记录，以及 area 5 神经元对“手与物体位置之差”（motor error）的反应（Buneo 等 2000）。",
+          "layer": "author",
+          "refs": ["E03", "E06"]
+        },
+        {
+          "title": "网络与学习证据",
+          "text": "Zipser 与 Andersen (1988) 训练一个以注视线与视网膜刺激位置为输入、以身体中心位置为输出的人工网络，输入与输出表征都按实测神经元响应建模。网络训练成功后，隐藏单元形成了依赖注视的增益场，作者据此认为在给定神经生理输入输出特性的条件下，增益调制是求解坐标变换的有效手段。Xing 与 Andersen (2000a) 训练的类似网络不仅要完成变换还要在延迟期保持连续两次扫视之间的信息，训练后隐藏单元出现增益场，其感觉与记忆反应的时间过程与实测 LIP 神经元吻合，且观察到的连接模式与“增益调制源于递归连接的非线性交互”的模型一致。\n\n作者进一步指出，这类带反馈的网络天然产生一种短时记忆，这正是 Xing 与 Andersen 的模型为了在延迟期维持响应而不得不发展出来的机制，提示增益调制与工作记忆在皮层微电路层面可能共享生物物理机制。\n\n关于学习，Salinas 与 Abbott (1995) 发现满足关键约束的连接可以由 Hebbian 或基于相关性的学习建立。作者明确指出这需要一个学习期，期间要执行朝向目标的正确运动同时发生突触修改；他提出观察自己产生的运动（如婴儿所做）即可满足此条件，因为手本身充当目标，输入输出表征会自动对齐。",
+          "layer": "author",
+          "refs": ["E07", "E08"]
+        },
+        {
+          "title": "计算、临床与功能结果",
+          "text": "Pouget 与 Sejnowski (1997b) 的结果是：只要存在足够多的不同增益调制神经元（数学意义上的“完备集”），任何非线性函数都可以在单组突触中被综合出来，即紧接增益调制神经元之后的响应可以是所编码量的任意函数。作者同时指出在一般情形下建立合适连接的具体机制仍不确定，但相对简单的规则可能已经足够。\n\n临床层面，neglect 被作者重新表述为一种坐标系症状：右侧顶叶损伤的患者可能看不见并忽略左侧，却能在孤立呈现时看见并识别该侧物体；难解的是它影响哪一套坐标系——注视点、身体、还是某个参考物体，相关研究长期得到相互矛盾的结果。作者的模型把多参考系表征与损伤结合起来：模拟典型顶叶损伤消除部分模型神经元后，模型能复现大量 neglect 效应，特别是同时在多个参考系上产生缺陷。作者认为这一模型把神经生理、理论与临床发现统一到同一图景中。人类成像研究也支持该框架的适用性。\n\n功能层面还包含两项：其一，注意作为调制量可用于生成平移不变响应。IT 神经元对 8 度视角的面孔在 fixation 左侧 15 度或右侧 15 度反应同样强，作者称之为平移不变性；而 Connor 等在 V4 的记录显示其反应被注意位置乘法调制，据此 IT 的平移不变性可解释为从眼中心到注意中心坐标的转换。作者随即附加条件：这要求注意集中在待识别物体上，他把这称作表面上像缺陷，并引心理物理实验说明这与行为一致。其二，Dobbins 等 (1998) 的结果是 V4 神经元不表现出大小恒常性，而是对给定网像大小选择性，其反应被观察距离增益调制；IT 神经元是否对物体大小选择性则未知，但损伤实验提示 IT 在大小辨别中起关键作用，因此 IT 可能通过汇总响应随距离成增益场的神经元获得对观察距离的不变性。",
+          "layer": "author",
+          "refs": ["E09", "E10", "E11", "E12", "E13"]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "结果能否支持结论",
+      "paragraphs": [
+        {
+          "title": "最强证据与最薄弱连接",
+          "text": "最有力的部分是“功能性对应关系”这一主张：增益场与坐标变换的对应，同时得到生理记录、数学推导、网络模拟与临床模型四类独立证据的支持，并且这四类证据能彼此约束——理论预测下游应出现按变量组合编码的反应，实测确有这类反应（顶盖前区头锚定感受野、area 5 的 motor error）；网络训练自发产生增益场，说明在合理条件下该结构是网络的自然解；损伤模拟复现 neglect 的多参考系缺陷，把细胞层次与人类行为接上。这是综述能够做到的最强整合。\n\n最薄弱的连接出现在“机制”一侧。四类候选机制在本文中并列陈述，没有任何一项被本文的证据排除或优选，而作者本人已声明不再深入生物物理基础。因此本文不能被引用为“树突非线性是皮层增益调制的机制”或“递归连接是主要实现方式”；它只能被引用为“存在至少一种机制能实现近乘法交互，且近乘法足以支撑坐标变换”。本文在 Final Remarks 中承认理论分析与实验的吻合是计算神经科学的重要成功，但这属于框架层面的一致性，而非机制层面的确证。",
+          "layer": "analysis",
+          "refs": ["E05", "E14", "E16"]
+        },
+        {
+          "title": "作者主张与证据的逐项对照",
+          "text": "主张一：“增益调制是广泛存在的整合机制，且是坐标变换与不变性的一般计算基础”。支持强度：强。作者用“not merely added or subtracted”强调其非线性本质，并说明这一非线性条件是多数理论结果成立的前提；证据来自多个皮层区与皮层下结构。差异类型：一致，但需注意“乘法”是近似——作者说增益调制通常非常接近乘法，并给出精确乘法可能有利的理论理由（例如简化耦合增益调制神经元与其下游的突触修改规则），但并未主张严格乘法。\n\n主张二：“下游权重约束使群体显式编码 xtarget ± xgaze”。支持强度：强（数学推导加模拟加实测对应）。差异类型：一致。\n\n主张三：“neglect 是坐标系症状”。支持强度：中到强（模型能复现多类效应）。差异类型：作者更强——临床研究自身结果长期矛盾，作者以模型统一，但这更多是模型与临床现象相容，不是排他性解释。\n\n主张四：“IT 的平移不变性由注意增益调制产生”。支持强度：中。作者自己指出该机制要求注意集中于待识别物体，并借心理物理证据说明这一限制与行为一致，因此这是有条件的解释，而不是无条件的位置不变性机制。差异类型：范围不同——结论只在注意被引导到物体的条件下成立。\n\n主张五：“大小恒常性可在 IT 由距离增益场汇总产生”。支持强度：弱到中，因为 V4 不表现大小恒常性是实测，但 IT 神经元是否对物体大小选择性在本文中被明说为未知，只有损伤实验的间接线索。差异类型：证据不足，属推断性延伸。",
+          "layer": "analysis",
+          "refs": ["E04", "E11", "E13"]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "有哪些局限与启发",
+      "paragraphs": [
+        {
+          "title": "作者自列的未解问题与本文的边界",
+          "text": "作者在 Final Remarks 中自己点明三项未解工作：增益调制在生物物理上如何产生、坐标变换中实际涉及的学习规则是什么、以及它的局限在哪里。这三项恰好界定了本文的贡献边界：它回答“增益调制为什么有用”，不回答“它怎么实现”。任何把本文当作机制证据的引用都是越界。\n\n另有一处值得强调的方法论限制：本文引用的全部图表来自原始研究（Figure 1 出自 Andersen 与 Mountcastle，Figure 5 基于 Connor 等的结果），本文本身没有重新分析任何原始数据，也未给出可复核的定量指标。因此本文对具体数值只作定性描述，本精读也未从图中估读数值。",
+          "layer": "analysis",
+          "refs": ["E16", "E14"]
+        },
+        {
+          "title": "替代解释与区分检验",
+          "text": "替代解释一：近乘法的增益调制可能只是线性权重叠加加上饱和的表观效果，而非真正的非线性交互。区分检验是检查输入—输出关系在调制条件之间是否只是平移，还是斜率与动态范围同时改变；仅凭反应幅度随注视角变化不能区分。本文明确把“非线性”设为理论结果成立的前提条件，这一点本身既是它的贡献，也是它的脆弱处——若某处的调制实为加性偏移，则对应的下游变换结论不成立。\n\n替代解释二：坐标变换可能由其他机制实现，例如独立的联合编码、空间参考系的显式重映射，或反馈网络的重吸引子结构，而不必然经过增益场。区分检验是在同一批记录中检验增益场形状与下游组合编码是否严格对应：若下游编码不满足作者推导的权重约束却仍出现变换，则增益调制不是必要环节。\n\n替代解释三：neglect 模型复现症状可能来自对一般损伤效应的过参数化拟合，而非特定的坐标系机制。区分检验是在损伤模式之外做预测，例如预测特定参考系缺陷在行为任务中的具体表现并在患者上检验。\n\n第三条与本文的关系：本文对替代解释并未提供区分证据，属于本任务未实施的分析建议。",
+          "layer": "analysis",
+          "refs": ["E04", "E10"]
+        },
+        {
+          "title": "可借鉴的思路与使用建议",
+          "text": "本文最值得借鉴的思路是判据式定义：先说清“什么现象不算增益调制”（改变选择性或感受野的不算，只改幅度或敏感度的才算），再以这一判据组织证据。这一做法对本仓库的 L/D/S 解压回路有直接用处——把门控、抑制与增益调制的区分建立在输入—输出关系上，而不是建立在“总活动变少”上。\n\n引用建议：本文适合作为“增益调制的功能意义与坐标变换框架”的权威来源引用（综述，2001），不适合作为“皮层中增益调制的具体实现机制”的来源引用；引用后者的机制主张应转向 Chance、Abbott 与 Reyes (2002)（清单 G1）、Prescott 与 De Koninck (2003)（G2）与 Ferguson 与 Cardin (2020)（R3）。本文的注意力—平移不变性结论与大小恒常性部分属条件性或推断性，引用时应保留其限定条件。\n\n最关键的待补材料：若要把“机制”缺口补上，需要的是能区分树突非线性、递归连接、输入同步性与平衡兴奋抑制四者的直接电生理证据；本文不提供这些，2002 年之后的文献才是该问题的实证来源。",
+          "layer": "analysis",
+          "refs": ["E15", "E12"]
+        }
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "id": "E01",
+      "step": 1,
+      "page": 1,
+      "title": "增益调制的操作性定义",
+      "kind": "background",
+      "quote": "Gain modulation is revealed when one input, the modulatory one, affects the gain or the sensitivity of the neuron to the other input, without modifying its selectivity or receptive field properties",
+      "explanation": "作者给出判据式定义：调制输入改变增益或敏感度，但不改变选择性或感受野。这是本文用来区分增益调制与单纯活动量变化的界线，也是全文后续所有推理的基础。",
+      "layer": "author"
+    },
+    {
+      "id": "E02",
+      "step": 1,
+      "page": 1,
+      "title": "两方面的意义",
+      "kind": "background",
+      "quote": "there is a theoretical foundation indicating that gain-modulated neurons may serve as a basis for a general class of computations, namely, coordinate transformations and the generation of invariant responses",
+      "explanation": "作者说明增益调制之所以值得重视，一是现象广泛，二是有理论依据表明它构成坐标变换与不变性响应这一整类计算的基础。这句话界定了本文的功能性主张范围。",
+      "layer": "author"
+    },
+    {
+      "id": "E03",
+      "step": 1,
+      "page": 2,
+      "title": "增益场概念的来源",
+      "kind": "background",
+      "quote": "The term gain field was coined to describe the interaction between visually evoked responses and eye position in the parietal cortex",
+      "explanation": "gain field 一词源自 Andersen 与 Mountcastle (1983) 对顶叶皮层的记录工作，说明本文的概念工具直接建立在猕猴记录之上。",
+      "layer": "author"
+    },
+    {
+      "id": "E04",
+      "step": 2,
+      "page": 3,
+      "title": "非线性是理论成立的前提",
+      "kind": "method",
+      "quote": "the essential feature of the gain interaction is that it is nonlinear",
+      "explanation": "作者明确指出两种输入的影响不是简单相加或相减，而是非线性的，并说明这是多数理论结果成立的关键条件。该句既说明理论的力量，也标记了结论的脆弱处。",
+      "layer": "author"
+    },
+    {
+      "id": "E05",
+      "step": 2,
+      "page": 3,
+      "title": "四类候选机制并列",
+      "kind": "method",
+      "quote": "Four candidate mechanisms have been studied in some detail",
+      "explanation": "生物物理基础被列为四类候选机制，且是并列列举而非排序选择，说明本文不提供区分这些机制的证据。",
+      "layer": "author"
+    },
+    {
+      "id": "E06",
+      "step": 3,
+      "page": 4,
+      "title": "下游显式编码坐标和",
+      "kind": "result",
+      "quote": "may explicitly represent the quantity xtarget",
+      "explanation": "Box 1 推导的结论：满足权重约束时，下游群体显式表示 xtarget + xgaze，即增益调制在此转化为下游的坐标选择性。",
+      "layer": "author"
+    },
+    {
+      "id": "E07",
+      "step": 3,
+      "page": 5,
+      "title": "网络隐藏单元自发形成增益场",
+      "kind": "result",
+      "quote": "found that these had developed gain fields that depended on gaze",
+      "explanation": "Zipser 与 Andersen (1988) 的网络训练后，隐藏单元自发形成依赖注视线视的增益场，说明该结构是合理输入输出条件下网络的自然解，而非人为设定。",
+      "layer": "author"
+    },
+    {
+      "id": "E08",
+      "step": 3,
+      "page": 6,
+      "title": "Hebbian 学习可建立所需连接",
+      "kind": "result",
+      "quote": "the connections satisfying the critical constraint may be established by Hebbian or correlation-based learning",
+      "explanation": "满足关键约束的连接可由 Hebbian 或相关性学习建立，作者指出这需要一个执行正确运动的学习期。这是本文对实际学习规则给出的唯一正面线索，但作者同时把该问题列为未解。",
+      "layer": "author"
+    },
+    {
+      "id": "E09",
+      "step": 3,
+      "page": 6,
+      "title": "完备集可综合任意非线性",
+      "kind": "result",
+      "quote": "if there are enough different gain-modulated neurons",
+      "explanation": "Pouget 与 Sejnowski (1997b) 的结论：数量足够时（数学意义上的完备集），紧接其后的突触可综合任意非线性函数，作者同时指出建立这些连接的机制仍不确定。",
+      "layer": "author"
+    },
+    {
+      "id": "E10",
+      "step": 3,
+      "page": 7,
+      "title": "损伤模型复现 neglect 效应",
+      "kind": "result",
+      "quote": "the model is able to reproduce a large number of effects found in neglect patients",
+      "explanation": "模拟典型顶叶损伤后模型复现大量 neglect 效应，且在多个参考系上同时出现缺陷；作者以此把神经生理、理论与临床统一起来，但复现相容并不等于排他性解释。",
+      "layer": "author"
+    },
+    {
+      "id": "E11",
+      "step": 3,
+      "page": 8,
+      "title": "IT 平移不变性的特征",
+      "kind": "result",
+      "quote": "This is known as translation invariance",
+      "explanation": "作者描述 IT 神经元对复杂图像的响应与呈现位置无关，并称之为平移不变性，指出这必须由大量计算从完全不变的小感受野早期视觉响应中合成。",
+      "layer": "author"
+    },
+    {
+      "id": "E12",
+      "step": 3,
+      "page": 8,
+      "title": "注意作为调制量生成平移不变性",
+      "kind": "result",
+      "quote": "Translation-invariant responses may also be generated through gain modulation",
+      "explanation": "作者提出以注意位置为调制量生成平移不变响应，据 V4 的乘法式注意调制把 IT 的位置不变性解释为从眼中心到注意中心坐标的转换。",
+      "layer": "author"
+    },
+    {
+      "id": "E13",
+      "step": 3,
+      "page": 9,
+      "title": "V4 不表现大小恒常性",
+      "kind": "result",
+      "quote": "they are selective for retinal images of given sizes and their responses are gain-modulated by viewing distance",
+      "explanation": "Dobbins 等 (1998) 的实测结果：V4 神经元按网像大小选择性，其反应被观察距离增益调制，作者据此把 IT 的大小恒常性推断为对距离增益场的汇总，属推断性延伸。",
+      "layer": "author"
+    },
+    {
+      "id": "E14",
+      "step": 2,
+      "page": 4,
+      "title": "作者主动让出机制问题",
+      "kind": "method",
+      "quote": "the problem of identifying the biophysical basis for gain modulation is an active topic of research",
+      "explanation": "作者明确把机制识别问题排除在本文讨论之外，说明本文的功能性主张建立在一个未确定的前提上，这是引用本文时最重要的边界。",
+      "layer": "author"
+    },
+    {
+      "id": "E15",
+      "step": 2,
+      "page": 4,
+      "title": "同步性机制尚不清楚",
+      "kind": "method",
+      "quote": "it is not clear yet how this may happen, but the possibility is interesting",
+      "explanation": "对“改变输入同步性”这一候选机制，作者直言实现方式尚不清楚，只指出注意既改变增益也改变同步性的关联可能性，反映综述在证据薄弱处的诚实标注。",
+      "layer": "author"
+    },
+    {
+      "id": "E16",
+      "step": 5,
+      "page": 10,
+      "title": "作者自列的三项未解问题",
+      "kind": "implication",
+      "quote": "Much work still lies ahead to refine our understanding of gain modulation",
+      "explanation": "Final Remarks 明确列出未解问题：生物物理基础、实际学习规则、局限在哪里。引用本文时必须保留这一自限声明。",
+      "layer": "author"
+    },
+    {
+      "id": "E17",
+      "step": 2,
+      "page": 3,
+      "title": "Box 1 的乘法建模起点",
+      "kind": "method",
+      "quote": "The response of the neuron as a function of xtarget is a curve with a single peak",
+      "explanation": "Box 1 把实验事实转写为函数形式：反应为单峰曲线 f(xtarget − a)，乘以仅依赖注视角的 g(xgaze)，后者即增益场。这是全文理论推导的建模起点。",
+      "layer": "author"
+    }
+  ]
+}

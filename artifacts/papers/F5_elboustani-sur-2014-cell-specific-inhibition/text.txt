@@ -1,0 +1,2400 @@
+
+===== PDF PAGE 1 =====
+ARTICLE
+Received 24 Sep 2014 | Accepted 28 Oct 2014 | Published 11 Dec 2014
+Response-dependent dynamics of cell-speciﬁc
+inhibition in cortical networks in vivo
+Sami El-Boustani1 & Mriganka Sur1
+In the visual cortex, inhibitory neurons alter the computations performed by target cells via
+combination of two fundamental operations, division and subtraction. The origins of these
+operations have been variously ascribed to differences in neuron classes, synapse location or
+receptor conductances. Here, by utilizing speciﬁc visual stimuli and single optogenetic probe
+pulses, we show that the function of parvalbumin-expressing and somatostatin-expressing
+neurons in mice in vivo is governed by the overlap of response timing between these neurons
+and their targets. In particular, somatostatin-expressing neurons respond at longer latencies
+to small visual stimuli compared with their target neurons and provide subtractive inhibition.
+With large visual stimuli, however, they respond at short latencies coincident with their target
+cells and switch to provide divisive inhibition. These results indicate that inhibition mediated
+by these neurons is a dynamic property of cortical circuits rather than an immutable property
+of neuronal classes.
+DOI: 10.1038/ncomms6689
+OPEN
+1 Department of Brain and Cognitive Sciences, Picower Institute for Learning and Memory, Massachusetts Institute of Technology, 77 Massachusetts Avenue,
+Cambridge, Massachusetts 02139, USA. Correspondence and requests for materials should be addressed to S.E.-B. (email: elbousta@mit.edu) or to M.S.
+(email: msur@mit.edu).
+NATURE COMMUNICATIONS | 5:5689 | DOI: 10.1038/ncomms6689 | www.nature.com/naturecommunications
+1
+& 2014 Macmillan Publishers Limited. All rights reserved.
+
+===== PDF PAGE 2 =====
+A
+rithmetic operations such as division and subtraction are
+a fundamental and widespread property of inhibition in
+neuronal networks1–3. Divisive inhibition, a form of gain
+control, plays a major part in scaling the response amplitude of
+neurons while keeping their sensory selectivity or function
+intact4,5. Response scaling has been shown to occur during
+diverse functions such as directed visual attention6–8, contrast-
+invariant orientation selectivity9,10, multisensory integration11
+and value estimation12. In contrast, subtractive inhibition can
+sharpen the selectivity of neurons13,14, possibly increasing the
+discrimination
+capability
+of
+cell
+populations
+and
+thereby
+behavioural performance15.
+It has been suggested that different cortical inhibitory cell
+classes provide distinct combinations of divisive or subtractive
+inhibition during stimulus-mediated synaptic drive in vivo16–19.
+Although representing a minority of cortical cells, GABAergic
+neurons are highly diverse in their molecular, morphological and
+functional properties20,21, and can therefore contribute in various
+ways to the computational capability of cortical circuits22–24.
+Recent studies in visual cortex using optogenetic activation of
+inhibitory neurons have provided important insights into their
+function. In particular, parvalbumin-expressing (PV þ ) and
+somatostatin-expressing (SOM þ ) inhibitory neurons—the two
+key neuron classes that inhibit pyramidal neurons25—have been
+shown to alter responses of layer 2/3 cortical pyramidal neurons
+with distinct suppressive patterns displaying either divisive or
+subtractive inhibition14,15,26. The speciﬁc role of these inhibitory
+neuron classes, however, remains unclear: two studies found that,
+in visual cortex, PV þ neurons can alter the response gain of
+their targets14,26 but with little effect on orientation tuning width,
+whereas one study found that PV þ neuron activation could alter
+tuning width signiﬁcantly15. Similarly, SOM þ neurons have
+been shown to have either a subtractive effect14 or a divisive
+effect15, leading in the former case to an increase in orientation
+selectivity and reduction in tuning width and in the latter case to
+no change in tuning width. Differences regarding the role of
+PV þ and SOM þ neurons could be imputed to differences in
+optogenetic stimulation protocols27, suggesting that the functions
+performed by different inhibitory neurons is not a ﬁxed property
+of cortical networks but is a consequence of more complex
+dynamics28.
+The principles that govern the dynamics of PV þ
+and
+SOM þ neurons as well as the mechanisms underlying their
+function are still unknown. One proposal is that PV þ neurons,
+which target the soma and proximal dendrites of pyramidal
+neurons, recruit different conductances compared with SOM þ
+neurons, which mainly target distal dendrites21,29,30. However, to
+our knowledge, no experimental or theoretical evidence exists
+demonstrating that these structural or biophysical properties are
+essential for speciﬁc and diverse functional operations of
+inhibitory neurons. An alternative proposal is that inhibition
+can dynamically inﬂuence excitation depending on the temporal
+relationship between the two31,32; roles of inhibitory neurons can
+therefore be altered as a function of their ﬁring coordination with
+target neurons.
+When driven with speciﬁc stimulus ensembles, inhibitory
+neurons can display distinct response modes, as deﬁned by their
+latency, amplitude and selectivity33,34. Here we have examined
+the hypothesis that different temporal response modes of
+inhibitory neurons dynamically shape their function. Our study
+design differed from previous studies of cell-speciﬁc function in
+two important respects. First, to probe the nature and timing of
+responses, we employed brieﬂy ﬂashed visual stimuli and
+contrasting stimulus ensembles that evoked different response
+dynamics in inhibitory neurons. Second, to minimize the
+additive effects of optogenetic stimulation on visual responses,
+we employed precisely timed single optogenetic pulses to
+interrogate
+the
+nature
+of
+inhibition.
+By
+recording
+from
+identiﬁed target neurons in mouse primary visual cortex (V1),
+we show that the response timing and proﬁle of inhibitory
+neurons, and in particular SOM þ neurons, indeed shapes the
+operations they perform. A computational model shows that such
+response modes arise from simple rules of network connectivity
+and synaptic summation, yet enable dynamic switching of
+function between subtraction and division. These ﬁndings help
+to explain many of the diverse results described previously for
+inhibitory neuron function.
+Results
+V1 neuron responses to sparse noise and full-ﬁeld stimuli. To
+examine the role of speciﬁc inhibitory neuron classes in V1 as a
+function of stimulus properties and response features, we used
+two different types of visual stimuli. In a sparse noise protocol,
+which is conventionally used to map neuronal receptive ﬁelds33,35
+(see Methods), the location of the stimulus (a square patch of
+light) and its polarity (ON or OFF) changed from one frame to
+the next. In a full-ﬁeld protocol, stimulus ﬂashes (covering the
+entire visual ﬁeld) were displayed at different intensities. These
+stimuli were thus spatially uniform but had variable contrasts
+compared with offset periods (Supplementary Fig. 1). Sparse
+noise and full-ﬁeld stimuli provide complementary ways to
+rapidly probe the spatial and temporal summation properties of
+neurons and their receptive ﬁelds.
+We ﬁrst characterized the responses of V1 neurons to these
+stimuli using 2-photon calcium imaging with the calcium
+indicator OGB-1AM. Using a fast-scan strategy, we were able
+to image numerous neurons sequentially at high acquisition
+rate14 (Fig. 1a,b, see Methods). To evaluate the spatio-temporal
+properties of these cells, we estimated their instantaneous ﬁring
+rate from the calcium traces using a fast deconvolution
+algorithm36. The validity of the estimated ﬁring rate was
+illustrated
+through targeted cell-attached recordings of an
+OGB-ﬁlled
+neuron
+during
+simultaneous
+calcium
+imaging
+(Supplementary Fig. 2). To facilitate the comparison between
+electrophysiological recordings and calcium imaging, we used
+normalized unit-less statistics and displayed response magnitudes
+as Z-scores (see Methods).
+In response to sparse noise, neurons displayed a classical
+receptive ﬁeld with ON and OFF subﬁelds corresponding to their
+responses to bright or dark squares, respectively (Fig. 1c). Most
+of the recorded cells displayed a strong ON ﬁeld with either no
+OFF ﬁeld or a weaker and delayed OFF response (Fig. 1c,d;
+Supplementary Fig. 3). Similar asymmetrical representation of
+ON and OFF sensitivity has been previously observed in mouse
+V1 (ref. 35) and in adult macaque V1 superﬁcial layers37. We
+therefore based most of our analysis on ON responses. Among all
+the imaged neurons, 39% (761 out of 1,928 neurons, Z-score 43,
+16 animals) responded signiﬁcantly to sparse noise, with latencies
+to peak centred around 0.24 s (Fig. 1e). Experiments where a large
+fraction of cells displayed strong calcium signals revealed details
+of the retinotopic mapping and functional organization of mouse
+V1, in line with a previous report where a different stimulus
+ensemble was used to map receptive ﬁelds in mouse V1 (ref. 38)
+(Supplementary Fig. 4). When full-ﬁeld ﬂashes were presented,
+neurons responded in a monotonically increasing way to ON and
+OFF stimuli. OFF responses were on average weaker and delayed,
+similar to the responses with sparse noise (Fig. 1f). For this
+stimulus ensemble, 41% of all neurons (620 out of 1,518 neurons,
+Z-score 43, 8 animals) responded signiﬁcantly, and comparable
+to sparse noise stimulation, latencies to peak were centred around
+0.27 s (Fig. 1g). Thus, sparse noise and full-ﬁeld stimuli provide
+ARTICLE
+NATURE COMMUNICATIONS | DOI: 10.1038/ncomms6689
+2
+NATURE COMMUNICATIONS | 5:5689 | DOI: 10.1038/ncomms6689 | www.nature.com/naturecommunications
+& 2014 Macmillan Publishers Limited. All rights reserved.
+
+===== PDF PAGE 3 =====
+robust characterization of neuronal receptive ﬁelds, along with
+measures of response magnitude and timing as probes of
+potential temporal interactions between inhibitory neurons and
+their targets.
+Distinct functional responses of PV þ and SOM þ neurons.
+We next directly assessed the timing and amplitude of PV þ and
+SOM þ neuron responses to both sparse noise and full-ﬁeld
+stimuli using two-photon targeted, cell-attached recordings. We
+used the CreLoxP recombination system to express mCherry-
+channelrhodopsin-2 (ChR2) in speciﬁc cell types using PV-Cre
+and SOM-Cre mouse lines (Supplementary Fig. 5). Expression of
+mCherry allowed us to target these inhibitory neuron classes
+using glass pipettes ﬁlled with the dye Alexa 488 (Fig. 2a,f).
+Successful patch recordings could be assessed by rapid and reli-
+able spiking evoked in the patched neuron by activating ChR2
+with blue light pulses and by post hoc identiﬁcation of the spike
+waveform as fast-spiking (PV þ neurons) or regular-spiking
+(SOM þ neurons) (Fig. 2b,g and Supplementary Fig. 6).
+PV þ neurons (n ¼ 22 neurons, 8 animals) responded strongly
+to sparse noise stimuli and displayed receptive ﬁelds that were
+comparable to those observed for putative pyramidal cells (Fig. 1),
+as also illustrated by cell-attached recordings of adjacent
+putative pyramidal cells performed during the same experiment
+(Fig. 2b–e). The ﬁring pattern of PV þ neurons and pyramidal
+neurons evoked by the same sequence of sparse noise displayed
+strong similarity in their spatiotemporal receptive ﬁelds proper-
+ties (Fig. 2c–e). In contrast, the ﬁring pattern of SOM þ cells
+during sparse noise stimulation was distinct from the ﬁring
+pattern of adjacent pyramidal cells (Fig. 2f–j); SOM þ neurons
+did not share much similarity in their response magnitude or
+time-to-peak
+response
+(Fig.
+2i,j).
+Overall,
+compared
+with
+PV þ neurons, SOM þ neurons had very low spontaneous
+and evoked ﬁring rates in response to sparse noise (Fig. 2k,l).
+Many of the recorded cells (21 out of 37 neurons, 8 animals) did
+not display signiﬁcant responses to the sparse noise. The
+remaining cells (n ¼ 16) displayed weak responses (Fig. 2m) that
+were signiﬁcantly delayed33 with respect to PV þ or pyramidal
+cells (Fig. 2j,n).
+The functional properties of PV þ and SOM þ neurons were
+also investigated with full-ﬁeld ﬂashes. PV þ neurons (n ¼ 20
+neurons,
+4
+animals)
+displayed
+monotonically
+increasing
+responses with contrast for ON and OFF stimuli, with a much
+weaker response for OFF stimuli (Fig. 3a) similar to the responses
+found for putative pyramidal cells (Fig. 1f). For these large
+stimuli, SOM þ
+neurons responded with a nearly identical
+monotonic intensity response curve (Fig. 3b). The maximum
+Z-scores computed for these neurons were signiﬁcantly higher for
+full-ﬁeld ﬂashes compared with sparse noise (Fig. 3c). Virtually all
+SOM þ neurons (21 out of 23 neurons, 8 animals) responded
+signiﬁcantly to full-ﬁeld ﬂashes. Moreover, they responded with
+signiﬁcantly shorter response time-to-peak and onset time
+(deﬁned as the time at which the Z-score ﬁrst exceeded the
+signiﬁcance threshold, see Methods), comparable to those of
+pyramidal or PV þ
+neurons (Fig. 3d, n ¼ 620 for putative
+pyramidal cells, n ¼ 20 for PV þ neurons and n ¼ 21 for SOM þ
+neurons). The changes in response strength, onset time and time-
+to-peak were evident in example PV þ (Fig. 3e) and SOM þ
+neurons (Fig. 3f,g). These data thus demonstrate that SOM þ
+neurons display very different response modes to the two stimuli
+used here: when sparse noise stimuli are presented, they have
+weaker responses at longer latencies than pyramidal and PV þ
+neurons, whereas, when full-ﬁeld ﬂashes are presented, they have
+stronger responses at latencies compared with pyramidal and
+PV þ neurons. These stimuli represent extremes of a continuum
+related to spatial summation by SOM þ cells34, and thus enable
+us to analyse how their response modes relate to their function.
+Stimulus-dependent inhibition by PV þ and SOM þ neurons.
+On the basis of the distinct response timings of PV þ and
+Z-score
+Time (s)
+0.5
+0.4
+0.3
+0.2
+0.1
+0
+100%
+60 s
+60 µm
+OGB 1-AM
+Cell count
+Time to peak (s)
+On and off receptive fields
+15°
+Z-score
+Time
+Luminance
+0.2 s
+Z-Score
+Z-score
+0
+5
+10
+15
+20
+10
+0
+Cell count
+Time to peak (s)
+0
+40
+80
+120
+0
+20
+40
+60
+80
+Neurons
+0.6
+0.4
+0.2
+0
+0.6
+0.4
+0.2
+0
+10
+8
+6
+4
+2
+0
+0
+4
+8
+Figure 1 | Neuronal spikes, receptive ﬁelds and intensity response curves
+as revealed by calcium imaging. (a) Baseline image used to identify the
+location of cells loaded with OGB-1AM. The two-photon laser scan-path is
+overlaid in white on top of the image. Cells displaying signiﬁcant visual
+responses are marked with red circles. (b) Examples of calcium traces of
+neurons that were imaged through the scan-path. (c) Spatial ON (red) and
+OFF (blue) receptive ﬁelds of an example neuron obtained with calcium
+imaging in response to sparse noise stimuli. Gaussian ﬁts are represented
+by ellipses in light colours. (d) Averaged evoked responses to the complete
+sparse noise sequence for ON (red) and OFF (blue) stimuli. Dashed line
+indicates the baseline spontaneous activity and the bold black line indicates
+the duration of stimulus presentation. S.e.m. values are shown as shaded
+areas. (e) Response time-to-peak distribution for all neurons displaying a
+signiﬁcant sensory response (n ¼ 761, the arrow indicating the average:
+0.24 s). (f) Neuron population responses to full-ﬁeld ﬂashes of various
+luminance intensities as a function of time. The curves on the right margin
+indicate the average response time course for ON (red) or OFF (blue)
+stimuli. The intensity curve on top is the population Z-score estimated
+around the dashed grey line (200 ms±100 ms). S.e.m. values are shown as
+shaded areas. (g) Population distributions over all recorded neurons with
+signiﬁcant responses to full-ﬁeld ﬂashes showing response time-to-peak
+(n ¼ 620, average at 0.27 s).
+NATURE COMMUNICATIONS | DOI: 10.1038/ncomms6689
+ARTICLE
+NATURE COMMUNICATIONS | 5:5689 | DOI: 10.1038/ncomms6689 | www.nature.com/naturecommunications
+3
+& 2014 Macmillan Publishers Limited. All rights reserved.
+
+===== PDF PAGE 4 =====
+SOM þ neurons, we sought to understand how these differences
+translate to the interaction of PV þ and SOM þ neurons with
+local pyramidal cells during processing of sparse noise or full-ﬁeld
+stimuli. We ﬁrst ensured that we could evoke spikes from
+ChR2-expressing PV þ and SOM þ neurons precisely in time.
+Using targeted cell-attached recording, we applied single pulses of
+blue light (10 ms duration) that evoked reliable spiking responses
+in PV þ or SOM þ neurons with millisecond precision during
+concurrent visual stimulation; importantly, the ChR2-evoked
+spikes were similar across visual stimulation conditions and were
+independent of visual responses (Supplementary Fig. 7). Our goal
+was to reliably elicit moderate inhibition of visual responses in
+target cells, without evoking network disinhibition25,39,40 or
+circuit-wide changes41, so that we could compare effects across
+different types of inhibitory neurons and large numbers of
+target cells.
+We then studied the suppression strength of the evoked
+response by systematically varying the timing of the 10-ms long
+ChR2 pulse between 0.1 s before stimulus onset to beyond the
+response peak after visual stimulus onset and found that a
+near-optimal
+time
+to
+activate
+inhibitory
+neurons
+by
+the
+ChR2 pulse was at or just before 0.2 s following visual stimulation
+1 ms
+0.2 mV
+1 ms
+20 µm
+1 s
+20 µm
+1 s
+0.1 mV
+0.2 mV
+0.1 mV
+SOM+
+PV+
+SOM+
+PV+
+SOM+
+PV+
+SOM+
+PV+
+**
+***
+***
+***
+Time to peak (s)
+Maximum Z-score
+Max. evoked
+activity (spk·s–1)
+Spontaneous
+activity (spk·s–1)
+15°
+15°
+SOM+
+SOM–
+20
+10
+0
+20
+10
+0
+SOM–
+SOM+
+Time (s)
+Z-score
+Z-score
+0
+2
+4
+6
+0
+4
+8
+12
+0
+1
+0.8
+0.6
+0.4
+0.2
+0
+1
+0.8
+0.6
+0.4
+0.2
+0
+1
+2
+3
+4
+5
+2
+1.5
+1
+0.5
+0
+Alexa 488
+SOM+
+SOM–
+SOM+
+PV–
+PV+
+Alexa 488
+PV+
+15°
+15°
+PV–
+PV+
+60
+30
+0
+60
+30
+0
+PV–
+PV+
+Rate (spk·s–1)
+Rate (spk·s–1)
+Time (s)
+Z-score
+Z-score
+c
+0
+2
+4
+6
+0
+10
+20
+30
+40
+0
+10
+20
+30
+40
+0
+0.1
+0.2
+0.3
+0.4
+Figure 2 | PVþ and SOM þ neuron responses to sparse noise stimuli. (a) In vivo targeted cell-attached recording of a PV þ neuron expressing
+ChR2-mCherry, using a glass pipette ﬁlled with Alexa 488. (b) Spike waveforms of the PV þ neuron recorded in a (blue) and of a putative pyramidal
+neuron recorded nearby (grey). Average waveforms are shown in dark colours. (c) High-pass ﬁltered cell-attached recordings of the two neurons in
+response to the same sequence of sparse noise. Dashed lines indicate new stimulus onsets. (d) Receptive ﬁelds for ON stimuli in Z-score values for
+the PV þ neuron (top) and the pyramidal neuron (bottom). (e) Averaged evoked PSTHs in response to the complete sparse noise sequence for the
+PV þ neuron (blue) and the pyramidal neuron (gray). Respective scales are shown on both sides of the graph. S.e.m. values are shown as shaded
+areas. (f–j) Same as a–e for a SOM þ neuron (pink) and a putative pyramidal neuron (grey). (k–n) Population comparison of spontaneous activity
+(k, ***Po0.001, two-tailed t-test), maximum evoked activity (l, ***Po0.001, two-tailed t-test), maximum Z-score (m, ***Po0.001, two-tailed t-test) and
+response time-to-peak (n, **P ¼ 0.005, two-tailed t-test) between PV þ (n ¼ 22) and SOM þ (n ¼ 37) neurons. Cells without signiﬁcant evoked responses
+(Z-scoreo3) were not included in the comparison of time-to-peak response (which thus included n ¼ 22 PV þ neurons and n ¼ 16 SOM þ neurons).
+Error bars indicate s.e.m. The grey bars in l and m, respectively, indicate the maximum ﬁring rate and Z-score computed over all SOM þ neurons that
+displayed signiﬁcant responses.
+ARTICLE
+NATURE COMMUNICATIONS | DOI: 10.1038/ncomms6689
+4
+NATURE COMMUNICATIONS | 5:5689 | DOI: 10.1038/ncomms6689 | www.nature.com/naturecommunications
+& 2014 Macmillan Publishers Limited. All rights reserved.
+
+===== PDF PAGE 5 =====
+onset (Supplementary Fig. 8). This timing falls on the rising
+phase between the onset and the peak amplitude of visually
+evoked responses in typical pyramidal cells (Fig. 4a–f). This
+suppressive effect was evident at the level of individual cells
+when comparing their control response amplitude with that
+following the light pulse (Fig. 4g,h, n ¼ 113 for PV þ and n ¼ 104
+for SOM þ
+neurons); the vast majority of cells showed
+suppression, with very few cells displaying facilitation that
+would reﬂect a disinhibitory mechanism. We also performed
+control experiments in wild-type mice conﬁrming that the effect
+we observed was exclusively due to ChR2 activation and not
+caused by other uncontrolled sources (Supplementary Fig. 9).
+Thus, stimulating either PV þ or SOM þ neurons with single
+pulses in effect results in a compound IPSC in postsynaptic
+neurons, leading to direct suppression of visually evoked
+responses.
+We then measured neuron responses and receptive ﬁelds
+using sparse noise visual stimuli, in the presence or absence of
+0
+10
+20
+0
+1
+10
+20
+0
+0
+1
+Luminance
+Luminance
+Time
+Time
+0.2 s
+0.2 s
+SOM+
+PV+
+Rate (spk·s–1)
+Rate (spk·s–1)
+Rate (spk·s–1)
+Rate (spk·s–1)
+N.S.
+N.S.
+***
+**
+***
+***
+SOM+
+PC
+PV+
+SOM+
+PC
+PV+
+SOM+
+SN
+SN
+FF
+SN
+FF
+SN
+FF
+FF
+SN
+FF
+PC
+SN
+FF
+PV+
+Response onset and
+time to peak (s)
+Maximum Z-score
+Time (s)
+Time (s)
+1
+0.8
+0.6
+0.4
+0.2
+0
+1
+0.8
+0.6
+0.4
+0.2
+0
+1
+0.8
+0.6
+0.4
+0.2
+0
+Rate (spk·s–1)
+Rate (spk·s–1)
+Rate (spk·s–1)
+Time (s)
+2.5
+0
+4
+8
+12
+0
+10
+20
+30
+40
+0
+0.1
+0.2
+0.3
+0.4
+Full-field flashes
+Sparse noise
+0.5
+0.5
+0
+0.5
+1
+1.5
+2
+0
+0.2
+0.4
+0.6
+Figure 3 | PVþ and SOM þ neuron responses to full-ﬁeld ﬂashes. (a) Targeted cell-attached recordings of PV þ neuron (n ¼ 20) responses to full-ﬁeld
+ﬂashes of various luminance intensities as a function of time. The curves on the right margin indicate the average response time course for ON (red) or OFF
+(blue) stimuli. The intensity curve on top is the estimated rate averaged around the dashed grey line (200 ms±100 ms). (b) Same as a obtained by
+targeted cell-attached recordings of SOM þ neurons (n ¼ 23). (c) Bar plots comparing the maximum Z-score of pyramidal (PC), PV þ and SOM þ
+neurons in response to sparse noise (SN) and full-ﬁeld ﬂashes (FF). PC: n ¼ 1,928 for SN and n ¼ 1,518 for FF. PV þ neurons: n ¼ 22 for SN and n ¼ 20 for FF.
+SOM þ neurons: n ¼ 37 for SN and n ¼ 23 for FF. For SOM þ neurons, the grey bar indicates the maximum Z-score computed over all SOM þ neurons that
+displayed signiﬁcant responses during sparse noise (n ¼ 16). ***Po0.001 (two-tailed t-test) comparing responses for all cells during sparse noise and
+full-ﬁeld ﬂashes; NS, not signiﬁcant, P ¼ 0.43. (d) Bar plots comparing the response onset (grey bars) and time-to-peak (dark bars) of pyramidal cells (PC),
+PV þ and SOM þ neurons in response to sparse noise (SN) and full-ﬁeld ﬂashes (FF). PC: n ¼ 761 for SN and n ¼ 620 for FF. PV þ neurons: n ¼ 22 for SN
+and n ¼ 20 for FF. SOM þ neurons: n ¼ 16 for SN and n ¼ 21 for FF. **P ¼ 0.005 for peak and ***Po0.001 for onset response (two-tailed t-test);
+NS, not signiﬁcant, P ¼ 0.41 for peak and P ¼ 0.4 for onset response. (e) Averaged evoked PSTHs in response to sparse noise (dashed line) or full-ﬁeld
+(continuous line) for a PV þ neuron. Response time-to-peak for each curve is indicated with a vertical dashed line. (f) Averaged evoked PSTHs in response
+to sparse noise (dashed line) or full-ﬁeld (continuous line) for a SOM þ neuron that displayed a change in Z-score amplitude. (g) Same as f for a
+SOM þ neuron that displayed a change in response onset. Error bars and shaded areas indicate s.e.m. throughout the ﬁgure.
+NATURE COMMUNICATIONS | DOI: 10.1038/ncomms6689
+ARTICLE
+NATURE COMMUNICATIONS | 5:5689 | DOI: 10.1038/ncomms6689 | www.nature.com/naturecommunications
+5
+& 2014 Macmillan Publishers Limited. All rights reserved.
+
+===== PDF PAGE 6 =====
+single blue light pulses to stimulate PV þ or SOM þ neuron
+populations (Fig. 4i–n). To assess the effect of speciﬁc inhibitory
+neuron classes, we compared point-by-point responses from the
+spatial receptive ﬁeld obtained during ChR2-activation of these
+neurons with the control receptive ﬁeld (Fig. 4i,l). When PV þ
+neurons were stimulated, the effect on the target receptive ﬁeld
+structure was divisive, as shown by the linear relation between
+control and post-ChR2 responses with a slope o1 (Fig. 4j). That
+is, we observed stronger suppression for strongly responsive parts
+of the receptive ﬁeld and weaker suppression for regions away
+PV+
+ChR
+ChR
+Control
+ChR
+Control
+0
+10
+20
+30
+30
+20
+10
+0
+Luminance
+Luminance
+0
+10
+20
+0
+10
+20
+0
+4
+8
+12
+16
+0
+10
+20
+0
+10
+30
+20
+0
+10
+30
+20
+Z-score
+Z-score
+Full-field flashes
+Sparse noise
+Control Z-score
+Post-ChR2 Z-score
+Post-ChR2 Z-score
+Control Z-score
+Control Z-score
+0
+10
+20
+30
+Control Z-score
+Post-ChR2 Z-score
+0
+0.2
+0.4
+0.6
+0.8
+1
+Time (s)
+ChR2
+0
+0.2
+0.4
+0.6
+0.8
+1
+Time (s)
+ChR2
+0
+0.2
+0.4
+0.6
+0.8
+1
+0
+0.2
+0.4
+0.6
+0.8
+1
+−6
+−4
+−2
+0
+2
+4
+6
+8
+10
+−6
+−4
+−2
+0
+2
+4
+6
+8
+10
+Time (s)
+Time (s)
+Difference
+Post-ChR2
+Control
+Difference
+Post-ChR2
+Control
+Population Z-score
+Population Z-score
+Post-ChR2 Z-score
+Control Z-score
+SOM+
+***
+0
+5 10 15 20 25 30
+0
+5
+10
+15
+20
+25
+30
+V
+V
+ChR2
+ChR2
+Population df/f (%) 
+Population df/f (%) 
+V
+V
+15°
+15°
+SOM+
+ChR
+Control
+Control
+Control Z-score
+Suppression (%)
+0
+10
+20
+Control Z-score
+Suppression (%)
+Control Z-score
+0
+8
+16
+0
+20
+40
+60
+Suppression (%)
+Control Z-score
+0
+10
+20
+0
+10
+20
+30
+40
+50
+Suppression (%)
+30
+20
+10
+0
+Post-ChR2 Z-score
+Post-ChR2 Z-score
+Control Z-score
+PV+
+***
+0
+5 10 15 20 25 30
+0
+5
+10
+15
+20
+25
+30
+0
+8
+16
+0
+10
+20
+30
+40
+50
+0
+5
+10
+15
+20
+10 s
+200%
+200%
+10 s
+Neurons
+Neurons
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+Figure 4 | Single-pulse ChR2 stimulation of PV þ and SOM þ neurons reveals response dependence of inhibition. (a,b) Calcium traces corresponding
+to neuron responses to full-ﬁeld ﬂashes with blue light pulses delivered every two trials 0.2 s after stimulus onset (blue dots) for ChR2 excitation of
+(a) PV þ or (b) SOM þ neurons. (c,d) Population df/f averaged over all neurons in a and b, respectively, and over all trials in absence (black) or presence
+(blue/pink) of blue light pulses. Onset times of the visual stimulus (V) and ChR2 pulse (blue light) are indicated. S.e.m. valuesare shown with shaded areas.
+(e,f) Population activity time course after df/f deconvolution in the control condition (black) and during PV þ (e, blue) or SOM þ (f, pink) neuron
+stimulation. Difference between responses in these two conditions is shown in light colours. (g,h) Results of three experiments (different colors),
+comparing the average response of neurons in the control condition and with ChR2-stimulation of PV þ (n ¼ 113, Po0.001, Wilcoxon signed-rank test) or
+SOM þ neurons (n ¼ 104, Po0.001, Wilcoxon signed-rank test). (i) Receptive ﬁelds of a neuron imaged during control condition (top) or PV þ activation
+(bottom). (j) Point-by-point comparison between responses at corresponding receptive ﬁeld locations shown in i (linear ﬁt: slope ¼ 0.5, r ¼ 0.93, Po0.001,
+paired t-test). (k) Suppression strength as a function of the Z-score in the control condition for the receptive ﬁeld shown in i. Values on the x-axis
+indicate the centre of bars and the bin size is 4. (l–n) Same as i–k but during ChR2 stimulation of SOM þ neurons. (m) Slope ¼ 0.97, r ¼ 0.94, Po0.001,
+paired t-test. The bin size in n is 5. (o) Luminance-response curves of a neuron imaged in the control condition (black) and during PV þ (blue) neuron
+stimulation. (p) Point-by-point comparison for each luminance between control and PV þ activation conditions corresponding to the curves in o (linear ﬁt:
+slope ¼ 0.36, r ¼ 0.99, Po0.001, paired t-test). (q) Suppression strength as a function of the Z-score in the control condition (bin size ¼ 4) for the curves
+shown in o. (r–t) Same as o–q but during SOM þ neuron activation. Line in (s), slope ¼ 0.49, r ¼ 0.99, Po0.001, paired t-test. The bin size in t is 5.
+ARTICLE
+NATURE COMMUNICATIONS | DOI: 10.1038/ncomms6689
+6
+NATURE COMMUNICATIONS | 5:5689 | DOI: 10.1038/ncomms6689 | www.nature.com/naturecommunications
+& 2014 Macmillan Publishers Limited. All rights reserved.
+
+===== PDF PAGE 7 =====
+from the centre of the receptive ﬁeld, so that the suppression
+strength was strongly dependent on the control response
+(Fig. 4k)—indicating divisive inhibition. In contrast, the suppres-
+sion evoked by SOM þ neurons rather uniformly affected the
+target neuron’s responses and receptive ﬁeld (Fig. 4l), shifting all
+responses uniformly downwards and resulting in a linear
+relationship between suppression strength and control response
+with
+a
+slope
+close
+to
+1
+(Fig.
+4m)—indicating
+response-
+independent subtractive inhibition (Fig. 4n). Other single-cell
+examples of these distinct suppression patterns are shown in
+Supplementary Fig. 10.
+The suppression patterns of PV þ
+and SOM þ
+neurons
+suggest a network origin of their functions that could potentially
+be altered with full-ﬁeld stimuli. Indeed, when we used full-ﬁeld
+ﬂashes to probe the properties of PV þ and SOM þ mediated
+inhibition, we obtained very different effects for SOM þ neurons.
+By comparing, for each intensity, the luminance response curve of
+individual pyramidal cells in the control condition with the
+response when speciﬁc inhibitory neurons were stimulated
+(Fig. 4o,r), we could assess the nature of inhibition evoked by
+these cell types. While PV þ neurons still showed divisive effects
+on pyramidal neuron responses (Fig. 4p,q), SOM þ neurons now
+displayed divisive effects nearly identical to PV þ
+neurons
+(Fig. 4s,t). Thus, both PV þ and SOM þ neurons can provide
+divisive inhibition in response to a stimulus that strongly drives
+both neuron types along with their target cells, at comparable
+visual latencies. In response to sparse noise stimuli, however,
+which drive pyramidal and PV þ neurons effectively at short
+latencies but not SOM þ neurons, PV þ and SOM þ neurons
+perform different operations on target pyramidal cells (see
+Supplementary Fig. 10 for more single-cell examples).
+We conﬁrmed these results at the population level. For all
+visually responsive neurons that displayed a signiﬁcant (but not
+complete) suppression in response to PV þ or SOM þ neuron
+stimulation during the sparse noise protocol, the distribution of
+the ‘suppression slope’, or slope of the line relating post-ChR2
+response and control response (for example, Fig. 4j,m), was
+signiﬁcantly lower for PV þ neurons than for SOM þ neurons
+(Fig. 5a, n ¼ 87 neurons from 6 animals for PV þ , n ¼ 119
+neurons from 6 animals for SOM þ ). It is also worth mentioning
+that, although these two distributions are signiﬁcantly different,
+the effect of PV þ and SOM þ activation is not exclusively
+divisive or subtractive. Indeed, suppression slopes much smaller
+than 1 were observed for a small proportion of cells that were
+strongly
+suppressed
+by
+SOM þ
+activation
+(Supplementary
+Fig. 11). Interestingly, these target cells also had long response
+latencies to sparse noise stimuli (Supplementary Fig. 11e),
+comparable to SOM þ latencies (Fig. 3d), indicating that rather
+than being an exception, these cells were consistent with the
+hypothesis that the temporal overlap of SOM þ and target
+responses shapes the effect of SOM þ inhibition. Pooling cells
+from individual experiments and computing the average Z-score
+change (between control and ChR2-stimulation) and the s.e.m. in
+sparse noise experiments nevertheless demonstrated low varia-
+bility for the effects of PV þ (Fig. 5b, n ¼ 87 neurons from 15
+experiments, 6 animals) and SOM þ (Fig. 5c, n ¼ 119 neurons
+from 15 experiments, 6 animals) neuron activation. Analysis of
+the average suppression as a function of control Z-score showed
+that, while PV þ
+neurons caused a signiﬁcant scaling of
+suppression with control response (Fig. 5d), SOM þ neurons
+showed no dependence on the stimulus strength for large control
+values (Fig. 5e; the weaker suppression observed for low Z-scores
+can be attributed to a ﬂoor effect: responses that are close to the
+spike threshold cannot be suppressed below the threshold,
+resulting in weaker suppression). Strikingly, the same population
+analyses applied to full-ﬁeld ﬂashes did not show any signiﬁcant
+differences between PV þ and SOM þ neurons (Fig. 5f–j, PV þ :
+n ¼ 30 neurons from 8 experiments, 3 animals; SOM þ : n ¼ 79
+neurons from 15 experiments, 4 animals). One-way ANOVA
+revealed a signiﬁcant difference between the four groups in
+Fig. 5a,f (Po0.001 with Bonferroni correction for multiple
+comparisons). Using post-hoc pairwise t-tests, we found that only
+SOM þ activation in the sparse noise condition was signiﬁcantly
+different from all the other groups.
+Several recent studies have shown that the level of inhibition is
+markedly higher in awake behaving mice42, in which SOM þ
+neurons in particular can display higher ﬁring rates compared
+with anaesthetized conditions34,43,44. To examine the validity and
+generality of our results, we performed the same experiments in
+awake head-ﬁxed mice using the genetically encoded calcium
+indicator GCaMP6f instead of OGB-1AM (see Methods). Our
+results were similar to the anaesthetized case (Fig. 6) indicating
+that, at least in awake non-behaving mice, the function of SOM þ
+neurons remains stimulus-dependent. However, we do not
+exclude the possibility that changes in brain state, such as
+during locomotion43,45, could alter the function of various
+inhibitory cell types.
+Stimulus-dependent inhibition in a recurrent network model.
+To mechanistically understand these experimental ﬁndings, we
+designed a simple network model46 of layer 2/3 in which the
+different cell types were randomly distributed in a two-
+dimensional
+layer.
+On
+the
+basis
+of
+the
+strong
+response
+similarity between pyramidal and PV þ neurons and the short
+delay of PV þ responses to small stimuli33, we modelled both
+these cell types as receiving direct feedforward inputs from a
+parallel two-dimensional layer depicting thalamorecipient layer 4
+neurons (Fig. 7a) to model retinotopic receptive ﬁelds. The local
+recurrent connections of these cell types were sparse and followed
+a Gaussian distribution. In contrast, the weak and delayed
+responses of SOM þ neurons to sparse noise, as well as their lack
+of response during ChR2-stimulation of layer 4 excitatory cells
+in vitro34, suggested that SOM þ
+neurons do not receive
+feedforward
+sensory
+input
+but
+exclusively
+receive
+their
+excitatory drive from local excitatory neurons. We modelled
+these sparse connections with a uniform connection probability
+distribution mimicking the long-range interaction with local
+pyramidal cells34. All cell types projected locally according to a
+distant-dependent Gaussian distribution (Fig. 7b). We also added
+unidirectional connections from SOM þ to PV þ neurons to
+replicate intracortical connections25,40 and size tuning curves34,
+although these connections were not necessary to produce the
+effects
+described
+here
+(Supplementary
+Fig.
+12).
+Synaptic
+interactions
+were
+modelled
+as
+instantaneous
+increases
+in
+excitatory conductances (from pyramidal neurons) or inhibitory
+conductances (equivalently from PV þ and SOM þ neurons)
+followed by exponential decays.
+The spontaneous activity observed in our model was comparable
+to the spontaneous activity observed in our experiments in vivo,
+displaying low ﬁring rate of SOMþ cells, relatively low ﬁring rate
+of pyramidal cells and higher ﬁring rate of PVþ cells (Fig. 7c) with
+highly irregular ﬁring patterns47 (Fig. 7d) and weak distance-
+dependent correlation (Fig. 7h, light coloured lines) similar to our
+data (Supplementary Fig. 4i) and that of others38. The spatio-
+temporal
+correlation
+structure
+was
+dependent
+on
+several
+parameters of the model including the number of connections
+per neuron relative to the network size and typical synaptic
+strength46. We used a set of parameters that reproduced important
+features of the dynamics while keeping the network simple.
+To model sparse noise stimuli, we applied a small transient
+Gaussian ‘visual’ stimulation pattern in layer 4 and analysed the
+NATURE COMMUNICATIONS | DOI: 10.1038/ncomms6689
+ARTICLE
+NATURE COMMUNICATIONS | 5:5689 | DOI: 10.1038/ncomms6689 | www.nature.com/naturecommunications
+7
+& 2014 Macmillan Publishers Limited. All rights reserved.
+
+===== PDF PAGE 8 =====
+activity of the network. Using the symmetry of the network
+(homogeneous connectivity pattern and periodic boundary
+conditions), receptive ﬁelds were obtained by computing the
+response maps of the network for each population. Because of
+their local connectivity and feed-forward input, pyramidal cells
+and PV þ cells displayed a localized and strong response to the
+small stimulus. In contrast, the lack of feedforward input and the
+large-scale integration of SOM þ neurons led to a delayed and
+spatially uniform but weaker response to the stimulus (Fig. 7e,f).
+(The absolute response latencies generated by the model were
+arbitrary, because retinal, retinofugal conduction and multiple
+synaptic latencies were not included.) Note also that SOM þ
+neuron response variability found in in vivo data (Fig. 3f,g) was
+not accounted for here since the network was symmetrical and
+therefore displayed a single average behaviour compared with the
+average experimental result. Adding some heterogeneity in the
+connectivity rule of SOM þ neurons could potentially reproduce
+the range of response proﬁles observed experimentally. Activating
+PV þ and SOM þ cells with a pulse of excitation (mimicking a
+ChR2 pulse) during ‘visual’ stimulation resulted in divisive
+inhibition by PV þ
+neurons and subtractive inhibition by
+SOM þ neurons (Fig. 7g). This was a consequence of the
+different sensitivities and delay of PV þ and SOM þ neurons to
+small, local stimuli. The SOM þ neuron population responded
+uniformly to small ‘visual’ stimuli with a signiﬁcant delay
+compared with pyramidal neurons; when probed with a single
+‘ChR2’ pulse, the inhibition elicited by this population was
+homogeneous across pyramidal cells (independent of location)
+and resulted in a subtractive effect. In contrast, the response of
+PV þ neurons to small visual stimuli was strongly dependent
+15
+30
+0
+15
+30
+0
+15
+30
+0
+15
+30
+0
+0
+10
+30
+20
+0
+10
+30
+20
+0
+10
+30
+20
+0
+10
+30
+20
+Average Z-score
+Average Z-score
+0
+0.4
+0.8
+1.2
+N.S.
+N.S.
+******
+***
+***
+N.S.
+***
+***
+***
+***
+SOM+
+PV+
+***
+Cell (%)
+0
+SOM+
+PV+
+Cell (%)
+Suppression slope
+Suppression slope
+Average Z-score
+Control Z-score
+Control Z-score
+Control Z-score
+Control Z-score
+Average Z-score
+ Suppression (%)
+ Suppression (%)
+ Suppression (%)
+ Suppression (%)
+PV+
+post-ChR2 Z-score
+SOM+
+post-ChR2 Z-score
+PV+
+post-ChR2 Z-score
+SOM+
+post-ChR2 Z-score
+***
+***
+***
+***
+**
+***
+N.S.
+***
+***
+Full-field flashes
+Sparse noise
+100
+80
+60
+40
+20
+0
+100
+80
+60
+40
+20
+0
+1.2
+0.8 
+0.4
+30
+40
+20
+0
+0
+5
+10
+15
+20
+10
+0
+30
+20
+10
+0
+0
+30
+20
+10
+0
+30
+20
+10
+60
+30
+0
+50
+25
+0
+Figure 5 | Population analysis of response modulation during activation of PV þ and SOM þ neurons. (a) Cumulative distribution of the linear ﬁt slope
+for all cells that displayed a signiﬁcant suppression (n ¼ 87 for PV þ and n ¼ 119 for SOM þ neurons, Po0.01, Wilcoxon signed-rank test) in response to
+PV þ (blue) or SOM þ (pink) activation during sparse noise presentation (Po0.001, unpaired t-test). Average values are indicated by dashed lines.
+(b,c) Comparison of the population Z-score averaged over all neurons, between the control condition and when PV þ (b) or SOM þ (c) neurons were
+stimulated. The blue and pink lines indicate the average over all neurons (blue slope ¼ 0.63; pink slope ¼ 0.91), bars indicate s.e.m. (d,e) Histogram of the
+suppression strength for different ranges of baseline Z-scores, averaged over all neurons for PV þ (d) and SOM þ (e) neurons. (b,d) From left to right:
+n ¼ 20,914, 3,449, 1,065, 358, 141, 56 data points. (c,e) From left to right: N ¼ 28,598, 4,158, 1,475, 674, 344, 175 data points. Error bars indicate s.e.m.
+and bin size for each bar is 6. All statistical tests were done in comparison with the maximum Z-score range: **Po0.01; ***Po0.001; NS, not signiﬁcant,
+unpaired t-test. (f–j) Same as a–e but for full-ﬁeld ﬂashes and during stimulation of PV þ or SOM þ neurons. (f) n ¼ 30 for PV þ and n ¼ 79 for
+SOM þ neurons. NS not signiﬁcant, unpaired t-test, P ¼ 0.12. (g) Slope ¼ 0.44 and (h) Slope ¼ 0.55. (g,i) From left to right: N ¼ 614, 140, 56, 10, 5, 12 data
+points. (h,j) From left to right: N ¼ 1,539, 437, 118, 79, 27, 6 data points. (g–j) Error bars indicate s.e.m.
+ARTICLE
+NATURE COMMUNICATIONS | DOI: 10.1038/ncomms6689
+8
+NATURE COMMUNICATIONS | 5:5689 | DOI: 10.1038/ncomms6689 | www.nature.com/naturecommunications
+& 2014 Macmillan Publishers Limited. All rights reserved.
+
+===== PDF PAGE 9 =====
+0
+0.5
+1
+0
+0.5
+1
+0
+20
+40
+60
+80
+100
+0
+20
+40
+60
+80
+100
+30
+20
+10
+0
+Control Z-score
+Post-ChR2 Z-score
+0
+N.S.
+***
+SOM+
+PV+
+SOM+
+PV+
+Suppression slope
+Suppression slope
+30
+20
+10
+0
+Control Z-score
+Post-ChR2 Z-score
+Cell (%)
+Cell (%)
+60 s
+SOM-mCherry-ChR2
+PV-mCherry-ChR2
+GCaMP6f
+GCaMP6f
+40 µm
+40 µm
+a
+300%
+0
+0.5
+1
+1.5
+2
+0
+0.5
+1
+1.5
+2
+Time (s)
+0.5
+0.4
+0.3
+0.2
+0.1
+0
+Time (s)
+0.5
+0.4
+0.3
+0.2
+0.1
+0
+Post-ChR2
+Control
+Post-ChR2
+Control
+ChR2
+ChR2
+Population Z-score
+Population Z-score
+PV+
+ChR
+Control
+ChR
+Control
+ChR
+Control
+Luminance
+Luminance
+Z-score
+Z-score
+Full-field flashes
+Sparse noise
+Control Z-score
+Post-ChR2 Z-score
+Post-ChR2 Z-score
+Control Z-score
+Control Z-score
+Post-ChR2 Z-score
+15° 
+SOM+
+ChR
+Control
+Control Z-score
+Post-ChR2 Z-score
+0
+4
+8
+12
+16
+0
+5
+10
+15
+15
+10
+5
+0
+0
+5
+10
+15
+0
+5
+10
+15
+0
+5
+10
+15
+0
+10
+20
+0
+10
+20
+0
+10
+20
+0
+10
+20
+30
+20
+10
+0
+30
+20
+10
+b
+c
+d
+f
+e
+h
+i
+j
+k
+g
+Figure 6 | Effect of ChR2-mediated PV þ and SOM þ neuron activation on target cells of awake head-ﬁxed mice. (a) Image of a region of V1 expressing
+GCaMP6f in all neurons and mCherry-ChR2 in PV þ (top) or SOM þ (bottom) neurons. (b) Example calcium traces normalized to baseline (df/f) obtained
+during presentation of sparse noise. (c) Population responses in control condition (black) and when a blue light pulse was delivered to PV þ (blue, n ¼ 30)
+or SOM þ (pink, n ¼ 26). In awake mice the responses were faster than in the anaesthetized case and we therefore used pulses at 0.1 s instead of
+0.2 s. S.e.m. values are shown as shaded areas. (d) Left: example receptive ﬁelds of a neuron imaged during control condition (top) and during PV þ
+activation (bottom). Right: point-by-point comparison between responses at corresponding receptive ﬁeld locations. The blue line indicates the linear ﬁt
+(slope ¼ 0.47, r ¼ 0.93, Po0.001, paired t-test). (e) Same as d but during ChR2-stimulation of SOM þ neurons. Slope ¼ 0.93, r ¼ 0.88, Po0.001, paired
+t-test. (f) Left: example luminance-response curves of a neuron imaged in the control condition (black) and during PV þ (blue) neuron stimulation. Right:
+point-by-point response comparison for each luminance. The blue line indicates the linear ﬁt (slope ¼ 0.44, r ¼ 1, Po0.001, paired t-test). (g) Same
+as f but during SOM þ neuron activation. Slope ¼ 0.42, r ¼ 0.99, Po0.001, paired t-test. (h) Cumulative distributions of the linear ﬁt slope for all cells that
+displayed a signiﬁcant suppression (Po0.01, Wilcoxon signed-rank test) in response to PV þ (blue) or SOM þ (pink) activation during sparse noise
+presentation (n ¼ 55 for PV þ and n ¼ 18 for SOM þ , Po0.001, unpaired t-test). (i) Comparison of the population Z-score averaged over all neurons,
+between the control condition and when PV þ (n ¼ 55, slope ¼ 0.56) or SOM þ (n ¼ 18, slope ¼ 0.89) neurons were stimulated during sparse noise.
+(j–k) Same as h–i but during full ﬁeld-ﬂashes. (j) n ¼ 18 for PV þ and n ¼ 15 for SOM þ , P ¼ 0.11. (k) PV þ (n ¼ 18, slope ¼ 0.51) and SOM þ (n ¼ 15,
+slope ¼ 0.50). One-way ANOVA revealed a signiﬁcant difference between the four groups in h and j (Po0.001 with Bonferroni correction for multiple
+comparisons). Using post-hoc pairwise t-tests, we found that only SOM þ activation in the SN condition was signiﬁcantly different.
+NATURE COMMUNICATIONS | DOI: 10.1038/ncomms6689
+ARTICLE
+NATURE COMMUNICATIONS | 5:5689 | DOI: 10.1038/ncomms6689 | www.nature.com/naturecommunications
+9
+& 2014 Macmillan Publishers Limited. All rights reserved.
+
+===== PDF PAGE 10 =====
+on their location in the network and closely resembled the
+response proﬁle of nearby pyramidal cells. As a result, the
+inhibition evoked by these neurons in target cells was stronger
+for stronger responses (in the center of the receptive ﬁeld)
+and resulted in a divisive effect. These effects were not dependent
+on the strength of stimulation and SOM þ neurons usually
+required a stronger pulse of activity to produce a signiﬁcant
+suppression of pyramidal cells (as also observed experimentally).
+The stimulus dependence of the various cell types was further
+evident in their correlation with local pyramidal cells as a
+function of stimulus parameter (Fig. 7h). The correlation between
+pyramidal and PV þ cells produced by this stimulus decayed
+over distance, whereas it was uniform for SOM þ neurons.
+Full-ﬁeld ﬂashes of increasing intensity were reproduced by
+transiently stimulating the entire network with increasing drive.
+In this case, the functional properties of all cell types were more
+comparable, showing a monotonic increase in their response to
+increasing drive (Fig. 7i) and decrease of SOM þ
+neuron
+response latencies compared with sparse noise (Fig. 7f). Stimulat-
+ing PV þ or SOM þ neurons with a pulse of ‘ChR2’ during
+presentation of full-ﬁeld ﬂashes resulted in divisive inhibition
+from both neuron types (Fig. 7j). For this stimulus ensemble, the
+correlation structure with pyramidal cells showed that all neuron
+types were similarly sensitive to the stimulus parameters,
+displaying similar temporal correlations and increasing correla-
+tion with increasing intensity (Fig. 7k). For SOM þ neurons in
+SOM+
+Control Z-score
+Control Z-score
+ChR2 Z-score
+ChR2 Z-score
+0
+100
+PV+
+SOM+
+Control Z-score
+Control Z-score
+ChR2 Z-score
+ChR2 Z-score
+300
+300
+150
+0
+PV+
+High
+Low
+High
+Low
+SOM+
+PC
+PV+
+PV+
+SOM+
+PC
+PV+
+Layer 2/3
+Feedforward input
+SOM+
+PV+
+PC
+1
+1
+0
+0
+Distance
+Connection prob.
+Projection
+Input
+Connection prob.
+Distance
+PV+
+Z-score
+Prob. density
+Prob. density
+1.6
+0
+ISI CV
+0
+Rate (spk·s–1)
+0
+50
+100
+0
+25
+50
+0
+150
+300
+PC
+PV+
+SOM+
+Large-scale
+integration
+0
+Time 
+SOM+
+PC
+PV+
+Intensity
+Z-score
+Z-score
+Z-score
+0
+0
+0
+Time
+Time
+Time
+0.008
+0
+2
+–2
+0
+2
+–2
+0
+2
+–2
+Correlation
+0.2
+0.1
+0
+0.2
+0.1
+0
+Correlation
+Correlation
+Distance
+0
+0.2
+0.4
+0.6
+SOM+
+PC
+PC
+PC
+PV+
+PC
+Time
+Time
+Time
+1
+0
+2
+–2
+0
+2
+–2
+0
+2
+–2
+Correlation
+Intensity
+SOM+
+PC
+PC
+PC
+PV+
+PC
+0.1
+Time
+Rate
+SOM+ (SN)
+SOM+ (FF)
+PC
+PV+
+PV+
+0
+0.5
+1
+1
+0.02
+0.01
+0
+0.02
+0.01
+0
+2.0
+1.5
+1.0
+0.5
+6
+4
+2
+0.4
+0.2
+0.4
+0.2
+0
+0.5
+0
+0.5
+0
+0.4
+0.8
+1.2
+0
+1
+2
+3
+4
+0
+0.5
+0
+0
+150
+300
+0
+150
+150
+300
+0
+150
+300
+0
+150
+300
+0
+150
+300
+300
+0
+150
+0
+0.004
+40
+20
+0
+50
+25
+100
+50
+2
+1.5
+1
+0.5
+1
+0.5
+Intensity
+0
+1
+0.5
+Intensity
+0
+1
+0.5
+0
+50
+100
+0
+50
+100
+0
+50
+100
+0
+50
+100
+50
+0
+100
+50
+0
+100
+50
+0
+100
+50
+0
+0.05
+0
+0.5
+Figure 7 | Network model of superﬁcial layer V1 representing the connections and functions of SOM þ , PV þ and pyramidal neurons. (a) Schematic of
+model connections. (b) Connection probability distribution for each cell type depicting inputs (left) and output projections (right). (c,d) Distribution of the
+spontaneous ﬁring rate (c) and interspike interval coefﬁcient of variation (ISI CV, d) for each cell type. Average values for each population are indicated with
+coloured arrows. (e) Receptive ﬁelds of each neuron population in the network in response to small sparse-noise stimuli. (f) Time course of spatially
+averaged responses obtained in e, normalized to the peak response of pyramidal cells for sparse noise. The dashed pink line shows the response of SOM þ
+neurons to full-ﬁeld ﬂashes normalized to the peak response of pyramidal cells in the same condition. The time scale is in units of stimulus duration.
+(g) Comparison between responses obtained in the control condition and when PV þ (top) or SOM þ (bottom) neuron populations were activated with a
+single pulse of excitation at ‘low’ (left) or ‘high’ (right) levels (PV þ cells: 20 and 30 nS; SOM þ cells: 40 and 50 nS). (h) (Bottom) Average pairwise
+correlation between pyramidal neurons (left), PV þ and pyramidal neurons (middle) and SOM þ and pyramidal neurons (right) as a function of time
+difference and distance in the network. The time scale is in units of stimulus duration. (Top) Correlation versus time difference, averaged across distance,
+for the various cell combinations. Light coloured lines indicate the baseline pairwise correlation during ongoing spontaneous activity; dark lines indicate
+correlations during visually driven activity. The panel on the right is the average correlation at time difference 0 as a function of distance. (i) Population
+responses during full-ﬁeld stimulation as a function of increasing drive for pyramidal (left), PV þ (middle) and SOM þ (right) neurons. (j) Same as g for
+full-ﬁeld ﬂashes. (k) Same as h but as a function of drive intensity and time difference.
+ARTICLE
+NATURE COMMUNICATIONS | DOI: 10.1038/ncomms6689
+10
+NATURE COMMUNICATIONS | 5:5689 | DOI: 10.1038/ncomms6689 | www.nature.com/naturecommunications
+& 2014 Macmillan Publishers Limited. All rights reserved.
+
+===== PDF PAGE 11 =====
+particular, the switch between subtraction and division may thus
+be explained by their connections and their consequent stimulus-
+dependent temporal and spatial relationship to pyramidal neuron
+responses. Importantly, the effect of SOM þ activation on target
+pyramidal neurons did not depend on SOM þ
+to PV þ
+connections
+(Supplementary
+Fig.
+12),
+indicating
+that
+this
+disinhibitory circuit is unlikely to play a role in the effect of
+SOM þ neurons on pyramidal cells in vivo27,40.
+This simple computational model reproduced the phenomen-
+ology observed in vivo only by using different connectivity rules
+for PV þ and SOM þ neurons that were otherwise modelled
+identically. These connectivity rules were inspired by recently
+published work34 and were kept as simple as possible. We do not
+exclude the possibility that the nature of GABA receptors targeted
+by these different inhibitory neuron types may differ1 and could
+also participate in this mechanism, although how this would
+enable SOM þ neurons to switch their function remains to be
+clariﬁed.
+Discussion
+We have shown in this study that PV þ and SOM þ neurons, the
+two well-deﬁned classes of cortical inhibitory neurons that target
+pyramidal neurons, have functional effects on their targets that
+depend on their response modes and the nature of visual stimuli.
+When probed with small stimuli, the responses of SOM þ
+neurons are delayed and often weak, and differ signiﬁcantly from
+those of pyramidal and PV þ neurons. Under these conditions,
+when probed with single pulses of ChR2, SOM þ neurons
+provide subtractive inhibition. With the same stimuli, PV þ
+neurons are coactive with pyramidal neurons, with similar
+response latencies, and provide divisive inhibition. Strikingly,
+when large stimuli are used, both PV þ and SOM þ neurons
+display comparable response latencies as pyramidal neurons, and
+both provide divisive inhibition.
+It is possible that the function of PV þ and SOM þ neurons
+also depend on the cortical layer. Our experiments were
+performed in superﬁcial layers II/III of V1, but we do not
+exclude the existence of alternative mechanisms in deeper layers.
+Moreover, although we tried to target superﬁcial layers during
+viral injections, it is likely that deeper layers were also transfected
+and therefore the effect observed in our data could in principle
+include the contribution of interneurons in these layers, which in
+turn could interact with superﬁcial layers in distinct ways.
+However, our results were consistent across animals indicating
+that despite a possible difference in PV þ and SOM þ neurons
+distribution within the cortical column, their collective effect on
+target cells in superﬁcial layers is robust and reliable.
+Our work differs in important ways from previous studies that
+examined the role of inhibitory neuron classes14,15,26,40. First,
+these studies used prolonged full-ﬁeld visual stimulation to drive
+neurons, which can obscure the temporal relationship between
+inhibitory and target neuron ﬁring. Second, these studies used
+prolonged optogenetic stimulation of inhibitory neurons to
+evaluate their effect on target neurons; such stimulation is
+superimposed on visual drive to neurons, and alters the
+magnitude
+and
+timing
+of
+visually
+evoked
+responses
+in
+inhibitory
+neurons
+and
+their
+targets.
+Moreover,
+such
+stimulation invokes not only inhibitory but also disinhibitory
+interactions in cortical networks25,40 as reﬂected by the stronger
+suppression evoked in pyramidal neurons by SOM þ neurons in
+our
+study
+using
+single
+pulse
+stimulation
+compared
+with
+prolonged pulse trains40. Prolonged ChR2 excitation can also
+result in depolarization block in neurons48. By employing brieﬂy
+ﬂashed visual stimuli, speciﬁc stimulus ensembles, and short
+pulses of optogenetic activation, we were able to deﬁne the
+respective response latencies of PV þ and SOM þ neurons and
+compare them with pyramidal neurons, as well as isolate the
+inhibitory effect of these neuron classes on their targets.
+Our ﬁndings help explain the disagreement in previous reports
+on the functional role of PV þ and SOM þ neurons14,15,26.
+PV þ neurons are easily excited by ChR2 stimulation and they
+exert
+powerful
+feedforward
+inhibition:
+the
+disagreement
+regarding PV þ neurons is well explained by considering the
+intensity of PV þ activation in these studies27,28,49. In the case of
+SOM þ neurons, Lee et al.15 activated SOM þ cells continuously
+with prolonged ChR2 stimulation, and the visual stimulation was
+displayed full-ﬁeld and completely contained within the ChR2
+activation period. We hypothesize that the temporal overlap of
+pyramidal cell visual activation and SOM þ visual plus ChR2
+activation fulﬁlled the condition for divisive inhibition. We have
+conﬁrmed this idea by performing additional experiments with
+full-ﬁeld drifting gratings and optogenetic pulse activation at the
+timing of onset response and found divisive inhibition for both
+PV þ and SOM þ neurons (Supplementary Fig. 13a,b). Wilson
+et al.14 used ChR2 activation only during the ﬁrst second of the
+full-ﬁeld visual stimulation, and probed the effect of inhibition
+subsequently, during which we hypothesize there was no
+temporal overlap between pyramidal and SOMþ responses, and
+hence found subtractive inhibition. This was further veriﬁed by
+performing another set of experiments where the ChR2 activation
+pulse was delivered in a later time (corresponding to the last
+stimulation pulse in ref. 14) when the visually evoked response of
+SOM þ neurons was almost back to baseline. In this protocol, the
+effect produced by PVþ or SOM þ neuron ChR2 activation was
+signiﬁcantly different, with more subtractive inhibition elicited by
+SOM þ
+neurons
+(Supplementary
+Figs
+13a,c
+and
+14a,b).
+Furthermore, Lee et al.27 replicated results from Wilson et al.14
+and showed that under different stimulation conditions SOM þ
+neurons can indeed carry out very different functions (Supplemen-
+tary Fig. 14c–e). Our ﬁndings now demonstrate that the
+mechanistic basis for this functional switch is the response mode
+and timing of SOM þ neurons relative to their target cells.
+The dynamic switch of neural computations performed by
+SOM þ neurons provides a basis for context-dependent switch-
+ing of function. Most SOM þ neurons are insensitive to small
+stimuli or respond with a signiﬁcant delay, and therefore evoke
+stimulus-independent suppression of local pyramidal cells in this
+sensory context or when activated by other inputs such as
+cholinergic drive50 or top-down modulation51. This subtractive
+inhibition can enhance the decoding properties of the cortical
+network by sharpening the tuning curves or receptive ﬁelds of
+pyramidal cells13,14. SOM þ neurons can switch to providing
+divisive inhibition and gain control when activated by large
+stimuli. In contrast, PV þ neurons mediate gain control for both
+small and large stimuli by uniformly evoking strong divisive
+inhibition in neighbouring pyramidal cells. The dynamics of
+SOM þ
+neurons to different sensory stimuli provides an
+additional gain control mechanism when large stimuli are
+processed.
+PV þ
+and
+SOM þ
+cells
+could
+then
+provide
+complementary functions, respectively, controlling the gain of
+pyramidal cells in the face of changes in local contrast or overall
+brightness when presented with scale-invariant stimuli such as
+natural scenes.
+Furthermore, SOM þ neurons provide a way to dynamically
+integrate top-down inputs with sensory inputs: top-down inputs
+that activate SOM þ neurons in a temporally distinct manner
+from visual (bottom-up) inputs would help shape response
+selectivity, whereas top-down activation that temporally overlaps
+visual activation would provide gain control. As SOM þ neurons
+are particularly sensitive to brain states43,51, their dynamic response
+modes provide a rich way to regulate pyramidal cell responses.
+NATURE COMMUNICATIONS | DOI: 10.1038/ncomms6689
+ARTICLE
+NATURE COMMUNICATIONS | 5:5689 | DOI: 10.1038/ncomms6689 | www.nature.com/naturecommunications
+11
+& 2014 Macmillan Publishers Limited. All rights reserved.
+
+===== PDF PAGE 12 =====
+Methods
+Animals and virus injections. Experiments were carried out in mice under
+protocols approved by MIT’s Animal Care and Use Committee and conformed to
+NIH guidelines. Heterozygous SOM-Cre and PV-Cre knockin driver mice (Jackson
+Labs) were backcrossed into a C57BL/6 line and housed 1–5 mice per cage under a
+12/12-h light/dark cycle. Adult mice (46–8 weeks old, both genders) were
+anaesthetized with 4% isoﬂurane in oxygen. The skull was thinned at a location
+3.5 mm posterior and 3 mm lateral to bregma, corresponding to the caudolateral
+part of V1. A glass micropipette ﬁlled with the virus (pAAV-Ef1a-DIO-
+hChR2(H134R)-mCherry-WPRE-pA from University of North Carolina viral
+vector core facility) was then inserted in the cortex through the remaining skull and
+the dura. Two injections of 250 nl were made, respectively, at a depth of 500 and
+250 mm below the cortical surface at a rate of 100 nl min  1. Immunohistochem-
+istry was performed to ensure the expression of the virus as previously described14
+(Supplementary Fig. 5).
+Animal preparation. In vivo experiments were performed on mice 2 weeks or
+more post-injection. Mice were ﬁrst anaesthetized with 1.5% isoﬂurane in oxygen
+and subsequently injected with a cocktail containing fentanyl (0.05 mg kg  1),
+midazolam (5 mg kg  1) and medetomidine (0.5 mg kg  1), supplemented with
+0.5% isoﬂurane. Eyes were protected with ophthalmic ointment. A metal plate was
+attached to the skull using opaque black superglue and dental acrylic and screwed
+into a moveable stage. A circular craniotomy (1.5 mm diameter) centred on the
+injection site was then performed. A thin layer of 3% agarose in ACSF was used to
+cover the cortex. The stage was then transferred to the microscope where another
+tube was installed to deliver isoﬂurane. Throughout the surgery and the entire
+experiment, the body temperature was maintained at 37.5C with a heating blanket
+(Harvard Apparatus) and if necessary additional heating pads.
+In vivo-targeted cell-attached recordings. To perform targeted cell-attached
+recordings, a borosilicate pipette back-ﬁlled with 4 ml of either Alexa 488 or Alexa
+594 (Molecular Probes) was inserted into the brain at a 30 angle below a  25
+Olympus water immersion objective. The objective as well as the glass pipette and
+an Ag/AgCl ground pellet electrode were immersed in ACSF. The glass pipettes
+(outer diameter ¼ 1.5 mm, inner diameter ¼ 1.17 mm) were pulled using a Sutter
+P-1000 puller to obtain a baseline resistance of 3–7 MO. Recordings were made
+using custom software (Network Prism, Sur Lab) written in Matlab (Mathworks,
+Natick, MA) controlling a MultiClamp 700B Ampliﬁer (Axon Instruments). The
+pipette was then advanced diagonally towards speciﬁc labelled neurons under the
+guidance of two-photon imaging at 910 nm and with an applied pressure of
+15–30 mbar. Small lateral movements of few tens of microns were used to better
+reach targeted neurons. Cell approach was assessed visually and with a signiﬁcant
+increase of resistance (4twofold). After the cell was successfully targeted, pressure
+was released creating a strong increase in resistance (20–100 MO). Weak negative
+pressure was applied to hold the cell (about  10 mbar). For targeted cells that
+expressed the light-gated ion channel channelrhodopsin (ChR2), we could conﬁrm
+successful cell-attached patch by triggering spikes with blue light (see below) at
+1-ms precision. To ensure that cells with very low ﬁring were still recorded during
+long recording sessions, we regularly evoked spiking activity in them via ChR2 by
+applying pulses of blue light. The ampliﬁer was switched to current clamp mode
+and spikes were recorded with zero injected current under a Bessel ﬁlter of 4 kHz
+and an AC ﬁlter of 300 Hz.
+Two-photon calcium imaging in anaesthetized mice. A solution containing
+50 mg of Oregon Green BAPTA 1-AM (Invitrogen) mixed with 5 ml of pluronic acid
+(20% in DMSO) wrapped in aluminum foil was centrifuged for 20 min and sub-
+sequently mixed with 45 ml of a solution containing 2 ml of Alexa 488 (Invitrogen)
+diluted in 200 ml of saline. This mixture was then centrifuged through a 0.22 mm
+ﬁlter (Millipore) for 30 s and stored on ice. Glass pipettes identical to the ones used
+for targeted cell-attached recording were back-ﬁlled with 3 ml of the dye. The
+pipette was then inserted in the cortex under two-photon guidance to the region of
+interest (virus injection site) where mCherry-ChR2 was expressed in either PV þ
+or SOM þ neurons. In experiments where no optogenetic manipulations were
+necessary, we aimed at region of the cortex free of large blood vessels. Once in
+position, sustained but light positive pressure was incrementally applied using a
+Picospritzer II until the dye started to leak out of the pipette with a slow and
+constant ﬂow. The loading was maintained for about a minute. The dye uptake
+usually enabled imaging 30–60 min after bulk loading.
+Imaging was performed with a modiﬁed Prairie Ultima two-photon system
+(Prairie Technologies) driven by a Spectra Physics Mai-Tai eHP laser. All
+functional imaging was done using a  25 Olympus XL Plan N high-numerical
+index objective lens. The details of the system have been described in detail
+previously14. In brief, a custom all-Matlab system (Network Visor, Sur Lab) was
+used to detect changes in ﬂuorescence. The red and green PMT cables from the
+two-photon microscope were forked and fed into a custom A/D acquisition system
+and graphical user interface (National Instruments and Matlab). The control lines
+of the two-photon’s X and Y galvanometers were in turn substituted with D/A
+control lines from the custom system. After an initial raster scan that provided
+an image of the OGB-loaded cells, their positions were detected to establish a
+scan-path. Using a genetic algorithm, the shortest scan-path between cells was then
+computed and the imaging was performed along this trajectory. This strategy could
+yield calcium traces of about a hundred cells imaged sequentially at a 50 Hz
+sampling rate and high signal-to-noise ratio. All imaging sessions had a duration of
+2 min. In between each session, an image of the cortex was taken to ensure that the
+scan-path was still aligned with the cells. If a movement occurred during a session,
+the cortex was realigned on the scan-path and the session was discarded.
+Two-photon imaging in awake head-ﬁxed mice. We performed calcium imaging
+experiments in awake head-ﬁxed PV-Cre or SOM-Cre mice expressing GCaMP6f
+(ref. 52) (UPenn Vector Core: AAV1.Syn.GCaMP6f.WPRE.SV40) in all neurons
+and mCherry-ChR2 in a Cre-dependent manner. A craniotomy was performed
+before virus injection and the cortex was then protected by a 3-mm glass coverslip
+further sealed with Metabond permanent cement mixed with black ink to ensure
+opacity. A custom-made headplate was implanted on the mouse skull and attached
+with Metabond permanent cement. After a week-long recovery period, the mouse
+was habituated to head-ﬁxation by screwing the headplate to an immobile stage
+and conﬁning the mouse in a tube. Imaging experiments were done at least 2 weeks
+after virus injection. We performed the same experiments that were done in
+anaesthetized state except that we used Scanimage (HHMI Janelia Farm) to acquire
+full frame images with a frame rate of 25 Hz, with high zoom and low resolution so
+that roughly 25 well-isolated cells could be imaged simultaneously. Movies were
+movement-corrected before any further analysis.
+Optogenetic stimulation protocol. Neurons expressing channelrhodopsin were
+driven by a diode-pumped solid state blue laser with analogue intensity control
+(473 nm, 200 mW, MBL-III-473, OptoEngine, LLC) coupled via SMA terminal to a
+200 mm ﬁber (ThorLabs) that was integrated into the microscope light path. Pulse
+patterns were driven via custom D/A optogenetics software written in Matlab. The
+stimulation pattern that was used during most in vivo calcium imaging experi-
+ments consisted of a single 10-ms-long pulse delivered 200 or 100 ms after stimulus
+presentation every other trial. The light intensity was adjusted to elicit essentially a
+single spike in most inhibitory neurons, and a moderate and reliable suppression of
+pyramidal neuron activity without completely suppressing the network. This
+moderate perturbation had to be adjusted to the cell type. In particular, SOM þ
+neurons required stronger light intensity to produce a signiﬁcant suppression of
+pyramidal cell responses. The absolute values for individual pulses as measured
+leaving the objective were 15 mW for PV þ and 35 mW for SOM þ interneurons.
+These values were established in early pilot experiments and were based on pre-
+vious published work14. The effect of ChR2-mediated stimulation was consistent
+from one experiment to the next so we could keep the same parameters without
+recalibrating the laser for each experiment (see Supplementary Fig. 7). Note that
+the effect was systematically assessed after the experiment by examining the
+average response suppression. To probe PV þ and SOM þ effects, we used single
+pulse activation of these cells via ChR2 at variable time points relative to the onset
+of visual stimulation.
+Visual stimulation protocols. Visual stimuli were presented on a 2300 1080p LCD
+monitor (Dell) using the software Psychtoolbox-3 on a Windows 7 computer (Dell
+Precision) with a GeForce 8800 GTS 640 MB graphic card (PNY). The sparse noise
+stimulus ensemble consisted of black or white squares (150 pixels corresponding to
+7.5 in the mouse visual ﬁeld) displayed at full contrast on a grey background. Each
+square was presented sequentially in a random location (7 by 12 grid) on the screen
+for 200 ms followed by a 300 ms duration of background grey before the next
+stimulation (comprising 2 Hz sparse noise). The location of each square followed a
+pseudo-random sequence ensuring that two consecutive squares were at least three
+nodes away from each other to avoid spurious second-order interactions. The
+polarity of the square (ON or OFF) was random for each square. For experiments
+including optogenetic stimulation of speciﬁc inhibitory neurons, a pulse of blue
+light was presented every two frames. For the full-ﬁeld ﬂashes stimulus ensemble, a
+screen of uniform intensity was displayed for 200 ms followed by a 800 ms duration
+of background grey (1 Hz). The screen luminance was randomly drawn from 31
+values around the background grey ranging from 0 to 100% positive or negative
+contrast with a maximum luminance of 250 cd m  2. Drifting gratings were dis-
+played with a temporal frequency of 2 Hz and a spatial frequency of 0.04 cycles per
+degree for 36 evenly spaced directions. For each direction, a second of blank screen
+was followed by 3 s of visual stimulation. Each visual protocol lasted for 40–60 min
+for calcium imaging and 20–60 min for targeted cell-attached recording.
+Data processing. Spike timing was extracted from the voltage traces using a
+simple threshold and examining the waveform distribution to ensure that only one
+cell was recorded. The ﬁring rate over time was estimated by binning each spike
+train with a 20 ms time bin, matching the calcium imaging sampling frequency for
+the sake of comparability.
+The local baseline average calcium signal was ﬁrst subtracted from the raw
+calcium traces acquired at 50 Hz sampling frequency as previously described14 to
+obtain the relative signal df/f. The resulting signal was high-pass ﬁltered to avoid
+very slow drift and further deconvolved using a fast non-parametrical algorithm36
+to extract a signal proportional to the neuron’s actual ﬁring rate at the sampling
+frequency. A threshold was then applied to the estimated rate to remove part of the
+noise. For experiments where 10-ms-long pulses of blue light were used to activate
+ARTICLE
+NATURE COMMUNICATIONS | DOI: 10.1038/ncomms6689
+12
+NATURE COMMUNICATIONS | 5:5689 | DOI: 10.1038/ncomms6689 | www.nature.com/naturecommunications
+& 2014 Macmillan Publishers Limited. All rights reserved.
+
+===== PDF PAGE 13 =====
+speciﬁc inhibitory neurons, the calcium signal was saturated during the stimulation
+time. This artefact was removed from the traces and a linear interpolation was used
+to reconstruct the calcium signal during the stimulation time bin. Because of the
+slow calcium time constant and the high-sampling frequency, this did not degrade
+the signal quality.
+Data analysis. The estimated relative rate as well as the ﬁring rate estimated from
+cell-attached recordings was used to compute neuronal functional properties in
+response to sparse noise stimuli or full-ﬁeld ﬂashes. By averaging these signals
+following the stimulus onset for each stimulus location and polarity (sparse noise)
+or luminance (full-ﬁeld ﬂashes), the spatio-temporal receptive ﬁeld or the lumi-
+nance response curve of each recorded neuron could be reconstructed.
+To compute the baseline response distribution, we imaged the spontaneous
+activity of neurons during a 2-min blank screen. We also included imaging data
+corresponding to stimuli that did not elicit any signiﬁcant responses (that is,
+stimuli that were far from receptive ﬁelds). We computed the Z-score by
+subtracting the mean value of the baseline distribution from evoked responses and
+dividing the result by the s.d. of the baseline distribution.
+The time course of ON or OFF responses was obtained by averaging spatio-
+temporal receptive ﬁelds over all possible stimulus locations and was further
+smoothened. A similar baseline distribution was obtained to compute a Z-score
+over time. A neuron sensory response was considered signiﬁcant if the temporal
+proﬁle of its Z-score crosses the threshold of 3. Response onset was deﬁned as the
+time point where the response crossed the signiﬁcance threshold (Z-score 43).
+The spatial receptive ﬁeld was obtained by averaging the spatio-temporal receptive
+ﬁelds over times where the response was signiﬁcantly higher than the baseline
+activity (Z-score 43). The result was then interpolated and ﬁltered with a Gaussian
+kernel. Here again, a baseline distribution was used to obtain Z-score values. For
+experiments where comparisons were made between a control condition and
+activation of speciﬁc inhibitory neurons, a time window following the blue light
+pulse was used where the response was signiﬁcant compared with baseline and
+signiﬁcantly suppressed compared with control. The suppression slope was
+obtained by ﬁtting a line to the comparison plot. Suppression strength was
+computed by examining the normalized difference of values between the two
+conditions relative to the maximum control value.
+Statistical tests. To assess the signiﬁcance of our results we used paired Wilcoxon
+signed-rank tests when the same neuron populations were compared between two
+conditions (in presence or absence of ChR2 stimulation), unpaired t-tests when
+populations of different sizes were compared and ANOVA when more than two
+unpaired distributions were compared. All tests used in this paper were two-sided.
+No blinding or randomization of samples was done in any of our analyses. For each
+experiment and ﬁgure, enough data were collected to guarantee the validity of our
+statistical test. This was generally reﬂected by the unimodality of population dis-
+tributions with low s.d. We also performed the normality test and our samples
+could be described by a Gaussian distribution whenever we used a t-test to assess
+the signiﬁcance of our results. Variances were computed for all groups and were
+generally in the same order of magnitude. When this was not the case, as for
+instance when comparing PV þ and SOM þ response properties, any statistical
+test resulted in highly signiﬁcant differences.
+Network model. The network model was similar in overall structure to one
+recently described46. It consisted of 10,000 neurons randomly distributed in a two-
+dimensional layer. A total of 8,000 of these neurons were excitatory neurons, 1,000
+neurons were PV þ neurons and the remaining 1,000 were SOM þ neurons.
+All neurons were modelled as conductance-based leaky integrate-and-ﬁre
+neurons with a membrane time constant tm ¼ 25 ms, a leak conductance of
+Gleak ¼ 10 nS and a resting membrane potential of Vrest ¼  70 mV. The neuron
+emitted a spike whenever the membrane potential crossed the threshold
+Vth ¼  40 mV after which the voltage was artiﬁcially clamped at a reset membrane
+value Vreset ¼  65 mV for a refractory period of tref ¼ 5 ms. All the values used in
+the model were in the physiological range53,54.
+Synaptic interactions were modelled as instantaneous increases in excitatory
+(pyramidal cells) or inhibitory (PV þ and SOM þ neuron) conductances followed
+by exponential decays with time constants texc ¼ 6 ms and tinh ¼ 20 ms. The
+reversal potentials of the corresponding receptors were Eexc ¼  0 mV and
+Einh ¼  75 mV. The synaptic weights were wexc ¼ 1.5 nS for excitatory synapses
+and winh ¼ 30 nS for inhibitory synapses. The equations for the network dynamics
+were:
+tm
+dVi
+dt ¼ Vrest  Vi
+ð
+Þ þ gPC Eexc  Vi
+ð
+Þ þ gPV þ Einh  Vi
+ð
+Þ þ gSOM þ Einh  Vi
+ð
+Þ
+texc
+dgPC
+dt
+¼  gPC þ wexcSPCðtÞ
+tinh
+dgPV þ
+dt
+¼  gPV þ þ winhSPV þ ðtÞ
+tinh
+dgSOM þ
+dt
+¼  gSOM þ þ winhSSOM þ ðtÞ
+where iA[1  10,000], gPC, gPV þ and gSOM þ are expressed in unit of leak
+conductances and SPC, SPV þ and SSOM þ are synaptic inputs from pre-synaptic PC,
+PV þ and SOM þ cells impinging on the post-synaptic neuron i.
+All neurons in the network had connections with 2% of the rest of the network
+that were drawn randomly from a distance-dependent distribution. Pyramidal cells
+and PV þ neurons received inputs and formed projections following a normal
+distribution with a s.d. of 0.1 mm compared with the network length of 2 mm,
+whereas SOM þ neurons received inputs from pyramidal cells exclusively and
+uniformly from the network with four times as many connections compared with
+other cell types. They also projected their connections to pyramidal cells and PV þ
+cells with a distance-dependent connectivity rule described by a normal distribution
+with a s.d. of 0.1mm. Periodic boundary conditions were assumed for all connections.
+Interaction delays were also distance dependent with a velocity of 0.1 mm ms 1.
+To maintain an ongoing regime, all neurons were fed with Poisson processes
+with an average ﬁring rate of 40 spikes per second and synaptic weights
+wext
+PC ¼ 12nS, wext
+PV þ ¼ 15nS and wext
+SOM þ ¼ 7:5nS. As SOM þ cells did not receive
+any inhibitory inputs, an additional Poisson input was added to these cells with an
+average ﬁring rate of 40 spikes per second and synaptic weight of 1.5 nS.
+To mimic the sensory input, a two-dimensional external layer projected onto
+the pyramidal and PV þ neurons of the recurrent network with a 2% density and
+following a distance-dependent Gaussian distribution with a s.d. of 0.2 mm. To
+simulate the sparse noise condition, a small Gaussian pattern with spatial s.d. of
+0.2 mm, duration of 50 ms and peak average ﬁring rate of 2,000 spikes per second
+was applied in the external layer. Full-ﬁeld ﬂashes were simulated by increasing the
+spatial s.d. to inﬁnity (uniform distribution) and changing the external drive from 0
+to 1,000 spikes per second to mimic different luminances. The sensory stimulation
+was repeated every 500 ms. To mimic channelrhodopsin activation of various
+inhibitory neuron types, a ﬁxed conductance was injected to all neurons
+simultaneously at the onset of the sensory response. Values used for PV þ neurons
+were 20 or 30 nS, and for SOM þ neurons 40 or 50 nS.
+All simulations were performed using the NEST simulator55 and the PyNN
+interface56.
+References
+1.
+Silver, R. A. Neuronal arithmetic. Nat. Rev. Neurosci. 11, 474–489 (2010).
+2.
+Haider, B. & McCormick, D. A. Rapid neocortical dynamics: cellular and
+network mechanisms. Neuron 62, 171–189 (2009).
+3.
+Carandini, M. & Heeger, D. Normalization as a canonical neural computation.
+Nat. Rev. Neurosci. 13, 51–62 (2012).
+4.
+Katzner, S., Busse, L. & Carandini, M. GABAA inhibition controls response
+gain in visual cortex. J. Neurosci. 31, 5931–5941 (2011).
+5.
+Salinas, E. & Thier, P. Gain modulation: a major computational principle of the
+central nervous system. Neuron 27, 15–21 (2000).
+6.
+McAdams, C. J. & Maunsell, J. H. Effects of attention on orientation-tuning
+functions of single neurons in macaque cortical area V4. J. Neurosci. 19,
+431–441 (1999).
+7.
+Treue, S. & Martı´nez Trujillo, J. C. Feature-based attention inﬂuences motion
+processing gain in macaque visual cortex. Nature 399, 575–579 (1999).
+8.
+Reynolds, J. H. & Heeger, D. J. The normalization model of attention. Neuron
+61, 168–185 (2009).
+9.
+Somers, D., Nelson, S. & Sur, M. An emergent model of orientation selectivity
+in cat visual cortical simple cells. J. Neurosci. 75, 5448–5465 (1995).
+10. Anderson, J. S. The contribution of noise to contrast invariance of orientation
+tuning in cat visual cortex. Science 290, 1968–1972 (2000).
+11. Ohshiro, T., Angelaki, D. E. & DeAngelis, G. C. A normalization model of
+multisensory integration. Nat. Neurosci. 14, 775–782 (2011).
+12. Louie, K. & Glimcher, P. W. Separating value from choice: delay discounting
+activity in the lateral intraparietal area. J. Neurosci. 30, 5498–5507 (2010).
+13. Ben-Yishai, R., Bar-Or, R. L. & Sompolinsky, H. Theory of orientation tuning in
+visual cortex. Proc. Natl Acad. Sci. USA 92, 3844–3848 (1995).
+14. Wilson, N. R., Runyan, C. a., Wang, F. L. & Sur, M. Division and subtraction by
+distinct cortical inhibitory networks in vivo. Nature 488, 1–6 (2012).
+15. Lee, S.-H. et al. Activation of speciﬁc interneurons improves V1 feature
+selectivity and visual perception. Nature 488, 379–383 (2012).
+16. Doiron, B., Longtin, A., Berman, N. & Maler, L. Subtractive and divisive
+inhibition: effect of voltage-dependent inhibitory conductances and noise.
+Neural Comput. 13, 227–248 (2001).
+17. Holt, G. R. & Koch, C. Shunting inhibition does not have a divisive effect on
+ﬁring rates. Neural Comput. 9, 1001–1013 (1997).
+18. Mitchell, S. J. & Silver, R. A. Shunting inhibition modulates neuronal gain
+during synaptic excitation. Neuron 38, 433–445 (2003).
+19. Murphy, B. K. & Miller, K. D. Multiplicative gain changes are induced by
+excitation or inhibition alone. J. Neurosci. 23, 10040–10051 (2003).
+20. Ascoli, G. a. et al. Petilla terminology: nomenclature of features of GABAergic
+interneurons of the cerebral cortex. Nat. Rev. Neurosci. 9, 557–568 (2008).
+21. Markram, H. et al. Interneurons of the neocortical inhibitory system. Nat. Rev.
+Neurosci. 5, 793–807 (2004).
+22. Moore, C. I., Carlen, M., Knoblich, U. & Cardin, J. a. Neocortical interneurons:
+from diversity, strength. Cell 142, 189–193 (2010).
+NATURE COMMUNICATIONS | DOI: 10.1038/ncomms6689
+ARTICLE
+NATURE COMMUNICATIONS | 5:5689 | DOI: 10.1038/ncomms6689 | www.nature.com/naturecommunications
+13
+& 2014 Macmillan Publishers Limited. All rights reserved.
+
+===== PDF PAGE 14 =====
+23. Petersen, C. C. H. & Crochet, S. Synaptic computation and sensory processing
+in neocortical layer 2/3. Neuron 78, 28–48 (2013).
+24. Alitto, H. J. & Dan, Y. Function of inhibition in visual cortical processing. Curr.
+Opin. Neurobiol. 20, 340–346 (2010).
+25. Pfeffer, C. K., Xue, M., He, M., Huang, Z. J. & Scanziani, M. Inhibition of
+inhibition in visual cortex: the logic of connections between molecularly
+distinct interneurons. Nat. Neurosci. 16, 1068–1076 (2013).
+26. Atallah, B., Bruns, W., Carandini, M. & Scanziani, M. Parvalbumin-expressing
+interneurons linearly transform cortical responses to visual stimuli. Neuron 73,
+159–170 (2012).
+27. Lee, S.-H., Kwan, A. C. & Dan, Y. Interneuron subtypes and orientation tuning.
+Nature 508, E1–E2 (2014).
+28. El-Boustani, S., Wilson, N. R., Runyan, C. a. & Sur, M. El-Boustani et al. reply.
+Nature 508, E3–E4 (2014).
+29. Kulik, A. et al. Compartment-dependent colocalization of Kir3.2-containing
+K þ channels and GABAB receptors in hippocampal pyramidal cells.
+J. Neurosci. 26, 4289–4297 (2006).
+30. Nusser, Z., Sieghart, W., Benke, D., Fritschy, J. M. & Somogyi, P. Differential
+synaptic localization of two major gamma-aminobutyric acid type A receptor
+alpha subunits on hippocampal pyramidal cells. Proc. Natl Acad. Sci. USA 93,
+11939–11944 (1996).
+31. Chance, F. S., Abbott, L. F. & Reyes, A. D. Gain modulation from background
+synaptic input. Neuron 35, 773–782 (2002).
+32. Abbott, L. F. & Chance, F. S. Drivers and modulators from push-pull and
+balanced synaptic input. Prog. Brain Res. 149, 147–155 (2005).
+33. Ma, W. et al. Visual representations by cortical somatostatin inhibitory
+neurons-selective but with weak and delayed responses. J. Neurosci. 30,
+14371–14379 (2010).
+34. Adesnik, H., Bruns, W., Taniguchi, H., Huang, Z. J. & Scanziani, M. A neural
+circuit for spatial summation in visual cortex. Nature 490, 226–231 (2012).
+35. Liu, B. et al. Visual receptive ﬁeld structure of cortical inhibitory neurons revealed
+by two-photon imaging guided recording. J. Neurosci. 29, 10520–10532 (2009).
+36. Vogelstein, J. T. et al. Fast nonnegative deconvolution for spike train inference
+from population calcium imaging. J. Neurophysiol. 104, 3691–3704 (2010).
+37. Yeh, C.-I., Xing, D., Williams, P. E. & Shapley, R. M. Stimulus ensemble and
+cortical layer determine V1 spatial receptive ﬁelds. Proc. Natl Acad. Sci. USA
+106, 14652–14657 (2009).
+38. Bonin, V., Histed, M. H., Yurgenson, S. & Reid, R. C. Local diversity and ﬁne-
+scale organization of receptive ﬁelds in mouse visual cortex. J. Neurosci. 31,
+18506–18521 (2011).
+39. Xu, H., Jeong, H.-Y., Tremblay, R. & Rudy, B. Neocortical somatostatin-
+expressing GABAergic interneurons disinhibit the thalamorecipient layer 4.
+Neuron 77, 155–167 (2013).
+40. Cottam, J. C. H., Smith, S. L. & Ha¨usser, M. Target-speciﬁc effects of
+somatostatin-expressing interneurons on neocortical visual processing.
+J. Neurosci. 33, 19567–19578 (2013).
+41. Cardin, J. a. et al. Driving fast-spiking cells induces gamma rhythm and
+controls sensory responses. Nature 459, 663–667 (2009).
+42. Haider, B., Ha¨usser, M. & Carandini, M. Inhibition dominates sensory
+responses in the awake cortex. Nature 493, 97–100 (2013).
+43. Polack, P.-O., Friedman, J. & Golshani, P. Cellular mechanisms of brain state-
+dependent gain modulation in visual cortex. Nat. Neurosci. 16, 1331–1339 (2013).
+44. Pi, H.-J. et al. Cortical interneurons that specialize in disinhibitory control.
+Nature 503, 521–524 (2013).
+45. Fu, Y. et al. A cortical circuit for gain control by behavioral state. Cell 156,
+1139–1152 (2014).
+46. Yger, P., El Boustani, S., Destexhe, A. & Fre´gnac, Y. Topologically invariant
+macroscopic statistics in balanced networks of conductance-based integrate-
+and-ﬁre neurons. J. Comput. Neurosci. 31, 229–245 (2011).
+47. Softky, W. R. & Koch, C. The highly irregular ﬁring of cortical cells is inconsistent
+with temporal integration of random EPSPs. J. Neurosci. 13, 334–350 (1993).
+48. Herman, A. M., Huang, L., Murphey, D. K., Garcia, I. & Arenkiel, B. R. Cell
+type-speciﬁc and time-dependent light exposure contribute to silencing in
+neurons expressing Channelrhodopsin-2. Elife 3, e01481–e01481 (2014).
+49. Atallah, B. V., Scanziani, M. & Carandini, M. Atallah et al. reply. Nature 508,
+E3 (2014).
+50. Arroyo, S., Bennett, C., Aziz, D., Brown, S. P. & Hestrin, S. Prolonged
+disynaptic inhibition in the cortex mediated by slow, non-a7 nicotinic
+excitation of a speciﬁc subset of cortical interneurons. J. Neurosci. 32,
+3859–3864 (2012).
+51. Gentet, L. J. et al. Unique functional properties of somatostatin-expressing
+GABAergic neurons in mouse barrel cortex. Nat. Neurosci. 15, 1–7 (2012).
+52. Chen, T.-W. et al. Ultrasensitive ﬂuorescent proteins for imaging neuronal
+activity. Nature 499, 295–300 (2013).
+53. Vogels, T. P. & Abbott, L. F. Signal propagation and logic gating in networks of
+integrate-and-ﬁre neurons. J. Neurosci. 25, 10786–10795 (2005).
+54. Kumar, A., Schrader, S., Aertsen, A. & Rotter, S. The high-conductance state of
+cortical networks. Neural Comput. 20, 1–43 (2008).
+55. Diesmann, M. & Gewaltig, M.-O. in Forschung und wisschenschaftliches
+Rechnen, Beitra¨ge zum Heinz-Billing-Preis 2001 Vol. 58 (eds Plesser, T. &
+Macho, V.) 43–70 (2002).
+56. Davison, A. P. et al. PyNN: a common interface for neuronal network
+simulators. Front. Neuroinform. 2, 11 (2008).
+Acknowledgements
+We thank Caroline A. Runyan and Nathan R. Wilson for their help with experiments,
+Travis Emery for his continuous assistance, Chuong Le, Jonathan Woodson, Jorge Castro
+Garcia, Rodrigo Garcia and Jacque Ip for their help with the immunohistochemistry and
+viral injection. We thank Michael J. Goard for developing the awake preparation. We
+thank Pierre Yger for his important assistance with network models and PyNN. We also
+thank Rajeev Rikhye for his help with statistical tests and comments on the manuscript.
+We thank Vivek Jayaraman, Rex A. Kerr, Douglas S. Kim, Loren L. Looger and Karel
+Svoboda from the GENIE Project, Janelia Farm Research Campus, Howard Hughes
+Medical Institute (HHMI) for the distribution of GCaMP6. This work was supported by
+Marie Curie postdoctoral fellowship FP7-PEOPLE-2010-IOF (S.E.B.) and grants from
+the NIH (EY007023 and NS090473) and the Simons Foundation (M.S.).
+Author contributions
+S.E.B. conceived experiments, performed surgeries and viral injections, carried out in vivo
+experiments, performed analysis and modelling work. M.S. conceived experiments and
+contributed to analysis of experiments. S.E.B and M.S. wrote the paper.
+Additional information
+Supplementary Information accompanies this paper at http://www.nature.com/
+naturecommunications
+Competing ﬁnancial interests: The authors declare no competing ﬁnancial interests.
+Reprints and permission information is available online at http://npg.nature.com/
+reprintsandpermissions/
+How to cite this article: El-Boustani, S. and Sur, M. Response-dependent dynamics
+of cell-speciﬁc inhibition in cortical networks in vivo. Nat. Commun. 5:5689
+doi: 10.1038/ncomms6689 (2014).
+This work is licensed under a Creative Commons Attribution 4.0
+International License. The images or other third party material in this
+article are included in the article’s Creative Commons license, unless indicated otherwise
+in the credit line; if the material is not included under the Creative Commons license,
+users will need to obtain permission from the license holder to reproduce the material.
+To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/
+ARTICLE
+NATURE COMMUNICATIONS | DOI: 10.1038/ncomms6689
+14
+NATURE COMMUNICATIONS | 5:5689 | DOI: 10.1038/ncomms6689 | www.nature.com/naturecommunications
+& 2014 Macmillan Publishers Limited. All rights reserved.

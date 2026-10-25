@@ -1,0 +1,339 @@
+{
+  "schema": "jzks-pdf-viewer/v1",
+  "paper": {
+    "title": "A disinhibitory circuit motif and flexible information routing in the brain",
+    "authors": "Xiao-Jing Wang, Guangyu Robert Yang",
+    "doi": "10.1016/j.conb.2018.01.002"
+  },
+  "summary": "这是一篇观点性综述，主题是皮层中“通路门控（pathway gating）”的电路实现。作者把问题定位在：一个皮层区同时接收来自数十个脑区的输入，需要一种机制把信息灵活地送到正确的位置和时间。他们主张的机制是去抑制（disinhibition）motif——由三个不重叠的中间神经元亚类构成：PV+ 靶向胞体周并控制锥体细胞的放电输出，SST+ 靶向树突因而控制其输入，VIP+ 优先靶向 SST 细胞，VIP 激活即抑制 SST，从而去抑制锥体细胞树突。作者回顾该 motif 的来源（2004 年工作记忆局部回路模型及其三条解剖学依据与后续验证），指出其运作依赖层次与状态：S1 L2/3 中运动伴随 VIP 升高与 SST 降低，而深层在胡须运动时 SST 反而升高。作者随后给出该 motif 实现通路门控必须满足的四个条件——树突反应非线性、不同通路的输入在树突树上分离、SST 具备分支特异控制能力、兴奋簇与去抑制对齐——并明确指出其中“不同通路的突触簇分离”目前仍缺乏直接实验证据。关键的模型结论是 Yang 等 2016 的计算工作表明无需精细剪裁的连接：随机连接加上 SST 的随机激活/失活即可产生分支特异的抑制/去抑制，因为 SST 到树突的连接相对稀疏。作者还论证去抑制相比直接兴奋的优势：默认状态下树突被抑制、动态范围更宽，且去抑制是许可性的，控制输入本身不能激活树突。综述最后对比了其他门控机制（E/I 平衡、同步性、输出门控、递归选择、皮层下结构），并给出决定性检验：应在依赖灵活路由的任务中，对 VIP 与 SST 做细胞类型特异的记录与操控。",
+  "steps": [
+    {
+      "id": 1,
+      "title": "作者想解决什么问题",
+      "paragraphs": [
+        {
+          "title": "把路由问题与细胞类型分类接上",
+          "text": "作者的问题是功能层面的：在新皮层中每个区都与数十个脑区双向连接，信息如何在需要时被送到正确的位置与时间，即所谓“通路门控”。他们的切入点是近年两条线索的交汇——一是猕猴与小鼠高质量的有向加权脑区间连接数据，使全局皮层动力学模型成为可能；二是 GABAergic 中间神经元分类学在遗传工具推动下的细化，使“哪类细胞以何为靶标”成为可查证的问题。作者由此把抽象的路由需求落到一组具体细胞类型上：PV+ 控制输出、SST+ 控制输入、VIP+ 通过抑制 SST 实现去抑制。这一框架的价值在于，它把“门控”从功能描述转成可以逐条检验的连接关系，也给本仓库其他文献提供了共同的电路语言。",
+          "layer": "author",
+          "refs": [
+            "E01",
+            "E02"
+          ]
+        },
+        {
+          "title": "缺口在哪里，本文补什么",
+          "text": "作者明确指出既有工作的空白：去抑制 motif 已在多个皮层区被观察到，但其功能定位仍停留在工作记忆与注意的假设上；把它推广到多脑区系统的通路路由，需要先说清该 motif 在何种条件下才真正实现门控。本文补上的正是这一段——列出四项必要条件，并汇总支持与反对这些条件的证据，同时指出哪一条仍缺直接实验证据。作者并未声称自己提供新数据，其贡献是判定标准与证据的对应关系，以及指出下一步该做什么实验。这种写法对本仓库的意义在于：任何声称“本模型实现了通路门控”的建模工作，都应对照这四项条件逐条说明自己的假设落在哪里。",
+          "layer": "author",
+          "refs": [
+            "E03",
+            "E04"
+          ]
+        },
+        {
+          "title": "可检验预测与削弱条件",
+          "text": "把主张写成可检验形式：若去抑制 motif 实现通路门控，则在同一皮层区内，应当存在按通路组织的树突输入簇，且对这些簇的去抑制应当按通路选择性改变下游响应。削弱条件有三条。其一，若在同一实验中把两条通路的输入人为打散到同一批树突分支，而门控选择性不变，则门控并非依赖输入的空间分离，作者列出的第二项条件不成立。其二，若抑制 SST 而非操纵 VIP 后门控选择性不变，则去抑制链条不是必要的，机制可能只是普通的树突抑制。其三，若在需要灵活路由的任务中操控 VIP 或 SST 的效应远小于操控锥体细胞，则作者提出的“控制信号作用于中间神经元而非锥体细胞”这一预测被削弱。",
+          "layer": "analysis",
+          "refs": [
+            "E05",
+            "E15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "用了什么方法",
+      "paragraphs": [
+        {
+          "title": "证据组织的方式",
+          "text": "本文是观点性综述，方法学信息集中在两点：一是全文明确标注证据来源的引用编号，正文约 68 条引用并在文献列表中附有重点标注（如标记 Yang 等 2016 与 Jiang 等 2015 为“outstanding interests”）；二是把尚未有实验支持的部分显式标出，例如直接支持不同通路突触簇分离的实验证据仍然缺乏、输出门控等待细胞类型特异的连接组证据、皮层下门控缺乏回路级支持。这种“把缺口写进正文而不是留给读者推断”的做法，使读者可以判断每条主张的证据等级。按综述类型应当检查的环节，本文多数未报告：检索式、纳入排除标准、纳入研究数量、对冲突证据的系统处理。",
+          "layer": "author",
+          "refs": [
+            "E04",
+            "E11",
+            "E12"
+          ]
+        },
+        {
+          "title": "分析风险：分类学与证据强度的落差",
+          "text": "需要注意三类分析风险。第一，细胞类型命名在不断修订，本文自己指出 PV、CB、CR 在猕猴中重叠不明显，而在小鼠中 PV/SST/VIP 才是更好的非重叠标记，并引用 Wang 等的原话强调三类应按突触靶标而非钙结合蛋白表达来理解——这意味着以分子标记为基础的文献结论在换物种或换标记时未必可直接搬用。第二，本文的多数正向证据是计算模型或单一实验室的记录，若干关键结论（如运动对 VIP/SST 活动的影响方向）本身在不同研究中方向相反，本文以引用冲突标注的方式处理，但未系统汇总。第三，引用文献的引用编号本身带有作者选择，本文的“大量证据支持”不能等同于独立可重复的证据量。",
+          "layer": "analysis",
+          "refs": [
+            "E03",
+            "E08",
+            "E11"
+          ]
+        },
+        {
+          "title": "对建模工作的直接方法学含义",
+          "text": "本文的方法价值对建模有具体含义。作者转述 Yang 等 2016 的结果时给出一个反直觉但可操作的结论：实现分支特异去抑制并不需要精细剪裁 SST→锥体细胞与 VIP→SST 的连接，随机连接加随机激活即足够，原因是 SST 到树突的连接相对神经元间稠密连接稀疏得多。这意味着建模者不必为“特异性”过度设计连接矩阵，但必须复现稀疏度这一关键量级。同时，作者引用的兴奋—去抑制对齐可通过突触可塑性自发产生的机制指出：被去抑制（因而去极化）的分支上的兴奋突触倾向增强，靶向超极化分支的突触倾向被压抑；而 SST→树突的连接本身还受抑制性可塑性调节，因此对齐可以被持续改进。这些是可直接写进模型的机制。",
+          "layer": "analysis",
+          "refs": [
+            "E06",
+            "E09"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "得到了什么结果",
+      "paragraphs": [
+        {
+          "title": "motif 的解剖学基础与行为学验证",
+          "text": "作者梳理了该 motif 的证据链。起源是 2004 年的工作记忆局部回路模型，其三条解剖学依据是：VIP 或钙网蛋白（CR）标记的细胞优先靶向其他中间神经元而非锥体细胞；VIP/CR 细胞优先靶向表达钙结合蛋白（CB）或 SST 的树突靶向中间神经元而非 PV 细胞；在工作记忆中居核心地位的前额叶皮层中 CB 与 CR 中间神经元占多数。该模型给出的两项预测后来得到支持：树突靶向中间神经元有显著自发放电，且呈“反常调谐”（对特定刺激特征活动下降），后者由猕猴行为记录给出；更直接的是小鼠研究显示背内侧额叶中分别激活 VIP 或 SST 神经元会增强或损害工作记忆保持与行为表现。作者强调模型原始作者的自述立场：三类细胞应按突触靶标而非钙结合蛋白表达解释。",
+          "layer": "author",
+          "refs": [
+            "E02",
+            "E04"
+          ]
+        },
+        {
+          "title": "四项必要条件与模型的关键结论",
+          "text": "作者逐条列出 motif 实现通路门控所需的条件与现有证据：其一，树突反应须非线性，否则 SST 介导的树突抑制及其解除影响微弱——由树突 NMDA 与钙尖峰受局部抑制微回路紧密调控的证据支持；其二，不同通路的输入须分离到树突树的不同部分——以 Wilson 等在 V1 显示的同调谐突触聚集、Cichon 与 Gan 显示的不同运动任务激活不同树突分支且灭活 SST 会大幅削弱分支特异性为支撑，但作者明确指出通路特异突触聚集的直接实验证据仍然缺乏；其三，SST 须能对单个分支做选择性控制；其四，不同通路的兴奋簇与分支特异去抑制须对齐，才能只对目标通路开门。随后作者转述 Yang 等 2016 的模型结论：随机连接加随机 SST 激活/失活已足以提供分支特异的抑制与去抑制，因为 SST 到锥体细胞树突的连接远比神经元间稠密连接稀疏；而兴奋与去抑制的对齐可由突触可塑性自然产生。",
+          "layer": "author",
+          "refs": [
+            "E05",
+            "E06",
+            "E07"
+          ]
+        },
+        {
+          "title": "计算优势、梯度证据与其他门控机制",
+          "text": "作者给出两条去抑制相对直接兴奋的计算优势：直接兴奋式门控会去极化树突膜、压缩其信息特异响应的动态范围，而去抑制式门控默认使树树枝突处于抑制状态，从而在超极化到去极化之间保留更宽的动态范围；去抑制还是许可性的（permissive）——去抑制本身不能激活树突，而若用直接树突或胞体兴奋实现门控，控制输入可能过强而产生虚假响应。梯度证据方面，作者引用 Kim 等的全小鼠脑细胞计数，报告 SST 与 PV 的平衡在全皮层有超过 7 倍的变化，在初级躯体感觉与运动皮层 SST 少于 PV，而在前边缘等高阶区 SST 数量是 PV 的 3 到 5 倍。其他门控机制则被逐一对照：E/I 平衡需被打断才能“门入”、同步性门控、输出门控（小鼠前边缘皮层中轴突起始段靶向的吊灯细胞特异抑制投射杏仁核而不抑制投射对侧皮层的锥体细胞）、递归门控（引用 Mante 等的任务，Yang 等显示同样的任务可用中等程度的输入门控完成），以及丘脑与基底节参与的皮层下门控——作者明确说后者缺乏回路级实验支持。",
+          "layer": "author",
+          "refs": [
+            "E09",
+            "E10",
+            "E11",
+            "E13"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "结果能否支持结论",
+      "paragraphs": [
+        {
+          "title": "一致的部分",
+          "text": "作者的结论与其所引证据在四处一致。其一，motif 的存在与三类细胞的靶标分工有解剖学、单细胞记录与光遗传操控三层证据支持，且作者引用了模型原始作者对其解释边界的说明，态度与证据强度匹配。其二，四项条件中的三条（树突非线性、分支特异控制、稀疏连接足以产生分支特异性）有实验或计算支持，且作者对每条都注明了证据类型。其三，形态学梯度（SST/PV 比）与“关联区需要更多输入门控”的推论之间，作者用“提示”“表明”这类措辞并同时给出跨脑区方向相反的观察（运动在 V1 与 S1 增强兴奋神经元、在 A1 抑制），没有把梯度当作普遍因果。其四，作者关于“现有证据只支持合理性而非已证实机制”的自我定位，在正文的措辞（plausible、in principle、suggest）与结论段的措辞一致。",
+          "layer": "analysis",
+          "refs": [
+            "E03",
+            "E06",
+            "E10"
+          ]
+        },
+        {
+          "title": "作者比证据更强、范围更窄与证据不足",
+          "text": "第一，作者在结论处仍用了较强的措辞——“可以为皮层内的信息流路由提供合理的回路基底”，但其最强正面证据是 Yang 等 2016 的计算模型，而该模型的一个前提条件（通路特异输入簇分离）恰好是作者自己承认缺乏直接实验证据的那一条，因此“合理”成立、“已确立”不成立。第二，范围不同之处：作者主要在鼠标皮层与猕猴解剖上取证，把 motif 推广到人类皮层时文中只提到转录组分类工具的预期作用，并未提供人类证据。第三，证据不足之处：输出门控的 chandelier 细胞分析被作者明确标注为等待细胞类型特异连接证据；皮层下门控被明确标注为缺乏回路级支持；运动对不同中间神经元活动的影响方向在所引研究之间并不一致，作者以脚注式标注处理冲突但没有系统结论。第四，“disinhibition motif”本身是三个类群的统称，作者引用原模型作者的告诫提醒按靶标而非标记物理解，这一限定实际上限制了把结论按分子标记推广的做法。",
+          "layer": "analysis",
+          "refs": [
+            "E11",
+            "E12",
+            "E14"
+          ]
+        },
+        {
+          "title": "最强证据与最薄弱连接",
+          "text": "最强证据是稀疏连接这一条：它把“特异性”从精细连接设计转为可由连接密度自然涌现的性质，既解释了该机制在生物学上为何可能，又直接给出可建模的量，逻辑链完整且不依赖尚未证实的假设。最薄弱的连接是第三项与第四项条件的衔接：作者引用 Cichon 与 Gan 证明 SST 灭活会削弱分支特异性，这是相关而非因果的机制归因；而兴奋簇与去抑制的对齐在本文中主要依赖 Yang 等模型中的可塑性假设与一项“树突去抑制对突触增强至关重要”的在体工作，二者之间尚无直接测量。把这些证据与本文的动机连起来看，最强证据与最薄弱连接恰好落在同一个环节：作者提出的核心预测（控制信号作用于中间神经元）在实验上尚未被直接检验，因此本综述应当被当作待检验假说的高质量论证，而不是机制已确立的证据。",
+          "layer": "analysis",
+          "refs": [
+            "E05",
+            "E06",
+            "E15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "有哪些局限与启发",
+      "paragraphs": [
+        {
+          "title": "替代解释与区分检验",
+          "text": "替代解释一：分支特异的去抑制可能只是树突抑制的空间不均匀，而非真正的通路门控——若树突簇按随机方式分布而反应选择性仍随抑制解除而出现，则“门控”只反映空间掩蔽。区分检验：在同一脑区记录两条通路的输入位置分布，检验其与反应选择性变化的空间对应关系；若输入位置随机而选择性依然存在，则该替代成立，作者的第二项条件被削弱。替代解释二：观察到的效应可能由 SST 被抑制后突触释放普适增加或抑制性可塑性造成，而非去抑制链路的门控。区分检验：同时测量 VIP→SST 与 SST→锥体细胞两级连接，并比较在只失活 VIP（保留 SST 抑制）与只失活 SST 两种条件下门控选择性的变化。替代解释三：作者转述的“随机连接即可产生分支特异性”可能依赖于特定的树突分支数与稀疏度参数。区分检验：扫描 SST→树突连接密度与分支数，看分支特异性在哪些参数区间出现，并与解剖报告的稀疏度对照。本文未实施任何一项检验。",
+          "layer": "analysis",
+          "refs": [
+            "E06",
+            "E07",
+            "E12"
+          ]
+        },
+        {
+          "title": "对建模与阅读文献的启发",
+          "text": "本文最值得借鉴的是把“门控”拆成四项可分别核对的条件的写法，以及对“特异性不必由精细连接设计承担”的论证。第二点对本仓库尤其有用：它意味着在构建模型时应当把注意力放在连接密度、树突分支数与抑制性可塑性这些量上，而不是把连接矩阵调成理想的选择性。第三点提醒是把机制按突触靶标而非分子标记编码：本文引用的证据里，猕猴用 CB/CR、小鼠用 SST/VIP，说明分类映射需要逐研究核对。第四点是把“输入门控、输出门控、递归选择、皮层下门控、同通路内的空间注意”分开命名，这一套区分可直接用作文献比较的维度，避免把不同机制混称为“门控”。",
+          "layer": "analysis",
+          "refs": [
+            "E04",
+            "E08",
+            "E13"
+          ]
+        },
+        {
+          "title": "引用建议与最关键的待补材料",
+          "text": "引用建议：本文适合作为“通路门控在皮层中可能由何种细胞类型与连接实现”的机制来源引用，也适合作为整理相关文献的导航。引用时必须同时保留两个限定：一是通路特异的树突输入分离缺乏直接实验证据，二是去抑制机制与递归选择等机制可以协同而非互斥，不应把它当作唯一实现途径；也不应把它与以“driver/modulator”分类为基础的文献当作同一层次的证据。最关键的待补材料有三项：其一，多脑区输入在同一皮层区树突上的空间组织，这是整条推理链的枢纽；其二，控制信号在真实任务中作用于 VIP 与 SST 而非锥体细胞的因果证据，作者把这一条明确列为决定性检验；其三，输出门控假说所需的细胞类型特异连接组数据。前两项一旦补上，本综述的论证即可从“合理”升级为“已检验”。",
+          "layer": "analysis",
+          "refs": [
+            "E05",
+            "E14",
+            "E15"
+          ]
+        }
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "id": "E01",
+      "step": 1,
+      "page": 1,
+      "title": "通路门控的问题定义",
+      "kind": "background",
+      "quote": "In the mammalian neocortex, an area typically receives inputs from, and projects to, dozens of other areas",
+      "explanation": "开篇给出问题的规模前提：每个皮层区与数十个脑区双向连接，因此需要一种机制决定信息何时流向何处，这构成全文的动机。",
+      "layer": "author"
+    },
+    {
+      "id": "E02",
+      "step": 1,
+      "page": 2,
+      "title": "去抑制 motif 的细胞构成",
+      "kind": "background",
+      "quote": "When VIP neurons are activated, they inhibit SST cells, thereby disinhibiting pyramidal dendrites",
+      "explanation": "一句话给出去抑制链条的三段结构：VIP 抑制 SST，SST 抑制锥体细胞树突，因而 VIP 活动即释放树突输入，是全篇机制的核心陈述。",
+      "layer": "author"
+    },
+    {
+      "id": "E03",
+      "step": 1,
+      "page": 3,
+      "title": "三类细胞按突触靶标而非标记物理解",
+      "kind": "method",
+      "quote": "the three interneuron types in our model should be more appropriately interpreted according to their synaptic targets",
+      "explanation": "作者引用模型原始作者的告诫，限定了细胞类型分类的解释边界，对按分子标记跨研究比较结论的做法构成直接约束。",
+      "layer": "author"
+    },
+    {
+      "id": "E04",
+      "step": 2,
+      "page": 4,
+      "title": "四项必要条件中的第一项",
+      "kind": "background",
+      "quote": "First, dendritic responses need to be nonlinear so that dendritic inhibition mediated by SST cells and its suppression would have a strong impact",
+      "explanation": "作者把机制成立的前提写成条件清单，第一项即树突非线性；这一写法使“通路门控”成为可逐条核对的命题而非笼统描述。",
+      "layer": "author"
+    },
+    {
+      "id": "E05",
+      "step": 2,
+      "page": 4,
+      "title": "关键条件仍缺直接实验证据",
+      "kind": "question",
+      "quote": "Although direct experimental evidence supporting synaptic clustering of different pathways is still lacking",
+      "explanation": "作者明确写出整条推理链中最关键的一环尚无直接证据，这是本文最应随引用一并转述的限定。",
+      "layer": "author"
+    },
+    {
+      "id": "E06",
+      "step": 3,
+      "page": 4,
+      "title": "随机连接即可产生分支特异性",
+      "kind": "result",
+      "quote": "Even random connectivity between them, together with random activation/deactivation of SST neurons, suffice to provide branch-specific inhibition/disinhibition",
+      "explanation": "这是本文最重要的机制性结论：特异性可由稀疏连接密度自然涌现，无需精细剪裁连接，直接改变建模策略。",
+      "layer": "author"
+    },
+    {
+      "id": "E07",
+      "step": 3,
+      "page": 4,
+      "title": "SST 失活削弱分支特异性",
+      "kind": "result",
+      "quote": "inactivating SST neurons drastically reduced the branch-specificity in dendritic activity",
+      "explanation": "引自 Cichon 与 Gan 的在体结果，是本文关于 SST 具备分支特异控制能力这一条件的主要实验依据，但它本身是相关而非因果的证据。",
+      "layer": "author"
+    },
+    {
+      "id": "E08",
+      "step": 3,
+      "page": 3,
+      "title": "层次与状态的方向差异",
+      "kind": "result",
+      "quote": "In contrast to L2/3, activity of SST cells in the deep layers of somatosensory cortex increases rather than decreases when mice started whisking",
+      "explanation": "同一行为状态下 SST 活动方向随层次反转，说明 motif 运作的符号不是固定常数，模型必须包含层次参数。",
+      "layer": "author"
+    },
+    {
+      "id": "E09",
+      "step": 3,
+      "page": 5,
+      "title": "去抑制的许可性优势",
+      "kind": "result",
+      "quote": "Disinhibition can not activate dendrites by itself",
+      "explanation": "去抑制不能单独激活树突，因而控制输入不会自行制造输出；这是把去抑制与直接兴奋区分开的操作性差别，也是抑制性可塑性能够改进对齐的前提。",
+      "layer": "author"
+    },
+    {
+      "id": "E10",
+      "step": 3,
+      "page": 5,
+      "title": "SST/PV 梯度的量化",
+      "kind": "result",
+      "quote": "there is a more than 7-times change in the balance between SST and PV neurons across the cortex",
+      "explanation": "引自 Kim 等的全脑细胞计数，是把 motif 与脑区功能需求联系起来的解剖学量化证据，也是本仓库中“层级化门控需求”的主要量化依据。",
+      "layer": "author"
+    },
+    {
+      "id": "E11",
+      "step": 3,
+      "page": 6,
+      "title": "皮层下门控缺乏支持",
+      "kind": "question",
+      "quote": "Their experimental support at the circuit level remains lacking and could be an interesting direction for future research",
+      "explanation": "作者对丘脑与基底节参与的皮层下门控明确标注证据缺口，说明本文覆盖的机制范围是有边界的。",
+      "layer": "author"
+    },
+    {
+      "id": "E12",
+      "step": 4,
+      "page": 5,
+      "title": "输出门控假说待检验",
+      "kind": "question",
+      "quote": "they found that a subset of chandelier cells specifically target pyramidal cells projecting to amygdala while avoiding pyramidal cells projecting to the contralateral side of the same cortical area",
+      "explanation": "输出门控的唯一具体证据来自单一解剖分析，作者随即指出它需要专属的 chandelier 细胞亚群与基本不重叠的投射群体，因而把它列为待检验假说。",
+      "layer": "author"
+    },
+    {
+      "id": "E13",
+      "step": 3,
+      "page": 14,
+      "title": "图 4 的机制分类",
+      "kind": "implication",
+      "quote": "Input gating can be achieved by dendrite-targeting interneurons that selectively control inputs to pyramidal dendrites",
+      "explanation": "图 4 把输入门控、同步门控、递归门控与输出门控并列，给出一套可直接沿用的机制命名维度，避免把不同机制混称门控。",
+      "layer": "author"
+    },
+    {
+      "id": "E14",
+      "step": 5,
+      "page": 6,
+      "title": "通路门控与同通路内注意的区别",
+      "kind": "implication",
+      "quote": "selective attention to a spatial location but not other locations represent a form of gating within the same pathway, which is different from pathway gating",
+      "explanation": "作者明确区分路径层级的门控与同一路径内的空间选择，直接影响本仓库把注意类文献与门控类文献并置时的比较口径。",
+      "layer": "author"
+    },
+    {
+      "id": "E15",
+      "step": 5,
+      "page": 6,
+      "title": "决定性检验的提出",
+      "kind": "implication",
+      "quote": "cognitive control signals, such as those representing behavioral rule or context, act through targeting specific subclasses of inhibitory neurons",
+      "explanation": "作者给出的核心预测——控制信号作用于中间神经元而非锥体细胞——以及所需的实验，构成把本综述从论证推进到验证的具体路径。",
+      "layer": "author"
+    }
+  ]
+}

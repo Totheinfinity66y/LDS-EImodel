@@ -1,0 +1,1159 @@
+
+===== PDF PAGE 1 =====
+Neuron, Vol. 35, 773–782, August 15, 2002, Copyright 2002 by Cell Press
+Gain Modulation from Background Synaptic Input
+tex (Andersen and Mountcastle, 1983; Andersen et al.,
+Frances S. Chance,1,3 L.F. Abbott,2
+1985), the effects of attention (McAdams and Maunsell,
+and Alex D. Reyes1
+1999a; Treue and Martı´nez-Trujillo, 1999), and as a pos-
+1Center for Neural Science
+sible basis for a variety of “nonclassical” receptive field
+New York University
+effects in primary visual cortex (Heeger, 1992). Gain
+New York, New York 10003
+modulation has also been proposed as a mechanism for
+2Volen Center for Complex Systems and
+the neural computation of coordinate transformations
+Department of Biology
+relevant for tasks ranging from visually guided reaching
+Brandeis University
+(Zipser and Andersen, 1988; Salinas and Abbott, 1995;
+Waltham, Massachusetts 02454
+Pouget and Sejnowski, 1997) to invariant object recogni-
+tion (Salinas and Abbott, 1997).
+Gain modulation is not equivalent to the enhancement
+Summary
+or suppression of neuronal responses by pure excitation
+or inhibition. To illustrate the distinction, consider the
+Gain modulation is a prominent feature of neuronal
+firing rate of a neuron in response to injected current
+activity recorded in behaving animals, but the mecha-
+(which we call driving current) shown schematically in
+nism by which it occurs is unknown. By introducing a
+Figure 1A. Increased excitation shifts the firing-rate
+barrage of excitatory and inhibitory synaptic conduc-
+curve to the left, and increased inhibition, whether of
+tances that mimics conditions encountered in vivo into
+the hyperpolarizing or shunting variety (Holt and Koch,
+pyramidal neurons in slices of rat somatosensory cor-
+1997), shifts it to the right (as discussed below, see
+tex, we show that the gain of a neuronal response to
+Figure 3A). Gain modulation, on the other hand, is a
+excitatory drive can be modulated by varying the level
+change in the slope of the firing-rate curve, correspond-
+of “background” synaptic input. Simultaneously in-
+ing to a multiplicative or divisive scaling, which is distinct
+creasing both excitatory and inhibitory background
+from these additive or subtractive shifts. Mechanisms
+firing rates in a balanced manner results in a divisive
+that generate true gain modulation from fast, ionotropic
+gain modulation of the neuronal response without ap-
+synaptic input have proven elusive (Srinivasan and Ber-
+preciable signal-independent increases in firing rate
+nard, 1976; Koch and Poggio, 1992; Mel, 1993; Salinas
+or spike-train variability. These results suggest that,
+and Abbott, 1996; Hahnloser et al., 2000; Doiron et al.,
+within active cortical circuits, the overall level of syn-
+2001; Smith et al., 2002).
+aptic input to a neuron acts as a gain control signal
+The background synaptic input we study is primarily in
+that modulates responsiveness to excitatory drive.
+the balanced configuration proposed to exist in cortical
+circuits (Shadlen and Newsome, 1994; Troyer and Miller,
+Introduction
+1997). In this configuration, excitatory and inhibitory
+components approximately cancel, keeping the average
+Neurons in vivo are continuously bombarded by synap-
+total synaptic current near zero. Although a balanced
+tic input, which dramatically affects their response prop-
+configuration is not a strict requirement for the results
+erties (Destexhe and Pare´ , 1999; Hoˆ and Destexhe, 2000;
+we present, it has the advantage that the level of back-
+Tiesinga et al., 2001; Anderson et al., 2000a) by increas-
+ground activity can be modified independently of excit-
+ing overall conductance (Borg-Graham et al., 1998;
+atory synaptic drive if excitatory and inhibitory inputs
+Hirsch et al., 1998; Destexhe and Pare´ , 1999) and intro-
+are modulated in parallel, specifically if their input rates
+ducing a high degree of response variability (Softky and
+are scaled by the same factor. Conversely, the overall
+Koch, 1993; Holt et al., 1996; Stevens and Zador, 1998;
+level of excitatory drive can be modified without chang-
+Shadlen and Newsome, 1994; Troyer and Miller, 1997).
+ing the total synaptic input to a neuron if excitatory and
+Typically, this background activity is treated as a con-
+inhibitory rates are modulated in an opposing or push-
+stant source of noise that continuously underlies the
+pull manner (Anderson et al., 2000b). Thus, the excitatory
+stimulus-evoked increases in excitation that drive neu-
+drive and the total level of synaptic input can be modu-
+ronal responses. Here we consider the impact of varying
+lated independently and comprise two separate input
+the level of background activity. We find that changing
+channels. Traditionally, the push-pull channel has been
+the level of background input, rather than affecting re-
+considered to be the primary information conduit to the
+sponse variability, modulates the gain of neuronal re-
+neuron. Here, we find that the “noise” channel, con-
+sponses. Our results suggest that the gain modulation
+sisting of the overall level of synaptic input, can carry a
+commonly seen in vivo may arise from varying levels of
+second, independent control signal that modulates the
+background synaptic input.
+gain of neuronal responses.
+Gain modulation is a primary mechanism by which
+cortical neurons combine and process information (for
+Results
+a review, see Salinas and Thier, 2000). It appears in
+a wide range of contexts, including the gaze-direction
+Introducing In Vivo Synaptic Input
+dependence of visual neurons in posterior parietal cor-
+into In Vitro Neurons
+To show how background synaptic input modulates the
+gain of neuronal responses, we introduced conductance
+3Correspondence: chance@cns.nyu.edu
+
+===== PDF PAGE 2 =====
+Neuron
+774
+Figure 1. Simulating Background Synaptic
+Input with the Dynamic Clamp
+(A) The thick solid trace represents a hypo-
+thetical plot of the firing rate of a neuron as
+a function of injected current. Adding excita-
+tion shifts the curve to the left, and inhibition
+(whether hyperpolarizing or shunting) shifts it
+to the right (dashed traces). Gain modulation,
+on the other hand, corresponds to a tipping
+of the firing-rate curve resulting in a change
+of its slope (thin solid trace).
+(B) The dynamic clamp was used to simulate
+in vivo background synaptic conductances
+in vitro. Simulated excitatory and inhibitory
+synaptic conductances (gE and gI) were gen-
+erated
+from
+independent
+Poisson
+spike
+trains. The synaptic current, Isyn, was com-
+puted by multiplying these computer-gener-
+ated conductances by the difference be-
+tween the measured membrane potential and
+the synaptic reversal potentials (equation in
+box). The computed synaptic current was
+then injected into the neuron along with an
+additional constant driving current.
+(C) Membrane potential recorded from a neu-
+ron firing in response to a constant driving
+current without (left) and with (right) mimicked
+background synaptic input.
+fluctuations, mimicking in vivo conditions, into neurons
+tance due to the combined effects of excitatory and
+inhibitory synaptic inputs. The input rates and sizes of
+recorded in vitro. Neurons in a slice preparation receive
+little synaptic input because of the general lack of spon-
+the unitary synaptic conductances were chosen so that
+the resulting barrage of background synaptic input af-
+taneous activity in the slice. To study the effects of
+background input in a slice preparation, we used a com-
+fected the neuron in a manner consistent with in vivo
+measurements: shunting by background synaptic input
+puter-controlled dynamic clamp (see Experimental Pro-
+cedures) to mimic, in single in vitro neurons, the conduc-
+increased the conductance of the neuron by two to three
+times its resting value (Bernander et al., 1991; Rapp et
+tance changes caused in vivo by the firing of populations
+of excitatory and inhibitory presynaptic neurons (Figure
+al., 1992; Borg-Graham et al., 1998; Hirsch et al., 1998;
+Destexhe and Pare´ , 1999), and the associated fluctua-
+1B) (see also Destexhe et al., 2001). In brief, the com-
+puter simulated the firing of excitatory and inhibitory
+tions in the total synaptic current (the input noise) in-
+duced fluctuations with an amplitude of a few millivolts
+afferent populations using independent random Poisson
+processes. With each excitatory or inhibitory presynap-
+in the membrane potential (Anderson et al., 2000a),
+changing the pattern of spiking in response to injected
+tic action potential, a unitary conductance, equivalent
+to that mediated by either AMPA or GABAA receptors
+driving current from regular to irregular (Figure 1C).
+The irregularity of spiking and general response vari-
+(see, for example, Destexhe and Pare´ , 1999), was added
+to running tallies of total excitatory or inhibitory synaptic
+ability introduced by the dynamic clamp input (see Fig-
+ures 1C, 3E, and 3F) is toward the low end of the range
+conductance, respectively. These conductances were
+then introduced into the cell under dynamic clamp via
+measured in vivo. This level of variability is roughly the
+limit of what can be achieved with reasonable unitary
+two electrodes patched on the soma.
+To simulate typical in vivo conditions, excitatory in-
+synaptic conductances driven by uncorrelated inputs,
+which is what we used. More variable responses can
+puts were generated at a rate of 7000 Hz and inhibitory
+inputs at a rate of 3000 Hz, representing the summed
+be obtained by using correlated synaptic input (Stevens
+and Zador, 1998; Hoˆ and Destexhe, 2000), but we de-
+effects of many simulated afferents. We refer to this as
+the 1X condition. For the synaptic conductances and
+cided against this both because of uncertainties about
+the amount and nature of the correlations that exist in
+reversal potentials we used, these rates imply that the
+average total synaptic current reverses at 57 mV, and
+vivo, and because the gain modulation effect we report
+is most robust when variability is high (discussed later;
+that excitatory and inhibitory contributions to the total
+synaptic current approximately cancel each other at typ-
+and see Figure 4). Thus, the conservative levels of vari-
+ability produced by uncorrelated synaptic input provide
+ical membrane potentials. Because the excitatory and
+inhibitory synaptic inputs that make up the background
+a more rigorous test of the mechanism.
+synaptic activity were in such a balanced configuration,
+high levels of input noise and shunting could be intro-
+Multiplicative Gain Modulation of Neurons In Vitro
+The point of our study is not only to introduce realistic
+duced without producing excessive hyperpolarization
+or depolarization. We use the term input noise to mean
+background synaptic input into the quiet environment
+of the slice but also to see how varying its level affects
+specifically the variance of the total synaptic input cur-
+rent, and shunting to mean the change in total conduc-
+neuronal responses. We modified the level of back-
+
+===== PDF PAGE 3 =====
+Gain Modulation from Background Synaptic Input
+775
+ground synaptic input by scaling the computer-gener-
+ated excitatory and inhibitory input rates by the same
+factor, which we call the rate factor (going to 2X or 3X
+conditions refers to doubling or tripling both input rates,
+for example). This manipulation increases both the input
+noise (the variance of the synaptic current) and the
+amount of shunting (the average total synaptic conduc-
+tance) in proportion to the rate factor. Specifically, the
+average amount of shunting for excitatory and inhibitory
+inputs with rates rE and rI, peak unitary conductances
+gE and gI, synaptic decay constants E and I, and reversal
+potentials EE and EI is given by gEErE  gIIrI, and the
+variance of the fluctuations in the total synaptic current
+at membrane potential V is proportional to gE
+2ErE(V 
+EE)2  gI
+2IrI(V  EI)2. Because the background input is
+in a balanced configuration, equal scaling of excitatory
+and inhibitory input rates produces little net hyperpolar-
+ization or depolarization.
+To characterize neuronal responses, we drove the
+neuron by injecting constant current, which we call driv-
+ing current, along with the mimicked background synap-
+tic input. We also performed studies in which neurons
+were driven by dynamic-clamp-generated excitatory
+synaptic inputs, rather than by injected current. Addi-
+tional excitatory synaptic input introduces noise and
+shunting that are negligible in comparison to that pro-
+duced by the balanced synaptic input. As a result, excit-
+atory synaptic drive produces effects that are indistin-
+guishable from those of constant injected current. For
+the experiments reported here, we used injected current
+to drive the neurons because this allows us to separate
+clearly the effects of excitatory drive from those of back-
+ground synaptic input.
+Figure 2. Changing the Level of Background Input Modulates Gain
+Figure 2A shows firing rates evoked by different
+(A) Firing rates of a representative neuron as a function of constant
+amounts of driving current for various levels of back-
+driving current without simulated background synaptic input (0X,
+ground synaptic input (0X, closed diamonds; 1X, open
+closed diamonds), and with 1X (open circles), 2X (closed squares),
+and 3X (open triangles) background synaptic input. The solid lines
+circles; 2X, closed squares; 3X, open triangles). Increas-
+are the best second-order polynomial fits to the data.
+ing the level of background synaptic input made the
+(B) The gains for the firing-rate curves in (A), defined as the deriva-
+neurons progressively less sensitive to changes in driv-
+tives of the polynomial fitting curves, plotted as a function of firing
+ing current, equivalent to modulating the gain of the
+rate. Each trace is labeled by the symbol representing the corre-
+neuronal response. The gains corresponding to the re-
+sponding case in (A).
+sults in Figure 2A are plotted as a function of firing rate
+(C) Firing rates of another neuron as a function of constant driving
+in Figure 2B (0X, closed diamond; 1X, open circle; 2X,
+current under the same conditions as in (A) (0X, closed diamonds;
+1X, open circles; 2X, closed squares; and 3X, open triangles). The
+closed square; 3X, open triangle). These gains were de-
+solid lines are the best linear fits to the nonzero portions of the
+termined by taking the derivative of the best second-
+firing-rate curves.
+order polynomial fit to the firing-rate data. We plot the
+(D) Average normalized gains for 18 different neurons as a function
+gain as a function of firing rate rather than driving current
+of the rate factor. Here, normalized gain is defined as the slope of
+because this allows us to distinguish an additive (left-
+the best linear fit to the nonzero portion of the firing-rate curve
+right) shift in a nonlinear firing-rate curve from a gain
+divided by the slope for a rate factor of one. Error bars are standard
+modulation. An additive shift in the firing-rate curve pro-
+errors, and the numbers over each data point indicate the number
+of neurons tested in each condition.
+duces no change in a plot of gain versus firing rate,
+(E) The firing-rate curves in (A) modified by appropriate scale factors
+whereas a multiplicative modulation produces changes
+to align them, with symbols as in (A). This indicates that gain modula-
+like those seen in Figure 2B.
+tion by background synaptic input is multiplicative. The 1X case
+We also determined average gains (rather than rate-
+appears unchanged from (A), but the driving currents for the 0X,
+dependent gains) by fitting straight lines to the nonzero
+2X, and 3X data points were scaled by the factors 2, 0.65, and 0.45,
+portions of the firing-rate curves obtained using different
+respectively, while the firing rates were left unchanged.
+levels of background input. The average gains, defined
+(F) Example of a neuron for which the slope change in the firing-
+rate curve, due to changing the level of background synaptic input
+as the slopes of these straight-line fits, provide a single
+(0X, closed diamonds; 1X, open circles; and 2X, closed squares), is
+measure of response sensitivity. Figure 2C illustrates
+accompanied by a shift in the firing-rate curves.
+such linear fits and also shows gain modulation by back-
+ground synaptic input in a different neuron than that
+squares), and 3X (open triangles) cases, respectively.
+shown in Figure 2A. The slopes of the fitted lines in
+Similar fits to Figure 2A yield 28.8, 22.5, 14.3, and 10.8
+Figure 2C are 34.4, 25.2, 17.5, and 12.7 Hz/nA in the 0X
+(closed
+diamonds),
+1X
+(open
+circles),
+2X
+(closed
+Hz/nA.
+
+===== PDF PAGE 4 =====
+Neuron
+776
+We studied gain modulation effects due to back-
+Shunting generates a shift rather than a slope change
+in the firing-rate curve, similar to what occurs with hyper-
+ground synaptic input in 18 neurons, 15 of which showed
+polarizing inhibition (Figure 1A). For example, the firing
+consistent decreases in gain as the background input
+rate of an integrate-and-fire model, for sufficiently high
+was increased across all levels tested. In Figure 2D, we
+rates, is approximately proportional to (A  IR)/m, where
+characterize the gain of each neuron in each condition
+A is a constant and m is the effective membrane time
+by the slope of the best straight-line fit to the corre-
+constant (see, for example, Dayan and Abbott, 2001).
+sponding firing-rate curve (as in Figure 2C) normalized
+This shows the expected dependence on the depolar-
+by the gain of the neuron in the 1X condition. On average,
+ization IR, but also includes a dependence on the mem-
+changing the level of background input by rate factors
+brane time constant m, because this parameter sets the
+ranging from 0 to 3 produced gain modulation by more
+time scale for the dynamics of the model. Substituting
+than a factor of two, and this effect extended up to firing
+the definition m  RC into the above expression yields
+rates of at least 100 Hz. In these experiments, the same
+a firing rate proportional to (A  IR)/RC  A/(RC)  I/C.
+parameters were used for each neuron (see Experimen-
+The first term in this expression produces an additive
+tal Procedures), which indicates that the mechanism of
+shift in the firing-rate curve when R is modified by
+gain modulation does not require fine tuning.
+shunting, but the second term, which determines the
+Gain modulation by background synaptic input can
+dependence of the firing rate on the input current, is
+be quite accurately multiplicative, as illustrated in Figure
+independent of R and is thus unaffected by shunting.
+2E, where the data points from Figure 2A have been
+This explains why increased shunting shifts rather than
+scaled by appropriate factors to make them line up. This
+tips firing-rate curves; decreasing R leads to less depo-
+agrees with observations in a variety of in vivo systems
+larization (IR), but this effect is cancelled by a decrease
+where gain modulation is also multiplicative (Andersen
+in the membrane time constant (RC).
+and Mountcastle, 1983; Andersen et al., 1985; McAdams
+To determine whether the theoretical arguments given
+and Maunsell, 1999a; Treue and Martı´nez-Trujillo, 1999;
+above and in Holt and Koch (1997) apply to the neurons
+Pen˜ a and Konishi, 2001). The firing-rate curves in Figure
+we studied, we used the dynamic clamp to introduce a
+2E were aligned by applying scaling factors to the driving
+shunting conductance equivalent to that introduced by
+currents, but similar results can be obtained by scaling
+the 2X background synaptic input (32 nS) used in Figures
+the firing rates instead. This is because the firing-rate
+1 and 2, but without any accompanying input noise. The
+curves are approximately described by a power-law
+reversal potential for this constant conductance was
+over the range we examine (Miller and Troyer, 2002;
+set equal to the conductance-weighted average of the
+Hansel and Van Vreeswijk, 2002). Gain modulation can
+excitatory and inhibitory reversal potentials of the back-
+have different functional consequences depending on
+ground synaptic input (57 mV). In agreement with the
+the nature of the scaling involved (Reynolds et al., 2000).
+theoretical results, we found that increased shunting
+We return to this issue in a later section.
+shifted the firing-rate curve but did not change its slope
+For the fixed set of parameters we used in generating
+(n  8; for an example see Figure 3A, control [closed
+the background synaptic input, some of the neurons
+circles], with additional conductance [open squares]).
+showed gain modulation that was not purely multiplica-
+Increasing the rate of background synaptic input in-
+tive because changing the rate factor shifted the firing-
+creases the input noise as well as the amount of
+rate curves as well as changing their slopes. This shifting
+shunting. Because shunting alone does not change the
+effect occurred at least in part because the parameters
+slope of the firing-rate curve, we next consider the role
+we used introduced a slight excess of inhibition. An
+that input noise plays in the gain modulation effect. To
+example of such a shift, which is at the large end of the
+examine the effects of noise alone, we used the dynamic
+range for neurons showing significant gain modulation
+clamp to change the level of input noise without modi-
+by background synaptic input, is shown in Figure 2F (0X,
+fying the amount of synaptic shunting. This is done by
+closed diamonds; 1X, open circles; 2X, closed squares).
+multiplying the unitary synaptic conductances and di-
+Purely multiplicative gain modulation could be obtained
+viding the input firing rates by the same factor (whereas
+for this neuron by adjusting the balance between the
+changing the level of background input corresponds to
+inhibitory and excitatory components that make up the
+scaling firing rates without changing unitary synaptic
+background synaptic input (see below), but we did not
+conductances). The average synaptic conductance re-
+do this because we wanted to avoid fine tuning of pa-
+mains constant with this manipulation because it is pro-
+rameters for each of the neurons studied.
+portional to the product of the unitary synaptic conduc-
+tance and the input firing rate. On the other hand, the
+Contributions of Shunting and Noise
+input current variance increases because it is propor-
+to Gain Modulation
+tional to the square of the unitary synaptic conductance
+Increasing the rate of background synaptic input in-
+times the input rate.
+creases both the level of input noise and the amount of
+Figure 3B shows the effects of using the dynamic
+shunting. Because shunting produces a change in the
+clamp to increase input noise without changing the
+input resistance (R), which affects the relationship be-
+mean levels of total excitatory or inhibitory conductance
+tween input current (I) and membrane potential (V) in a
+(control, closed circles; with additional noise, open
+multiplicative manner (V  IR), it is often assumed that
+squares). It is well known that input noise enhances
+multiplicative gain modulation of neuronal responses
+neuronal responses (see, for example, Hoˆ and Destexhe,
+can be generated purely by shunting. However, a theo-
+2000), as seen in this figure. However, an important and
+retical study by Holt and Koch (1997) shows that this
+less appreciated feature shown in Figure 3B is that the
+enhancement is not uniform across different levels of
+assumption is incorrect in a variety of neuron models.
+
+===== PDF PAGE 5 =====
+Gain Modulation from Background Synaptic Input
+777
+Figure 3. Separate Effects of Shunting and
+Noise on Response Gain and Variability
+(A) Firing rate versus constant driving current
+for a neuron without (closed circles), and with
+(open squares) 32 nS of additional constant
+conductance in the absence of any additional
+noise from background synaptic input. The
+result is a pure shift of the firing-rate curve.
+(B) Firing rate versus constant driving current
+for a different neuron in the 1X condition
+(closed circles) and with the same level of
+conductance but input noise equivalent to the
+3X condition (open squares). The effect is an
+increase in firing rate that is largest at low
+rates, resulting in a change in the slope of
+the firing-rate curve.
+(C) The firing-rate curves for the 1X (closed
+circles) and 3X (open squares) conditions re-
+plotted from Figure 2A for comparison with
+(A) and (B).
+(D) The coefficient of variation (CV) of the in-
+terspike intervals for the low (closed circles)
+and high (open squares) noise conditions shown in (B), plotted against firing rate. Increasing the level of input noise increases the CV.
+(E) The CV of the interspike intervals for the 1X (closed circles) and 3X (open squares) conditions shown in (C), plotted against firing rate.
+Increasing the level of background synaptic input has little effect on the CV.
+(F) Standard deviation of the membrane potential (open diamonds) in the absence of any driving current, for which the neuron in (C) did not
+fire, and the CV of the interspike intervals (closed diamonds) when the same neuron was driven to fire at approximately 20 Hz, plotted as a
+function of the rate factor. Both measures of response variability are roughly constant and independent of the rate factor, other than when it
+is zero.
+driving current or, equivalently, firing rates. The rate-
+1X, closed circles; 3X, open squares). In other words,
+increasing balanced synaptic input decreases the sensi-
+enhancing effect of input noise is most pronounced at
+low firing rates, and it decreases steadily as the firing
+tivity of the response to changes in driving current while
+decreasing the magnitude of the neuronal response for
+rate increases. This induces a slope change in the firing-
+rate curve (Figure 3B; n  6). In other words, increasing
+a given level of driving current. In summary, an increase
+in input noise causes a leftward shift and a slope change
+input noise increases the magnitude of the neuronal
+response for a given level of driving current, but it de-
+in the firing-rate curve, and shunting causes a rightward
+shift. A balanced increase in background synaptic input
+creases the sensitivity of the response to changes in
+this current. Only the first of these effects has been
+causes both to occur, and the left and right shift cancel,
+leaving a pure gain decrease.
+widely discussed (although see Doiron et al., 2001).
+Although a complete analysis of the effects of noise on
+neuronal firing is complex (see, for example, Ricciardi,
+1977) we can provide an intuitive explanation for why
+Effects of Background Input
+on Response Variability
+noise enhances firing rates and why this effect dimin-
+ishes at high rates. In the absence of noise and at a low
+Although varying the amount of input noise is crucial
+for changes in gain, gain modulation by this mechanism
+firing rate, the membrane potential spends an apprecia-
+ble amount of time hovering slightly below the threshold
+is not accompanied by significant changes in the re-
+sponse variability of a neuron. We quantified the degree
+for action potential generation before the neuron fires.
+Noise-induced fluctuations can cause the neuron to fire
+of response variability by measuring the coefficient of
+variation (CV) of the interspike intervals and the variance
+earlier than it would have fired in the absence of noise
+at any time during this hovering period. This effect
+of the subthreshold membrane fluctuations for the re-
+corded neurons. Although increasing the amount of in-
+causes the increase in firing rate at low rates. However,
+when the neuron is firing rapidly, the membrane poten-
+put noise with a fixed level of shunting (as in Figure
+3B) increases response variability (Figure 3D, control,
+tial rises quickly to threshold without a significant hov-
+ering period. In this situation, balanced excitation and
+closed circles; additional noise, open squares), chang-
+ing the level of background synaptic input (as in Figure
+inhibition have roughly equal and opposite average ef-
+fects on spike timing. Thus, at high firing rates, noise
+3C) does not (Figure 3E, 1X, closed circles; 3X, open
+squares; and Figure 3F). When background input rates
+produces little net enhancement of firing rate.
+Gain modulation by background synaptic input, as
+were quadrupled from the 1X condition, the CV did not
+change appreciably (Figures 3E and 3F, closed dia-
+seen in Figure 3C, is the combined result of a noise-
+induced slope change (Figure 3B) and a shunting-
+monds), and the standard deviation of subthreshold
+membrane potential fluctuations changed by less than
+induced rightward shift (Figure 3A). A consequence of
+these combined effects is that, unlike what happens
+30% (Figure 3F, open diamonds; these were measured
+at a level of driving current that produced no action
+with noise alone (Figure 3B), increasing the level of back-
+ground input decreases response gain without the ac-
+potentials). Thus, background synaptic input acts as a
+source, but not as a modulator, of response variability.
+companying overall enhancement of firing (Figure 3C,
+
+===== PDF PAGE 6 =====
+Neuron
+778
+Instead, as we have shown, it acts as a modulator of
+response gain.
+Response variability does not vary appreciably with
+the level of background synaptic input over the range
+we consider because the effects of the increased input
+noise are cancelled by increased synaptic shunting. We
+can illustrate this directly in a passive neuron model
+(without spiking) for the case of subthreshold membrane
+potential fluctuations (also see Figure 3F for experimen-
+tal data). The synaptic current arising from incoming
+Poisson spike trains that activate conductances with an
+instantaneous rise time and a decay time constant s
+has a correlation function that decays exponentially with
+time constant s, and which has an amplitude equal to
+I
+2, the variance of the synaptic current. In a passive
+neuron model, the membrane potential is simply a low-
+pass filtered version of the synaptic current, and the
+relationship between the current and voltage fluctua-
+tions can be computed in a straightforward manner to
+give V
+2  I
+2s/(g2(m  s)) for the variance of the voltage
+fluctuations, where g is the total conductance (the sum
+of the intrinsic membrane conductance and the average
+Figure 4. Gain Modulation in a Model Neuron
+synaptic conductance) and m is the effective membrane
+(A) Firing rate versus driving current from the analytic model for the
+time constant. For the parameters we use, the total con-
+1X (thick trace), 2X (dashed trace), and 4X (thin trace) conditions.
+ductance of the neuron is dominated by synaptic contri-
+The standard deviation of the membrane potential fluctuations was
+butions (typically the background synaptic conductance
+5 mV.
+(B) Gain versus firing-rate curves for 1X (thick trace), 2X (dashed
+is two or more times bigger than the membrane conduc-
+trace), and 4X (thin trace) conditions as in (A).
+tance) and m  s. Under these conditions, when bal-
+(C) Same as (B) but for membrane potential fluctuations of 2 mV.
+anced synaptic input rates are scaled by a rate factor
+(D) The thick trace is the firing rate versus driving current in the 1X
+x, I
+2 →xI
+2, g →xg, and m →m/x to a good approxima-
+condition described in (A). For the thin trace, the excitatory input
+tion. This makes the variance of the fluctuations in the
+rates were scaled by 5.3 and the inhibitory rates by 4.
+membrane potential approximately independent of the
+rate factor, because V
+2  I
+2s/(g2m) →xI
+2s/(x2g2m/
+x)  V
+2. Increasing background synaptic input rates
+white-noise current source and an equivalent shunting
+increases both the variance of the input current and
+conductance (see Appendix). The resulting expression
+the overall conductance in such a way that there is no
+for the firing rate depends on the driving current I, the
+significant increase in the variance of membrane poten-
+total conductance of the neuron g, and the variance of
+tial fluctuations. This translates into approximately con-
+the membrane potential fluctuations produced by the
+stant spike-train variability as well.
+white noise, V
+2. Because V
+2 is approximately indepen-
+dent of the level of background input, as seen in Figure
+3F and discussed above, we simplify the analysis by
+Gain Modulation in a Model Neuron
+Gain modulation through background synaptic input
+treating it as a constant.
+The analytic model displays gain modulation analo-
+(Figure 3C) relies on a combination of the change in the
+slope of the firing-rate curve due to input noise (Figure
+gous to that shown in Figures 2A and 2B for the recorded
+neurons (Figures 4A and 4B, 1X, thick trace; 2X, dashed
+3B) and the rightward shift of the curve due to shunting
+(Figure 3A). A multiplicative effect, as in Figure 2E, will
+trace; 4X, thin trace). Although the shapes of the firing
+rate and gain curves are different for the model and real
+arise only if the rightward shift of the curve is of the
+appropriate magnitude (for example, Figure 4D shows
+neurons, noise affects the real and model neurons in
+qualitatively similar ways. We found that the real neurons
+what happens when the shift is too small). Furthermore,
+achieving gain modulation over an appreciable range of
+were more sensitive to noise than the model neurons
+we studied, and therefore gain modulation effects could
+firing rates requires sufficiently high levels of input noise.
+To explore the sensitivity of gain modulation to these
+be obtained in the real neurons using lower levels of
+input noise than in the model.
+requirements, we used a modeling approach in which
+parameters can be varied freely.
+The rate-dependent enhancement of firing due to in-
+put noise (Figure 3B) fades at high firing rates. Because
+We observed gain modulation through background
+synaptic input in a variety of models, ranging from rela-
+gain modulation relies on this effect, the gain changes
+are restricted to firing rates below some critical value.
+tively realistic conductance-based descriptions to sim-
+plified integrate-and-fire neurons. Here, we report re-
+For the mechanism to be a viable candidate for the types
+of gain modulation seen in vivo, this critical rate must be
+sults using a particularly convenient approach, an
+analytic expression for the firing rate of an integrate-
+sufficiently high. Figure 4B shows the gain modulation
+produced by changing background input rates when the
+and-fire neuron receiving noisy input (Ricciardi, 1977).
+To adapt this approach for our purposes, we approxi-
+noise-induced membrane potential fluctuations have a
+standard deviation of 5 mV. In this condition, the model
+mate the background synaptic input by an equivalent
+
+===== PDF PAGE 7 =====
+Gain Modulation from Background Synaptic Input
+779
+reveals significant gain modulation over the entire range
+of firing rates from 0 to 200 Hz. However, when the
+membrane potential fluctuations have a standard devia-
+tion of only 2 mV, gain modulation diminishes above
+about 50 Hz (Figure 4C, 1X, thick trace; 2X, dashed
+trace; 4X, thin trace). This indicates that noise levels of
+approximately 5 mV are needed to make the mechanism
+viable. We suggest that the large membrane potential
+fluctuations measured in vivo (see, for example, Ander-
+son et al., 2000a) may be present to support gain modu-
+lation through background synaptic input over a wide
+range of firing rates.
+Doiron et al. (2001) have noted previously, in a model-
+Figure 5. Modulating the Gain of the Response to an Oscillatory
+Input
+ing study of voltage-dependent inhibition in neurons of
+the electrosensory lateral line lobe, that the combined
+The firing rate of an integrate-and-fire model neuron driven by sinus-
+oidally oscillating (1 Hz) current. For times less than 2.5 s, the neuron
+effects of shunting and noise can have a multiplicative
+was in the 1X condition (thick trace in Figure 4D). At 2.5 s, the
+effect on firing rates. However, the effect they reported
+background input to the neuron was increased as it was for the thin
+was limited to low firing rates because it involved noise
+trace in Figure 4D, but the oscillating input remained the same.
+arising solely from inhibitory input. This produces con-
+The resulting gain modulation reduced the amplitude, but not the
+siderably smaller voltage fluctuations than the balanced
+average level, of the response.
+combination of excitation and inhibition that we study.
+For gain modulation to be multiplicative, as in Figure
+2E, the amount of shunting and the amount of noise
+the gain-modulated curves in Figure 4A, they still display
+introduced by the background synaptic input must be
+a form of response scaling that can be a useful feature,
+appropriately matched. This might be a source of con-
+as illustrated in Figure 5. In this example, an oscillating
+cern because, in our experiments, the dynamic clamp
+driving current caused oscillations in the firing rate of an
+simulates synaptic conductances located at or near the
+integrate-and-fire neuron. When the level of background
+soma of the neuron. Distal synapses can contribute to
+synaptic input was modified at 2.5 s during the middle
+the input noise, but they may not produce much
+of the trace in Figure 5, the amplitude of the response
+shunting. In the balanced configuration we use, shunting
+oscillations, but not the average level of the response,
+arises primarily from inhibitory inputs, and the noise is
+decreased. This result, which is quite distinct from what
+dominated by excitation. Thus, our results should apply
+could be obtained by conventional inhibitory effects,
+even if the excitatory inputs are too distal to produce
+arises because the crossing point for the firing-rate
+shunting, provided that inhibitory synapses are proximal
+curves was equal to the average response rate.
+enough to do so.
+While the effect shown in Figure 5 is fairly modest,
+However, another effect can compensate if the
+significantly larger effects can be obtained when neu-
+shunting-induced shift of the firing-rate curve is too
+rons are connected together in a network. Recurrent
+small (or, for that matter, if it is too large). Recall from
+excitation in such a circuit can amplify neuronal re-
+Figure 1A, that ordinary excitation and inhibition also
+sponses. In this case, reducing the gain of the neurons
+shift the firing-rate curve. Therefore, any deficiencies in
+has two effects: it reduces their responsiveness to exter-
+the amount of shifting produced by shunting can be
+nal input; and it also decreases the impact of the excit-
+compensated for by adjusting the ratio of excitation to
+atory drive that they exert on each other. Because of
+inhibition that make up the background synaptic input.
+this dual effect, the impact of gain modulation on the
+For example, introducing a slight excess of inhibition
+responses of network neurons can be considerably
+over excitation within the mixture of background synap-
+larger than what is seen for the single neuron in Figure
+tic input can compensate for the fact that distal inputs
+5, as we have verified in model networks (results not
+might produce insufficient shunting to completely shift
+shown).
+the firing-rate curve to its appropriate position, as we
+We can use the analytic model to investigate one
+have verified in modeling studies.
+more issue related to gain modulation, the nature of the
+Nevertheless, multiplicative gain modulation requires
+multiplicative scaling produced by background synaptic
+an appropriate combination of the effects of shunting
+input (Figure 2E). Examination of the analytic expression
+and the degree of balance between excitation and inhibi-
+for the firing rate indicates that the relevant scaling fac-
+tion. Figure 4D shows what happens if this condition is
+tor in the model is gV (see Appendix). Over the range
+not met. In this example, the excitatory rate was in-
+we study, this factor varies in proportion to the rate
+creased 1.3 times as much as the inhibitory rate when
+factor x. In the Appendix, we show that, under appro-
+background input was increased (rather than in a one-
+priate conditions, the dependence of the firing rate on
+to-one ratio as for all the other figures). This has no
+the rate factor x and the driving current I is of the form
+effect on the noise-induced slope change of the firing-
+xF(I/x), where F is a nonlinear function. Thus, multiplica-
+rate curve, but it causes the rightward shift seen in the
+tive gain modulation of the firing rate in the analytic
+transition from Figure 3B to 3C to be incomplete, so
+model arises from a combination of divisive scaling of
+that the firing-rate curves cross. Thus, instead of the
+the current and multiplicative scaling of the firing rate.
+firing-rate curves for different gains converging at zero,
+Although gain modulation in more realistic models and
+they converge at approximately 35 Hz in this example.
+Although the curves in Figure 4D no longer look like
+in real cells may exhibit more complex scaling laws, this
+
+===== PDF PAGE 8 =====
+Neuron
+780
+example provides a tractable case illustrating the basic
+controlling their gain. In addition to assuring that signals
+of different efficacy all get transmitted from the primary
+features of the effect.
+to the secondary area, such feedback can lead to pop-
+out effects in which responses to unexpected stimuli,
+Discussion
+such as visual patches that differ from a background
+pattern, are enhanced (Rao and Ballard, 1999).
+Predictions
+The mechanism we propose predicts that gain modulat-
+ing signals, whether proprioceptive (Andersen and
+Conclusion
+Mountcastle, 1983; Andersen et al., 1985), attentional
+Sherman and Guillery (1998) have proposed that neu-
+(McAdams and Maunsell, 1999a; Treue and Martı´nez-
+rons have two classes of inputs, one responsible for
+Trujillo, 1999), or from other sources (Heeger, 1992; Pen˜ a
+driving neural responses and the other for modulating
+and Konishi, 2001), are carried by a combination of excit-
+those responses. At the level of ionotropic synapses
+atory and inhibitory inputs with firing rates that rise and
+that could generate both fast responses and rapid mod-
+fall together. Gain modulation by background synaptic
+ulation, it is not clear what anatomical basis exists for
+input has two critical signature features. First, increases
+this dual classification. We suggest that the two classes
+in gain are associated with decreases in background
+of inputs are not defined anatomically, but rather, func-
+synaptic input and neuronal conductance. Second, the
+tionally. Sets of balanced inputs that have excitatory
+change in conductance during gain modulation is not
+and inhibitory rates rising and falling together comprise
+accompanied by a significant modification in the vari-
+modulatory inputs, and those for which excitation and
+ance of the membrane potential fluctuations or the vari-
+inhibition vary in opposite directions act as driving in-
+ability of the spiking response. This last prediction
+puts. This arrangement has the advantage that individ-
+agrees with data showing that spike-train variability was
+ual excitatory inputs can rapidly switch between driving
+not affected by shifts in attention that multiplicatively
+and modulatory functions, depending on whether they
+scaled the amplitude of neural responses (McAdams
+are varying in parallel with or in opposition to changes
+and Maunsell, 1999b).
+in inhibition.
+The background input that controls gain may arise
+Neurons receiving large amounts of background ex-
+from many sources: local circuits, distal sources, or
+citatory and inhibitory input operate quite differently
+feedback pathways (Bastian, 1986; Koch and Ullman,
+from the conventional picture of neuronal input integra-
+1985; Hupe´ et al., 1998; Przybyszewski et al., 2000).
+tion. Our observation that levels of background input
+If local excitatory and inhibitory synaptic connections
+modify response gain suggests that such activity is not
+provide significant, balanced synaptic input, a strong
+simply a source of response variability, but instead,
+population response evoked by a potent stimulus (such
+plays an important role in controlling cortical pro-
+as a high-contrast image in the case of the visual system)
+cessing. In summary, we propose that cortical neurons
+will generate a high level of balanced synaptic input that
+in vivo operate in a transistor-like mode in which sets
+will lower response gain. This can produce the type of
+of excitatory and inhibitory inputs with covarying firing
+divisive response normalization that has been proposed
+rates act as gain control signals to gate other sets of
+to account for a number of observed phenomena in
+driving inputs with opposing, push-pull excitation and
+primary visual cortex, including response saturation
+inhibition.
+(Heeger, 1992).
+Experimental Procedures
+Background input from distal sources could be re-
+sponsible for effects associated with attention, by in-
+Slices of rat somatosensory cortex were prepared for whole-cell
+creasing gain for attended stimuli. Interactions between
+recording as described previously (Reyes and Sakmann, 1999). Rats
+locally and distally generated background inputs could
+were anesthetized with halothane and decapitated. One hemisphere
+explain why little attentional gain modulation is seen
+of the brain was then removed, and 300 m slices were cut in ice-
+cold artificial cerebrospinal fluid or ACSF (125 mM NaCl, 25 mM
+for high-contrast visual images (Reynolds et al., 2000).
+NaHCO3, 25 mM glucose, 2.5 mM KCl, 1.25 mM NaH2PO4, 2 mM
+According to the proposed mechanism, attentional en-
+CaCl2, 1 mM MgCl2), using a vibratome tissue slicer. During re-
+hancement requires a reduction in the background input
+cording, slices were perfused with 30C ACSF bubbled with 95%
+from sources controlling attention. However, for high-
+O2, 5% CO2. Simultaneous whole-cell somatic recordings from layer
+contrast images, the large amount of locally generated
+5 pyramidal neurons were performed under dynamic clamp using
+background input responsible for response saturation
+two electrodes, patched at the soma, filled with 100 mM K-gluco-
+nate, 20 mM KCl, 10 mM phosphocreatine, 10 mM HEPES, 4 mM
+could mask the attention-related reductions in back-
+ATP-Mg, and 0.3 mM GTP at pH 7.3 (filled electrode resistances
+ground input coming from distal sources.
+ranged from 5 to 10 M	). The dynamic clamp is a voltage-controlled
+Finally, gain modulation could be generated by back-
+current clamp (Sharp et al., 1993; Robinson and Kawai, 1993)
+ground synaptic input arising from feedback pathways.
+that uses an analog multiplier to calculate and inject the current
+Although such pathways are excitatory and tend to ter-
+that would be produced by computer-determined conductance
+minate on distal dendrites, they could generate balanc-
+changes. With the dynamic clamp, one electrode was used for cur-
+rent injection and the other to record the neuronal membrane poten-
+ing inhibition and the accompanying conductance
+tial. Recordings were terminated if neurons were spontaneously
+changes by exciting local interneurons. If so, strong
+firing or had an initial resting potential above 55 mV, or if either
+responses in a secondary area, which is the source of
+electrode had an initial access resistance greater than 50 M	.
+the feedback signal, could reduce the gain of responses
+Excitatory and inhibitory synaptic currents were calculated using
+in a primary sensory area. Conversely, neurons in the
+an analog multiplier as Isyn  gsyn (Erev  V), where gsyn is the computer-
+primary area would remain at high gain if they failed
+controlled synaptic conductance generated from simulated presyn-
+aptic spike trains, Erev is the reversal potential of the synaptic con-
+to generate a strong response in the secondary area
+
+===== PDF PAGE 9 =====
+Gain Modulation from Background Synaptic Input
+781
+ductance (0 mV for excitatory inputs and 80 mV for inhibitory
+Acknowledgments
+inputs), and V is the measured membrane potential of the neuron.
+Presynaptic spike trains were generated by Poisson processes at
+This research was supported by the Sloan-Swartz Foundation, NEI-
+T32-EY-7136, NSF-IBN-9817194, and NSF-IBN-0079619.
+the specified rates. The unitary synaptic conductance for each pre-
+synaptic spike was calculated as a difference of exponentials, with
+time constants of 0.1 ms for the rising phase and either 5 ms (excit-
+Received: March 19, 2002
+atory) or 10 ms (inhibitory) for the falling phase. The peak unitary
+Revised: June 19, 2002
+synaptic conductances were set to 2% (excitatory) or 6% (inhibitory)
+of the measured resting membrane conductance. The same param-
+References
+eters were used for all the neurons studied.
+A step of constant driving current lasting 2–3 s was injected along
+Andersen, R.A., and Mountcastle, V.B. (1983). The influence of the
+with the simulated background synaptic input. The firing rate was
+angle of gaze upon the excitability of light-sensitive neurons of the
+measured after 500 ms of stimulation by counting the number of
+posterior parietal cortex. J. Neurosci. 3, 532–548.
+action potentials over the remaining stimulus time interval and divid-
+Andersen, R.A., Essick, G.K., and Siegel, R.M. (1985). Encoding of
+ing by its duration. Trials were separated by a recovery period of
+spatial location by posterior parietal neurons. Science 230, 450–458.
+at least 10 s.
+The analytic formula used for Figure 4 describes the firing rate of
+Anderson, J.S., Lampl, I., Gillespie, D.C., and Ferster, D. (2000a).
+an integrate-and-fire model with input consisting of white noise and
+The contribution of noise to contrast invariance of orientation tuning
+constant current and is discussed in the Appendix. In addition to
+in cat visual cortex. Science 290, 1968–1972.
+the parameters given in the text, the firing rate in the analytic model
+Anderson, J.S., Carandini, M., and Ferster, D. (2000b). Orientation
+depends on the resting value of the membrane time constant (taken
+tuning of input conductance, excitation, and inhibition in cat primary
+to be 20 ms) and the difference between the action potential thresh-
+visual cortex. J. Neurophysiol. 84, 909–926.
+old and reset membrane potentials (taken to be 6 mV following
+Bastian, J. (1986). Gain control in the electrosensory system medi-
+the analysis of Troyer and Miller [1997]). For the 1X condition, we
+ated by descending inputs to the electrosensory lateral line lobe.
+assumed that the background synaptic input produced a synaptic
+J. Neurosci. 6, 553–562.
+conductance equal to the resting conductance of the neuron.
+Bernander, O¨ ., Douglas, R.J., Martin, K.A.C., and Koch, C. (1991).
+The integrate-and-fire model in Figure 5 had a resting membrane
+Synaptic background activity influences spatiotemporal integration
+potential Vrest  65 mV, an action potential threshold Vth  54
+in single pyramidal cells. Proc. Natl. Acad. Sci. USA 88, 11569–
+mV, and a postspike reset potential Vreset  60 mV. The synaptic
+11573.
+dynamics was identical to that used for the real neurons, except
+that the rise of the synaptic conductances was taken to be instanta-
+Borg-Graham, L.J., Monier, C., and Fre´ gnac, Y. (1998). Visual input
+neous. The parameters describing the background synaptic input
+evoles transient and strong shunting inhibition in visual cortical neu-
+were adjusted to produce subthreshold membrane potential fluctua-
+rons. Nature 393, 369–372.
+tions with a standard deviation of 5 mV (total excitatory and inhibitory
+Dayan, P., and Abbott, L.F. (2001). Theoretical Neuroscience (Cam-
+synaptic conductances equal to 0.4 and 1.6 times the resting mem-
+bridge, MA: MIT Press), p. 164.
+brane conductance, with rates of 135 Hz for both). The firing rate in
+Destexhe, A., and Pare´ , D. (1999). Impact of network activity on the
+response to an oscillating driving current was extracted by counting
+integrative properties of neocortical pyramidal neurons in vivo. J.
+spikes and averaging over multiple runs.
+Neurophysiol. 81, 1531–1547.
+Destexhe, A., Rudolph, M., Fellous, J.-M., and Sejnowski, T.J. (2001).
+Appendix
+Fluctuating synaptic conductances recreate in vivo-like activity in
+The analytic expression for the firing rate r of an integrate-and-fire
+neocortical neurons. Neuroscience 107, 13–24.
+neuron (with resting membrane conductance g0, synaptic conduc-
+Doiron, B., Longtin, A., Berman, N., and Maler, L. (2001). Subtractive
+tance gs, resting membrane time constant 0, and action-potential
+and divisive inhibition: effect of voltage-dependent inhibitory con-
+threshold and reset voltages Vth and Vreset), receiving a constant
+ductances and noise. Neural Comput. 13, 227–248.
+current I and white noise current that produces membrane potential
+Hahnloser, R.H., Sarpeshkar, R., Mahowald, M.A., Douglas, R.J.,
+fluctuations with standard deviation V, takes the form
+and Seung, H.S. (2000). Digital selection and analogue amplification
+coexist in a cortex-inspired silicon circuit. Nature 405, 947–951.
+r 
+gv
+g0(Vth  Vreset)0
+f 
+V∞ 0.5(Vth  Vreset)
+v
+,
+Hansel, D., and Van Vreeswijk, C. (2002). How noise contributes
+to contrast invariance of orientation tuning in cat visual cortex. J.
+where g  g0  gs is the total membrane conductance and V∞
+Neurosci. 22, 5118–5128.
+(g0V0  gsVB  I)/g. V0 is the resting potential of the neuron and VB is
+Heeger, D.J. (1992). Normalization of cell responses in cat striate
+the potential at which the excitatory and inhibitory synaptic currents
+cortex. Vis. Neurosci. 9, 181–198.
+sum to zero. An explicit expression for the function f, which is an
+Hirsch, J.A., Alonso, J.-M., Reid, R.C., and Martinez, L.M. (1998).
+integral of a combination of Gaussian and error functions, is not
+Synaptic integration in striate cortical simple cells. J. Neurosci. 18,
+needed for our discussion (Ricciardi, 1977), and an additional depen-
+9517–9528.
+dence on the quantity (Vth  Vreset)/V has been suppressed because
+Hoˆ , N., and Destexhe, A. (2000). Synaptic background activity en-
+this is a constant in the case we consider. To simplify the analysis,
+hances the responsiveness of neocortical pyramidal neurons. J.
+we take V0  VB  0.5(Vth  Vreset) from which it follows that V∞
+Neurophysiol. 84, 1488–1496.
+0.5(Vth  Vreset)  I/g and
+Holt, G.R., and Koch, C. (1997). Shunting inhibition does not have
+a divisive effect on firing rates. Neural Comput. 9, 1001–1013.
+r 
+gv
+g0(Vth  Vreset)0
+f 
+I
+gv.
+Holt, G.R., Softky, W.R., Koch, C., and Douglas, R.J. (1996). Compar-
+ison of discharge variability in vitro and in vivo in cat visual cortex
+As discussed in the text, the combination gV varies approximately
+neurons. J. Neurophysiol. 75, 1806–1814.
+in proportion to the scale factor x when background input rates are
+Hupe´ , J.M., James, A.C., Payne, B.R., Lomber, S.G., Girard, P.,
+varied. Thus, the above equation implies the relationship given in
+and Bullier, J. (1998). Cortical feedback improves discrimination
+the text, r 
+ xF(I/x), with F closely related to f . The function f initially
+between figure and background by V1, V2 and V3 neurons. Nature
+rises from zero with a nonlinear dependence on its argument, but
+394, 784–787.
+for sufficiently large values of I it becomes linear. When this occurs,
+the factor of gV within f and the factor of gV multiplying f in the
+Koch, C., and Poggio, T. (1992). Multiplying with synapses and neu-
+rons. In Single Neuron Computation, T. McKeena, J. Davis, and S.
+above equation cancel, and gain modulation goes away, as dis-
+cussed in the text.
+Zornetzer, eds. (Orlando, FL: Academic Press), pp. 315–345.
+
+===== PDF PAGE 10 =====
+Neuron
+782
+Koch, C., and Ullman, S. (1985). Shifts in selective visual attention:
+Treue, S., and Martı´nez-Trujillo, J.C. (1999). Feature-based attention
+influences motion processing gain in macaque visual cortex. Nature
+towards the underlying neural circuitry. Hum. Neurobiol. 4, 219–227.
+399, 575–579.
+McAdams, C.J., and Maunsell, J.H.R. (1999a). Effects of attention
+on orientation-tuning functions of single neurons in macaque corti-
+Troyer, T.W., and Miller, K.D. (1997). Physiological gain leads to high
+ISI variability in a simple model of a cortical regular spiking cell.
+cal area V4. J. Neurosci. 19, 431–441.
+Neural Comput. 9, 971–983.
+McAdams, C.J., and Maunsell, J.H.R. (1999b). Effects of attention
+on the reliability of individual neurons in monkey visual cortex. Neu-
+Zipser, D., and Andersen, R.A. (1988). A back-propagation pro-
+grammed network that simulates response properties of a subset
+ron 23, 765–773.
+of posterior parietal neurons. Nature 331, 679–684.
+Mel, B.W. (1993). Synaptic integration in an excitable dendritic tree.
+J. Neurophysiol. 70, 1086–1101.
+Miller, K.D., and Troyer, T.W. (2002). Neural noise can explain expan-
+sive, power-law nonlinearities in neural response functions. J. Neu-
+rophysiol. 87, 653–659.
+Pen˜ a, J.L., and Konishi, M. (2001). Auditory spatial receptive fields
+created by multiplication. Science 292, 249–252.
+Pouget, A., and Sejnowski, T.J. (1997). Spatial transformations in the
+parietal cortex using basis functions. J. Cogn. Neurosci. 9, 222–237.
+Przybyszewski, A.W., Gaska, J.P., Foote, W., and Pollen, D.A. (2000).
+Striate cortex increases contrast gain of macaque LGN neurons.
+Vis. Neurosci. 17, 485–494.
+Rao, R.R., and Ballard, D.H. (1999). Predictive coding in the visual
+cortex: a functional interpretation of some extra-classical receptive-
+field effects. Nat. Neurosci. 2, 79–87.
+Rapp, M., Yarom, Y., and Segev, I. (1992). The impact of parallel
+fiber background activity on the cable properties of cerebellar Pur-
+kinje cells. Neural Comput. 4, 518–532.
+Reyes, A., and Sakmann, B. (1999). Developmental switch in the
+short-term modification of unitary EPSPs evoked in layer 2/3 and
+layer 5 pyramidal neurons of rat neocortex. J. Neurosci. 19, 3827–
+3835.
+Reynolds, J.H., Pasternak, T., and Desimone, R. (2000). Attention
+increases sensitivity of V4 neurons. Neuron 26, 703–714.
+Ricciardi, L.M. (1977). Diffusion Processes and Related Topics in
+Biology (Berlin: Springer-Verlag).
+Robinson, H.P.C., and Kawai, N. (1993). Injection of digitally synthe-
+sized synaptic conductance transients to measure the integrative
+properties of neurons. J. Neurosci. Methods 49, 157–165.
+Salinas, E., and Abbott, L.F. (1995). Transfer of coded information
+from sensory to motor networks. J. Neurosci. 15, 6461–6474.
+Salinas, E., and Abbott, L.F. (1996). A model of multiplicative neural
+responses in parietal cortex. Proc. Natl. Acad. Sci. USA 93, 11956–
+11961.
+Salinas, E., and Abbott, L.F. (1997) Invariant visual responses from
+attentional gain fields. (1997). J. Neurophysiol. 77, 3267–3272.
+Salinas, E., and Thier, P. (2000). Gain modulation: a major computa-
+tion principle of the central nervous system. Neuron 27, 15–21.
+Shadlen, M.N., and Newsome, W.T. (1994). Noise, neural codes and
+cortical organization. Curr. Opin. Neurobiol. 4, 569–579.
+Sharp, A., O’Neil, M.B., Abbott, L.F., and Marder, E. (1993). The
+dynamic clamp: artificial conductances in biological neurons.
+Trends Neurosci. 16, 389–394.
+Sherman, S.M., and Guillery, R.W. (1998). On the actions that one
+nerve cell can have on another: distinguishing “drivers” from “modu-
+lators”. Proc. Natl. Acad. Sci. USA 95, 7121–7126.
+Smith, M.R., Nelson, A.B., and du Lac, S. (2002). Regulation of firing
+response gain by calcium-dependent mechanisms in vestibular nu-
+cleus neurons. J. Neurophysiol. 87, 2031–2042.
+Softky, W.R., and Koch, C. (1993). The highly irregular firing of corti-
+cal cells is inconsistent with temporal integration of random EPSPs.
+J. Neurosci. 13, 334–350.
+Srinivasan, M.V., and Bernard, G.D. (1976). A proposed mechanism
+for the multiplication of neural signals. Biol. Cybern. 21, 227–236.
+Stevens C.F., and Zador, A.M. (1998). Input synchrony and the irreg-
+ular firing of cortical neurons. Nat. Neurosci. 3, 210–217.
+Tiesinga, P.H.E., Jose´ , J.V., and Sejnowski, T.J. (2001). Comparison
+of current-driven and conductance-driven neocortical model neu-
+rons with Hodgkin-Huxley voltage-gated channels. Phys. Rev. E.
+Stat. Phys. Plasmas Fluids Relat. Interdiscip. Topics 62, 8413–8419.

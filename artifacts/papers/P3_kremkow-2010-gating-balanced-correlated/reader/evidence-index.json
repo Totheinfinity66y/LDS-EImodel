@@ -1,0 +1,889 @@
+{
+  "source_sha256": "3c94b8f2f320bccd4412fac8a80043c2a237fc4e55bd71dcb7f240ea3abf5f2c",
+  "claims": [
+    {
+      "step": 1,
+      "title": "研究类型、对象与问题定位",
+      "claim": "这是一篇计算建模论文，研究对象是一个 28,125 神经元规模的随机递归脉冲网络，其中嵌入了一条由 sender、gate、receiver 三组神经元构成的前馈信号通路。作者要解决的问题很具体：在一个自发活动、不规则、有噪声的背景网络里，如何让某一条指定通路上的信号传递可以被一个外部控制信号开关，而不必重建连接结构。论文把动作选择作为动机场景，但真正的研究对象是信号传播的门控本身。输入是给 sender 组的三类刺激，输出是 receiver 组能否重现同样的时间结构。作者自己在文中指出，三组网络中处于中间位置的 gate 组才是本文的分析核心，因为只有它能影响 sender 到 receiver 的传播。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E01",
+          "page": 1,
+          "quote": "Selective gating of these transients is mandatory for proper brain function",
+          "status": "matched"
+        },
+        {
+          "id": "E02",
+          "page": 1,
+          "quote": "Here we propose that neuronal networks may exploit timing differences between correlated excitation and inhibition",
+          "status": "matched"
+        },
+        {
+          "id": "E10",
+          "page": 2,
+          "quote": "we embedded a signal path in a large-scale recurrent cortical network model",
+          "status": "matched"
+        },
+        {
+          "id": "E17",
+          "page": 2,
+          "quote": "The inhibitory neurons provided the balancing inhibition in the signal path and controlled the effective integration time of the excitatory neurons",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "title": "作者声称的知识缺口：现有门控关不住瞬变",
+      "claim": "作者把缺口建立在两处已有工作的对比上。第一处是对 winner-take-all 机制的批评：它需要强递归抑制，而强递归抑制并非每个脑区都具备；并且当竞争信号强度接近时它很慢，还可能在输入出现瞬时同步时给出不可预测的结果。第二处是更关键的：Vogels 与 Abbott 2009 提出的 detailed balance 门控虽然能快速在竞争的发放率之间做选择，但无法控制时间尺度在几十毫秒以内的活动瞬变。作者由此主张，靠 detailed balance 的门控在适用性上真正受限，因此需要一种作用在时间维度上的门控。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E03",
+          "page": 1,
+          "quote": "However, winner-take-all dynamics require strong recurrent inhibition, which may not be available in every brain region",
+          "status": "matched"
+        },
+        {
+          "id": "E04",
+          "page": 1,
+          "quote": "Moreover, winner-take-all dynamics are typically slow if the competing signals are of comparable strength",
+          "status": "matched"
+        },
+        {
+          "id": "E05",
+          "page": 1,
+          "quote": "detailed balance of excitation and inhibition (amplitude gating) can efficiently gate the propagation of firing rates",
+          "status": "matched"
+        },
+        {
+          "id": "E06",
+          "page": 1,
+          "quote": "it fails to control activity transients on a timescale of up to a few tens of milliseconds",
+          "status": "matched"
+        },
+        {
+          "id": "E07",
+          "page": 1,
+          "quote": "When combined with excitation-inhibition balance, temporal gating constitutes a powerful mechanism",
+          "status": "matched"
+        },
+        {
+          "id": "E08",
+          "page": 1,
+          "quote": "we propose an alternative gating mechanism that exploits temporal differences",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "title": "本文新增什么，以及可检验的预测与削弱条件",
+      "claim": "本文的贡献主张是：网络可以利用兴奋与抑制之间的时间差来控制脉冲活动瞬变的传播，并把这个机制与 detailed balance 合用，从而控制由瞬变与持续成分混合而成的活动。AI 还原出的可检验预测有三条。第一，若机制成立，则存在一个单调的阈值关系——缩短 gate 组的 E/I 延迟到某点以下，原本能传播的刺激会突然完全失败，而不是逐渐衰减；反过来延长延迟能救回原本失败的刺激。第二，若两种门控确实作用在不同成分上，则在 (τ_eff, 抑制增益) 平面上，瞬变响应对抑制增益应当完全不敏感、只随 τ_eff 呈 S 形变化，而持续响应对 τ_eff 完全不敏感、只随增益呈阈值型线性变化。第三，若能把一条特定信号的 τ_eff 调大而另一条调小，应能选择性地只让其中一条通过。能削弱这套解释的结果包括：瞬变响应随抑制增益也发生系统变化（说明两种机制并未分离）、τ_eff 效应在换成电流基突触后消失、或选择性地改变 τ_eff 反而使两条信号的输出相关性同时升高。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E09",
+          "page": 1,
+          "quote": "may, in fact, form the basis of millisecond-fast decision making and action selection",
+          "status": "matched"
+        },
+        {
+          "id": "E14",
+          "page": 1,
+          "quote": "As an exception to this rule, excitatory neurons that participated in the signal path received less than 5% connection from the background neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E15",
+          "page": 2,
+          "quote": "The width of the Gaussian describing the connection probability",
+          "status": "matched"
+        },
+        {
+          "id": "E20",
+          "page": 2,
+          "quote": "these delays do not influence the dynamics of the embedding network and the embedded feedforward network",
+          "status": "matched"
+        },
+        {
+          "id": "E21",
+          "page": 2,
+          "quote": "In the default state of the signal path, the delay of inhibitory synapses onto the excitatory neurons within a group was set to 2 ms",
+          "status": "matched"
+        },
+        {
+          "id": "E22",
+          "page": 2,
+          "quote": "The number of synapses from the presynaptic neurons to the sender group was set to 60",
+          "status": "matched"
+        },
+        {
+          "id": "E24",
+          "page": 2,
+          "quote": "The similarity was calculated by cross-correlating the PSTHs of the excitatory neurons in both groups",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "神经元与突触模型：把 τ_eff 变成可控参数",
+      "claim": "神经元是漏电积分放电（LIF）模型，参数为膜电容 290 pF、静息膜电导 29 nS、静息电位 −70 mV、阈值 −57 mV，发放后复位并停止突触积分 2 ms 以模拟不应期。突触用指数衰减的电导而非电流，时间常数分别为兴奋 1.5 ms、抑制 10 ms；权重为兴奋到兴奋 0.5 nS（对应静息下约 0.15 mV 的 EPSP）、兴奋到抑制 1 nS、所有抑制突触 0.5 nS。这组参数与外部输入一起产生约 5 ms 的有效膜时间常数。对本文机制最关键的一点是：作者并没有把 τ_eff 当作一个自由参数直接写入模型，而是让它由兴奋与抑制的相对延迟自然涌现，再通过改变抑制延迟来间接操纵。这使 τ_eff 成为一个有机制含义的中间变量，而不是为结果量身定做的旋钮。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E11",
+          "page": 1,
+          "quote": "The neurons in the network were modeled as leaky integrate-and-fire neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E12",
+          "page": 1,
+          "quote": "synaptic integration was halted for 2 ms, mimicking the refractory period in real neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E13",
+          "page": 1,
+          "quote": "We simulated a network of 28,125 neurons, with 22,500 excitatory and 5625 inhibitory neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E14",
+          "page": 1,
+          "quote": "As an exception to this rule, excitatory neurons that participated in the signal path received less than 5% connection from the background neurons",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "网络与信号通路的嵌入方式",
+      "claim": "背景网络是 22,500 个兴奋神经元与 5,625 个抑制神经元的稀疏随机递归网络，兴奋与抑制分别排成 150×150 与 75×75 的网格，代表同一块 1×1 mm² 的皮层空间，并折叠为环形以消除边界效应；连接概率 5%，局部连接核为高斯，兴奋的空间常数 0.6 mm、抑制为 0.1 mm。每条神经元还接收 1500 条各 2 Hz 的外部兴奋输入，使网络处于约 3 Hz、成对相关约 0.01 的异步不规则态。信号通路是嵌入而非另建：三组空间分离，每组从局部池中随机选取，组间由每个神经元接收前一组 60 个兴奋神经元的汇聚输入。通路内兴奋延迟设为 5 ms，组内抑制延迟默认 2 ms。作者自述 5 ms 这个兴奋延迟的选择带有任意性，但同时论证它不改变门控动力学，可以取任意值。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E15",
+          "page": 2,
+          "quote": "The width of the Gaussian describing the connection probability",
+          "status": "matched"
+        },
+        {
+          "id": "E16",
+          "page": 2,
+          "quote": "The rate and strength of external inputs (1500 excitatory synapses per neuron, each at 2 Hz) were adjusted to obtain a low-firing-rate",
+          "status": "matched"
+        },
+        {
+          "id": "E17",
+          "page": 2,
+          "quote": "The inhibitory neurons provided the balancing inhibition in the signal path and controlled the effective integration time of the excitatory neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E18",
+          "page": 2,
+          "quote": "Each neuron in the signal path received convergent inputs from 60 randomly selected excitatory neurons of the preceding group",
+          "status": "matched"
+        },
+        {
+          "id": "E19",
+          "page": 2,
+          "quote": "This choice of the excitatory delays of 5 ms is somewhat arbitrary",
+          "status": "matched"
+        },
+        {
+          "id": "E20",
+          "page": 2,
+          "quote": "these delays do not influence the dynamics of the embedding network and the embedded feedforward network",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "刺激与分析指标，以及方法上的信息缺口",
+      "claim": "作者用三类刺激分别探测不同成分：脉冲包输入用于检验同步活动能否越过分界线；200 Hz 的 Poisson rate 输入在 500 ms 处突然开启，制造一个强的 onset transient 加一段持续活动；20 Hz 的 MIP 相关输入则用 0.5 的复制概率在低发放率下制造相关性驱动的瞬变。分析上，把一组兴奋神经元的 PSTH 中的短爆发定义为事件，事件内的总发放数作为响应强度、事件的起止时间差作为时间宽度；信号是否成功传播则用 sender 与 receiver PSTH 的互相关衡量，并按通路延迟做了时间平移。方法层面的关键缺口有四个，都由 AI 判断而非作者声明：补充材料 Fig. S1 未随本文提供，电流基突触的对照只能按作者报告接受；Fig. 3 至 Fig. 5 未报告误差条或重复次数，只有 Fig. 2b,c 给出 SD 与 n = 20；门控是靠外部注入控制脉冲实现的，皮层中 τ_eff 的自然调制只在讨论中被列举为可能性；正文也未给出代码地址与随机种子，因此本卡不把任何结果写成已复现。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E21",
+          "page": 2,
+          "quote": "In the default state of the signal path, the delay of inhibitory synapses onto the excitatory neurons within a group was set to 2 ms",
+          "status": "matched"
+        },
+        {
+          "id": "E22",
+          "page": 2,
+          "quote": "The number of synapses from the presynaptic neurons to the sender group was set to 60",
+          "status": "matched"
+        },
+        {
+          "id": "E23",
+          "page": 2,
+          "quote": "The rate of the MIP population was set to 20 Hz to illustrate that even at low firing rates, spike correlations",
+          "status": "matched"
+        },
+        {
+          "id": "E28",
+          "page": 4,
+          "quote": "the gate response was weak and fell below the separatrix",
+          "status": "matched"
+        },
+        {
+          "id": "E31",
+          "page": 4,
+          "quote": "signal propagation became more reliable, as expressed in a reduction in trial-by-trial variability in the receiver group",
+          "status": "matched"
+        },
+        {
+          "id": "E32",
+          "page": 4,
+          "quote": "remained unchanged when synapses were modeled as current transients",
+          "status": "matched"
+        },
+        {
+          "id": "E33",
+          "page": 4,
+          "quote": "does not depend on the choice of synapse or input activity model",
+          "status": "matched"
+        },
+        {
+          "id": "E34",
+          "page": 4,
+          "quote": "In the default state of the gate group, with balanced excitation and inhibition, the onset transient propagated to the receiver group, whereas the tonic part of the input was blocked",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "关门与开门：τ_eff 通过分界线控制传播",
+      "claim": "在默认状态下，脉冲包 S1（σ = 60、同步性 σ_t = 3.5 ms）成功通过 gate 组到达 receiver 组，S2（σ_t = 7 ms）失败。作者用 (σ, σ_t) 状态空间中的分界线来刻画：脉冲包起点在分界线上方会收敛到不动点并稳定传播，在下方则逐渐衰减、融入背景。关门操作是向抑制神经元注入小的去极化控制脉冲以缩短 E/I 延迟，结果 gate 组响应跌到分界线以下，receiver 组的活动随之消退。开门操作方向相反：注入超极化脉冲延迟甚至压制抑制发放，积分时间增加，gate 组有更多兴奋神经元响应，活动升到分界线之上，原本失败的 S2 被救回。定量地说，积分时间降到 1 ms 以下完全阻断传播，升到 2 ms 以上恢复传播；随着积分时间系统性增大，gate 组的响应强度与时间宽度都单调增加，同时 receiver 组的试次间变异下降，即传播变得更可靠。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E25",
+          "page": 3,
+          "quote": "we reduced the temporal delay between excitation and inhibition in the gating group by injecting a small depolarizing control pulse into the inhibitory neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E26",
+          "page": 3,
+          "quote": "As a result, the gate closed: the response in the gate group fell below the separatrix, causing activity in the receiver group to fade",
+          "status": "matched"
+        },
+        {
+          "id": "E27",
+          "page": 4,
+          "quote": "we applied a hyperpolarizing (rather than depolarizing) control pulse to the inhibitory neurons, thereby delaying or even suppressing their spiking activity",
+          "status": "matched"
+        },
+        {
+          "id": "E28",
+          "page": 4,
+          "quote": "the gate response was weak and fell below the separatrix",
+          "status": "matched"
+        },
+        {
+          "id": "E29",
+          "page": 4,
+          "quote": "Consequently, the response in the receiver group was indistinguishable from the background network activity",
+          "status": "matched"
+        },
+        {
+          "id": "E30",
+          "page": 4,
+          "quote": "resulted in a monotonic increase in both",
+          "status": "matched"
+        },
+        {
+          "id": "E31",
+          "page": 4,
+          "quote": "signal propagation became more reliable, as expressed in a reduction in trial-by-trial variability in the receiver group",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "突触模型对照：结论不依赖电导基或电流基",
+      "claim": "点神经元模型中突触究竟该建模为电导瞬变还是电流瞬变，学界一直有争论。作者用电流基突触重跑了网络，τ_eff 与 gate、receiver 组活动之间的 S 形关系保持不变，据此声称 temporal gating 不依赖于突触或输入活动模型的选择。这一条证据对本文的稳健性很重要，因为它排除了「结果只是分流抑制伪影」这一最直接的质疑。需要如实说明的是，支持它的补充材料 Fig. S1 未随本文 PDF 提供，因此这一点是按作者报告接受，未在本轮独立核对。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E32",
+          "page": 4,
+          "quote": "remained unchanged when synapses were modeled as current transients",
+          "status": "matched"
+        },
+        {
+          "id": "E33",
+          "page": 4,
+          "quote": "does not depend on the choice of synapse or input activity model",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "两类瞬变：amplitude gating 关不住，temporal gating 关得住",
+      "claim": "在默认的 E/I 平衡状态下，200 Hz Poisson 输入的 onset transient 成功传播到 receiver 组，而持续部分被挡住；这正是本文批评 P2 机制的核心观察。对相关输入同样如此：MIP 产生的瞬变在平衡状态下未被控制地传播。只有在缩短 gate 组 E/I 延迟、同时保持整体 E/I 平衡不变的条件下，onset 瞬变与相关瞬变才都被有效控制。作者对 amplitude gating 失效的机理解释是，这两类瞬变快到能在延迟带来的抑制窗口形成之前就已通过。需要指出一个实现细节：当门被完全关闭时，gate 组里只有抑制群体在活动，兴奋群体被平衡抑制完全压制，作者自己认为降低抑制增益会得到更符合实际的残余发放。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E34",
+          "page": 4,
+          "quote": "In the default state of the gate group, with balanced excitation and inhibition, the onset transient propagated to the receiver group, whereas the tonic part of the input was blocked",
+          "status": "matched"
+        },
+        {
+          "id": "E35",
+          "page": 5,
+          "quote": "signal transients reflecting the spike correlations propagated uninhibited",
+          "status": "matched"
+        },
+        {
+          "id": "E36",
+          "page": 5,
+          "quote": "reducing the delay between excitation and inhibition at the gate group provided an effective control over the propagation of signal transients",
+          "status": "matched"
+        },
+        {
+          "id": "E37",
+          "page": 5,
+          "quote": "Both types of transients were fast enough to pass before the delayed feedforward inhibition could quench them",
+          "status": "matched"
+        },
+        {
+          "id": "E38",
+          "page": 5,
+          "quote": "has its price: it precludes the propagation of sustained (tonic) activity devoid of transients",
+          "status": "matched"
+        },
+        {
+          "id": "E39",
+          "page": 5,
+          "quote": "completely suppressed by the balancing inhibitory input",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "两种门控正交：瞬变归 τ_eff，持续归抑制增益",
+      "claim": "这是本文最实质的对照结果。作者在 (τ_eff, 抑制增益 J_EI/J_EE) 平面上同时扫描两个变量，并分别报告瞬变响应（前 10 ms）与持续响应（10 ms 之后）。结果显示瞬变响应随抑制增益在所有 τ_eff 下都不变，说明幅度门控完全不能门控瞬变成分；瞬变响应随 τ_eff 则呈 S 形，说明时间门控可以门控瞬变成分。相反，持续响应随 τ_eff 在所有增益下都不变，说明时间门控不能门控持续成分；持续响应随抑制增益呈阈值型线性变化。默认状态下抑制增益因子为 2。两种门同时关闭时瞬变与持续都被挡住；只开时间门时只有 onset 瞬变通过；只开幅度门时持续成分通过而瞬变被挡住——后者是因为瞬变期输入同步到达会同时激活抑制群体，从而提供了足够的平衡抑制让时间门控得以发挥作用。两门同开时两者都通过。作者也提示，用抑制增益作为门控变量可能带来 receiver 组响应衰减，但认为在高信噪比下这一衰减可在后续级放大。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E40",
+          "page": 5,
+          "quote": "The amplitude gating mechanism was implemented by varying the strength of the inhibition in the gate group",
+          "status": "matched"
+        },
+        {
+          "id": "E41",
+          "page": 5,
+          "quote": "Thus, we define the inhibitory gain factor as",
+          "status": "matched"
+        },
+        {
+          "id": "E42",
+          "page": 5,
+          "quote": "the inhibitory gain factor was 2",
+          "status": "matched"
+        },
+        {
+          "id": "E43",
+          "page": 5,
+          "quote": "gates blocked both the transient and the tonic component in the gate group",
+          "status": "matched"
+        },
+        {
+          "id": "E44",
+          "page": 6,
+          "quote": "allowed only the onset transient to induce activity in the gate group",
+          "status": "matched"
+        },
+        {
+          "id": "E45",
+          "page": 6,
+          "quote": "the weaker feedforward inhibition could not balance the direct excitation during the tonic phase",
+          "status": "matched"
+        },
+        {
+          "id": "E46",
+          "page": 6,
+          "quote": "the inputs from the sender group arrived synchronously, activating the inhibitory neurons in the gate group simultaneously, thereby providing sufficient balancing inhibition for the temporal gating to function and block the transient",
+          "status": "matched"
+        },
+        {
+          "id": "E47",
+          "page": 6,
+          "quote": "as a gating variable may result in an attenuated response in the receiver group",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "两条并行通路的选择性门控及其度量限制",
+      "claim": "作者进一步嵌入第二条信号通路，两条通路的 gate 组兴奋与 receiver 组共用，抑制神经元从同一局部池随机选取，因此两条通路可能共享少部分抑制神经元。对两条信号分别调整 τ_eff_X 与 τ_eff_Y 后，用 receiver 输出与两个输入信号的互相关之差 Δσ 刻画选择性：Δσ 为正表示更像 S_X，为负表示更像 S_Y。增大 τ_eff_X 同时减小 τ_eff_Y 可让 S_X 独占传播，反向操作让 S_Y 独占；调 S_X 所需的 τ_eff_X 精确值依赖于 τ_eff_Y，反之亦然。这一依赖关系说明两个门控状态并非独立叠加，但作者未展开其机制。这里有一个必须点明的度量限制：当两门都开时 Δσ 也接近零（因为输出对两个信号同等相关），当两门都关时 Δσ 同样接近零（因为两者都不传播）。因此 Δσ 接近零同时覆盖全通与全断两种相反情形，单靠这一指标无法判定，需要结合 Fig. 5d 与 Fig. 5e 的群体活动来区分。",
+      "layer": "author",
+      "references": [
+        {
+          "id": "E48",
+          "page": 6,
+          "quote": "shows the scheme of two signal paths, embedded in a recurrent random network",
+          "status": "matched"
+        },
+        {
+          "id": "E49",
+          "page": 6,
+          "quote": "we systematically varied the delay between excitation and inhibition from the respective sender to the gate",
+          "status": "matched"
+        },
+        {
+          "id": "E50",
+          "page": 6,
+          "quote": "measured the cross-correlations",
+          "status": "matched"
+        },
+        {
+          "id": "E51",
+          "page": 6,
+          "quote": "indicate that the receiver group output is more similar to the input signal",
+          "status": "matched"
+        },
+        {
+          "id": "E52",
+          "page": 6,
+          "quote": "both signals propagated and the response of the receiver group was equally correlated to both input signals",
+          "status": "matched"
+        },
+        {
+          "id": "E53",
+          "page": 6,
+          "quote": "the scenario is evidently not suitable for action selection",
+          "status": "matched"
+        },
+        {
+          "id": "E54",
+          "page": 6,
+          "quote": "selective transmission of signal SX",
+          "status": "matched"
+        },
+        {
+          "id": "E55",
+          "page": 6,
+          "quote": "selective transmission of signal SY",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "主张一：τ_eff 可以作为门控变量——支持充分",
+      "claim": "作者主张改变兴奋与抑制的延迟、从而改变有效积分时间，可以移动状态空间的分界线并阻断或救回脉冲包的传播。这一主张与直接证据一致，而且是全文支撑最扎实的一条：关闭与打开两个方向都有对应实验（S1 被阻断、S2 被救回），并有 σ、σ_t 与分界线关系的显式刻画；误差条、重复次数与电流基突触对照也都出现在这一段。特别值得肯定的是，Fig. 2c 还报告了 τ_eff 增大伴随 receiver 组试次间变异下降，这为「开门不仅恢复幅度还提升可靠性」提供了超出二值开关的额外信息。差异类型为一致，唯一需要附带的边界是：这里的 τ_eff 变化由外部注入控制脉冲实现，属于参数扫描式的因果干预，而不是网络中自发的状态演化。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E25",
+          "page": 3,
+          "quote": "we reduced the temporal delay between excitation and inhibition in the gating group by injecting a small depolarizing control pulse into the inhibitory neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E26",
+          "page": 3,
+          "quote": "As a result, the gate closed: the response in the gate group fell below the separatrix, causing activity in the receiver group to fade",
+          "status": "matched"
+        },
+        {
+          "id": "E27",
+          "page": 4,
+          "quote": "we applied a hyperpolarizing (rather than depolarizing) control pulse to the inhibitory neurons, thereby delaying or even suppressing their spiking activity",
+          "status": "matched"
+        },
+        {
+          "id": "E28",
+          "page": 4,
+          "quote": "the gate response was weak and fell below the separatrix",
+          "status": "matched"
+        },
+        {
+          "id": "E29",
+          "page": 4,
+          "quote": "Consequently, the response in the receiver group was indistinguishable from the background network activity",
+          "status": "matched"
+        },
+        {
+          "id": "E30",
+          "page": 4,
+          "quote": "resulted in a monotonic increase in both",
+          "status": "matched"
+        },
+        {
+          "id": "E31",
+          "page": 4,
+          "quote": "signal propagation became more reliable, as expressed in a reduction in trial-by-trial variability in the receiver group",
+          "status": "matched"
+        },
+        {
+          "id": "E32",
+          "page": 4,
+          "quote": "remained unchanged when synapses were modeled as current transients",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "主张二：两种门控作用在不同成分上——支持，但 Fig. 4b 的表述需谨慎",
+      "claim": "作者主张 amplitude gating 控制持续成分、temporal gating 控制瞬变成分，二者合用可控制任意时间轮廓。这一主张与 Fig. 4a、4b 的双变量扫描一致，是本文最值得引用的对照结果。需要注意 Fig. 4b 图注中的一处措辞：持续响应对 τ_eff 不随抑制增益变化，说明 τ_eff 不能门控持续成分——这与主张同向而非冲突，但常被读成「抑制增益不影响持续响应」，实际含义是抑制增益的作用不依赖 τ_eff。差异类型为一致，范围上的限定是：两个门控变量在本文中都被当作全局作用于整个 gate 组的旋钮，没有考察按目标通路、按时间窗或按输入强度的局部调制。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E40",
+          "page": 5,
+          "quote": "The amplitude gating mechanism was implemented by varying the strength of the inhibition in the gate group",
+          "status": "matched"
+        },
+        {
+          "id": "E41",
+          "page": 5,
+          "quote": "Thus, we define the inhibitory gain factor as",
+          "status": "matched"
+        },
+        {
+          "id": "E42",
+          "page": 5,
+          "quote": "the inhibitory gain factor was 2",
+          "status": "matched"
+        },
+        {
+          "id": "E43",
+          "page": 5,
+          "quote": "gates blocked both the transient and the tonic component in the gate group",
+          "status": "matched"
+        },
+        {
+          "id": "E44",
+          "page": 6,
+          "quote": "allowed only the onset transient to induce activity in the gate group",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "主张三：amplitude gating 关不住瞬变——方向一致，但属于自我修正而非独立检验",
+      "claim": "作者主张基于 detailed balance 的门控无法控制持续活动以外成分的瞬变，理由是瞬变快到能在延迟抑制窗口形成之前通过。这一观察在本文模型内是直接的：默认平衡状态下 onset 瞬变与相关瞬变都传播到了 receiver 组。但需要如实指出其证据地位：本文批评的是 Vogels 与 Abbott 2009，而批评与被批评出自同一研究纲领的延续工作，作者并未在独立模型或实验上复核 P2 的结论。因此这条应作为「同一作者群对前作边界的自我修正」来引用，而不是第三方独立验证。差异类型为范围不同——它把 P2 的机制限定在持续成分上，而不是否定 P2 的全部结论。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E06",
+          "page": 1,
+          "quote": "it fails to control activity transients on a timescale of up to a few tens of milliseconds",
+          "status": "matched"
+        },
+        {
+          "id": "E07",
+          "page": 1,
+          "quote": "When combined with excitation-inhibition balance, temporal gating constitutes a powerful mechanism",
+          "status": "matched"
+        },
+        {
+          "id": "E34",
+          "page": 4,
+          "quote": "In the default state of the gate group, with balanced excitation and inhibition, the onset transient propagated to the receiver group, whereas the tonic part of the input was blocked",
+          "status": "matched"
+        },
+        {
+          "id": "E35",
+          "page": 5,
+          "quote": "signal transients reflecting the spike correlations propagated uninhibited",
+          "status": "matched"
+        },
+        {
+          "id": "E36",
+          "page": 5,
+          "quote": "reducing the delay between excitation and inhibition at the gate group provided an effective control over the propagation of signal transients",
+          "status": "matched"
+        },
+        {
+          "id": "E37",
+          "page": 5,
+          "quote": "Both types of transients were fast enough to pass before the delayed feedforward inhibition could quench them",
+          "status": "matched"
+        },
+        {
+          "id": "E56",
+          "page": 7,
+          "quote": "This gating strategy, however, is only effective in controlling the propagation of tonic components of neuronal activity",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "最强证据、最薄弱连接与两处需要警惕之处",
+      "claim": "全文最强的证据是 Fig. 4 的双变量正交扫描：它用两个互相独立的自变量去分离两种成分，一次实验就同时给出了「幅度门控管持续、时间门控管瞬变」和「两个门同时开时两者都通过」，这是机制层面的强证据。最薄弱的连接出现在图 3 与图 5：这两处的关键陈述都没有误差条或重复次数，而作者自己在正文中承认只用了极少量配置（例如 Fig. 1–3 全部使用同一个抑制增益因子 2），因此这些结果目前是单点观察而非范围结论。第一处需要警惕的是术语：本文的 amplitude gating 通过改 J_EI/J_EE 这一增益比实现，而 P1 已证明对整合放电神经元单纯提高增益相当于同等放大全部传入突触、不具备通路选择性，两文的「gain」并非同一操作，跨文引用时不能直接等同。第二处是因果归因：τ_eff 的改变必然同时改变 gate 组兴奋神经元接收到的抑制性输入电导总量与时序，本文只把效应归因于时序，未做把总抑制电荷或平均抑制电导固定、只改变其时间分散度的对照，这是最直接的一个未排除的替代解释。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E45",
+          "page": 6,
+          "quote": "the weaker feedforward inhibition could not balance the direct excitation during the tonic phase",
+          "status": "matched"
+        },
+        {
+          "id": "E46",
+          "page": 6,
+          "quote": "the inputs from the sender group arrived synchronously, activating the inhibitory neurons in the gate group simultaneously, thereby providing sufficient balancing inhibition for the temporal gating to function and block the transient",
+          "status": "matched"
+        },
+        {
+          "id": "E47",
+          "page": 6,
+          "quote": "as a gating variable may result in an attenuated response in the receiver group",
+          "status": "matched"
+        },
+        {
+          "id": "E48",
+          "page": 6,
+          "quote": "shows the scheme of two signal paths, embedded in a recurrent random network",
+          "status": "matched"
+        },
+        {
+          "id": "E51",
+          "page": 6,
+          "quote": "indicate that the receiver group output is more similar to the input signal",
+          "status": "matched"
+        },
+        {
+          "id": "E52",
+          "page": 6,
+          "quote": "both signals propagated and the response of the receiver group was equally correlated to both input signals",
+          "status": "matched"
+        },
+        {
+          "id": "E57",
+          "page": 7,
+          "quote": "the mechanism fails in gating transients that are fast enough to pass the small time window, induced by the lagging inhibition, i.e., in the range of some tens of milliseconds",
+          "status": "matched"
+        },
+        {
+          "id": "E58",
+          "page": 7,
+          "quote": "The temporal gating mechanism proposed here extends this idea by changing the delay between excitation and inhibition",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "title": "替代解释一：效应可能来自抑制总量而非 E/I 时序",
+      "claim": "机制上，把抑制延迟提前实际上也改变了 gate 组兴奋神经元在整个窗口内累积到的抑制性输入。预期现象是：若效应源于抑制总量而非时序，那么保持抑制的总量与平均电导不变、只把抑制的时间分散度改变（如把同数量的抑制输入集中到更窄或更宽的时间窗内），仍应得到同样的门控效果。区分检验是在固定抑制脉冲数与平均抑制电导的条件下扫描其时间分散度，看 τ_eff 与门控阈值的关系是否保持。当前证据是否排除：未排除。本文没有做这一对照，只报告了改变抑制延迟的扫描。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E25",
+          "page": 3,
+          "quote": "we reduced the temporal delay between excitation and inhibition in the gating group by injecting a small depolarizing control pulse into the inhibitory neurons",
+          "status": "matched"
+        },
+        {
+          "id": "E28",
+          "page": 4,
+          "quote": "the gate response was weak and fell below the separatrix",
+          "status": "matched"
+        },
+        {
+          "id": "E30",
+          "page": 4,
+          "quote": "resulted in a monotonic increase in both",
+          "status": "matched"
+        },
+        {
+          "id": "E57",
+          "page": 7,
+          "quote": "the mechanism fails in gating transients that are fast enough to pass the small time window, induced by the lagging inhibition, i.e., in the range of some tens of milliseconds",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "title": "替代解释二：分离可能来自刺激同步性而非门控机制本身",
+      "claim": "机制上，两条通路的刺激若在时间上并不真正独立，共享的抑制神经元与共用的 gate 组兴奋神经元就足以产生「选择」的外观。预期现象是：若选择性来自刺激重叠或共享元件而非 τ_eff 的差异，那么把两条刺激的时序进一步错开、或把 gate 组的两条抑制输入改为完全分离，Δσ 的正负区间会显著变化甚至消失。区分检验是做一个正交对照——固定 τ_eff 差异而改变两条刺激的相对时序与共享程度。当前证据是否排除：未排除。作者自己指出两条通路可能共享少部分抑制神经元，且调 S_X 所需的 τ_eff_X 依赖于 τ_eff_Y，这一依赖本身就提示两条通路并未真正独立。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E48",
+          "page": 6,
+          "quote": "shows the scheme of two signal paths, embedded in a recurrent random network",
+          "status": "matched"
+        },
+        {
+          "id": "E51",
+          "page": 6,
+          "quote": "indicate that the receiver group output is more similar to the input signal",
+          "status": "matched"
+        },
+        {
+          "id": "E52",
+          "page": 6,
+          "quote": "both signals propagated and the response of the receiver group was equally correlated to both input signals",
+          "status": "matched"
+        },
+        {
+          "id": "E53",
+          "page": 6,
+          "quote": "the scenario is evidently not suitable for action selection",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "title": "作者自陈的适用边界，以及与 AI 检验建议的区分",
+      "claim": "作者在讨论中主动划定了三条边界，都应随引用一并保留。第一，时序门控最有效于瞬变接近分界线的情形；若瞬变靠近稳定不动点、或过于接近背景涨落，时序门控可能不再有效。第二，时序门控排除了无瞬变的持续活动的传播，因此它本身不是一个更通用的门，价值只在与幅度门控合用时成立。第三，作者指出所需硬件相当通用、不限于特定脑区，且所用延迟值落在在体测量范围内，但同时明确表示这类门控在决策与动作选择中的作用目前只有初步的实验线索，尚未有更直接的检验。AI 检验建议与作者未来工作是两回事：作者列出的未来工作包括引入短时程可塑性突触以动态调制 E/I 平衡、以及用光遗传技术在体内高可控地激活或失活特定神经元群来检验这一提议；AI 另建议的检验则是上面两条替代解释对应的对照，以及在按通路分别设定 τ_eff 的设定下检验选择性是否随共享程度变化。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E59",
+          "page": 7,
+          "quote": "The delayed correlated inhibition in our model was induced by disynaptic inhibition, a connectivity pattern observed ubiquitously in the CNS",
+          "status": "matched"
+        },
+        {
+          "id": "E60",
+          "page": 8,
+          "quote": "is most effective when the activity transients are close to the separatrix",
+          "status": "matched"
+        },
+        {
+          "id": "E61",
+          "page": 8,
+          "quote": "temporal gating may not be as effective",
+          "status": "matched"
+        },
+        {
+          "id": "E62",
+          "page": 8,
+          "quote": "the delay values used here were well within the range measured experimentally",
+          "status": "matched"
+        },
+        {
+          "id": "E63",
+          "page": 8,
+          "quote": "dynamic modulation of excitation-inhibition balance can be achieved with depressing or facilitating synapses",
+          "status": "matched"
+        },
+        {
+          "id": "E64",
+          "page": 8,
+          "quote": "However, more direct tests of this type of gating mechanism have not been performed thus far",
+          "status": "matched"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "title": "使用决定：可引用的部分、必须附带的前提与最关键的待补材料",
+      "claim": "适合直接引用的有三项。其一，机制层面：τ_eff 是前馈通路门控的一个有效控制变量，作用点是同步活动状态空间中的分界线位置，关闭与打开两个方向都有证据。其二，对照层面：幅度门控与时间门控作用在活动的不同成分上，这一正交性有双变量扫描支撑，是本文最硬的结论。其三，边界层面：只靠 detailed balance 的门控关不住几十毫秒量级的活动瞬变，适合作为 P2 的适用条件一并引用。必须附带的前提有四条：门控操作由外部注入控制脉冲实现，皮层中 τ_eff 的调制只是讨论中的可能性；Fig. 3 至 Fig. 5 的结果未报告误差条；支持突触模型无关性的补充材料 Fig. S1 未随本文提供；Δσ 接近零同时对应全通与全断，单看该指标会误读。最关键的待补材料有三项：Fig. S1 的实际内容、三组刺激在多种参数配置下的重复统计、以及在体实验中是否存在可主动调节 E/I 延迟的机制证据。就模型使用而言，本文提供的是一个可以直接实现的最小机制——不改权重、不改连接，只改延迟——这使它适合作为增益调制之外的第二种门控候选加入现有模型，与 P1 的「增益调制不足以传播信号」和 P2 的「幅度门控漏过瞬变」形成一条完整的门控机制谱系。",
+      "layer": "analysis",
+      "references": [
+        {
+          "id": "E20",
+          "page": 2,
+          "quote": "these delays do not influence the dynamics of the embedding network and the embedded feedforward network",
+          "status": "matched"
+        },
+        {
+          "id": "E21",
+          "page": 2,
+          "quote": "In the default state of the signal path, the delay of inhibitory synapses onto the excitatory neurons within a group was set to 2 ms",
+          "status": "matched"
+        },
+        {
+          "id": "E22",
+          "page": 2,
+          "quote": "The number of synapses from the presynaptic neurons to the sender group was set to 60",
+          "status": "matched"
+        },
+        {
+          "id": "E32",
+          "page": 4,
+          "quote": "remained unchanged when synapses were modeled as current transients",
+          "status": "matched"
+        },
+        {
+          "id": "E34",
+          "page": 4,
+          "quote": "In the default state of the gate group, with balanced excitation and inhibition, the onset transient propagated to the receiver group, whereas the tonic part of the input was blocked",
+          "status": "matched"
+        },
+        {
+          "id": "E37",
+          "page": 5,
+          "quote": "Both types of transients were fast enough to pass before the delayed feedforward inhibition could quench them",
+          "status": "matched"
+        },
+        {
+          "id": "E40",
+          "page": 5,
+          "quote": "The amplitude gating mechanism was implemented by varying the strength of the inhibition in the gate group",
+          "status": "matched"
+        },
+        {
+          "id": "E41",
+          "page": 5,
+          "quote": "Thus, we define the inhibitory gain factor as",
+          "status": "matched"
+        },
+        {
+          "id": "E44",
+          "page": 6,
+          "quote": "allowed only the onset transient to induce activity in the gate group",
+          "status": "matched"
+        },
+        {
+          "id": "E51",
+          "page": 6,
+          "quote": "indicate that the receiver group output is more similar to the input signal",
+          "status": "matched"
+        },
+        {
+          "id": "E56",
+          "page": 7,
+          "quote": "This gating strategy, however, is only effective in controlling the propagation of tonic components of neuronal activity",
+          "status": "matched"
+        },
+        {
+          "id": "E59",
+          "page": 7,
+          "quote": "The delayed correlated inhibition in our model was induced by disynaptic inhibition, a connectivity pattern observed ubiquitously in the CNS",
+          "status": "matched"
+        },
+        {
+          "id": "E62",
+          "page": 8,
+          "quote": "the delay values used here were well within the range measured experimentally",
+          "status": "matched"
+        },
+        {
+          "id": "E65",
+          "page": 8,
+          "quote": "could be used to test our proposal of temporal gating in vivo in a highly controlled manner",
+          "status": "matched"
+        }
+      ]
+    }
+  ]
+}

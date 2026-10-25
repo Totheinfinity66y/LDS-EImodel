@@ -17,6 +17,40 @@
 
 这些区分的入门依据是 Silver（2010，R2）与 Sherman & Guillery（1998，F1）。Gating 是功能描述，disinhibition 是电路机制，gain modulation 是输入—输出变换；三者可重叠，但不是同义词。
 
+## 0. 机制卡整理进度
+
+每篇的 `artifacts/papers/<编号>_<作者-年份-简称>/reading.json` 为卡片源文件，`reader/` 为构建产物（额外含每条标注在 PDF 上的矩形坐标 `rects`／`anchor_status`）。改完卡片必须重跑 `python tools/build_paper.py <该目录>`，否则 `reader/` 会停留在旧版本——这一点已经发生过一次（P1 卡片更新后 `reader/` 仍含旧标题与旧的 refs 计数）。
+
+已整理并完成构建（10 篇）：
+
+| 编号 | 标注数 | 备注 |
+| --- | --- | --- |
+| R1 Salinas & Sejnowski 2001 | 17 | |
+| R2 Silver 2010 | 17 | |
+| R3 Ferguson & Cardin 2020 | 15 | |
+| R4 Wang & Yang 2018 | 15 | |
+| G1 Chance et al. 2002 | 39 | |
+| G2 Prescott & De Koninck 2003 | 25 | |
+| P1 Vogels & Abbott 2005 | 74 | 2026-10-22 完成并重建 |
+| P2 Vogels & Abbott 2009 | 50 | 最高优先级 |
+| P3 Kremkow et al. 2010 | 65 | |
+| C1 Yang et al. 2016 | 92 | 最高优先级 |
+
+待整理（8 篇，PDF 与正文文本已就位）：
+
+| 编号 | 清单中的定位 |
+| --- | --- |
+| G3 Rothman et al. 2009 | 突触抑郁实现增益控制 |
+| G4 Reynolds & Heeger 2009 | 注意归一化模型 |
+| F1 Sherman & Guillery 1998 | driver／modulator 分类起点 |
+| F2 Pi et al. 2013 | VIP 去抑制的实验依据 |
+| F3 Lee et al. 2013 | 跨区去抑制与运动整合 |
+| F4 Wilson et al. 2012 | 除性与减性抑制操控 |
+| F5 El-Boustani & Sur 2014 | 细胞特异抑制的响应依赖动力学 |
+| C2 Mante et al. 2013 | 递归选择与输入门控的比较 |
+
+尚未整理的 8 篇里，F1、F2、C2 都在清单的「最小核心路线」内，G3、G4 属于第二阶段的机制扩展。
+
 ```mermaid
 flowchart LR
     S[携带内容的输入] --> E[兴奋性接收群]

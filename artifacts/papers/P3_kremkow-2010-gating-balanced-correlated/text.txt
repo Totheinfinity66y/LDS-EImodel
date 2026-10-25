@@ -1,0 +1,945 @@
+
+===== PDF PAGE 1 =====
+Behavioral/Systems/Cognitive
+Gating of Signal Propagation in Spiking Neural Networks by
+Balanced and Correlated Excitation and Inhibition
+Jens Kremkow, Ad Aertsen, and Arvind Kumar
+Bernstein Center Freiburg, Neurobiology and Biophysics, Faculty of Biology, University of Freiburg, 79104 Freiburg, Germany
+Both ongoing and natural stimulus driven neuronal activity are dominated by transients. Selective gating of these transients is
+mandatory for proper brain function and may, in fact, form the basis of millisecond-fast decision making and action selection.
+Here we propose that neuronal networks may exploit timing differences between correlated excitation and inhibition (temporal
+gating) to control the propagation of spiking activity transients. When combined with excitation–inhibition balance, temporal
+gating constitutes a powerful mechanism to control the propagation of mixtures of transient and tonic neural activity components.
+Introduction
+Appropriate action selection is one of the fundamental problems
+that the brain needs to solve in its interaction with the environ-
+ment. This problem is even enhanced by the intrinsically parallel
+architecture of the brain. A mechanism based on winner-take-all
+dynamics is often suggested for this purpose (Ermentrout, 1992).
+However, winner-take-all dynamics require strong recurrent
+inhibition, which may not be available in every brain region
+(Tepper et al., 2004). Moreover, winner-take-all dynamics are
+typically slow if the competing signals are of comparable strength,
+and may even result in unpredictable responses in the presence of
+transient synchrony within and among the competing inputs
+(Ermentrout, 1992). Another approach to action selection could
+be based on the gating of signals, such that only one (or few)
+effectively propagate to the next processing stage. Thus, recently
+Vogels and Abbott (2009) demonstrated that detailed balance of
+excitation and inhibition (amplitude gating) can efficiently
+gate the propagation of firing rates. However, while this mech-
+anism allows for a rapid selection among competing rate in-
+puts, it fails to control activity transients on a timescale of up
+to a few tens of milliseconds [Vogels and Abbott (2009), their
+Fig. 3f]. In a natural stimulus environment, such activity tran-
+sients frequently occur as a consequence of stimulus-driven
+changes in firing rates or by the emergence of correlations in
+the network (Buracas et al., 1998; Bar-Yosef and Nelken, 2007;
+Butts et al., 2007; Hroma´dka et al., 2008; Haider et al., 2010).
+Therefore, reliable gating of activity transients is a prerequisite
+of proper brain function.
+Here we propose an alternative gating mechanism that ex-
+ploits temporal differences between correlated excitation and in-
+hibition (Okun and Lampl, 2008; Gentet et al., 2010). We
+show that small differences between the timing of excitation
+and inhibition (referred to temporal gating from hereon) can
+act as a modulator of neuronal integration time and, thereby,
+serve as a highly selective gate for signal transients. The pro-
+posed mechanism allows for both gating at a millisecond time-
+scale and reliable control of onset transients and correlated
+rate inputs. When combined with amplitude gating, temporal
+gating constitutes a powerful mechanism to control the prop-
+agation of mixtures of transient and tonic neural activity
+components.
+Materials and Methods
+Models
+Neurons
+The neurons in the network were modeled as leaky integrate-and-fire
+neurons, with the subthreshold dynamics of the membrane potential
+Vi(t) in neuron i described by the following equation:
+C
+d
+dt Vit  GrestVit  Vrest  Ii
+syn ,
+where Isyn
+i
+is the total synaptic input current into neuron i, and C and
+Grest denote the passive electrical properties of its membrane at rest
+(Vrest). When the membrane potential reached a fixed spike threshold
+Vth above rest, a spike was emitted, the membrane potential was reset to
+its resting value, and synaptic integration was halted for 2 ms, mimicking
+the refractory period in real neurons. The parameters used in the simu-
+lations were as follows: C  290 pF, Grest  29 nS, Vrest  70 mV, and
+Vth  57 mV (Destexhe et al., 1998; Muller et al., 2007).
+Network
+We simulated a network of 28,125 neurons, with 22,500 excitatory and
+5625 inhibitory neurons (ratio 4:1). The excitatory neurons were ar-
+ranged on a Cartesian grid of 150  150, the inhibitory neurons on a grid
+of 75  75. Both grids represented the same cortical space of 1  1 mm 2.
+To avoid boundary effects, the network was folded as a torus. The recur-
+rent network was sparsely connected with a connection probability of
+5% (Kexc3exc  1120, Kexc3inh  280, Kinh3exc  1120, Kinh3inh 
+280). As an exception to this rule, excitatory neurons that participated in
+the signal path received less than 5% connection from the background
+neurons, to maintain the same in-degree. The local connection probabil-
+Received July 26, 2010; revised Sept. 22, 2010; accepted Sept. 23, 2010.
+This work was supported by the German Federal Ministry of Education and Research (BMBF Grant 01GQ0420 to
+Bernstein Center for Computational Neuroscience Freiburg) and the 6th Research Framework Programme of the
+European Union (Grant 15879-FACETS). We thank Tim Vogels, Benjamin Staude, Ioannis Vlachos, Guillaume S.
+Masson, and Laurent U. Perrinet for helpful discussions.
+Correspondence should be addressed to Arvind Kumar at the above addresses. E-mail: arvind.kumar@
+biologie.uni-freiburg.de.
+DOI:10.1523/JNEUROSCI.3874-10.2010
+Copyright © 2010 the authors
+0270-6474/10/3015760-09$15.00/0
+15760 • The Journal of Neuroscience, November 24, 2010 • 30(47):15760–15768
+
+===== PDF PAGE 2 =====
+ity was described as a function of their cell body distance using a Gaussian
+profile (Hellwig, 2000). The width of the Gaussian describing the con-
+nection probability e was set to 0.6 mm for the excitatory and i  0.1
+mm for the inhibitory connections (Stepanyants et al., 2008) (Fig. 1a). In
+addition to the local connections from within the network, each neuron
+received excitatory connections from outside, mimicking both long-
+range connections within the same cortical area and input from other
+areas in cortex (Braitenberg and Schu¨z, 1991; Kumar et al., 2008a). The
+external inputs were modeled as uncorrelated Poisson-type spike trains.
+The rate and strength of external inputs (1500 excitatory synapses per
+neuron, each at 2 Hz) were adjusted to obtain a low-firing-rate (3
+Hz), asynchronous (pairwise correlation 	 0.01), and irregular activity
+state in the network (Brunel, 2000; Kumar et al., 2008b).
+Synapses
+Synaptic inputs were modeled as transient conductance changes, using
+exponential functions with exc  1.5 ms and inh  10 ms (Kuhn et al.,
+2004; Muller et al., 2007). Excitatory and inhibitory synaptic delays in the
+embedding network were set to 2 ms. The weights (peak conductance) of
+the excitatory synapses targeting excitatory neurons (JEE) were set to 0.5
+nS, such that a postsynaptic potential of 0.15 mV was elicited at rest
+(Matsumura et al., 1996; Bruno and Sakmann, 2006; Kumar et al.,
+2008a). The weight of excitatory synapses targeting inhibitory neurons
+(JEI) was set to 1 nS (Cruikshank et al., 2007; Kremkow et al., 2010). The
+synaptic weights of all inhibitory synapses (JII, JIE) were set to a 0.5 nS
+conductance value. This set of synaptic strengths and external input (see
+above) generated both a realistic effective membrane time constant of 5
+ms (Anderson et al., 2000; Destexhe et al., 2003; Le´ger et al., 2005) and a
+realistic low-firing-rate, asynchronous-irregular network activity regime
+(Brunel, 2000; Kumar et al., 2008b; Ecker et al., 2010).
+Embedding of a feedforward network as signal path
+To construct a signal path, we embedded a feedforward network, con-
+taining three successive groups of neurons (sender, gate, and receiver
+groups), into the recurrent network. The sender group was composed
+solely of 100 excitatory neurons, whereas the gate and receiver group
+contained 100 excitatory and 25 inhibitory neurons each (Fig. 1b). The
+inhibitory neurons provided the balancing inhibition in the signal path
+and controlled the effective integration time of the excitatory neurons.
+The three groups were spatially separated to avoid cross talk between
+groups (Kumar et al., 2008a) (Fig. 1b). The neurons constituting a group
+were randomly chosen from a local pool of 300 excitatory and 75 inhib-
+itory neurons. The center of the neuron pool defined the physical loca-
+tion of the group in the network. Each neuron in the signal path received
+convergent inputs from 60 randomly selected excitatory neurons of the
+preceding group. The neurons in the gate and receiver groups received
+excitatory synapses from 1060 neurons (
+5%) of the background net-
+work to maintain uniform in-degree in the network. The delay of exci-
+tatory synapses in the signal path was set to 5 ms (Aertsen et al., 1996;
+Diesmann et al., 1999). This choice of the excitatory delays of 5 ms is
+somewhat arbitrary. These delays are supposed to mimic the latency
+between different neighboring brain regions, and such delays can be in
+the order of up to 10 ms. Further, we point out that these delays do not
+influence the dynamics of the embedding network and the embedded
+feedforward network, and can be reduced to any arbitrary value without
+influencing the gating. In the default state of the signal path, the delay of
+inhibitory synapses onto the excitatory neurons within a group was set to
+2 ms (Cruikshank et al., 2007; Kremkow et al., 2010).
+Embedding multiple signal paths
+To construct two signal paths that merged in the gate group, we embed-
+ded the first signal path as described above. The sender group of the
+second signal path was then added. It was spatially separated from the
+first sender group to avoid cross talk. The excitatory neurons in the gate
+and receiver groups were common in both signal paths. The inhibitory
+neurons of the gate group in both signal paths were randomly chosen
+from a local pool of 75 inhibitory neurons. Thus, both signal paths might
+share a small fraction of inhibitory neurons in the gate group (see Fig. 5a).
+Stimuli
+We used three different stimulus classes to study signal propagation and
+gating in the signal path.
+Pulse packet input. The input to the sender group was a volley of spikes
+withspiketimesdrawnfromaGaussiandistributionofwidth(Aertsenet
+al., 1996; Diesmann et al., 1999). The number of synapses from the pre-
+synaptic neurons to the sender group was set to 60, the same as within the
+signal path.
+Uncorrelated rate input. We used a Poisson process to stimulate the
+sender group with uncorrelated firing rate input (Vogels and Abbott,
+2009). The onset time of the stimulus was set to 500 ms to mimic a
+sudden activation of the signal path (Butts et al., 2007). The rate of the
+Poison process was set to 200 Hz to induce a strong onset transient.
+Correlated rate input. To introduce correlation in the firing rate input,
+we used the multiple-interaction process (MIP) (Kuhn et al., 2003). This
+process introduces correlations by copying spikes from a Poisson
+“mother process” into a desired number of “children” processes. The
+copy probability (c) defines the correlation among the children pro-
+cesses. As in the uncorrelated rate input, the onset time constant of the
+correlated rate stimulus was set to 500 ms. The rate of the MIP popula-
+tion was set to 20 Hz to illustrate that even at low firing rates, spike
+correlations [c  0.5, e.g. (see Fig. 3d)] could induce strong transients.
+Data analysis
+Event characterization
+To characterize the spiking activity of each group and, thus, the  and 
+of the pulse packet sent to the next group, we measured “events,” i.e.,
+distinct, short bursts of spikes in the peristimulus time histogram
+(PSTH) of all excitatory neurons in a group. The spike count of all exci-
+tatory neurons in an event described the response strength . Likewise, 
+described the temporal spread of the spike times, that is, the time differ-
+ence between the start and end of the “event.” Thus, the propagation of
+activity in the signal path was determined by the response of the three
+groups of the signal path, quantified by  and .
+Signal propagation
+To determine whether a signal, composed of multiple pulse packets,
+could successfully propagate from the sender to the receiver, we mea-
+sured the similarity between the spiking activities in both groups. The
+similarity was calculated by cross-correlating the PSTHs of the excitatory
+neurons in both groups. In case of successful propagation, the signal in
+the receiver group should have a similar temporal sequence of peaks in
+the PSTH. However, due to the synaptic delay in the signal path, this
+sequence would be shifted in time. Therefore, when calculating the cross-
+correlation between sender and receiver, we accounted for this time shift.
+Simulation tools
+All network simulations were written in Python (http://www.python.org)
+using PyNN (Davison et al., 2008) (http://neuralensemble.org/trac/PyNN)
+as interface to the simulation environment NEST (Morrison et al.,
+2005; Gewaltig and Diesmann, 2007; Eppler et al., 2008) (http://www.
+nest-initiative.org). The dynamical equations were integrated at a fixed tem-
+poralresolutionof0.1ms.Simulationmanagementwasperformedusingthe
+Python package NeuroTools (http://neuralensemble.org/trac/NeuroTools).
+Simulation data were analyzed in Python using the scientific libraries SciPy
+(http://www.scipy.org) and NumPy (http://numpy.scipy.org) and visual-
+ized using the plotting library Matplotlib (http://matplotlib.sourceforge.
+net).
+Results
+To systematically study the concept of temporal gating, we em-
+bedded a signal path in a large-scale recurrent cortical network
+model (Fig. 1a,b). The signal path was a feedforward network
+consisting of three successive groups of neurons. The first group,
+composed of excitatory neurons activated by the stimulus, is re-
+ferred to as the sender. The second and third groups contained
+both excitatory and inhibitory neurons, with the inhibitory neu-
+rons providing disynaptic inhibition to the excitatory neurons
+Kremkow et al. • Gating of Spiking Activity Propagation
+J. Neurosci., November 24, 2010 • 30(47):15760–15768 • 15761
+
+===== PDF PAGE 3 =====
+within the same group. The third group is referred to as receiver,
+whereas the second group, which is in a strategic position to influ-
+ence propagation from sender to receiver, is referred to as the gate
+(Fig. 1b). However, the gating mechanism is flexible and in a feed-
+forward network with more than three groups, any group can be
+considered as a gate group between its preceding and succeeding
+partner groups. The embedding network was tuned into an
+asynchronous-irregularstatetoproviderealisticbackgroundactivity
+(Kumar et al., 2008a) (cf. Materials and Methods).
+Temporal gating of signal propagation
+To illustrate the mechanism of temporal gating, we stimulated
+the sender group with a volley of spikes (pulse packet; cf. Mate-
+rials and Methods), with  spike times drawn from a Gaussian
+distribution of width .
+We first considered the propagation of a synchronous stimu-
+lus S1 (small ). In the default state of the signal path (cf. Mate-
+rials and Methods), S1 generated a transient response in the
+sender, which successfully propagated through the gate to the
+receiver (Fig. 1c). This propagation can be described in terms of
+the synfire attractor, a defining feature of feedforward network
+dynamics (Diesmann et al., 1999; Kumar et al., 2008a, 2010;
+Kremkow et al., 2010), with the fate of signal propagation being
+determined by the properties of the pulse packet stimulus. The
+(, ) state space is subdivided by a separatrix (schematically
+shown in Fig. 2a, blue line). If the pulse packet starts above the
+separatrix (class P stimulus), the signal converges into a fixed
+point (FP) and propagates in a stable manner (Figs. 1c, 2a). If, by
+contrast, the pulse packet starts below the separatrix (class F stim-
+ulus), the signal progressively dies out, indicating failure to prop-
+agate (Figs. 1d, 2a). Thus, the location of the separatrix is the
+critical parameter that controls the propagation of a stimulus
+(Diesmann et al., 1999; Kumar et al., 2008a, 2010; Kremkow et al.,
+2010). Consequently, altering the location of the separatrix could
+change a class P stimulus into a class F stimulus (or vice versa),
+therebyprovidingasimplemechanismforgatingthepropagationof
+moreorlesstransientspikingactivity(Fig.2a).Variouspropertiesof
+thefeedforwardnetwork,suchasgroupsize,connectionprobability,
+and weights determine the location of the separatrix in the (, )
+space, which, however, can also be modulated by the dynamical
+properties of the feedforward network, such as noise level of the
+embedding background activity (Diesmann et al., 1999; Gewaltig et
+al., 2001). Furthermore, we recently showed that the delay between
+excitation and inhibition within one group changes the slope of the
+separatrixbyeffectivelyalteringtheintegrationtime(t)oftheneu-
+rons (Kremkow et al., 2010). Interestingly, recent data from in vivo
+measurementsofthedelaybetweenexcitationandinhibition(Okun
+and Lampl, 2008) are in the right range to alter the slope of the
+separatrixinanappreciableway.Severalbiologicallyplausiblemech-
+anisms could lead to dynamic variations in the excitation/inhibition
+delay and, thereby, to associated modulations of t. For instance,
+neuromodulators could change t by differentially altering neuro-
+nal excitability or synaptic strengths (Kruglikov and Rudy, 2008;
+Antal et al., 2010). Similarly, stimulus properties could introduce
+variations in t (Zhang et al., 2003; Wilent and Contreras, 2005).
+We exploited the control over the delay between excitation/
+inhibition to close the gate, i.e., to block the propagation of the
+S1-type stimulus as shown in Figure 1c. Thus, we reduced the
+temporal delay between excitation and inhibition in the gating
+group by injecting a small depolarizing control pulse into the
+inhibitory neurons. As a result, the gate closed: the response in
+the gate group fell below the separatrix, causing activity in the
+receiver group to fade (Figs. 1e, 2a). To further explore the tem-
+poral gating mechanism, we systematically varied t by altering
+the inhibitory synaptic delay, while keeping the excitatory delay
+fixed. For different values of t, Figure 2b shows  and  for
+Figure1.
+Temporalgatingofspikingactivitybydelayedcorrelationbetweenexcitationandinhibition.a,Schemeofcorticalnetworkmodel.Twenty-eightthousand,onehundredtwenty-five
+neurons [80% excitatory (‚) and 20% inhibitory (E)] were arranged as a two-dimensional sheet. Space constants of excitatory and inhibitor neurons are shown as red and blue shaded
+regions, respectively. b, A signal path (sender, gate, receiver) was embedded in the network. The sender neuron group transmitted an input signal via the gate group toward the receiver
+group. A depolarizing or hyperpolarizing input to the gate was used as control signal. c, d, Top, Spiking activity of the sender, gate, and receiver groups. Bottom, Excitatory and inhibitory
+synaptic conductances (Gexc, Ginh) for a representative excitatory neuron in the gate group. c, A strong (  60), synchronous (  3.5 ms) signal S1 propagated through the gating
+group and successfully activated the receiver group. d, By contrast, a less synchronous (  7 ms) signal S2 failed to propagate. e, Propagation of S1 could be blocked by advancing
+inhibitory spiking in the gate group, thereby reducing t of the excitatory neurons. f, Propagation of S2 could be rescued by delaying (or abolishing) inhibitory spiking in the gate group,
+thereby increasing t of the excitatory neurons.
+15762 • J. Neurosci., November 24, 2010 • 30(47):15760–15768
+Kremkow et al. • Gating of Spiking Activity Propagation
+
+===== PDF PAGE 4 =====
+the three excitatory neuron groups in the signal path. For small
+integration time (t  1 ms in this example), the gate response
+was weak and fell below the separatrix. Consequently, the re-
+sponse in the receiver group was indistinguishable from the
+background network activity. However, increasing the integra-
+tion time (t 	 2 ms in this example) shifted the gate activity above
+the separatrix, inducing a strong response (high , small ) in the
+receiver group. The same mechanism can be used to open the gate,
+i.e., to facilitate propagation of class F stimuli, which would other-
+wise fail to propagate (Fig. 1f). To test this, we applied a hyperpolar-
+izing (rather than depolarizing) control pulse to the inhibitory
+neurons, thereby delaying or even suppressing their spiking activity.
+As a result, the integration time was increased, such that more exci-
+tatoryneuronsinthegategroupresponded.Itsactivitythereby rose
+above the separatrix and,hence,ensureda
+strong response (high , small ) in the re-
+ceiver group (Fig. 1f). A systematic increase
+in the integration time t of the gate neu-
+rons resulted in a monotonic increase in
+both  and  of the gate activity (Fig. 2c).
+Due to the synfire attractor, the activity of
+the receiver group was further synchro-
+nized.Notethat,incontrasttoFigure2b,the
+prolonged opening of the gate caused activ-
+ity in the gate to be higher than in the re-
+ceiver. Also, it is noteworthy that for
+increasing integration time (higher t), sig-
+nal propagation became more reliable, as
+expressed in a reduction in trial-by-trial
+variability in the receiver group (Fig. 2c,
+top panel).
+In summary, the sigmoidal relationship
+between t and the activity in the gate and
+receiver groups demonstrates the effective-
+ness of the temporal gating (Fig. 2b,c).
+As there is an ongoing debate (Kuhn et
+al.,2004;VogelsandAbbott,2005;Kumaret
+al., 2008a,b) on whether synapses in a point
+neuron model are best described by con-
+ductance transients (as done here) or cur-
+rent transients [the more common choice,
+e.g.,Brunel(2000)],weresimulatedthenet-
+work model with current-based synapses.
+The sigmoidal relationship between t and
+the activity in the gate and receiver groups
+remained unchanged when synapses were
+modeled as current transients (compare
+supplemental Fig. S1, available at www.
+jneurosci.org as supplemental material, and
+Fig.2b,c),demonstratingthatthe“temporal
+gating” does not depend on the choice of
+synapse or input activity model.
+Gating of signals with strong transients
+Next we tested whether temporal gating is
+also effective in controlling the propaga-
+tion of signal onset transients. Such signal
+onset transients arise when the input sig-
+nal is abruptly changed (Deger et al.,
+2009). To mimic sharp changes in the in-
+put, the sender group, we stimulated the
+sender group with Poisson-type spiking
+activity, starting at time t  500 ms (Fig.
+3a). In the default state of the gate group, with balanced excita-
+tion and inhibition, the onset transient propagated to the receiver
+group, whereas the tonic part of the input was blocked (Fig. 3b).
+The control of such transients, however, is critical because in a
+dynamic natural environment, such transients are likely to occur
+frequently (Buracas et al., 1998; Haider et al., 2010). In the default
+state of the gate, the effective integration time is large enough for
+the transients to elicit a response in the downstream neurons
+(gate group). Thus, an effective way to control the flow of tran-
+sients is to reduce the integration time of the downstream neu-
+rons (e.g., by temporal gating) (see Figs. 1, 2). Indeed, when the
+delay between excitation and inhibition in the gate group was
+reduced, while still keeping the overall excitation and inhibition
+in balance, it was possible to control the propagation of both the
+Figure2.
+Temporaldelaybetweenexcitationandinhibitioncontrolssignalgating.a,Schemeofthepulsepacketpropagation
+state space, which is subdivided by a separatrix (Diesmann et al., 1999) (blue line). If the pulse packet starts above the separatrix
+(S1), the signal converges into a fixed point (FP) and propagates in a stable manner (green trajectory). If, by contrast, the pulse
+packetstartsbelowtheseparatrix(S2),thesignalfailstopropagateandfadesintothebackground(Bkg.)(redtrajectory).Whenthe
+effective integration time t is reduced, the separatrix moves up (gray dotted line), thus blocking the propagation of S1 (gray
+trajectory). By contrast, when the integration time is increased, the separatrix moves down (black dotted line), thus allowing the
+propagation of S2 (black trajectory). b,  and  in sender, gate, and receiver groups for the S1 stimulus (class P) as a function of
+effective integration time (t). Error bars represent SD (n  20). In this example, S1 successfully propagates in the default state
+(t  2 ms). Further increase in t does not influence signal propagation. However, a small decrease in t (1 ms) suffices to
+completely block signal propagation. c, Same as b for stimulus S2 (class F). In this example, S2 does not propagate in the default
+state (t  2 ms). Propagation can be rescued by increasing t. Note that, in contrast to b, the prolonged opening of the gate
+causes activity in the gate to be higher than in the receiver. Also, for increasing integration time (larger t), signal propagation
+becomes more reliable, which is expressed as a reduction of trial-by-trial variability in the receiver group.
+Kremkow et al. • Gating of Spiking Activity Propagation
+J. Neurosci., November 24, 2010 • 30(47):15760–15768 • 15763
+
+===== PDF PAGE 5 =====
+stimulus transient and its tonic compo-
+nent (Fig. 3c). Note that in this particular
+example, when the gate is closed (Fig. 3c),
+only the inhibitory population in the gate
+group is active, while the activity of the
+excitatory neurons is completely sup-
+pressed by the balancing inhibitory input.
+Reducing the gain of the inhibitory neu-
+rons would result in a biologically more
+realistic residual spiking activity in the ex-
+citatory neurons in the gate group. Tran-
+sients in the spiking activity in neural
+systems may also arise due to spike time
+correlations among neurons (Alonso et
+al., 1996; Dan et al., 1998; Chen et al.,
+2006). The emergence of such correla-
+tions could be due to large-scale fluctua-
+tions in ongoing network activity (Arieli
+et al., 1996; Kenet et al., 2003) or stimulus-
+induced network activity (Bar-Yosef and
+Nelken, 2007; Alonso et al., 2008; Hro-
+ma´dka et al., 2008). To generate a signal
+composed of tonic and transient compo-
+nents, we used the MIP model (Kuhn et
+al., 2003) (Fig. 3d; cf. Materials and Meth-
+ods). Once again, when the sender group
+was stimulated by a MIP-type input sig-
+nal, the control of the activity was impre-
+cise and signal transients reflecting the
+spike correlations propagated uninhib-
+ited (Fig. 3e). However, reducing the delay
+between excitation and inhibition at the
+gate group provided an effective control
+over the propagation of signal transients
+(Fig. 3f). In summary, Figure 3, b and e,
+illustrates the limitations of the Vogels
+and Abbott mechanism in gating of both
+onset transients (Fig. 3b) and transients
+induced by correlations (Fig. 3e). Both
+types of transients were fast enough to
+pass before the delayed feedforward inhi-
+bition could quench them. By contrast,
+Figure 3, c and f, shows the improved effectiveness of the tempo-
+ral gating mechanism in controlling the propagation of these
+activity transients.
+Combining temporal and amplitude gating
+The effectiveness of temporal gating in controlling the propaga-
+tion of activity transients has its price: it precludes the propaga-
+tion of sustained (tonic) activity devoid of transients (Fig. 3c,f).
+While the importance of such sustained average neural activity
+can be argued, in view of the ubiquitous fluctuations in the on-
+going activity and dynamic natural environment, it is of general
+interest to know whether it is possible to do both, to control the
+flow of activity transients, while allowing tonic activity to propa-
+gate. Because temporal gating is most effective in controlling the
+propagation of activity transients, whereas detailed balance (or
+amplitude gating) can be used to control the propagation of tonic
+activity, a combination of the two might provide a general mech-
+anism to control the propagation of arbitrary neural activity pat-
+terns. Therefore, we examined whether a combination of temporal
+gating and amplitude gating would be possible within the same net-
+work.
+For this we stimulated the signal path with uncorrelated Pois-
+son activity, starting at time t  500 ms. This type of stimulus
+contains both a transient onset and a tonic phase, which makes it
+optimal for probing the effectiveness of both gating mechanisms.
+The amplitude gating mechanism was implemented by varying
+the strength of the inhibition in the gate group, thereby control-
+ling the balance of excitation and inhibition in the excitatory
+neurons of the gate group (Vogels and Abbott, 2009). To this end,
+we varied the synaptic strength from the excitatory neurons in the
+sender group onto the inhibitory population (JEI), while keeping
+the synaptic strength from the excitatory neurons onto the exci-
+tatory neurons (JEE) fixed. Thus, we define the inhibitory gain
+factor as JEI/JEE. In all examples shown so far (i.e., Figs. 1–3), the
+inhibitory gain factor was 2. This gain factor ensured an effective
+feedforward inhibition in the neurons of the gate group (cf. Ma-
+terials and Methods) (Cruikshank et al., 2007; Kremkow et al.,
+2010). Figure 4 shows the results of systematically varying both
+the degree of temporal gating and amplitude gating. Simulta-
+neous closing of both the temporal (t  2 ms) and amplitude
+(inhibitory gain  2) gates blocked both the transient and the
+tonic component in the gate group (Fig. 4a–c). Opening the tem-
+Figure3.
+Effectivenessofgatingtonicactivityandactivitytransients.a,Uncorrelatedratestimulusasinputtothesignalpath.
+b,Populationactivityintheexcitatory(top)andinhibitory(bottom)neuronsinthesignalpath.Inthedefaultstate(t2ms),
+gating by balancing excitation and inhibition successfully blocks propagation of the tonic component of the stimulus, but fails to
+block the stimulus onset transient. c, By reducing the effective integration time of the excitatory neurons (t  1 ms), temporal
+gating effectively blocks both the onset transient and the tonic stimulus component. d, Firing rate stimulus with transient input
+correlations. e, As in b, gating by balancing excitation and inhibition fails to block activity transients, here induced by transient
+input correlations. f, As in c, temporal gating effectively blocks activity transients.
+15764 • J. Neurosci., November 24, 2010 • 30(47):15760–15768
+Kremkow et al. • Gating of Spiking Activity Propagation
+
+===== PDF PAGE 6 =====
+poral gate (t  4 ms), while keeping the amplitude gate closed
+(inhibitory gain  2), allowed only the onset transient to induce
+activity in the gate group (Fig. 4a,b,d). These two examples, thus,
+show the effectivity of temporal gating at high inhibitory gain
+(compare Figs. 3 and 4c,d). By contrast, opening the amplitude
+gate (e.g., inhibitory gain  0.75) resulted in tonic activity in the
+gate group (Fig. 4a,b,e,f). Here, the weaker feedforward inhibi-
+tion could not balance the direct excitation during the tonic
+phase (Kremkow et al., 2010). However, during the transient
+phase the inputs from the sender group arrived synchronously,
+activating the inhibitory neurons in the gate group simulta-
+neously, thereby providing sufficient balancing inhibition for the
+temporal gating to function and block the transient [compare
+closed temporal gate (Fig. 4e) and open temporal gate (Fig. 4f)].
+Note that using inhibitory gain as a gating variable may result in
+an attenuated response in the receiver group. However, because a
+high signal-to-noise ratio is maintained, this reduced activity
+could easily be amplified in a subsequent stage.
+In summary, Figure 4 shows that amplitude gating is effective in
+gating tonic component of the activity (Fig. 4b), while temporal gat-
+ing is effective in gating the activity transients (Fig. 4a). When the
+two gating mechanisms are implemented within the same network,
+together they provide a powerful mecha-
+nism to control the propagation of a wide
+variety of temporal activity profiles.
+Gating of multiple signals
+So far we considered how isolated tran-
+sients or those that form part of stimulus-
+evoked or ongoing activity modulations
+propagate along a single signal path. How-
+ever, in a modular system like the brain,
+action selection can be thought of in terms
+of directing one of multiple signals to a next
+processing stage or, alternatively, as direct-
+ing a particular signal to one of multiple
+subsequent processing stages (Bienenstock,
+1995). In both these scenarios, the brain
+needs a mechanism to control the propaga-
+tion of activity over multiple (and interact-
+ing) signal pathways. Here, we test the
+effectiveness of temporal gating in selecting
+between two neuronal activity signals that
+are statistically identical but uncorrelated,
+and dominated by transients.
+Figure 5a shows the scheme of two sig-
+nal paths, embedded in a recurrent random
+network (cf. Materials and Methods). This
+arrangement of sender, gate, and receiver
+groups is similar to that used in Figures
+1–4, except that here two spatially sepa-
+rated sender groups (SenderX and Send-
+erY) can send signals (SX, SY) to the gate.
+To control the propagation of either sig-
+nal SX or SY, we systematically varied the
+delay between excitation and inhibition
+from the respective sender to the gate (tX
+and tY, respectively). To quantify the
+propagation of the two signals, we mea-
+sured the cross-correlations (X and Y)
+between the receiver group output and
+each of the two input signals (cf. Materials
+and Methods). Figure 5b shows the differ-
+ence between the two:   X  Y as a function of both tX and
+tY. Positive values of  indicate that the receiver group output is
+more similar to the input signal SX, and negative values reflect a
+higher similarity with input signal SY. When  is close to zero, the
+receiver output is equally correlated (including uncorrelated)
+with both input signals; in this case, the scenario is evidently not
+suitable for action selection.
+When the two signals were presented simultaneously, selec-
+tive transmission of signal SX (Fig. 5b,c) could be obtained by
+increasing tX and decreasing tY (effectively closing signal path
+SY) (compare Fig. 2). Similarly, selective transmission of signal SY
+(Fig. 5b,f) could be obtained by increasing tY and decreasing
+tX (closing signal path SX). The exact value of tX to gate signal
+SX depended on the value of tY (Fig. 5b) and vice versa. When
+the gate was closed for both signal paths (Fig. 4e), neither of the
+two input signals propagated to the receiver and, hence,  was
+close to zero. On the other hand, when the gate was opened for
+both signal paths (Fig. 5d), both signals propagated and the re-
+sponse of the receiver group was equally correlated to both input
+signals, again resulting in  being close to zero.
+Thus, the temporal gating mechanism appears well suited for
+selective gating of multiple signals to a next processing stage.
+Figure 4.
+Combining temporal and amplitude gating. a, Transient response (first 10 ms, marked light gray in c and d) in the
+gateasafunctionofeffectiveintegrationtimet(temporalgating)andinhibitorygain(amplitudegating)withuncorrelatedrate
+stimulus as input to the signal path. Mean transient response in the gate does not change as a function of inhibitory gain for all
+valuesoft,indicatingthatinhibitorygaincannotgatethepropagationoftransientcomponentoftheactivity(left).Bycontrast,
+meantransientresponseinthegateasafunctionoftforallvaluesofinhibitorygainshowsasigmoidalshape,indicatingthatt
+cancontrolthepropagationoftransientcomponentoftheactivity(bottom).b,Tonicresponse(excludingfirst10ms,markeddark
+grayincandd)inthegateasafunctionofeffectiveintegrationtimetandinhibitorygain.Meantonicresponseinthegateasa
+function of inhibitory gain for all values of t, varies in a threshold linear manner, indicating that inhibitory gain can control the
+propagationoftoniccomponentoftheactivity(left).Bycontrast,meantonicresponseinthegatedoesnotchangeasafunctionof
+t for all values of inhibitory gain, indicating that t cannot gate the tonic component of the activity (bottom). c–f, Population
+activity of the excitatory neurons in the gate and receiver group during four distinct gating modes, marked with corre-
+sponding letters in a and b. c, Simultaneously closing of the temporal and the amplitude gates blocks both the onset
+transient and the tonic component, resulting in a very small activity in the receiver group. d, Opening the temporal gate,
+while keeping the amplitude gate closed, allows the onset transient to propagate. e, Opening the amplitude gate, while
+keepingthetemporalgateclosed,allowsthetoniccomponenttopropagate. f,Boththetransientandthetoniccomponent
+are propagated when both gates are open.
+Kremkow et al. • Gating of Spiking Activity Propagation
+J. Neurosci., November 24, 2010 • 30(47):15760–15768 • 15765
+
+===== PDF PAGE 7 =====
+Similarly, temporal gating can also be
+used to selectively direct a particular sig-
+nal to one of several next processing stages
+(not shown here).
+Discussion
+In a modular system like the brain, appro-
+priate gating or control over activity prop-
+agation
+is
+critical
+for
+information
+processing and action selection (Bienen-
+stock, 1995; Kumar et al., 2010). In fact,
+for various biological reasons, gating of
+neural activity emerges as a superior strat-
+egy over winner-take-all dynamics for ac-
+tion selection (Ermentrout, 1992; Tepper
+et al., 2004). In any case, a key require-
+ment for an appropriate gating mecha-
+nism is that it should be able to control
+neural activity with arbitrary statistical
+properties.
+In particular, it is important to be able
+to gate neuronal activity that is dominated
+by strong transients, which are ubiquitous
+in a dynamic sensory environment, as has
+been reported under various conditions in
+vivo in all sensory pathways. For example,
+it has been demonstrated in the rodent
+whisker-barrel system that cortex is pri-
+marily driven by transient synchronous
+activity of thalamic neurons (Bruno and
+Sakmann, 2006). Similarly, neurons with
+overlapping receptive fields of the same
+polarity (on- or off-center) in the cat vi-
+sual thalamus show spike correlation in
+the millisecond range and, consequently,
+drive postsynaptic neurons in the visual
+cortex much more effectively (Alonso et
+al., 1996). Furthermore, transient sub-
+threshold dynamics have been measured
+intracellularly in the cat visual cortex in vivo during presentation
+of natural stimuli (Haider et al., 2010; Y. Fregnac, personal com-
+munication). Likewise, subthreshold membrane potential in vivo
+in the rat auditory cortex showed large transients, induced by
+synchronous synaptic input, occurring irregularly in an other-
+wise quiet background (DeWeese and Zador, 2006). Together,
+these observations in different sensory pathways in several species
+corroborate the importance of activity transients. Consequently,
+a proper gating mechanism should be able to cope with these
+transients.
+Recently, Vogels and Abbott (2009) proposed a gating mech-
+anism based on the detailed balance of excitation and inhibition
+to control the propagation of neuronal activity in feedforward
+networks. This gating strategy, however, is only effective in con-
+trolling the propagation of tonic components of neuronal
+activity modulation—transients “escape” from such gating and
+propagate to the next stage in any case. This is because the mech-
+anism fails in gating transients that are fast enough to pass the
+small time window, induced by the lagging inhibition, i.e., in the
+range of some tens of milliseconds [Vogels and Abbott (2009), their
+Fig. 3f]. As a consequence, gating based only on detailed balance of
+excitation and inhibition is truly limited in its applicability.
+The temporal gating mechanism proposed here extends this
+idea by changing the delay between excitation and inhibition, and
+thereby obtaining the means to control the temporal scale of
+transients that can pass or, alternatively, are blocked. The delay
+between excitation and inhibition affects the neurons integration
+time (Pouille and Scanziani, 2001; Cruikshank et al., 2007).
+Thereby, it can be used to block or facilitate activity propagation.
+Thus, this gating mechanism presents an example of exploiting a
+single neuron-level property to modulate network behavior—in
+this case, the location of the state space separatrix—such as to
+control the propagation of spiking activity within the network. As
+our study showed, the temporal gating mechanism is a simple yet
+powerful mechanism to control the propagation of activity tran-
+sients. Thus it is complementary to the amplitude gating mecha-
+nism proposed by Vogels and Abbott (2009). When the two
+mechanisms are combined, they can control neural activity with
+different temporal profiles.
+The key parameter of temporal gating is the delay between
+excitation and inhibition. The delayed correlated inhibition in
+our model was induced by disynaptic inhibition, a connectiv-
+ity pattern observed ubiquitously in the CNS [hippocampus
+(Buzsa´ki, 1984), thalamocortical connection (Swadlow, 2003;
+Cruikshank et al., 2007), local cortical network (Kapfer et al.,
+2007; Silberberg and Markram, 2007), and long-range horizontal
+cortical network (Hirsch and Gilbert, 1991; Tucker and Katz,
+2003a,b)]. In addition, neuromodulators (Kruglikov and Rudy,
+Figure5.
+Selectivegatingofmultiplesignals.a,Schemeoftwointeractingsignalpaths.b,Selectivityofsignalpropagationin
+twointeractingsignalpaths.ThecolormapshowstheselectivitymeasureXYasafunctionofeffectiveintegrationtime
+tX and tY. Positive values (brown color) of  indicate that the receiver group output is more similar to signal SX, and negative
+values (blue color) reflect a high similarity with signal SY (i.e., selective gating of either SX or SY). At  	 0, the receiver output is
+equallycorrelatedwithbothsignals(i.e.,noselectivegating).c–f,Spikingactivityofthesender,gate,andreceivergroupsduring
+fourdistinctgatingmodes,markedwithcorrespondinglettersinb.c,WiththegateopenforSXandclosedforSY,theactivityinthe
+receiver group resembles the signal SX. d, With both gates open, the activity in the receiver group is a superposition of SX and SY,
+therebyreducingtozero.e,Closingbothgatesblocksthepropagationofbothsignals.f,WiththegateopenforSYandclosedfor
+SX, the activity in the receiver group resembles the signal SY.
+15766 • J. Neurosci., November 24, 2010 • 30(47):15760–15768
+Kremkow et al. • Gating of Spiking Activity Propagation
+
+===== PDF PAGE 8 =====
+2008; Antal et al., 2010) and stimulus properties (Zhang et al.,
+2003; Wilent and Contreras, 2005) could change the latency be-
+tween excitation and inhibition in a neuron specific manner, by
+differentially altering neuronal excitability or synaptic strengths.
+Thus, the required neuronal hardware for the proposed temporal
+gating mechanism is quite general and not restricted to any spe-
+cific brain area. Furthermore, the gating mechanism does not
+depend on the choice of the synapse model (current based vs con-
+ductance based) (Fig. 2 and supplemental Fig. S1, available at www.
+jneurosci.org as supplemental material). Moreover, the delay values
+used here were well within the range measured experimentally in
+vivo (Okun and Lampl, 2008). The effectivity of temporal gating in
+controlling the propagation of activity transients, however, pre-
+cludes propagation of sustained (tonic) neural activity devoid of
+transients (Fig. 3c,f). Because detailed balance (or amplitude gating)
+is suitable in controlling the propagation of tonic activity, a combi-
+nationofthetwomechanismsprovidesageneralsolutiontocontrol
+the propagation of arbitrary neural activity patterns.
+Here we presented a possibility of combining the two mecha-
+nisms and showed that, indeed, by comodulating excitation–in-
+hibition balance and their latencies, it is possible to control the
+propagation of neural activity for combinations of transient and
+tonic components (Fig. 4). In addition, more sophisticated
+mechanisms might be invoked. For instance, dynamic modula-
+tion of excitation–inhibition balance can be achieved with de-
+pressing or facilitating synapses. Thus, introducing synapses with
+short-term plasticity (Klyachko and Stevens, 2006) into our tem-
+poral gating mechanism might be an alternative way of combin-
+ing the strengths of the two gating mechanisms.
+Gating of transients is most effective when the activity tran-
+sients are close to the separatrix (Fig. 2a). If, by contrast, the
+activity transients are close to the stable fixed point (FP) (Fig. 2a)
+or too similar to the background fluctuations (Bkg) (Fig. 2a),
+temporal gating may not be as effective. Thus, if temporal coding
+is indeed used in neuronal systems, it should be possible to pre-
+dict the spectrum of neural activity transients, given the proper-
+ties of synapses and the connection probabilities between
+processing stages. In a similar vein, knowledge of the neural ac-
+tivity transients may provide important hints concerning the
+connectivity between subsequent processing stages.
+Preliminary experimental evidence already points toward the
+involvement of a temporal gating mechanism in decision making
+and action selection. For instance, animals can make decisions on
+a millisecond timescale (Yang et al., 2008). Mechanisms based on
+winner-take-all dynamics would not support such rapid decision
+making, while temporal gating allows for signal gating and,
+thereby, action selection (decision making) on a millisecond
+timescale. Moreover, precisely timed perturbations of the cortical
+network can systematically alter the behavior of the animal (Sei-
+demann et al., 1998). However, more direct tests of this type of
+gating mechanism have not been performed thus far. As noted
+above, the temporal gating method exploits circuit level behavior,
+which makes this mechanism particularly interesting for in vivo
+experiments. Recent developments in optogenetic techniques,
+which allow selective activation/inactivation of specific groups of
+neurons (Zhang et al., 2007), could be used to test our proposal of
+temporal gating in vivo in a highly controlled manner.
+References
+Aertsen A, Diesmann M, Gewaltig MO (1996) Propagation of synchronous
+spiking activity in feedforward neural networks. J Physiol Paris
+90:243–247.
+Alonso JM, Usrey WM, Reid RC (1996) Precisely correlated firing in cells of
+the lateral geniculate nucleus. Nature 383:815–819.
+Alonso JM, Yeh CI, Stoelzel CR (2008) Visual stimuli modulate precise syn-
+chronous firing within the thalamus. Thalamus Relat Syst 4:21–34.
+Anderson JS, Carandini M, Ferster D (2000) Orientation tuning of input
+conductance, excitation, and inhibition in cat primary visual cortex.
+J Neurophysiol 84:909–926.
+Antal M, Acuna-Goycolea C, Pressler RT, Blitz DM, Regehr WG (2010)
+Cholinergic activation of m2 receptors leads to context-dependent mod-
+ulation of feedforward inhibition in the visual thalamus. PLoS Biol
+8:e1000348.
+Arieli A, Sterkin A, Grinvald A, Aertsen A (1996) Dynamics of ongoing
+activity: explanation of the large variability in evoked cortical responses.
+Science 273:1868–1871.
+Bar-Yosef O, Nelken I (2007) The effects of background noise on the neural
+responses to natural sounds in cat primary auditory cortex. Front Com-
+put Neurosci 1:3.
+Bienenstock E (1995) A model of neocortex. Netw Comput Neural Syst
+6:179–224.
+Braitenberg V, Schu¨z A (1991) Anatomy of the cortex: statistics and geom-
+etry. Berlin: Springer.
+Brunel N (2000) Dynamics of sparsely connected networks of excitatory
+and inhibitory spiking neurons. J Comput Neurosci 8:183–208.
+Bruno RM, Sakmann B (2006) Cortex is driven by weak but synchronously
+active thalamocortical synapses. Science 312:1622–1627.
+Buracas GT, Zador AM, DeWeese MR, Albright TD (1998) Efficient dis-
+crimination of temporal patterns by motion-sensitive neurons in primate
+visual cortex. Neuron 20:959–969.
+Butts DA, Weng C, Jin J, Yeh CI, Lesica NA, Alonso JM, Stanley GB (2007)
+Temporal precision in the neural code and the timescales of natural vi-
+sion. Nature 449:92–95.
+Buzsa´ki G (1984) Feed-forward inhibition in the hippocampal formation.
+Prog Neurobiol 22:131–153.
+Chen Y, Geisler WS, Seidemann E (2006) Optimal decoding of correlated
+neural population responses in the primate visual cortex. Nat Neurosci
+9:1412–1420.
+Cruikshank SJ, Lewis TJ, Connors BW (2007) Synaptic basis for intense
+thalamocortical activation of feedforward inhibitory cells in neocortex.
+Nat Neurosci 10:462–468.
+Dan Y, Alonso JM, Usrey WM, Reid RC (1998) Coding of visual informa-
+tion by precisely correlated spikes in the lateral geniculate nucleus. Nat
+Neurosci 1:501–507.
+Davison AP, Bru¨derle D, Eppler J, Kremkow J, Muller E, Pecevski D, Perrinet
+L, Yger P (2008) PyNN: A common interface for neuronal network sim-
+ulators. Front Neuroinformatics 2:11.
+Deger M, Cardanobile S, Helias M, Rotter S (2009) The Poisson process
+with dead time captures important statistical features of neural activity.
+BMC Neuroscience 10:P110.
+Destexhe A, Contreras D, Steriade M (1998) Mechanisms underlying the
+synchronizing action of corticothalamic feedback through inhibition of
+thalamic relay cells. J Neurophysiol 79:999–1016.
+Destexhe A, Rudolph M, Pare´ D (2003) The high-conductance state of neo-
+cortical neurons in vivo. Nat Rev Neurosci 4:739–751.
+DeWeese MR, Zador AM (2006) Non-Gaussian membrane potential dy-
+namics imply sparse, synchronous activity in auditory cortex. J Neurosci
+26:12206–12218.
+Diesmann M, Gewaltig MO, Aertsen A (1999) Stable propagation of syn-
+chronous spiking in cortical neural networks. Nature 402:529–533.
+Ecker AS, Berens P, Keliris GA, Bethge M, Logothetis NK, Tolias AS (2010)
+Decorrelated
+neuronal
+firing
+in
+cortical
+microcircuits.
+Science
+327:584–587.
+Eppler JM, Helias M, Muller E, Diesmann M, Gewaltig MO (2008) PyNEST:
+a convenient interface to the NEST simulator. Front Neuroinformatics
+2:12.
+Ermentrout B (1992) Complex dynamics in winner-take-all neural nets
+with slow inhibition. Neural Netw 5:415–431.
+Gentet LJ, Avermann M, Matyas F, Staiger JF, Petersen CCH (2010) Mem-
+brane potential dynamics of gabaergic neurons in the barrel cortex of
+behaving mice. Neuron 65:422–435.
+Gewaltig MO, Diesmann M (2007) Nest (neural simulation tool). Scholar-
+pedia 2:1430.
+Gewaltig MO, Diesmann M, Aertsen A (2001) Propagation of cortical syn-
+fire activity: survival probability in single trials and stability in the mean.
+Neural Netw 14:657–673.
+Kremkow et al. • Gating of Spiking Activity Propagation
+J. Neurosci., November 24, 2010 • 30(47):15760–15768 • 15767
+
+===== PDF PAGE 9 =====
+Haider B, Krause MR, Duque A, Yu Y, Touryan J, Mazer JA, McCormick DA
+(2010) Synaptic and network mechanisms of sparse and reliable visual
+cortical activity during nonclassical receptive field stimulation. Neuron
+65:107–121.
+Hellwig B (2000) A quantitative analysis of the local connectivity between
+pyramidal neurons in layers 2/3 of the rat visual cortex. Biol Cybern
+82:111–121.
+Hirsch JA, Gilbert CD (1991) Synaptic physiology of horizontal connec-
+tions in the cat’s visual cortex. J Neurosci 11:1800–1809.
+Hroma´dka T, DeWeese MR, Zador AM (2008) Sparse representation of
+sounds in the unanesthetized auditory cortex. PLoS Biol 6:e16.
+Kapfer C, Glickfeld LL, Atallah BV, Scanziani M (2007) Supralinear increase
+of recurrent inhibition during sparse activity in the somatosensory cortex.
+Nat Neurosci 10:743–753.
+Kenet T, Bibitchkov D, Tsodyks M, Grinvald A, Arieli A (2003) Spontane-
+ously emerging cortical representations of visual attributes. Nature
+425:954–956.
+Klyachko VA, Stevens CF (2006) Excitatory and feed-forward inhibitory
+hippocampal synapses work synergistically as an adaptive filter of natural
+spike trains. PLoS Biol 4:e207.
+Kremkow J, Perrinet LU, Masson GS, Aertsen A (2010) Functional conse-
+quences of correlated excitatory and inhibitory conductances in cortical
+networks. J Comput Neurosci 28:579–594.
+Kruglikov I, Rudy B (2008) Perisomatic gaba release and thalamocortical
+integration onto neocortical excitatory cells are regulated by neuromodu-
+lators. Neuron 58:911–924.
+Kuhn A, Aertsen A, Rotter S (2003) Higher-order statistics of input en-
+sembles and the response of simple model neurons. Neural Comput
+15:67–101.
+Kuhn A, Aertsen A, Rotter S (2004) Neuronal integration of synaptic input
+in the fluctuation-driven regime. J Neurosci 24:2345–2356.
+Kumar A, Rotter S, Aertsen A (2008a) Conditions for propagating synchro-
+nous spiking and asynchronous firing rates in a cortical network model.
+J Neurosci 28:5268–5280.
+Kumar A, Schrader S, Aertsen A, Rotter S (2008b) The high-conductance
+state of cortical networks. Neural Comput 20:1–43.
+Kumar A, Rotter S, Aertsen A (2010) Spiking activity propagation in neuro-
+nal networks: reconciling different perspectives on neural coding. Nat Rev
+Neurosci 11:615–627.
+Le´ger JF, Stern EA, Aertsen A, Heck D (2005) Synaptic integration in rat
+frontal cortex shaped by network activity. J Neurophysiol 93:281–293.
+Matsumura M, Chen D, Sawaguchi T, Kubota K, Fetz EE (1996) Synaptic
+interactions between primate precentral cortex neurons revealed by
+spike-triggered averaging of intracellular membrane potentials in vivo.
+J Neurosci 16:7757–7767.
+Morrison A, Mehring C, Geisel T, Aertsen AD, Diesmann M (2005) Ad-
+vancing the boundaries of high-connectivity network simulation with
+distributed computing. Neural Comput 17:1776–1801.
+Muller E, Buesing L, Schemmel J, Meier K (2007) Spike-frequency adapting
+neural ensembles: beyond mean adaptation and renewal theories. Neural
+Comput 19:2958–3010.
+Okun M, Lampl I (2008) Instantaneous correlation of excitation and inhi-
+bition during ongoing and sensory-evoked activities. Nat Neurosci
+11:535–537.
+Pouille F, Scanziani M (2001) Enforcement of temporal fidelity in pyrami-
+dal cells by somatic feed-forward inhibition. Science 293:1159–1163.
+Seidemann E, Zohary E, Newsome WT (1998) Temporal gating of neural
+signals during performance of a visual discrimination task. Nature
+394:72–75.
+Silberberg G, Markram H (2007) Disynaptic inhibition between neocortical
+pyramidal cells mediated by Martinotti cells. Neuron 53:735–746.
+Stepanyants A, Hirsch JA, Martinez LM, Kisva´rday ZF, Ferecsko´ AS, Chk-
+lovskii DB (2008) Local potential connectivity in cat primary visual cor-
+tex. Cereb Cortex 18:13–28.
+Swadlow HA (2003) Fast-spike interneurons and feedforward inhibition in
+awake sensory neocortex. Cereb Cortex 13:25–32.
+Tepper JM, Koo´s T, Wilson CJ (2004) Gabaergic microcircuits in the neos-
+triatum. Trends Neurosci 27:662–669.
+Tucker TR, Katz LC (2003a) Recruitment of local inhibitory networks by
+horizontal connections in layer 2/3 of ferret visual cortex. J Neurophysiol
+89:501–512.
+Tucker TR, Katz LC (2003b) Spatiotemporal patterns of excitation and in-
+hibition evoked by the horizontal network in layer 2/3 of ferret visual
+cortex. J Neurophysiol 89:488–500.
+Vogels TP, Abbott LF (2005) Signal propagation and logic gating in net-
+works of integrate-and-fire neurons. J Neurosci 25:10786–10795.
+Vogels TP, Abbott LF (2009) Gating multiple signals through detailed bal-
+ance of excitation and inhibition in spiking networks. Nat Neurosci
+12:483–491.
+Wilent WB, Contreras D (2005) Dynamics of excitation and inhibition un-
+derlying stimulus selectivity in rat somatosensory cortex. Nat Neurosci
+8:1364–1370.
+Yang Y, DeWeese MR, Otazu GH, Zador AM (2008) Millisecond-scale dif-
+ferences in neural activity in auditory cortex can drive decisions. Nat
+Neurosci 11:1262–1263.
+Zhang F, Wang LP, Brauner M, Liewald JF, Kay K, Watzke N, Wood PG,
+Bamberg E, Nagel G, Gottschalk A, Deisseroth K (2007) Multimodal fast
+optical interrogation of neural circuitry. Nature 446:633–639.
+Zhang LI, Tan AYY, Schreiner CE, Merzenich MM (2003) Topography and
+synaptic shaping of direction selectivity in primary auditory cortex. Na-
+ture 424:201–205.
+15768 • J. Neurosci., November 24, 2010 • 30(47):15760–15768
+Kremkow et al. • Gating of Spiking Activity Propagation

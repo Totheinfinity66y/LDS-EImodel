@@ -1,0 +1,1533 @@
+
+===== PDF PAGE 1 =====
+Neuronal arithmetic
+R. Angus Silver
+Department of Neuroscience, Physiology and Pharmacology, University College London, Gower 
+Street, London WC1E 6BT, UK. a.silver@ucl.ac.uk
+Abstract
+The vast computational power of the brain has traditionally been viewed as arising from the 
+complex connectivity of neural networks, in which an individual neuron acts as a simple linear 
+summation and thresholding device. However, recent studies show that individual neurons utilize 
+a wealth of nonlinear mechanisms to transform synaptic input into output firing. These 
+mechanisms can arise from synaptic plasticity, synaptic noise, and somatic and dendritic 
+conductances. This tool kit of nonlinear mechanisms confers considerable computational power on 
+both morphologically simple and more complex neurons, enabling them to perform a range of 
+arithmetic operations on signals encoded in a variety of different ways.
+Multiplying two numbers together in your head is a difficult task if you did not learn 
+multiplication tables as a child. On the face of it, this is somewhat surprising given the 
+remarkable power of the brain to perform complex computational tasks, such as 
+coordinating limbs, balancing and calculating object trajectories when playing a game of 
+tennis. Traditionally, it was thought that each individual neuron could only perform a 
+weighted sum of its synaptic inputs (a linear operation) followed by a nonlinear thresholding 
+operation (all-or-none response) and that even low level computations, such as 
+multiplication of signals, had to be carried out by groups of neurons1. Subsequent theoretical 
+work suggested that single neurons could act as more powerful computational units2–8, and 
+this view has now been strengthened by a considerable body of experimental work, which 
+shows that even the most humble of the brain’s 1011 neurons9 can rapidly perform both 
+sums and multiplications on their synaptic inputs. The main focus of this Review will be to 
+discuss the various biophysical mechanisms that enable an individual neuron to rapidly 
+perform arithmetic operations on the signals it receives through its synaptic inputs, thereby 
+allowing information to be transformed and combined before it is converted into neuronal 
+output. The mechanisms involved will be discussed in relation to neuronal morphology and 
+the way in which information is represented, as this allows identification of the cell types 
+and the neural coding regimes in which they are likely to operate.
+Encoding information with action potentials
+Information can be represented in a number of different ways by neural activity, but neural 
+coding is often cast in one of two extremes: either as a firing rate or as correlations in spike 
+Competing interests statement 
+The author declares no competing financial interests.
+Europe PMC Funders Group
+Author Manuscript
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+Published in final edited form as:
+Nat Rev Neurosci. 2010 July ; 11(7): 474–489. doi:10.1038/nrn2864.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 2 =====
+timing. The pioneering work of Adrian and Zotterman10,11 established that continuous 
+sensory variables such as touch, pressure and muscle load can be encoded in the rate of 
+sustained action potential (AP) firing. Recent intracellular recordings from cerebellar 
+granule cells (CGCs) in vivo show that rate-coded vestibular inputs that signal head velocity 
+are linearly encoded at input synapses through the bidirectional modulation of the excitatory 
+postsynaptic current frequency and postsynaptic charge12. The way in which such a neuron 
+integrates this sustained excitatory rate-coded synaptic input and transforms it into output 
+firing can be simply captured by its input–output (I–O) relationship (FIG. 1a,b). By contrast, 
+in vivo recordings from several areas of the neocortex suggest that only a small fraction of 
+neurons in a network spike in response to a particular sensory stimulus13–17. Under these 
+sparse coding13,14 conditions the mean firing rate of individual neurons is often less than 1 
+Hz15–17 and coding can involve as little as a single spike per neuron18. Sparse population 
+coding is a compromise between the extremes of local codes, in which each neuron in the 
+network represents a single feature or concept, and dense holographic codes19 in which each 
+feature is represented in all cells, allowing the storage of many more features than there are 
+neurons in the network. Moreover, theory predicts that the most energy-efficient codes for 
+representing information are sparse, as observed experimentally20,21. Under sparse coding 
+regimes the neuron acts as a coincidence detector of temporally correlated inputs, rather than 
+as an integrator. The I–O relationship can be defined as the relationship between spike 
+probability and the number of coincident inputs (Pspike–Nexc; FIG. 2a–c) or, in the temporal 
+domain, as the standard deviation of input spike times (Pspike–σinput; FIG. 2d,e). This has the 
+advantage that it directly represents how synaptic inputs with different temporal correlations 
+are transformed by the neuron. Synaptic integration during sparse neural activity, when the 
+interval between spikes is long, is distinct from that for sustained high frequency firing 
+regimes, when the AP and ensuing afterhyperpolarizing (AHP) conductances can dominate 
+the electrical behaviour of the cell22,23. Differences in the frequency of firing and the way in 
+which information is encoded are therefore important for understanding the neuronal I–O 
+relationship, the computations performed by a single neuron and the biophysical 
+mechanisms involved.
+Algebraic transformation of I–O relationships
+In this section we will use rate-coded signals to illustrate how a group of synaptic inputs can 
+rapidly alter the shape of a neuron’s I–O relationship in ways that correspond to arithmetic 
+operations (FIG. 1). These inputs are often referred to as modulatory inputs to distinguish 
+them from the driving inputs. Modulatory inputs can be excitatory synaptic inputs that 
+convey a different signal to the driving inputs, inhibitory inputs, or slow changes in neural 
+excitability arising from neuromodulatory substances such as acetylcholine and serotonin24. 
+However, only rapid synaptic modulations are considered in this article.
+Additive operations
+The response R of a neuron when a driving input d and a modulatory input m are added, can 
+be defined in two different ways. When a modulatory input is added to the driving input and 
+then transformed through the spiking mechanism the operation can be written as R(d,m) = 
+f(d + m). This shifts the I–O relationship along the input, or x-axis, with a leftward shift 
+Silver
+Page 2
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 3 =====
+corresponding to addition and a rightward shift corresponding to subtraction (FIG. 1c). This 
+type of linear additive modulation has been observed when the modulatory input is a fixed 
+current or conductance22. When the modulatory input is independent of the I–O relationship 
+of the driving input, the neuronal response can be defined as R(d,m) = f(d) + g(m). In this 
+case, a modulatory input shifts the I–O relationship along the output or y-axis (FIG. 1d), the 
+simplest example being a change in the basal firing rate of the neuron in the absence of an 
+excitatory drive.
+Multiplicative operations
+Muliplication of driving and modulatory inputs can also be defined in two ways. R(d,m) = 
+f(d × m) defines multiplicative input modulation (FIG. 1e) and R(d,m) = f(d) × g(m) defines 
+output modulation (FIG. 1f). In both cases multiplication by a constant produces a change in 
+the slope of the rate-coded I–O relationship, also referred to as a change in neuronal 
+gain25,*. An increase in neuronal gain corresponds to a multiplication and a decrease 
+corresponds to a division. A change in gain alters the sensitivity of a neuron to changes in its 
+driving inputs without affecting its selectivity or receptive field properties26. For input gain 
+modulation, the maximum value of the I–O relationship is not changed following the 
+modulation, but for output gain modulation, the maximum firing rate is scaled up or down 
+(FIG. 1e,f). The multiplicative and additive operations that are performed by neurons can be 
+separated and quantified by fitting their I–O relationships with empirical functions before 
+and after modulation (Supplementary information S1 (box)).
+Role of arithmetic operations in vivo
+Additive operations
+Additive operations can enable a neuron to perform the same rate-coded I–O operation 
+under conditions of different excitatory or inhibitory drive. However, additive operations 
+also alter the number of inputs required to reach threshold, which may change population 
+sparseness and the ability to distinguish different patterns of activation. In the temporal 
+domain, additive operations can potentially alter the range of temporal correlations in the 
+synaptic input to which the neuron responds (FIG. 2e). Additive changes in the rate-coded I–
+O relationship were observed in motor neurons in vivo, when synaptic input was stimulated 
+on different dendritic branches27 and when the I–O relationship was assayed with current 
+injections28. Additive operations can also underlie sophisticated sensory processing – for 
+example, theoretical29 and experimental30 studies suggest that populations of neurons can 
+represent uncertainty in sensory variables and that additive operations are important for 
+computing with these probabilistic population codes29. Although such examples show that 
+additive operations are important for signal processing, many neuronal computations are 
+thought to require a multiplicative operation.
+*Neuronal gain: the slope of the neuronal input–output relationship. Changing the neuronal gain alters the sensitivity of a neuron to 
+changes in driving inputs.
+Silver
+Page 3
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 4 =====
+Multiplicative operations
+Simple multiplicative operations in neuronal systems are important for signal amplification, 
+normalization and preventing saturation of firing (FIG. 1e,f), allowing efficient information 
+transmission31. Multiplicative operations occur in vivo in a wide range of sensory systems. 
+In the monkey parietal cortex, visual responses of neurons are multiplicatively scaled by eye 
+position32,33 and head position34. These and other observations are complemented by 
+several theoretical studies that have shown that multiplication of sensory signals is essential 
+for the coordinate transforms* that are required for visually guided reaching35–37. Related 
+computations are also found in the vestibular cerebellum, in which head-centered vestibular 
+afferent information is transformed into earth-referenced self motion38. Indeed, gain 
+modulation is widespread26: it occurs during attentional scaling of orientation tuning 
+curves39, of direction tuning curves40 and of translation-invariant object recognition41, with 
+contrast invariance of orientation tuning42 and during auditory processing43. These studies 
+show that the brain uses multiplicative operations in a wide range of tasks.
+Changing the gain of subsets of neurons in a synaptically coupled network will alter the 
+functional connectivity and thus the dynamic pattern of neuronal activation. This realization 
+has lead to the proposal that gain modulation controls the selection of different neuronal 
+assemblies used for distinct computational tasks44–46. For neurons operating in coincidence-
+detection mode under sparse activation conditions, the gain of the I–O relationship also 
+determines the shape of the time-window in which inputs can be integrated to generate a 
+spike, with higher gain giving a sharper cut-off (FIG. 2d). Thus, through such arithmetic 
+operations an individual neuron can potentially control both the width and ‘roll-off’ of the 
+temporal correlation window for synaptic integration47,48 and hence also control the 
+temporal properties of signals that can propagate through the network49,50.
+Mechanisms underlying arithmetic operations
+Subthreshold synaptic integration and linear operations
+The way in which synaptic inputs are combined is largely determined by the electrical 
+properties of the membrane. The membrane potential of a neuron increases from its resting 
+membrane potential (typically −75 mV) during excitatory synaptic input, when current flows 
+into the cell through transient conductances at each of the activated synapses. The resulting 
+excitatory postsynaptic potentials (EPSPs) do not sum linearly with increasing numbers of 
+active synapses because current flow through a synaptic conductance depends on the driving 
+force*, which is reduced as the voltage increases. Increasing synaptic conductance also 
+lowers the resistance of the cell membrane and this reduces both the change in voltage 
+produced by a current and the membrane time constant†. Increasing membrane conductance 
+in electrically compact neurons, such as the CGCs, therefore scales down the amplitude and 
+speeds the decay of EPSPs (FIG. 3a). Although these synaptic conductance effects also 
+occur locally in the dendrites of morphologically complex cells, such as cortical pyramidal 
+*Coordinate transform: the conversion of one coordinate system to another – for example, the brain converts visual information from 
+retina-centric to body-centric coordinates, taking account of gaze angle during visually guided reaching.
+*Driving force: the difference between the membrane potential and the reversal potential of an ionic conductance.
+†Membrane time constant: the product of the capacitance and resistance of the cell membrane, characterizing how rapidly a current 
+changes the membrane potential. The smaller the time constant the faster the membrane potential can change.
+Silver
+Page 4
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 5 =====
+cells, brief conductances arising from distant dendritic synapses may have little effect on 
+each other or on the somatic input resistance because the space constant* for conductance is 
+half of that for voltage51,52. Their effect on the soma is therefore more like a group of 
+current sources that add linearly. These passive subthreshold mechanisms contribute to the 
+linearizing integration of EPSPs distributed on dendritic trees.
+Shunting inhibitory conductances
+Inhibitory synapses are often located close to the soma, where their conductance can have a 
+large effect on somatic input resistance5,52–54 (and thus spiking) because of the proximity to 
+the spike initiation zone. Fast inhibitory transmission is typically mediated by GABAA (γ-
+aminobutyric acid type A) receptors, which conduct Cl− and HCO3− ions and often have a 
+reversal potential† close to the resting potential. At the resting potential, little current is 
+generated by these synapses due to the small driving force, but the increase in membrane 
+conductance that they introduce short-circuits excitatory synaptic currents by locally 
+reducing the input resistance. These shunting inhibitory conductances‡ (also known known 
+as silent inhibitory conductances), which can be strong in vivo54, scale down EPSPs in a 
+multiplicative manner (FIG. 3a), in accordance with Ohm’s law§, as recognized many years 
+ago55,56. Classical theoretical work suggests that the arithmetic operations resulting from 
+shunting inhibition depend on the size and location of the conductance; inhibition may have 
+a divisive effect on the EPSP if the conductance is large and located close to the soma, but 
+may have a subtractive effect if the conductance is small and spatially distributed2,57. 
+Inhibitory synapses placed between a distal excitatory input and the soma are effective, 
+especially when located close together2,4,5,8,27. This may enable dendritic-branch-specific 
+veto and logical AND–NOT operations4,**, a conclusion that has been strengthened by 
+more recent experimental work58. Together, these studies of subthreshold interactions of 
+coincident excitatory and inhibitory postsynaptic conductances suggested that individual 
+neurons could perform a variety of multiplicative and logical operations. This led to the 
+proposal that shunting inhibition mediates the divisive gain modulation required in models 
+of visual cortex to account for neural responses to drifting gratings* at different contrast and 
+orientations59 and for gain modulation in electric fish60.
+Surprisingly, subsequent work with biologically realistic neuronal models predicted that 
+shunting inhibition has a subtractive rather than a divisive effect on sustained rate-coded I–O 
+relationships22,61,62. We illustrate this with experiments on CGCs (FIG. 3b,c). During 
+sustained firing the voltage is clamped close to the spike threshold voltage by the powerful 
+potassium conductances that underlie AP repolarization and spike AHP63. This converts the 
+steady shunting conductance into a current source22,23 (FIG. 3d), which shifts the 
+relationship between output firing and driving current28,64–67 or input conductance23, along 
+*Space constant: the distance over which a voltage imposed at a point will have decreased to 1/e (Euler’s number) (~37%) of its 
+original value; a measure of how far a subtheshold potential will spread along an axon or dendrite. The thinner the dendritic branch, 
+the shorter its space constant.
+†Reversal potential: the potential at which the electrochemical gradient is zero and there is no net current flow though a conductance.
+‡Shunting inhibitory conductance: (also known as silent inhibitory conductance.) An inhibitory conductance that reduces the 
+depolarization produced by an excitatory current by increasing membrane conductance.
+§Ohm’s law: the current across a conductor is linearly proportional to the potential difference (voltage).
+**AND–NOT operations: a logical operation in which an output only occurs when one input is on and the other is off.
+*Drifting gratings: a visual stimulus that consists of alternating black and white bars that drift in a particular direction.
+Silver
+Page 5
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 6 =====
+the input axis in a purely subtractive manner (FIG. 3c). These findings implied that 
+multiplicative interactions between conductances (discussed above for subtheshold 
+integration) did not hold for sustained rate-coded signalling. However, an important factor 
+had been overlooked in the study of neuronal gain; in vivo recordings showed that neurons 
+are often bombarded by synaptic conductances, and this produces high levels of stochastic 
+voltage noise and lowers the input resistance54,68,69 (FIG. 4a), a condition not typically 
+present in in vitro slice preparations in which long-range synaptic connections are cut. The 
+presence of synaptic noise has important implications for neuronal computation for both 
+sustained rate-coded and sparse temporal signalling, as discussed in the next section.
+The role of changes in noise and conductance
+Synaptic noise
+Stochastic noise arising from synaptic conductances produces voltage fluctuations, 
+converting a relatively constant subthreshold voltage into a distribution of values (FIG. 
+4a,b). When investigators began to include physiologically relevant levels of synaptic noise 
+in their simulations and in vitro experiments, they found that the shape of the I–O 
+relationships for both sparse coincident48,70–76 and sustained rate-coded23,42,66,77–82 inputs 
+were fundamentally altered. This occurs because voltage fluctuations enable synaptic inputs 
+to cross the threshold and trigger a spike even when the mean voltage is well below the 
+spike threshold, thereby extending the range of excitation over which a neuron can signal. 
+This shifts the rheobase† of the neuronal I–O relationship and decreases the slope or gain of 
+both the Pspike–Nexc and the Pspike–σinput relationships driven by sparse coincident 
+input48,73,74 (FIG. 2c,d). This broadens the synaptic input correlation window that the 
+neuron can respond to (FIG. 2d). Noise has similar effects on the shape of the rate-coded I–
+O relationship. The leftward additive shift was more pronounced when currents were used to 
+drive the cell80 (FIG. 4c) or in simulations78 than when conductance noise was used (FIG. 
+4d,e). This is because the leftward shift in the rate-coded I–O relationship was counteracted 
+by a rightward shift introduced by the shunting effect of the input conductance66,78. These 
+results show that changing the level of noise is a powerful way to change neuronal gain 
+irrespective of the coding regime.
+Background noise induced by balanced background synaptic input
+For neurons, such as pyramidal neurons, that require a large number of synaptic inputs to 
+reach threshold, high levels of voltage noise can only be achieved during uncorrelated 
+(asynchronous) rate-coded inputs when excitatory and inhibitory synaptic conductances are 
+balanced. Under these conditions high rates of synaptic conductance can be applied without 
+a net excitatory or inhibitory effect. Introducing such a noisy conductance input using the 
+dynamic clamp* in combination with excitation through a noise-free driving current step 
+(FIG. 4d) allows the level of noise and conductance to be altered independently of the 
+excitatory drive66. When excitatory and inhibitory conductances were balanced, the leftward 
+shift in the I–O relationship caused by increasing noise was counteracted by the rightward 
+†Rheobase: the minimum current or conductance that produces an action potential in a neuron.
+*Dynamic clamp: an electrode-based electrophysiological device that uses an electrical circuit or computer simulation to inject 
+artificial conductances into a neuron.
+Silver
+Page 6
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 7 =====
+shift caused by reduced input resistance, leaving a purely multiplicative gain change and no 
+additive shift66 (FIG. 4e). For this to occur in vivo, a suitably tuned network architecture that 
+supports precisely balanced excitation and inhibition, would be required. Feedforward and 
+feedback connections in cortical circuits may achieve such balance if coupled with 
+inhibitory cells that compensate for their low numbers with higher sensitivity, firing rate and 
+synaptic conductances83–85. However, the effect on neuronal gain of increasing the level of 
+noise is not always so clean-cut; depending on the cell type and the nature of the interactions 
+of noise with Na+ and various AHP conductances80,86, neuronal gain can either increase or 
+decrease. Nevertheless, these studies are consistent with the idea that changes in the level of 
+input noise cause gain modulation.
+The effect of conductance in the presence of synaptic noise
+Dynamic clamp experiments and modelling show that hyperpolarization and increases in 
+somatic membrane conductance introduce subtractive shifts in the Pspike–Nexc 
+relationship70,73,74,76. Hyperpolarization performs a subtractive operation because additional 
+excitation is required to reach the original rheobase voltage, and voltage noise and thus gain 
+are unaltered (FIG. 2c). For changes in somatic input resistance, which occur during 
+shunting inhibition, the EPSP amplitude and voltage fluctuations are likely to be scaled 
+down equally, leaving the gain of the Pspike–Nexc relationship unchanged73. Moreover, 
+nonlinear shunting conductances can help to linearize such subtractive shifts in the Pspike–
+Nexc relationship87. These studies show that in the presence of background noise, adding a 
+hyper-polarizing current or increasing shunting inhibition has a subtractive effect and this 
+narrows the input correlation window to which the neuron responds (FIG. 2e). Experiments 
+on sustained rate-coded I–O relationships also suggested that shunting inhibition has a 
+purely subtractive effect when the level of synaptic input noise is fixed23,66,87.
+This view that conductance always has a subtractive effect on I–O relationships seems to be 
+at odds with theoretical and experimental studies that show that simply applying an 
+inhibitory conductance can alter neuronal gain23,77,79,88. Indeed, applying a fixed tonic 
+inhibitory conductance produced a robust gain change in the I–O relationship of CGCs when 
+they were driven with synaptic-like rate-coded excitatory conductances delivered with the 
+dynamic clamp technique23 (FIG. 5a,b). This was not a nonlinear dendritic effect because 
+CGCs are among the smallest and simplest neurons in the brain and ideally suited to the 
+dynamic clamp technique, as their soma and dendrites form a single electrical 
+compartment89,90. The resolution of these apparently contradictory effects of conductance 
+on the I–O relationship lay in the fact that the variance of rate-coded synaptic conductance 
+trains increases with the mean rate according to Campbell’s theorem23,77,91,* (FIG. 5c). 
+Rate-coded inputs therefore introduce a frequency-dependent increase in noise, which when 
+combined with a shunting conductance produces a gain change without requiring an 
+externally driven change in background noise or a balanced synaptic input23. However, 
+without balanced excitation and inhibition, a subtractive component is also present (FIG. 
+5b). This conductance-mediated gain modulation is particularly effective for small cells – 
+*Campbell’s theorem: a mathematical theorem that describes the relationship between the frequency of brief, randomly occurring, 
+exponentially decaying events and the time-averaged value of their mean and the variance.
+Silver
+Page 7
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 8 =====
+such as CGCs – with rapid synaptic conductances that require few driving inputs to reach 
+threshold, because these produce high levels of voltage noise during rate-coded excitation23. 
+In larger neurons, such as pyramidal cells, the voltage noise generated by excitatory input 
+alone is relatively small when inputs are asynchronous and thus the effect of conductance is 
+largely additive under these conditions.
+Whether a shunting inhibitory conductance can modulate rate-coded neuronal gain in the 
+presence of a fixed level of noise has also been a matter of debate. Experimental and 
+theoretical work suggests that conductance does not change neuronal gain in the presence of 
+fixed noise66,92. However, simulations predict that modest gain changes can occur under 
+some conditions23,79. Although such gain changes are weaker than those for variable noise 
+and only occur for small modulatory inputs and relatively low firing rates, the mechanism 
+underlying this effect provides insights into the mechanisms of noise- and conductance-
+based gain modulation. Noise converts the relationship between output firing rate and mean 
+voltage fout–Vm from a step-like threshold to a smooth function that approximates a power 
+law23,42,79,81,82,93,* (FIG. 5d). Changes in subthreshold voltage caused by a modulatory 
+input can be coupled to output spiking through this continuous function. The shape of the 
+fout–Vm relationship is important as power laws can perform a crude form of 
+multiplication81, because additive shifts along the x-axis can have a multiplicative action as 
+a function of the x-axis (Supplementary information S1 (box)). However, for modulatory 
+inputs to produce changes in gain without an additive shift66 or for these gain changes to be 
+a function of both the x- and y-axes, an additional nonlinearity93 or a change in the fout–Vm 
+relationship is required (R.A.S. and V. Steuber, unpublished observations). Indeed, changes 
+in the exponent of the power law are expected if the level of synaptic noise changes66, if the 
+frequency of rate-coded excitatory input is altered23 or if the rate of an inhibitory synaptic 
+input is modified77,79,88. All of these changes produce a robust gain change as a function of 
+both the x- and y-axes. Thus, synaptic noise enables shunting inhibition to modulate 
+neuronal gain during sustained firing, thereby providing a biologically plausible mechanism 
+for those early models that proposed that shunting inhibition performs gain modulation59,60. 
+However, this does not generalize to temporally correlated signalling, where it is 
+subtractive73 .
+Input nonlinearities and gain modulation
+Several studies of neurons in the primary visual cortex (V1) have focused on the roles of 
+noise and the resulting power law of multiplicative operations on rate-coded signals42,81,82, 
+as this can potentially explain how neurons maintain their selectivity for stimulus orientation 
+despite large changes in image contrast (contrast invariance)42. In an interesting twist to our 
+understanding of the underlying computational mechanisms, the sensory input parameters in 
+such models, which are often represented as sigmoidal and Gaussian functions, were shown 
+to be crucial for gain modulation in the presence of a constant level of noise93. When such 
+an additional nonlinear input is combined with a power law fout–Vm relationship (fixed 
+levels of noise), a robust output gain modulation occurs by simply altering conductance or 
+*Power law: a mathematical relationship between two quantities (for example, x and y) of the form y(x)=kxn, in which k is a constant 
+and n is the exponent. Such relationships have the special property that they are scale invariant.
+Silver
+Page 8
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 9 =====
+adding current93. More recent work suggests that contrast invariance in V1 may arise from 
+multiple mechanisms94–96 and that neuronal gain modulation is associated with a 
+simultaneous change in voltage noise and input resistance in vivo97. A related multiplicative 
+transformation that is mediated by nonlinear Na+ channels98 has also been reported in the 
+locust visual system, in neurons that are sensitive to looming objects. In summary, studies of 
+the visual system highlight the importance of considering all of the linear and nonlinear 
+components arising from the stimulus representation and synaptic input, together with noise 
+and conductance, to understand how neuronal gain control is achieved in the brain.
+Synaptic depression and gain modulation
+The strength of synaptic connections that mediate driving input is often highly dynamic on 
+short timescales (<10 s) and can increase (resulting in facilitation) or decrease (resulting in 
+depression) with increasing frequency99. Frequency-dependent short-term depression 
+(STD)100,101 typically occurs when vesicle supply cannot keep up with the presynaptic 
+firing rate102–104 or when postsynaptic receptors desensitize104,105. Synapses exhibiting 
+STD act as a low-pass filter* to steady-state rate-coded inputs and preferentially transmit 
+dynamic changes in rate, allowing neurons to respond to changes in signals rather than their 
+absolute rate106–108. Theoretical studies show that STD introduces saturation of the neuronal 
+I–O relationship and can enable synapse-specific neuronal gain control96,107,109.
+Recently, STD has also been shown to affect the arithmetic operations produced by changes 
+in shunting inhibition in morphologically simple CGCs110 (FIG. 6a). How does the presence 
+of STD in the excitatory input affect the neuronal computation performed by a modulatory 
+inhibitory input? The first clue came from the observation that CGCs integrate excitatory 
+conductance from depressing and non-depressing synaptic conductances in a similar way 
+(FIG. 6b). The second clue came from the relationship between presynaptic input rate and 
+the time-averaged excitatory synaptic conductance, which was a saturating exponential 
+function (FIG. 6c). This frequency-dependent nonlinearity introduced by STD transforms 
+inhibition-induced additive shifts into a multiplicative gain change110, thereby increasing the 
+gain change performed by tonic inhibition by fourfold compared with that induced by noise 
+alone (FIG. 6d). The size of the gain modulation depends on both the level of inhibition and 
+the level of STD, and there is always a residual additive component (FIG. 6d). The time 
+course of STD-based gain modulation depends on the input frequency and how quickly the 
+synapse depresses to a steady-state level. Cerebellar mossy fibres fire up to 1 kHz in vivo111, 
+resulting in the rapid onset of STD104 and fast STD-based gain modulation (4–75 ms) at the 
+synapses between mossy fibres and granule cells110. However, STD-based gain modulation 
+at synapses that are tuned for low firing rates will be slower.
+To determine whether STD-based gain control operates on distributed synaptic input in 
+morphologically complex neurons, synaptic integration was simulated in a multi-
+compartment layer 5 (L5) pyramidal neuron model110 (FIG. 6e). When the amplitude of 
+each of the 400 excitatory synaptic conductances was fixed, altering the rate of 30 inhibitory 
+inputs (both excitatory and inhibitory inputs were randomly distributed over the basolateral 
+*Low-pass filter: a device that attenuates high frequency signals but allows low frequency signals to pass unhindered.
+Silver
+Page 9
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 10 =====
+dendritic tree) produced a largely additive shift in the sustained rate-coded I–O relationship 
+(FIG. 6f). This is consistent with the prevailing view that distributed, asynchronous inputs 
+are integrated in a linear manner112–116. By contrast, when STD was included in the 
+excitatory inputs, excitatory and inhibitory synaptic inputs were multiplied together, 
+producing robust gain changes (FIG. 6g). Different levels of inhibition scaled down the 
+dynamic range of the I–O relationship in pyramidal cell simulations and in experiments with 
+CGCs, showing that inhibition results in gain modulation of the output (FIG. 1f) rather than 
+the input (FIG. 1e). As STD converts additive operations into multiplicative operations, it 
+should enable rate-coded synaptic inputs that are located anywhere on the soma or dendrites 
+to be multiplied together. Indeed, the fact that STD is more pronounced for distal synapses 
+on L5 neurons117,118 raises the possibility that this mechanism combines spatially separate 
+inputs in these cells in a multiplicative manner110. Moreover, as STD can increase with 
+long-term potentiation119 or decrease with long-term depression120, these arithmetic 
+operations may depend on prior activity of the connection and thus potentially encode 
+learning and routing of information through networks46.
+The role of dendrites in neuronal arithmetic
+As the field of dendritic computation has been discussed extensively in several excellent 
+recent reviews121–125 and in a book126, in the remaining sections we will only highlight 
+specific examples of how dendritic mechanisms may carry out arithmetic operations and the 
+coding regimes under which they are likely to operate.
+Linear dendritic integration
+As discussed earlier, when synaptic inputs are distributed over the dendritic tree they tend to 
+sum approximately linearly owing to the passive properties of dendrites114–116,127. But 
+when inputs are clustered one would expect sublinear EPSP summation owing to a greater 
+reduction in driving force and membrane shunting. However, nonlinear dendritic 
+conductances – such as NMDA (N-methyl-D-aspartate) receptors, Na+ channels and Ca2+ 
+channels – can boost synaptic potentials when depolarized, whereas A-type K+ 
+conductances can dampen them112,128,129. A balance of these active conductances has been 
+shown to underlie linear summation of synaptic inputs on the same dendritic branch of 
+cultured pyramidal cells, counteracting nonlinearities introduced by reduced driving force 
+and shunting112,113. Spines have also been proposed to promote linear synaptic integration 
+by introducing a resistance that protects the main dendrite from the shunting effects of the 
+synaptic conductance130,131. However, this mechanism requires that spine necks have a high 
+resistance, a feature that is not supported by recent voltage dye measurements in the same 
+cells, which provided estimates of ≤500 mΩ and an attenuation of somatic EPSPs of 
+<15%132. Changes in shunting inhibition alone tend to produce subtractive effects on 
+asynchronous rate-coded signals in complex cells due to the remote input and low noise 
+(FIG. 6f), but a recent theoretical study suggests that by controlling the level of attenuation 
+of current flowing from the dendrite to the soma, shunting inhibition could reduce neuronal 
+gain133. However, it is unclear whether this would work effectively for discrete synaptic 
+conductances and it is also unclear how dependent the gain modulation is on the dendritic 
+location of the inhibitory shunt, as this can have a big effect on EPSP scaling2,4,5,8,27,57,58.
+Silver
+Page 10
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 11 =====
+Nonlinear dendritic integration of spatially segregated inputs
+Synaptic inputs from different neuronal sources can be located on spatially distinct 
+subregions of the dendritic tree. Cortical L5 pyramidal cells are a particularly striking 
+example, with distinct synaptic inputs on the basolateral dendrites in L5 and apical tufts in 
+layer 1 at a distance of approximately 1 mm from the soma. Detecting temporally correlated 
+synaptic input across layers raises a number of difficulties for the cell. Firstly, synaptic 
+integration varies with location; a shorter time-window is required for combining synaptic 
+inputs at distal locations (~10 ms) than at the soma (~50 ms window), because the dendritic 
+EPSP has faster kinetics due to the shorter membrane time constant in the dendrite117. 
+Secondly, modest synaptic inputs to the apical tufts produce only weak responses at the 
+soma117 because they are heavily attenuated as they propagate along the dendrite, as 
+predicted by cable theory7,134,*. However, synaptic inputs can be amplified by Na+ 
+conductances in basal dendrites129,135 and the apical tufts127,136,137 of pyramidal cells. 
+Active dendritic conductances may therefore alter the impact of synapses at different 
+locations on the dendritic tree138,139. Moreover, Ca2+ conductances in the apical dendrite of 
+L5 cells can amplify coincident synaptic input at the tuft and generate dendritic 
+spikes136,140–142. Back-propagating APs lower the threshold for these Ca2+ dendritic spikes, 
+thereby enabling the cell to associate spatially separated signals141. The impact of spatially 
+segregated, temporally correlated synaptic inputs therefore depends on both the type of 
+voltage-dependent conductances and their spatial distribution in the dendritic membrane.
+Pyramidal cells also provide clear examples of how active dendritic conductances can 
+contribute to gain modulation of segregated inputs during sustained firing. Dendritic 
+recordings show that sustained injection of current noise into the distal dentritic tuft can 
+increase the gain and reduce the rheobase of the firing rate–current response at the soma143. 
+This multiplication of spatially separated inputs is predominantly due to Ca2+ channels143, 
+but persistent Na+ channels may contribute to some boosting effects137,144 and cancel 
+subtractive effects by shifting the I–O relationship to the left135. A robust divisive gain 
+modulation of the firing rate–current relationship was observed in pyramidal cells of electric 
+fish in the presence of a dendritic GABAA receptor conductance145. Dendritic Na+ channels 
+underlie this effect by supporting back-propagating APs, which produced brief depolarizing 
+after-potentials (DAPs), counteracting the spike in AHP at the soma. Dendritic inhibition 
+reduces the DAP by speeding up repolarization of the back-propagating APs, revealing a 
+larger AHP at the soma and thus reduced neuronal gain145,146. By contrast, when inhibition 
+was applied to the soma, the back-propagating AP, DAP and AHP were unaffected and 
+inhibition produced a conventional subtractive shift in the I–O relationship. This potentially 
+enables inhibitory interneuron populations that specifically target dendrites or the soma to 
+carry out distinct arithmetic operations on sustained rate-coded inputs145. These nonlinear 
+dendritic mechanisms may enable pyramidal cells to combine spatially segregated synaptic 
+inputs in a multiplicative manner, both for sparse temporally correlated and sustained rate-
+coded signalling regimes.
+*Cable theory: this refers to the mathematical equations that describe how electrical signals propagate in space and time in spatially 
+extended neurons.
+Silver
+Page 11
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 12 =====
+Nonlinear dendritic integration of spatially clustered synapses
+Clustered excitatory synaptic inputs may produce a sufficiently large local depolarization to 
+activate nonlinear dendritic mechanisms. Theoretical work suggests that such reductions in 
+driving force in the dendrite could saturate the synaptic response and amplify inhibition- and 
+noise-mediated gain modulation of sustained rate-coded signals79. Local depolarizations 
+may also trigger regenerative dendritic events mediated by voltage-gated conductances. 
+Dendritic Na+ channels have been shown to amplify subthreshold EPSPs in a multiplicative 
+manner and speed their rise116,129,135,137. Regenerative dendritic Na+ spikes in pyramidal 
+cells129,147,148 can be localized to specific branches, modified in a branch-specific 
+manner149 and selectively activated by synaptic inputs that are clustered in space and 
+time116,127,150–152. These features have generated considerable interest because they may 
+enable individual dendritic branches to act as nonlinear thresholding units. Experiments 
+using two-photon glutamate uncaging* to mimic different patterns of synaptic input suggest 
+that ~20 synaptic inputs (~5% of the total) are required to trigger a local dendritic Na+ spike 
+in radial oblique dendrites of CA1 pyramidal cells151. Dendritic patching of basal dendrites 
+of L5 pyramidal cells gave comparable estimates and revealed rapidly decaying EPSPs, with 
+a space constant of only 50 μm, indicating that voltage changes can be localized to an 
+individual branch127. The rapid membrane time constant in these fine dendrites means that 
+local synaptic inputs have to be highly synchronized (3–6 ms time-window) to trigger a 
+dendritic Na+ spike117,127,151. These properties, together with the fact that dendritic Na+ 
+spikes are suppressed for hundreds of milliseconds following a spike owing to Na+ channel 
+inactivation (whether triggered locally within a branch152 or globally across the dendrite by 
+a back-propagating AP129,152), suggest that these dendritic Na+ conductances are tuned to 
+amplify sparse, temporally correlated inputs (FIG. 2), rather than to contribute to sustained 
+rate-coded signalling112–116. By selectively increasing the gain of dendritic branches that 
+receive temporally correlated inputs, Na+ conductances may form distinct computational 
+compartments and enhance the precision of spike output153. Such dendritic-branch-specific 
+thresholding units may substantially enhance the computational power of a neuron154,155 
+and may potentially link together to form a functional structure that is analogous to a two-
+layer neural network (FIG. 7d) with comparable computational power156,159.
+Synaptic NMDA receptors (NMDARs) can also amplify clustered synaptic inputs (FIG. 
+7a,b). Their highly nonlinear voltage-dependence, which is caused by the Mg2+ block of the 
+NMDAR channel158, can produce regenerative voltage depolarizations in the dendrite159. 
+These so-called NMDAR spikes are spatially restricted to sites of synaptic input owing to 
+their glutamate-dependence and are unlikely to actively propagate159. NMDAR spikes last 
+50–100 ms156,159,160, but modelling predicts that they can be curtailed by smaller inhibitory 
+synaptic conductances on the dendrite161. NMDARs on hyperpolarized regions of the 
+dendrite exhibit a ‘memory’ of the prior synaptic activity for the 40 ms or so that glutamate 
+(and glycine) remains bound to the receptors156. This can be ‘unlocked’ upon 
+depolarization, when the Mg2+ block of the channel is relieved, allowing glutamate-bound 
+NMDARs to pass current. This mechanism, which can amplify subsequent glutamatergic 
+inputs to the same dendrite156 (FIG. 7c), is local because the space constant for the EPSP is 
+*Two-photon glutamate uncaging: the release of glutamate from a ‘caged’ glutamate compound using two-photon excitation.
+Silver
+Page 12
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 13 =====
+short in thin dendrites of pyramidal cells127. A number of other differences between Na+ 
+spikes and NMDAR spikes are worth noting. NMDAR spikes are slower rising and the time-
+window for coincidence of the presynaptic inputs is tenfold larger than for Na+ spikes, 
+allowing activation with less temporal precision. In addition, the duration of the NMDAR 
+spike is sufficiently long to act as a coincident detector and also interact with short-duration 
+rate-coded bursts of input. Lastly, NMDARs do not become inactivated as rapidly as 
+dendritic Na+ channels, a feature that might be important during sustained firing. NMDARs 
+are an attractive local nonlinear dendritic mechanism that could alter neuronal gain 
+depending on the spatio-temporal correlation of the input. However, it is presently unclear 
+how robust NMDAR spikes are in the presence of the substantial inhibitory input that occurs 
+in vivo54,161.
+Although nonlinear dendritic mechanisms have been discussed separately, in reality a 
+dendritic excitability is determined by a combination of dendritic conductances. Indeed, a 
+recent study suggests that clustered synaptic inputs onto multiple thin dendrites in the tuft of 
+L5 pyramidal cells can be amplified by both NMDAR and Na+ channels and then trigger a 
+forward-propagating Ca2+ spike in the apical dendrite136. Nonlinear dendritic mechanisms 
+that are activated by clustered inputs require that synapses project to a particular dendritic 
+branch and that their spike latencies are restricted to just a few milliseconds. Such 
+mechanisms are likely to increase the gain of the Pspike–σinput relationship, potentially 
+allowing better discrimination of spatio-temporal patterns of synaptic input in sparse coding 
+regimes162. However, the precise spatio-temporal correlations required for activation of 
+local dendritic nonlinearities impose exacting constraints, given the temporal variability of 
+sensory input and the fact that many excitatory axons project diffusely onto multiple 
+dendritic branches. Indeed, a recent two-photon imaging study of dendritic visual processing 
+in vivo found no evidence for segregation of orientation tuning onto specific branches163. 
+Nevertheless, a recent study that modelled synaptic activation in L5 cells predicted that 
+NMDAR spikes could also be activated by inputs distributed randomly over the apical tuft 
+region136. Determining the importance of clustered synaptic inputs for dendritic 
+computation will require a better understanding of the functional connectivity of networks in 
+the brain.
+Conclusions
+Arithmetic operations allow neurons to combine and transform different signals and to 
+discriminate spatial and temporal correlations in their synaptic inputs. This Review shows 
+that both morphologically simple and complex neurons possess a number of biophysical 
+mechanisms that enable them to perform rapid arithmetic operations on signals encoded in 
+different ways (FIG. 8). However, the presence of multiple interacting nonlinear 
+mechanisms and stochastic noise, together with the often mixed additive and multiplicative 
+components of arithmetic operations has made the unequivocal identification of the 
+underlying biophysical mechanisms difficult. Nevertheless, a number of conclusions can be 
+drawn from studies in this rapidly expanding field.
+Silver
+Page 13
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 14 =====
+Relationship between biophysical mechanisms and coding regimes
+Although information is likely to be encoded by APs on a continuum of timescales47, at the 
+limits neurons can act either as integrators of sustained rate-coded inputs or as coincidence 
+detectors of sparse temporally correlated signals. Appreciation of this apparent dichotomy of 
+coding can help to define the neuronal I–O relationship and identify the arithmetic operation 
+being performed, as well as the underlying biophysical mechanisms (FIG. 8). Synaptic 
+noise, which fundamentally changes the integration properties of neurons, can have similar 
+multiplicative and additive effects on I–O relationships under sparse temporal and sustained 
+rate-coded regimes. Changes in synaptic noise can therefore be considered a general 
+mechanism for neuronal arithmetic.
+Other mechanisms seem tuned for particular coding regimes. For example, changes in 
+shunting inhibition, in concert with high levels of synaptic-input-dependent noise23,77, 
+synaptic STD110, dendritic Na+ channels (which can produce a DAP)145 or an input-
+dependent nonlinearity93, can only control neural gain under sustained rate-coded signalling 
+regimes, as conductance changes produce additive shifts during temporally correlated 
+signalling73. In sparse signalling regimes, nonlinear dendritic conductances – such as Na+ 
+channels in CA1 cells – seem to be best suited to act as coincidence detectors151, as they 
+amplify the EPSP during spatio-temporally correlated inputs and inactivate152 under 
+sustained firing conditions. There are also mechanisms that fall between these coding 
+extremes and that are not as general as noise and conductance; NMDA receptors are well 
+suited to act as spatio-temporal coincidence detectors with a longer integration window than 
+for Na+ channels and may also be able to interact with brief rate-coded bursts136,156. In 
+summary, different nonlinear processes seem to operate under sustained rate-coding and 
+sparse temporally correlated signalling regimes, allowing neurons to perform arithmetic 
+computations on information that is encoded in different ways.
+Simple and complex cells – local and segregated mechanisms
+Even the simplest of neurons, such as CGCs, can perform neuronal arithmetic (FIG. 8). 
+Experiments on these cells show that computations depend on the properties of the synaptic 
+input: shunting inhibition performs a subtractive operation on the I–O relationship when 
+excitation is mediated by noise-free conductance steps, but in the presence of input-
+dependent noise and STD, these neurons perform a largely multiplicative operation23,110. 
+Both simple and complex cells can use these synaptic mechanisms to transform the linear 
+integration of excitatory and inhibitory conductances into nonlinear multiplicative 
+operations (FIG. 8). In contrast to simple cells, the dendritic trees of morphologically 
+complex cells often form multiple interconnected electrical compartments. Dendritic 
+nonlinearities can be used to counteract local nonlinear driving force in these compartments 
+– which allows linear additive integration112,113 – or they can be used to multiply together 
+synaptic inputs on different parts of the dendrite. Shunting inhibition combined with noise 
+changes66 and/or STD110, can perform these functions during sustained rate-coded 
+signalling, as can dendritic Ca2+ conductances143 and dendritic inhibition combined with 
+dendritic Na+ channels that support back-propagating APs and DAPs145. Complex cells can 
+also perform local processing; dendritic Na+ channels (in CA1 cells151) and NMDAR 
+Silver
+Page 14
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 15 =====
+spikes156 only become activated with clustered synaptic input and may enable dendritic-
+branch-specific computations of temporally coded signals.
+Neurons are endowed with an extensive ‘tool kit’ of biophysical mechanisms that enable 
+them to perform arithmetic operations on their synaptic inputs, irrespective of whether they 
+are morphologically simple or complex or whether they operate as integrators of sustained 
+rate-coded input or coincident detectors of sparse temporally correlated signals (FIG. 8). The 
+existence of such a tool kit suggests that the individual neurons are powerful computational 
+devices in their own right.
+Future directions
+What types of neural computation occur in vivo?
+A key challenge in neuronal computation is to establish which of the potential biophysical 
+mechanisms identified are actually used for specific computational tasks in the brain. Most 
+work on neural computation to date has relied on electrophysiology and uncaging methods 
+in acute slice preparations or on modelling. Although some in vivo studies support the 
+existence of specific mechanisms, such as STD-164, noise-, and conductance-based gain 
+modulation43,97 and dendritic processing163,165,166, further in vivo investigations are 
+required to confirm which mechanisms are involved in neuronal arithmetic. It will also be 
+important to test the hypothesis that dendritic trees of complex neurons act as multi-
+compartment processors155 by establishing whether spatial clustering of synaptic 
+connectivity occurs163,167 and whether the temporal coincidence of sensory-evoked inputs 
+are sufficiently precise to activate local dendritic nonlinearities. Although these questions 
+are difficult to address in vivo without anaesthetics, which can change neuronal excitability 
+and synaptic conductances168, recent technological advances that allow whole-cell patch-
+clamp recordings169 and two-photon imaging to be carried out in awake animals170 suggest 
+that this type of study is now feasible.
+Linking in vivo to in vitro and modelling
+Information from in vivo recordings can make in vitro experiments and computer models 
+more realistic and predictions more reliable. Acute slice preparations allow manipulation 
+and control of neuronal activity, rendering this preparation invaluable for investigating 
+neural computation. However, new approaches are required to reproduce in vitro the spatial 
+and temporal patterns of activation onto dendritic trees observed in vivo163,165 and to 
+examine the fine connectivity patterns in neural networks171. Such information is relatively 
+easy to implement in models with interoperable software tools, such as neuroConstruct, 
+which allows the creation of three-dimensional network models with a high degree of 
+anatomical and physiological detail172 (FIG. 6), but these patterns are more difficult to 
+reproduce in vitro. Realistic synaptic-like conductances can be mimicked with a dynamic 
+clamp23,51,66,73,74,110,173, but this technique has limitations for complex neurons because 
+conductance injection is usually restricted to the soma. Two-photon glutamate uncaging is 
+currently the most precise way to mimic different spatio-temporal input patterns, but 
+available caged glutamate compounds block inhibitory transmission174 and are relatively 
+insensitive to two-photon excitation, necessitating high light-powers, which can be 
+Silver
+Page 15
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 16 =====
+phototoxic175. New caged compounds176 and optogenetic methods177 provide powerful 
+alternative approaches, potentially allowing in vivo patterns of activity to be reproduced in 
+vitro. With these newly emerging experimental and modelling technologies, it will be 
+possible to gain a deeper understanding of the mechanistic basis of neural arithmetic and to 
+identify which mechanisms are used by the brain to solve the complex computational 
+problems that we experience every day.
+Supplementary Material
+Refer to Web version on PubMed Central for supplementary material.
+Acknowledgements
+I would like to thank D. Attwell, G. Billings, T. Branco, M. Carandini, E. Chaigneau, T. Fernandez-Alfonso, M. 
+Farrant, T. Margrie, A. Roth, J. Rothman, D. Ruedt, J. Sjöström, V. Steuber, K. Vervaeke and D. Ward for 
+comments on the manuscript and J. Rothman and M. Farinella for help with preparing figures. This work was 
+funded by the Medical Research Council, the Biotechnology and Biological Sciences Research Council, and the 
+Wellcome Trust. R.A.S. holds a Wellcome Trust senior research fellowship in basic biomedical science.
+References
+1. McCulloch WS, Pitts W. A logical calculus of the ideas immanent in nervous activity. Bull. Math. 
+Biophys. 1943; 5:115–133.
+2. Blomfield S. Arithmetical operations performed by nerve cells. Brain Res. 1974; 69:115–124. 
+[PubMed: 4817903] A pioneering theoretical study that predicted that synaptic interactions in a 
+single neuron could be additive or multiplicative.
+3. Barlow HB, Levick WR. The mechanism of directionally selective units in rabbit’s retina. J. 
+Physiol. 1965; 178:477–504. [PubMed: 5827909] 
+4. Koch C, Poggio T, Torre V. Nonlinear interactions in a dendritic tree: localization, timing and role 
+in information processing. Proc. Natl Acad. Sci. USA. 1983; 50:2799–2802. [PubMed: 6573680] 
+5. Jack, JJB.; Noble, D.; Tsien, RW. Electric Current Flow in Excitable Cells. Clarendon Press; 
+Oxford: 1975. 
+6. Rall, W. Neuronal Theory and Modeling. Reiss, RF., editor. Stanford Univ. Press; 1964. p. 73-97.
+7. Rall W, Burke RE, Smith TG, Nelson PG, Frank K. Dendritic location of synapses and possible 
+mechanisms for the monosynaptic EPSP in motoneurons. J. Neurophysiol. 1967; 30:1169–1193. 
+[PubMed: 4293410] 
+8. Torre V, Poggio T. A synaptic mechanism possibly underlying directional selectivity to motion. 
+Proc. R. Soc. Lond. B. 1978; 202:409–416.
+9. Braitenberg V. Brain size and number of neurons: an exercise in synthetic neuroanatomy. J. 
+Comput. Neurosci. 2001; 10:71–77. [PubMed: 11316341] 
+10. Adrian ED, Zotterman Y. The impulses produced by sensory nerve endings. Part 3. Impulses set up 
+by touch and pressure. J. Physiol. 1926; 61:465–483. [PubMed: 16993807] 
+11. Adrian ED, Zotterman Y. The impulses produced by sensory nerve-endings. Part 2. The response 
+of a single end-organ. J. Physiol. 1926; 61:151–171. [PubMed: 16993780] 
+12. Arenz A, Silver RA, Schaefer AT, Margrie TW. The contribution of single synapses to sensory 
+representation in vivo. Science. 2008; 321:977–980. [PubMed: 18703744] 
+13. Vinje WE, Gallant JL. Sparse coding and decorrelation in primary visual cortex during natural 
+vision. Science. 2000; 287:1273–1276. [PubMed: 10678835] 
+14. Olshausen BA, Field DJ. Sparse coding of sensory inputs. Curr. Opin. Neurobiol. 2004; 14:481–
+487. [PubMed: 15321069] 
+15. Kerr JN, et al. Spatial organization of neuronal population responses in layer 2/3 of rat barrel 
+cortex. J. Neurosci. 2007; 27:13316–13328. [PubMed: 18045926] 
+Silver
+Page 16
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 17 =====
+16. Brecht M, Roth A, Sakmann B. Dynamic receptive fields of reconstructed pyramidal cells in layers 
+3 and 2 of rat somatosensory barrel cortex. J. Physiol. 2003; 553:243–265. [PubMed: 12949232] 
+17. Margrie TW, Brecht M, Sakmann B. In vivo, low-resistance, whole-cell recordings from neurons in 
+the anaesthetized and awake mammalian brain. Pflugers Arch. 2002; 444:491–498. [PubMed: 
+12136268] 
+18. Brecht M, Sakmann B. Dynamic representation of whisker deflection by synaptic potentials in 
+spiny stellate and pyramidal cells in the barrels and septa of layer 4 rat somatosensory cortex. J. 
+Physiol. 2002; 543:49–70. [PubMed: 12181281] 
+19. Földiák, P. The Handbook of Brain Theory and Neural Networks. Arbib, MA., editor. MIT Press; 
+2002. p. 1064-1068.
+20. Levy WB, Baxter RA. Energy efficient neural codes. Neural Comput. 1996; 8:531–543. [PubMed: 
+8868566] 
+21. Attwell D, Laughlin SB. An energy budget for signaling in the grey matter of the brain. J. Cereb. 
+Blood Flow Metab. 2001; 21:1133–1145. [PubMed: 11598490] 
+22. Holt GR, Koch C. Shunting inhibition does not have a divisive effect on firing rates. Neural 
+Comput. 1997; 9:1001–1013. [PubMed: 9188191] An influential theoretical study that predicted 
+that shunting inhibition has a subractive effect on the rate-coded I–O relationship. It includes an 
+elegant analysis of why inhibitory shunting conductances behave like current sources during 
+sustained firing.
+23. Mitchell SJ, Silver RA. Shunting inhibition modulates neuronal gain during synaptic excitation. 
+Neuron. 2003; 38:433–445. [PubMed: 12741990] Experimental study on CGCs that shows that 
+neuronal gain can be modulated by a shunting inhibitory conductance when excitation is mediated 
+by noisy rate-coded synaptic inputs.
+24. McCormick DA. Neurotransmitter actions in the thalamus and cerebral cortex and their role in 
+neuromodulation of thalamocortical activity. Prog. Neurobiol. 1992; 39:337–388. [PubMed: 
+1354387] 
+25. Salinas E, Thier P. Gain modulation: a major computational principle of the central nervous 
+system. Neuron. 2000; 27:15–21. [PubMed: 10939327] 
+26. Salinas E, Sejnowski TJ. Gain modulation in the central nervous system: where behavior, 
+neurophysiology, and computation meet. Neuroscientist. 2001; 7:430–440. [PubMed: 11597102] 
+27. Skydsgaard M, Hounsgaard J. Spatial integration of local transmitter responses in motoneurones of 
+the turtle spinal cord in vitro. J. Physiol. 1994; 479:233–246. [PubMed: 7799223] 
+28. Granit R, Kernell D, Lamarre Y. Algebraical summation in synaptic activation of motoneurones 
+firing within the ‘primary range’ to injected currents. J. Physiol. 1966; 187:379–399. [PubMed: 
+5972179] 
+29. Ma WJ, Beck JM, Latham PE, Pouget A. Bayesian inference with probabilistic population codes. 
+Nature Neurosci. 2006; 9:1432–1438. [PubMed: 17057707] 
+30. Yang T, Shadlen MN. Probabilistic reasoning by neurons. Nature. 2007; 447:1075–1080. 
+[PubMed: 17546027] 
+31. Brenner N, Bialek W, de Ruyter van Steveninck R. Adaptive rescaling maximizes information 
+transmission. Neuron. 2000; 26:695–702. [PubMed: 10896164] 
+32. Andersen RA, Essick GK, Siegel RM. Encoding of spatial location by posterior parietal neurons. 
+Science. 1985; 230:456–458. [PubMed: 4048942] 
+33. Andersen RA, Mountcastle VB. The influence of the angle of gaze upon the excitability of the 
+light-sensitive neurons of the posterior parietal cortex. J. Neurosci. 1983; 3:532–548. [PubMed: 
+6827308] 
+34. Brotchie PR, Andersen RA, Snyder LH, Goodman SJ. Head position signals used by parietal 
+neurons to encode locations of visual stimuli. Nature. 1995; 375:232–235. [PubMed: 7746323] 
+35. Salinas E, Abbott LF. Transfer of coded information from sensory to motor networks. J. Neurosci. 
+1995; 15:6461–6474. [PubMed: 7472409] 
+36. Pouget A, Sejnowski TJ. Spatial transformations in the parietal cortex using basis functions. J. 
+Cogn. Neurosci. 1997; 9:222–237. [PubMed: 23962013] 
+Silver
+Page 17
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 18 =====
+37. Zipser D, Andersen RA. A back-propagation programmed network that simulates response 
+properties of a subset of posterior parietal neurons. Nature. 1988; 331:679–684. [PubMed: 
+3344044] 
+38. Yakusheva TA, et al. Purkinje cells in posterior cerebellar vermis encode motion in an inertial 
+reference frame. Neuron. 2007; 54:973–985. [PubMed: 17582336] 
+39. McAdams CJ, Maunsell JH. Effects of attention on orientation-tuning functions of single neurons 
+in macaque cortical area V4. J. Neurosci. 1999; 19:431–441. [PubMed: 9870971] 
+40. Treue S, Martinez Trujillo JC. Feature-based attention influences motion processing gain in 
+macaque visual cortex. Nature. 1999; 399:575–579. [PubMed: 10376597] 
+41. Tovee MJ, Rolls ET, Azzopardi P. Translation invariance in the responses to faces of single 
+neurons in the temporal visual cortical areas of the alert macaque. J. Neurophysiol. 1994; 
+72:1049–1060. [PubMed: 7807195] 
+42. Anderson JS, Lampl I, Gillespie DC, Ferster D. The contribution of noise to contrast invariance of 
+orientation tuning in cat visual cortex. Science. 2000; 290:1968–1972. [PubMed: 11110664] An 
+experimental study that highlighted the importance of noise in contrast invariance of orientation 
+tuning and showed that it smoothed the relationship between output firing rate and membrane 
+potential.
+43. Ingham NJ, McAlpine D. GABAergic inhibition controls neural gain in inferior colliculus neurons 
+sensitive to interaural time differences. J. Neurosci. 2005; 25:6187–6198. [PubMed: 15987948] 
+44. Engel AK, Fries P, Singer W. Dynamic predictions: oscillations and synchrony in top-down 
+processing. Nature Rev. Neurosci. 2001; 2:704–716. [PubMed: 11584308] 
+45. Buzsaki G, Draguhn A. Neuronal oscillations in cortical networks. Science. 2004; 304:1926–1929. 
+[PubMed: 15218136] 
+46. Haider B, McCormick DA. Rapid neocortical dynamics: cellular and network mechanisms. 
+Neuron. 2009; 62:171–189. [PubMed: 19409263] 
+47. Rudolph M, Destexhe A. Tuning neocortical pyramidal neurons between integrators and 
+coincidence detectors. J. Comput. Neurosci. 2003; 14:239–251. [PubMed: 12766426] 
+48. Azouz R. Dynamic spatiotemporal synaptic integration in cortical neurons: neuronal gain, 
+revisited. J. Neurophysiol. 2005; 94:2785–2796. [PubMed: 15987760] 
+49. Diesmann M, Gewaltig MO, Aertsen A. Stable propagation of synchronous spiking in cortical 
+neural networks. Nature. 1999; 402:529–533. [PubMed: 10591212] 
+50. Marsalek P, Koch C, Maunsell J. On the relationship between synaptic input and spike output jitter 
+in individual neurons. Proc. Natl Acad. Sci. USA. 1997; 94:735–740. [PubMed: 9012854] 
+51. Williams SR. Spatial compartmentalization and functional impact of conductance in pyramidal 
+neurons. Nature Neurosci. 2004; 7:961–967. [PubMed: 15322550] 
+52. Koch C, Douglas R, Wehmeier U. Visibility of synaptically induced conductance changes: theory 
+and simulations of anatomically characterized cortical pyramidal cells. J. Neurosci. 1990; 
+10:1728–1744. [PubMed: 2355247] 
+53. Freund TF, Katona I. Perisomatic inhibition. Neuron. 2007; 56:33–42. [PubMed: 17920013] 
+54. Borg-Graham LJ, Monier C, Fregnac Y. Visual input evokes transient and strong shunting 
+inhibition in visual cortical neurons. Nature. 1998; 393:369–373. [PubMed: 9620800] 
+55. Fatt P, Katz B. The effect of inhibitory nerve impulses on a crustacean muscle fibre. J. Physiol. 
+1953; 121:374–389. [PubMed: 13085341] 
+56. Coombs JS, Eccles JC, Fatt P. The electrical properties of the motoneurone membrane. J. Physiol. 
+1955; 130:396–413. [PubMed: 13278907] 
+57. Vu ET, Krasne FB. Evidence for a computational distinction between proximal and distal neuronal 
+inhibition. Science. 1992; 255:1710–1712. [PubMed: 1553559] 
+58. Liu G. Local structural balance and functional interaction of excitatory and inhibitory synapses in 
+hippocampal dendrites. Nature Neurosci. 2004; 7:373–379. [PubMed: 15004561] 
+59. Carandini M, Heeger DJ. Summation and division by neurons in primate visual cortex. Science. 
+1994; 264:1333–1336. [PubMed: 8191289] 
+60. Nelson ML. A mechnism for neuronal gain control by decending pathways. Neural Comput. 1994; 
+6:242–254.
+Silver
+Page 18
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 19 =====
+61. Gabbiani F, Midtgaard J, Knöpfel T. Synaptic integration in a model of cerebellar granule cells. J. 
+Neurophysiol. 1994; 72:999–1009. [PubMed: 7527078] 
+62. Capaday C. A re-examination of the possibility of controlling the firing rate gain of neurons by 
+balancing excitatory and inhibitory conductances. Exp. Brain Res. 2002; 143:67–77. [PubMed: 
+11907692] 
+63. Sah P, Faber ES. Channels underlying neuronal calcium-activated potassium currents. Prog. 
+Neurobiol. 2002; 66:345–353. [PubMed: 12015199] 
+64. Berman NJ, Douglas RJ, Martin KA. GABAmediated inhibition in the neural networks of visual 
+cortex. Prog. Brain Res. 1992; 90:443–476. [PubMed: 1631309] 
+65. Brickley SG, Cull-Candy SG, Farrant M. Development of a tonic form of synaptic inhibition in rat 
+cerebellar granule cells resulting from persistent activation of GABAAreceptors. J. Physiol. 1996; 
+497:753–759. [PubMed: 9003560] 
+66. Chance F, Abbott L, Reyes A. Gain modulation from background synaptic input. Neuron. 2002; 
+35:773–782. [PubMed: 12194875] An experimental study on pyramidal cells that showed that 
+neuronal gain could be altered by changing the level of noise introduced by balanced excitatory 
+and inhibitory background synaptic input.
+67. Ulrich D. Differential arithmetic of shunting inhibition for voltage and spike rate in neocortical 
+pyramidal cells. Eur. J. Neurosci. 2003; 18:2159–2165. [PubMed: 14622176] 
+68. Destexhe A, Pare D. Impact of network activity on the integrative properties of neocortical 
+pyramidal neurons in vivo. J. Neurophysiol. 1999; 81:1531–1547. [PubMed: 10200189] 
+69. Destexhe A, Rudolph M, Pare D. The high-conductance state of neocortical neurons in vivo. 
+Nature Rev. Neurosci. 2003; 4:739–751. [PubMed: 12951566] 
+70. Ho N, Destexhe A. Synaptic background activity enhances the responsiveness of neocortical 
+pyramidal neurons. J. Neurophysiol. 2000; 84:1488–1496. [PubMed: 10980021] An early 
+theoretical study that predicted that background synaptic input enhances the responsiveness of 
+neocortical pyramidal neurons to coincident synaptic input.
+71. Sargent PB, Saviane C, Nielsen TA, DiGregorio DA, Silver RA. Rapid vesicular release, quantal 
+variability, and spillover contribute to the precision and reliability of transmission at a glomerular 
+synapse. J. Neurosci. 2005; 25:8173–8187. [PubMed: 16148225] 
+72. Stacey WC, Durand DM. Synaptic noise improves detection of subthreshold signals in 
+hippocampal CA1 neurons. J. Neurophysiol. 2001; 86:1104–1112. [PubMed: 11535661] 
+73. Shu Y, Hasenstaub A, Badoual M, Bal T, McCormick DA. Barrages of synaptic activity control 
+the gain and sensitivity of cortical neurons. J. Neurosci. 2003; 23:10388–10401. [PubMed: 
+14614098] A dynamic clamp study that showed that background noise controls the gain of the 
+relationship between spike probability and excitatory conductance for coincident inputs, while 
+voltage and conductance changes induce additive shifts. These effects are linked to up and down 
+states.
+74. Wolfart J, Debay D, Le Masson G, Destexhe A, Bal T. Synaptic background activity controls spike 
+transfer from thalamus to cortex. Nature Neurosci. 2005; 8:1760–1767. [PubMed: 16261132] 
+75. Fellous JM, Rudolph M, Destexhe A, Sejnowski TJ. Synaptic background noise controls the input/ 
+output characteristics of single cells in an in vitro model of in vivo activity. Neuroscience. 2003; 
+122:811–829. [PubMed: 14622924] 
+76. Destexhe A, Rudolph M, Fellous JM, Sejnowski TJ. Fluctuating synaptic conductances recreate in 
+vivo-like activity in neocortical neurons. Neuroscience. 2001; 107:13–24. [PubMed: 11744242] 
+77. Doiron B, Longtin A, Berman N, Maler L. Subtractive and divisive inhibition: effect of voltage-
+dependent inhibitory conductances and noise. Neural Comput. 2001; 13:227–248. [PubMed: 
+11177434] 
+78. Tiesinga PH, Jose JV, Sejnowski TJ. Comparison of current-driven and conductance-driven 
+neocortical model neurons with Hodgkin–Huxley voltage-gated channels. Phys. Rev. E Stat. Phys. 
+Plasmas Fluids Relat. Interdiscip. Topics. 2000; 62:8413–8419. [PubMed: 11138142] An early 
+theoretical study that predicted that increasing the noise of the input conductance will reduce the 
+gain of neurons during sustained firing.
+Silver
+Page 19
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 20 =====
+79. Prescott SA, De Koninck Y. Gain control of firing rate by shunting inhibition: roles of synaptic 
+noise and dendritic saturation. Proc. Natl Acad. Sci. USA. 2003; 100:2076–2081. [PubMed: 
+12569169] 
+80. Higgs MH, Slee SJ, Spain WJ. Diversity of gain modulation by noise in neocortical neurons: 
+regulation by the slow afterhyperpolarization conductance. J. Neurosci. 2006; 26:8787–8799. 
+[PubMed: 16928867] 
+81. Hansel D, van Vreeswijk C. How noise contributes to contrast invariance of orientation tuning in 
+cat visual cortex. J. Neurosci. 2002; 22:5118–5128. [PubMed: 12077207] 
+82. Miller KD, Troyer TW. Neural noise can explain expansive, power-law nonlinearities in neural 
+response functions. J. Neurophysiol. 2002; 87:653–659. [PubMed: 11826034] 
+83. Okun M, Lampl I. Instantaneous correlation of excitation and inhibition during ongoing and 
+sensory-evoked activities. Nature Neurosci. 2008; 11:535–537. [PubMed: 18376400] 
+84. Galarreta M, Hestrin S. Frequency-dependent synaptic depression and the balance of excitation and 
+inhibition in the neocortex. Nature Neurosci. 1998; 1:587–594. [PubMed: 10196566] 
+85. Shadlen MN, Newsome WT. Noise, neural codes and cortical organization. Curr. Opin. Neurobiol. 
+1994; 4:569–579. [PubMed: 7812147] 
+86. Kerr AM, Capogna M. Unitary IPSPs enhance hilar mossy cell gain in the rat hippocampus. J. 
+Physiol. 2007; 578:451–470. [PubMed: 17082230] 
+87. Pavlov I, Savtchenko LP, Kullmann DM, Semyanov A, Walker MC. Outwardly rectifying 
+tonically active GABAA receptors in pyramidal cells modulate neuronal offset, not gain. J. 
+Neurosci. 2009; 29:15341–15350. [PubMed: 19955387] 
+88. Longtin A, Doiron B, Bulsara AR. Noise-induced divisive gain control in neuron models. 
+BioSystems. 2002; 67:147–156. [PubMed: 12459294] 
+89. Silver RA, Traynelis SF, Cull-Candy SG. Rapid-time-course miniature and evoked excitatory 
+currents at cerebellar synapses in situ. Nature. 1992; 355:163–166. [PubMed: 1370344] 
+90. Cathala L, Brickley S, Cull-Candy S, Farrant M. Maturation of EPSCs and intrinsic membrane 
+properties enhances precision at a cerebellar synapse. J. Neurosci. 2003; 23:6074–6085. [PubMed: 
+12853426] 
+91. Rice, SO. Selected Papers on Noise and Stochastic Processes. Wax, N., editor. Dover; New York: 
+1954. p. 113-150.
+92. Ayaz A, Chance FS. Gain modulation of neuronal responses by subtractive and divisive 
+mechanisms of inhibition. J. Neurophysiol. 2009; 101:958–968. [PubMed: 19073814] 
+93. Murphy BK, Miller KD. Multiplicative gain changes are induced by excitation or inhibition alone. 
+J. Neurosci. 2003; 23:10040–10051. [PubMed: 14602818] 
+94. Finn IM, Priebe NJ, Ferster D. The emergence of contrast-invariant orientation tuning in simple 
+cells of cat visual cortex. Neuron. 2007; 54:137–152. [PubMed: 17408583] 
+95. Carandini M. Melting the iceberg: contrast invariance in visual cortex. Neuron. 2007; 54:11–13. 
+[PubMed: 17408573] 
+96. Banitt Y, Martin KA, Segev I. A biologically realistic model of contrast invariant orientation 
+tuning by thalamocortical synaptic depression. J. Neurosci. 2007; 27:10230–10239. [PubMed: 
+17881529] 
+97. Cardin JA, Palmer LA, Contreras D. Cellular mechanisms underlying stimulus-dependent gain 
+modulation in primary visual cortex neurons in vivo. Neuron. 2008; 59:150–160. [PubMed: 
+18614036] An in vivo study of neural gain that involved intracellular recordings from single 
+neurons in primary visual cortex. Stimuli that evoked sustained changes in the resting membrane 
+potential, input resistance and membrane fluctuations modulated the gain of the firing rate–current 
+relationship.
+98. Gabbiani F, Krapp HG, Koch C, Laurent G. Multiplicative computation in a visual neuron 
+sensitive to looming. Nature. 2002; 420:320–324. [PubMed: 12447440] 
+99. Dittman JS, Kreitzer AC, Regehr WG. Interplay between facilitation, depression, and residual 
+calcium at three presynaptic terminals. J. Neurosci. 2000; 20:1374–1385. [PubMed: 10662828] 
+100. Eccles JC, Katz B, Kuffler SW. Nature of the ‘endplate potential’ in curarized muscle. J. 
+Neurophysiol. 1941; 4:362–387.
+Silver
+Page 20
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 21 =====
+101. Feng TP. The changes in the end-plate potential during and after prolonged stimulation. Chin. J. 
+Physiol. 1941; 16:341–372.
+102. Betz WJ. Depression of transmitter release at the neuromuscular junction of the frog. J. Physiol. 
+1970; 206:629–644. [PubMed: 5498509] 
+103. Elmqvist D, Quastel DM. A quantitative study of end-plate potentials in isolated human muscle. 
+J. Physiol. 1965; 178:505–529. [PubMed: 5827910] 
+104. Saviane C, Silver RA. Fast vesicle reloading and a large pool sustain high bandwidth transmission 
+at a central synapse. Nature. 2006; 439:983–987. [PubMed: 16496000] 
+105. Trussell LO, Fischbach GD. Glutamate receptor desensitization and its role in synaptic 
+transmission. Neuron. 1989; 3:209–218. [PubMed: 2576213] 
+106. Abbott LF, Regehr WG. Synaptic computation. Nature. 2004; 431:796–803. [PubMed: 
+15483601] 
+107. Abbott LF, Varela JA, Sen K, Nelson SB. Synaptic depression and cortical gain control. Science. 
+1997; 275:220–224. [PubMed: 8985017] 
+108. Tsodyks MV, Markram H. The neural code between neocortical pyramidal neurons depends on 
+neurotransmitter release probability. Proc. Natl Acad. Sci. USA. 1997; 94:719–723. [PubMed: 
+9012851] 1997; 94:5495. erratum in. 
+109. Carandini M, Heeger DJ, Senn W. A synaptic explanation of suppression in visual cortex. J. 
+Neurosci. 2002; 22:10053–10065. [PubMed: 12427863] 
+110. Rothman JS, Cathala L, Steuber V, Silver RA. Synaptic depression enables neuronal gain control. 
+Nature. 2009; 457:1015–1018. [PubMed: 19145233] A combined experimental and theoretical 
+study showing that short-term synaptic depression in the excitatory input can convert inhibition-
+mediated additive shifts in the I–O relationship into multiplicative gain changes.
+111. Rancz EA, et al. High-fidelity transmission of sensory information by single cerebellar mossy 
+fibre boutons. Nature. 2007; 450:1245–1248. [PubMed: 18097412] 
+112. Cash S, Yuste R. Linear summation of excitatory inputs by CA1 pyramidal neurons. Neuron. 
+1999; 22:383–394. [PubMed: 10069343] 
+113. Cash S, Yuste R. Input summation by cultured pyramidal neurons is linear and position-
+independent. J. Neurosci. 1998; 18:10–15. [PubMed: 9412481] 
+114. Tamas G, Szabadics J, Somogyi P. Cell type- and subcellular position-dependent summation of 
+unitary postsynaptic potentials in neocortical neurons. J. Neurosci. 2002; 22:740–747. [PubMed: 
+11826103] 
+115. Bernander Ö, Koch C, Douglas RJ. Amplification and linearization of distal synaptic input to 
+cortical pyramidal cells. J. Neurophysiol. 1994; 72:2743–2753. [PubMed: 7897486] 
+116. Gasparini S, Magee JC. State-dependent dendritic computation in hippocampal CA1 pyramidal 
+neurons. J. Neurosci. 2006; 26:2088–2100. [PubMed: 16481442] 
+117. Williams SR, Stuart GJ. Dependence of EPSP efficacy on synapse location in neocortical 
+pyramidal neurons. Science. 2002; 295:1907–1910. [PubMed: 11884759] An experimental study 
+of neocortical pyramidal cells showing spatial dependence of synaptic efficacy and that synaptic 
+inputs on the distal dendrites have a much narrower time-window for integration than those at the 
+soma.
+118. Williams SR, Atkinson SE. Pathway-specific use-dependent dynamics of excitatory synaptic 
+transmission in rat intracortical circuits. J. Physiol. 2007; 585:759–777. [PubMed: 17947318] 
+119. Markram H, Tsodyks M. Redistribution of synaptic efficacy between neocortical pyramidal 
+neurons. Nature. 1996; 382:807–810. [PubMed: 8752273] 
+120. Sjostrom PJ, Turrigiano GG, Nelson SB. Neocortical LTD via coincident activation of 
+presynaptic NMDA and cannabinoid receptors. Neuron. 2003; 39:641–654. [PubMed: 12925278] 
+121. London M, Hausser M. Dendritic computation. Annu. Rev. Neurosci. 2005; 28:503–532. 
+[PubMed: 16033324] 
+122. Mel, B. Dendrites. Stuart, GJ.; Spruston, N.; Hausser, M., editors. Oxford Univ. Press; 2008. p. 
+271-284.
+123. Larkum ME, Nevian T. Synaptic clustering by dendritic signalling mechanisms. Curr. Opin. 
+Neurobiol. 2008; 18:321–331. [PubMed: 18804167] 
+Silver
+Page 21
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 22 =====
+124. Spruston N. Pyramidal neurons: dendritic structure and synaptic integration. Nature Rev. 
+Neurosci. 2008; 9:206–221. [PubMed: 18270515] 
+125. Sjöström PJ, Rancz EA, Roth A, Häusser M. Dendritic excitability and synaptic plasticity. 
+Physiol. Rev. 2008; 88:769–840. [PubMed: 18391179] 
+126. Stuart, G.; Spruston, N.; Häusser, M., editors. Dendrites. Oxford Univ. Press; Oxford: 2008. 
+127. Nevian T, Larkum ME, Polsky A, Schiller J. Properties of basal dendrites of layer 5 pyramidal 
+neurons: a direct patch-clamp recording study. Nature Neurosci. 2007; 10:206–214. [PubMed: 
+17206140] 
+128. Hoffman DA, Magee JC, Colbert CM, Johnston D. K+ channel regulation of signal propagation in 
+dendrites of hippocampal pyramidal neurons. Nature. 1997; 387:869–875. [PubMed: 9202119] 
+129. Golding NL, Spruston N. Dendritic sodium spikes are variable triggers of axonal action potentials 
+in hippocampal CA1 pyramidal neurons. Neuron. 1998; 21:1189–1200. [PubMed: 9856473] 
+130. Araya R, Eisenthal KB, Yuste R. Dendritic spines linearize the summation of excitatory 
+potentials. Proc. Natl Acad. Sci. USA. 2006; 103:18799–18804. [PubMed: 17132736] 
+131. Araya R, Jiang J, Eisenthal KB, Yuste R. The spine neck filters membrane potentials. Proc. Natl 
+Acad. Sci. USA. 2006; 103:17961–17966. [PubMed: 17093040] 
+132. Palmer LM, Stuart GJ. Membrane potential changes in dendritic spines during action potentials 
+and synaptic input. J. Neurosci. 2009; 29:6897–6903. [PubMed: 19474316] 
+133. Capaday C, van Vreeswijk C. Direct control of firing rate gain by dendritic shunting inhibition. J. 
+Integr. Neurosci. 2006; 5:199–222. [PubMed: 16783869] 
+134. Spruston N, Jaffe DB, Williams SH, Johnston D. Voltage- and space-clamp errors associated with 
+the measurement of electrotonically remote synaptic events. J. Neurophysiol. 1993; 70:781–802. 
+[PubMed: 8410172] 
+135. Oviedo H, Reyes AD. Boosting of neuronal firing evoked with asynchronous and synchronous 
+inputs to the dendrite. Nature Neurosci. 2002; 5:261–266. [PubMed: 11836531] 
+136. Larkum ME, Nevian T, Sandler M, Polsky A, Schiller J. Synaptic integration in tuft dendrites of 
+layer 5 pyramidal neurons: a new unifying principle. Science. 2009; 325:756–760. [PubMed: 
+19661433] An experimental study that unifies previous work by the same authors by showing 
+that synaptic integration occurs in the thin basal and apical dendrites of L5 pyramidal cells 
+through NMDA receptors. These local nonlinear integration sites can trigger either a regenerative 
+Ca2+ spike in the main dendrite or a sodium spike at the soma.
+137. Schwindt PC, Crill WE. Amplification of synaptic current by persistent sodium conductance in 
+apical dendrite of neocortical neurons. J. Neurophysiol. 1995; 74:2220–2224. [PubMed: 
+8592214] 
+138. Oviedo H, Reyes AD. Variation of input–output properties along the somatodendritic axis of 
+pyramidal neurons. J. Neurosci. 2005; 25:4985–4995. [PubMed: 15901779] 
+139. Cook EP, Johnston D. Voltage-dependent properties of dendrites that eliminate location-
+dependent variability of synaptic input. J. Neurophysiol. 1999; 81:535–543. [PubMed: 
+10036257] 
+140. Schwindt PC, Crill WE. Synaptically evoked dendritic action potentials in rat neocortical 
+pyramidal neurons. J. Neurophysiol. 1998; 79:2432–2446. [PubMed: 9582218] 
+141. Larkum ME, Zhu JJ, Sakmann B. A new cellular mechanism for coupling inputs arriving at 
+different cortical layers. Nature. 1999; 398:338–341. [PubMed: 10192334] 
+142. Wei DS, et al. Compartmentalized and binary behavior of terminal dendrites in hippocampal 
+pyramidal neurons. Science. 2001; 293:2272–2275. [PubMed: 11567143] 
+143. Larkum ME, Senn W, Luscher HR. Top-down dendritic input increases the gain of layer 5 
+pyramidal neurons. Cereb. Cortex. 2004; 14:1059–1070. [PubMed: 15115747] 
+144. Vervaeke K, Hu H, Graham LJ, Storm JF. Contrasting effects of the persistent Na+ current on 
+neuronal excitability and spike timing. Neuron. 2006; 49:257–270. [PubMed: 16423699] 
+145. Mehaffey WH, Doiron B, Maler L, Turner RW. Deterministic multiplicative gain control with 
+active dendrites. J. Neurosci. 2005; 25:9968–9977. [PubMed: 16251445] This experimental and 
+theoretical study shows how Na+ channels on pyramidal cell dendrites in electric fish confer 
+spatial dependence to the arithmetic operations performed by inhibition during sustained firing.
+Silver
+Page 22
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 23 =====
+146. Smith MR, Nelson AB, Du Lac S. Regulation of firing response gain by calcium-dependent 
+mechanisms in vestibular nucleus neurons. J. Neurophysiol. 2002; 87:2031–2042. [PubMed: 
+11929921] 
+147. Stuart G, Schiller J, Sakmann B. Action potential initiation and propagation in rat neocortical 
+pyramidal neurons. J. Physiol. 1997; 505:617–632. [PubMed: 9457640] 
+148. Turner RW, Meyers DE, Barker JL. Localization of tetrodotoxin-sensitive field potentials of CA1 
+pyramidal cells in the rat hippocampus. J. Neurophysiol. 1989; 62:1375–1387. [PubMed: 
+2557391] 
+149. Losonczy A, Makara JK, Magee JC. Compartmentalized dendritic plasticity and input feature 
+storage in neurons. Nature. 2008; 452:436–441. [PubMed: 18368112] 
+150. Gasparini S, Migliore M, Magee JC. On the initiation and propagation of dendritic spikes in CA1 
+pyramidal neurons. J. Neurosci. 2004; 24:11046–11056. [PubMed: 15590921] 
+151. Losonczy A, Magee JC. Integrative properties of radial oblique dendrites in hippocampal CA1 
+pyramidal neurons. Neuron. 2006; 50:291–307. [PubMed: 16630839] An experimental study that 
+used glutamate uncaging to show that coincident input onto radial oblique dendrites of CA1 
+pyramidal cells can trigger a local supralinear Na+ spike, suggesting that these dendritic 
+compartments can operate as independent computational units.
+152. Remy S, Csicsvari J, Beck H. Activity-dependent control of neuronal output by local and global 
+dendritic spike attenuation. Neuron. 2009; 61:906–916. [PubMed: 19323999] 
+153. Ariav G, Polsky A, Schiller J. Submillisecond precision of the input-output transformation 
+function mediated by fast sodium dendritic spikes in basal dendrites of CA1 pyramidal neurons. 
+J. Neurosci. 2003; 23:7750–7758. [PubMed: 12944503] 
+154. Softky W. Sub-millisecond coincidence detection in active dendritic trees. Neuroscience. 1994; 
+58:13–41. [PubMed: 8159289] 
+155. Poirazi P, Mel BW. Impact of active dendrites an structural plasticity on the memory capacity of 
+neural tissue. Neuron. 2001; 29:779–796. [PubMed: 11301036] 
+156. Polsky A, Mel BW, Schiller J. Computational subunits in thin dendrites of pyramidal cells. 
+Nature Neurosci. 2004; 7:621–627. [PubMed: 15156147] 
+157. Poirazi P, Brannon T, Mel BW. Pyramidal neuron as two-layer neural network. Neuron. 2003; 
+37:989–999. [PubMed: 12670427] This theoretical study proposes the idea that local nonlinear 
+dendritic integration enables an individual pyramidal cell to behave like a two-layer network, 
+thereby substantially enhancing its computational power.
+158. Nowak LP, Bregestovski P, Ascher P, Herbert A, Prochiantz A. Magnesium gates glutamate-
+activated channels in mouse central neurones. Nature. 1984; 307:462–465. [PubMed: 6320006] 
+159. Schiller J, Major G, Koester HJ, Schiller Y. NMDA spikes in basal dendrites of cortical 
+pyramidal neurons. Nature. 2000; 404:285–289. [PubMed: 10749211] 
+160. Major G, Polsky A, Denk W, Schiller J, Tank DW. Spatiotemporally graded NMDA spike/
+plateau potentials in basal dendrites of neocortical pyramidal neurons. J. Neurophysiol. 2008; 
+99:2584–2601. [PubMed: 18337370] 
+161. Rhodes P. The properties and implications of NMDA spikes in neocortical pyramidal cells. J. 
+Neurosci. 2006; 26:6704–6715. [PubMed: 16793878] 
+162. Theunissen FE. From synchrony to sparseness. Trends Neurosci. 2003; 26:61–64. [PubMed: 
+12536128] 
+163. Jia H, Rochefort NL, Chen X, Konnerth A. Dendritic organization of sensory input to cortical 
+neurons in vivo. Nature. 2010; 464:1307–1312. [PubMed: 20428163] 
+164. Rancz EA, Hausser M. Dendritic calcium spikes are tunable triggers of cannabinoid release and 
+short-term synaptic plasticity in cerebellar Purkinje neurons. J. Neurosci. 2006; 26:5428–5437. 
+[PubMed: 16707795] 
+165. Bollmann JH, Engert F. Subcellular topography of visually driven dendritic activity in the 
+vertebrate visual system. Neuron. 2009; 61:895–905. [PubMed: 19323998] 
+166. Waters J, Larkum M, Sakmann B, Helmchen F. Supralinear Ca2+ influx into dendritic tufts of 
+layer 2/3 neocortical pyramidal neurons in vitro and in vivo. J. Neurosci. 2003; 23:8558–8567. 
+[PubMed: 13679425] 
+Silver
+Page 23
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 24 =====
+167. Chklovskii DB, Mel BW, Svoboda K. Cortical rewiring and information storage. Nature. 2004; 
+431:782–788. [PubMed: 15483599] 
+168. Pocock G, Richards CD. Excitatory and inhibitory synaptic mechanisms in anaesthesia. Br. J. 
+Anaesth. 1993; 71:134–147. [PubMed: 7688240] 
+169. Lee AK, Manns ID, Sakmann B, Brecht M. Whole-cell recordings in freely moving rats. Neuron. 
+2006; 51:399–407. [PubMed: 16908406] 
+170. Dombeck DA, Khabbaz AN, Collman F, Adelman TL, Tank DW. Imaging large-scale neural 
+activity with cellular resolution in awake, mobile mice. Neuron. 2007; 56:43–57. [PubMed: 
+17920014] 
+171. Wickersham IR, et al. Monosynaptic restriction of transsynaptic tracing from single, genetically 
+targeted neurons. Neuron. 2007; 53:639–647. [PubMed: 17329205] 
+172. Gleeson P, Steuber V, Silver RA. neuroConstruct: a tool for modeling networks of neurons in 3D 
+space. Neuron. 2007; 54:219–235. [PubMed: 17442244] 
+173. Harsch A, Robinson HP. Postsynaptic variability of firing in rat cortical neurons: the roles of 
+input synchronization and synaptic NMDA receptor conductance. J. Neurosci. 2000; 20:6181–
+6192. [PubMed: 10934268] 
+174. Fino E, et al. RuBi-glutamate: two-photon and visible-light photoactivation of neurons and 
+dendritic spines. Front. Neural Circuits. 2009; 3:2. [PubMed: 19506708] 
+175. Kiskin NI, Chillingworth R, McCray JA, Piston D, Ogden D. The efficiency of two-photon 
+photolysis of a ‘caged’ fluorophore, o-1-(2-nitrophenyl) ethylpyranine, in relation to 
+photodamage of synaptic terminals. Eur. Biophys. J. 2002; 30:588–604. [PubMed: 11908850] 
+176. Kantevari S, Matsuzaki M, Kanemoto Y, Kasai H, Ellis-Davies GC. Two-color, two-photon 
+uncaging of glutamate and GABA. Nature Methods. 2010; 7:123–125. [PubMed: 20037590] 
+177. Zhang F, Aravanis AM, Adamantidis A, de Lecea L, Deisseroth K. Circuit-breakers: optical 
+technologies for probing neural signals and systems. Nature Rev. Neurosci. 2007; 8:577–581. 
+[PubMed: 17643087] 
+178. Kole MH, et al. Action potential generation requires a high sodium channel density in the axon 
+initial segment. Nature Neurosci. 2008; 11:178–186. [PubMed: 18204443] 
+179. Hines ML, Carnevale NT. The NEURON simulation environment. Neural Comput. 1997; 
+9:1179–1209. [PubMed: 9248061] 
+Silver
+Page 24
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 25 =====
+Figure 1. The rate-coded neuronal input–output relationship and possible arithmetic operations 
+performed by modulatory inputs
+a ∣ For rate-coded neuronal signalling, a driving input typically consists of asynchronous 
+excitatory synaptic input from multiple presynaptic neurons firing in a sustained manner 
+(shown in red). A neuron may also receive a modulatory input, such as inhibition (shown in 
+green), that alters the way the neuron transforms its synaptic input into output firing rate 
+(shown in blue). b ∣ The input–output (I–O) relationship between the total (or mean) driving 
+input rate (d) and the response that is represented by the output firing rate (R). The arrow 
+Silver
+Page 25
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 26 =====
+indicates the rheobase (minimum synaptic input that generates an action potential). c ∣ Rate-
+coded I–O relationships can be altered by changing the strength of the modulatory input (m), 
+which may be mediated by a different inhibitory or excitatory input. If this shifts the I–O 
+relationship along the x-axis to the right or left, changing the rheobase but not the shape of 
+the curve, an additive operation has been performed on the input (shown by orange curves). 
+This input modulation is often referred to as linear integration because the synaptic inputs 
+are being summed. d ∣ An additive operation can also be performed on output firing. In this 
+case a modulatory input shifts the I–O relationship up or down along the y-axis (shown by 
+orange curves). e,f ∣ If the driving and modulatory inputs are multiplied together by the 
+neuron, changing the strength of a modulatory input will change the slope, or gain, of the I–
+O relationship without changing the rheobase. A multiplicative operation can produce a 
+scaling of the I–O relationship along either the x-axis (input modulation; e) or the y-axis 
+(output modulation; f). Although both of these modulations change the gain of the I–O 
+relationship, only output gain modulation scales the neuronal dynamic range (f).
+Silver
+Page 26
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 27 =====
+Figure 2. Neuronal arithmetic during sparse coding
+a ∣ Sparse coding relies on coincident synaptic input within a brief time-window (Δt) during 
+which the inputs are integrated and potentially drive the cell to cross the action potential 
+threshold. b ∣ Spike probability versus the number of coincident driving inputs (Pspike–Nexc) 
+is the simplest way to quantify the neuron’s input–output (I–O) relationship under these 
+conditions. c ∣ Background synaptic noise is important in determining the shape of the 
+Pspike–Nexc relationship73,76 because it determines the width of the membrane voltage 
+distribution. The simulation shows a simple integrate-and-fire cell with background voltage 
+noise, driven with a synchronous synaptic input (top part). Shifting the voltage distribution 
+without changing its shape by adding a hyperpolarizing current introduces a subtractive shift 
+in the Pspike–Nexc relationship (bottom part; shift from black to orange traces). By contrast, 
+decreasing the voltage noise increases the gain of the I–O relationship (shift from black to 
+green traces). d ∣ The relationship between Pspike and driving inputs can also be defined in 
+the temporal domain. In this case, the temporal correlation in the driving inputs is defined as 
+the standard deviation of input spike times (σinput)48,50. Altering the level of noise changes 
+the gain of the Pspike–σinput relationship47,48. e ∣ Changing the input resistance by altering a 
+shunting conductance tends to shift the Pspike–σinput relationship48. This is due to scaling of 
+the excitatory postsynaptic potential (EPSP) and voltage noise, together with altered 
+summation of temporally dispersed inputs, as a result of changes in membrane time constant 
+and thus EPSP shape (FIG. 3a). Parts d and e are modified, with permission, from REF. 48 
+© (2005) The American Physiological Society.
+Silver
+Page 27
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 28 =====
+Figure 3. Subthreshold effects of shunting conductance and its effect on the input–output 
+relationship of a cerebellar granule cell in the absence of noise
+The effect of shunting inhibition on cerebellar granule cells (CGCs) was investigated in 
+acute cerebellar slices using the dynamic clamp technique. a ∣ An excitatory postsynaptic 
+potential (EPSP) evoked by an AMPAR (α-amino-3-hydroxy-5-methyl-4-isoxazole 
+propionic acid receptor) synaptic conductance waveform (reversal potential 0 mV) that was 
+injected during control conditions (shown in black) and during application of a 1 
+nanosiemens (nS) tonic shunting inhibitory conductance (reversal potential −75 mV). This 
+inhibitory conductance scaled down the amplitude of the EPSP, consistent with Ohm’s law, 
+and accelerated the decay of the EPSP as a result of a reduction in the membrane time 
+constant (shown in green). b ∣ CGC firing responses to a noise-free excitatory conductance 
+step (Gexc, shown in red). The upper traces show the voltage responses to Gexc under control 
+conditions (shown in black) and during injection of an inhibitory conductance (shown in 
+Silver
+Page 28
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 29 =====
+orange). c ∣ The relationship between mean firing rate of a CGC and step excitatory 
+conductance in the presence and absence (control) of an inhibitory conductance. The 
+inhibitory conductance produced a purely subtractive input modulation (x-axis shift; FIG. 
+1c) in the neuronal input–output relationship. d ∣ The relationship between current flow 
+through the tonic inhibitory conductance and the driving excitatory conductance, for 
+subthreshold voltages (+) and during spiking (Δ). The inhibitory current depends on the 
+excitatory conductance as the subthreshold voltage depolarizes, as expected for a 
+conductance. However, during sustained firing the shunting inhibitory conductance behaves 
+like a constant current source22. This explains why shunting inhibition has a multiplicative 
+effect on subthreshold inputs but has an additive effect during sustained firing under low 
+noise conditions. Figure is modified, with permission, from REF. 23 © (2003) Elsevier.
+Silver
+Page 29
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 30 =====
+Figure 4. Synaptic voltage noise and gain modulation of the rate-coded input–output relationship
+a ∣ Schematic setup for intracellular voltage recordings from a neocortical pyramidal neuron 
+in a cat under anaesthesia. The intracellular voltage is characterized by a high level of noise 
+in each recording period. Blocking synaptic input with local injection of tetrodotoxin (TTX), 
+eliminated the voltage noise and increased the input resistance of the cell (see the voltage 
+response to a current step of 0.1 nanoamperes (nA)). b ∣ Blocking synaptic input with TTX 
+reduces the variance of the intracellular voltage distribution in pyramidal neurons and 
+demonstrates that some cortical cells operate under conditions of high levels of synaptically 
+induced voltage noise (active) in vivo. c ∣ The effect of noise on the relationship between 
+firing rate and current (F–I) for a cortical interneuron, recorded in an acute slice preparation. 
+As the noise increases (σ indicates standard deviation of the voltage noise in mV), the foot 
+of the F–I relationship becomes more pronounced, reducing the gain of the relationship and 
+producing a more sigmoid shape. d ∣ The dynamic clamp configuration used to inject 
+balanced excitatory (gE) and inhibitory (gI) synaptic conductance trains (resulting in zero net 
+excitatory drive) into neocortical pyramidal cells, mimicking background synaptic input 
+(noise) in the acute slice. Current steps were used as driving inputs to assay the neuronal 
+responsiveness. Isyn is the synaptic current and EE and EI are the excitatory and inhibitory 
+reversal potentials, respectively. e ∣ The relationship between firing rate and the amplitude 
+of the driving current steps for different levels of synaptic conductance noise (multiples of 
+X, a balance of excitatory (rate = 7,000 Hz) and inhibitory synaptic inputs (rate = 3,000 
+Hz)). As the level of noise increases the gain of the F–I relationship was modified in a 
+Silver
+Page 30
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 31 =====
+divisive manner. Part a is modified, with permission, from Nature Reviews Neuroscience 
+REF. 69 © (2003) Macmillan Publishers Ltd. All rights reserved. Part b is modified, with 
+permission, from REF. 68 © (1999) The American Physiological Society. Part c is modified, 
+with permission, from REF. 80 © (2006) Society for Neuroscience. Parts d and e are 
+modified, with permission, from REF. 66 © (2002) Elsevier.
+Silver
+Page 31
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 32 =====
+Figure 5. Inhibition-mediated gain modulation with noisy rate-coded synaptic input in cerebellar 
+granule cells
+The effect of shunting inhibition on the rate coded input-output (I–O) relationship of 
+cerebellar granule cells (CGCs) driven with random trains of noisy, synaptic-like 
+conductances in the acute cerebellar slice preparation using the dynamic clamp technique. a 
+∣ A CGC was excited by four summed Poisson trains of AMPAR (α-amino-3-hydroxy-5-
+methyl-4-isoxazole propionic acid receptor) synaptic conductances (Gexc) with a reversal 
+potential of 0 mV under control conditions and during a 1 nanosiemens (nS) constant (tonic) 
+inhibitory conductance. The resulting relationships between CGC firing rate and the mean 
+excitation rate are shown in b. b ∣ Application of the tonic inhibitory conductance reduced 
+the slope of the I–O relationship (divisive operation, shown in green) and introduced an 
+additive offset (subtractive operation, shown in orange). c ∣ The relationship between the 
+Silver
+Page 32
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 33 =====
+variance of random trains of synaptic conductances with constant amplitude and the total 
+excitation rate (shown by grey circles). The variance increases with rate as predicted by 
+Campbell’s theorem. σ2 is the conductance variance, ν is the total synaptic rate, and G(t) is 
+the time course of the synaptic conductance waveform. d ∣ The relationship between firing 
+rate and mean voltage for control and during 1 nS tonic inhibition. In the presence of noise, 
+this relationship is approximated by a power law, which when combined with conductance 
+changes can perform a crude form of multiplication81 (shown by solid green and grey lines). 
+In contrast to the noise-free case (FIG. 3), a shunting inhibitory conductance has a 
+multiplicative effect on the rate-coded input–output relationship owing to synaptic inputs 
+exhibiting an excitation-dependent variance. Parts a, b and d are reproduced, with 
+permission, from REF. 23 © (2003) Elesvier.
+Silver
+Page 33
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 34 =====
+Figure 6. Short-term synaptic depression converts inhibition-mediated additive shifts in the rate-
+coded input–output relationship into multiplicative gain changes in morphologically simple and 
+complex cells
+a ∣ A morphologically simple cerebellar granule cell (CGC) with AMPAR (α-amino-3-
+hydroxy-5-methyl-4-isoxazole propionic acid receptor)-mediated synaptic conductance 
+trains showing short-term depression (+STD; shown by blue traces) measured by stimulating 
+mossy fibres at two frequencies. Artificial synaptic conductance trains without STD were 
+also constructed (−STD; shown by red traces). Dashed lines show the time averaged 
+conductance (Gexc) with and without STD. b ∣ The relationship between CGC firing rate and 
+Gexc obtained with the dynamic clamp technique. Depressing and non-depressing synaptic 
+conductance trains produced similar CGC firing rates in control conditions and during a 0.5 
+nanosiemens (nS) constant (tonic) inhibitory conductance, indicating that they are integrated 
+Silver
+Page 34
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 35 =====
+in a similar manner. Lines are fits to Hill-type functions (Supplementary information S1 
+(box)) and error bars show the standard error of the mean. c ∣ The relationship between Gexc 
+and mean input rate across four inputs with and without STD. Without STD the relationship 
+is linear, as expected for summing identical waveforms. STD introduces a nonlinear 
+saturating exponential function between input rate and Gexc. d ∣ CGC input–output (I–O) 
+relationships with and without STD and their modulation by a 0.5 nS tonic inhibitory 
+conductance. STD in the driving input (c) amplifies the gain change observed with tonic 
+inhibition by transforming the additive component into a multiplicative scaling. e ∣ A 
+morphologically complex layer 5 pyramidal neuron model178. The model shows random 
+locations of excitatory synapses (shown by red circles) and inhibitory synapses (shown by 
+green circles) distributed over the basolateral dendritic tree110, and spiking is shown below. 
+This simulation was built with neuroConstruct172 and run on the NEURON simulator179. f ∣ 
+A conductance train and the I–O relationship for non-depressing excitatory synaptic input 
+(−STD) for control conditions (shown by red squares) and for various rates of synaptic 
+inhibition (shown by yellow squares). Synaptic inhibition introduced an additive shift along 
+the driving axis consistent with linear integration. g ∣ Same as f but including STD in the 
+excitatory synaptic inputs (+STD alone, shown by dark blue circles; +STD and inhibition, 
+shown by grey circles). STD changed the effects of inhibition from largely additive (f) to a 
+largely multiplicative operation (g). Scaling down of the I–O relationship indicates an output 
+gain modulation (FIG. 1f). Synaptic conductance waveforms and STD used in the 
+simulation were matched to experimental data for layer 5 synaptic connections110. Part a is 
+modified, with permission, from REF. 90 © (2003) Society for Neuroscience. Parts b–g are 
+modified, with permission, from Nature REF. 110 © (2009) Macmillan Publishers Ltd. All 
+rights reserved.
+Silver
+Page 35
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 36 =====
+Figure 7. Clustered synaptic input activates local dendritic nonlinearities which could form the 
+basis of branch specific computation
+a ∣ Cartoons showing layer 5 cortical pyramidal cells with the location of activated synaptic 
+inputs and the recording electrode. ‘Within branch’ refers to two inputs (A and B) that 
+synapse onto the same dendritic branch (left), and ‘between branches’ corresponds to two 
+inputs that synapse onto different branches (right). Traces show the somatic responses to a 
+paired-pulse synaptic stimulation protocol. Black traces show the two synaptic inputs 
+stimulated individually, blue traces show the predicted response for simultaneous activation 
+(assuming linear summation) and red traces show the measured response for intermediate 
+strength stimulation. The within-branch response was supralinear, whereas the response 
+between branches was linear. This effect was blocked by a selective NMDAR (N-methyl-d-
+aspartate receptor) antagonist. b ∣ Responses for the two input scenarios; the between-
+branches configuration (shown in green; the dashed line indicates linearity) and the within-
+branch configuration (shown in red). The nonlinear effects of NMDARs are seen when 
+excitatory postsynaptic potentials (EPSPs) are a few millivolts in amplitude. However, these 
+experiments were carried out in the presence of a GABAA (α-aminobutyric acid type A) 
+receptor antagonist, which may favour the occurrence of NMDA spikes161. c ∣ The 
+difference between the arithmetic sum of individual inputs (shown by blue squares) and 
+paired-pulse protocols with different intervals between the pulses. The supralinear response 
+of the within-branch configuration occurs when the two synaptic inputs occur within 
+approximately 40 ms indicates that synaptic NMDAR activation has a ‘memory’ of prior 
+input onto the branch over this timescale. d ∣ A cartoon of a pyramidal cell with ni clustered 
+Silver
+Page 36
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 37 =====
+synaptic inputs on each of the dendritic branches. A nonlinear dendritic mechanism, such as 
+NMDAR spikes, introduces a nonlinear sigmoidal input–output function (S(ni)) to each of 
+the subcompartments. The weights of the subcompartments (αi) are then combined with the 
+somatic spike threshold nonlinearity (g) to produce output (y). It has been proposed that the 
+presence of multiple dendritic subcompartments each with a nonlinear thresholding element 
+could enable an individual pyramidal cell to act like a two-layer network of neurons, thereby 
+enhancing its computational power. Parts a–c modified, with permission, from Nature 
+Neuroscience REF. 156 © (2004) Macmillan Publishers Ltd. All rights reserved. Part d 
+modified, with permission, from REF. 157 © (2003) Elsevier.
+Silver
+Page 37
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 38 =====
+Figure 8. Summary of biophysical mechanisms underlying rapid neuronal arithmetic
+Mechanisms that may underlie rapid addition (shown in red) and subtraction (shown in 
+orange) or multiplication (shown in blue) and division (shown in green) of synaptic input in 
+cells with simple and complex morphologies. The upper two rows correspond to sustained 
+rate-coded signalling while the bottom two correspond to sparse temporally coded 
+signalling. As indicated by the graphs on the left, rows one and three correspond to additive 
+operations, whereas rows two and four correspond to multiplicative operations. Overlap of 
+Silver
+Page 38
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
+
+===== PDF PAGE 39 =====
+boxes between additive and multiplicative regions indicates mixed operations. DAP, 
+depolarizing after potential; NMDA, N-methyl-daspartate; STD, short term depression.
+Silver
+Page 39
+Nat Rev Neurosci. Author manuscript; available in PMC 2016 February 11.
+ Europe PMC Funders Author Manuscripts
+ Europe PMC Funders Author Manuscripts
