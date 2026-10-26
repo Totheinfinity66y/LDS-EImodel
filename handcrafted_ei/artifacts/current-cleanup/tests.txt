@@ -1,0 +1,37 @@
+test_all_24_and_each_stage (test_24_sequences.SequenceTests.test_all_24_and_each_stage) ... ok
+test_zero_noise_seed_independence (test_24_sequences.SequenceTests.test_zero_noise_seed_independence) ... ok
+test_free_state_recovery_and_decaying_control (test_attractor_dynamics.AttractorTests.test_free_state_recovery_and_decaying_control) ... ok
+test_zero_input_stability (test_attractor_dynamics.AttractorTests.test_zero_input_stability) ... ok
+test_all_four_synapse_types (test_dale_constraints.DaleTests.test_all_four_synapse_types) ... ok
+test_unified_update_and_bounds (test_dale_constraints.DaleTests.test_unified_update_and_bounds) ... ok
+test_excitatory_gate_and_unselected_silence (test_direct_activation.DirectTests.test_excitatory_gate_and_unselected_silence) ... ok
+test_source_gate_clock_require_coincidence (test_direct_activation.DirectTests.test_source_gate_clock_require_coincidence) ... ok
+test_fixed_topology_across_trials_and_phases (test_information_boundary.BoundaryTests.test_fixed_topology_across_trials_and_phases) ... ok
+test_imports_and_runtime_shifts (test_information_boundary.BoundaryTests.test_imports_and_runtime_shifts) ... ok
+test_interface_and_target_isolation (test_information_boundary.BoundaryTests.test_interface_and_target_isolation) ... ok
+test_matched_lesions_same_count_magnitude_and_window (test_interventions.InterventionTests.test_matched_lesions_same_count_magnitude_and_window) ... ok
+test_projection_permutations_and_composition (test_interventions.InterventionTests.test_projection_permutations_and_composition) ... ok
+test_recurrence_cut_preserves_all_feedforward_edges (test_interventions.InterventionTests.test_recurrence_cut_preserves_all_feedforward_edges) ... ok
+test_all_encodings_all_conditions (test_location_encoding.EncodingTests.test_all_encodings_all_conditions) ... ok
+test_config_and_input_validation (test_location_encoding.EncodingTests.test_config_and_input_validation) ... ok
+test_dimensions_continuity_and_energy (test_location_encoding.EncodingTests.test_dimensions_continuity_and_energy) ... ok
+test_all_positions_directions_steps_and_composition (test_location_transform.TransformTests.test_all_positions_directions_steps_and_composition) ... ok
+test_block_feedback_prevents_decay (test_memory_decay.DecayTests.test_block_feedback_prevents_decay) ... ok
+test_brief_response_signal_does_not_extinguish_memory (test_memory_decay.DecayTests.test_brief_response_signal_does_not_extinguish_memory) ... ok
+test_delayed_handoff_tracks_response_not_elapsed_time (test_memory_decay.DecayTests.test_delayed_handoff_tracks_response_not_elapsed_time) ... ok
+test_delayed_response_and_weak_activity_do_not_end_memory (test_memory_decay.DecayTests.test_delayed_response_and_weak_activity_do_not_end_memory) ... ok
+test_early_loss_damages_only_unused_rule (test_memory_decay.DecayTests.test_early_loss_damages_only_unused_rule) ... ok
+test_handoff_specific_decay (test_memory_decay.DecayTests.test_handoff_specific_decay) ... ok
+test_no_recurrence_cannot_pass_as_memory (test_memory_delay.MemoryTests.test_no_recurrence_cannot_pass_as_memory) ... ok
+test_pulse_removed_memory_at_both_delays (test_memory_delay.MemoryTests.test_pulse_removed_memory_at_both_delays) ... ok
+test_memory_output_cuts_preserve_downstream_responses (test_pathway_inheritance.InheritanceTests.test_memory_output_cuts_preserve_downstream_responses) ... ok
+test_relocating_response_changes_inherited_output (test_pathway_inheritance.InheritanceTests.test_relocating_response_changes_inherited_output) ... ok
+test_four_distinct_readouts_before_transitions (test_readout_order.OrderTests.test_four_distinct_readouts_before_transitions) ... ok
+test_unsupported_receipt_is_not_silently_accepted (test_receipt_contract.ReceiptContractTests.test_unsupported_receipt_is_not_silently_accepted) ... ok
+test_report_real_geometry_and_trajectories (test_subspace_representation.RepresentationTests.test_report_real_geometry_and_trajectories) ... ok
+test_real_inhibitory_background_and_necessary_silence (test_tonic_inhibition.TonicTests.test_real_inhibitory_background_and_necessary_silence) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 15.769s
+
+OK

@@ -1,0 +1,172 @@
+{
+  "repository": "D:\\Library\\10-16-handcrafted",
+  "files": [
+    {
+      "path": "README.md",
+      "status": "modified"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/README.md",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/build_student_brief.py",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/mechanism_candidates_compare_draft.png",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/mechanism_candidates_compare_draft_v2.png",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/prompt_plan_v2.md",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/slide01_cover_v2.png",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/slide02_task_v2.png",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/slide03_question_v2.png",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/slide04_network_v2.png",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/slide05_disinhibition_v2.png",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/slide06_inheritance_v2.png",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/slide08_interventions_v2.png",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/slide09_evidence_limits_v2.png",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/slide10_roadmap_v2.png",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/v1_trajectory_recheck.json",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/project_brief_assets_20261025/v1_validation_trajectories.png",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/v2_implementation_report.md",
+      "status": "modified"
+    },
+    {
+      "path": "docs/v2_migration.md",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/v2_protocol.md",
+      "status": "modified"
+    },
+    {
+      "path": "docs/项目进展讲解提纲_20261025.md",
+      "status": "deleted"
+    },
+    {
+      "path": "docs/项目进展讲解提纲_机制重构草稿_20261025.md",
+      "status": "deleted"
+    },
+    {
+      "path": "handcrafted_ei/receipt.py",
+      "status": "modified"
+    },
+    {
+      "path": "handcrafted_ei/recompute.py",
+      "status": "modified"
+    },
+    {
+      "path": "nimbalyst-local/wiki/GitHub README 共写草稿.md",
+      "status": "modified"
+    },
+    {
+      "path": "todo.md",
+      "status": "modified"
+    },
+    {
+      "path": "handcrafted_ei/artifacts/current-cleanup/REPORT.md",
+      "status": "added"
+    },
+    {
+      "path": "handcrafted_ei/artifacts/current-cleanup/analysis_verification.json",
+      "status": "added"
+    },
+    {
+      "path": "handcrafted_ei/artifacts/current-cleanup/final_source.zip",
+      "status": "added"
+    },
+    {
+      "path": "handcrafted_ei/artifacts/current-cleanup/final_source_hashes.json",
+      "status": "added"
+    },
+    {
+      "path": "handcrafted_ei/artifacts/current-cleanup/integrity.json",
+      "status": "added"
+    },
+    {
+      "path": "handcrafted_ei/artifacts/current-cleanup/receipt_red.txt",
+      "status": "added"
+    },
+    {
+      "path": "handcrafted_ei/artifacts/current-cleanup/receipt_verification.json",
+      "status": "added"
+    },
+    {
+      "path": "handcrafted_ei/artifacts/current-cleanup/recompute_log.txt",
+      "status": "added"
+    },
+    {
+      "path": "handcrafted_ei/artifacts/current-cleanup/standalone.json",
+      "status": "added"
+    },
+    {
+      "path": "handcrafted_ei/artifacts/current-cleanup/standalone_tests.txt",
+      "status": "added"
+    },
+    {
+      "path": "handcrafted_ei/artifacts/current-cleanup/superseded_materials.json",
+      "status": "added"
+    },
+    {
+      "path": "handcrafted_ei/artifacts/current-cleanup/superseded_materials.zip",
+      "status": "added"
+    },
+    {
+      "path": "handcrafted_ei/artifacts/current-cleanup/tests.txt",
+      "status": "added"
+    },
+    {
+      "path": "handcrafted_ei/tests/test_receipt_contract.py",
+      "status": "added"
+    },
+    {
+      "path": "handcrafted_ei/artifacts/current-cleanup/git_scope.json",
+      "status": "added"
+    }
+  ],
+  "excluded": [
+    "docs/项目进展讲解_机制重构_20261025.pptx"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "import_origin": "D:\\Library\\10-16-handcrafted\\handcrafted_ei\\artifacts\\current-cleanup\\standalone-79l73x98\\handcrafted_ei\\__init__.py",
+  "historical_artifacts_present": false,
+  "project_docs_present": false,
+  "tests": 32,
+  "scope": "copied current package only; PYTHONPATH cleared; no repository or historical implementation imports"
+}

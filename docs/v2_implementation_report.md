@@ -1,4 +1,4 @@
-# LDS-EImodel v2：实现与科学验收报告
+# LDS-EImodel：当前实现与科学验收报告
 
 ## 结论与范围
 
@@ -22,9 +22,7 @@ q分别逐一取R2/R3单元，仅终止M_D/M_S。阈值前不汇总全Response�
 
 ## 测试与行为证据
 
-- 改造前旧16测试通过，源码和原始测试归档于[v2基线](../handcrafted_ei/artifacts/v2/baseline/README.md)。
-- 新机制先红后绿；包括旧memory终末约1的行为失败，不把导入错误当行为失败。
-- 最终31/31测试通过，见[测试日志](../handcrafted_ei/artifacts/v2/tests_full.txt)。
+- 当前32/32测试通过，见[测试日志](../handcrafted_ei/artifacts/v2/tests_full.txt)。
 - 7类故障注入全部RED、恢复后GREEN：Dale、memory、直接激活、反馈衰减、提前路由、tonic、分支继承。见[变异检查](../handcrafted_ei/artifacts/v2/mutation_checks.txt)。
 - 三编码各24/24，逐stage均[1,1,1,1]；无噪声seeds7/11/19结果相同。
 - 全部198组、4,752个trial：A/C及gate阻断分别损伤R2后/R3后；B/D在交接后切memory输出仍全部正确；提前去memory维持损伤对应阶段；延迟许可1500 ms仍24/24。
@@ -86,48 +84,15 @@ one_hot/ring/topology外部维度6/1/2，内部均六位置。ring/topology无�
 - [拆包核验](../handcrafted_ei/artifacts/v2/run/sharding_verification.json)：1368数组完全相同，72个NPZ分包，最大3.82 MB；[索引](../handcrafted_ei/artifacts/v2/run/attractor_trajectories/index.json)记录SHA256。
 - [完整实验协议](../handcrafted_ei/artifacts/v2/run/manifest.json)、[配置](../handcrafted_ei/artifacts/v2/run/config.json)、[环境](../handcrafted_ei/artifacts/v2/run/environment.json)、执行时源码及最终源码哈希均保留。
 - 执行后改动限于文档、报告和无损归档/复算逻辑；独立audit确认执行的model/config/simulation/task源码未漂移。
-- pilot_interrupted为接口审查前中断的试运行，不当作完整receipt；原v1及已发布结果不覆盖。
 
-## 修改文件清单
+## 当前模块
 
-以下为本次源码、测试及文档文件；实验产物按目录由上述manifest与索引列举。旧去抑制测试删除，已由真正的直接激活测试替换。原有未提交PPTX排除。
-
-- [本验收报告](v2_implementation_report.md)。
-
-- [AGENTS.md](../AGENTS.md)
-- [README.md](../README.md)
-- [architecture.md](../architecture.md)
-- [docs/v2_migration.md](../docs/v2_migration.md)
-- [docs/v2_protocol.md](../docs/v2_protocol.md)
-- [handcrafted_ei/config/README.md](../handcrafted_ei/config/README.md)
-- [handcrafted_ei/config/baseline.yaml](../handcrafted_ei/config/baseline.yaml)
-- [handcrafted_ei/evaluate.py](../handcrafted_ei/evaluate.py)
-- [handcrafted_ei/evaluation/attractors.py](../handcrafted_ei/evaluation/attractors.py)
-- [handcrafted_ei/evaluation/memory.py](../handcrafted_ei/evaluation/memory.py)
-- [handcrafted_ei/evaluation/representation.py](../handcrafted_ei/evaluation/representation.py)
-- [handcrafted_ei/model/connectivity.py](../handcrafted_ei/model/connectivity.py)
-- [handcrafted_ei/model/ei_network.py](../handcrafted_ei/model/ei_network.py)
-- [handcrafted_ei/model/location_encoding.py](../handcrafted_ei/model/location_encoding.py)
-- [handcrafted_ei/receipt.py](../handcrafted_ei/receipt.py)
-- [handcrafted_ei/recompute.py](../handcrafted_ei/recompute.py)
-- [handcrafted_ei/requirements.txt](../handcrafted_ei/requirements.txt)
-- [handcrafted_ei/run.ps1](../handcrafted_ei/run.ps1)
-- [handcrafted_ei/simulation/__init__.py](../handcrafted_ei/simulation/__init__.py)
-- [handcrafted_ei/task/__init__.py](../handcrafted_ei/task/__init__.py)
-- [handcrafted_ei/tests/test_attractor_dynamics.py](../handcrafted_ei/tests/test_attractor_dynamics.py)
-- [handcrafted_ei/tests/test_dale_constraints.py](../handcrafted_ei/tests/test_dale_constraints.py)
-- [handcrafted_ei/tests/test_direct_activation.py](../handcrafted_ei/tests/test_direct_activation.py)
-- 删除旧测试：`handcrafted_ei/tests/test_disinhibition.py`。
-- [handcrafted_ei/tests/test_information_boundary.py](../handcrafted_ei/tests/test_information_boundary.py)
-- [handcrafted_ei/tests/test_interventions.py](../handcrafted_ei/tests/test_interventions.py)
-- [handcrafted_ei/tests/test_location_encoding.py](../handcrafted_ei/tests/test_location_encoding.py)
-- [handcrafted_ei/tests/test_location_transform.py](../handcrafted_ei/tests/test_location_transform.py)
-- [handcrafted_ei/tests/test_memory_decay.py](../handcrafted_ei/tests/test_memory_decay.py)
-- [handcrafted_ei/tests/test_readout_order.py](../handcrafted_ei/tests/test_readout_order.py)
-- [handcrafted_ei/tests/test_subspace_representation.py](../handcrafted_ei/tests/test_subspace_representation.py)
-- [handcrafted_ei/tests/test_tonic_inhibition.py](../handcrafted_ei/tests/test_tonic_inhibition.py)
-- [handcrafted_ei/tests/verify_mutations.py](../handcrafted_ei/tests/verify_mutations.py)
-- [todo.md](../todo.md)
+- [输入与独立真值](../handcrafted_ei/task/__init__.py)
+- [位置编码](../handcrafted_ei/model/location_encoding.py)、[固定连接](../handcrafted_ei/model/connectivity.py)、[网络动力学](../handcrafted_ei/model/ei_network.py)
+- [时序与干预](../handcrafted_ei/simulation/__init__.py)
+- [记忆指标](../handcrafted_ei/evaluation/memory.py)、[表征](../handcrafted_ei/evaluation/representation.py)、[吸引子检测](../handcrafted_ei/evaluation/attractors.py)
+- [完整实验](../handcrafted_ei/evaluate.py)、[行为复算](../handcrafted_ei/receipt.py)、[分析复算](../handcrafted_ei/recompute.py)
+- [当前验证与清理记录](../handcrafted_ei/artifacts/current-cleanup/REPORT.md)
 
 ## 复现与Git纪律
 
@@ -135,7 +100,7 @@ one_hot/ring/topology外部维度6/1/2，内部均六位置。ring/topology无�
 python -m unittest discover -s handcrafted_ei/tests -v
 python -m handcrafted_ei.evaluate --output <fresh-directory>
 python -m handcrafted_ei.receipt <directory>
-python -m handcrafted_ei.recompute <directory>
+python -m handcrafted_ei.recompute <directory> --report-directory <fresh-report-directory>
 ```
 
 使用已预检analysis绝对解释器或run.ps1，CPU。未安装环境、未训练、未推送。全部本次未提交文件须按AGENTS工作流发起Nimbalyst提交提案；只有用户确认且读回commit后才标记已提交。

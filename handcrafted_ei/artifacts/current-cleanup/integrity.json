@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "current_markdown_links_checked": 73,
+  "protected_unchanged": [
+    "handcrafted_ei/model",
+    "handcrafted_ei/config/baseline.yaml",
+    "handcrafted_ei/task",
+    "handcrafted_ei/simulation",
+    "handcrafted_ei/artifacts/v1",
+    "handcrafted_ei/artifacts/v2",
+    "artifacts",
+    "external"
+  ],
+  "standalone_package_without_artifacts": "32 tests PASS",
+  "model_topology_and_task_unchanged": true,
+  "scientific_trials_recomputed": 4752,
+  "analysis_recomputed": true,
+  "superseded_active_files_removed": 19
+}

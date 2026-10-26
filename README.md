@@ -32,7 +32,7 @@ flowchart LR
   I -->|背景抑制| R4
 ```
 
-E_gate向分支提供亚阈值兴奋，位置由上游固定投射传入；source、规则gate和阶段许可共同作用才能激活正确位置。已形成Response递归维持，旧Response由单独retire I统一退役。主路由不使用I→I去抑制。
+E_gate向分支提供亚阈值兴奋，位置由上游固定投射传入；source、规则gate和阶段许可共同作用才能激活正确位置。已形成Response递归维持，旧Response由单独retire I统一退役。路径选择由可记录、可干预的E_gate连续活动完成。
 
 M_D/M_S在sample撤除后抵抗tonic inhibition保持。R2/R3逐位置强活动经慢阈值I_decay反馈，分别终止D/S memory；没有按phase清零或定时gain切换。记忆终止不改变任务时序。
 
@@ -50,7 +50,7 @@ M_D/M_S在sample撤除后抵抗tonic inhibition保持。R2/R3逐位置强活动�
 
 ## 验证与复现
 
-依赖[requirements.txt](handcrafted_ei/requirements.txt)，验证环境analysis：Python3.12.12、NumPy2.3.5、PyYAML6.0.3、Matplotlib3.10.7，CPU。无需安装或训练。
+依赖[requirements.txt](handcrafted_ei/requirements.txt)，验证环境analysis：Python3.12.12、NumPy2.3.5、PyYAML6.0.3、Matplotlib3.10.7，CPU。运行前应核对已安装依赖；模型无需GPU或训练。
 
 ```powershell
 .\handcrafted_ei\run.ps1 -Test
@@ -66,14 +66,14 @@ python -m handcrafted_ei.receipt <output-directory>
 python -m handcrafted_ei.recompute <output-directory>
 ```
 
-输出目录必须为空。当前实测31/31测试通过；三模式各24/24、四阶段均100%；198组实验共4,752个trial，独立轨迹复算通过。完整结果与科学局限见[实现与验收报告](docs/v2_implementation_report.md)及[实验报告](handcrafted_ei/artifacts/v2/run/REPORT.md)。
+输出目录必须为空。当前实测32/32测试通过；三模式各24/24、四阶段均100%；198组实验共4,752个trial，独立轨迹复算通过。完整结果与科学局限见[实现与验收报告](docs/v2_implementation_report.md)及[实验报告](handcrafted_ei/artifacts/v2/run/REPORT.md)。
 
-完整评估穷举三模式24条件、seeds7/11/19、噪声、A/B/C/D与额外机制消融及匹配随机对照；归档配置、源码哈希、环境、全率、事件、独立target和复算。未完成阶段不得借用历史通过状态。
+完整评估穷举三模式24条件、seeds7/11/19、噪声、A/B/C/D与额外机制消融及匹配随机对照；归档配置、源码哈希、环境、全率、事件、独立target和复算。验收结果只对应明确记录的配置与实验条件。
 
 吸引子分析关闭sample，明确区分关闭全部clock的自由演化与保留阶段许可的受迫对照；保留恒定tonic背景。报告固定点残差、局部谱、扰动恢复、有限盆扫描和不同初态。持续高活动、正确率或PCA聚类均不单独证明吸引子。不存在吸引子也如实报告。
 
-## 实现导航与历史
+## 代码导航
 
 [位置编码](handcrafted_ei/model/location_encoding.py)、[固定连接](handcrafted_ei/model/connectivity.py)、[网络动力学](handcrafted_ei/model/ei_network.py)、[时序及干预](handcrafted_ei/simulation/__init__.py)、[行为](handcrafted_ei/evaluation/behavior.py)、[记忆指标](handcrafted_ei/evaluation/memory.py)、[表征](handcrafted_ei/evaluation/representation.py)、[吸引子](handcrafted_ei/evaluation/attractors.py)、[归档入口](handcrafted_ei/evaluate.py)、[独立复算](handcrafted_ei/receipt.py)。
 
-[v1历史报告](handcrafted_ei/artifacts/v1/REPORT.md)及receipt保持原样，仅表示原模型历史结果。v2基线源码与旧16测试在[基线说明](handcrafted_ei/artifacts/v2/baseline/README.md)。旧演示与文献资料属于历史或背景，不代表当前回路；未提交的用户演示文稿不在本次修改范围。
+[架构规格](architecture.md)定义当前模型的完整动力学、时序与信息边界；[验收清单](todo.md)记录当前阶段及证据。吸引子与编码比较的科学局限见实现报告。

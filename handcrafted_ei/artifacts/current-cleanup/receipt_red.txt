@@ -1,0 +1,16 @@
+{'status': 'PASS', 'experiments': 0, 'trials_recomputed': 0, 'checks': ['archive SHA256/CRC', 'schema-specific input regeneration', 'all rates per step/bounds', 'timestamp spacing', 'four Y decisions from saved trajectories', 'readout ordering', 'Y equals recorded rate subset', 'memory metrics reconstructed for schema 2', 'independent truth and summary reconstruction']}
+test_unsupported_receipt_is_not_silently_accepted (test_receipt_contract.ReceiptContractTests.test_unsupported_receipt_is_not_silently_accepted) ... FAIL
+
+======================================================================
+FAIL: test_unsupported_receipt_is_not_silently_accepted (test_receipt_contract.ReceiptContractTests.test_unsupported_receipt_is_not_silently_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_receipt_contract.py", line 17, in test_unsupported_receipt_is_not_silently_accepted
+    with self.assertRaisesRegex(ValueError,'schema 2'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.012s
+
+FAILED (failures=1)

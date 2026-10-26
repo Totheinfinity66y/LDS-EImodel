@@ -4,7 +4,7 @@ import hashlib
 from io import BytesIO
 import json
 from pathlib import Path
-from zipfile import ZipFile, ZIP_DEFLATED
+from zipfile import ZipFile
 import numpy as np
 from .task import encode, target
 from .evaluation.behavior import accuracy
@@ -12,25 +12,13 @@ from .evaluation.memory import analyze_memory
 from .simulation import TrialResult
 
 
-def pack_and_verify(out):
-    out=Path(out)
-    manifest=json.loads((out/'manifest.json').read_text(encoding='utf-8'))
-    index={}
-    for item in manifest:
-        name=item['experiment']; directory=out/name
-        archive=out/(name+'.zip')
-        with ZipFile(archive,'w',ZIP_DEFLATED,compresslevel=6) as z:
-            for path in sorted(directory.iterdir()): z.write(path,path.name)
-        index[archive.name]=hashlib.sha256(archive.read_bytes()).hexdigest()
-    (out/'archives.json').write_text(json.dumps(index,indent=2)+'\n',encoding='utf-8')
-    return verify(out)
-
-
 def verify(out,write_result=True):
     out=Path(out)
     def read(name): return json.loads((out/name).read_text(encoding='utf-8'))
     index=read('archives.json'); summary=read('summary.json'); config=read('config.json')
     manifest={item['experiment']:item for item in read('manifest.json')}
+    if any(item.get('schema')!=2 for item in manifest.values()):
+        raise ValueError('current receipt requires schema 2')
     checked=0
     for filename,expected_hash in index.items():
         name=filename[:-4]; protocol=manifest[name]
@@ -44,21 +32,14 @@ def verify(out,write_result=True):
             for i in range(24):
                 task=json.loads(z.read(f'{i:02}_task.json'))
                 obs=json.loads(z.read(f'{i:02}_events.json'))
-                if task.get('schema')==2:
-                    expected_input=encode(task['L'],task['D'],task['S'],task['sigma_L'],task['seed'],mode=task['encoding'],kappa=resolved['encoding_kappa'])
-                else:
-                    # Historical v1 input contract, not the current normalized interface.
-                    x=np.eye(6)[task['L']]
-                    if task['sigma_L']:
-                        x=np.clip(x+np.random.default_rng(task['seed']).normal(0,task['sigma_L'],6),0,1)
-                    expected_input={'x_L':x,'x_D':np.eye(2)[0 if task['D']==1 else 1],
-                                    'x_S':np.eye(2)[task['S']-1]}
+                if task.get('schema')!=2: raise ValueError('current trial requires schema 2')
+                expected_input=encode(task['L'],task['D'],task['S'],task['sigma_L'],task['seed'],mode=task['encoding'],kappa=resolved['encoding_kappa'])
                 for key,value in expected_input.items():
                     np.testing.assert_array_equal(value,task['encoded'][key])
                 with np.load(BytesIO(z.read(f'{i:02}_rates.npz')),allow_pickle=False) as data:
                     rates=data['rates']; times=data['times_ms']; y=data['y']; labels=data['labels']
                     n_units=len(labels)
-                    if rates.shape!=(len(times),n_units) or n_units!=(132 if task.get('schema')==2 else 104):
+                    if rates.shape!=(len(times),n_units) or n_units!=132:
                         raise ValueError('incomplete rate recording')
                     if not np.all(np.isfinite(rates)) or rates.min()<0 or rates.max()>1:
                         raise ValueError('invalid archived neural rates')
@@ -74,11 +55,10 @@ def verify(out,write_result=True):
                         predictions.append(int(values.argmax()) if values.max()>=resolved['decision_threshold'] else -1)
                         if stage<4 and not end<obs['events'][f'to_R{stage+1}']:
                             raise ValueError('readout ordering violated')
-                    if task.get('schema')==2:
-                        groups={k:np.asarray(v) for k,v in obs['groups'].items()}
-                        rebuilt=TrialResult(tuple(predictions),np.asarray(obs['decisions']),times,rates,y,obs['events'],groups,obs['lesions'])
-                        actual=analyze_memory(rebuilt)
-                        if actual!=obs['memory']: raise ValueError('memory metrics mismatch')
+                    groups={k:np.asarray(v) for k,v in obs['groups'].items()}
+                    rebuilt=TrialResult(tuple(predictions),np.asarray(obs['decisions']),times,rates,y,obs['events'],groups,obs['lesions'])
+                    actual=analyze_memory(rebuilt)
+                    if actual!=obs['memory']: raise ValueError('memory metrics mismatch')
                 if predictions!=obs['outputs']: raise ValueError('decision mismatch')
                 truth=target(task['L'],task['D'],task['S'])
                 if list(truth)!=task['target']: raise ValueError('truth mismatch')

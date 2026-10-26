@@ -31,7 +31,7 @@ def close_tree(actual,expected):
     elif actual!=expected: raise ValueError('different representation values')
 
 
-def audit(out):
+def audit(out,report_path=None):
     out=Path(out)
     geometry=read_json(out/'representation.json')
     attractors=read_json(out/'attractors.json')
@@ -112,7 +112,8 @@ def audit(out):
             'checks':['full representation from archived baselines','snapshot identity',
                       'autonomous and forced local spectrum','regenerated perturbations and random starts',
                       'all free/forced/perturbed/initial-state Euler steps','recovery classification']}
-    (out/'analysis_verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    destination=Path(report_path) if report_path else out/'analysis_verification.json'
+    destination.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(result,flush=True)
     return result
 
@@ -120,7 +121,7 @@ def audit(out):
 def snapshot_sources(out):
     root=Path(__file__).parent.parent; package=root/'handcrafted_ei'
     sources=[p for p in package.rglob('*') if p.is_file() and 'artifacts' not in p.parts and '__pycache__' not in p.parts]
-    sources += [root/n for n in ('AGENTS.md','architecture.md','README.md','todo.md','docs/v2_protocol.md','docs/v2_migration.md','docs/v2_implementation_report.md')]
+    sources += [root/n for n in ('AGENTS.md','architecture.md','README.md','todo.md','docs/v2_protocol.md','docs/v2_implementation_report.md')]
     hashes={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}
     with ZipFile(out/'final_source.zip','w',ZIP_DEFLATED) as z:
         for p in sources: z.write(p,p.relative_to(root))
@@ -129,5 +130,8 @@ def snapshot_sources(out):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(); parser.add_argument('directory',type=Path)
-    directory=parser.parse_args().directory
-    audit(directory); snapshot_sources(directory)
+    parser.add_argument('--report-directory',type=Path)
+    args=parser.parse_args(); directory=args.directory
+    reports=args.report_directory or directory
+    reports.mkdir(parents=True,exist_ok=True)
+    audit(directory,report_path=reports/'analysis_verification.json'); snapshot_sources(reports)
