@@ -1,0 +1,19 @@
+test_population_data (unittest.loader._FailedTest.test_population_data) ... ERROR
+
+======================================================================
+ERROR: test_population_data (unittest.loader._FailedTest.test_population_data)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_population_data
+Traceback (most recent call last):
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_population_data.py", line 6, in <module>
+    from handcrafted_ei.evaluation.population_data import load_dataset, validate_dataset
+ModuleNotFoundError: No module named 'handcrafted_ei.evaluation.population_data'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

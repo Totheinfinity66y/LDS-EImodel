@@ -1,0 +1,190 @@
+{
+  "verified_date": "2026-10-26",
+  "files": [
+    {
+      "path": "reference_evidence/Churchland2012.pdf",
+      "bytes": 342122,
+      "sha256": "a6148393d236da452cfdd642a7b52720be2260b244156fba3065982123425cd5",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Churchland2012_fig2.jpg",
+      "bytes": 175250,
+      "sha256": "719641de1efdb5c1d3f2768cb25917b3a2cfdf8b2fd1bf6a6f57f50896047502",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Churchland2012_fig3.jpg",
+      "bytes": 205141,
+      "sha256": "0d93c7e6fa26b9e39f073b7f19ad39fe610ce1f8bf020b86202882cb32eca0af",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Churchland2012_p2.png",
+      "bytes": 43229,
+      "sha256": "ba3feffc766e4075cc3dcfe0d0de34d31ea3e05a4c818f47a14c5d7c43faf401",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Churchland2012_p3.png",
+      "bytes": 45595,
+      "sha256": "5999af864eba0da63f09186a292775c4530536fd69b641e03a3ddbe9a7a864d2",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Gallego2018.pdf",
+      "bytes": 3038,
+      "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Gallego2018_fig3.png",
+      "bytes": 103655,
+      "sha256": "c5ec0ca2732ed499e20c411d1065312713415d357abf41be8d5a815bc1bc60e7",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Inagaki2019_ed1.jpg",
+      "bytes": 120574,
+      "sha256": "b9b45e3dc48777aafb6c886444253f800ceab16f41155500507daee000ec5475",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Inagaki2019_ed6.jpg",
+      "bytes": 147794,
+      "sha256": "0bd67d4149f895acb3bd183b0b506ee90c147a614a878229d27796a9b532cf47",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Inagaki2019_fig1.png",
+      "bytes": 119122,
+      "sha256": "eb6c42561a3fc214c3a920bdd0011fc8f863cce4cbd11fb02dd62c1d965521f8",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Inagaki2019_fig5.png",
+      "bytes": 507917,
+      "sha256": "b2401f19855725e21e66137e79f8dbc01bd531de71a5905768d582aac7d58c45",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Kobak2016.pdf",
+      "bytes": 5594500,
+      "sha256": "95f26b56997292710fde40583efe7904f8ace08fc7ca35608bc7a8d74774bd73",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Kobak2016_p12.png",
+      "bytes": 173350,
+      "sha256": "6f6fe0a9227fa2b0f69b8b3c5155eb905883cec1b53dfa2dfe8d408eb003931e",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Kobak2016_p14.png",
+      "bytes": 122070,
+      "sha256": "04fedca1053876f0aff14ebe1d6a26a1ba47ab7e6795886a8120ea741e731c6c",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Kobak2016_p3.png",
+      "bytes": 171108,
+      "sha256": "586cdd01989ea9bc967c62f3759c281ed0ba2e03db77c32da8c632f42ba0d36a",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Kobak2016_p5.png",
+      "bytes": 115017,
+      "sha256": "8d23c379c02c63dc529b8fe855fa550ebf60a664c199712431e781d4456cfb7f",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Kobak2016_p6.png",
+      "bytes": 113077,
+      "sha256": "e5951b8a59364fdc110d3cf3006487e35d79734f67402fe429c5d60031240de7",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Kobak2016_p7.png",
+      "bytes": 145712,
+      "sha256": "4321c72792c6be04eef21fa7f2b432329a2df81394e00713a33008902f5bffff",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Kriegeskorte2008_fig2.gif",
+      "bytes": 148443,
+      "sha256": "0babc10a18b9c2b8205c9b09184d7260f166306f8e74c022c5b65292eff5d4bb",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Kriegeskorte2008_fig2.png",
+      "bytes": 121100,
+      "sha256": "d2e80fb2d1dca76ccf120738e6ce10f62447db0e59a578e99f1052dfbde49699",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Langdon2023_box1.jpg",
+      "bytes": 154716,
+      "sha256": "ae163881ac87734f541adb6633fb793718dbace4298fe84d21e1dac60e1efbba",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Mante2013.pdf",
+      "bytes": 5308243,
+      "sha256": "7a11fa82e37505509acaec109d3dbc0b4a5f1da448e2cd0aaf7bef7e3244d1bd",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Mante2013_p3.png",
+      "bytes": 143922,
+      "sha256": "ceadf6c8e28057adca1b6a8b20380ba4965a506b2fea7c0624ebb8bba717580a",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Mante2013_p4.png",
+      "bytes": 164893,
+      "sha256": "82161517788f3528ad2cba97ff7474e1274fb3dde6448be40580b6e7eca5532d",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Mante2013_p5.png",
+      "bytes": 168667,
+      "sha256": "0bd3caec5d97218fe2426dda9182c4310dbc1e751414a7d1f0d0a65d68b428ce",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Seelig2015.pdf",
+      "bytes": 5720320,
+      "sha256": "b08974a28a7bd02316c7c0ac7a4f2a742c978f59c4e8f76de11732717ced3d52",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Seelig2015_p2.png",
+      "bytes": 199207,
+      "sha256": "0c2984ddb69e85ec17b82d487f3be4a38657c808ff818361058a3ebfb1a27ba1",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Seelig2015_p5.png",
+      "bytes": 210951,
+      "sha256": "43a918d0123c025ba2487ed2d7ec2c13a6799450761a8e39e7d34c27d2f8b9a9",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Zhou2023.pdf",
+      "bytes": 3699069,
+      "sha256": "6317dd6e78c42701f25e5e5b75486810f9e84d18886bc78a32b739858068ef62",
+      "use": "reference-only; not model output"
+    },
+    {
+      "path": "reference_evidence/Zhou2023_p10.png",
+      "bytes": 234756,
+      "sha256": "a86aa3130a399a0b6472826a027a0acf7e34ae6143011aff129a5befc47f4fdf",
+      "use": "reference-only; not model output"
+    }
+  ],
+  "rejected_downloads": {
+    "Gallego2018.pdf": "identity-check HTML rather than paper",
+    "Churchland2012.pdf": "webpage print PDF with image placeholders rather than source figures"
+  },
+  "not_for_git": "Full reference PDFs and page rasters are retained locally; commit the citation metadata and hashes, not copyrighted paper copies."
+}

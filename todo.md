@@ -94,3 +94,16 @@
 
 
 当前完整结果见[实现验收报告](docs/v2_implementation_report.md)。吸引子存在与否不是通过条件；有限盆、输入编码比较及退化随机池等局限均如实保留。提交状态由实际commit读回确认，实验通过不代表已提交。
+
+## V — Visualization & Representation Analysis（独立于模型里程碑）
+
+- [x] V0 数据审计：DATA_AUDIT.md及manifests/protected_source.json，8个动力学源文件SHA匹配；各24×663×132。
+- [x] V1 文献来源：FIGURE_REFERENCES.md及config/references.json，九篇具体panel，原图/图注状态独立记录。
+- [x] V2 Figure1–3：全活动、结构/功能支持、memory条件差及反馈/tonic/随机对照，metrics按编码归档。
+- [x] V3 Figure4–7：统一PCA、SVD/角度/交叉VAF/独立seed稳定性、三类RDM与Response控制、两种独立拆分解码。
+- [x] V4 Figure8–9：72状态包、5184扰动条件（216无未选branch为NA）、完整谱/恢复身份/盆切片及全率NPZ本地归档。
+- [x] V5 Figure10：定位/几何/动力学/量化四张综合图，metrics/encoding_summary.csv；无复合评分。
+- [x] V6 科学验收：SUMMARY.md十问，明确固定支持、Y尾迹、Response等距、memory残余可解码与局部稳定性边界。
+- [x] V7 归档与质量：55组/165图文件、60测试通过；figure_manifest.json、manifests/figure_quality.json及visual_review.md。
+
+证据统一保存于artifacts/neural_representation_v2；正式完成后依据实际产物勾选，不以脚本未报错代替视觉验收。模型机制和历史artifacts/v1、v2保持不变。提交提案与推送分别遵循AGENTS。

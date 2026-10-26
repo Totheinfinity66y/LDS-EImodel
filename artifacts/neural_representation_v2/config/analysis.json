@@ -1,0 +1,24 @@
+{
+  "active_threshold": 0.1,
+  "baseline": "actual t=0 rates",
+  "stage_window_ms": 20,
+  "pca_fit_stride": 4,
+  "pca_all_conditions": 24,
+  "pca_all_neurons": true,
+  "svd": "centered samples",
+  "topology_permutations": 720,
+  "decoding": "two disjoint stratified LDS-condition folds; fractional tie credit",
+  "noise_stability_sigma_L": 0.03,
+  "seeds": [
+    7,
+    11,
+    19
+  ],
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "rate_unit": "dimensionless, not Hz",
+  "model_parameters_changed": false
+}

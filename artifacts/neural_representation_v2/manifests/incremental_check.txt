@@ -1,0 +1,4 @@
+analyzing one_hot
+cached figure figure_01_one_hot
+cached figure figure_01_supplement_one_hot
+figure manifest: artifacts\neural_representation_v2\figure_manifest.json

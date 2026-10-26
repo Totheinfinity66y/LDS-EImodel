@@ -1,0 +1,953 @@
+{
+  "file_checks": "PASS",
+  "figures": [
+    {
+      "id": "figure_01_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3925,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_02_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4532,
+        3634
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_03_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3632,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_04_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3631,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_05_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4232,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_06_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3933,
+        3011
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_07_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3932,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_08_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3933,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_09_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4233,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_02_selectivity_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4232,
+        1834
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_01_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3925,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_02_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4532,
+        3634
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_03_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3632,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_04_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3631,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_05_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4232,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_06_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3933,
+        3011
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_07_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3932,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_08_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3933,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_09_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4233,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_02_selectivity_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4232,
+        1834
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_01_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3925,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_02_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4532,
+        3634
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_03_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3632,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_04_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3631,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_05_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4232,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_06_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3933,
+        3011
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_07_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3932,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_08_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3933,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_09_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4233,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_02_selectivity_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4232,
+        1834
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_10_localization",
+      "encoding": "comparison",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3932,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_10_geometry",
+      "encoding": "comparison",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3932,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_10_dynamics",
+      "encoding": "comparison",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3933,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_01_supplement_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3933,
+        2134
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_04_supplement_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3334,
+        1534
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_05_supplement_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4232,
+        3634
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_06_supplement_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3910,
+        2742
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_01_supplement_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3933,
+        2134
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_04_supplement_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3334,
+        1534
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_05_supplement_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4232,
+        3634
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_06_supplement_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3910,
+        2742
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_01_supplement_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3933,
+        2134
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_04_supplement_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3334,
+        1534
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_05_supplement_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4232,
+        3634
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_06_supplement_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3910,
+        2742
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_10_quantitative",
+      "encoding": "comparison",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3632,
+        3334
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_03_controls_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3629,
+        2134
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_06_input_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3026,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_03_controls_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3629,
+        2134
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_06_input_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3033,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_03_controls_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3629,
+        2134
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_06_input_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3033,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_07_noise_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3933,
+        1384
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_07_noise_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3933,
+        1384
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_07_noise_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3933,
+        1384
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    }
+  ],
+  "contact_sheets": [
+    "artifacts\\neural_representation_v2\\manifests\\contact_one_hot_1.jpg",
+    "artifacts\\neural_representation_v2\\manifests\\contact_one_hot_2.jpg",
+    "artifacts\\neural_representation_v2\\manifests\\contact_one_hot_3.jpg",
+    "artifacts\\neural_representation_v2\\manifests\\contact_ring_1.jpg",
+    "artifacts\\neural_representation_v2\\manifests\\contact_ring_2.jpg",
+    "artifacts\\neural_representation_v2\\manifests\\contact_ring_3.jpg",
+    "artifacts\\neural_representation_v2\\manifests\\contact_topology_1.jpg",
+    "artifacts\\neural_representation_v2\\manifests\\contact_topology_2.jpg",
+    "artifacts\\neural_representation_v2\\manifests\\contact_topology_3.jpg",
+    "artifacts\\neural_representation_v2\\manifests\\contact_comparison_1.jpg"
+  ],
+  "visual_review": "Separate visual review required; file integrity alone is not layout acceptance"
+}

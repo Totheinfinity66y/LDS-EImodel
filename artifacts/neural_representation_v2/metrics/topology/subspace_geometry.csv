@@ -1,0 +1,12 @@
+stage,branch,n_samples,n_neurons,whole_rank,effective_dimension,normalized_dimension,dim90,dim95,response_rank,split_overlap,split_note
+1,0,24,132,7,5.554913294797688,0.04208267647574006,6,7,5,0.49999999999999994,"disjoint L parity; different sampled positions, not independent noise repeats"
+2,0,12,132,6,4.7324368636610155,0.03585179442167436,6,6,5,0.33333340280842916,"disjoint L parity; different sampled positions, not independent noise repeats"
+2,1,12,132,6,4.732436863661015,0.035851794421674354,6,6,5,0.33333340280842944,"disjoint L parity; different sampled positions, not independent noise repeats"
+3,0,6,132,5,4.999999449596687,0.03787878370906581,5,5,5,7.642842422508591e-08,"disjoint L parity; different sampled positions, not independent noise repeats"
+3,1,6,132,5,4.999999449596706,0.03787878370906596,5,5,5,5.120134363338646e-18,"disjoint L parity; different sampled positions, not independent noise repeats"
+3,2,6,132,5,4.999999449596688,0.03787878370906582,5,5,5,7.642842422508592e-08,"disjoint L parity; different sampled positions, not independent noise repeats"
+3,3,6,132,5,4.999999449596708,0.03787878370906597,5,5,5,5.1201343633386484e-18,"disjoint L parity; different sampled positions, not independent noise repeats"
+4,0,6,132,5,4.999998408650474,0.03787877582310965,5,5,5,2.2093877740126082e-07,"disjoint L parity; different sampled positions, not independent noise repeats"
+4,1,6,132,5,4.999998408650518,0.03787877582310998,5,5,5,2.20935646242504e-07,"disjoint L parity; different sampled positions, not independent noise repeats"
+4,2,6,132,5,4.999998408650472,0.03787877582310964,5,5,5,2.2093877740126087e-07,"disjoint L parity; different sampled positions, not independent noise repeats"
+4,3,6,132,5,4.9999984086505185,0.037878775823109986,5,5,5,2.2093564624250405e-07,"disjoint L parity; different sampled positions, not independent noise repeats"

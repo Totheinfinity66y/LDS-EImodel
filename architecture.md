@@ -108,3 +108,13 @@ A首次转移前切M_D→E_gate_D，预期只保留R1；C第二次前切M_S→E_
 依赖numpy≥2.0（记忆AUC使用trapezoid）、PyYAML≥6、matplotlib≥3.8，analysis环境CPU。命令：`python -m unittest discover -s handcrafted_ei/tests -v`、`python -m handcrafted_ei.evaluate --output <fresh-dir>`、`python -m handcrafted_ei.receipt <dir>`、`python -m handcrafted_ei.recompute <dir>`。吸引子轨迹按快照分包，index.json记录SHA256；recompute独立复算表征、扰动、谱及全部自由演化步。
 
 历史artifacts/v1不覆盖；新结果artifacts/v2。归档完整配置、源码SHA256、环境、轨迹及复算。失败如实保存；不把24/24当作学习/泛化，不把高活动、聚类或分支结构当吸引子证据。未测参数范围、连续时间稳定性、生物参数映射均属局限。
+
+## 9. Whole-population Evaluation Workflow
+
+分析系统只读正式v2 ZIP，位于evaluation/population_data、population_activity、neuron_selectivity、subspace_geometry、representational_similarity、decoding、memory_transfer、population_dynamics；模型不import这些模块。原模型、task、simulation、baseline.yaml不因分析改变。
+
+population_data逐ZIP校验SHA和标签/群体分区，以每编码独立的[trial,time,neuron]数据集保留全部132状态；E/I和branch映射从匹配源码恢复，sample电流明确重建。population_activity按实际事件取窗，neuron_selectivity提供结构与功能支持、描述性因子分解；subspace_geometry用全部条件/神经元统一PCA与各stage/branch SVD，另有支持折叠和独立输入噪声seed对照。RSA包含全网络/当前Response/全部Response，保存效应量和群体距离贡献，解码使用不相交L/D/S条件fold。
+
+population_dynamics的独立实验API接受原始归档和输出目录，完整状态复制、恒定外驱、延长演化、六类合法率扰动、残差/完整谱、身份保留及局部向量场；恢复条件在完整状态中判断，投影仅展示。撤任务输入但保留tonic与clock全关在本模型等价；不产生虚构的第三种动力学。
+
+visualization/plot_all统一调度数学分析与Figure1–10、多格式导出、中文报告和figure_manifest。quality_check检查文件并生成contact sheet，实际视觉复核另记。代码、输入/输出哈希参与缓存；缺失数据显式失败，退化指标NA。完整方法、参考panel和科学边界见artifacts/neural_representation_v2/METHODS.md及FIGURE_REFERENCES.md。

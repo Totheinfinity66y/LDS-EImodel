@@ -1,0 +1,16 @@
+{
+  "status": "PASS_WITH_LIMITS",
+  "tests_passed": 60,
+  "figure_groups": 55,
+  "figure_files": 165,
+  "source_files": 64,
+  "protected_source_matches": 8,
+  "historical_archives_modified": false,
+  "raw_perturbation_condition_count": 5184,
+  "NA_no_unselected_R1_branch": 216,
+  "valid_perturbation_conditions": 4968,
+  "source_and_image_hashes_valid": true,
+  "single_figure_incremental_cli": "PASS; two figures reused",
+  "visual_review": "manifests/visual_review.md",
+  "scope": "fixed network; six discrete locations; D+ S1 dynamical snapshot coverage; no continuous attractor conclusion"
+}

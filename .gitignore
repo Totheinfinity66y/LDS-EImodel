@@ -3,3 +3,8 @@ __pycache__/
 .validation-precheck/
 # Expanded experiment folders are local convenience copies; ZIP receipts are versioned.
 handcrafted_ei/artifacts/v1/*/
+# Local full-state perturbation recordings are reproducible and hash-indexed.
+# Keep these large NPZs on disk; summary.json and CSVs are versioned.
+artifacts/neural_representation_v2/data/dynamics/*.npz
+# Copyrighted reference PDFs/figures are local verification material only.
+artifacts/neural_representation_v2/reference_evidence/

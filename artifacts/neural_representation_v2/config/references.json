@@ -1,0 +1,392 @@
+{
+  "schema_version": 1,
+  "verified_date": "2026-10-26",
+  "references": [
+    {
+      "id": "A",
+      "key": "Kobak2016",
+      "title": "Demixed principal component analysis of neural population data",
+      "authors": [
+        "Dmitry Kobak",
+        "Wieland Brendel",
+        "Christos Constantinidis",
+        "Claudia E Feierstein",
+        "Adam Kepecs",
+        "Zachary F Mainen",
+        "Xue-Lian Qi",
+        "Ranulfo Romo",
+        "Naoshige Uchida",
+        "Christian K Machens"
+      ],
+      "year": 2016,
+      "doi": "10.7554/eLife.10989",
+      "source_url": "https://elifesciences.org/articles/10989/figures",
+      "caption_checked": [
+        "1b",
+        "1g",
+        "1i",
+        "2b/d/f",
+        "3b/c/d",
+        "7a/b"
+      ],
+      "visually_checked": [
+        "1b",
+        "1g",
+        "1i",
+        "2b/d/f",
+        "3b/c/d",
+        "7a/b"
+      ],
+      "project_figures": [
+        1,
+        2,
+        4,
+        5,
+        7
+      ],
+      "local_evidence": [
+        "reference_evidence/Kobak2016.pdf",
+        "reference_evidence/Kobak2016_p12.png",
+        "reference_evidence/Kobak2016_p14.png",
+        "reference_evidence/Kobak2016_p3.png",
+        "reference_evidence/Kobak2016_p5.png",
+        "reference_evidence/Kobak2016_p6.png",
+        "reference_evidence/Kobak2016_p7.png"
+      ],
+      "code_reuse": false,
+      "public_code_url": "https://github.com/machenslab/dPCA"
+    },
+    {
+      "id": "B",
+      "key": "Churchland2012",
+      "title": "Neural population dynamics during reaching",
+      "authors": [
+        "Mark M Churchland",
+        "John P Cunningham",
+        "Matthew T Kaufman",
+        "Justin D Foster",
+        "Paul Nuyujukian",
+        "Stephen I Ryu",
+        "Krishna V Shenoy"
+      ],
+      "year": 2012,
+      "doi": "10.1038/nature11129",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3393826/",
+      "caption_checked": [
+        "2",
+        "3a-f"
+      ],
+      "visually_checked": [
+        "2",
+        "3a-f"
+      ],
+      "project_figures": [
+        1,
+        4
+      ],
+      "local_evidence": [
+        "reference_evidence/Churchland2012.pdf",
+        "reference_evidence/Churchland2012_fig2.jpg",
+        "reference_evidence/Churchland2012_fig3.jpg",
+        "reference_evidence/Churchland2012_p2.png",
+        "reference_evidence/Churchland2012_p3.png"
+      ],
+      "code_reuse": false
+    },
+    {
+      "id": "C",
+      "key": "Mante2013",
+      "title": "Context-dependent computation by recurrent dynamics in prefrontal cortex",
+      "authors": [
+        "Valerio Mante",
+        "David Sussillo",
+        "Krishna V Shenoy",
+        "William T Newsome"
+      ],
+      "year": 2013,
+      "doi": "10.1038/nature12742",
+      "source_url": "https://web.stanford.edu/class/psych209/Readings/ManteEtAl13ContDepCompWithSupp.pdf",
+      "caption_checked": [
+        "2a-f",
+        "3a-d",
+        "4",
+        "5a-f",
+        "ED3"
+      ],
+      "visually_checked": [
+        "2a-f",
+        "3a-d",
+        "4",
+        "5a-f"
+      ],
+      "project_figures": [
+        2,
+        4,
+        7,
+        8
+      ],
+      "local_evidence": [
+        "reference_evidence/Mante2013.pdf",
+        "reference_evidence/Mante2013_p3.png",
+        "reference_evidence/Mante2013_p4.png",
+        "reference_evidence/Mante2013_p5.png"
+      ],
+      "code_reuse": false
+    },
+    {
+      "id": "D",
+      "key": "Gallego2018",
+      "title": "Cortical population activity within a preserved neural manifold underlies multiple motor behaviors",
+      "authors": [
+        "Juan A Gallego",
+        "Matthew G Perich",
+        "Stephanie N Naufel",
+        "Christian Ethier",
+        "Sara A Solla",
+        "Lee E Miller"
+      ],
+      "year": 2018,
+      "doi": "10.1038/s41467-018-06560-z",
+      "source_url": "https://www.nature.com/articles/s41467-018-06560-z.pdf",
+      "caption_checked": [
+        "3a-c"
+      ],
+      "visually_checked": [
+        "3a-c"
+      ],
+      "project_figures": [
+        5,
+        10
+      ],
+      "local_evidence": [
+        "reference_evidence/Gallego2018.pdf",
+        "reference_evidence/Gallego2018_fig3.png"
+      ],
+      "code_reuse": false
+    },
+    {
+      "id": "E",
+      "key": "Kriegeskorte2008",
+      "title": "Representational similarity analysis - connecting the branches of systems neuroscience",
+      "authors": [
+        "Nikolaus Kriegeskorte",
+        "Marieke Mur",
+        "Peter Bandettini"
+      ],
+      "year": 2008,
+      "doi": "10.3389/neuro.06.004.2008",
+      "source_url": "https://www.frontiersin.org/journals/systems-neuroscience/articles/10.3389/neuro.06.004.2008/full",
+      "caption_checked": [
+        "2",
+        "4",
+        "10"
+      ],
+      "visually_checked": [
+        "2"
+      ],
+      "project_figures": [
+        6,
+        10
+      ],
+      "local_evidence": [
+        "reference_evidence/Kriegeskorte2008_fig2.gif",
+        "reference_evidence/Kriegeskorte2008_fig2.png"
+      ],
+      "code_reuse": false
+    },
+    {
+      "id": "F",
+      "key": "Seelig2015",
+      "title": "Neural dynamics for landmark orientation and angular path integration",
+      "authors": [
+        "Johannes D Seelig",
+        "Vivek Jayaraman"
+      ],
+      "year": 2015,
+      "doi": "10.1038/nature14446",
+      "source_url": "https://neuroscience.stanford.edu/sites/default/files/seeligjayaramannature2015_14446.pdf",
+      "caption_checked": [
+        "1f-i",
+        "4a-i"
+      ],
+      "visually_checked": [
+        "1f-i",
+        "4a-i"
+      ],
+      "project_figures": [
+        1,
+        6,
+        8
+      ],
+      "local_evidence": [
+        "reference_evidence/Seelig2015.pdf",
+        "reference_evidence/Seelig2015_p2.png",
+        "reference_evidence/Seelig2015_p5.png"
+      ],
+      "code_reuse": false
+    },
+    {
+      "id": "G",
+      "key": "Inagaki2019",
+      "title": "Discrete attractor dynamics underlies persistent activity in the frontal cortex",
+      "authors": [
+        "Hidehiko K Inagaki",
+        "Lorenzo Fontolan",
+        "Sandro Romani",
+        "Karel Svoboda"
+      ],
+      "year": 2019,
+      "doi": "10.1038/s41586-019-0919-7",
+      "source_url": "https://www.nature.com/articles/s41586-019-0919-7",
+      "caption_checked": [
+        "1b",
+        "5a-g",
+        "ED1b-x",
+        "ED6b-x"
+      ],
+      "visually_checked": [
+        "1b",
+        "5a-g",
+        "ED1b-x",
+        "ED6b-x"
+      ],
+      "project_figures": [
+        8,
+        9
+      ],
+      "local_evidence": [
+        "reference_evidence/Inagaki2019_ed1.jpg",
+        "reference_evidence/Inagaki2019_ed6.jpg",
+        "reference_evidence/Inagaki2019_fig1.png",
+        "reference_evidence/Inagaki2019_fig5.png"
+      ],
+      "code_reuse": false
+    },
+    {
+      "id": "H",
+      "key": "Zhou2023",
+      "title": "Multiplexing working memory and time in the trajectories of neural networks",
+      "authors": [
+        "Shanglin Zhou",
+        "Michael Seay",
+        "Jiannis Taxidis",
+        "Peyman Golshani",
+        "Dean V Buonomano"
+      ],
+      "year": 2023,
+      "doi": "10.1038/s41562-023-01592-y",
+      "source_url": "https://www.buonomanolab.com/Publications/ZhouBuonoNatureHumanBehaviour2023.pdf",
+      "caption_checked": [
+        "7a-c"
+      ],
+      "visually_checked": [
+        "7a-c"
+      ],
+      "project_figures": [
+        9
+      ],
+      "local_evidence": [
+        "reference_evidence/Zhou2023.pdf",
+        "reference_evidence/Zhou2023_p10.png"
+      ],
+      "code_reuse": false,
+      "author_manuscript_title": "Multiplexing working memory and time: encoding retrospective and prospective information in neural trajectories",
+      "public_code_url": "https://github.com/BuonoLab/Timing-WM_RNN_2022"
+    },
+    {
+      "id": "I",
+      "key": "Langdon2023",
+      "title": "A unifying perspective on neural manifolds and circuits for cognition",
+      "authors": [
+        "Christopher Langdon",
+        "Mikhail Genkin",
+        "Tatiana A Engel"
+      ],
+      "year": 2023,
+      "doi": "10.1038/s41583-023-00693-x",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11058347/",
+      "caption_checked": [
+        "Box1a-c",
+        "1a-c"
+      ],
+      "visually_checked": [
+        "Box1a-c"
+      ],
+      "project_figures": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "local_evidence": [
+        "reference_evidence/Langdon2023_box1.jpg"
+      ],
+      "code_reuse": false
+    }
+  ],
+  "figure_references": {
+    "1": [
+      "A",
+      "B",
+      "F",
+      "I"
+    ],
+    "2": [
+      "A",
+      "C",
+      "I"
+    ],
+    "3": [
+      "I"
+    ],
+    "4": [
+      "A",
+      "B",
+      "C",
+      "I"
+    ],
+    "5": [
+      "A",
+      "D",
+      "I"
+    ],
+    "6": [
+      "E",
+      "F",
+      "I"
+    ],
+    "7": [
+      "A",
+      "C",
+      "I"
+    ],
+    "8": [
+      "C",
+      "F",
+      "G",
+      "I"
+    ],
+    "9": [
+      "G",
+      "H",
+      "I"
+    ],
+    "10": [
+      "D",
+      "E",
+      "I"
+    ]
+  },
+  "limits": [
+    "Caption checking and visual checking are recorded separately.",
+    "Reference images are verification evidence, never model-generated results.",
+    "No third-party code copied.",
+    "Nature HTML access varied; official media and author PDF fallback used."
+  ]
+}

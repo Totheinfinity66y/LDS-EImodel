@@ -77,3 +77,18 @@ python -m handcrafted_ei.recompute <output-directory>
 [位置编码](handcrafted_ei/model/location_encoding.py)、[固定连接](handcrafted_ei/model/connectivity.py)、[网络动力学](handcrafted_ei/model/ei_network.py)、[时序及干预](handcrafted_ei/simulation/__init__.py)、[行为](handcrafted_ei/evaluation/behavior.py)、[记忆指标](handcrafted_ei/evaluation/memory.py)、[表征](handcrafted_ei/evaluation/representation.py)、[吸引子](handcrafted_ei/evaluation/attractors.py)、[归档入口](handcrafted_ei/evaluate.py)、[独立复算](handcrafted_ei/receipt.py)。
 
 [架构规格](architecture.md)定义当前模型的完整动力学、时序与信息边界；[验收清单](todo.md)记录当前阶段及证据。吸引子与编码比较的科学局限见实现报告。
+
+## 神经群体表征与论文图工作流
+
+```powershell
+$env:PATH="C:\Users\Totheinfinity\.conda\envs\analysis\Library\bin;"+$env:PATH
+& C:\Users\Totheinfinity\.conda\envs\analysis\python.exe -m handcrafted_ei.visualization.plot_all --input handcrafted_ei/artifacts/v2/run --output artifacts/neural_representation_v2 --formats png,svg,pdf
+```
+
+已激活兼容环境时直接执行相同的 `python -m`。单图/编码例如追加 `--figures 3,5,6 --encoding ring`；`--force`重导图。仅运行独立动力学实验：`python -m handcrafted_ei.evaluation.population_dynamics --input handcrafted_ei/artifacts/v2/run --output artifacts/neural_representation_v2`。QA命令：`python -m handcrafted_ei.visualization.quality_check artifacts/neural_representation_v2`。
+
+正式输出：[数据审计](artifacts/neural_representation_v2/DATA_AUDIT.md)、[方法](artifacts/neural_representation_v2/METHODS.md)、[逐图结果](artifacts/neural_representation_v2/RESULTS.md)、[十问总结](artifacts/neural_representation_v2/SUMMARY.md)、[参考panel核对](artifacts/neural_representation_v2/FIGURE_REFERENCES.md)、[图表manifest](artifacts/neural_representation_v2/figure_manifest.json)。数据和指标按编码独立保存，Figure1–9含必要补图，Figure10拆为定位/几何/动力学/量化比较。大体积完整扰动NPZ保留本地并由summary哈希索引，可由同一命令重建；原论文PDF与原图仅本地核验，不作为模型图提交。
+
+引用来源包括Kobak2016（dPCA）、Churchland2012（群体轨迹）、Mante2013（任务变量投影）、Gallego2018（子空间角度/VAF）、Kriegeskorte2008（RSA）、Seelig2015（环状定位）、Inagaki2019（离散吸引子）、Zhou2023（扰动轨迹）与Langdon2023（流形综述）。完整作者、DOI与具体panel见参考文档。
+
+全网络分析不删除静息神经元。输入维数与神经PCA维数分开；分支结构是handcrafted先验。等距相关性保留NA，报告微小距离效应量；确定性条件不伪造置信区间。稳定性在固定外驱及完整状态空间判断，六个离散位置不证明连续环吸引子。分析不改变模型参数或readout-first时序。

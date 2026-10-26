@@ -1,0 +1,9 @@
+test_batch_matches_actual_steps_and_preserves_model (handcrafted_ei.tests.test_population_dynamics.PopulationDynamicsTests.test_batch_matches_actual_steps_and_preserves_model) ... ok
+test_different_encoding_state_shapes (handcrafted_ei.tests.test_population_dynamics.PopulationDynamicsTests.test_different_encoding_state_shapes) ... ok
+test_jacobian_matches_finite_difference_and_euler (handcrafted_ei.tests.test_population_dynamics.PopulationDynamicsTests.test_jacobian_matches_finite_difference_and_euler) ... ok
+test_zero_perturbation_and_identity_not_rest (handcrafted_ei.tests.test_population_dynamics.PopulationDynamicsTests.test_zero_perturbation_and_identity_not_rest) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.039s
+
+OK
