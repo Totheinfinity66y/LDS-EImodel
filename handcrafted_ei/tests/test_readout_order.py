@@ -12,6 +12,8 @@ class OrderTests(unittest.TestCase):
             self.assertEqual(len(r.groups['Y']),6)
             self.assertEqual(r.y.shape,(len(r.times),6))
             for stage in (2,3,4):
+                before=r.times<=r.events[f'to_R{stage}']
+                self.assertLess(r.rates[before][:,r.groups[f'R{stage}']].max(),.01)
                 idx=np.argmin(abs(r.times-r.events[f'readout{stage}']))
                 for previous in range(1,stage):
                     self.assertLess(r.rates[idx,r.groups[f'R{previous}']].max(), .05)

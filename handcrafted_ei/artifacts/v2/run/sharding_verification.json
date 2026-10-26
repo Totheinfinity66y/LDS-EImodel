@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "shards": 72,
+  "arrays_verified": 1368,
+  "max_bytes": 3812912,
+  "original_bytes": 268464982,
+  "checks": "every shard array exactly equals original NPZ array; per-shard SHA256"
+}

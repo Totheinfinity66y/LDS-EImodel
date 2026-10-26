@@ -1,0 +1,12 @@
+one_hot__baseline {'sequences_correct': 24, 'n': 24, 'stage_accuracy': [1.0, 1.0, 1.0, 1.0]}
+ring__baseline {'sequences_correct': 24, 'n': 24, 'stage_accuracy': [1.0, 1.0, 1.0, 1.0]}
+topology__baseline {'sequences_correct': 24, 'n': 24, 'stage_accuracy': [1.0, 1.0, 1.0, 1.0]}
+one_hot__zero_seed_11 {'sequences_correct': 24, 'n': 24, 'stage_accuracy': [1.0, 1.0, 1.0, 1.0]}
+one_hot__zero_seed_19 {'sequences_correct': 24, 'n': 24, 'stage_accuracy': [1.0, 1.0, 1.0, 1.0]}
+one_hot__noise_0.03_7 {'sequences_correct': 24, 'n': 24, 'stage_accuracy': [1.0, 1.0, 1.0, 1.0]}
+one_hot__noise_0.03_11 {'sequences_correct': 24, 'n': 24, 'stage_accuracy': [1.0, 1.0, 1.0, 1.0]}
+one_hot__noise_0.03_19 {'sequences_correct': 24, 'n': 24, 'stage_accuracy': [1.0, 1.0, 1.0, 1.0]}
+one_hot__noise_0.2_7 {'sequences_correct': 24, 'n': 24, 'stage_accuracy': [1.0, 1.0, 1.0, 1.0]}
+one_hot__noise_0.2_11 {'sequences_correct': 24, 'n': 24, 'stage_accuracy': [1.0, 1.0, 1.0, 1.0]}
+one_hot__noise_0.2_19 {'sequences_correct': 24, 'n': 24, 'stage_accuracy': [1.0, 1.0, 1.0, 1.0]}
+one_hot__noise_0.6_7 {'sequences_correct': 19, 'n': 24, 'stage_accuracy': [0.875, 0.875, 0.7916666666666666, 0.875]}

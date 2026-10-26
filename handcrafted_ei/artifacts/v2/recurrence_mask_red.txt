@@ -1,0 +1,27 @@
+test_matched_lesions_same_count_magnitude_and_window (test_interventions.InterventionTests.test_matched_lesions_same_count_magnitude_and_window) ... ok
+test_projection_permutations_and_composition (test_interventions.InterventionTests.test_projection_permutations_and_composition) ... ok
+test_recurrence_cut_preserves_all_feedforward_edges (test_interventions.InterventionTests.test_recurrence_cut_preserves_all_feedforward_edges) ... FAIL
+
+======================================================================
+FAIL: test_recurrence_cut_preserves_all_feedforward_edges (test_interventions.InterventionTests.test_recurrence_cut_preserves_all_feedforward_edges)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_interventions.py", line 13, in test_recurrence_cut_preserves_all_feedforward_edges
+    np.testing.assert_array_equal(m.weights[offdiag],original[offdiag])
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\site-packages\numpy\testing\_private\utils.py", line 1054, in assert_array_equal
+    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\site-packages\numpy\testing\_private\utils.py", line 919, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+Mismatched elements: 60 / 17292 (0.347%)
+Max absolute difference among violations: 0.8
+Max relative difference among violations: 1.
+ ACTUAL: array([0., 0., 0., ..., 0., 0., 0.], shape=(17292,))
+ DESIRED: array([0., 0., 0., ..., 0., 0., 0.], shape=(17292,))
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.944s
+
+FAILED (failures=1)

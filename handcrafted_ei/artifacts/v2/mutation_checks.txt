@@ -1,0 +1,165 @@
+RED Dale sign error: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_all_four_synapse_types (test_dale_constraints.DaleTests.test_all_four_synapse_types)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_dale_constraints.py", line 16, in test_all_four_synapse_types
+    self.assertTrue(np.all(m.signed_weights[:, indices] * pre >= 0))
+AssertionError: np.False_ is not true
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+OK
+GREEN restored: Dale sign error
+RED no internal memory: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_pulse_removed_memory_at_both_delays (test_memory_delay.MemoryTests.test_pulse_removed_memory_at_both_delays)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_memory_delay.py", line 17, in test_pulse_removed_memory_at_both_delays
+    self.assertGreater(r[selected], .9)
+AssertionError: np.float64(1.6544094922222805e-19) not greater than 0.9
+
+----------------------------------------------------------------------
+Ran 1 test in 0.032s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 2.024s
+
+OK
+GREEN restored: no internal memory
+RED no direct excitation: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_excitatory_gate_and_unselected_silence (test_direct_activation.DirectTests.test_excitatory_gate_and_unselected_silence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_direct_activation.py", line 15, in test_excitatory_gate_and_unselected_silence
+    self.assertEqual(r.outputs,(0,1,3,4))
+AssertionError: Tuples differ: (0, -1, -1, -1) != (0, 1, 3, 4)
+
+First differing element 1:
+-1
+1
+
+- (0, -1, -1, -1)
++ (0, 1, 3, 4)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.048s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.047s
+
+OK
+GREEN restored: no direct excitation
+RED no feedback decay: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_handoff_specific_decay (test_memory_decay.DecayTests.test_handoff_specific_decay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_memory_decay.py", line 15, in test_handoff_specific_decay
+    self.assertLess(at('readout3','M_D'),.05)
+AssertionError: np.float64(0.9999999999999996) not less than 0.05
+
+----------------------------------------------------------------------
+Ran 1 test in 0.047s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.043s
+
+OK
+GREEN restored: no feedback decay
+RED early routing: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_four_distinct_readouts_before_transitions (test_readout_order.OrderTests.test_four_distinct_readouts_before_transitions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_readout_order.py", line 16, in test_four_distinct_readouts_before_transitions
+    self.assertLess(r.rates[before][:,r.groups[f'R{stage}']].max(),.01)
+AssertionError: np.float64(0.9999999999999996) not less than 0.01
+
+----------------------------------------------------------------------
+Ran 1 test in 1.148s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 1.304s
+
+OK
+GREEN restored: early routing
+RED no tonic inhibition: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_real_inhibitory_background_and_necessary_silence (test_tonic_inhibition.TonicTests.test_real_inhibitory_background_and_necessary_silence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_tonic_inhibition.py", line 12, in test_real_inhibitory_background_and_necessary_silence
+    self.assertTrue(np.all(m.signed_weights[np.ix_(m.groups['R2'],i)]<0))
+AssertionError: np.False_ is not true
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.104s
+
+OK
+GREEN restored: no tonic inhibition
+RED broken branch inheritance: 1 failures, 0 errors
+F
+======================================================================
+FAIL: test_memory_output_cuts_preserve_downstream_responses (test_pathway_inheritance.InheritanceTests.test_memory_output_cuts_preserve_downstream_responses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_pathway_inheritance.py", line 12, in test_memory_output_cuts_preserve_downstream_responses
+    self.assertEqual(control.outputs,target(*c))
+AssertionError: Tuples differ: (0, 1, 2, -1) != (0, 1, 2, 3)
+
+First differing element 3:
+-1
+3
+
+- (0, 1, 2, -1)
+?           ^^
+
++ (0, 1, 2, 3)
+?           ^
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.293s
+
+FAILED (failures=1)
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 3.793s
+
+OK
+GREEN restored: broken branch inheritance

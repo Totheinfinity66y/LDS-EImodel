@@ -1,0 +1,21 @@
+test_attractor_dynamics (unittest.loader._FailedTest.test_attractor_dynamics) ... ERROR
+
+======================================================================
+ERROR: test_attractor_dynamics (unittest.loader._FailedTest.test_attractor_dynamics)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_attractor_dynamics
+Traceback (most recent call last):
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Totheinfinity\.conda\envs\analysis\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_attractor_dynamics.py", line 4, in <module>
+    from handcrafted_ei.evaluation.attractors import free_evolution, local_stability, basin_probe
+ModuleNotFoundError: No module named 'handcrafted_ei.evaluation.attractors'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

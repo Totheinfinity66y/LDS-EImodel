@@ -1,6 +1,6 @@
 # AGENTS
 
-你是本项目的代码助理。本仓库当前主线是 **Handcrafted E/I Decompression v1**：一个 handcrafted、固定连接、不训练的 E/I rate network，把已给定的 `L`/`D`/`S` 展开为四位置序列。
+你是本项目的代码助理。本仓库当前主线是 **Handcrafted E/I Decompression v2**：一个 handcrafted、固定连接、不训练的 E/I rate network，把已给定的 `L`/`D`/`S` 展开为四位置序列。
 
 完整工程规格见仓库根目录 [architecture.md](architecture.md)，执行清单见仓库根目录 [todo.md](todo.md)。**本文件是强制规则**；科学边界以 `architecture.md` 的"冻结决定"为准，开发、验证与发布工作流以本文件为准；候选实现不得改写冻结决定。
 
@@ -31,44 +31,44 @@
 
 | 操作 | 判定 | 原因 / 可审查规则 |
 | --- | --- | --- |
-| 将 `L`、`D`、`S` 直接编码为第一版 trial 输入 | **允许且必须** | 本版明确从已压缩 primitives 开始研究。 |
+| 将 `L`、`D`、`S` 直接编码为本版 trial 输入 | **允许且必须** | 本版明确从已压缩 primitives 开始研究。 |
 | 用 `L` 输入刺激 `R1`，用 `D`/`S` 输入刺激对应 memory | **允许且必须** | 合法外部电流输入，不是答案泄漏。 |
 | 从历史、反馈、block 上下文或两个样本窗口再次提取 `L`/`D`/`S` | **禁止** | 超出本版范围且与直接输入定义冲突。 |
 | `M_L`、`LocationMemory` 或冗余 `L` 存储群 | **禁止** | `L` 的保持由 `R1` 位置活动承担。 |
 | `D`/`S` 输入直接选择并覆写下游正确位置神经元 | **禁止** | 绕过分支神经计算。 |
 | 在 trial 运行时由 Python 用 `L+D+DS` 更新 Response 状态 | **禁止** | 此公式只能出现在 evaluator 的 target 生成中。 |
 | 网络初始化时用 `T_δ` 建固定投射 | **允许** | Handcrafted 先验拓扑。 |
-| 仅用 `sigmoid(D,S) × E` 替代整个去抑制回路 | **禁止作为主模型** | 无真实 `I_release`/`I_gate` 的中间神经活动。 |
+| 直接兴奋门控 | **必须** | M_D/M_S→E_gate→Response，E_gate有连续率且可记录/干预；不得用标签乘法代替。 |
 | 用突触权重符号违反 Dale 定律 | **禁止** | 符号由突触前 E/I 身份决定，I→I 同样是抑制。 |
-| `D`/`S` 输入脉冲在整个 delay 期间持续 clamp | **禁止作为记忆验证** | 应观察记忆群体的内部保持。 |
+| `D`/`S` 输入脉冲在整个 delay 期间持续 clamp | **禁止作为记忆验证** | 应观察记忆群体在交接前的内部保持与交接后的活动依赖衰减。 |
 | `R2→R3` 再次查询 `D` memory | **禁止** | 应由活跃 `R2` 分支继承方向身份。 |
 | `R3→R4` 再次查询 `D` 或 `S` memory | **禁止** | 应由固定分支连线继承 `(d,s)`。 |
 | 在 Readout 1 之前开放 `R1→R2` 转移 | **禁止** | 破坏在线时序假设。 |
 | 一次生成四个目标后统一输出 | **禁止** | 应为四次 readout-first 事件。 |
 | 为每个 rank 单独设计答案解码头 | **禁止** | 全阶段共用一个 6 位置 readout。 |
 | clock 控制每阶段的开启与统一 reset | **允许** | 只能提供时间，不得携带位置和规则标签。 |
-| I→I 去抑制、选择性 E→E recurrence、competition | **允许** | 前提是符号和动态可检查。 |
+| 选择性 E→E recurrence、competition | **允许** | 前提是符号和动态可检查；主路由不使用I→I去抑制。 |
 | 强制 low-rank、正交分支、指定神经活动 PCA rank | **禁止** | 把后验性质作为先验编码。 |
-| 强制离散吸引子或训练神经网络 | **本版不要求/不做** | 稳定性、吸引子是后续测试，不应成为 v1 门槛。 |
+| 强制离散吸引子或训练神经网络 | **本版不要求/不做** | 吸引子有无是后验结果，训练不在范围内。 |
 | 对 model 做 lesion、记录全神经群体、PCA/VAF | **允许且后续应做** | 事后观察和因果分析。 |
 
 ### 1.1 本版明确移出范围的功能
 
-以下不是"延后实现"，而是被移出 v1。**不得**出现在 v1 的目录设计、里程碑清单、模型接口或结论中，**也不得以"先保留占位模块"为由生成**：
+以下不是"延后实现"，而是本版范围外。**不得**出现在当前目录设计、里程碑清单、模型接口或结论中，**也不得以"先保留占位模块"为由生成**：
 
 - `T1`/`T2` 位置差比较、方向比较器、`direction_comparator.py`；
 - 根据位置关系反推 `L`/`D`/`S` 的编码器或算法；
 - 历史反馈、奖惩、block context、跨 trial 的 `S` 学习、block switch 恢复；
 - `block_context.py`、`feedback.py`、`block_runner.py`、`apply_scalar_feedback()` 等旧接口；
-- 以"只有位置观察可用"或"禁止 D/S 输入"为第一版规范的任何表述；
+- 以"只有位置观察可用"或"禁止 D/S 输入"为本版规范的任何表述；
 - 为旧任务构建额外感官样本、反馈或奖励通道；
 - 独立 `L` memory，或把 `L` 与 `D`/`S` 并列持续保持的联合 `M_DS`。
 
-将来要做 primitive extraction 或 block learning 时，通过版本化扩展单独定义新任务。不要把那类功能暗中混入 v1。
+将来要做 primitive extraction 或 block learning 时，通过版本化扩展单独定义新任务。
 
 ### 1.2 冻结决定（引用 `architecture.md` 第 1 章）
 
-`L`/`D`/`S` 是合法直接输入；专门记忆只有 `M_D`、`M_S`；`D`/`S` 不得绕开神经回路给答案；显式 `I_release ⊣ I_gate ⊣ E_target` 去抑制；先 D 后 S 再分支继承；四次"先 readout 后 transition"；单个共享六位置 readout；不强加吸引子/low-rank/PCA rank；固定网络不训练。
+`L`/`D`/`S` 是合法直接输入；专门记忆只有 `M_D`、`M_S`；`D`/`S` 不得绕开神经回路给答案；显式 M→E_gate→Response 直接激活、真实 tonic I 背景抑制、R2/R3驱动的抑制反馈终止记忆；先 D 后 S 再分支继承；四次"先 readout 后 transition"；单个共享六位置 readout；不强加吸引子/low-rank/PCA rank；固定网络不训练。
 
 ---
 
@@ -79,8 +79,8 @@
 1. **model 的公开接口只接受编码后的 `L`/`D`/`S` 与内容无关的 clock 事件。** 目标序列、下一位置索引、环境算出的 `R2`/`R3`/`R4` 一律不得作为参数。
 2. **`model` 模块不得 import `task` 的真值求解函数**，也不得 import `evaluation` 的任何符号。`evaluation` 不得反向 import `model` 的状态写入接口。
 3. **不得存在** `set_true_D_branch()`、`force_correct_response()`、`update_S_from_reward()` 一类便捷入口。
-4. **trial 运行路径中不得出现**读取 `L`/`D`/`S` 标签后写回神经元状态的语句。`L`/`D`/`S` 只能在 `apply_input()` 处以 one-hot 电流进入网络。
-5. **不得存在**运行时按真实 `D`/`S` 生成的 `roll`/环移操作。`architecture.md` 第 4 章的 `T_δ` 只能在 `connectivity` 初始化期间生成一次。
+4. **trial 运行路径中不得出现**读取 `L`/`D`/`S` 标签后写回神经元状态的语句。`L`/`D`/`S` 只能在 `apply_input()` 处以配置选择的位置编码及 D/S one-hot 电流进入网络。
+5. **不得存在**运行时按真实 `D`/`S` 生成的 `roll`/环移操作。`architecture.md` 第 5 章的 `T_δ` 只能在 `connectivity` 初始化期间生成一次。
 6. **`readout()` 的 `argmax` 只允许作为外部观测输出**，不得反向写入 Response、不得决定路由、不得触发按标签查表的转移。
 7. **`simulation` 层不得做"标签判断 → 直接设某分支活动"的隐藏 if/else。** `advance_phase()` 只能施加非内容特异的时序控制电流、解除统一阶段抑制或触发回路阶段许可。
 8. **读数隔离测试**：`environment` 的 target 在 trial 执行期间不可被模型对象访问（例如用代理对象在运行期屏蔽 target 属性，模型仍须正常跑完并产生正确输出）。
@@ -94,7 +94,7 @@
 - `task` 生成 `L`/`D`/`S` 编码与目标序列；不得把目标数组或"下一位置"作为 model 接口参数。
 - `model` 实现神经活动动力学、固定连线、输入电流与读取活动；不依赖 `task` 的真值求解函数。
 - `simulation` 只安排时钟和积分，不做隐藏的标签分支。
-- `evaluation` 只在模型输出后评估结果，不能修改网络状态。
+- `evaluation` 只在模型输出后评估结果，不能修改正常运行网络状态；吸引子与扰动实验只能操作独立深拷贝，明确记录条件。
 - 推荐网络公开接口：`initialize()`、`apply_input()`、`remove_stimulus()`、`step()`/`integrate()`、`advance_phase()`、`get_activity()`、`readout()`。
 - **不得公开** `set_true_D_branch()`、`force_correct_response()`、`update_S_from_reward()` 等违背本版边界的入口。
 - 实现阶段可在保持接口约束的前提下合并文件，但**不得合并** `task` / `model` / `simulation` / `evaluation` 的职责边界。
@@ -105,14 +105,14 @@
 
 | 层级 | 门槛 | 判据位置 |
 | --- | --- | --- |
-| Level 1 · 行为 | 无噪声 baseline 下 **24/24 条完整四位置序列正确**；各 stage accuracy 单独报告 | `todo.md` M4 |
-| Level 1 · 记忆 | 撤除输入后 `R1`/`M_D`/`M_S` 在所需 delay 与 gate 期间保持可分辨选择性；不得以持续外部 clamp 取代 | `todo.md` M1、M2 |
-| Level 1 · 门 | 无 release 时默认门有效抑制通路；有 release 时正确 E→E 传递，未选中支路显著受抑 | `todo.md` M2、M3 |
-| Level 1 · 时序 | `t_readout1 < t_Dgate`、`t_readout2 < t_Sgate`、`t_readout3 < t_R4transition` 全部成立；Readout 1 前无提前的 D 路由 | `todo.md` M1、M4 |
-| Level 1 · 继承 | `R2` 之后不再依赖 `D` 记忆下游输出完成 `R3`/`R4`；`R3` 之后不再依赖 `D`/`S` 记忆下游输出形成 `R4` | `todo.md` M3、M4 |
-| Level 1 · 边界 | 第 2 节的信息泄露检查全部通过；Dale 符号检查全部通过 | `todo.md` M0 |
-| Level 2 · 干预 | 干预 A/B/C/D 各自具有阶段特异后果；每项干预配等剂量随机 lesion 对照 | `todo.md` M5 |
-| Level 3 · 表征 | 报告分支间分离角**与**分支内位置张成维数两个量；不预设结果为 1/2/4/4、low-rank 或吸引子 | `todo.md` M5 |
+| Level 1 · 行为 | 无噪声 baseline 下 **24/24 条完整四位置序列正确**；各 stage accuracy 单独报告 | `todo.md` P4 |
+| Level 1 · 记忆 | 撤除输入后 `R1`/`M_D`/`M_S` 在所需 delay 与 gate 期间保持可分辨选择性；不得以持续外部 clamp 取代 | `todo.md` P1、P2 |
+| Level 1 · 门 | source/gate/clock单独不能产生位置；正确组合激活所选通路，未选通路静息 | `todo.md` P1、P2 |
+| Level 1 · 时序 | `t_readout1 < t_Dgate`、`t_readout2 < t_Sgate`、`t_readout3 < t_R4transition` 全部成立；Readout 1 前无提前的 D 路由 | `todo.md` P4 |
+| Level 1 · 继承 | `R2` 之后不再依赖 `D` 记忆下游输出完成 `R3`/`R4`；`R3` 之后不再依赖 `D`/`S` 记忆下游输出形成 `R4` | `todo.md` P4 |
+| Level 1 · 边界 | 第 2 节的信息泄露检查全部通过；Dale 符号检查全部通过 | `todo.md` P0 |
+| Level 2 · 干预 | 干预 A/B/C/D 各自具有阶段特异后果；每项干预配等剂量随机 lesion 对照 | `todo.md` P5、P6 |
+| Level 3 · 表征 | 报告分支间分离角**与**分支内位置张成维数两个量；不预设结果为 1/2/4/4、low-rank 或吸引子 | `todo.md` P6 |
 
 **24/24 是解压缩网络行为的验收标准，不是"网络从不完整观测学习出 L/D/S"的证据。** 本版不考察后一个问题。
 
@@ -129,7 +129,7 @@
 | `tests/test_information_boundary.py` | 第 2 节全部 8 条信息边界检查 |
 | `tests/test_dale_constraints.py` | E→E、E→I、I→E、I→I 符号与状态更新；I→I 必须是抑制 |
 | `tests/test_memory_delay.py` | `R1`/`M_D`/`M_S` 在 delay 内的保持与可分辨选择性；clamp 对照为负 |
-| `tests/test_disinhibition.py` | 默认关门、释放开门、错误支路受抑、逐层 `I_release`/`I_gate` 活动 |
+| `tests/test_direct_activation.py` | 直接激活的重合条件、错误支路静息、E_gate活动及因果阻断 |
 | `tests/test_readout_order.py` | 三个时序不等式；Readout 1 前无 D 路由；四次 readout 分属四个事件 |
 | `tests/test_pathway_inheritance.py` | `R2`/`R3` 之后的分支继承；`R3→R4` 不依赖 `M_D`/`M_S` |
 | `tests/test_24_sequences.py` | 24 条完整序列与逐 stage 准确率 |
@@ -140,7 +140,7 @@
 
 ### 5.3 日志
 
-每个 time step 至少记录：全体 E/I 率向量（含群体标签映射）、每个 `I_gate` 与 `I_release` 活动、每个 response 分支的活动、`Y` 的 6 个读出值与该窗口决策值、事件时间戳、干预窗口（类型、起止、目标单元或连接）。
+每个 time step 至少记录：全体 E/I 率向量（含群体标签映射）、每个 E_gate、I_tonic 与 I_decay 活动、每个 response 分支的活动、`Y` 的 6 个读出值与该窗口决策值、事件时间戳、干预窗口（类型、起止、目标单元或连接）。
 
 trial 输入 `(L,D,S)` 与 evaluator 的 target **写在独立日志文件中**，不回流模型。
 
@@ -157,7 +157,7 @@ trial 输入 `(L,D,S)` 与 evaluator 的 target **写在独立日志文件中**�
 - 复现命令固定为：
   - `python -m unittest discover -s handcrafted_ei/tests -v`
   - `python -m handcrafted_ei.evaluate`
-- 参数、阈值、tonic drive、门释放电流、时间窗、噪声采样位置集中在 `config/baseline.yaml` 一类配置文件中管理，并写明单位、量纲、初值状态、仿真时间轴、噪声采样位置、日志格式。
+- 参数、阈值、tonic drive、兴奋门控电流、时间窗、噪声采样位置集中在 `config/baseline.yaml` 一类配置文件中管理，并写明单位、量纲、初值状态、仿真时间轴、噪声采样位置、日志格式。
 - 权重初值是手工设定的先验，**不是**对任何数据的拟合。报告中不得把初步调参说成生理数据拟合。
 
 ---
@@ -166,8 +166,8 @@ trial 输入 `(L,D,S)` 与 evaluator 的 target **写在独立日志文件中**�
 
 - **先写判据测试并确认其失败（红），再做模型改造（绿），最后归档该阶段结果。**
 - 每个里程碑结束时归档：配置快照、测试结果、复现命令、预期与实际对照。
-- 阶段按 `todo.md` 的 M0 → M5 依赖顺序推进。**M4 之前不扩大模型、不加入训练、不提前进行复杂表征解释。**
-- M4 的行为、信息边界与时序判据未通过前，不进入 M5 的噪声、敏感性或表征分析。
+- 阶段按 `todo.md` 的 P0 → P7 依赖顺序推进。P4行为与边界验收前不进入P5–P7后验分析；全程不加入训练。
+- P4 的行为、信息边界与时序判据未通过前，不进入 P5–P7 的噪声、敏感性或表征分析。
 - 每次修改模型拓扑或机制，必须同步更新 `architecture.md` 的对应章节。文档与实现不一致时，以实现为准并立即修文档。
 
 ### 7.1 Git 提交工作流
@@ -187,12 +187,12 @@ trial 输入 `(L,D,S)` 与 evaluator 的 target **写在独立日志文件中**�
 
 1. 为达成 24/24 只能靠标签索引、位置覆写或绕过 E/I 动力学。
 2. 信息泄露检查（第 2 节）无法通过，且修复需要修改 `task`/`model`/`simulation`/`evaluation` 的职责边界。
-3. Dale 约束无法满足而唯一解法是引入负权重。
-4. 去抑制回路无法在不使用 I→I 中间层的前提下实现。
+3. Dale 约束无法满足而唯一解法是给 E 突触引入负符号或负 magnitude。
+4. 直接激活只能靠重新引入 I_release⊣I_gate 路由、标签乘法或位置覆写才能实现。
 5. 某项干预没有产生预期的阶段特异后果，且原因不是"预期本身写错"——此时先排查日志与拓扑，不得修改任务真值。
 6. 需要新增训练、损失函数、optimizer 或 architecture search 才能继续。
 7. 需要修改 `L`/`D`/`S` 的输入定义、目标序列定义或 24 条件集合才能通过测试。
-8. 用户只授权文档/设计阶段时，需要创建 Python 源码、引入包依赖或运行仿真；应先确认进入实现阶段。2026-10-24 本轮用户已明确选择“实现并测试”，该轮允许按 v1 边界实现、测试和归档；不允许训练或擅自安装依赖。
+8. 用户只授权文档/设计阶段时，不得自行进入实现。本次2026-10-26用户已明确授权v2代码修改、测试、实验与归档；不允许训练或擅自安装依赖。
 
 报告时给出：现象、已排除的原因、卡住的具体判据、可行替代方案。
 
@@ -200,12 +200,24 @@ trial 输入 `(L,D,S)` 与 evaluator 的 target **写在独立日志文件中**�
 
 ## 9. 术语约定
 
-全仓库统一使用：`L`/`D`/`S`、`M_D`/`M_S`、`R1`–`R4`、`I_release`/`I_gate`、`readout-first`。
+全仓库统一使用：`L`/`D`/`S`、`M_D`/`M_S`、`R1`–`R4`、`E_gate`、`I_tonic`、`I_decay`、`readout-first`。
 
 - `L` 初始位置，`D` 方向（`+1`/`-1`），`S` 步长（`1`/`2`）；位置沿顺时针递增，运算在 `Z_6` 上取模。
 - `R1`–`R4` 是四个 response 阶段；`R2` 有两个方向分支，`R3`/`R4` 各有四个 `(d,s)` 分支。
-- `I_release` 是被记忆与阶段时钟驱动的释放单元；`I_gate` 是常态活跃、抑制目标 E 通路的门单元。二者都是 I 神经元，之间是 I→I 抑制。
-- "默认关闭"指通路在未收到 release 时不传递内容，不指模型被写成"若无事件则输出恒零"。
+- E_gate 是兴奋性率单元，由规则记忆与内容无关阶段许可共同激活；I_tonic提供背景抑制，I_decay由对应Response驱动并抑制memory。主模型不使用I→I去抑制选择。
+- "默认关闭"指通路在未收到足够直接激活 时不传递内容，不指模型被写成"若无事件则输出恒零"。
 - "分支继承"指 `R3→R4` 沿当前分支的固定连线推进，不再查询 `D`/`S` 记忆。
 - "1/2/4/4"指固定 `L`、遍历 `D`/`S` 时的**潜在 response 分支数**；它不是同时激活的分支数，也不是活动矩阵的 PCA rank。
 - "神经子空间"是**事后观察对象**，不是预先构造的低秩结构；稀疏活跃 ≠ 低秩。
+
+## 10. 编码、记忆终止与后验分析的强制判据
+
+- location_encoding支持one_hot/ring/topology；原始维度6/1/2与内部六位置维度分开报告。连续编码不得先离散解码为one-hot后宣称内部表示不同。ring用周期距离；二维A验证A⁶、逆、平方与方向；A负系数不得作为负E权重。
+- 所有候选T_d/T_ds仅初始化构建。运行时不得使用真实D/S调用roll、matrix_power/inverse或选取拓扑；模型不import task/evaluation。
+- M_D保持至R2形成，M_S保持至R3形成；显式Response→I_decay⊣memory反馈按层、逐单元阈值和慢率积分，不对全Response总量作软件阈值。不允许phase事件清零、定时降低gain。
+- direct activation通过source/gate/clock缺一负对照、E_gate连接符号与阻断验证；tonic inhibition必须来自实际I率单元。位置由源固定投射，gate只提供分支许可。
+- 必备新增测试：test_tonic_inhibition.py、test_memory_decay.py、test_location_encoding.py、test_location_transform.py、test_attractor_dynamics.py、test_subspace_representation.py。旧去抑制测试与故障注入须替换；历史记录保留。
+- 反馈切断应阻止终止；延迟Response应延长memory保持；过早抑制memory应损伤相应阶段。各必要性干预配等边数/幅度/符号/时窗随机对照。
+- 吸引子分析仅在独立副本中，关闭sample、明确clock/tonic条件，记录残差、扰动恢复、初态扫描与稳定性谱。检测不得影响正常状态推进；吸引子不存在不是失败，不许为结论改标准。
+- 源码或机制变更同步完整架构。历史artifacts/v1与receipt不覆写；v2独立归档完整配置、源码哈希、环境、种子、全率、事件及复算。
+- 不允许运行时答案注入、训练、额外规则记忆、改变24条件或读出顺序；如需这些才能继续立即停止报告。

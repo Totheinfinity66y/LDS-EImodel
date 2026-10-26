@@ -1,3 +1,102 @@
+# Handcrafted E/I v2 — P0–P7 执行与验收
+
+当前规范见[architecture.md](architecture.md)，强制规则见[AGENTS.md](AGENTS.md)。下列新阶段未经独立验证不得勾选。文末M0–M5只表示历史v1验收。
+
+## P0 — 冻结边界、归档基线与红测试
+
+- [x] 完成并通过独立验收。证据：旧16测试、源码与红测试：handcrafted_ei/artifacts/v2/baseline/。
+- 目标：冻结边界、归档基线与红测试。
+- 代码：AGENTS/architecture/todo、tests。
+- 必备测试：旧16测试及新机制失败。
+- 可证伪判据：旧机制不应通过新判据。
+- 产物：baseline源码、身份、tests_red。
+- 完成条件：原模型可复原且失败原因明确。
+- 失败处理：保存失败，按信息泄漏→Dale→时序/门控→数值定位；不改冻结定义；触及stop condition立即报告。
+
+## P1 — 直接兴奋激活与静息抑制
+
+- [x] 完成并通过独立验收。证据：直接激活/tonic/Dale：tests_full.txt；机制变异RED/GREEN：mutation_checks.txt。
+- 目标：直接兴奋激活与静息抑制。
+- 代码：connectivity/ei_network/config。
+- 必备测试：direct_activation、tonic_inhibition、Dale。
+- 可证伪判据：source/gate/clock单独无答案，组合正确。
+- 产物：全率及门控消融。
+- 完成条件：逐条件合法激活，无I→I路由。
+- 失败处理：保存失败，按信息泄漏→Dale→时序/门控→数值定位；不改冻结定义；触及stop condition立即报告。
+
+## P2 — 活动依赖记忆衰减
+
+- [x] 完成并通过独立验收。证据：memory_decay测试与run/memory.json、causal_checks.json。
+- 目标：活动依赖记忆衰减。
+- 代码：connectivity、memory分析。
+- 必备测试：memory_decay。
+- 可证伪判据：R2只终止D、R3只终止S；延迟形成仍保持。
+- 产物：半衰期、AUC、反馈及提前抑制对照。
+- 完成条件：交接前保持，交接后终止且因果成立。
+- 失败处理：保存失败，按信息泄漏→Dale→时序/门控→数值定位；不改冻结定义；触及stop condition立即报告。
+
+## P3 — 模块化位置编码
+
+- [x] 完成并通过独立验收。证据：location_encoding/transform测试；三模式六位置数学关系通过。
+- 目标：模块化位置编码。
+- 代码：location_encoding/task/config。
+- 必备测试：location_encoding/transform。
+- 可证伪判据：周期边界与全部变换正确，无负E权重。
+- 产物：编码/刺激几何及噪声剂量。
+- 完成条件：三模式接口及数学校验通过。
+- 失败处理：保存失败，按信息泄漏→Dale→时序/门控→数值定位；不改冻结定义；触及stop condition立即报告。
+
+## P4 — 行为、时序与继承
+
+- [x] 完成并通过独立验收。证据：三编码各24/24；31/31测试含时序/target隔离/继承。
+- 目标：行为、时序与继承。
+- 代码：simulation、behavior、tests。
+- 必备测试：24_sequences、boundary、order、inheritance。
+- 可证伪判据：三编码各24/24、四次readout-first、target隔离。
+- 产物：逐stage准确率、完整轨迹。
+- 完成条件：行为与信息边界通过才进入P5。
+- 失败处理：保存失败，按信息泄漏→Dale→时序/门控→数值定位；不改冻结定义；触及stop condition立即报告。
+
+## P5 — 因果与机制消融
+
+- [x] 完成并通过独立验收。证据：198组实验与匹配随机对照；run/metrics.csv及causal_checks.json。
+- 目标：因果与机制消融。
+- 代码：simulation/evaluate。
+- 必备测试：interventions、变异测试。
+- 可证伪判据：必要性效应及相应随机对照。
+- 产物：A/B/C/D、gate/tonic/recurrence/decay等消融。
+- 完成条件：预期与实际逐项记录，失败不可改真值。
+- 失败处理：保存失败，按信息泄漏→Dale→时序/门控→数值定位；不改冻结定义；触及stop condition立即报告。
+
+## P6 — 表征与吸引子后验检测
+
+- [x] 完成并通过独立验收。证据：72快照/864扰动、全轨迹与谱/表征复算：run/analysis_verification.json。
+- 目标：表征与吸引子后验检测。
+- 代码：representation、attractors。
+- 必备测试：subspace/attractor。
+- 可证伪判据：关闭clock后残差/恢复可独立检测，不预设吸引子。
+- 产物：轨迹均值、SVD/VAF、角度、盆与谱。
+- 完成条件：检测能区分稳定、衰减及受迫状态。
+- 失败处理：保存失败，按信息泄漏→Dale→时序/门控→数值定位；不改冻结定义；触及stop condition立即报告。
+
+## P7 — 三编码对照与完整归档
+
+- [x] 完成并通过独立验收。证据：4752trial复算PASS；全配置/环境/源码、图表和实现报告，提交提案另按Git工作流执行。
+- 目标：三编码对照与完整归档。
+- 代码：evaluate/receipt、README、docs。
+- 必备测试：全套测试、独立复算、文档检查。
+- 可证伪判据：可从保存数据重算结果，原v1不变。
+- 产物：config/source/environment、图表、REPORT。
+- 完成条件：全部证据与局限齐备，提交提案。
+- 失败处理：保存失败，按信息泄漏→Dale→时序/门控→数值定位；不改冻结定义；触及stop condition立即报告。
+
+---
+
+
+当前完整结果见[实现验收报告](docs/v2_implementation_report.md)。吸引子存在与否不是通过条件；有限盆、输入编码比较及退化随机池等局限均如实保留。提交状态由实际commit读回确认，实验通过不代表已提交。
+
+## 历史v1验收记录（不代表v2通过）
+
 # Handcrafted E/I v1 — M0–M5 执行与验收清单
 
 [架构规格](architecture.md)与[强制规则](AGENTS.md)共同约束本清单。范围是给定L/D/S后的固定E/I解压缩，不包含primitive extraction、feedback/block learning或训练。

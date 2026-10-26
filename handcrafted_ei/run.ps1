@@ -1,7 +1,7 @@
 param(
     [switch]$Test,
     [string]$PythonPath = 'C:\Users\Totheinfinity\.conda\envs\analysis\python.exe',
-    [string]$OutputDirectory = (Join-Path $PSScriptRoot 'artifacts\v1')
+    [string]$OutputDirectory = (Join-Path $PSScriptRoot 'artifacts\v2\run')
 )
 $ErrorActionPreference = 'Stop'
 if (-not (Test-Path -LiteralPath $PythonPath -PathType Leaf)) { throw "Missing Python: $PythonPath" }

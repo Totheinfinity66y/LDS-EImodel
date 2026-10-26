@@ -1,0 +1,15 @@
+test_report_real_geometry_and_trajectories (test_subspace_representation.RepresentationTests.test_report_real_geometry_and_trajectories) ... ERROR
+
+======================================================================
+ERROR: test_report_real_geometry_and_trajectories (test_subspace_representation.RepresentationTests.test_report_real_geometry_and_trajectories)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_subspace_representation.py", line 11, in test_report_real_geometry_and_trajectories
+    self.assertEqual(r['position_units'],6)
+                     ~^^^^^^^^^^^^^^^^^^
+KeyError: 'position_units'
+
+----------------------------------------------------------------------
+Ran 1 test in 1.303s
+
+FAILED (errors=1)

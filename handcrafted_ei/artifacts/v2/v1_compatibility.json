@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "experiments": 39,
+  "trials_recomputed": 936,
+  "mode": "read-only verify(write_result=False)",
+  "historical_git_diff_empty": true
+}

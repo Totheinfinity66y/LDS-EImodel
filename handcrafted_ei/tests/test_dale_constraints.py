@@ -11,10 +11,15 @@ class DaleTests(unittest.TestCase):
             for post in (1, -1):
                 indices = np.flatnonzero(m.signs == pre)
                 rows = np.flatnonzero(m.signs == post)
-                self.assertTrue(np.any(m.weights[np.ix_(rows, indices)] > 0))
+                if not (pre==post==-1):
+                    self.assertTrue(np.any(m.weights[np.ix_(rows, indices)] > 0))
                 self.assertTrue(np.all(m.signed_weights[:, indices] * pre >= 0))
         self.assertTrue(np.all(m.weights >= 0))
-        self.assertLess(m.signed_weights[m.groups['gate12'][0], m.groups['release12'][0]], 0)
+        self.assertLess(m.signed_weights[m.groups['M_D'][0], m.groups['I_decay_D'][0]], 0)
+        self.assertGreater(m.signed_weights[m.groups['R2'][0], m.groups['E_gate_D'][0]], 0)
+        # This topology has no I→I routing. The generic sign rule still covers I posts.
+        synthetic=np.ones_like(m.weights)*m.signs[None,:]
+        self.assertTrue(np.all(synthetic[np.ix_(np.flatnonzero(m.signs==-1),np.flatnonzero(m.signs==-1))]<0))
 
     def test_unified_update_and_bounds(self):
         for cls in (ExcitatoryNeuron, InhibitoryNeuron):

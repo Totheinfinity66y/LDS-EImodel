@@ -1,0 +1,37 @@
+test_block_feedback_prevents_decay (test_memory_decay.DecayTests.test_block_feedback_prevents_decay) ... ERROR
+test_delayed_response_and_weak_activity_do_not_end_memory (test_memory_decay.DecayTests.test_delayed_response_and_weak_activity_do_not_end_memory) ... ERROR
+test_handoff_specific_decay (test_memory_decay.DecayTests.test_handoff_specific_decay) ... FAIL
+
+======================================================================
+ERROR: test_block_feedback_prevents_decay (test_memory_decay.DecayTests.test_block_feedback_prevents_decay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_memory_decay.py", line 24, in test_block_feedback_prevents_decay
+    m=EINetwork(overrides={'w_response_decay':0})
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\model\ei_network.py", line 15, in __init__
+    if unknown: raise ValueError(f'unknown parameters: {unknown}')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: unknown parameters: {'w_response_decay'}
+
+======================================================================
+ERROR: test_delayed_response_and_weak_activity_do_not_end_memory (test_memory_decay.DecayTests.test_delayed_response_and_weak_activity_do_not_end_memory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_memory_decay.py", line 37, in test_delayed_response_and_weak_activity_do_not_end_memory
+    self.assertLess(m.rates[m.groups['I_decay_D']].max(),.01)
+                            ~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'I_decay_D'
+
+======================================================================
+FAIL: test_handoff_specific_decay (test_memory_decay.DecayTests.test_handoff_specific_decay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_memory_decay.py", line 15, in test_handoff_specific_decay
+    self.assertLess(at('readout3','M_D'),.05)
+AssertionError: np.float64(0.9999999999999996) not less than 0.05
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.076s
+
+FAILED (failures=1, errors=2)

@@ -1,0 +1,7 @@
+test_free_state_recovery_and_decaying_control (test_attractor_dynamics.AttractorTests.test_free_state_recovery_and_decaying_control) ... ok
+test_zero_input_stability (test_attractor_dynamics.AttractorTests.test_zero_input_stability) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.248s
+
+OK

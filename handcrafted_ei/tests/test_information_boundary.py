@@ -35,8 +35,9 @@ class BoundaryTests(unittest.TestCase):
         result = run_trial(m, ShieldedInput(encode(0, 1, 2)))
         self.assertEqual(result.outputs, (0, 1, 3, 4))
         m = EINetwork()
+        before=m.rates.copy()
         m.apply_input(**encode(0, 1, 1))
-        self.assertEqual(float(m.rates.sum()), 5.)  # tonic gates only, input cannot write rates
+        np.testing.assert_array_equal(before,m.rates)  # input cannot write rates
         m.integrate(200)
         before = m.rates.copy()
         m.readout()

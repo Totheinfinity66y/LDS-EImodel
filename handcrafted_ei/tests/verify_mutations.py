@@ -15,8 +15,10 @@ def main():
     variants=[
         ('Dale sign error','test_dale_constraints.DaleTests.test_all_four_synapse_types','sign'),
         ('no internal memory','test_memory_delay.MemoryTests.test_pulse_removed_memory_at_both_delays',{'w_rec':0}),
-        ('no I-to-I release','test_disinhibition.GateTests.test_default_closed_and_release_chain',{'w_release':0}),
-        ('early routing','test_disinhibition.GateTests.test_default_closed_and_release_chain',{'theta_release':0}),
+        ('no direct excitation','test_direct_activation.DirectTests.test_excitatory_gate_and_unselected_silence',{'w_activation':0}),
+        ('no feedback decay','test_memory_decay.DecayTests.test_handoff_specific_decay',{'w_response_decay':0}),
+        ('early routing','test_readout_order.OrderTests.test_four_distinct_readouts_before_transitions',{'theta_activation':0}),
+        ('no tonic inhibition','test_tonic_inhibition.TonicTests.test_real_inhibitory_background_and_necessary_silence',{'w_tonic_response':0}),
         ('broken branch inheritance','test_pathway_inheritance.InheritanceTests.test_memory_output_cuts_preserve_downstream_responses','inheritance'),
     ]
     for name,test,variant in variants:

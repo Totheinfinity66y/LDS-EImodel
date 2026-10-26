@@ -1,0 +1,32 @@
+{
+  "one_hot__baseline": {
+    "sequences_correct": 24,
+    "n": 24,
+    "stage_accuracy": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "ring__baseline": {
+    "sequences_correct": 24,
+    "n": 24,
+    "stage_accuracy": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "topology__baseline": {
+    "sequences_correct": 24,
+    "n": 24,
+    "stage_accuracy": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  }
+}

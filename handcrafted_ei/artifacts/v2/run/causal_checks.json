@@ -1,0 +1,41 @@
+{
+  "one_hot": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true,
+    "gate_D": true,
+    "gate_S": true,
+    "early_D": true,
+    "early_S": true,
+    "baseline_memory_decay": true,
+    "feedback_block_preserves_memory": true,
+    "delayed_handoff_correct": true
+  },
+  "ring": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true,
+    "gate_D": true,
+    "gate_S": true,
+    "early_D": true,
+    "early_S": true,
+    "baseline_memory_decay": true,
+    "feedback_block_preserves_memory": true,
+    "delayed_handoff_correct": true
+  },
+  "topology": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true,
+    "gate_D": true,
+    "gate_S": true,
+    "early_D": true,
+    "early_S": true,
+    "baseline_memory_decay": true,
+    "feedback_block_preserves_memory": true,
+    "delayed_handoff_correct": true
+  }
+}

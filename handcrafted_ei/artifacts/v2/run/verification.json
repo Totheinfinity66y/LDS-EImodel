@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "experiments": 198,
+  "trials_recomputed": 4752,
+  "checks": [
+    "archive SHA256/CRC",
+    "schema-specific input regeneration",
+    "all rates per step/bounds",
+    "timestamp spacing",
+    "four Y decisions from saved trajectories",
+    "readout ordering",
+    "Y equals recorded rate subset",
+    "memory metrics reconstructed for schema 2",
+    "independent truth and summary reconstruction"
+  ]
+}

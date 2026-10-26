@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "baseline_trials_recomputed": 72,
+  "snapshots_checked": 72,
+  "perturbations_recomputed": 864,
+  "max_euler_update_error": 1.1102230246251565e-16,
+  "all_trajectory_steps_checked": true,
+  "executed_model_source_unchanged": true,
+  "post_experiment_file_changes": {
+    "handcrafted_ei\\evaluate.py": "43b1e30fb46a7391d72b4f6677de85cd19b507cbc9d8e82e5081dca61218d605",
+    "handcrafted_ei\\evaluation\\attractors.py": "73021ade239863c1352c7c548e0aa143316260fe1c11f16eb0d1cd831d88dfda",
+    "architecture.md": "a5580109722efec97e770c851fba32ebe1cfe0e11c3d8e40a8c5af97f14c54cc",
+    "todo.md": "cec61b9dfea8db1adbd4c68bed0f8a6f8b43e17e2a267b16a76e517a77b2dccc",
+    "README.md": "9587cab735247b757a83ff3cb9ba8b83869b93179cd95b5191ee9938555db94e"
+  },
+  "checks": [
+    "full representation from archived baselines",
+    "snapshot identity",
+    "autonomous and forced local spectrum",
+    "regenerated perturbations and random starts",
+    "all free/forced/perturbed/initial-state Euler steps",
+    "recovery classification"
+  ]
+}
