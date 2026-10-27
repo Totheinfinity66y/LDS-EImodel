@@ -126,3 +126,15 @@
 | T9 root consistency | T6 | 共享1–7及10 → 独立SVD/角度/RSA核对 | 历史CSV数值断言、明确非dPCA/jPCA精确复现 | 无源统计重复，不扩张结论 |
 | T10 fresh F | T8–9 | 全部证据 → INDEPENDENT_REVIEW | 独立公式、来源包strict及实际视觉核验 | 等最终锁定文件 |
 | T11 root archive | T10 | 全配置/源码/环境/图/报告 → final及提交提案 | 完整manifest、保护源码未改、70项回归 | 仅用户确认后才有commit；不推送 |
+
+## T12 — 本项目论文式流线相图
+
+- [x] LDS方法适配与论文式图形组织已通过来源专家和fresh独立验收；74项回归通过。证据：`audit/phase_portrait/STATUS.md`、两份最终审稿与新归档manifest。原训练实验不在本项目执行，不以此完成项冒称原论文精确复现。
+
+- Owner：root实现；Inagaki来源专家负责目标截图方法核验与反审；fresh phase_reviewer独立验收。
+- Dependencies：经hash验证的三编码24状态归档、受保护模型源码、源图Figure2契约。
+- Input：两个由实际活动选择的R3端点、真实clock配置、tonic；不得按目标标签注入状态。
+- Output：`artifacts/phase_portraits_v2`三编码三列streamline主图、离面诊断、完整NPZ/CSV/配置/manifest。
+- Tests：test_phase_portrait；全回归；独立全部grid/full132路径与dual复算；36/71共点、dt2.5/5验证；实际开图。
+- Acceptance：真正streamplot与真实full-state红轨迹；lambda非PCA；非法状态mask；三条件不同origin明确；noninvariant数字主图披露；不改变模型或训练；来源专家和fresh审稿实际通过。
+- Blocking issues：原文训练阶段不能映射为本项目训练；使用真实保持/clock/退役条件。当前阶段结果与裁决见新归档README和audit/phase_portrait，未以原论文外观替代科学证据。

@@ -28,3 +28,9 @@ artifacts/paper2agent_reproduction/reproduced_papers/**/*-paper/
 artifacts/paper2agent_reproduction/reproduced_papers/**/*-paper*/
 artifacts/paper2agent_reproduction/lds_results/*/basin_*.npz
 artifacts/paper2agent_reproduction/figures/source_comparisons/
+# Phase-portrait source publication and exact reference image: internal only.
+audit/phase_portrait/source/*.pdf
+audit/phase_portrait/source/*.webp
+audit/phase_portrait/source/*.png
+audit/phase_portrait/source/*.html
+audit/phase_portrait/source/*_text.txt

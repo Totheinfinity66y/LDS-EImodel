@@ -1,0 +1,119 @@
+{
+  "one_hot": {
+    "basis_condition_number": 1.0,
+    "dual_error": 5.551115123125783e-17,
+    "conditions": {
+      "autonomous": {
+        "all_grid_valid": true,
+        "full_field_error": 2.2420775429197073e-44,
+        "coordinate_velocity_error": 8.673617379884035e-19,
+        "offplane_median": 0.3726818895649211,
+        "offplane_norm_error": 8.673617379884035e-19,
+        "fullpath_Euler_error": 5.551115123125783e-17,
+        "trajectory_projection_error": 2.220446049250313e-16,
+        "trajectory_offplane_max": 0.20612471737179974,
+        "background_fullfield_residual": 0.0
+      },
+      "clock_held": {
+        "all_grid_valid": true,
+        "full_field_error": 2.2420775429197073e-44,
+        "coordinate_velocity_error": 8.673617379884035e-19,
+        "offplane_median": 0.3726818895649211,
+        "offplane_norm_error": 8.673617379884035e-19,
+        "fullpath_Euler_error": 5.551115123125783e-17,
+        "trajectory_projection_error": 2.220446049250313e-16,
+        "trajectory_offplane_max": 0.20612471737179974,
+        "background_fullfield_residual": 1.1102230246251566e-17
+      },
+      "retired": {
+        "all_grid_valid": true,
+        "full_field_error": 2.2420775429197073e-44,
+        "coordinate_velocity_error": 1.734723475976807e-18,
+        "offplane_median": 0.5534352287045571,
+        "offplane_norm_error": 3.469446951953614e-18,
+        "fullpath_Euler_error": 5.551115123125783e-17,
+        "trajectory_projection_error": 1.1102230246251565e-16,
+        "trajectory_offplane_max": 0.4362369008002828,
+        "background_fullfield_residual": 1.1102230246251566e-17
+      }
+    }
+  },
+  "ring": {
+    "basis_condition_number": 1.0,
+    "dual_error": 5.551115123125783e-17,
+    "conditions": {
+      "autonomous": {
+        "all_grid_valid": true,
+        "full_field_error": 2.2420775429197073e-44,
+        "coordinate_velocity_error": 8.673617379884035e-19,
+        "offplane_median": 0.3726818895649211,
+        "offplane_norm_error": 8.673617379884035e-19,
+        "fullpath_Euler_error": 5.551115123125783e-17,
+        "trajectory_projection_error": 2.220446049250313e-16,
+        "trajectory_offplane_max": 0.20612471737179974,
+        "background_fullfield_residual": 0.0
+      },
+      "clock_held": {
+        "all_grid_valid": true,
+        "full_field_error": 2.2420775429197073e-44,
+        "coordinate_velocity_error": 8.673617379884035e-19,
+        "offplane_median": 0.3726818895649211,
+        "offplane_norm_error": 8.673617379884035e-19,
+        "fullpath_Euler_error": 5.551115123125783e-17,
+        "trajectory_projection_error": 2.220446049250313e-16,
+        "trajectory_offplane_max": 0.20612471737179974,
+        "background_fullfield_residual": 1.1102230246251566e-17
+      },
+      "retired": {
+        "all_grid_valid": true,
+        "full_field_error": 2.2420775429197073e-44,
+        "coordinate_velocity_error": 1.734723475976807e-18,
+        "offplane_median": 0.5534352287045571,
+        "offplane_norm_error": 3.469446951953614e-18,
+        "fullpath_Euler_error": 5.551115123125783e-17,
+        "trajectory_projection_error": 1.1102230246251565e-16,
+        "trajectory_offplane_max": 0.4362369008002828,
+        "background_fullfield_residual": 1.1102230246251566e-17
+      }
+    }
+  },
+  "topology": {
+    "basis_condition_number": 1.0,
+    "dual_error": 5.551115123125783e-17,
+    "conditions": {
+      "autonomous": {
+        "all_grid_valid": true,
+        "full_field_error": 2.2420775429197073e-44,
+        "coordinate_velocity_error": 8.673617379884035e-19,
+        "offplane_median": 0.3726818895649211,
+        "offplane_norm_error": 8.673617379884035e-19,
+        "fullpath_Euler_error": 5.551115123125783e-17,
+        "trajectory_projection_error": 2.220446049250313e-16,
+        "trajectory_offplane_max": 0.20612471737179974,
+        "background_fullfield_residual": 0.0
+      },
+      "clock_held": {
+        "all_grid_valid": true,
+        "full_field_error": 2.2420775429197073e-44,
+        "coordinate_velocity_error": 8.673617379884035e-19,
+        "offplane_median": 0.3726818895649211,
+        "offplane_norm_error": 8.673617379884035e-19,
+        "fullpath_Euler_error": 5.551115123125783e-17,
+        "trajectory_projection_error": 2.220446049250313e-16,
+        "trajectory_offplane_max": 0.20612471737179974,
+        "background_fullfield_residual": 1.1102230246251566e-17
+      },
+      "retired": {
+        "all_grid_valid": true,
+        "full_field_error": 2.2420775429197073e-44,
+        "coordinate_velocity_error": 1.734723475976807e-18,
+        "offplane_median": 0.5534352287045571,
+        "offplane_norm_error": 3.469446951953614e-18,
+        "fullpath_Euler_error": 5.551115123125783e-17,
+        "trajectory_projection_error": 1.1102230246251565e-16,
+        "trajectory_offplane_max": 0.4362369008002828,
+        "background_fullfield_residual": 1.1102230246251566e-17
+      }
+    }
+  }
+}

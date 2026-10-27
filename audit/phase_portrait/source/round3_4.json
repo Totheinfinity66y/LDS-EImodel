@@ -1,0 +1,29 @@
+{
+  "round": "3+4",
+  "agent_id": "/root/inagaki",
+  "scope": "Saighi & Rozenberg2025 Figure2 targeted-source adaptation",
+  "actual_files_read": [
+    "handcrafted_ei/evaluation/phase_portrait.py",
+    "handcrafted_ei/visualization/phase_portrait.py",
+    "handcrafted_ei/tests/test_phase_portrait.py",
+    "three mode phase_portrait.png and projection_diagnostics.png",
+    "phase_portrait.npz/provenance.json/config.json"
+  ],
+  "status": "NUMERICAL_PASS; REVISE_DISPLAY_DISCLOSURE",
+  "source_fidelity": "METHOD_ADAPTED; original u membrane state vsLDS r rate; fixed clocks replace pre/post training; source exact not executed",
+  "numerical": "independent_plane_check.py/json recalculates all3 conditions x3encodings xall5041gridpoints and all12x401 fullstate paths",
+  "findings": [
+    "rank2 basis condition1; pinv vsproduction dual error5.55e-17",
+    "all actual gridpoints in[0,1] with no state clipping",
+    "fullfield error2.24e-44; coordinate drift error<=1.74e-18",
+    "fullEuler increments error5.55e-17, projection closure errors<=2.22e-16",
+    "background residual0 or1.11e-17",
+    "offplane field median.37268189/.37268189/.55343523; maxtrajectory departure.20612472/.20612472/.43623690"
+  ],
+  "required_visual_fixes": [
+    "diagnostic colorbar ylabel cropped: shorten and separate zero-fieldNA note",
+    "main figure disclose noninvariance with actual ratios/departure; cannot rely only supplement"
+  ],
+  "marker_scope": "filled anchors denote stationary fullfield only, not certified attracting; redpath terminal dots distinct concept",
+  "classification": "A/B/C no blocking error; D explicit adapted conditions; E fix label/disclosure; F noninvariant actual network; G sourceprojection algorithm unspecified"
+}

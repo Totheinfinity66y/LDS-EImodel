@@ -130,3 +130,11 @@ visualization/plot_all统一调度数学分析与Figure1–10、多格式导出�
 `reference_reproduction.py`编排独立副本与全率归档。一次性state kick与有限输入脉冲分开；source-time assay重放正常时序，R3 assay固定实际clock。两者均有完整control/perturbed、实际外电流与共享零noise。源π通道、训练网络/动物重复缺失均标不兼容；不把阶段切换后重合解释为自主恢复。
 
 `visualization/reference_figures.py`按审计数据绘图；`reference_comparison.py`生成仅本地的原图/明确synthetic方法检验/真实LDS三列对照，不能以synthetic替代缺失原数据。`reference_consistency.py`复算1–7正确共享方法并更新10，不实现第二套dPCA。全流程入口 `visualization.plot_all --reference-grounded`，产物独立保存 `artifacts/paper2agent_reproduction`。G0–G5分层验收，最终图交回同论文专家反审，并由fresh reviewer核验来源/数据/数值/解释。exact源实验阻塞与METHOD ADAPTED通过分别记录。
+
+## 11. Affine State-Plane Stream Portraits
+
+`evaluation/phase_portrait.py`与`visualization/phase_portrait.py`提供独立的论文式相图工作流，入口 `visualization.plot_all --phase-portraits`，产物 `artifacts/phase_portraits_v2`。参考Saighi/Rozenberg2025 Figure2的状态模式张成平面，不使用局部PC quiver代替streamlines。原膜电位u与本率r分开解释，不引入训练。
+
+两实际R3终点由活动选择，构成共同B；各clock条件从内容无关初态积分得到平衡背景b_c。r=b_c+B lambda，速度由dual=(BᵀB)⁻¹Bᵀ乘完整f(r)，非法状态mask不clip。三列分别clock全关、实际R3快照clock固定、再启用原configured retire3；无sample，保留tonic，权重/参数与正常trial均不变。
+
+蓝流线是affine切片投影场的二维积分，红轨迹是完整132状态积分后投影；不能混同。完整离面field比例和真实轨迹离面距离保存并印在主图，平面不闭合不能以蓝线估计全状态吸引域。参考点满/空仅区分完整field的stationarity与非stationary坐标参考，不由二维图认证稳定性。36/71网格和Euler步长refinement用于独立数值核验，正式数据仍dt5ms。源方法专家反审及fresh独立review后交付，不改变handcrafted结构以模仿参考图吸引子数量。

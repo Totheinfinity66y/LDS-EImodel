@@ -1,5 +1,7 @@
 # LDS-EImodel：Handcrafted E/I Decompression v2
 
+**论文式流线相图（三编码）：[直接查看](artifacts/phase_portraits_v2/README.md)。** 三列保持/固定R3时钟/退役，蓝色streamlines＋红色完整132维积分轨迹；入口 `python -m handcrafted_ei.visualization.plot_all --phase-portraits`。图中已直接披露非闭合平面的误差，详细方法与独立评审见入口文档。
+
 固定连接、不训练的 E/I rate network，将已给定的 L/D/S primitive 解压缩为四次独立空间读出。主模型采用**直接兴奋性通路选择、真实背景抑制和 Response 驱动的规则记忆终止**。
 
 [完整架构](architecture.md) · [开发规则](AGENTS.md) · [P0–P7验收](todo.md) · [实验契约](docs/v2_protocol.md)

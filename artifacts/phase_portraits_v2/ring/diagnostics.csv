@@ -1,0 +1,4 @@
+encoding,condition,valid_grid_fraction,background_residual_max_per_ms,field_offplane_fraction_median,field_offplane_fraction_max,trajectory_offplane_distance_max,trajectory_step_max_error,grid_size,full_state_dimension
+ring,autonomous,1.0,0.0,0.3726818895649211,0.995450158499642,0.20612471737179974,0.0,71,132
+ring,clock_held,1.0,1.1102230246251566e-17,0.3726818895649211,0.995450158499642,0.20612471737179974,0.0,71,132
+ring,retired,1.0,1.1102230246251566e-17,0.5534352287045571,0.745355992355196,0.4362369008002828,0.0,71,132

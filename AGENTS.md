@@ -242,3 +242,4 @@ trial 输入 `(L,D,S)` 与 evaluator 的 target **写在独立日志文件中**�
 - Scientific Fidelity Gates：G0能力实测；G1来源/代码覆盖与缺口；G2数据兼容；G3数值正确；G4同一论文专家实际图反向审阅；G5未参与实现的独立验收。不能将source exact BLOCKED与LDS adaptation PASS合并成“复现成功”。
 - 共同向量场检验须完整24个R3条件、sample/clock/tonic显式固定、完整残差/连续与Euler谱/身份、clip折点证据。局部稳定、有限方向恢复、全局盆和dynamic attractor为不同结论。
 - 源方法审计入口 `python -m handcrafted_ei.visualization.plot_all --reference-grounded`，产物 `artifacts/paper2agent_reproduction`。历史入口与图保留，不冒充已通过新gate。大型完整basin NPZ/受版权限制原图及文献包本地留存，由manifest索引。
+- 论文式affine相图入口 `visualization.plot_all --phase-portraits`，独立归档 `artifacts/phase_portraits_v2`。明确展开系数与PC不同；非法全状态mask而不clip；蓝slice-streamlines与红完整轨迹分开；主图披露场与轨迹离面量，不能把不闭合切片当完整吸引域或为了图形好看隐藏共同活动平衡。

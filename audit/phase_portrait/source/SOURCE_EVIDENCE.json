@@ -1,0 +1,16 @@
+{
+  "doi": "10.3389/fncom.2025.1655701",
+  "title": "Autonomous retrieval for continuous learning in associative memory networks",
+  "figure": 2,
+  "pdf_page": 5,
+  "verification": "user screenshot and publication webp actual visual match; targeted methods/caption read",
+  "projection_algorithm": "not specified in inspected original caption; LDS dual is derived adaptation",
+  "source_url": "https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2025.1655701/full",
+  "files": {
+    "frontiers2025.html": "9619822b83fbd717ac7b31bcf76a8f0dc09b2cda697b97febba6243e05fcb166",
+    "frontiers2025.pdf": "9bbba23a5c8fc7e4f7c6b27af3cbe8a9b1d8d69d96a617dab416cf8740417b0a",
+    "frontiers2025_figure2.webp": "41048f4f8e6b18b0fde76f585a3a4285a7763bb32a734e9002cdb1731d612bd7",
+    "frontiers2025_text.txt": "db1f45f0901060d56f4c6018211ea425b3061d918db250e65b511cecbe36eee5",
+    "figure2_source_page.png": "aa61b6d31ea200dbf97385b625ad6bfcb84757195cdd1553af43c2cd9c46dc29"
+  }
+}

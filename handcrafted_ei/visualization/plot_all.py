@@ -30,7 +30,17 @@ def main(argv=None):
     p.add_argument('--encoding',choices=(*MODES,'all'),default='all')
     p.add_argument('--force',action='store_true',help='Re-export unchanged figures; source/data cache is otherwise reused')
     p.add_argument('--reference-grounded',action='store_true',help='Run audited source-adapted 8/9, reuse audited 1-7, and rebuild 10 in a fresh archive')
+    p.add_argument('--phase-portraits',action='store_true',help='Three-condition affine flow portraits with full-state trajectories, in a separate archive')
     args=p.parse_args(argv); requested={int(x) for x in args.figures.split(',')}; formats=args.formats.split(',')
+    if args.phase_portraits:
+        if args.reference_grounded:p.error('choose one workflow: --phase-portraits or --reference-grounded')
+        if args.formats!='png,svg,pdf':p.error('phase portraits export png,svg,pdf together')
+        from ..evaluation.phase_portrait import main as phase_main,DEFAULT as phase_default
+        destination=phase_default if args.output==DEFAULT_OUTPUT else args.output
+        if destination.resolve() in {DEFAULT_OUTPUT.resolve(),(ROOT/'artifacts/paper2agent_reproduction').resolve()}:
+            p.error('phase portraits require a separate output archive')
+        phase_main(['--input',str(args.input),'--output',str(destination),'--encoding',args.encoding])
+        return
     if args.reference_grounded:
         from ..evaluation.reference_reproduction import main as reproduce, DEFAULT as audit_default
         from ..evaluation.reference_consistency import run as consistency

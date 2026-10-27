@@ -1,0 +1,113 @@
+{
+  "file_checks": "PASS",
+  "figures": [
+    {
+      "id": "one_hot_phase_portrait",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3341,
+        1548
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "one_hot_projection_diagnostics",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3626,
+        1834
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "ring_phase_portrait",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3341,
+        1548
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "ring_projection_diagnostics",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3626,
+        1834
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "topology_phase_portrait",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3341,
+        1548
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "topology_projection_diagnostics",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3626,
+        1834
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    }
+  ],
+  "contact_sheets": [
+    "D:\\Library\\10-16-handcrafted\\artifacts\\phase_portraits_v2\\manifests\\contact_one_hot_1.jpg",
+    "D:\\Library\\10-16-handcrafted\\artifacts\\phase_portraits_v2\\manifests\\contact_ring_1.jpg",
+    "D:\\Library\\10-16-handcrafted\\artifacts\\phase_portraits_v2\\manifests\\contact_topology_1.jpg"
+  ],
+  "visual_review": "Separate visual review required; file integrity alone is not layout acceptance"
+}

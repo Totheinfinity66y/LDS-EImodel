@@ -1,0 +1,63 @@
+{
+  "encoding": "ring",
+  "raw_archive_sha256": "cbd1b6d070d3162d072edf6350fc796b124b5f034278f61b3d72db884f2d348c",
+  "reference_endpoints_sha256": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+  "reference_endpoints_file": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\ring\\fixed_points.npz",
+  "protected_source_identity": {
+    "handcrafted_ei/model/connectivity.py": {
+      "archived": "648f5f4248c9a0d543846026850aa2f314e528764f61ca5faaab5e494b3ca795",
+      "current": "648f5f4248c9a0d543846026850aa2f314e528764f61ca5faaab5e494b3ca795",
+      "matches": true
+    },
+    "handcrafted_ei/model/ei_network.py": {
+      "archived": "c04644e0bee730d5cbfd87d9b4d10a213b2d753071f193b1969822b7f1d42ce0",
+      "current": "c04644e0bee730d5cbfd87d9b4d10a213b2d753071f193b1969822b7f1d42ce0",
+      "matches": true
+    },
+    "handcrafted_ei/model/location_encoding.py": {
+      "archived": "ba432e9bbdbc908c1ebe7b85d1f18bf132fb4ad78a3f463697573f948b6d95c1",
+      "current": "ba432e9bbdbc908c1ebe7b85d1f18bf132fb4ad78a3f463697573f948b6d95c1",
+      "matches": true
+    },
+    "handcrafted_ei/model/neuron.py": {
+      "archived": "3df2ba64dc92bfe2db41a3081a829c077f945856686e68101558bf86d27b5c54",
+      "current": "3df2ba64dc92bfe2db41a3081a829c077f945856686e68101558bf86d27b5c54",
+      "matches": true
+    },
+    "handcrafted_ei/model/__init__.py": {
+      "archived": "958eafc191acdc42276e1a83d9d407a1bf6f6b2546674bfb19aa40addd930cf4",
+      "current": "958eafc191acdc42276e1a83d9d407a1bf6f6b2546674bfb19aa40addd930cf4",
+      "matches": true
+    },
+    "handcrafted_ei/simulation/__init__.py": {
+      "archived": "d11e4fd0eed0197410f939c2a0f0fe7f7e919a37be4dfb2343d764de964c3778",
+      "current": "d11e4fd0eed0197410f939c2a0f0fe7f7e919a37be4dfb2343d764de964c3778",
+      "matches": true
+    },
+    "handcrafted_ei/task/__init__.py": {
+      "archived": "755998fae22efd7f06b9ce6c44772fff3452b7a7019341eb603f0237b493020b",
+      "current": "755998fae22efd7f06b9ce6c44772fff3452b7a7019341eb603f0237b493020b",
+      "matches": true
+    },
+    "handcrafted_ei/config/baseline.yaml": {
+      "archived": "c442d2707a569e5300c8da9a136ab2c660489a077691d5f10ce5e694fa103356",
+      "current": "c442d2707a569e5300c8da9a136ab2c660489a077691d5f10ce5e694fa103356",
+      "matches": true
+    }
+  },
+  "model_parameters_changed": false,
+  "training": false,
+  "coordinate_definition": "r = background(condition) + B lambda; B from two activity-selected actual R3 endpoints minus tonic-only rest",
+  "projection": "dual=(B.T B)^(-1) B.T; field evaluated in full132 then projected",
+  "conditions": "all fixed sample-off fields; different integrated content-free origins; original tonic and weights retained",
+  "invalid_grid": "masked, never clipped",
+  "blue": "streamlines of projected affine slice; not full132 solution",
+  "red": "projections of real full132 Euler paths; offplane displacement saved",
+  "seeds": [
+    7,
+    11,
+    19
+  ],
+  "seed_definition": "9 fixed coefficient-grid seeds (.1,.5,.95)^2 plus three N(0,.02^2 I) coefficient offsets about (.9,.9), clipped in coefficient coordinates only; not process noise",
+  "source_figure": "Saighi & Rozenberg 2025 Frontiers Figure2, DOI10.3389/fncom.2025.1655701; source u states, LDS r rates; METHOD ADAPTED"
+}
