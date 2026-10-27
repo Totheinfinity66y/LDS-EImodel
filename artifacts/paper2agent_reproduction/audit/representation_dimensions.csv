@@ -1,0 +1,13 @@
+encoding,branch,whole_rank,effective_dimension,response_distance_range,response_distance_mean,response_ring_correlation,population
+one_hot,0,5,4.99999944959669,0.0,1.4141919980652586,undefined: equal offdiagonal distances,whole132 for SVD; current R3 for distance
+one_hot,1,5,4.999999449596706,0.0,1.4141919980652586,undefined: equal offdiagonal distances,whole132 for SVD; current R3 for distance
+one_hot,2,5,4.999999449596689,0.0,1.4141919980652586,undefined: equal offdiagonal distances,whole132 for SVD; current R3 for distance
+one_hot,3,5,4.999999449596707,0.0,1.4141919980652586,undefined: equal offdiagonal distances,whole132 for SVD; current R3 for distance
+ring,0,5,4.99999944959669,0.0,1.4141919980652586,undefined: equal offdiagonal distances,whole132 for SVD; current R3 for distance
+ring,1,5,4.999999449596706,0.0,1.4141919980652586,undefined: equal offdiagonal distances,whole132 for SVD; current R3 for distance
+ring,2,5,4.999999449596689,0.0,1.4141919980652586,undefined: equal offdiagonal distances,whole132 for SVD; current R3 for distance
+ring,3,5,4.999999449596707,0.0,1.4141919980652586,undefined: equal offdiagonal distances,whole132 for SVD; current R3 for distance
+topology,0,5,4.99999944959669,0.0,1.4141919980652586,undefined: equal offdiagonal distances,whole132 for SVD; current R3 for distance
+topology,1,5,4.999999449596706,0.0,1.4141919980652586,undefined: equal offdiagonal distances,whole132 for SVD; current R3 for distance
+topology,2,5,4.999999449596689,0.0,1.4141919980652586,undefined: equal offdiagonal distances,whole132 for SVD; current R3 for distance
+topology,3,5,4.999999449596707,0.0,1.4141919980652586,undefined: equal offdiagonal distances,whole132 for SVD; current R3 for distance

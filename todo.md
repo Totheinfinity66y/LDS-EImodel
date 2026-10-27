@@ -107,3 +107,22 @@
 - [x] V7 归档与质量：55组/165图文件、60测试通过；figure_manifest.json、manifests/figure_quality.json及visual_review.md。
 
 证据统一保存于artifacts/neural_representation_v2；正式完成后依据实际产物勾选，不以脚本未报错代替视觉验收。模型机制和历史artifacts/v1、v2保持不变。提交提案与推送分别遵循AGENTS。
+
+## T — Reference-Grounded Reproduction & Visualization Audit
+
+状态证据：`audit/REPRODUCTION_STATUS.md`；本表在独立评审结束前不提前勾选。source exact与LDS adaptation分别验收。
+
+| 阶段/Owner | 依赖 | Input → Output | Tests/Acceptance | Blocking issues |
+| --- | --- | --- | --- | --- |
+| T0 root capability | 无 | 本地SKILL及组件 → PAPER2AGENT_CAPABILITIES | 实际命令、环境、支持/限制核验 | 无；Skill非自动审图服务 |
+| T1 A Inagaki | T0 | PDF/作者MATLAB → 阅读包、契约、Methods代码 | require-reviewed+strict+独立核验；源码范围明确 | exact作者执行缺MATLAB/Octave与辅助函数 |
+| T2 B Zhou | T0 | PDF/作者Python → 阅读包、契约、输入执行 | require-reviewed+strict；真实task入口执行 | exact Figure7缺权重/raw/扰动绘图源码 |
+| T3 C data | 无 | 本地三编码ZIP/NPZ → schema/defects | 3×24×662全状态步、archive及protected hash | 无 |
+| T4 root+A/B contracts | T1–3 | 原方法+schema → source-to-LDS判定 | 第二轮四状态逐项判定，无伪重复 | 原实验统计INCOMPATIBLE |
+| T5 C+A/B adapter | T4 | lossless adapter → interface/tests/reviews | 第三轮实际代码审阅及负例测试 | 无 |
+| T6 root+D numerical | T5 | 24R3快照 → field/J/Euler/盆/输入实验 | 合成5轨迹、能量闭合、独立数值脚本、折点证明 | 全局吸引域未测，不列为已证 |
+| T7 root visual | T6 | metrics/spec → 三编码8/9/新10及三列对照 | 300dpi PNG+SVG/PDF、hash和实际打开 | 原图内部使用，synthetic中列不冒充源结果 |
+| T8 A/B reverse review | T7 | 实际图+NPZ+CSV+代码+图注 → 六维审稿 | 第四轮及修后复审均PASS_WITH_LIMITS，见两FINAL_FIDELITY_REVIEW | exact源实验仍受资料/运行时限制 |
+| T9 root consistency | T6 | 共享1–7及10 → 独立SVD/角度/RSA核对 | 历史CSV数值断言、明确非dPCA/jPCA精确复现 | 无源统计重复，不扩张结论 |
+| T10 fresh F | T8–9 | 全部证据 → INDEPENDENT_REVIEW | 独立公式、来源包strict及实际视觉核验 | 等最终锁定文件 |
+| T11 root archive | T10 | 全配置/源码/环境/图/报告 → final及提交提案 | 完整manifest、保护源码未改、70项回归 | 仅用户确认后才有commit；不推送 |

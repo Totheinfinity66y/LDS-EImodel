@@ -1,0 +1,10 @@
+test_axes_preserve_actual_conditions_without_repetitions (handcrafted_ei.tests.test_reference_adapter.ReferenceAdapterTests.test_axes_preserve_actual_conditions_without_repetitions) ... ok
+test_encoding_metadata_and_conditions_must_be_consistent (handcrafted_ei.tests.test_reference_adapter.ReferenceAdapterTests.test_encoding_metadata_and_conditions_must_be_consistent) ... ok
+test_missing_event_sample_and_state_axis_are_rejected (handcrafted_ei.tests.test_reference_adapter.ReferenceAdapterTests.test_missing_event_sample_and_state_axis_are_rejected) ... ok
+test_reconstructed_currents_reproduce_every_step (handcrafted_ei.tests.test_reference_adapter.ReferenceAdapterTests.test_reconstructed_currents_reproduce_every_step) ... ok
+test_snapshots_use_all_24_recorded_states (handcrafted_ei.tests.test_reference_adapter.ReferenceAdapterTests.test_snapshots_use_all_24_recorded_states) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.875s
+
+OK

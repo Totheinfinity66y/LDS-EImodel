@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "counts": {
+    "new_results": 114,
+    "new_sources": 68,
+    "protected_sources": 8,
+    "historical_figures": 55,
+    "historical_figure_files": 165
+  },
+  "failures": [],
+  "manifest_sha256": {
+    "artifacts\\paper2agent_reproduction\\manifests\\result_hashes.json": "e453f5aa48361ff407434e9c5a79fe55fe91b410fd03cb08d72f98ec062f2fbe",
+    "artifacts\\paper2agent_reproduction\\manifests\\source_hashes.json": "79e3a63b8f64bf52b5f9acd6d88e6235032044d591b18b4e6213d9e63bb2e005"
+  }
+}

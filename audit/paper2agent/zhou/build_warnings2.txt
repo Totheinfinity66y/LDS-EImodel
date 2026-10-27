@@ -1,0 +1,1 @@
+Error: [WinError 5] Access is denied: 'D:\\Library\\10-16-handcrafted\\audit\\paper2agent\\zhou\\paper-review\\renders\\d8a0ea5c6b6f482d9baf60d88cd33c52\\.pdf-skill-build-j_upfsd9\\package' -> 'D:\\Library\\10-16-handcrafted\\audit\\paper2agent\\zhou\\paper-review\\renders\\d8a0ea5c6b6f482d9baf60d88cd33c52\\s001-zhou2023'

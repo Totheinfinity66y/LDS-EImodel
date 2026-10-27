@@ -1,0 +1,26 @@
+{
+  "status": "PARTIAL: author task generator executed; Figure7 unavailable",
+  "source_task_sha256": "496225e0ec41f61d1ac1529435fbd9d3bbfb8d975e7c9c02fef36795ad606491",
+  "source_train_sha256": "93f64e2f21023bb5ebba4a19be7e425328945e8cc0e1a6855dc3f804648a9885",
+  "executed_author_function": "task.generate_trials(ITdDNMS, defaults, test, noise_on=False)",
+  "x_shape": [
+    450,
+    100,
+    33
+  ],
+  "y_shape": [
+    450,
+    100,
+    2
+  ],
+  "no_recurrent_activity_generated": true,
+  "synthetic_formula_checks": [
+    "identical",
+    "time shifted",
+    "parallel offset",
+    "same endpoint convergence",
+    "different fixed endpoints"
+  ],
+  "synthetic_is_original_data": false,
+  "numpy": "2.3.5"
+}

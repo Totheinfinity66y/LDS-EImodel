@@ -1,0 +1,59 @@
+{
+  "paper_id": "zhou2023",
+  "figure_id": "7",
+  "panels": [
+    {
+      "id": "a-left",
+      "data": "10 sample recurrent units, long B cue T+WM",
+      "x": "time s relative cue onset",
+      "y": "rate model units",
+      "style": "control black, perturbed red; perturbation marker",
+      "trial_averaging": "unknown"
+    },
+    {
+      "id": "a-right",
+      "data": "same control/perturbed trajectories",
+      "axes": [
+        "PC1",
+        "PC2",
+        "PC3"
+      ],
+      "style": "black/red plus corresponding time marker spheres",
+      "PCA_fit": "unknown exact author procedure; adaptation must state choice"
+    },
+    {
+      "id": "b",
+      "data": "full recurrent cross-Euclidean distances",
+      "axes": [
+        "control time",
+        "perturbed time"
+      ],
+      "color": "Euclidean rate distance",
+      "interpretation": "diagonal low-distance recovery indicates approximate temporal alignment"
+    },
+    {
+      "id": "c-left",
+      "data": "same-time distance per independently trained network",
+      "x": "time s",
+      "y": "Euclidean distance",
+      "statistics": "mean +/- SEM, n=17 trained networks per task"
+    },
+    {
+      "id": "c-right",
+      "data": "distance at t=1.5s",
+      "groups": [
+        "WM",
+        "T+WM",
+        "ISA"
+      ],
+      "statistics": "median/IQR/1.5IQR whiskers; two-sided rank sum"
+    }
+  ],
+  "excluded_as_source_reproduction": [
+    "PC velocity grid",
+    "tangent/orthogonal local vector field",
+    "state kick substituted for input perturbation",
+    "SEM from repeated deterministic seeds"
+  ],
+  "status": "Original Figure7 and caption visually verified; all18 supplied PDF pages reviewed; strict paper2skill verification reviewed"
+}

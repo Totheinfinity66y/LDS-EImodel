@@ -1,0 +1,22 @@
+{
+  "round": "4.2",
+  "request": "核验三列中列改为synthetic illustration，复查最终报告科学范围并刷新最终hash",
+  "status": "PASS_WITH_LIMITS_LDS_ADAPTATION",
+  "source_exact": "BLOCKED",
+  "actual_image_opened": "artifacts/paper2agent_reproduction/figures/source_comparisons/inagaki_SOURCE_VS_REPRODUCTION_VS_LDS.png",
+  "findings": [
+    "Middle label and manifest correctly state synthetic illustration; separate CD/drift functions tests are the execution evidence",
+    "No source curves/data or source execution fabricated",
+    "Final report Inagaki and attractor17–23 inspected:24 task-seeded local equilibria, not exhaustive system attractor count; tonic field and local/global scope explicit",
+    "Figure8 data and visual verdict from4.1 unchanged"
+  ],
+  "hashes": {
+    "artifacts/paper2agent_reproduction/figures/source_comparisons/inagaki_SOURCE_VS_REPRODUCTION_VS_LDS.png": "ac87ca1b9119c7035f358424bf0985325c7819af8b13aec2a503287a277b2f25",
+    "artifacts/paper2agent_reproduction/figures/source_comparisons/inagaki_SOURCE_VS_REPRODUCTION_VS_LDS.svg": "1f262a55977c81b4afc573d770552306f8649964969b68ca2a29a016ebd29d9b",
+    "artifacts/paper2agent_reproduction/figures/source_comparisons/inagaki_SOURCE_VS_REPRODUCTION_VS_LDS.pdf": "a7176f6dbf94e85948aeb791a1e88c47ed34baca58c6a1d713c9185bf91f3749",
+    "artifacts/paper2agent_reproduction/FIGURE_CAPTIONS.md": "784b9553a15a31e72b79409b31a8bae9afb47382cd282b2f4111c50778d38ea6",
+    "handcrafted_ei/visualization/reference_comparison.py": "0fb2c4531367fa1d7fefa75230c77e6f05fc41876e78d575619e14fa89a82324",
+    "artifacts/paper2agent_reproduction/audit/source_comparison_manifest.json": "4b237f2c343297747bb041079a2b9126cd7bbf761731c1b5afe05e6fc92c7a9c",
+    "artifacts/paper2agent_reproduction/FINAL_REPRODUCTION_REPORT.md": "2b8c42b0dee1b6719bd7576423037cdfb9de01f6b6217e83156ab5f6d06bef5d"
+  }
+}

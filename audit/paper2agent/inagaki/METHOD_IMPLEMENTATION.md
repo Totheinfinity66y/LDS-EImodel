@@ -1,0 +1,11 @@
+# 方法实施与边界
+
+已实际执行Paper2Skill支持入口paper_bundle.py --help、prepare、extract、review-aid、build --require-reviewed和verify --strict。完整30页视觉与提取审阅完成，最终阅读包references/inagaki/inagaki2019-paper严格结果为reviewed_with_limitations，mechanical_ok=true；表单checkbox、密集图形和方程以源图保留，具体逐页说明、精确诊断裁定与来源哈希在paper-review中。
+
+Paper2Skill创建可检索论文阅读能力，不执行作者算法；独立方法咨询与绘图反向审查由同一Codex论文专家执行。Paper2MCP已读取并按CLI/other检查；MATLAB/Octave命令、标准安装目录和指定现有环境精确路径均未发现可用runtime，故作者代码执行与MCP转换仍BLOCKED。未安装依赖，未将Python重建冒充原MATLAB执行。
+
+原作者仓库r_mat与h_mat轴为[PV,trial,time,unit]。模拟dt=1ms、6000ms、tau=100ms、1000trials，rng(shuffle)，PV循环内部独立randn。真实绘图入口为ALM_attractor_figs.m与plot_phase_line.m，仓库未包含shadedErrorBar且smooth依赖未确认。主Fig5/6实验记录不是该模型仓库生成。
+
+可执行Methods reconstruction位于reproduced_papers/inagaki/source_methods.py，提供fit_coding_direction、project_and_normalize、source_phase_line；3个合成数值测试实际通过，不能充当作者数据复现。论文目标Fig5/6与ED1/6/9已核验原图和图注。
+
+LDS三编码真实schema、Adapter和实际结果完成四轮咨询与4.1复审，记录communication/round1.json至round4_1.json。Adapter不制造重复，24条件各一次，whole132无量纲率。最终Fig8为METHOD ADAPTED，与源实验多session统计DATA INCOMPATIBLE；独立fullstate数值检查支持24个task-seeded局部稳定平衡点，不声称穷尽吸引子或得到全局吸引域。最终反向裁决PASS_WITH_LIMITS，精确source执行仍BLOCKED。

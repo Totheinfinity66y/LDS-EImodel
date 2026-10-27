@@ -1,0 +1,15 @@
+[
+  {
+    "path": "artifacts\\paper2agent_reproduction\\references\\inagaki\\Inagaki2019.pdf",
+    "bytes": 15509172,
+    "sha256": "ead9c08588d753cc4fad8023bdebd41fbcb95701cbe975df4ebc9a7ef6bcb326"
+  },
+  {
+    "path": "audit\\paper2agent\\inagaki\\upstream.zip",
+    "bytes": 14939,
+    "sha256": "8c09daf484a6a04e7f533927f77aa8ded33021a4ca764a992bb096f24d093612"
+  },
+  {
+    "matlab_octave_probe": "Get-Command matlab/octave empty; standard Program Files/MATLAB,D:/MATLAB,GNU Octave and analysis/paper2agent-test Library/bin/octave.exe not found; no exhaustive drive search"
+  }
+]

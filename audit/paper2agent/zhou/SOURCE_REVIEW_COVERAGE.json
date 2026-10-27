@@ -1,0 +1,20 @@
+{
+  "1": "Visually checked title, authors, affiliations, abstract, received/accepted dates and actual published-online date. Apparent table is page layout, not data; retained source image and searchable native abstract. Native hidden publication placeholder differs from visible 20 April 2023 and is not used as evidence.",
+  "2": "Visually checked two-column introduction/Results order, dDMS/ISA definitions, 80/20 standard-reverse structure, human ANOVA statistics, WM/T+WM/ISA distinctions; body follows columns.",
+  "3": "Visually checked Figure1 a/b/c and full two-column caption: task schema, blue/magenta condition colors, inverse efficiency mean+/-SEM, n27/n22; lower RNN Results and transition paragraph.",
+  "4": "Visually checked multiplexing and connectivity Results plus complete Figure2 caption at bottom. Reordered the bottom caption after both main text columns to avoid splitting the paragraph continuing across columns.",
+  "5": "Visually checked complete Figure2 a-m including three task rows, AA/BA sorting, activity colorbars, motor/timing outputs, performance/dimensionality/sequentiality box plots; caption is on previous page.",
+  "6": "Visually checked complete Figure3 a-e, Unit89, sorted neurograms, training curves with epoch markers and SEM, dimensionality/time-decoding correlation, plus lower connectivity/hyperparameter prose and cross-page continuation.",
+  "7": "Visually checked Figure4 a-d, actual/predicted 100ms cue-time bins, performance/MSE, short-long correlations and network-level whiskers; lower softplus/hyperparameter discussion.",
+  "8": "Visually checked Figure5 a-g, presynaptic rows/postsynaptic columns, Ex/Inh segmentation, log abs weights versus linear mean weights, DeltaOrder and complete caption; dynamic-attractors paragraph continues next page.",
+  "9": "Visually checked Figure6 a-d noise0.005/0.05 Ex-to-Ex ablation comparison, all panels/caption; lower Results states cross-Euclidean diagonal temporal recovery and local transient-channel interpretation; Discussion follows.",
+  "10": "Visually checked full Figure7 a-c: black/red sample units, 3PC trajectories/time spheres, cross-Euclidean heatmap, 17-network mean+/-SEM and box-whiskers; no velocity field. Lower fixed-point/dynamic and ramps/sequences Discussion checked.",
+  "11": "Visually checked both Discussion columns, limitations on silent-memory models and hyperparameters, conclusions/predictions, and start of human Methods with UCLA ethics and browser constraints.",
+  "12": "Visually checked human inclusion, dDMS/ISA protocol and analysis, complete RNN equations as source images, rate definition, 32 topographic inputs, output sigmoid, Dale80/20 and weight initialization. Equations retained visually rather than guessed transcription.",
+  "13": "Visually checked Euler tau50/dt10, costs, delay jitter, dimensionality matrix256x320 and95percent PCA, SVM25-trial leave-one-out, mutual information/Schur, input perturbation pi/channel17 amplitude0.25 cue+500ms duration50ms frozen noise, statistics and source links.",
+  "14": "Visually checked References6-53 across columns, including dynamic-attractor citations47/48 and Inagaki53; no figure/table/equation omitted.",
+  "15": "Visually checked References54-70, acknowledgements, author contributions, competing interests, supplementary/correspondence/reprint information and license paragraph; preserved material text.",
+  "16": "Visually checked reporting summary page1, checked/NA statistics boxes, TF2.1/MatlabR2022a provenance, LIBSVM1.2 and OSF link. Checkbox block retained as source image to preserve semantics.",
+  "17": "Visually checked reporting summary page2 demographic/recruitment/ethics and study-design tables, selected behavioural/social-science box and exclusions. Tables retained, checkbox selection preserved as image.",
+  "18": "Visually checked reporting summary page3 all material/system/method N/A boxes. Preserve whole matrix as source image, because plain CSV loses checkbox state."
+}

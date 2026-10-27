@@ -1,0 +1,131 @@
+{
+  "status": "reviewed_with_limitations",
+  "mechanical_ok": true,
+  "all_sources_agent_reviewed": true,
+  "issues": [],
+  "documents": {
+    "s001-inagaki2019": {
+      "status": "reviewed_with_limitations",
+      "mechanical_ok": true,
+      "all_pages_agent_reviewed": true,
+      "applied_adjudications": 33,
+      "stale_adjudications": 0
+    }
+  },
+  "artifact_checks": [
+    {
+      "file": "assets/figure/figure-1.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/figure-2.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/figure-3.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/figure-4.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/figure-5.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/figure-6.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/formula-p0008-010.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/formula-p0008-011.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/formula-p0009-004.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/formula-p0009-007.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/formula-p0009-009.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/formula-p0009-011.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/formula-p0009-013.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/formula-p0009-014.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/formula-p0009-016.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/formula-p0010-003.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/supp_figs/extended-data-figure-1.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/supp_figs/extended-data-figure-2.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/supp_figs/extended-data-figure-3.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/supp_figs/extended-data-figure-4.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/supp_figs/extended-data-figure-5.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/supp_figs/extended-data-figure-6.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/supp_figs/extended-data-figure-7.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/supp_figs/extended-data-figure-8.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/supp_figs/extended-data-figure-9.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/supp_figs/extended-data-figure-10.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/reporting-summary-page-1.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/reporting-summary-page-2.jpg",
+      "matches_source_conversion": true
+    }
+  ],
+  "workbook_checks": [],
+  "scope": "Compact template and file integrity; reviewed PDF text/crops checked in external evidence. JPEGs checked against deterministic source conversion, not lossless pixels. Review flags and normalized coverage do not certify scientific accuracy."
+}

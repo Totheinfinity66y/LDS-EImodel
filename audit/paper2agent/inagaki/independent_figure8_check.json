@@ -1,0 +1,38 @@
+{
+  "one_hot": {
+    "Euler_step_error": 5.551115123125783e-17,
+    "endpoint_distance_error": 0.0,
+    "max_fullstate_residual_per_ms": 4.275570176061969e-11,
+    "identity_retained": 24,
+    "all24_union_DAG": true,
+    "max_exact_equilibrium_distance": 5.130684211274363e-09,
+    "R3_peak_min": 0.9999876574489017,
+    "R3_peak_max": 0.9999999999999996,
+    "R3_peak_effect_max": 1.2342551097832555e-05,
+    "minimum_offdiagonal_endpoint_L2": 1.9999999978154632
+  },
+  "ring": {
+    "Euler_step_error": 5.551115123125783e-17,
+    "endpoint_distance_error": 0.0,
+    "max_fullstate_residual_per_ms": 4.275570176061969e-11,
+    "identity_retained": 24,
+    "all24_union_DAG": true,
+    "max_exact_equilibrium_distance": 5.130684211274363e-09,
+    "R3_peak_min": 0.9999876574489017,
+    "R3_peak_max": 0.9999999999999996,
+    "R3_peak_effect_max": 1.2342551097832555e-05,
+    "minimum_offdiagonal_endpoint_L2": 1.9999999978154632
+  },
+  "topology": {
+    "Euler_step_error": 5.551115123125783e-17,
+    "endpoint_distance_error": 0.0,
+    "max_fullstate_residual_per_ms": 4.275570176061969e-11,
+    "identity_retained": 24,
+    "all24_union_DAG": true,
+    "max_exact_equilibrium_distance": 5.130684211274363e-09,
+    "R3_peak_min": 0.9999876574489017,
+    "R3_peak_max": 0.9999999999999996,
+    "R3_peak_effect_max": 1.2342551097832555e-05,
+    "minimum_offdiagonal_endpoint_L2": 1.9999999978154632
+  }
+}

@@ -1,0 +1,5 @@
+Reconstructing one_hot
+Reconstructing ring
+Reconstructing topology
+Representation consistency PASS
+Integrity PASS: 16 figure groups; 4 contact sheets

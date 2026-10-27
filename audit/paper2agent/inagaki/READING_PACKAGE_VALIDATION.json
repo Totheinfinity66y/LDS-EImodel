@@ -1,0 +1,15 @@
+{
+  "status": "reviewed_with_limitations",
+  "mechanical_ok": true,
+  "all_sources_agent_reviewed": true,
+  "reading_package": "artifacts/paper2agent_reproduction/references/inagaki/inagaki2019-paper",
+  "reviewed_pages": 30,
+  "independent_fresh_verifier": "pending",
+  "limitations": [
+    "reporting summary pages29-30 image only",
+    "dense figures/equations retained source crops",
+    "CFF parser fontTools warning; no installation performed"
+  ],
+  "retrieval_question": "实验CD与模型CD拟合窗口是否一致？",
+  "retrieval_answer": "否：paper.md CD analysis最后600ms；Analysis of simulated activity最后400ms。仅用最终阅读包完成检索。"
+}

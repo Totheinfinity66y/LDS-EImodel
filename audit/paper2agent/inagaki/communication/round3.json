@@ -1,0 +1,61 @@
+{
+  "round": 3,
+  "request": "实际审查reference_adapter.py/test_reference_adapter.py/ADAPTER_DESIGN.md/tests_green.txt及reference_dynamics.py",
+  "files_read": [
+    "handcrafted_ei/evaluation/reference_adapter.py",
+    "handcrafted_ei/tests/test_reference_adapter.py",
+    "audit/data/ADAPTER_DESIGN.md",
+    "audit/data/tests_green.txt",
+    "handcrafted_ei/evaluation/reference_dynamics.py"
+  ],
+  "decision": "PASS_WITH_LIMITS adapter; analysis acceptance contingent on result-layer thresholds",
+  "findings": [
+    {
+      "item": "axes,conditions,repetitions",
+      "verdict": "PASS",
+      "evidence": "explicit transpose(1,0,2), unique24, repetitions1; no averaging"
+    },
+    {
+      "item": "R3 provenance",
+      "verdict": "PASS",
+      "evidence": "per trial exact event match; tests actual rates[:,568] at2840ms"
+    },
+    {
+      "item": "reconstructed currents",
+      "verdict": "PASS",
+      "evidence": "t>event convention; t0 placeholder; measuredFalse; all662 Euler transitions x24 x3 checked atol3e-15 in supplied log"
+    },
+    {
+      "item": "projection decomposition",
+      "verdict": "PASS",
+      "evidence": "orthonormality check, deltaBBT residual, full-plane-off closure"
+    },
+    {
+      "item": "endpoint clustering",
+      "verdict": "ADAPT",
+      "evidence": "maxnorm greedy complete-link descriptive order-sensitive; cannot call attractor count without field residual and convergence"
+    },
+    {
+      "item": "local stability",
+      "verdict": "ADAPT",
+      "evidence": "analytic vs FD and Euler consistent; strict boolean excludes kinks but does NOT itself include equilibrium residual or FD tolerance"
+    },
+    {
+      "item": "phase drift",
+      "verdict": "ADAPT",
+      "evidence": "np.gradient coordinate/ms; explicit scale differs source per10ms; label correct units"
+    },
+    {
+      "item": "experimental Fig5/6",
+      "verdict": "INCOMPATIBLE",
+      "evidence": "deterministic24 conditions one trajectory, no session/trial repetition"
+    }
+  ],
+  "required_result_checks": [
+    "stable endpoint = residual<threshold AND local stability AND finite difference error<threshold",
+    "silence must not decode by argmax into false identity",
+    "same fixed currents for all24 initial states",
+    "report clustered count tolerance and order sensitivity",
+    "do not label LDS-specific numerical panel exact source-method reproduction"
+  ]
+}

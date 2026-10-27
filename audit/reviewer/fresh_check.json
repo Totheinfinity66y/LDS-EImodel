@@ -1,0 +1,88 @@
+{
+  "one_hot": {
+    "step_error": 5.551115123125783e-17,
+    "endpoint_distance_error": 0.0,
+    "full_residual": 4.275570176061969e-11,
+    "off_endpoint_smooth_jacobian_error": 8.125999872987677e-13,
+    "control_step_error": 5.551115123125783e-17,
+    "perturbed_step_error": 5.551115123125783e-17,
+    "energy_closure_error": 5.551115123125783e-17,
+    "cross_distance_error": 1.0842021724855044e-19,
+    "paired_noise_zero": true,
+    "pulse_duration_ms": 50.0,
+    "independent_R3_branch0_3_mean_angle": 83.35150728178299,
+    "independent_R3_PR": [
+      4.999999449596687,
+      4.999999449596709
+    ],
+    "angle_error": 0.0,
+    "E_basin_sample": {
+      "row": 173,
+      "trial": 14,
+      "seed": 19,
+      "amplitude_preclip": 0.02,
+      "clip_fraction": 0.4567901234567901,
+      "actual_target_rms": 0.01451840069178971,
+      "clipping_error": 0.0,
+      "rms_error": 0.0
+    }
+  },
+  "ring": {
+    "step_error": 5.551115123125783e-17,
+    "endpoint_distance_error": 0.0,
+    "full_residual": 4.275570176061969e-11,
+    "off_endpoint_smooth_jacobian_error": 8.125999872987677e-13,
+    "control_step_error": 5.551115123125783e-17,
+    "perturbed_step_error": 5.551115123125783e-17,
+    "energy_closure_error": 1.1102230246251565e-16,
+    "cross_distance_error": 1.1102230246251565e-16,
+    "paired_noise_zero": true,
+    "pulse_duration_ms": 50.0,
+    "independent_R3_branch0_3_mean_angle": 83.35150728178299,
+    "independent_R3_PR": [
+      4.999999449596687,
+      4.999999449596709
+    ],
+    "angle_error": 0.0,
+    "E_basin_sample": {
+      "row": 173,
+      "trial": 14,
+      "seed": 19,
+      "amplitude_preclip": 0.02,
+      "clip_fraction": 0.4567901234567901,
+      "actual_target_rms": 0.01451840069178971,
+      "clipping_error": 0.0,
+      "rms_error": 0.0
+    }
+  },
+  "topology": {
+    "step_error": 5.551115123125783e-17,
+    "endpoint_distance_error": 0.0,
+    "full_residual": 4.275570176061969e-11,
+    "off_endpoint_smooth_jacobian_error": 8.125999872987677e-13,
+    "control_step_error": 5.551115123125783e-17,
+    "perturbed_step_error": 5.551115123125783e-17,
+    "energy_closure_error": 1.1102230246251565e-16,
+    "cross_distance_error": 1.1102230246251565e-16,
+    "paired_noise_zero": true,
+    "pulse_duration_ms": 50.0,
+    "independent_R3_branch0_3_mean_angle": 83.35150728178299,
+    "independent_R3_PR": [
+      4.999999449596687,
+      4.999999449596709
+    ],
+    "angle_error": 0.0,
+    "E_basin_sample": {
+      "row": 173,
+      "trial": 14,
+      "seed": 19,
+      "amplitude_preclip": 0.02,
+      "clip_fraction": 0.4567901234567901,
+      "actual_target_rms": 0.01451840069178971,
+      "clipping_error": 0.0,
+      "rms_error": 0.0
+    }
+  },
+  "status": "PASS finite independent samples; no global-basin proof",
+  "script_sha256": "6ad69dd8ea3b78cd10ea147960741101ca9fe88c5d21cdd8abb39d17dba8f271"
+}

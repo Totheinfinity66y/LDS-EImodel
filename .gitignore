@@ -8,3 +8,23 @@ handcrafted_ei/artifacts/v1/*/
 artifacts/neural_representation_v2/data/dynamics/*.npz
 # Copyrighted reference PDFs/figures are local verification material only.
 artifacts/neural_representation_v2/reference_evidence/
+# Full source publications and upstream snapshots stay local, hash-indexed.
+audit/paper2agent/*/upstream/
+audit/paper2agent/**/*.zip
+audit/paper2agent/**/*.pdf
+audit/paper2agent/**/*source*.png
+audit/paper2agent/**/source_page_*.png
+audit/paper2agent/**/source_text.txt
+audit/paper2agent/**/previews/
+audit/paper2agent/**/renders/
+audit/paper2agent/**/renders_before_repair*/
+# Full extracted publication text, source snapshots and page-review workspaces
+# remain persistent local evidence, not redistributed with repository changes.
+audit/paper2agent/**/paper-review/
+audit/paper2agent/**/review-aid/*/*.jpg
+artifacts/paper2agent_reproduction/references/
+artifacts/paper2agent_reproduction/reproduced_papers/*/*-paper/
+artifacts/paper2agent_reproduction/reproduced_papers/**/*-paper/
+artifacts/paper2agent_reproduction/reproduced_papers/**/*-paper*/
+artifacts/paper2agent_reproduction/lds_results/*/basin_*.npz
+artifacts/paper2agent_reproduction/figures/source_comparisons/

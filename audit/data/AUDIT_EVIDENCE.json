@@ -1,0 +1,1324 @@
+{
+  "environment": {
+    "python": "3.12.12 | packaged by conda-forge | (main, Jan 26 2026, 23:38:32) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\Totheinfinity\\.conda\\envs\\analysis\\python.exe",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "DLL_path_preflight": "env root;Library/bin;Scripts prepended for current process only"
+  },
+  "figure_records": 55,
+  "figure_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "figure_output_hashes": [
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_01_one_hot.png",
+      "expected": "eae4b4add69e972a53a9f1b18d2bee18eba19cfc6b30f7e7f4e80997a74b56ef",
+      "actual": "eae4b4add69e972a53a9f1b18d2bee18eba19cfc6b30f7e7f4e80997a74b56ef",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_01_one_hot.svg",
+      "expected": "3b4147cfd9e4bdee807bfe283624f2d0718acbeea2c61a6bd218d14fff6afe1e",
+      "actual": "3b4147cfd9e4bdee807bfe283624f2d0718acbeea2c61a6bd218d14fff6afe1e",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_01_one_hot.pdf",
+      "expected": "8a5b859383b63c78bb3308d2ea9335cb9a737fb3692948988857d25eb8095a57",
+      "actual": "8a5b859383b63c78bb3308d2ea9335cb9a737fb3692948988857d25eb8095a57",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_02_one_hot.png",
+      "expected": "49d23f83cd9cced1b9dd8321a9011dc8e02481cc7dbdfd6145f1de6cbff083ac",
+      "actual": "49d23f83cd9cced1b9dd8321a9011dc8e02481cc7dbdfd6145f1de6cbff083ac",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_02_one_hot.svg",
+      "expected": "683f7f1273b2cdfcb137df12e59516ff33aa90dab7215c6cb29c3d8fe86b73c6",
+      "actual": "683f7f1273b2cdfcb137df12e59516ff33aa90dab7215c6cb29c3d8fe86b73c6",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_02_one_hot.pdf",
+      "expected": "be1e0f276f2764ea41a238f050d8f6011379fa286de469ab3ecceb07146d28f9",
+      "actual": "be1e0f276f2764ea41a238f050d8f6011379fa286de469ab3ecceb07146d28f9",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_03_one_hot.png",
+      "expected": "fae295f371c5d0e6dd93803b94224a2ea375dbcea2e8316662d27b05d40d8e0b",
+      "actual": "fae295f371c5d0e6dd93803b94224a2ea375dbcea2e8316662d27b05d40d8e0b",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_03_one_hot.svg",
+      "expected": "88befbf367da32ddbb018a176fb4ebfe1bb7770451cccc48dac4e74c95b7d119",
+      "actual": "88befbf367da32ddbb018a176fb4ebfe1bb7770451cccc48dac4e74c95b7d119",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_03_one_hot.pdf",
+      "expected": "1b620df3ffe756509532dc35297e69a058b38d12ad48a68504b3064de8e2e39f",
+      "actual": "1b620df3ffe756509532dc35297e69a058b38d12ad48a68504b3064de8e2e39f",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_04_one_hot.png",
+      "expected": "45a15069d4a32839bc1dedd87ee94c591ba0c965286f6975e0a53b39d50c17e6",
+      "actual": "45a15069d4a32839bc1dedd87ee94c591ba0c965286f6975e0a53b39d50c17e6",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_04_one_hot.svg",
+      "expected": "74b2acc84f04b64c61517970573621132bf5ec5b1ab8572fd7dc395abbe33fe5",
+      "actual": "74b2acc84f04b64c61517970573621132bf5ec5b1ab8572fd7dc395abbe33fe5",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_04_one_hot.pdf",
+      "expected": "4a77c06074b3f9d86154a9d772a0b07378ce668cd3905d1208d8c80a257c3eed",
+      "actual": "4a77c06074b3f9d86154a9d772a0b07378ce668cd3905d1208d8c80a257c3eed",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_05_one_hot.png",
+      "expected": "a4402c186f85def878a4b6552d50c6428ef6345375233d3b02c94bd060d92ca6",
+      "actual": "a4402c186f85def878a4b6552d50c6428ef6345375233d3b02c94bd060d92ca6",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_05_one_hot.svg",
+      "expected": "6f1158eb1ab76995e1d68feac16926482b892cc58a1d5f711e70b163c9bd2ab0",
+      "actual": "6f1158eb1ab76995e1d68feac16926482b892cc58a1d5f711e70b163c9bd2ab0",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_05_one_hot.pdf",
+      "expected": "f3c33a474df95b1799eab7d274fb91e922fbd6f918f1ec221fd03ff7cb7f6239",
+      "actual": "f3c33a474df95b1799eab7d274fb91e922fbd6f918f1ec221fd03ff7cb7f6239",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_06_one_hot.png",
+      "expected": "7583fb4915ce3fc87f6ac78ff99a757ebcf4550e51a98480345640a371c49c84",
+      "actual": "7583fb4915ce3fc87f6ac78ff99a757ebcf4550e51a98480345640a371c49c84",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_06_one_hot.svg",
+      "expected": "3fddb4361b035496035796422d6ee466a0325f8c9315f723bb9a6ca266616656",
+      "actual": "3fddb4361b035496035796422d6ee466a0325f8c9315f723bb9a6ca266616656",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_06_one_hot.pdf",
+      "expected": "39d91640f7a4ba9fdb4ee3774be870e368b1be2f71ff384d39ff87c21674c438",
+      "actual": "39d91640f7a4ba9fdb4ee3774be870e368b1be2f71ff384d39ff87c21674c438",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_07_one_hot.png",
+      "expected": "9694f79d4f7be532cec5f4dc8f6f0a3bfb55105b437cf06695d1b19714b71d48",
+      "actual": "9694f79d4f7be532cec5f4dc8f6f0a3bfb55105b437cf06695d1b19714b71d48",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_07_one_hot.svg",
+      "expected": "86bcdc85432cdcc3b1a28aae9e2315bde411ee196b6baff7c6e27a59a1b45454",
+      "actual": "86bcdc85432cdcc3b1a28aae9e2315bde411ee196b6baff7c6e27a59a1b45454",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_07_one_hot.pdf",
+      "expected": "f059715ea34cd4f330cf02c87a974e1ba796b1d62a60db34729bd6f3335660aa",
+      "actual": "f059715ea34cd4f330cf02c87a974e1ba796b1d62a60db34729bd6f3335660aa",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_08_one_hot.png",
+      "expected": "938ada5689756b39f10ef0cf88a481a1b3c295ece2ff20ec64ee2a686787b9ef",
+      "actual": "938ada5689756b39f10ef0cf88a481a1b3c295ece2ff20ec64ee2a686787b9ef",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_08_one_hot.svg",
+      "expected": "74c4ae3175be9d129c6fa88e154a8d3f5304372c34df976660c93e57cf1782e0",
+      "actual": "74c4ae3175be9d129c6fa88e154a8d3f5304372c34df976660c93e57cf1782e0",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_08_one_hot.pdf",
+      "expected": "00298e9dbe36e90e95de30db5cfffedc1406df4600829d438d7a8faf7a303e2f",
+      "actual": "00298e9dbe36e90e95de30db5cfffedc1406df4600829d438d7a8faf7a303e2f",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_09_one_hot.png",
+      "expected": "a021c9d39ea752b232ce06cd6196721918de0c98943c8ff0158a1f8f3676b524",
+      "actual": "a021c9d39ea752b232ce06cd6196721918de0c98943c8ff0158a1f8f3676b524",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_09_one_hot.svg",
+      "expected": "27bc907040d0777252c0d32b75ac38d934664b139e93dfc6d9dc48e524f4ec45",
+      "actual": "27bc907040d0777252c0d32b75ac38d934664b139e93dfc6d9dc48e524f4ec45",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_09_one_hot.pdf",
+      "expected": "91e0289ff5d3ea1ea91228fbfa7fad6e61dae4de75c41a2c9af01d76aef20458",
+      "actual": "91e0289ff5d3ea1ea91228fbfa7fad6e61dae4de75c41a2c9af01d76aef20458",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_02_selectivity_one_hot.png",
+      "expected": "03bef3bcb751997fa7572a5835862ea1412297226897bb75d8b3f5455ab1893d",
+      "actual": "03bef3bcb751997fa7572a5835862ea1412297226897bb75d8b3f5455ab1893d",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_02_selectivity_one_hot.svg",
+      "expected": "7f567e17e0da1308ff4c7e67f298d09d127337a1ad0221a90e63c3cd12544a88",
+      "actual": "7f567e17e0da1308ff4c7e67f298d09d127337a1ad0221a90e63c3cd12544a88",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_02_selectivity_one_hot.pdf",
+      "expected": "e5667ee08c8dface21e56948ffb6c44ea3a5b05679dfe8ac14ac3582eaf606f4",
+      "actual": "e5667ee08c8dface21e56948ffb6c44ea3a5b05679dfe8ac14ac3582eaf606f4",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_01_ring.png",
+      "expected": "0742f294371de76f9d394e3877a528e2be42130750de3520daa2b9cbb4c417b2",
+      "actual": "0742f294371de76f9d394e3877a528e2be42130750de3520daa2b9cbb4c417b2",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_01_ring.svg",
+      "expected": "be9aa87d5eaf594a4c9e0f8e72447b3d90dbf407574e9f62e30cb3a36d74111d",
+      "actual": "be9aa87d5eaf594a4c9e0f8e72447b3d90dbf407574e9f62e30cb3a36d74111d",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_01_ring.pdf",
+      "expected": "3882b7985f0ea7d04b03d18eaae7f32fb38eb477217ab4a5f1dfdce78adb0594",
+      "actual": "3882b7985f0ea7d04b03d18eaae7f32fb38eb477217ab4a5f1dfdce78adb0594",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_02_ring.png",
+      "expected": "638246c1a0cb25dcae4a7329e418fcae184a13171b2c00a5c470c491c225f638",
+      "actual": "638246c1a0cb25dcae4a7329e418fcae184a13171b2c00a5c470c491c225f638",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_02_ring.svg",
+      "expected": "8b7df93d8283869fef06e446765e10401a6c5318d913d851d265e0b43d806e0f",
+      "actual": "8b7df93d8283869fef06e446765e10401a6c5318d913d851d265e0b43d806e0f",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_02_ring.pdf",
+      "expected": "4d6e3b79f3ca00b079c212db0f201e30d264732d7936b5224265b7ced89aca2a",
+      "actual": "4d6e3b79f3ca00b079c212db0f201e30d264732d7936b5224265b7ced89aca2a",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_03_ring.png",
+      "expected": "08053ca76977c96741ea6146e2272a5686af64f18b21e13929a2f6c1dd1d4764",
+      "actual": "08053ca76977c96741ea6146e2272a5686af64f18b21e13929a2f6c1dd1d4764",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_03_ring.svg",
+      "expected": "1ff8e56d73b03604c1471f8c3eb699807290c8616fd216407657a7311ac9ad84",
+      "actual": "1ff8e56d73b03604c1471f8c3eb699807290c8616fd216407657a7311ac9ad84",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_03_ring.pdf",
+      "expected": "2aab5873ebae26ae2f3242ca25f644c394af3bb5fadc038a9ae052eee7a377b6",
+      "actual": "2aab5873ebae26ae2f3242ca25f644c394af3bb5fadc038a9ae052eee7a377b6",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_04_ring.png",
+      "expected": "4976eb73fea5beeb0328984349c8363e34ba6a0db3f844b3cdf4a9b482abe3f4",
+      "actual": "4976eb73fea5beeb0328984349c8363e34ba6a0db3f844b3cdf4a9b482abe3f4",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_04_ring.svg",
+      "expected": "8d1c215429e736c787501bbd7b9b8cf04a5e90fb206a6622055b650951960afd",
+      "actual": "8d1c215429e736c787501bbd7b9b8cf04a5e90fb206a6622055b650951960afd",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_04_ring.pdf",
+      "expected": "9764422c3de8da9d2ac6bfe7efb0389acea5e6259d00a6b58efc0d79222d5c7e",
+      "actual": "9764422c3de8da9d2ac6bfe7efb0389acea5e6259d00a6b58efc0d79222d5c7e",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_05_ring.png",
+      "expected": "827e3b2184eee00f20f528fa6c89c16dddf351d6a8c2778d38abf69b8b302cd6",
+      "actual": "827e3b2184eee00f20f528fa6c89c16dddf351d6a8c2778d38abf69b8b302cd6",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_05_ring.svg",
+      "expected": "efec8ca4c1ca2036dceb9ba1953c96b248c61f8dfdeeb72917003901f6e335b7",
+      "actual": "efec8ca4c1ca2036dceb9ba1953c96b248c61f8dfdeeb72917003901f6e335b7",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_05_ring.pdf",
+      "expected": "fe6d3c2febd0da69d4398d0f53f5a3f205425fd0bd14453749d23d24fd1b52d3",
+      "actual": "fe6d3c2febd0da69d4398d0f53f5a3f205425fd0bd14453749d23d24fd1b52d3",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_06_ring.png",
+      "expected": "02b5faa9ee8c06bb5462956a2bf748071190b92a90c33594f55455846cdfb6f7",
+      "actual": "02b5faa9ee8c06bb5462956a2bf748071190b92a90c33594f55455846cdfb6f7",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_06_ring.svg",
+      "expected": "b079e6231827bdedeb61e784846497484a98b9921b949ded43917870a6a97019",
+      "actual": "b079e6231827bdedeb61e784846497484a98b9921b949ded43917870a6a97019",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_06_ring.pdf",
+      "expected": "16002b00995552687a066aa0c40d45cd52f9c2464911132cae0f2029ea374121",
+      "actual": "16002b00995552687a066aa0c40d45cd52f9c2464911132cae0f2029ea374121",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_07_ring.png",
+      "expected": "49ea64a2f445b30df215ec647711acb71d15857e47695c8f21f0156d6f7209da",
+      "actual": "49ea64a2f445b30df215ec647711acb71d15857e47695c8f21f0156d6f7209da",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_07_ring.svg",
+      "expected": "4c6ef7f38e112c5fc371b13e93e6ac28a3133bf70dcbf02f48d1f721675436db",
+      "actual": "4c6ef7f38e112c5fc371b13e93e6ac28a3133bf70dcbf02f48d1f721675436db",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_07_ring.pdf",
+      "expected": "5185d6c20f038f3d2e5e69d58998aed8393a0d43fb8f75ae8d37f4208230e17a",
+      "actual": "5185d6c20f038f3d2e5e69d58998aed8393a0d43fb8f75ae8d37f4208230e17a",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_08_ring.png",
+      "expected": "127aabf53d20db231251deba6abde2b33b6f708c752c72d015380e1c546d01fa",
+      "actual": "127aabf53d20db231251deba6abde2b33b6f708c752c72d015380e1c546d01fa",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_08_ring.svg",
+      "expected": "0aa5a2bd9aeef7dbc77a1ccfd142ad8e8a328c827636ce58f8bb72ac17cb1c34",
+      "actual": "0aa5a2bd9aeef7dbc77a1ccfd142ad8e8a328c827636ce58f8bb72ac17cb1c34",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_08_ring.pdf",
+      "expected": "1bf9a3dfdfeca8fda962e8c1a2a9235d0fa97592d33395eeabfad07c38e34d3c",
+      "actual": "1bf9a3dfdfeca8fda962e8c1a2a9235d0fa97592d33395eeabfad07c38e34d3c",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_09_ring.png",
+      "expected": "f158eaea25212a9aa3274466740b358e5a69d171cfd15acbf55910881157058d",
+      "actual": "f158eaea25212a9aa3274466740b358e5a69d171cfd15acbf55910881157058d",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_09_ring.svg",
+      "expected": "ad02ef960c5d7ffc794bc620290ca2f32edddab257d9cb1f92336ff14e1c04b7",
+      "actual": "ad02ef960c5d7ffc794bc620290ca2f32edddab257d9cb1f92336ff14e1c04b7",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_09_ring.pdf",
+      "expected": "5335aa62c46192f0141839e3220d833205c15fbba20bc14e9cab22eda991d1c3",
+      "actual": "5335aa62c46192f0141839e3220d833205c15fbba20bc14e9cab22eda991d1c3",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_02_selectivity_ring.png",
+      "expected": "03bef3bcb751997fa7572a5835862ea1412297226897bb75d8b3f5455ab1893d",
+      "actual": "03bef3bcb751997fa7572a5835862ea1412297226897bb75d8b3f5455ab1893d",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_02_selectivity_ring.svg",
+      "expected": "84ccfa14a1ac1fc56b63bee9f7a2a51637e70bb3967f08532d69059002b314d6",
+      "actual": "84ccfa14a1ac1fc56b63bee9f7a2a51637e70bb3967f08532d69059002b314d6",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_02_selectivity_ring.pdf",
+      "expected": "94be611c994b56c49ce168d2ea7d0fc36866a023f19272fe9a70081c2e33d98f",
+      "actual": "94be611c994b56c49ce168d2ea7d0fc36866a023f19272fe9a70081c2e33d98f",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_01_topology.png",
+      "expected": "c8832bc6702b794924e4dd89960f97c07ad60cc8cc2feff0cec8439d3407d620",
+      "actual": "c8832bc6702b794924e4dd89960f97c07ad60cc8cc2feff0cec8439d3407d620",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_01_topology.svg",
+      "expected": "8be12d9c3c9d783acae54bafd715cac0558c8d3169e46811eb82a50cb57ec005",
+      "actual": "8be12d9c3c9d783acae54bafd715cac0558c8d3169e46811eb82a50cb57ec005",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_01_topology.pdf",
+      "expected": "877ae250649ab6435a01b7d0dc1cae434cd09a05c59bede456f934c61f0f5600",
+      "actual": "877ae250649ab6435a01b7d0dc1cae434cd09a05c59bede456f934c61f0f5600",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_02_topology.png",
+      "expected": "2db3b073258f4ddf845eeffb5cb41cb79a5d8e3808f4e40f14019e4818c73907",
+      "actual": "2db3b073258f4ddf845eeffb5cb41cb79a5d8e3808f4e40f14019e4818c73907",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_02_topology.svg",
+      "expected": "afd7d0fac8112b5356d52e8ec90a49161938137d2c321aed206393ab923804d1",
+      "actual": "afd7d0fac8112b5356d52e8ec90a49161938137d2c321aed206393ab923804d1",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_02_topology.pdf",
+      "expected": "a0e71afe8735c4d8cdd4a8ef0a751e3db1495f9f9f3c19532142dcfc4d15ef2c",
+      "actual": "a0e71afe8735c4d8cdd4a8ef0a751e3db1495f9f9f3c19532142dcfc4d15ef2c",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_03_topology.png",
+      "expected": "8abadb5edcdf87fa3054e44bb08957e599db95c949945867f714da1f2bffd0d3",
+      "actual": "8abadb5edcdf87fa3054e44bb08957e599db95c949945867f714da1f2bffd0d3",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_03_topology.svg",
+      "expected": "c87ff14957eaf25e62abf27ca9545509dc88ce7471592c5a30d7423865b6f9a7",
+      "actual": "c87ff14957eaf25e62abf27ca9545509dc88ce7471592c5a30d7423865b6f9a7",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_03_topology.pdf",
+      "expected": "f31f23edcd26bd2b6b58d2b7428136ecdae830c0b9a74c13b5cb078fa92ee961",
+      "actual": "f31f23edcd26bd2b6b58d2b7428136ecdae830c0b9a74c13b5cb078fa92ee961",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_04_topology.png",
+      "expected": "0aa69ce880e176d62ad029d491f8c541f3a9dca195135db9d7009e86b6b18e98",
+      "actual": "0aa69ce880e176d62ad029d491f8c541f3a9dca195135db9d7009e86b6b18e98",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_04_topology.svg",
+      "expected": "03d6d643047fbdcf4ee50d02e913b8793a74072bc4e983087b08df5e3e5e4594",
+      "actual": "03d6d643047fbdcf4ee50d02e913b8793a74072bc4e983087b08df5e3e5e4594",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_04_topology.pdf",
+      "expected": "e413a769ea5139c00550a015014fea8488619ad576058cfad392506945b9b49a",
+      "actual": "e413a769ea5139c00550a015014fea8488619ad576058cfad392506945b9b49a",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_05_topology.png",
+      "expected": "7a0acd4a9505545cf3af2b9890b60b3df297d994f42e4a078435dae467e35170",
+      "actual": "7a0acd4a9505545cf3af2b9890b60b3df297d994f42e4a078435dae467e35170",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_05_topology.svg",
+      "expected": "bc971fcd3b253a33e4383fe969d2f53011f80d5265504e6254a46f8908037d94",
+      "actual": "bc971fcd3b253a33e4383fe969d2f53011f80d5265504e6254a46f8908037d94",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_05_topology.pdf",
+      "expected": "36774a267892e8c9da52dba19292dc39104f3db07e9df82051377609f47c1e47",
+      "actual": "36774a267892e8c9da52dba19292dc39104f3db07e9df82051377609f47c1e47",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_06_topology.png",
+      "expected": "b9c5c7f7d1afe91ae7fab856a91eb506e6b8b9d60ed0a0b5352efcde7755d275",
+      "actual": "b9c5c7f7d1afe91ae7fab856a91eb506e6b8b9d60ed0a0b5352efcde7755d275",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_06_topology.svg",
+      "expected": "1385e5fb3927d8a9844c928b620e923c6dc27e662701a9e821b4a8d4a507f394",
+      "actual": "1385e5fb3927d8a9844c928b620e923c6dc27e662701a9e821b4a8d4a507f394",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_06_topology.pdf",
+      "expected": "d45aa5cc755aee30b56de79470b4bb9404500685bfb505a5445174c70cc657d4",
+      "actual": "d45aa5cc755aee30b56de79470b4bb9404500685bfb505a5445174c70cc657d4",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_07_topology.png",
+      "expected": "6f8389d250853c18b4b79b1181218d451ff5051b02764baea1bb0dea290e1929",
+      "actual": "6f8389d250853c18b4b79b1181218d451ff5051b02764baea1bb0dea290e1929",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_07_topology.svg",
+      "expected": "94639e2e190c9612f33cd1469dfc91e777c7e41194924a68030fb6d43e629344",
+      "actual": "94639e2e190c9612f33cd1469dfc91e777c7e41194924a68030fb6d43e629344",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_07_topology.pdf",
+      "expected": "84a319b0e349a1056dbb5bf566054870f37bc449718cf2ececdf95455738d0e4",
+      "actual": "84a319b0e349a1056dbb5bf566054870f37bc449718cf2ececdf95455738d0e4",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_08_topology.png",
+      "expected": "6f73b30f805e44aa078e12c57d41d51622fc0693e43271898ebe184c4a25696f",
+      "actual": "6f73b30f805e44aa078e12c57d41d51622fc0693e43271898ebe184c4a25696f",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_08_topology.svg",
+      "expected": "891c19b5803fbd49efa7e0e55912ab451e34f780d123692239ea0d1106ea6627",
+      "actual": "891c19b5803fbd49efa7e0e55912ab451e34f780d123692239ea0d1106ea6627",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_08_topology.pdf",
+      "expected": "652911bfe5e87677187b62c6d05832a641c75ede8871cff5177fb69e9f972070",
+      "actual": "652911bfe5e87677187b62c6d05832a641c75ede8871cff5177fb69e9f972070",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_09_topology.png",
+      "expected": "98fa757bf5bf51b0e58acfe211113a074f4887057ebf7655514f65d0b253c498",
+      "actual": "98fa757bf5bf51b0e58acfe211113a074f4887057ebf7655514f65d0b253c498",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_09_topology.svg",
+      "expected": "15fdabef3881e5a2a7c01c2bea84e9c5a2ed82f30c8ff304b533e0ff7ef02366",
+      "actual": "15fdabef3881e5a2a7c01c2bea84e9c5a2ed82f30c8ff304b533e0ff7ef02366",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_09_topology.pdf",
+      "expected": "bbe96678dddba9255dae2058de23f599873df4817f26da0ea0e52ba25c2a6bfb",
+      "actual": "bbe96678dddba9255dae2058de23f599873df4817f26da0ea0e52ba25c2a6bfb",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_02_selectivity_topology.png",
+      "expected": "03bef3bcb751997fa7572a5835862ea1412297226897bb75d8b3f5455ab1893d",
+      "actual": "03bef3bcb751997fa7572a5835862ea1412297226897bb75d8b3f5455ab1893d",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_02_selectivity_topology.svg",
+      "expected": "87dd41b80cefe4009629a960a41cded8d52038ca67713b94565eaebd2e8c0b5f",
+      "actual": "87dd41b80cefe4009629a960a41cded8d52038ca67713b94565eaebd2e8c0b5f",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_02_selectivity_topology.pdf",
+      "expected": "3ae57548ca0bdd49aac8635ffaa5a3a0aa31c32eb33734152136dc2df9b7b81f",
+      "actual": "3ae57548ca0bdd49aac8635ffaa5a3a0aa31c32eb33734152136dc2df9b7b81f",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\comparison\\figure_10_localization.png",
+      "expected": "73005d2b24938a15fd2a641824c97f2d2a7b2edae8f4f9fdaebd4eb68c21bdaa",
+      "actual": "73005d2b24938a15fd2a641824c97f2d2a7b2edae8f4f9fdaebd4eb68c21bdaa",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\comparison\\figure_10_localization.svg",
+      "expected": "1dc0a2991d784cf4bd0c87290e601beeb2769611a7d65fcfa8d35f7565bdc43d",
+      "actual": "1dc0a2991d784cf4bd0c87290e601beeb2769611a7d65fcfa8d35f7565bdc43d",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\comparison\\figure_10_localization.pdf",
+      "expected": "83bb11299867c1ac32a14e6f61d8175ba572fa4c833d86f2d7d5bf5d68a53add",
+      "actual": "83bb11299867c1ac32a14e6f61d8175ba572fa4c833d86f2d7d5bf5d68a53add",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\comparison\\figure_10_geometry.png",
+      "expected": "0be57d995771705ae43e2db6004a807a642ce01d5b1e91ff9dfedd840713301c",
+      "actual": "0be57d995771705ae43e2db6004a807a642ce01d5b1e91ff9dfedd840713301c",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\comparison\\figure_10_geometry.svg",
+      "expected": "8556fc38d691dc25e539537e2a8a524c0fdf021f702c113f5ff1e7874254bfa0",
+      "actual": "8556fc38d691dc25e539537e2a8a524c0fdf021f702c113f5ff1e7874254bfa0",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\comparison\\figure_10_geometry.pdf",
+      "expected": "cfd21d194761adca7cea83ca2af4fab41656f448d7d6f3250a67099ca63ac605",
+      "actual": "cfd21d194761adca7cea83ca2af4fab41656f448d7d6f3250a67099ca63ac605",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\comparison\\figure_10_dynamics.png",
+      "expected": "b8af2ef3cbc6f02b5202ef5b9f0cd31f8a75267c50fdb8d347156f98fa90c456",
+      "actual": "b8af2ef3cbc6f02b5202ef5b9f0cd31f8a75267c50fdb8d347156f98fa90c456",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\comparison\\figure_10_dynamics.svg",
+      "expected": "b5d16c1f1f8a0d260966882abedf0ff89d656284bd1dbf6baba07a72d647da46",
+      "actual": "b5d16c1f1f8a0d260966882abedf0ff89d656284bd1dbf6baba07a72d647da46",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\comparison\\figure_10_dynamics.pdf",
+      "expected": "08c429c06d054dd3c8d8ee445ed156b40f440932208a362cf91bb5f78dd3c32b",
+      "actual": "08c429c06d054dd3c8d8ee445ed156b40f440932208a362cf91bb5f78dd3c32b",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_01_supplement_one_hot.png",
+      "expected": "4798915f1a010d145b84547c5ee0f0d4d47fb2955fe690dbe6b5dd4525d2f5c5",
+      "actual": "4798915f1a010d145b84547c5ee0f0d4d47fb2955fe690dbe6b5dd4525d2f5c5",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_01_supplement_one_hot.svg",
+      "expected": "f7241eac73308b7f9ca1fc2aacd2961d29db77e63743b655113efc77844a2475",
+      "actual": "f7241eac73308b7f9ca1fc2aacd2961d29db77e63743b655113efc77844a2475",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_01_supplement_one_hot.pdf",
+      "expected": "7f81aa1309c7a7f4649196c8a8f128ff787b157d3ebb3176f99cacddc6fd74ca",
+      "actual": "7f81aa1309c7a7f4649196c8a8f128ff787b157d3ebb3176f99cacddc6fd74ca",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_04_supplement_one_hot.png",
+      "expected": "9f87b962454592981cab9ec6c9fd183d7b80d4a614f75a9a2423be0d5d3cca9f",
+      "actual": "9f87b962454592981cab9ec6c9fd183d7b80d4a614f75a9a2423be0d5d3cca9f",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_04_supplement_one_hot.svg",
+      "expected": "cfa33d67e2d053f4b6351fdc8be23f39e946b2dd8c9cb170a2fa85ca665b38be",
+      "actual": "cfa33d67e2d053f4b6351fdc8be23f39e946b2dd8c9cb170a2fa85ca665b38be",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_04_supplement_one_hot.pdf",
+      "expected": "b2d58d32cbb1915d3251e426690175a8953cbd38e95de15cb94d7ece15c0e627",
+      "actual": "b2d58d32cbb1915d3251e426690175a8953cbd38e95de15cb94d7ece15c0e627",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_05_supplement_one_hot.png",
+      "expected": "7062a9921595170f2c6c9a61baa171e58e094e3c3308819b382bcb02806d4e8c",
+      "actual": "7062a9921595170f2c6c9a61baa171e58e094e3c3308819b382bcb02806d4e8c",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_05_supplement_one_hot.svg",
+      "expected": "48ccbfa20736b6acdefff513f8a449856c5a7635e4b399ba4c53af3d716b30a3",
+      "actual": "48ccbfa20736b6acdefff513f8a449856c5a7635e4b399ba4c53af3d716b30a3",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_05_supplement_one_hot.pdf",
+      "expected": "21f0c6c9d1ef5fb3b1082191182176a26ab87d049c0bbc6bbdcbb36967a6e4e7",
+      "actual": "21f0c6c9d1ef5fb3b1082191182176a26ab87d049c0bbc6bbdcbb36967a6e4e7",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_06_supplement_one_hot.png",
+      "expected": "b3d904eec29fac1b76661892b0fbcc9470157f3addbcdaa3b53c2720a7c51f5b",
+      "actual": "b3d904eec29fac1b76661892b0fbcc9470157f3addbcdaa3b53c2720a7c51f5b",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_06_supplement_one_hot.svg",
+      "expected": "a3c8987816c80a9ad3e1aeffb870336cd4a492198d3b3074cb014639a70ba8f7",
+      "actual": "a3c8987816c80a9ad3e1aeffb870336cd4a492198d3b3074cb014639a70ba8f7",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_06_supplement_one_hot.pdf",
+      "expected": "a8db407eca5e13b3ca13a2f6b6941863d911b80a5016d127b16383926e0d1a69",
+      "actual": "a8db407eca5e13b3ca13a2f6b6941863d911b80a5016d127b16383926e0d1a69",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_01_supplement_ring.png",
+      "expected": "e0a47c97dd1f9c74fe1007cd2ed5b06d74fdad9befefb59562e32c43c7070ba5",
+      "actual": "e0a47c97dd1f9c74fe1007cd2ed5b06d74fdad9befefb59562e32c43c7070ba5",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_01_supplement_ring.svg",
+      "expected": "2d21bf8278969d2009fa35a83bfadcb2c591bb220749674942b85796f5731e63",
+      "actual": "2d21bf8278969d2009fa35a83bfadcb2c591bb220749674942b85796f5731e63",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_01_supplement_ring.pdf",
+      "expected": "1d960529649bd7086c1acfbd6cdc747535a6838836ae8eea3f73f23ae35ddaf5",
+      "actual": "1d960529649bd7086c1acfbd6cdc747535a6838836ae8eea3f73f23ae35ddaf5",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_04_supplement_ring.png",
+      "expected": "a55e543754377a60a4cce6a015dd16fde088df5bd73fb968acd89c7c99982f7b",
+      "actual": "a55e543754377a60a4cce6a015dd16fde088df5bd73fb968acd89c7c99982f7b",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_04_supplement_ring.svg",
+      "expected": "6ed19eccd56807f1d1192da64708a9dd1fca1137a8bb6eb9a5ff20601b793f41",
+      "actual": "6ed19eccd56807f1d1192da64708a9dd1fca1137a8bb6eb9a5ff20601b793f41",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_04_supplement_ring.pdf",
+      "expected": "4c1b803597d7689372e3f7422a89852f542c5aba975d15d630932e59ace031d4",
+      "actual": "4c1b803597d7689372e3f7422a89852f542c5aba975d15d630932e59ace031d4",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_05_supplement_ring.png",
+      "expected": "4a9b37edfb280c266d558ca1a8486e7d608d32ef49dc91b4d9907a9796ed55ec",
+      "actual": "4a9b37edfb280c266d558ca1a8486e7d608d32ef49dc91b4d9907a9796ed55ec",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_05_supplement_ring.svg",
+      "expected": "e5011237581c40ced84936b8912b07766385476d4711cd1d04080d1ced21b3f9",
+      "actual": "e5011237581c40ced84936b8912b07766385476d4711cd1d04080d1ced21b3f9",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_05_supplement_ring.pdf",
+      "expected": "6ddb0bed3d26026f450b1bd6ad9b84fd4a8e4d620aa0d65ca7228858341c1728",
+      "actual": "6ddb0bed3d26026f450b1bd6ad9b84fd4a8e4d620aa0d65ca7228858341c1728",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_06_supplement_ring.png",
+      "expected": "b2533ced4a9311efc277aafe17427fc9bb3ed64af6fb593a4f68275d131cd144",
+      "actual": "b2533ced4a9311efc277aafe17427fc9bb3ed64af6fb593a4f68275d131cd144",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_06_supplement_ring.svg",
+      "expected": "6c41452d41c78001d21c154f4c0dfe035e7b412de3e9f6057d46a2d071ad6431",
+      "actual": "6c41452d41c78001d21c154f4c0dfe035e7b412de3e9f6057d46a2d071ad6431",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_06_supplement_ring.pdf",
+      "expected": "44b438ee723f0d1c3ddb1266c9c9929e8c7a7cc3ed84330dcbc8ddb8a1e9453a",
+      "actual": "44b438ee723f0d1c3ddb1266c9c9929e8c7a7cc3ed84330dcbc8ddb8a1e9453a",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_01_supplement_topology.png",
+      "expected": "add00a22404663f4b6a0ce7749b72e7f9e6941d5866af74bc3993db7ee185347",
+      "actual": "add00a22404663f4b6a0ce7749b72e7f9e6941d5866af74bc3993db7ee185347",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_01_supplement_topology.svg",
+      "expected": "9b5fa1c616761eecd0c3779e0de55a00f0e1b5d7d4ee172d3f0b55c75cdc29ec",
+      "actual": "9b5fa1c616761eecd0c3779e0de55a00f0e1b5d7d4ee172d3f0b55c75cdc29ec",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_01_supplement_topology.pdf",
+      "expected": "c9c42af46fdc61e9eb0db4ed0f024e2128c7e70fdb271f78accb605c8b6bc890",
+      "actual": "c9c42af46fdc61e9eb0db4ed0f024e2128c7e70fdb271f78accb605c8b6bc890",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_04_supplement_topology.png",
+      "expected": "8f1a161fe67f90ee2547fa69426c83157b76dde7f36bf613a4b77dcbde00560e",
+      "actual": "8f1a161fe67f90ee2547fa69426c83157b76dde7f36bf613a4b77dcbde00560e",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_04_supplement_topology.svg",
+      "expected": "657595772b433091f0dfc3a78a74e7d7ed70198e41ddea579aa4f3d6668b2e4e",
+      "actual": "657595772b433091f0dfc3a78a74e7d7ed70198e41ddea579aa4f3d6668b2e4e",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_04_supplement_topology.pdf",
+      "expected": "a17b0313d03c580af44b82a6918e6798a57afa436e6a2c4e70d57accfe879eff",
+      "actual": "a17b0313d03c580af44b82a6918e6798a57afa436e6a2c4e70d57accfe879eff",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_05_supplement_topology.png",
+      "expected": "8cc34646f3db0b81abc844518f3c506f9a8053d60c96a000316442a2de2e90a9",
+      "actual": "8cc34646f3db0b81abc844518f3c506f9a8053d60c96a000316442a2de2e90a9",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_05_supplement_topology.svg",
+      "expected": "c2a276cc06ca78519bcd5a805ce4c07cefec0bc2020b76562177235c183e50bf",
+      "actual": "c2a276cc06ca78519bcd5a805ce4c07cefec0bc2020b76562177235c183e50bf",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_05_supplement_topology.pdf",
+      "expected": "05d222852d4656c0559a62796fbea682775c090e3eac757d829cd3e55e59574d",
+      "actual": "05d222852d4656c0559a62796fbea682775c090e3eac757d829cd3e55e59574d",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_06_supplement_topology.png",
+      "expected": "7df2070c42182752b48dc000950788f94b027c0bc8a221151595eae7904712af",
+      "actual": "7df2070c42182752b48dc000950788f94b027c0bc8a221151595eae7904712af",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_06_supplement_topology.svg",
+      "expected": "c46ebef679ba467551b3c4b4b1196e2f26237aaf428527e2c120f6fbf01138de",
+      "actual": "c46ebef679ba467551b3c4b4b1196e2f26237aaf428527e2c120f6fbf01138de",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_06_supplement_topology.pdf",
+      "expected": "30163212049a3c858a16211f2846558173b2dbec712186d7acac67c286fd6762",
+      "actual": "30163212049a3c858a16211f2846558173b2dbec712186d7acac67c286fd6762",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\comparison\\figure_10_quantitative.png",
+      "expected": "916f628ad05a952f82d013b8ec8c965252914f4b16500992d034228e1d0d96fd",
+      "actual": "916f628ad05a952f82d013b8ec8c965252914f4b16500992d034228e1d0d96fd",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\comparison\\figure_10_quantitative.svg",
+      "expected": "77e1b9e7ce8c111c371962c5c3aa9071eb1728448d9b1dbd43d0d8d96d97bfa1",
+      "actual": "77e1b9e7ce8c111c371962c5c3aa9071eb1728448d9b1dbd43d0d8d96d97bfa1",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\comparison\\figure_10_quantitative.pdf",
+      "expected": "77495836f1e7cbaefb50a05c91372a70130eecd10f26703b7a998c550f730165",
+      "actual": "77495836f1e7cbaefb50a05c91372a70130eecd10f26703b7a998c550f730165",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_03_controls_one_hot.png",
+      "expected": "b7b2e36353d7a34ab6625d1b00d8c1f70aa79dee70ea625214978521682838ba",
+      "actual": "b7b2e36353d7a34ab6625d1b00d8c1f70aa79dee70ea625214978521682838ba",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_03_controls_one_hot.svg",
+      "expected": "3c951b176730f62a55a6f503109e14aaf04be424f3cb7d459de130b772c8704e",
+      "actual": "3c951b176730f62a55a6f503109e14aaf04be424f3cb7d459de130b772c8704e",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_03_controls_one_hot.pdf",
+      "expected": "a254fb224373081319c50d0d1a8f1fe46c60dd4f0a73e88896115a772ecb313e",
+      "actual": "a254fb224373081319c50d0d1a8f1fe46c60dd4f0a73e88896115a772ecb313e",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_06_input_one_hot.png",
+      "expected": "99d7f923b28952f12e53bc9cb7d726cb5f825454094fabc2989c43ab43f47b64",
+      "actual": "99d7f923b28952f12e53bc9cb7d726cb5f825454094fabc2989c43ab43f47b64",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_06_input_one_hot.svg",
+      "expected": "0b3eaa89afbfb2524efc693fbb1513fd3739335a3468fbc9ed6938362a616adb",
+      "actual": "0b3eaa89afbfb2524efc693fbb1513fd3739335a3468fbc9ed6938362a616adb",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_06_input_one_hot.pdf",
+      "expected": "b7bc7f32927c9fc7656acdf15ec356e2992536c5a936a4319892360523584d35",
+      "actual": "b7bc7f32927c9fc7656acdf15ec356e2992536c5a936a4319892360523584d35",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_03_controls_ring.png",
+      "expected": "d2b9487540f241b22429465e490a030090dab825cdfa117c240afa7190260663",
+      "actual": "d2b9487540f241b22429465e490a030090dab825cdfa117c240afa7190260663",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_03_controls_ring.svg",
+      "expected": "70dcf1e84d61d964547bdede6a4e483c54e62b278e9637afaeb58ff0b11a63a1",
+      "actual": "70dcf1e84d61d964547bdede6a4e483c54e62b278e9637afaeb58ff0b11a63a1",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_03_controls_ring.pdf",
+      "expected": "8f032decd476bc8d241e4b0bd1e2980fb04a8b2e507c552bac2d5b9a78c8a4e7",
+      "actual": "8f032decd476bc8d241e4b0bd1e2980fb04a8b2e507c552bac2d5b9a78c8a4e7",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_06_input_ring.png",
+      "expected": "6bff4d417a715567938ca2af09434efc12eafd65bcfea59211a00b81ce47f13d",
+      "actual": "6bff4d417a715567938ca2af09434efc12eafd65bcfea59211a00b81ce47f13d",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_06_input_ring.svg",
+      "expected": "4401d5f46299e8510d7bf07b34b62de354cfbddac2155a85f09e8b410815bb0f",
+      "actual": "4401d5f46299e8510d7bf07b34b62de354cfbddac2155a85f09e8b410815bb0f",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_06_input_ring.pdf",
+      "expected": "a454412b6cc5eea8d1c29307fe9dd56b62edb6e6c7d060e0ad31076cf1c3b76f",
+      "actual": "a454412b6cc5eea8d1c29307fe9dd56b62edb6e6c7d060e0ad31076cf1c3b76f",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_03_controls_topology.png",
+      "expected": "7824324b7f2c25ff09da4c77db2cefc6a34ad587ff0210ea11f3f4a4309dd55c",
+      "actual": "7824324b7f2c25ff09da4c77db2cefc6a34ad587ff0210ea11f3f4a4309dd55c",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_03_controls_topology.svg",
+      "expected": "a681a38565f4092fd835eea7bd6135ed3cb48727f95ced17815203473dede1f6",
+      "actual": "a681a38565f4092fd835eea7bd6135ed3cb48727f95ced17815203473dede1f6",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_03_controls_topology.pdf",
+      "expected": "23a9f7be09493b90c9322e1e6a50201d2294cc0c05d1cde192f99c10fffa8a02",
+      "actual": "23a9f7be09493b90c9322e1e6a50201d2294cc0c05d1cde192f99c10fffa8a02",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_06_input_topology.png",
+      "expected": "c8d43c6aa483055a83698ff42080233e755b11c2fa7a069ee56af5d6aa8a1c28",
+      "actual": "c8d43c6aa483055a83698ff42080233e755b11c2fa7a069ee56af5d6aa8a1c28",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_06_input_topology.svg",
+      "expected": "6396b4ef14c7f6f4c0c9f8e2a1bbbadd50be51af1873136c8b29fb57652621c6",
+      "actual": "6396b4ef14c7f6f4c0c9f8e2a1bbbadd50be51af1873136c8b29fb57652621c6",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_06_input_topology.pdf",
+      "expected": "ab22d9873561157ae265cdc77b37be0eff1e78deb7a1b9333e3460e77df573fe",
+      "actual": "ab22d9873561157ae265cdc77b37be0eff1e78deb7a1b9333e3460e77df573fe",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_07_noise_one_hot.png",
+      "expected": "eb98a53b367888d1205cbd7d06966e292e49df530b2c913c816a5bd96c5d8cc4",
+      "actual": "eb98a53b367888d1205cbd7d06966e292e49df530b2c913c816a5bd96c5d8cc4",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_07_noise_one_hot.svg",
+      "expected": "37df6828655b4ce62e3c9a1fa193ae0375785cdabb73063109275c55acb45ae9",
+      "actual": "37df6828655b4ce62e3c9a1fa193ae0375785cdabb73063109275c55acb45ae9",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\one_hot\\figure_07_noise_one_hot.pdf",
+      "expected": "487b756f5709f295d8cf78d61de2b7204a62543caf4b530c546802c99dcf743e",
+      "actual": "487b756f5709f295d8cf78d61de2b7204a62543caf4b530c546802c99dcf743e",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_07_noise_ring.png",
+      "expected": "1835e71cf33bbc5b68031fd2b0aa1b64a7d8d4e55c47f11829e9df71a3d9d55e",
+      "actual": "1835e71cf33bbc5b68031fd2b0aa1b64a7d8d4e55c47f11829e9df71a3d9d55e",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_07_noise_ring.svg",
+      "expected": "c7d66e8b0481df2810bcab246391e6b76f9ae096a10c6bb91889616929286b64",
+      "actual": "c7d66e8b0481df2810bcab246391e6b76f9ae096a10c6bb91889616929286b64",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\ring\\figure_07_noise_ring.pdf",
+      "expected": "57685d5dfc7f5d0289a08bedeb80dbabbc6e551d826d1bd9e606cf89caaf60d3",
+      "actual": "57685d5dfc7f5d0289a08bedeb80dbabbc6e551d826d1bd9e606cf89caaf60d3",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_07_noise_topology.png",
+      "expected": "292e57667b9be737094bdfca76acda70b60738fa50bc28682f196b60412b0a0f",
+      "actual": "292e57667b9be737094bdfca76acda70b60738fa50bc28682f196b60412b0a0f",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_07_noise_topology.svg",
+      "expected": "d1d110d44d2209f8239f4260ad653667501a5cf1a4b83e6a0f0c92622241e088",
+      "actual": "d1d110d44d2209f8239f4260ad653667501a5cf1a4b83e6a0f0c92622241e088",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\figures\\topology\\figure_07_noise_topology.pdf",
+      "expected": "6d82ff3bec7393832d129f39ba89642079ef9168facd573183db187becb06b52",
+      "actual": "6d82ff3bec7393832d129f39ba89642079ef9168facd573183db187becb06b52",
+      "matches": true
+    }
+  ],
+  "dynamics_output_hashes": [
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L0_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L0_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L0_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L0_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L1_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L1_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L1_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L1_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L2_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L2_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L2_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L2_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L3_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L3_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L3_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L3_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L4_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L4_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L4_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L4_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L5_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L5_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L5_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\one_hot_L5_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L0_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L0_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L0_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L0_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L1_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L1_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L1_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L1_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L2_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L2_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L2_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L2_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L3_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L3_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L3_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L3_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L4_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L4_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L4_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L4_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L5_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L5_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L5_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\ring_L5_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L0_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L0_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L0_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L0_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L1_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L1_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L1_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L1_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L2_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L2_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L2_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L2_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L3_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L3_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L3_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L3_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L4_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L4_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L4_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L4_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L5_R1.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L5_R2.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L5_R3.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\data\\dynamics\\topology_L5_R4.npz",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\metrics\\dynamics_endpoints.csv",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\metrics\\dynamics_fixed_points.csv",
+      "matches": true
+    },
+    {
+      "file": "artifacts\\neural_representation_v2\\metrics\\dynamics_perturbation.csv",
+      "matches": true
+    }
+  ],
+  "source_files": {
+    "handcrafted_ei/evaluation/reference_adapter.py": "773946508a9aef225e23d68c85217608a294b31a98656540ed241c980c9dcba9",
+    "handcrafted_ei/tests/test_reference_adapter.py": "5eb48670f5892b8183c45b7f5ff90b5f8f9ff31a3a6477d70a2313b27dbca150",
+    "handcrafted_ei/evaluation/population_data.py": "17ffac139862eb464d9323c71e4880374af8fa141b4b0738e1b978cc581f441d",
+    "handcrafted_ei/evaluation/population_dynamics.py": "4209b2de283f9da283f18c8ed814c88ef0a2728374a12a0f64ea46cc229c93c7",
+    "handcrafted_ei/visualization/dynamics_figures.py": "405762963b5c8adb8bb5c64cfe802e24432eb7fbb5d6023c50e2f0230ce51a7e"
+  }
+}

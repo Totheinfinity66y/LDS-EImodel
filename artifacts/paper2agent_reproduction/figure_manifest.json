@@ -1,0 +1,320 @@
+{
+  "figures": [
+    {
+      "id": "one_hot_figure_08",
+      "figure_number": 8,
+      "encoding": "one_hot",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_08.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_08.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_08.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_08.png": "c565fcb07cbf12ab331dfa9c27661054deb079f4104d1846667a678806010916",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_08.svg": "6f20def279c10a25cb2b96671ca34b19e4da248c65c25a836709809a9c89f479",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_08.pdf": "7e2125e7e9fdca9c9c75b696af0e60ffe7a5609f78b7fe529e279382ea9538a4"
+      },
+      "scientific_status": "METHOD ADAPTED / LDS-specific diagnosis",
+      "population": "all132; selected display units explicit",
+      "source": "Inagaki 2019 Fig5/6 and ED1/9",
+      "metrics_directory": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\one_hot",
+      "dpi": 300
+    },
+    {
+      "id": "one_hot_figure_09_input_source_time",
+      "figure_number": 9,
+      "encoding": "one_hot",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_input_source_time.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_input_source_time.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_input_source_time.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_input_source_time.png": "96545ef3fea6f4386e2a93661fc00d925bf313663a779ef9898c81a3cf0f0af7",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_input_source_time.svg": "048d43a0bcbf5018df45587bd293b2ef12ce7dd2a1c7cae3374637ddfdcfaa59",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_input_source_time.pdf": "c2552c70feef30a41233ba659c7b9824ef542e656302e893fcb6f879beb8e512"
+      },
+      "scientific_status": "METHOD ADAPTED / LDS-specific diagnosis",
+      "population": "all132; selected display units explicit",
+      "source": "Zhou2023 Fig7; state and flow explicitly supplemental",
+      "metrics_directory": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\one_hot",
+      "dpi": 300
+    },
+    {
+      "id": "one_hot_figure_09_input_R3_fixed_clock",
+      "figure_number": 9,
+      "encoding": "one_hot",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_input_R3_fixed_clock.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_input_R3_fixed_clock.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_input_R3_fixed_clock.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_input_R3_fixed_clock.png": "6d457f09bd3abf4bcd24e1c67738f253262218f601677d872299135944e5dd83",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_input_R3_fixed_clock.svg": "45f509dbee5d5c0e97b64f3939b13e68f84d3be77a34f082c8aaf6252a1e1c02",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_input_R3_fixed_clock.pdf": "be1f7af630f5e6a05867b0e65acac19d6aa13545d71eedadbf4046788a1e29ce"
+      },
+      "scientific_status": "METHOD ADAPTED / LDS-specific diagnosis",
+      "population": "all132; selected display units explicit",
+      "source": "Zhou2023 Fig7; state and flow explicitly supplemental",
+      "metrics_directory": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\one_hot",
+      "dpi": 300
+    },
+    {
+      "id": "one_hot_figure_09_state",
+      "figure_number": 9,
+      "encoding": "one_hot",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_state.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_state.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_state.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_state.png": "5144bd9844d31de67cec152aaffbabaedc5bde426e078add6f6cb4ba7259a69e",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_state.svg": "a241784aa00f65f9ceebf21b22a46c46877eedf2d7a219f8235d8c65aebaafb2",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_state.pdf": "046efb487aae94ef1e6d0a2fa5706b97bb2b24ce745154b57749555229eb8682"
+      },
+      "scientific_status": "METHOD ADAPTED / LDS-specific diagnosis",
+      "population": "all132; selected display units explicit",
+      "source": "Zhou2023 Fig7; state and flow explicitly supplemental",
+      "metrics_directory": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\one_hot",
+      "dpi": 300
+    },
+    {
+      "id": "one_hot_figure_09_flow",
+      "figure_number": 9,
+      "encoding": "one_hot",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_flow.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_flow.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_flow.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_flow.png": "c68fea6fdac9d16c2a1f875170d84e73ea747d4b903fb03f7442d39b3576e0df",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_flow.svg": "023c9f7681a36550a1cf25bf18606936e6ea0ae74c4e0afbeb623276e52ed56d",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\one_hot\\figure_09_flow.pdf": "188dddb62815ad99d62bfff0ae493b662a2377d0b39d480997ebcdac9ba39bfc"
+      },
+      "scientific_status": "METHOD ADAPTED / LDS-specific diagnosis",
+      "population": "all132; selected display units explicit",
+      "source": "Zhou2023 Fig7; state and flow explicitly supplemental",
+      "metrics_directory": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\one_hot",
+      "dpi": 300
+    },
+    {
+      "id": "ring_figure_08",
+      "figure_number": 8,
+      "encoding": "ring",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_08.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_08.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_08.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_08.png": "ecc12fa834410755a05f0d8e7227625e27bf4566c3452b743b13c66e15bbddcc",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_08.svg": "11a199e53fad900d807900365aaca2b36b51498b9b529ad6381b5c06f87077d3",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_08.pdf": "67a664d53bbcbd1eab1e7b75d3b23791ad481c4e2589826f070da1850e0bff2f"
+      },
+      "scientific_status": "METHOD ADAPTED / LDS-specific diagnosis",
+      "population": "all132; selected display units explicit",
+      "source": "Inagaki 2019 Fig5/6 and ED1/9",
+      "metrics_directory": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\ring",
+      "dpi": 300
+    },
+    {
+      "id": "ring_figure_09_input_source_time",
+      "figure_number": 9,
+      "encoding": "ring",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_input_source_time.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_input_source_time.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_input_source_time.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_input_source_time.png": "52b9770d8c28ba0707f3628eba47b59048071ff78958b1523249b321e0f4ec98",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_input_source_time.svg": "814ee0692b9ed66cf5f678c785dd9f9c8226ed7468d4538edc8117728f3718b1",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_input_source_time.pdf": "d3b0b8fa5294f269aa166635371865337f42430f8be737b30c108810b7ec00d2"
+      },
+      "scientific_status": "METHOD ADAPTED / LDS-specific diagnosis",
+      "population": "all132; selected display units explicit",
+      "source": "Zhou2023 Fig7; state and flow explicitly supplemental",
+      "metrics_directory": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\ring",
+      "dpi": 300
+    },
+    {
+      "id": "ring_figure_09_input_R3_fixed_clock",
+      "figure_number": 9,
+      "encoding": "ring",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_input_R3_fixed_clock.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_input_R3_fixed_clock.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_input_R3_fixed_clock.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_input_R3_fixed_clock.png": "968de587673a6ea681619dc9d5f4ea5fe3326c34910c058819b1eede3a627c9e",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_input_R3_fixed_clock.svg": "dc71ad284ca08c1952362e05845a7ad7007cb599cc4604cf34aaff2d6f5d4e8a",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_input_R3_fixed_clock.pdf": "432ba50cb15a9714f3ebcd7da00706d6cfb89adc81d452df9a853df98bb8ca20"
+      },
+      "scientific_status": "METHOD ADAPTED / LDS-specific diagnosis",
+      "population": "all132; selected display units explicit",
+      "source": "Zhou2023 Fig7; state and flow explicitly supplemental",
+      "metrics_directory": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\ring",
+      "dpi": 300
+    },
+    {
+      "id": "ring_figure_09_state",
+      "figure_number": 9,
+      "encoding": "ring",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_state.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_state.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_state.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_state.png": "6845a67cdf1cc9691b0bcd7f58604a729fe2d889d0b4abb06ffb2fbfcb584cc3",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_state.svg": "e9a169c21ceb3e2cfe9c7eabe52c6d8e2625f766efd60c795ef43c2c6bca7cbf",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_state.pdf": "f308896d9adc39387d4e0cb244e076cf01304d2ccf6468e811406fd8a6e83772"
+      },
+      "scientific_status": "METHOD ADAPTED / LDS-specific diagnosis",
+      "population": "all132; selected display units explicit",
+      "source": "Zhou2023 Fig7; state and flow explicitly supplemental",
+      "metrics_directory": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\ring",
+      "dpi": 300
+    },
+    {
+      "id": "ring_figure_09_flow",
+      "figure_number": 9,
+      "encoding": "ring",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_flow.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_flow.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_flow.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_flow.png": "51a96cff911250471aeea7b6b05be9beffba03bf78b6090975c82522ed44cbc6",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_flow.svg": "0aa9c02bf521b012540460191abdbaa76a2d9d30c8b95e2896edff1956fcf358",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\ring\\figure_09_flow.pdf": "8fd1a233852c293053397434119c98df4d356d2fabc76bcc5e1e4d0c7a44aacd"
+      },
+      "scientific_status": "METHOD ADAPTED / LDS-specific diagnosis",
+      "population": "all132; selected display units explicit",
+      "source": "Zhou2023 Fig7; state and flow explicitly supplemental",
+      "metrics_directory": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\ring",
+      "dpi": 300
+    },
+    {
+      "id": "topology_figure_08",
+      "figure_number": 8,
+      "encoding": "topology",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_08.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_08.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_08.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_08.png": "e093467ee0f917094c7811cac20db3e1bc2cb274abf79c60625e8778372eee8c",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_08.svg": "1cc6c71872a3ac780307cee775ba062e313fbed080c14c4f5f725eab0f5faefe",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_08.pdf": "3758aa221102c78a2cb978338aa365e9679df1dd7cea4131fd77512ffbbf490b"
+      },
+      "scientific_status": "METHOD ADAPTED / LDS-specific diagnosis",
+      "population": "all132; selected display units explicit",
+      "source": "Inagaki 2019 Fig5/6 and ED1/9",
+      "metrics_directory": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\topology",
+      "dpi": 300
+    },
+    {
+      "id": "topology_figure_09_input_source_time",
+      "figure_number": 9,
+      "encoding": "topology",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_input_source_time.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_input_source_time.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_input_source_time.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_input_source_time.png": "728a726152e50c196fbb298ae697c6dc5d91c318d41bf2fc09f9e529da2dbbe2",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_input_source_time.svg": "c2f9bb4890b8bd73e8e4504cad12cf0b81d86877dc98c6e1990f3d169af12c45",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_input_source_time.pdf": "2734a89bd9ee25ded73631abfb98e41f4d9516794589965c3be88748547951e7"
+      },
+      "scientific_status": "METHOD ADAPTED / LDS-specific diagnosis",
+      "population": "all132; selected display units explicit",
+      "source": "Zhou2023 Fig7; state and flow explicitly supplemental",
+      "metrics_directory": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\topology",
+      "dpi": 300
+    },
+    {
+      "id": "topology_figure_09_input_R3_fixed_clock",
+      "figure_number": 9,
+      "encoding": "topology",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_input_R3_fixed_clock.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_input_R3_fixed_clock.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_input_R3_fixed_clock.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_input_R3_fixed_clock.png": "9649aca001408c1e490ebe74e00b2756267f37626eb8121a79522e97c2185ca0",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_input_R3_fixed_clock.svg": "b29c32f4ff1098bc50b17dc8bee64a5afcac5ac756ae655fc85dc155e96f4116",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_input_R3_fixed_clock.pdf": "0c464a7a23e5661ed274684b5bcb12906e4e786e791f4088429217b8fc1a2aa7"
+      },
+      "scientific_status": "METHOD ADAPTED / LDS-specific diagnosis",
+      "population": "all132; selected display units explicit",
+      "source": "Zhou2023 Fig7; state and flow explicitly supplemental",
+      "metrics_directory": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\topology",
+      "dpi": 300
+    },
+    {
+      "id": "topology_figure_09_state",
+      "figure_number": 9,
+      "encoding": "topology",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_state.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_state.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_state.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_state.png": "5076abc9f7fbea96bc500915b59c83c4a576a7e688401157e96beedb724c528b",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_state.svg": "59a5355fdeaae99050551428a25c3302401aa897527329cdafbf7eb735e3080f",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_state.pdf": "2e6cc5d3cfe01040a9ae3294c1da1c63f00facd06b0a7506b9f07993bf9e3967"
+      },
+      "scientific_status": "METHOD ADAPTED / LDS-specific diagnosis",
+      "population": "all132; selected display units explicit",
+      "source": "Zhou2023 Fig7; state and flow explicitly supplemental",
+      "metrics_directory": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\topology",
+      "dpi": 300
+    },
+    {
+      "id": "topology_figure_09_flow",
+      "figure_number": 9,
+      "encoding": "topology",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_flow.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_flow.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_flow.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_flow.png": "42c92dee9785fbf5e2ee9d8ce85b4d40604bf6a6e7d3d7661220a3e27204712b",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_flow.svg": "03c3cc4506ec6f71908feb0a32d82a8061209ae420ee03a4363eed7a7b3fe795",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\topology\\figure_09_flow.pdf": "b86a01b7aa72bd06d038213b35914074ac2944b841b0624a4284217bf09726d9"
+      },
+      "scientific_status": "METHOD ADAPTED / LDS-specific diagnosis",
+      "population": "all132; selected display units explicit",
+      "source": "Zhou2023 Fig7; state and flow explicitly supplemental",
+      "metrics_directory": "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\lds_results\\topology",
+      "dpi": 300
+    },
+    {
+      "id": "figure_10_audited",
+      "figure_number": 10,
+      "encoding": "comparison",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\comparison\\figure_10_audited.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\comparison\\figure_10_audited.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\comparison\\figure_10_audited.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\comparison\\figure_10_audited.png": "eb69ad7589e945549bebc755d02a317233116e5a1b77b93a1b9d2cc2894ee980",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\comparison\\figure_10_audited.svg": "00adbe05390b123bb88237727aa390b78d5b3af209e04c37afb37c0c26797ea0",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\comparison\\figure_10_audited.pdf": "c33c13f1c906b93a52982542e9b4f9843c586d3734132d4c0f67e0529bf2b391"
+      },
+      "dpi": 300
+    }
+  ]
+}

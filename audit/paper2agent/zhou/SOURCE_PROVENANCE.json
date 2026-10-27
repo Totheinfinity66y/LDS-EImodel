@@ -1,0 +1,54 @@
+{
+  "paper": {
+    "path": "artifacts/neural_representation_v2/reference_evidence/Zhou2023.pdf",
+    "sha256": "6317dd6e78c42701f25e5e5b75486810f9e84d18886bc78a32b739858068ef62",
+    "doi": "10.1038/s41562-023-01592-y",
+    "pages": 18,
+    "text_read": "full-document extraction; focused reading pages9/10/12/13",
+    "visually_reviewed_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  "author_code": {
+    "url": "https://github.com/BuonoLab/Timing-WM_RNN_2022",
+    "download_url": "https://codeload.github.com/BuonoLab/Timing-WM_RNN_2022/zip/refs/heads/main",
+    "zip_sha256": "6962bd5ad1895d44fcd43c5f410c048cdfa06e306085c3ffcb5b10a01781b7db",
+    "commit": "not queried; immutable archive bytes pinned by sha256",
+    "source_modified": false,
+    "source_execution": "task.generate_trials only; no trained RNN or Figure7 analysis execution"
+  },
+  "paper2skill": {
+    "entry": "C:/Users/Totheinfinity/.codex/skills/paper2agent/paper2skill/scripts/paper_bundle.py",
+    "commands": [
+      "prepare",
+      "extract",
+      "review-aid",
+      "build --draft",
+      "verify --strict",
+      "build --require-reviewed",
+      "verify --strict (exit0)"
+    ],
+    "verification": "audit/paper2agent/zhou/paper-review/verification.json",
+    "strict_status": "reviewed",
+    "mechanical_ok": true,
+    "known_environment_limit": "fontTools missing in paper2agent-test, warnings preserved; no install",
+    "final_package": "artifacts/paper2agent_reproduction/reproduced_papers/zhou/verified-final/zhou2023-paper"
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "reviewed_items": 46,
+  "png_npz_items": 37,
+  "png_npz_mismatches": [
+    {
+      "file": "artifacts/paper2agent_reproduction/figures/one_hot/figure_09_flow.png",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/figures/one_hot/figure_09_state.png",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/figures/ring/figure_09_flow.png",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/figures/ring/figure_09_state.png",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/figures/topology/figure_09_flow.png",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/figures/topology/figure_09_state.png",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/one_hot/input_R3_fixed_clock_11.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/one_hot/input_R3_fixed_clock_19.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/one_hot/input_R3_fixed_clock_7.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/one_hot/input_source_time_11.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/one_hot/input_source_time_19.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/one_hot/input_source_time_7.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/one_hot/local_flow.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/one_hot/state_perturbation.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/ring/input_R3_fixed_clock_11.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/ring/input_R3_fixed_clock_19.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/ring/input_R3_fixed_clock_7.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/ring/input_source_time_11.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/ring/input_source_time_19.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/ring/input_source_time_7.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/ring/local_flow.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/ring/state_perturbation.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/topology/input_R3_fixed_clock_11.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/topology/input_R3_fixed_clock_19.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/topology/input_R3_fixed_clock_7.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/topology/input_source_time_11.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/topology/input_source_time_19.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/topology/input_source_time_7.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/topology/local_flow.npz",
+      "matches": false
+    },
+    {
+      "file": "artifacts/paper2agent_reproduction/lds_results/topology/state_perturbation.npz",
+      "matches": false
+    }
+  ],
+  "other_changed_files": [
+    "handcrafted_ei/evaluation/reference_reproduction.py",
+    "artifacts/paper2agent_reproduction/FIGURE_CAPTIONS.md",
+    "artifacts/paper2agent_reproduction/figures/one_hot/figure_09_flow.png",
+    "artifacts/paper2agent_reproduction/figures/one_hot/figure_09_state.png",
+    "artifacts/paper2agent_reproduction/figures/ring/figure_09_flow.png",
+    "artifacts/paper2agent_reproduction/figures/ring/figure_09_state.png",
+    "artifacts/paper2agent_reproduction/figures/topology/figure_09_flow.png",
+    "artifacts/paper2agent_reproduction/figures/topology/figure_09_state.png",
+    "artifacts/paper2agent_reproduction/lds_results/one_hot/input_R3_fixed_clock_11.npz",
+    "artifacts/paper2agent_reproduction/lds_results/one_hot/input_R3_fixed_clock_19.npz",
+    "artifacts/paper2agent_reproduction/lds_results/one_hot/input_R3_fixed_clock_7.npz",
+    "artifacts/paper2agent_reproduction/lds_results/one_hot/input_source_time_11.npz",
+    "artifacts/paper2agent_reproduction/lds_results/one_hot/input_source_time_19.npz",
+    "artifacts/paper2agent_reproduction/lds_results/one_hot/input_source_time_7.npz",
+    "artifacts/paper2agent_reproduction/lds_results/one_hot/local_flow.npz",
+    "artifacts/paper2agent_reproduction/lds_results/one_hot/state_perturbation.npz",
+    "artifacts/paper2agent_reproduction/lds_results/ring/input_R3_fixed_clock_11.npz",
+    "artifacts/paper2agent_reproduction/lds_results/ring/input_R3_fixed_clock_19.npz",
+    "artifacts/paper2agent_reproduction/lds_results/ring/input_R3_fixed_clock_7.npz",
+    "artifacts/paper2agent_reproduction/lds_results/ring/input_source_time_11.npz",
+    "artifacts/paper2agent_reproduction/lds_results/ring/input_source_time_19.npz",
+    "artifacts/paper2agent_reproduction/lds_results/ring/input_source_time_7.npz",
+    "artifacts/paper2agent_reproduction/lds_results/ring/local_flow.npz",
+    "artifacts/paper2agent_reproduction/lds_results/ring/state_perturbation.npz",
+    "artifacts/paper2agent_reproduction/lds_results/topology/input_R3_fixed_clock_11.npz",
+    "artifacts/paper2agent_reproduction/lds_results/topology/input_R3_fixed_clock_19.npz",
+    "artifacts/paper2agent_reproduction/lds_results/topology/input_R3_fixed_clock_7.npz",
+    "artifacts/paper2agent_reproduction/lds_results/topology/input_source_time_11.npz",
+    "artifacts/paper2agent_reproduction/lds_results/topology/input_source_time_19.npz",
+    "artifacts/paper2agent_reproduction/lds_results/topology/input_source_time_7.npz",
+    "artifacts/paper2agent_reproduction/lds_results/topology/local_flow.npz",
+    "artifacts/paper2agent_reproduction/lds_results/topology/state_perturbation.npz"
+  ]
+}

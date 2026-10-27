@@ -92,3 +92,18 @@ $env:PATH="C:\Users\Totheinfinity\.conda\envs\analysis\Library\bin;"+$env:PATH
 引用来源包括Kobak2016（dPCA）、Churchland2012（群体轨迹）、Mante2013（任务变量投影）、Gallego2018（子空间角度/VAF）、Kriegeskorte2008（RSA）、Seelig2015（环状定位）、Inagaki2019（离散吸引子）、Zhou2023（扰动轨迹）与Langdon2023（流形综述）。完整作者、DOI与具体panel见参考文档。
 
 全网络分析不删除静息神经元。输入维数与神经PCA维数分开；分支结构是handcrafted先验。等距相关性保留NA，报告微小距离效应量；确定性条件不伪造置信区间。稳定性在固定外驱及完整状态空间判断，六个离散位置不证明连续环吸引子。分析不改变模型参数或readout-first时序。
+# 文献方法审计与当前重绘入口
+
+本地新版模型与历史结果为准。当前源方法审计见 [完整科研报告](artifacts/paper2agent_reproduction/FINAL_REPRODUCTION_REPORT.md)、[独立评审](artifacts/paper2agent_reproduction/INDEPENDENT_REVIEW.md)、[阶段证据](audit/REPRODUCTION_STATUS.md)、[Skill能力实测](audit/PAPER2AGENT_CAPABILITIES.md)。历史Figure1–10保留于 `artifacts/neural_representation_v2`；新的三编码Figure8/9及Figure10位于 `artifacts/paper2agent_reproduction/figures`。
+
+```powershell
+$env:PATH="C:\Users\Totheinfinity\.conda\envs\analysis\Library\bin;"+$env:PATH
+$env:PYTHONUTF8="1"
+$env:OPENBLAS_NUM_THREADS="1"
+& C:\Users\Totheinfinity\.conda\envs\analysis\python.exe -m unittest handcrafted_ei.tests.test_reference_adapter -v
+& C:\Users\Totheinfinity\.conda\envs\analysis\python.exe -m handcrafted_ei.visualization.plot_all --reference-grounded
+```
+
+全入口依次运行校验、lossless adapter、独立副本分析、重绘8/9、复核1–7并更新10、源图三列内部对照与文件QA。亦可单独运行 `python -m handcrafted_ei.evaluation.reference_reproduction`、`python -m handcrafted_ei.evaluation.reference_consistency`、`python audit/numerical/independent_check.py`；全回归命令保持 `python -m unittest discover -s handcrafted_ei/tests -v`。无安装步骤，先核对已有环境；全量盆轨迹只本地留存，由manifest索引。
+
+Paper2Agent本地实际入口为 `C:/Users/Totheinfinity/.codex/skills/paper2agent/SKILL.md`。两论文独立专家证据位于 `audit/paper2agent/inagaki` 与 `audit/paper2agent/zhou`；四轮通信、数据/figure契约及反向评审持久保存。阅读包路径和真实转换/strict命令见各目录 `ORIGINAL_REPRODUCTION_REPORT.md`。Skill不自动执行论文算法；作者未公开的raw/权重或不可用MATLAB runtime不以重建代码冒充。原实验精确复现的BLOCKED与LDS METHOD ADAPTED必须分别阅读；源图与文献包本地使用，不擅自发布。

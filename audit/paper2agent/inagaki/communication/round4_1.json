@@ -1,0 +1,40 @@
+{
+  "round": "4.1",
+  "agent_id": "/root/inagaki",
+  "request": "复查修复A全量纵轴与F kink代表谱，实际重开三编码图和三列对照",
+  "status": "PASS_WITH_LIMITS_LDS_ADAPTATION",
+  "source_exact_execution": "BLOCKED_MATLAB_RUNTIME_AND_EXPERIMENTAL_PIPELINE_NOT_RUN",
+  "dimensions": {
+    "data": "PASS_ADAPTED",
+    "mathematical": "PASS_WITH_LIMITS_LOCAL_DAG_NOT_GLOBAL_BASIN",
+    "experimental_protocol": "ADAPTED_NOT_EXACT",
+    "statistical": "PASS_DESCRIPTIVE_NO_PSEUDOREPLICATION",
+    "visualization": "PASS: A0..1.05 and actual1.23e-5 effect; F representative slope0.5; actual3 images inspected",
+    "scientific_interpretation": "PASS_WITH_LIMITS:24 task-seeded tonic-conditioned local equilibria; not exhaustive attractor count"
+  },
+  "resolved": [
+    "E: saturation tail visual exaggeration fixed",
+    "E: kink spectrum and independent stability proof distinction fixed"
+  ],
+  "remaining_differences": [
+    "D: original session/trial/PV protocol incompatible with24 deterministic LDS conditions",
+    "F: actual LDS near-saturated point regime, not original experimental ramping trajectories",
+    "G: exact upstream execution still blocked; no source numerical reproduction"
+  ],
+  "source_comparison": "Middle explicitly SYNTHETIC method unit check; right actual recorded LDS; no author-data fabrication",
+  "numerical_evidence": "independent_figure8_check.json",
+  "hashes": {
+    "artifacts/paper2agent_reproduction/figures/one_hot/figure_08.png": "c565fcb07cbf12ab331dfa9c27661054deb079f4104d1846667a678806010916",
+    "artifacts/paper2agent_reproduction/figures/one_hot/figure_08.svg": "d0a63ddcfbd14ae17cc92d9847afe9a9bceac98318b4efb845e13b50920902f3",
+    "artifacts/paper2agent_reproduction/figures/one_hot/figure_08.pdf": "113f93f2e50b81c02e90fc123dfc88c20ac6b410e8f151571d679bd4ded35840",
+    "artifacts/paper2agent_reproduction/figures/ring/figure_08.png": "ecc12fa834410755a05f0d8e7227625e27bf4566c3452b743b13c66e15bbddcc",
+    "artifacts/paper2agent_reproduction/figures/ring/figure_08.svg": "7954efc60e1eb9328c0490c9f57bcf0ab74381da874f2d1d9e1d4ca9c6ba7bfb",
+    "artifacts/paper2agent_reproduction/figures/ring/figure_08.pdf": "2d86df630cb39bf4eaf20d206b69203030dc4bd3802cc932833b33725d574b40",
+    "artifacts/paper2agent_reproduction/figures/topology/figure_08.png": "e093467ee0f917094c7811cac20db3e1bc2cb274abf79c60625e8778372eee8c",
+    "artifacts/paper2agent_reproduction/figures/topology/figure_08.svg": "3c2f527684ff0ecfb98839b710125f57214659d525ee10f235d59371d0853e66",
+    "artifacts/paper2agent_reproduction/figures/topology/figure_08.pdf": "9b47927e94388d6a04c4945cac4814018e6c2355cf08799e25f089af7a3bd314",
+    "artifacts/paper2agent_reproduction/figures/source_comparisons/inagaki_SOURCE_VS_REPRODUCTION_VS_LDS.png": "b1a9d5025a17529451cf30359940dda6e40da7ee08e8232bf7cfa6526cf34584",
+    "artifacts/paper2agent_reproduction/FIGURE_CAPTIONS.md": "44152c907c1aa96f30881aa6fb377cf6c0a839971b0d26f0cc3c7da2b87c49cb",
+    "handcrafted_ei/visualization/reference_figures.py": "9fc60cb63da1516c68357a34f3771f260397fbd50f55176a3008c99ed2db5c1f"
+  }
+}

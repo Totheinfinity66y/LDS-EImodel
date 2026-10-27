@@ -1,0 +1,94 @@
+{
+  "agent_id": "/root/inagaki",
+  "task_id": "A",
+  "request": "严格复现目标figure所需原始神经活动数据，不为LDS猜适配。",
+  "response": {
+    "paper_id": "inagaki2019",
+    "doi": "10.1038/s41586-019-0919-7",
+    "status": "SOURCE_METHOD_VERIFIED_TARGETED_REVIEW; author_execution_BLOCKED",
+    "source": {
+      "paper_pdf": "artifacts/paper2agent_reproduction/references/inagaki/Inagaki2019.pdf",
+      "author_repository": "https://github.com/fontolanl/ALM_attractors",
+      "experimental_data": "https://doi.org/10.25378/janelia.7489253"
+    },
+    "neural_state": {
+      "experimental_shape": "per session [trial,time,neuron] (canonical adapter shape, not claimed native archive schema)",
+      "measurement_type": "simultaneously recorded extracellular spike rate",
+      "units": "spikes/s before endpoint normalization; AU afterward",
+      "model_native_shape": [
+        "perturbation_intensity",
+        "trial",
+        "time",
+        "4 model units"
+      ],
+      "model_variables": [
+        "r_mat: rate output",
+        "h_mat: internal potential-like state"
+      ]
+    },
+    "trials": {
+      "conditions": [
+        "instructed lick-left/right",
+        "actual choice",
+        "correct/incorrect",
+        "control/PV intensity",
+        "fixed/random delay"
+      ],
+      "repetition_definition": "real trials within sessions; no pseudo-replication",
+      "experimental_counts": "session trial counts in Supplementary Tables 2/3; not yet loaded",
+      "model_counts": "1000 per perturbation condition; 500 left/500 right",
+      "pairing": "experimental trials not frozen-noise matched; model resamples randn inside PV loop"
+    },
+    "temporal_protocol": {
+      "experimental_smoothing_ms": 100,
+      "experimental_step_ms": 10,
+      "experimental_CD_fit_window_ms_before_go": [
+        -600,
+        0
+      ],
+      "model_CD_fit_window_ms_before_go": [
+        -400,
+        0
+      ],
+      "phase_line_window_ms_before_go": [
+        -1200,
+        0
+      ],
+      "perturbation": "first 600ms delay, experimental 400ms ramp-down; model exponential smoothing tau20ms"
+    },
+    "preprocessing": {
+      "CD": "normalize(mean_t(mean_correct_right_rate - mean_correct_left_rate)))",
+      "fixed_delay_fit": "random 50% unperturbed correct; project held-out 50%; swap folds",
+      "random_delay_fit": "non-2s trials fit; 2s trials test",
+      "endpoint_normalization": "(projection-left_endpoint_median)/(right_endpoint_median-left_endpoint_median) in public model code",
+      "pooling": "session normalization then pooling",
+      "summary_discrepancy": "Methods median; figure caption mean. Explicit implementation choice required.",
+      "neuron_selection": "sessions >5 preparatory neurons; original class criterion requires outcome selectivity",
+      "PCA": "not used for CD phase line"
+    },
+    "analysis": {
+      "phase_drift": "(x[t+1]-x[t-1])/2; report per10ms bin or explicitly convert by0.01s",
+      "phase_bins": "width0.2AU; lower-exclusive/upper-inclusive in MATLAB",
+      "shuffle": "shuffle drift across trajectories at each time in public code",
+      "endpoint": "distribution at end delay; model normalization uses final400ms average",
+      "uncertainty": "hierarchical bootstrap sessions then trials; model variability SD, not experimental SEM",
+      "full_state_Jacobian": "LDS-specific diagnosis, not original figure analysis"
+    },
+    "evidence": [
+      {
+        "file": "source_text.txt",
+        "section": "CD analysis / Attractor models / Fig5,6 captions",
+        "verification": "text reviewed"
+      },
+      {
+        "file": "upstream/ALM_attractors-master/ALM_attractors_code/utilities/ALM_attractor_figs.m",
+        "verification": "code inspected, NOT executed"
+      },
+      {
+        "file": "upstream/ALM_attractors-master/ALM_attractors_code/utilities/plot_phase_line.m",
+        "verification": "code inspected, NOT executed"
+      }
+    ]
+  },
+  "status": "responded; awaiting LDS schema"
+}

@@ -1,0 +1,84 @@
+{
+  "round": 2,
+  "request": "rates=(24,663,132), dt5ms,24 LDS conditions once,no noise/session. R3 all24 snapshots under shared tonic clock0 stimulus0 2000ms extension; fullstate residual/Jacobian/Euler/endpoints/local perturbation. Pairwise CD descriptive; transpose; reconstructed events.",
+  "review": [
+    {
+      "field": "rates axes",
+      "status": "ADAPT",
+      "reason": "显式transpose(1,0,2)到time,condition,neuron；保留条件身份，不可把condition改名trial重复。"
+    },
+    {
+      "field": "measurement",
+      "status": "ADAPT",
+      "reason": "LDS无量纲率与ALM spikes/s不同；端点归一化后也不能声称原始测量等价。"
+    },
+    {
+      "field": "repeated trials/session",
+      "status": "INCOMPATIBLE",
+      "reason": "24个不同条件每个一次，无session，不可层级bootstrap、trial SEM、行为错误率复制原图。"
+    },
+    {
+      "field": "population",
+      "status": "ADAPT",
+      "reason": "whole132为LDS主诊断；Response-only可独立补充，不可和原文ALM前运动细胞筛选混用。"
+    },
+    {
+      "field": "fixed field",
+      "status": "PASS",
+      "reason": "共同tonic+clock0+stimulus0使24初态属同一自治向量场；记录tonic向量与模型配置哈希。"
+    },
+    {
+      "field": "R3 snapshots",
+      "status": "PASS",
+      "reason": "同一真实事件取24条件能检验initial condition dependence；原图5/6没有四阶段语义等价。"
+    },
+    {
+      "field": "extension and random initials",
+      "status": "RERUN",
+      "reason": "需要实际新独立副本积分；初态采样域/种子/稳定阈值/2000ms不足收敛的例外必须记录。"
+    },
+    {
+      "field": "fullstate metrics",
+      "status": "ADAPT",
+      "reason": "严谨LDS-specific diagnosis；不能挂Exact source-method reproduction标签。"
+    },
+    {
+      "field": "pairwise CD",
+      "status": "ADAPT",
+      "reason": "必须事先指定两个科学条件、固定同一field；确定性每条件单次不具备heldout trial CD验证。六位置/四分支无唯一二选择，不建议CD作为主结论。"
+    },
+    {
+      "field": "phase line",
+      "status": "ADAPT",
+      "reason": "5ms原采样可取每隔一点的真实10ms采样，无插值；中心差分/2为per10ms，除0.01才/s。仅二维压缩观测，不能替全状态稳定。"
+    },
+    {
+      "field": "clock reconstruction",
+      "status": "ADAPT",
+      "reason": "事件t>eventtime必须核对积分左/右端约定；记录reconstructed，不冒充原始电流日志。共同clock0实验最好直接保存实际输入。"
+    },
+    {
+      "field": "PCA",
+      "status": "PASS",
+      "reason": "原CD方法不需PCA；PCA仅视觉辅助，不能替代fullstate endpoint距离。"
+    },
+    {
+      "field": "endpoint count",
+      "status": "ADAPT",
+      "reason": "距离阈值须明示；不同位置/分支身份需从状态解码并以无活动→undefined规则避免静息argmax伪身份。"
+    },
+    {
+      "field": "basins",
+      "status": "ADAPT",
+      "reason": "只称给定采样域和样本的经验basin fraction；24结构初态不是全吸引域估计。"
+    }
+  ],
+  "decision": "PASS_WITH_LIMITS for LDS-specific dynamics; INCOMPATIBLE exact experimental Fig5/6 reproduction",
+  "required_controls": [
+    "same frozen inputs for all24 initial states",
+    "continuous residual and Euler step residual must refer same state and field",
+    "Jacobian active-set clipping derivative and finite difference cross-check",
+    "endpoint fullstate distance; silent position/branch undefined",
+    "do not equate final observed endpoint with converged equilibrium"
+  ]
+}

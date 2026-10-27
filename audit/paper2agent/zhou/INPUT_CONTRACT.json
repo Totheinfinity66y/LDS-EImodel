@@ -1,0 +1,90 @@
+{
+  "paper_id": "zhou2023",
+  "figure_id": "7",
+  "doi": "10.1038/s41562-023-01592-y",
+  "neural_state": {
+    "variable_name": "h",
+    "shape": [
+      "time",
+      "trial",
+      "recurrent_unit"
+    ],
+    "measurement_type": "leaky_relu_rate",
+    "units": "model activity units",
+    "original_recurrent_count": 256,
+    "exclude": [
+      "input units",
+      "output units"
+    ],
+    "source": "standard_analysis.py; network.py:164-179"
+  },
+  "trials": {
+    "condition_definition": "task/cue/delay; Figure7a long B cue T+WM",
+    "single_vs_trial_average": "unknown for Figure7a/b",
+    "repetitions": "unknown for Figure7; do not infer from decoding",
+    "independent_networks": 17
+  },
+  "temporal_protocol": {
+    "sampling_interval_ms": {
+      "author_default": 10,
+      "actual_figure": "unknown"
+    },
+    "alignment_event": "first stimulus onset",
+    "window": "cue plus delay including t=1500 ms",
+    "delay_ms": [
+      1000,
+      2200
+    ]
+  },
+  "perturbation_protocol": {
+    "intervention_type": "transient input current",
+    "input_location": "pi, center input17",
+    "amplitude": 0.25,
+    "units": "input model units",
+    "onset_ms_after_cue": 500,
+    "duration_ms": 50,
+    "projection": "random input-to-recurrent weights similar to standard inputs",
+    "control_pairing": "same network, task, initial state and noise matrices across units/time",
+    "shared_noise": true
+  },
+  "required_arrays": [
+    "time_ms",
+    "control_h",
+    "perturbed_h",
+    "control_inputs",
+    "perturbed_inputs",
+    "shared_noise",
+    "network_id",
+    "condition_id",
+    "recurrent_unit_ids",
+    "weights",
+    "hp"
+  ],
+  "preprocessing": {
+    "normalization": "unknown for Figure7",
+    "centering": "unknown PCA implementation",
+    "filtering": "unknown",
+    "PCA_fit_samples": "unknown; must declare adaptation choice"
+  },
+  "analysis": {
+    "cross_temporal_distance": "D[t,s]=||control_h[t,:]-perturbed_h[s,:]||_2",
+    "paired_recovery": "diag(D)",
+    "statistics": "network-level mean +/- SEM over 17 independently trained networks"
+  },
+  "unsupported_source_details": [
+    "velocity field sampling",
+    "tangential/orthogonal perturbation implementation",
+    "PCA fit exact data set"
+  ],
+  "evidence": {
+    "paper_local": "artifacts/neural_representation_v2/reference_evidence/Zhou2023.pdf",
+    "pages": [
+      9,
+      10,
+      12,
+      13
+    ],
+    "author_repository": "https://github.com/BuonoLab/Timing-WM_RNN_2022",
+    "verification_status": "all18_supplied_pdf_pages_visually_reviewed; paper2skill_strict_reviewed; independent_fresh_verifier_pending"
+  }
+}

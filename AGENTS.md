@@ -232,3 +232,13 @@ trial 输入 `(L,D,S)` 与 evaluator 的 target **写在独立日志文件中**�
 - 固定seed7/11/19并记录独立重复单位、噪声实际剂量、预处理与窗口。每图PNG300dpi及SVG/PDF、数值CSV/NPZ、配置、源码和输入哈希、参考panel写入figure_manifest。
 - 文件完整性检查与实际打开图像的视觉检查缺一不可；记录空白、裁切、轴范围、图例、色标、E/I、panel、跨编码缓存身份。缓存须校验输入和输出哈希，缺失/损坏重新计算。
 - 正式分析位于 `artifacts/neural_representation_v2`。大型完整扰动NPZ保留本地且由summary哈希索引、统一CLI重建，不覆盖旧版归档；参考PDF/原图仅本地保留。
+
+## 12. Reference-grounded 科学复现与可视化
+
+- 文献复现前实际读取本地 `C:/Users/Totheinfinity/.codex/skills/paper2agent/SKILL.md`，按真实组件及CLI执行，禁止猜测API。Paper2Skill构建文献包，不自动执行算法或审图；Codex专家补足的职责必须披露。正式包须逐页审阅、require-reviewed build、strict verify和fresh verifier。
+- 两篇核心论文分别由独立、可持续咨询的子Agent负责；至少保存原数据要求、LDS兼容性、adapter审阅、实际图反向评审四轮请求/响应/证据/文件/状态。角色有唯一ID及独占写目录，不并发修改同文件，不强制覆盖会话状态。
+- 每篇建立Reference Data Contract：来源/panel、变量及轴、单位、trial/condition/repeat、外驱、时序、扰动/配对noise、预处理/PCA拟合集、距离/稳定性/统计公式、视觉语义、unknown。逐字段判PASS/ADAPT/RERUN/INCOMPATIBLE；禁止reshape造重复、插值造缺失试次、状态扰动冒充输入扰动。
+- 原图、作者代码执行、Methods重建、LDS适配及真实动力学差异分别归档。不可伪造源数据/作者代码执行，不为图像相似修改模型、参数、固定连接或任务。
+- Scientific Fidelity Gates：G0能力实测；G1来源/代码覆盖与缺口；G2数据兼容；G3数值正确；G4同一论文专家实际图反向审阅；G5未参与实现的独立验收。不能将source exact BLOCKED与LDS adaptation PASS合并成“复现成功”。
+- 共同向量场检验须完整24个R3条件、sample/clock/tonic显式固定、完整残差/连续与Euler谱/身份、clip折点证据。局部稳定、有限方向恢复、全局盆和dynamic attractor为不同结论。
+- 源方法审计入口 `python -m handcrafted_ei.visualization.plot_all --reference-grounded`，产物 `artifacts/paper2agent_reproduction`。历史入口与图保留，不冒充已通过新gate。大型完整basin NPZ/受版权限制原图及文献包本地留存，由manifest索引。

@@ -1,0 +1,284 @@
+{
+  "file_checks": "PASS",
+  "figures": [
+    {
+      "id": "one_hot_figure_08",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4234,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "one_hot_figure_09_input_source_time",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4230,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "one_hot_figure_09_input_R3_fixed_clock",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4230,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "one_hot_figure_09_state",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4233,
+        1234
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "one_hot_figure_09_flow",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3034,
+        1234
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "ring_figure_08",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4234,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "ring_figure_09_input_source_time",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4230,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "ring_figure_09_input_R3_fixed_clock",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4230,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "ring_figure_09_state",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4233,
+        1234
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "ring_figure_09_flow",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3034,
+        1234
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "topology_figure_08",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4234,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "topology_figure_09_input_source_time",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4230,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "topology_figure_09_input_R3_fixed_clock",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4230,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "topology_figure_09_state",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        4233,
+        1234
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "topology_figure_09_flow",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3034,
+        1234
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "figure_10_audited",
+      "encoding": "comparison",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        3631,
+        2134
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    }
+  ],
+  "contact_sheets": [
+    "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\manifests\\contact_one_hot_1.jpg",
+    "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\manifests\\contact_ring_1.jpg",
+    "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\manifests\\contact_topology_1.jpg",
+    "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\manifests\\contact_comparison_1.jpg"
+  ],
+  "visual_review": "Separate visual review required; file integrity alone is not layout acceptance"
+}

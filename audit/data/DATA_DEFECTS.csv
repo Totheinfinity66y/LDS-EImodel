@@ -1,0 +1,11 @@
+defect_id,data_gate,component,evidence,required_action
+D01,RERUN,old attractor snapshots,"only six L fixed D=+1,S=1 per stage",extract all24 R3 states from raw baseline; do not infer states
+D02,RERUN,old Fig9 perturbation,instantaneous clipped rate-state kick is not 50ms input perturbation,run separate explicit input-current protocol
+D03,ADAPT,PCA projection,final full L2 1.49999997 but PC2 L2 4.67e-9; energy fraction9.68e-18,report full/projected/orthogonal energies
+D04,ADAPT,old endpoint PCA,five singular values all1.5; top2 basis not unique,report degeneracy and avoid unique-PC interpretation
+D05,ADAPT,currents,sample reconstructed; clock and tonic absent in derived recording,explicit reconstructed currents with stepwise tests
+D06,ADAPT,statistical units,24 deterministic conditions not repeated trials; perturbation seeds directions not networks,preserve condition/repetition semantics; no fabricated CI
+D07,INCOMPATIBLE,exact original experiment,no original firing spikes/sessions/left-right correct trial split,source reproduction and LDS adaptation remain separately labelled
+D08,ADAPT,old Fig9 velocity field,"arbitrary clipped endpoint-PC grid is LDS diagnosis, not source Fig7 method",label independent fixed-point diagnostic; source contract controls claims
+D09,ADAPT,perturbation dose,old metrics actual RMS all neurons but no target-clipping fraction,record target and full actual RMS plus clipping fraction
+D10,PASS,cache integrity,55 figure records and75 dynamics output hash checks pass,preserve old archives; new analysis writes independent output

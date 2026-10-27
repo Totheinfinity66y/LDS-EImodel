@@ -29,7 +29,24 @@ def main(argv=None):
     p.add_argument('--figures',default='1,2,3,4,5,6,7,8,9,10',help='Comma-separated Figure numbers')
     p.add_argument('--encoding',choices=(*MODES,'all'),default='all')
     p.add_argument('--force',action='store_true',help='Re-export unchanged figures; source/data cache is otherwise reused')
+    p.add_argument('--reference-grounded',action='store_true',help='Run audited source-adapted 8/9, reuse audited 1-7, and rebuild 10 in a fresh archive')
     args=p.parse_args(argv); requested={int(x) for x in args.figures.split(',')}; formats=args.formats.split(',')
+    if args.reference_grounded:
+        from ..evaluation.reference_reproduction import main as reproduce, DEFAULT as audit_default
+        from ..evaluation.reference_consistency import run as consistency
+        from .reference_comparison import run as compare_sources
+        destination=audit_default if args.output==DEFAULT_OUTPUT else args.output
+        if destination.resolve()==DEFAULT_OUTPUT.resolve(): p.error('reference-grounded output must not overwrite historical archive')
+        if args.encoding!='all' or args.figures!='1,2,3,4,5,6,7,8,9,10' or args.formats!='png,svg,pdf':
+            p.error('reference-grounded performs the complete audited three-encoding workflow with all export formats')
+        reproduce(['--input',str(args.input),'--output',str(destination)])
+        consistency(args.input,DEFAULT_OUTPUT,destination)
+        compare_sources(destination)
+        from .quality_check import check
+        check(destination)
+        from ..evaluation.reference_reproduction import finalize_manifest
+        finalize_manifest(destination)
+        return
     if requested-set(range(1,11)): p.error('Figure numbers must be 1..10')
     if set(formats)-{'png','svg','pdf'}: p.error('formats must be png,svg,pdf')
     out=args.output; out.mkdir(parents=True,exist_ok=True); (out/'config').mkdir(exist_ok=True); (out/'manifests').mkdir(exist_ok=True)

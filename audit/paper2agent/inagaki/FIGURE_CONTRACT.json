@@ -1,0 +1,34 @@
+{
+  "paper_id": "inagaki2019",
+  "figure5": {
+    "a": "PV protocol + rasters/PSTH",
+    "b": "unperturbed CD trajectories + middle/end distributions",
+    "c": "perturbed correct + dashed controls",
+    "d": "perturbed error",
+    "e": "trajectory overlay",
+    "f": "phase line + shuffled control",
+    "g": "mid/end perturbation difference session paired statistics"
+  },
+  "figure6": {
+    "a": "model architecture/input landscape schematic",
+    "b": "random delay CDF",
+    "c": "single unit rasters and rates",
+    "d": "selectivity",
+    "e": "CD trajectory",
+    "f": "overlay",
+    "g": "phase line",
+    "h": "mid/end paired difference"
+  },
+  "extended1": "continuous/single moving/multiple discrete attractor simulations",
+  "extended6": "CD robustness experimental controls",
+  "extended9": "two hemisphere discrete models; external/internal ramping and stationary variants",
+  "visual_review": "Opened original Fig5, ED1, ED6 local images and rendered PDF p5 Fig6, p26 ED9; targeted visual checks complete, full30page fidelity NOT complete",
+  "semantics": {
+    "blue": "correct right",
+    "red": "correct left",
+    "dark_blue_red": "error trial types",
+    "cyan": "PV perturbation",
+    "green_magenta": "middle/end sampling"
+  },
+  "prohibited_claim": "LDS residual/eigenvalue grid is exact source Figure5 reproduction"
+}

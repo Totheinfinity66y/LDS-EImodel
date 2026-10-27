@@ -1,0 +1,4 @@
+encoding,branch_effective_dim,whole_mean_angle,stable_endpoint_clusters,identity_retained,input_dimension,neuron_count
+one_hot,4.999999449596698,83.38083066381623,24,24,6,132
+ring,4.999999449596698,83.38083066381623,24,24,1,132
+topology,4.999999449596698,83.38083066381623,24,24,2,132

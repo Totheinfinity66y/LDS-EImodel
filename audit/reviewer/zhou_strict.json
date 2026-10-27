@@ -1,0 +1,87 @@
+{
+  "status": "reviewed",
+  "mechanical_ok": true,
+  "all_sources_agent_reviewed": true,
+  "issues": [],
+  "documents": {
+    "s001-zhou2023": {
+      "status": "reviewed",
+      "mechanical_ok": true,
+      "all_pages_agent_reviewed": true,
+      "applied_adjudications": 0,
+      "stale_adjudications": 0
+    }
+  },
+  "artifact_checks": [
+    {
+      "file": "assets/figure/title-page-abstract.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/figure-1.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/figure-2.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/figure-3.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/figure-4.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/figure-5.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/figure-6.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/figure-7.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/formula-p0012-016.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/rate-and-noise-definitions.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/formula-p0012-019.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/formula-p0013-004.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/reporting-statistics-checkboxes.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/table/table-p0017-004.csv",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/table/table-p0017-012.csv",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/figure/reporting-field-checkboxes.jpg",
+      "matches_source_conversion": true
+    },
+    {
+      "file": "assets/table/reporting-materials-checkboxes.jpg",
+      "matches_source_conversion": true
+    }
+  ],
+  "workbook_checks": [],
+  "scope": "Compact template and file integrity; reviewed PDF text/crops checked in external evidence. JPEGs checked against deterministic source conversion, not lossless pixels. Review flags and normalized coverage do not certify scientific accuracy."
+}

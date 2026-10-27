@@ -1,0 +1,22 @@
+[
+  {
+    "paper": "inagaki",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\source_comparisons\\inagaki_SOURCE_VS_REPRODUCTION_VS_LDS.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\source_comparisons\\inagaki_SOURCE_VS_REPRODUCTION_VS_LDS.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\source_comparisons\\inagaki_SOURCE_VS_REPRODUCTION_VS_LDS.pdf"
+    ],
+    "middle": "synthetic illustration; method tests separate, not original-data reproduction",
+    "publication": "private source comparison; do not publish copyrighted panels"
+  },
+  {
+    "paper": "zhou",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\source_comparisons\\zhou_SOURCE_VS_REPRODUCTION_VS_LDS.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\source_comparisons\\zhou_SOURCE_VS_REPRODUCTION_VS_LDS.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\paper2agent_reproduction\\figures\\source_comparisons\\zhou_SOURCE_VS_REPRODUCTION_VS_LDS.pdf"
+    ],
+    "middle": "synthetic Euclidean method validation, not original-data reproduction",
+    "publication": "private source comparison; do not publish copyrighted panels"
+  }
+]

@@ -118,3 +118,15 @@ population_data逐ZIP校验SHA和标签/群体分区，以每编码独立的[tri
 population_dynamics的独立实验API接受原始归档和输出目录，完整状态复制、恒定外驱、延长演化、六类合法率扰动、残差/完整谱、身份保留及局部向量场；恢复条件在完整状态中判断，投影仅展示。撤任务输入但保留tonic与clock全关在本模型等价；不产生虚构的第三种动力学。
 
 visualization/plot_all统一调度数学分析与Figure1–10、多格式导出、中文报告和figure_manifest。quality_check检查文件并生成contact sheet，实际视觉复核另记。代码、输入/输出哈希参与缓存；缺失数据显式失败，退化指标NA。完整方法、参考panel和科学边界见artifacts/neural_representation_v2/METHODS.md及FIGURE_REFERENCES.md。
+
+## 10. Reference-Grounded Representation & Dynamics Analysis
+
+本层不修改模型、神经元方程或参数。Paper2Agent实际入口按Paper2Skill构建经过逐页审阅及strict验证的阅读包；Paper2MCP只适用于可执行的作者实现。论文子Agent独立输出输入和Figure契约，主Agent依次咨询原数据需求、真实LDS兼容性、adapter及最终图；每轮请求响应及证据持久归档。Skill未提供的适配/反向审图由Codex完成并披露，不虚称原生能力。
+
+`evaluation/reference_adapter.py`读取校验过的ZIP，保留[24,663,132]率及身份；显式transpose到[time,condition,neuron]，不造重复。sample/clock/tonic按记录事件重建且逐步Euler复算，标明来源而非称实测。`extract_snapshots`取全部24个R3真实读出状态。三编码外部维度6/1/2与共同132状态分开。
+
+`reference_dynamics.py`定义完整Euclidean cross-temporal距离、PCA正交能量分解、clip剂量、配对50ms输入及独立稳定性判据。24状态共用sample=clock=0、原tonic保留向量场。低残差、连续/Euler检查、身份及局部充分条件分别保存；折点处单个0.5斜率谱不能独立证明稳定。允许活跃/折点全部连接的union图为DAG时，稳定泄漏级联提供分段局部充分条件，并求邻近精确平衡点核验。局部clip邻域界不叫吸引域半径。
+
+`reference_reproduction.py`编排独立副本与全率归档。一次性state kick与有限输入脉冲分开；source-time assay重放正常时序，R3 assay固定实际clock。两者均有完整control/perturbed、实际外电流与共享零noise。源π通道、训练网络/动物重复缺失均标不兼容；不把阶段切换后重合解释为自主恢复。
+
+`visualization/reference_figures.py`按审计数据绘图；`reference_comparison.py`生成仅本地的原图/明确synthetic方法检验/真实LDS三列对照，不能以synthetic替代缺失原数据。`reference_consistency.py`复算1–7正确共享方法并更新10，不实现第二套dPCA。全流程入口 `visualization.plot_all --reference-grounded`，产物独立保存 `artifacts/paper2agent_reproduction`。G0–G5分层验收，最终图交回同论文专家反审，并由fresh reviewer核验来源/数据/数值/解释。exact源实验阻塞与METHOD ADAPTED通过分别记录。

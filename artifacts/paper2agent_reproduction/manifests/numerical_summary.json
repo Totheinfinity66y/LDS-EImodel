@@ -1,0 +1,77 @@
+[
+  {
+    "encoding": "one_hot",
+    "neuron_count": 132,
+    "input_dimension": 6,
+    "task_conditions": 24,
+    "distinct_endpoint_clusters": 24,
+    "stable_endpoint_clusters": 24,
+    "stable_endpoints": 24,
+    "identity_retained": 24,
+    "max_residual": 4.275570176061969e-11,
+    "max_fd_error": 3.174387835924719e-11,
+    "max_euler_consistency_error": 5.551115123125783e-17,
+    "spectral_radius_range": [
+      0.9583333333333334,
+      0.9583333333333334
+    ],
+    "clipping_spectrum_explanation": "Saturated units have zero activation derivative: eigenvalues include -1/tau. Slow I_decay tau=120ms gives Euler 1-5/120=0.958333; equal radii do not establish identical basins.",
+    "basis_scope": "unperturbed 24-condition tonic-only extension, stride4; full132 centered; tied singular directions not individually identifiable",
+    "fixed_field": "sample=0, clock=0, original tonic retained; identical vector field for all24 states",
+    "random_initial_domain": "72 independent uniform [0,1]^132 initial states, 24 per seed; not population/statistical repeats",
+    "random_endpoint_clusters": 72,
+    "source_archive_sha256": "70b419e3203742c38f0a1b05b2ba40bf8c1ed29e92c56721eae51097d2a4573f",
+    "model_parameters_changed": false,
+    "classification": "METHOD ADAPTED; LDS-specific full-state diagnosis; source experimental data/statistics INCOMPATIBLE"
+  },
+  {
+    "encoding": "ring",
+    "neuron_count": 132,
+    "input_dimension": 1,
+    "task_conditions": 24,
+    "distinct_endpoint_clusters": 24,
+    "stable_endpoint_clusters": 24,
+    "stable_endpoints": 24,
+    "identity_retained": 24,
+    "max_residual": 4.275570176061969e-11,
+    "max_fd_error": 3.174387835924719e-11,
+    "max_euler_consistency_error": 5.551115123125783e-17,
+    "spectral_radius_range": [
+      0.9583333333333334,
+      0.9583333333333334
+    ],
+    "clipping_spectrum_explanation": "Saturated units have zero activation derivative: eigenvalues include -1/tau. Slow I_decay tau=120ms gives Euler 1-5/120=0.958333; equal radii do not establish identical basins.",
+    "basis_scope": "unperturbed 24-condition tonic-only extension, stride4; full132 centered; tied singular directions not individually identifiable",
+    "fixed_field": "sample=0, clock=0, original tonic retained; identical vector field for all24 states",
+    "random_initial_domain": "72 independent uniform [0,1]^132 initial states, 24 per seed; not population/statistical repeats",
+    "random_endpoint_clusters": 72,
+    "source_archive_sha256": "cbd1b6d070d3162d072edf6350fc796b124b5f034278f61b3d72db884f2d348c",
+    "model_parameters_changed": false,
+    "classification": "METHOD ADAPTED; LDS-specific full-state diagnosis; source experimental data/statistics INCOMPATIBLE"
+  },
+  {
+    "encoding": "topology",
+    "neuron_count": 132,
+    "input_dimension": 2,
+    "task_conditions": 24,
+    "distinct_endpoint_clusters": 24,
+    "stable_endpoint_clusters": 24,
+    "stable_endpoints": 24,
+    "identity_retained": 24,
+    "max_residual": 4.275570176061969e-11,
+    "max_fd_error": 3.174387835924719e-11,
+    "max_euler_consistency_error": 5.551115123125783e-17,
+    "spectral_radius_range": [
+      0.9583333333333334,
+      0.9583333333333334
+    ],
+    "clipping_spectrum_explanation": "Saturated units have zero activation derivative: eigenvalues include -1/tau. Slow I_decay tau=120ms gives Euler 1-5/120=0.958333; equal radii do not establish identical basins.",
+    "basis_scope": "unperturbed 24-condition tonic-only extension, stride4; full132 centered; tied singular directions not individually identifiable",
+    "fixed_field": "sample=0, clock=0, original tonic retained; identical vector field for all24 states",
+    "random_initial_domain": "72 independent uniform [0,1]^132 initial states, 24 per seed; not population/statistical repeats",
+    "random_endpoint_clusters": 72,
+    "source_archive_sha256": "b1f1ef777f1e49a71454ad3137c8c811e964d55a01ab8e6c778a5a10a3dcab1f",
+    "model_parameters_changed": false,
+    "classification": "METHOD ADAPTED; LDS-specific full-state diagnosis; source experimental data/statistics INCOMPATIBLE"
+  }
+]
