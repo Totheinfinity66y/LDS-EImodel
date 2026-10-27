@@ -1,5 +1,32 @@
 # LDS-EImodel：Handcrafted E/I Decompression v2
 
+## 当前版本与主要结论
+
+当前版本包含三种位置编码、完整132维神经活动分析、经来源方法审计的Figure 8/9，以及两套独立的流线/局部不动点相图。模型固定连接、不训练；所有动力学干预均在独立评估副本进行。
+
+- **表征子空间：** R3各分支六位置活动的中心化rank为5，有效维数PR≈5；完整网络分支对平均principal angles约83.35°–83.44°。分支分离有固定不重叠神经坐标的结构贡献，不解释为训练涌现的正交性或强低维压缩。
+- **局部点吸引子：** 在共同的sample=clock=0、原tonic保留条件下，每种编码的24个task-seeded R3终点可区分、局部稳定，且24/24保持位置与分支身份。该计数不是系统全部吸引子的穷举。
+- **结论边界：** 六个离散位置和二维PCA形状不证明连续环吸引子；正常四阶段序列由clock组织。固定clock下所测50ms输入扰动未恢复原完整状态，不支持自主动态轨迹吸引子的结论。
+
+数值、协议及限制见[完整科研报告](artifacts/paper2agent_reproduction/FINAL_REPRODUCTION_REPORT.md)；最新局部相图另经[来源专家反审](audit/local_fixed_points/source/LDS_ADAPTATION_REVIEW.md)和[独立数值验收](audit/local_fixed_points/reviewer/INDEPENDENT_REVIEW.md)，裁决均为 **PASS_WITH_LIMITS / METHOD ADAPTED**，不冒称原作者数据或代码的精确复现。
+
+## 最新可视化导航
+
+| 科学问题 | 图与证据 | 阅读要点 |
+|---|---|---|
+| 分支是否占据不同子空间？ | [Figure 5](artifacts/neural_representation_v2/figures/one_hot/figure_05_one_hot.png) · [三编码图集](artifacts/neural_representation_v2/FIGURE_INDEX.md) | C看维数，G看分支夹角，K看移除分支坐标后的重合控制 |
+| 多个状态是否保持且稳定？ | [新版Figure 8](artifacts/paper2agent_reproduction/figures/one_hot/figure_08.png) | B看24×24终点距离，E看全状态残差；F须结合折点稳定性证书 |
+| 小扰动是否恢复原身份？ | [Figure 9 state](artifacts/paper2agent_reproduction/figures/one_hot/figure_09_state.png) | C联合检查完整状态恢复与位置/分支身份；A展示二维投影可能遗漏的误差 |
+| 有限输入扰动是否恢复？ | [Figure 9 input](artifacts/paper2agent_reproduction/figures/one_hot/figure_09_input_R3_fixed_clock.png) | D/F完整状态距离未回零；不与瞬时状态扰动混同 |
+| 局部稳定点与鞍点在哪里？ | [三编码不动点图集](artifacts/local_fixed_points_v2/README.md) | 实心点为完整状态稳定平衡，空心为鞍点；两sink为静息/保持态，不是两个位置 |
+| 固定驱动条件怎样改变流线？ | [三条件相图](artifacts/phase_portraits_v2/README.md) | 蓝色切片流线与红色完整轨迹分开解释，主图披露离面误差 |
+
+以下为本项目One-hot模型的实际计算结果；Ring与Topology版本见对应图集。图像源文件同时提供SVG/PDF及数值provenance。
+
+![本项目局部稳定不动点、鞍点及流形方向](artifacts/local_fixed_points_v2/one_hot/fixed_point_portrait.png)
+
+![完整状态下的24条件稳定终点诊断](artifacts/paper2agent_reproduction/figures/one_hot/figure_08.png)
+
 **局部稳定不动点相图：[三编码图集与数值证据](artifacts/local_fixed_points_v2/README.md)。** 实心稳定点、空心鞍点、红稳定流形和蓝不稳定分支；入口 `python -m handcrafted_ei.visualization.plot_all --local-fixed-points`。
 
 **论文式流线相图（三编码）：[直接查看](artifacts/phase_portraits_v2/README.md)。** 三列保持/固定R3时钟/退役，蓝色streamlines＋红色完整132维积分轨迹；入口 `python -m handcrafted_ei.visualization.plot_all --phase-portraits`。图中已直接披露非闭合平面的误差，详细方法与独立评审见入口文档。
@@ -70,7 +97,7 @@ python -m handcrafted_ei.receipt <output-directory>
 python -m handcrafted_ei.recompute <output-directory>
 ```
 
-输出目录必须为空。当前实测32/32测试通过；三模式各24/24、四阶段均100%；198组实验共4,752个trial，独立轨迹复算通过。完整结果与科学局限见[实现与验收报告](docs/v2_implementation_report.md)及[实验报告](handcrafted_ei/artifacts/v2/run/REPORT.md)。
+输出目录必须为空。当前完整回归为**77/77测试通过**，日志见[最新测试记录](audit/local_fixed_points/tests.txt)。行为归档中三模式各24/24、四阶段均100%；198组实验共4,752个trial，独立轨迹复算通过。完整结果与科学局限见[实现与验收报告](docs/v2_implementation_report.md)及[实验报告](handcrafted_ei/artifacts/v2/run/REPORT.md)。
 
 完整评估穷举三模式24条件、seeds7/11/19、噪声、A/B/C/D与额外机制消融及匹配随机对照；归档配置、源码哈希、环境、全率、事件、独立target和复算。验收结果只对应明确记录的配置与实验条件。
 
@@ -96,7 +123,7 @@ $env:PATH="C:\Users\Totheinfinity\.conda\envs\analysis\Library\bin;"+$env:PATH
 引用来源包括Kobak2016（dPCA）、Churchland2012（群体轨迹）、Mante2013（任务变量投影）、Gallego2018（子空间角度/VAF）、Kriegeskorte2008（RSA）、Seelig2015（环状定位）、Inagaki2019（离散吸引子）、Zhou2023（扰动轨迹）与Langdon2023（流形综述）。完整作者、DOI与具体panel见参考文档。
 
 全网络分析不删除静息神经元。输入维数与神经PCA维数分开；分支结构是handcrafted先验。等距相关性保留NA，报告微小距离效应量；确定性条件不伪造置信区间。稳定性在固定外驱及完整状态空间判断，六个离散位置不证明连续环吸引子。分析不改变模型参数或readout-first时序。
-# 文献方法审计与当前重绘入口
+## 文献方法审计与当前重绘入口
 
 本地新版模型与历史结果为准。当前源方法审计见 [完整科研报告](artifacts/paper2agent_reproduction/FINAL_REPRODUCTION_REPORT.md)、[独立评审](artifacts/paper2agent_reproduction/INDEPENDENT_REVIEW.md)、[阶段证据](audit/REPRODUCTION_STATUS.md)、[Skill能力实测](audit/PAPER2AGENT_CAPABILITIES.md)。历史Figure1–10保留于 `artifacts/neural_representation_v2`；新的三编码Figure8/9及Figure10位于 `artifacts/paper2agent_reproduction/figures`。
 
@@ -111,3 +138,13 @@ $env:OPENBLAS_NUM_THREADS="1"
 全入口依次运行校验、lossless adapter、独立副本分析、重绘8/9、复核1–7并更新10、源图三列内部对照与文件QA。亦可单独运行 `python -m handcrafted_ei.evaluation.reference_reproduction`、`python -m handcrafted_ei.evaluation.reference_consistency`、`python audit/numerical/independent_check.py`；全回归命令保持 `python -m unittest discover -s handcrafted_ei/tests -v`。无安装步骤，先核对已有环境；全量盆轨迹只本地留存，由manifest索引。
 
 Paper2Agent本地实际入口为 `C:/Users/Totheinfinity/.codex/skills/paper2agent/SKILL.md`。两论文独立专家证据位于 `audit/paper2agent/inagaki` 与 `audit/paper2agent/zhou`；四轮通信、数据/figure契约及反向评审持久保存。阅读包路径和真实转换/strict命令见各目录 `ORIGINAL_REPRODUCTION_REPORT.md`。Skill不自动执行论文算法；作者未公开的raw/权重或不可用MATLAB runtime不以重建代码冒充。原实验精确复现的BLOCKED与LDS METHOD ADAPTED必须分别阅读；源图与文献包本地使用，不擅自发布。
+
+## 独立绘图入口与归档
+
+```text
+python -m handcrafted_ei.visualization.plot_all --reference-grounded
+python -m handcrafted_ei.visualization.plot_all --phase-portraits
+python -m handcrafted_ei.visualization.plot_all --local-fixed-points
+```
+
+三条命令分别写入 `artifacts/paper2agent_reproduction`、`artifacts/phase_portraits_v2`、`artifacts/local_fixed_points_v2`，不得混用输出目录覆盖历史归档。每图保留300dpi PNG、SVG/PDF、分析指标及源码/数据哈希。完整大型扰动轨迹和受版权限制的论文原图仅本地保存，GitHub包含可发布结果、复算代码与索引；克隆后按对应入口重建未版本化的大文件。
