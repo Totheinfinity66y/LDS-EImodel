@@ -1,0 +1,12 @@
+{
+  "agent_id": "/root/inagaki",
+  "task_id": "local_fixed_points_source_reverse_review",
+  "paper_id": "JansonMarsden2017_10.1038_s41598-017-16994-y",
+  "request": "审查实际LDS闭合R3/I_decay_S pair相图、完整固定点、折点证书与源图数学/视觉语义；实际打开三编码主补图，独立核数值。",
+  "response": "PASS_WITH_LIMITS / METHOD ADAPTED。三个完整132维平衡为两局部sink加一正模态saddle；不推断全局盆、全系统点数或两个位置记忆。最后六张实际开图确认方向箭头与标签修复。",
+  "evidence": ["METHOD_CONTRACT.md", "SOURCE_EVIDENCE.json", "source2017_figure1_m685.jpg", "independent_check.py", "independent_check.json", "LDS_ADAPTATION_REVIEW.md"],
+  "input_files": ["handcrafted_ei/evaluation/local_fixed_points.py", "handcrafted_ei/visualization/local_fixed_points.py", "artifacts/local_fixed_points_v2/{one_hot,ring,topology}/analysis.npz", "artifacts/local_fixed_points_v2/{one_hot,ring,topology}/fixed_point_portrait.png", "artifacts/local_fixed_points_v2/{one_hot,ring,topology}/stability_diagnostics.png"],
+  "output_files": ["LDS_ADAPTATION_REVIEW.md", "independent_check.py", "independent_check.json"],
+  "status": "PASS_WITH_LIMITS",
+  "open_questions": ["新增来源未做整篇Paper2Skill转换、未执行作者代码；只是targeted方法语义适配", "有限随机扰动不构成全局盆证明", "补充CSV读取和最后额外hash刷新因自动审批服务额度用尽未执行；无绕过"]
+}

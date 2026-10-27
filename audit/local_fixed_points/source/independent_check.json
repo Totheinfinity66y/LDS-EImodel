@@ -1,0 +1,213 @@
+{
+  "status": "PASS",
+  "method": "independent direct full-rate field; transitive-closure cycle check; archived free-Euler residual",
+  "results": [
+    {
+      "encoding": "one_hot",
+      "states": 132,
+      "pair_indices": [
+        20,
+        97
+      ],
+      "grid_points": 10201,
+      "pair_formula_error": 2.8189256484623115e-18,
+      "full_pair_error": 1.734723475976807e-18,
+      "nuisance_grid_field": 0.0,
+      "readout_feedback_nonzero": 0,
+      "nodes": [
+        {
+          "full_residual": 0.0,
+          "union_graph_acyclic": true,
+          "positive": 0,
+          "negative": 132,
+          "max_real_bound": -0.008333333333333333,
+          "euler_radius_bound": 0.9583333333333334,
+          "kink_count": 12
+        },
+        {
+          "full_residual": 2.7755575615628915e-18,
+          "union_graph_acyclic": true,
+          "positive": 1,
+          "negative": 131,
+          "max_real_bound": 0.025,
+          "euler_radius_bound": 1.125,
+          "kink_count": 12
+        },
+        {
+          "full_residual": 0.0,
+          "union_graph_acyclic": true,
+          "positive": 0,
+          "negative": 132,
+          "max_real_bound": -0.008333333333333333,
+          "euler_radius_bound": 0.9583333333333334,
+          "kink_count": 13
+        }
+      ],
+      "node_pair": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.9000000000000001,
+          0.7600000000000002
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "unstable_path_euler_error": 5.551115123125783e-17,
+      "branch_end_distance": [
+        2.933939690287272e-05,
+        7.13803514196254e-06
+      ],
+      "stable_line_r_velocity_max": 2.7755575615628915e-18,
+      "stable_line_z_formula_error": 2.168404344971009e-18,
+      "source_sha256": {
+        "handcrafted_ei\\evaluation\\local_fixed_points.py": "84e005fa75846a67048f2efe695a37014398db9c4192fe09ea57288f95b7ae23",
+        "handcrafted_ei\\visualization\\local_fixed_points.py": "233e4aa0fbcca90de0dc696699d08a913d396ca759644158f93ddf630b58b916",
+        "artifacts\\local_fixed_points_v2\\one_hot\\analysis.npz": "e6660c32f4bee10b1b0ee6824c6699ef1f71e35e3eaea7130759c187f4f0563d",
+        "artifacts\\local_fixed_points_v2\\one_hot\\nodes.json": "e91a78ba00e05909abb1961f5da4ef9b7cac98c87e3eaada79acbbbebb5ee199"
+      }
+    },
+    {
+      "encoding": "ring",
+      "states": 132,
+      "pair_indices": [
+        20,
+        97
+      ],
+      "grid_points": 10201,
+      "pair_formula_error": 2.8189256484623115e-18,
+      "full_pair_error": 1.734723475976807e-18,
+      "nuisance_grid_field": 0.0,
+      "readout_feedback_nonzero": 0,
+      "nodes": [
+        {
+          "full_residual": 0.0,
+          "union_graph_acyclic": true,
+          "positive": 0,
+          "negative": 132,
+          "max_real_bound": -0.008333333333333333,
+          "euler_radius_bound": 0.9583333333333334,
+          "kink_count": 12
+        },
+        {
+          "full_residual": 2.7755575615628915e-18,
+          "union_graph_acyclic": true,
+          "positive": 1,
+          "negative": 131,
+          "max_real_bound": 0.025,
+          "euler_radius_bound": 1.125,
+          "kink_count": 12
+        },
+        {
+          "full_residual": 0.0,
+          "union_graph_acyclic": true,
+          "positive": 0,
+          "negative": 132,
+          "max_real_bound": -0.008333333333333333,
+          "euler_radius_bound": 0.9583333333333334,
+          "kink_count": 13
+        }
+      ],
+      "node_pair": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.9000000000000001,
+          0.7600000000000002
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "unstable_path_euler_error": 5.551115123125783e-17,
+      "branch_end_distance": [
+        2.933939690287272e-05,
+        7.13803514196254e-06
+      ],
+      "stable_line_r_velocity_max": 2.7755575615628915e-18,
+      "stable_line_z_formula_error": 2.168404344971009e-18,
+      "source_sha256": {
+        "handcrafted_ei\\evaluation\\local_fixed_points.py": "84e005fa75846a67048f2efe695a37014398db9c4192fe09ea57288f95b7ae23",
+        "handcrafted_ei\\visualization\\local_fixed_points.py": "233e4aa0fbcca90de0dc696699d08a913d396ca759644158f93ddf630b58b916",
+        "artifacts\\local_fixed_points_v2\\ring\\analysis.npz": "e6660c32f4bee10b1b0ee6824c6699ef1f71e35e3eaea7130759c187f4f0563d",
+        "artifacts\\local_fixed_points_v2\\ring\\nodes.json": "e91a78ba00e05909abb1961f5da4ef9b7cac98c87e3eaada79acbbbebb5ee199"
+      }
+    },
+    {
+      "encoding": "topology",
+      "states": 132,
+      "pair_indices": [
+        20,
+        97
+      ],
+      "grid_points": 10201,
+      "pair_formula_error": 2.8189256484623115e-18,
+      "full_pair_error": 1.734723475976807e-18,
+      "nuisance_grid_field": 0.0,
+      "readout_feedback_nonzero": 0,
+      "nodes": [
+        {
+          "full_residual": 0.0,
+          "union_graph_acyclic": true,
+          "positive": 0,
+          "negative": 132,
+          "max_real_bound": -0.008333333333333333,
+          "euler_radius_bound": 0.9583333333333334,
+          "kink_count": 12
+        },
+        {
+          "full_residual": 2.7755575615628915e-18,
+          "union_graph_acyclic": true,
+          "positive": 1,
+          "negative": 131,
+          "max_real_bound": 0.025,
+          "euler_radius_bound": 1.125,
+          "kink_count": 12
+        },
+        {
+          "full_residual": 0.0,
+          "union_graph_acyclic": true,
+          "positive": 0,
+          "negative": 132,
+          "max_real_bound": -0.008333333333333333,
+          "euler_radius_bound": 0.9583333333333334,
+          "kink_count": 13
+        }
+      ],
+      "node_pair": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.9000000000000001,
+          0.7600000000000002
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "unstable_path_euler_error": 5.551115123125783e-17,
+      "branch_end_distance": [
+        2.933939690287272e-05,
+        7.13803514196254e-06
+      ],
+      "stable_line_r_velocity_max": 2.7755575615628915e-18,
+      "stable_line_z_formula_error": 2.168404344971009e-18,
+      "source_sha256": {
+        "handcrafted_ei\\evaluation\\local_fixed_points.py": "84e005fa75846a67048f2efe695a37014398db9c4192fe09ea57288f95b7ae23",
+        "handcrafted_ei\\visualization\\local_fixed_points.py": "233e4aa0fbcca90de0dc696699d08a913d396ca759644158f93ddf630b58b916",
+        "artifacts\\local_fixed_points_v2\\topology\\analysis.npz": "e6660c32f4bee10b1b0ee6824c6699ef1f71e35e3eaea7130759c187f4f0563d",
+        "artifacts\\local_fixed_points_v2\\topology\\nodes.json": "e91a78ba00e05909abb1961f5da4ef9b7cac98c87e3eaada79acbbbebb5ee199"
+      }
+    }
+  ]
+}

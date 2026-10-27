@@ -138,3 +138,7 @@ visualization/plot_all统一调度数学分析与Figure1–10、多格式导出�
 两实际R3终点由活动选择，构成共同B；各clock条件从内容无关初态积分得到平衡背景b_c。r=b_c+B lambda，速度由dual=(BᵀB)⁻¹Bᵀ乘完整f(r)，非法状态mask不clip。三列分别clock全关、实际R3快照clock固定、再启用原configured retire3；无sample，保留tonic，权重/参数与正常trial均不变。
 
 蓝流线是affine切片投影场的二维积分，红轨迹是完整132状态积分后投影；不能混同。完整离面field比例和真实轨迹离面距离保存并印在主图，平面不闭合不能以蓝线估计全状态吸引域。参考点满/空仅区分完整field的stationarity与非stationary坐标参考，不由二维图认证稳定性。36/71网格和Euler步长refinement用于独立数值核验，正式数据仍dt5ms。源方法专家反审及fresh独立review后交付，不改变handcrafted结构以模仿参考图吸引子数量。
+
+## 局部不动点与闭合pair相图
+
+入口 `visualization.plot_all --local-fixed-points`，归档 `artifacts/local_fixed_points_v2`。从真实归档活动选R3单元，使用sample/clock关闭且原tonic保留的独立副本。完整132维场求根、残差、连续/Euler谱与包含clip折点斜率的共同三角结构分类用于标记稳定点/鞍点；不凭二维投影认证稳定性。蓝细流线属于经检验闭合的R3/I_decay_S对子系统，红线仅为该pair稳定流形，蓝粗支由完整状态自由积分。静息与保持两sink不冒称两个位置或全局吸引子清单。有限全状态扰动单独报告实际RMS/clipping及恢复，禁止更改模型以模仿源图。

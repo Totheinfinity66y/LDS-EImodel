@@ -1,0 +1,88 @@
+{
+  "figures": [
+    {
+      "id": "fixed_point_portrait_one_hot",
+      "encoding": "one_hot",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\one_hot\\fixed_point_portrait.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\one_hot\\fixed_point_portrait.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\one_hot\\fixed_point_portrait.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\one_hot\\fixed_point_portrait.png": "524e93160c40e34ac6a36cdd6f949f59f7d5921a7fa1eccebb45873566ade219",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\one_hot\\fixed_point_portrait.svg": "7ae0cd889b42296fec95f15a9e852681188035af33a207d978f6ec08316997fd",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\one_hot\\fixed_point_portrait.pdf": "6edb064ce5fe54e96d8d72f29f99ad80b07770025a2ad5bd897f46648b050661"
+      }
+    },
+    {
+      "id": "stability_diagnostics_one_hot",
+      "encoding": "one_hot",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\one_hot\\stability_diagnostics.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\one_hot\\stability_diagnostics.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\one_hot\\stability_diagnostics.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\one_hot\\stability_diagnostics.png": "584ba5c642525e008572212ba0e3a9f9714c09361785c7455a60a5f71c6fa76a",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\one_hot\\stability_diagnostics.svg": "82d53d8ad15ae78c26a4859461dca3768a790e6255c12e0e95a740dda59b0856",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\one_hot\\stability_diagnostics.pdf": "9e608dfffa28787a34d19c83a87ac570275c66de3f85020ae46991d5db4ccc8c"
+      }
+    },
+    {
+      "id": "fixed_point_portrait_ring",
+      "encoding": "ring",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\ring\\fixed_point_portrait.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\ring\\fixed_point_portrait.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\ring\\fixed_point_portrait.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\ring\\fixed_point_portrait.png": "3a51ccdb40bf982a2a155ab1bd66aaa362f2bc2a2ae4de2444e502e4cea1825c",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\ring\\fixed_point_portrait.svg": "ce4ba69f6119bd38310fa72dddd69fe3ec7b1af2a9fa9542b741d917d5916517",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\ring\\fixed_point_portrait.pdf": "d9440b274b0e444eb6f346e6bae6261c3c68bf4dbe9288c359dff9472c906a7c"
+      }
+    },
+    {
+      "id": "stability_diagnostics_ring",
+      "encoding": "ring",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\ring\\stability_diagnostics.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\ring\\stability_diagnostics.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\ring\\stability_diagnostics.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\ring\\stability_diagnostics.png": "584ba5c642525e008572212ba0e3a9f9714c09361785c7455a60a5f71c6fa76a",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\ring\\stability_diagnostics.svg": "d2f2d95e651287264777f7214980bf14cac6fd2a7a1605de2b04ca58284d2154",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\ring\\stability_diagnostics.pdf": "5e87a0522049b1d86c203bbb428731742dbe7024baadb9ece21807d3b61215a2"
+      }
+    },
+    {
+      "id": "fixed_point_portrait_topology",
+      "encoding": "topology",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\topology\\fixed_point_portrait.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\topology\\fixed_point_portrait.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\topology\\fixed_point_portrait.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\topology\\fixed_point_portrait.png": "dca505d3d3425d431a0094b913d13e7b9f99c24933b7e31a48ff0f50acd4ca04",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\topology\\fixed_point_portrait.svg": "784e84af7d8749a1aabb91d8b6a7c957f4e9cae4e5ae524a996a92da1e526c91",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\topology\\fixed_point_portrait.pdf": "3d553f74487b4220b868d58d8cda96f5756ebb3a8e52c1ea831e060d6cc96c49"
+      }
+    },
+    {
+      "id": "stability_diagnostics_topology",
+      "encoding": "topology",
+      "paths": [
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\topology\\stability_diagnostics.png",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\topology\\stability_diagnostics.svg",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\topology\\stability_diagnostics.pdf"
+      ],
+      "output_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\topology\\stability_diagnostics.png": "584ba5c642525e008572212ba0e3a9f9714c09361785c7455a60a5f71c6fa76a",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\topology\\stability_diagnostics.svg": "d22b1990064d06a94180c4c917710a9243bcb6b2a37d33f433c36b2c893bc999",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\topology\\stability_diagnostics.pdf": "4dece0fbd5edc8d8733b7fbe9954b658b9ed830b3842188b504533d0c145c780"
+      }
+    }
+  ]
+}

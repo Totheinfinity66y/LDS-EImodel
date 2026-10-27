@@ -138,3 +138,13 @@
 - Tests：test_phase_portrait；全回归；独立全部grid/full132路径与dual复算；36/71共点、dt2.5/5验证；实际开图。
 - Acceptance：真正streamplot与真实full-state红轨迹；lambda非PCA；非法状态mask；三条件不同origin明确；noninvariant数字主图披露；不改变模型或训练；来源专家和fresh审稿实际通过。
 - Blocking issues：原文训练阶段不能映射为本项目训练；使用真实保持/clock/退役条件。当前阶段结果与裁决见新归档README和audit/phase_portrait，未以原论文外观替代科学证据。
+
+## T13 — 局部稳定不动点相图
+
+- Owner：主Agent实现、Inagaki来源专家反审、local_fp_reviewer独立数值验收。
+- Dependencies/Input：T12、实际baseline归档/完整配置、JansonMarsden2017 Figure1来源契约。
+- Output：artifacts/local_fixed_points_v2，三编码主图/补图/完整状态数据、audit/local_fixed_points审稿。
+- Tests：新增3项闭合场/完整求根/循环拒绝测试，77项回归通过；独立model.step和稳定性复核。
+- Acceptance：完整残差、折点稳定分类、真实轨迹、剂量记录、实际开图、来源反审与独立PASS后完成。
+- Status：科学实现与验收完成。来源专家及fresh独立审稿均PASS_WITH_LIMITS，报告在audit/local_fixed_points/source与reviewer；Git收尾单独记录，不冒称已提交。
+- Blocking：不声称源作者代码复现、两个位置吸引子、全局盆或动态吸引子。

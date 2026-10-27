@@ -31,7 +31,15 @@ def main(argv=None):
     p.add_argument('--force',action='store_true',help='Re-export unchanged figures; source/data cache is otherwise reused')
     p.add_argument('--reference-grounded',action='store_true',help='Run audited source-adapted 8/9, reuse audited 1-7, and rebuild 10 in a fresh archive')
     p.add_argument('--phase-portraits',action='store_true',help='Three-condition affine flow portraits with full-state trajectories, in a separate archive')
+    p.add_argument('--local-fixed-points',action='store_true',help='Closed-pair phase portrait and full-state equilibrium stability')
     args=p.parse_args(argv); requested={int(x) for x in args.figures.split(',')}; formats=args.formats.split(',')
+    if args.local_fixed_points:
+        if args.phase_portraits or args.reference_grounded:p.error('choose one analysis workflow')
+        from .local_fixed_points import run,DEFAULT
+        destination=DEFAULT if args.output==DEFAULT_OUTPUT else args.output
+        if destination.resolve() in {DEFAULT_OUTPUT.resolve(),(ROOT/'artifacts/paper2agent_reproduction').resolve(),(ROOT/'artifacts/phase_portraits_v2').resolve()}:p.error('use a separate fixed-point archive')
+        run(args.input,destination,MODES if args.encoding=='all' else (args.encoding,))
+        return
     if args.phase_portraits:
         if args.reference_grounded:p.error('choose one workflow: --phase-portraits or --reference-grounded')
         if args.formats!='png,svg,pdf':p.error('phase portraits export png,svg,pdf together')

@@ -1,0 +1,113 @@
+{
+  "file_checks": "PASS",
+  "figures": [
+    {
+      "id": "fixed_point_portrait_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        1506,
+        1727
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "stability_diagnostics_one_hot",
+      "encoding": "one_hot",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        2686,
+        1037
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "fixed_point_portrait_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        1506,
+        1727
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "stability_diagnostics_ring",
+      "encoding": "ring",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        2686,
+        1037
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "fixed_point_portrait_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        1506,
+        1727
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "id": "stability_diagnostics_topology",
+      "encoding": "topology",
+      "checks": [
+        ".png integrity/hash",
+        ".svg integrity/hash",
+        ".pdf integrity/hash"
+      ],
+      "png_size": [
+        2686,
+        1037
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    }
+  ],
+  "contact_sheets": [
+    "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\manifests\\contact_one_hot_1.jpg",
+    "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\manifests\\contact_ring_1.jpg",
+    "D:\\Library\\10-16-handcrafted\\artifacts\\local_fixed_points_v2\\manifests\\contact_topology_1.jpg"
+  ],
+  "visual_review": "Separate visual review required; file integrity alone is not layout acceptance"
+}

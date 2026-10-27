@@ -1,0 +1,131 @@
+[
+  {
+    "mode": "one_hot",
+    "state_dimension": 132,
+    "pair_indices": [
+      20,
+      97
+    ],
+    "full_model_step_residual_max_per_ms": [
+      0.0,
+      1.318543236277097e-19,
+      0.0
+    ],
+    "positive_modes": [
+      0,
+      1,
+      0
+    ],
+    "max_generalized_real_eigenvalue_per_ms": [
+      -0.008333333333333333,
+      0.025,
+      -0.008333333333333333
+    ],
+    "closed_pair_grid_max_error": 2.8189256484623115e-18,
+    "nuisance_derivative_max": 0.0,
+    "full_unstable_model_step_errors": [
+      3.982481011632899e-12,
+      8.956169139651138e-13
+    ],
+    "unstable_endpoint_distance_to_rest_held": [
+      [
+        2.933939690287272e-05,
+        1.4999804405614543
+      ],
+      [
+        1.4999952413193385,
+        7.13803514196254e-06
+      ]
+    ],
+    "probe_count": 18,
+    "dose_error": 0.0,
+    "independent_distance_error": 2.7755575615628914e-17,
+    "max_probe_final_distance": 2.082221499584652e-07
+  },
+  {
+    "mode": "ring",
+    "state_dimension": 132,
+    "pair_indices": [
+      20,
+      97
+    ],
+    "full_model_step_residual_max_per_ms": [
+      0.0,
+      1.318543236277097e-19,
+      0.0
+    ],
+    "positive_modes": [
+      0,
+      1,
+      0
+    ],
+    "max_generalized_real_eigenvalue_per_ms": [
+      -0.008333333333333333,
+      0.025,
+      -0.008333333333333333
+    ],
+    "closed_pair_grid_max_error": 2.8189256484623115e-18,
+    "nuisance_derivative_max": 0.0,
+    "full_unstable_model_step_errors": [
+      3.982481011632899e-12,
+      8.956169139651138e-13
+    ],
+    "unstable_endpoint_distance_to_rest_held": [
+      [
+        2.933939690287272e-05,
+        1.4999804405614543
+      ],
+      [
+        1.4999952413193385,
+        7.13803514196254e-06
+      ]
+    ],
+    "probe_count": 18,
+    "dose_error": 0.0,
+    "independent_distance_error": 2.7755575615628914e-17,
+    "max_probe_final_distance": 2.082221499584652e-07
+  },
+  {
+    "mode": "topology",
+    "state_dimension": 132,
+    "pair_indices": [
+      20,
+      97
+    ],
+    "full_model_step_residual_max_per_ms": [
+      0.0,
+      1.318543236277097e-19,
+      0.0
+    ],
+    "positive_modes": [
+      0,
+      1,
+      0
+    ],
+    "max_generalized_real_eigenvalue_per_ms": [
+      -0.008333333333333333,
+      0.025,
+      -0.008333333333333333
+    ],
+    "closed_pair_grid_max_error": 2.8189256484623115e-18,
+    "nuisance_derivative_max": 0.0,
+    "full_unstable_model_step_errors": [
+      3.982481011632899e-12,
+      8.956169139651138e-13
+    ],
+    "unstable_endpoint_distance_to_rest_held": [
+      [
+        2.933939690287272e-05,
+        1.4999804405614543
+      ],
+      [
+        1.4999952413193385,
+        7.13803514196254e-06
+      ]
+    ],
+    "probe_count": 18,
+    "dose_error": 0.0,
+    "independent_distance_error": 2.7755575615628914e-17,
+    "max_probe_final_distance": 2.082221499584652e-07
+  }
+]

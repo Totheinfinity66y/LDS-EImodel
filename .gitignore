@@ -34,3 +34,7 @@ audit/phase_portrait/source/*.webp
 audit/phase_portrait/source/*.png
 audit/phase_portrait/source/*.html
 audit/phase_portrait/source/*_text.txt
+# Fixed-point reference image remains local for internal comparison.
+audit/local_fixed_points/source/*.jpg
+audit/local_fixed_points/source/*.html
+audit/local_fixed_points/source/*_text.txt

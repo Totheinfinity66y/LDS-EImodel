@@ -1,0 +1,11 @@
+{
+  "paper": "Janson & Marsden2017",
+  "doi": "10.1038/s41598-017-16994-y",
+  "figure": 1,
+  "visual_match": "Exact source image and user screenshot actually opened; matching two sinks/open saddle/redstable/blueunstable andx1/x2−3..3",
+  "excluded": "Langdon2023 Box1 visually different",
+  "valid_image": "audit\\local_fixed_points\\source\\source2017_figure1_m685.jpg",
+  "sha256": "f7f070263dae17899b1f09bf2694e6980af10b73dcdc66d47536123611328a00",
+  "download_limits": "source2017_pdf_challenge.html/source2017_fullimage_challenge.html/source2017.html areJS challengeHTML, not original source",
+  "source_methods": "Figure1caption andVelocityvectorfield Eq3 inspected through web; numerical original model not executed"
+}
