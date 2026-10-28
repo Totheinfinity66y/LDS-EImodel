@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-28T12:31:41.542Z",
+  "callerId": "e8aa7849-9a20-48fa-b004-ab3226b5b185",
+  "endpointPid": 31856,
+  "created": {
+    "sessionId": "ba791075-3a6d-4e9f-8bea-0d099b84ef41",
+    "title": "Cursor 运行中收件验收",
+    "provider": "cursor-agent",
+    "model": "cursor-agent:auto",
+    "worktreeId": null,
+    "worktreePath": null,
+    "worktreeMode": "none",
+    "createdBySessionId": "e8aa7849-9a20-48fa-b004-ab3226b5b185",
+    "queuedInitialPrompt": true,
+    "parentSessionId": "e8aa7849-9a20-48fa-b004-ab3226b5b185",
+    "effortLevel": null,
+    "isolated": false,
+    "workstreamId": "e8aa7849-9a20-48fa-b004-ab3226b5b185",
+    "promotedParent": false,
+    "notifyOnComplete": false
+  }
+}

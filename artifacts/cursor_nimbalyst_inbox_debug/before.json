@@ -1,0 +1,87 @@
+{
+  "at": "2026-10-28T12:35:51.455Z",
+  "source": "C:\\Users\\TOTHEI~1\\AppData\\Local\\Temp\\nimbalyst-inbox-debug\\main-before.js",
+  "failed": 8,
+  "results": [
+    {
+      "name": "host endpoint advertises the inbox tool",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert.ok(c.host.includes('consume_session_inbox'))\n"
+    },
+    {
+      "name": "Cursor turns begin an inbox lifecycle",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "name": "host handler accepts verified Cursor invocation path",
+      "pass": false,
+      "error": "This provider has no verifiable inbox tool invocation"
+    },
+    {
+      "name": "Cursor receives reports before the parent turn ends",
+      "pass": false,
+      "error": "Inbox checkpoint could not verify a current provider tool invocation"
+    },
+    {
+      "name": "retry returns the receipt and does not claim a second time",
+      "pass": false,
+      "error": "Inbox checkpoint could not verify a current provider tool invocation"
+    },
+    {
+      "name": "a later checkpoint cannot replay the same report",
+      "pass": false,
+      "error": "Inbox checkpoint could not verify a current provider tool invocation"
+    },
+    {
+      "name": "instruction boundary remains queued",
+      "pass": false,
+      "error": "Inbox checkpoint could not verify a current provider tool invocation"
+    },
+    {
+      "name": "failed parent retires the consumed report without replay",
+      "pass": false,
+      "error": "Inbox checkpoint could not verify a current provider tool invocation"
+    },
+    {
+      "name": "reject missing current tool invocation",
+      "pass": true
+    },
+    {
+      "name": "reject wrong caller session",
+      "pass": true
+    },
+    {
+      "name": "reject wrong MCP server",
+      "pass": true
+    },
+    {
+      "name": "reject completed tool invocation",
+      "pass": true
+    },
+    {
+      "name": "reject ambiguous concurrent invocations",
+      "pass": true
+    },
+    {
+      "name": "native Codex identity verification stays intact",
+      "pass": true
+    },
+    {
+      "name": "a retired turn cannot consume more messages",
+      "pass": true
+    },
+    {
+      "name": "cross-workspace consumption is rejected",
+      "pass": true
+    },
+    {
+      "name": "unknown providers cannot opt themselves into Cursor identity",
+      "pass": true
+    },
+    {
+      "name": "native Claude identity verification stays intact",
+      "pass": true
+    }
+  ]
+}

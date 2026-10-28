@@ -1,0 +1,402 @@
+{
+  "at": "2026-10-28T12:34:54.331Z",
+  "status": "PASS",
+  "parent": {
+    "id": "ba791075-3a6d-4e9f-8bea-0d099b84ef41",
+    "provider": "cursor-agent",
+    "status": "idle",
+    "parent_session_id": "e8aa7849-9a20-48fa-b004-ab3226b5b185"
+  },
+  "inputMessageId": 149575,
+  "receiptMessageId": 149659,
+  "originalInvocation": {
+    "messageId": 149645,
+    "event": {
+      "type": "tool_call",
+      "subtype": "started",
+      "call_id": "call_66e75a07c10b42488ef9f7fd",
+      "tool_call": {
+        "mcpToolCall": {
+          "args": {
+            "name": "consume_session_inbox",
+            "args": {
+              "checkpointId": "live_received",
+              "nimbalyst_session_id": "ba791075-3a6d-4e9f-8bea-0d099b84ef41"
+            },
+            "toolCallId": "call_66e75a07c10b42488ef9f7fd",
+            "providerIdentifier": "",
+            "toolName": "consume_session_inbox",
+            "smartModeApprovalOnly": false,
+            "skipApproval": false,
+            "serverIdentifier": "nimbalyst",
+            "symbolicPathArguments": [],
+            "argumentsRepaired": false
+          },
+          "description": "Consume the inbox batch and read the child report"
+        },
+        "hookAdditionalContexts": [],
+        "toolCallId": "call_66e75a07c10b42488ef9f7fd",
+        "startedAtMs": "1793190769771"
+      },
+      "model_call_id": "e9c90b41-e25d-4e41-abf2-8375bd4c99d4:cc08740c:4",
+      "session_id": "0633dc9d-c6a1-4360-8b3c-921020520cc2",
+      "timestamp_ms": 1793190769772
+    }
+  },
+  "successfulInvocationId": "call_5375caaef8034fea97670480",
+  "checkpointRetried": true,
+  "payload": {
+    "deliveryId": "28908f46-4160-4e04-b69e-3579f23323f6",
+    "deliveryMode": "checkpoint",
+    "turnId": "dc23f646-65ab-4d39-b8d9-c68eb320c465",
+    "messages": [
+      {
+        "id": "meta-1793190762150-1kd99ol",
+        "sourceSessionId": "b7b2b217-7158-4d91-926b-ab6913938e0e",
+        "createdAt": "2026-10-28T12:32:42.150Z",
+        "kind": "report",
+        "text": "[Child Session Update]\nSession: \"Inbox 单次报告探针\" (b7b2b217-7158-4d91-926b-ab6913938e0e)\nStatus: idle\nEvent: session:completed\nRecent messages:\n- User: 这是一次子消息消费验收。禁止创建子会话、shell、computer use、文件读写、写记忆或发消息。不要重命名。仅按宿主要求调用 update_session_meta 设置 phase 为 validating、用 add 添加 inbox-probe 标签，然后最终只回复 INBOX_CHILD_READY_20261028。只完成一次，不等待其它消息。\n- Assistant: INBOX_CHILD_READY_20261028\n- Assistant: INBOX_CHILD_READY_20261028"
+      }
+    ],
+    "remaining": false,
+    "boundary": null
+  },
+  "queue": [
+    {
+      "id": "meta-1793190701524-m4dd39a",
+      "status": "completed",
+      "document_context": "{\"promptProvenance\":{\"actor\":\"agent\",\"origin\":\"session-orchestration\",\"originSessionId\":\"e8aa7849-9a20-48fa-b004-ab3226b5b185\",\"queuedPromptId\":\"meta-1793190701524-m4dd39a\"}}"
+    },
+    {
+      "id": "meta-1793190762150-1kd99ol",
+      "status": "completed",
+      "document_context": "{\"promptProvenance\":{\"actor\":\"agent\",\"origin\":\"child-session-update\",\"messageKind\":\"report\",\"originSessionId\":\"b7b2b217-7158-4d91-926b-ab6913938e0e\",\"queuedPromptId\":\"meta-1793190762150-1kd99ol\"},\"inboxDelivery\":{\"version\":1,\"deliveryId\":\"28908f46-4160-4e04-b69e-3579f23323f6\",\"turnId\":\"dc23f646-65ab-4d39-b8d9-c68eb320c465\",\"inputId\":149575,\"toolCallId\":\"call_66e75a07c10b42488ef9f7fd\",\"coordinatorId\":\"meta-1793190762150-1kd99ol\",\"memberIds\":[\"meta-1793190762150-1kd99ol\"],\"result\":\"{\\\"deliveryId\\\":\\\"28908f46-4160-4e04-b69e-3579f23323f6\\\",\\\"deliveryMode\\\":\\\"checkpoint\\\",\\\"turnId\\\":\\\"dc23f646-65ab-4d39-b8d9-c68eb320c465\\\",\\\"messages\\\":[{\\\"id\\\":\\\"meta-1793190762150-1kd99ol\\\",\\\"sourceSessionId\\\":\\\"b7b2b217-7158-4d91-926b-ab6913938e0e\\\",\\\"createdAt\\\":\\\"2026-10-28T12:32:42.150Z\\\",\\\"kind\\\":\\\"report\\\",\\\"text\\\":\\\"[Child Session Update]\\\\nSession: \\\\\\\"Inbox 单次报告探针\\\\\\\" (b7b2b217-7158-4d91-926b-ab6913938e0e)\\\\nStatus: idle\\\\nEvent: session:completed\\\\nRecent messages:\\\\n- User: 这是一次子消息消费验收。禁止创建子会话、shell、computer use、文件读写、写记忆或发消息。不要重命名。仅按宿主要求调用 update_session_meta 设置 phase 为 validating、用 add 添加 inbox-probe 标签，然后最终只回复 INBOX_CHILD_READY_20261028。只完成一次，不等待其它消息。\\\\n- Assistant: INBOX_CHILD_READY_20261028\\\\n- Assistant: INBOX_CHILD_READY_20261028\\\"}],\\\"remaining\\\":false,\\\"boundary\\\":null}\",\"requestKey\":\"dc23f646-65ab-4d39-b8d9-c68eb320c465:149575:live_received\"}}"
+    }
+  ],
+  "toolEvents": [
+    {
+      "messageId": 149581,
+      "event": {
+        "type": "tool_call",
+        "subtype": "completed",
+        "call_id": "call_deafa29c9638463996593280",
+        "tool_call": {
+          "mcpToolCall": {
+            "args": {
+              "name": "update_session_meta",
+              "args": {
+                "nimbalyst_session_id": "ba791075-3a6d-4e9f-8bea-0d099b84ef41",
+                "phase": "validating",
+                "add": {
+                  "item": "inbox-live-test"
+                }
+              },
+              "toolCallId": "call_deafa29c9638463996593280",
+              "providerIdentifier": "",
+              "toolName": "update_session_meta",
+              "smartModeApprovalOnly": false,
+              "skipApproval": false,
+              "serverIdentifier": "nimbalyst",
+              "symbolicPathArguments": [],
+              "argumentsRepaired": false
+            },
+            "result": {
+              "success": {
+                "content": [
+                  {
+                    "text": {
+                      "text": "{\"summary\":\"Added tags: #inbox-live-test\\nSet phase: validating\\nName: Cursor 运行中收件验收\\nTags: #inbox-live-test\\nPhase: validating\",\"before\":{\"name\":\"Cursor 运行中收件验收\",\"tags\":[],\"phase\":null},\"after\":{\"name\":\"Cursor 运行中收件验收\",\"tags\":[\"inbox-live-test\"],\"phase\":\"validating\"}}"
+                    }
+                  }
+                ],
+                "isError": false,
+                "systemReminders": []
+              }
+            },
+            "description": "Set session phase to validating and add inbox-live-test tag"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_deafa29c9638463996593280",
+          "startedAtMs": "1793190721019",
+          "completedAtMs": "1793190721110"
+        },
+        "model_call_id": "e9c90b41-e25d-4e41-abf2-8375bd4c99d4:cc08740c:0",
+        "session_id": "0633dc9d-c6a1-4360-8b3c-921020520cc2",
+        "timestamp_ms": 1793190721480
+      }
+    },
+    {
+      "messageId": 149606,
+      "event": {
+        "type": "tool_call",
+        "subtype": "completed",
+        "call_id": "call_6b6cb1ada1fb498f99528b6e",
+        "tool_call": {
+          "mcpToolCall": {
+            "args": {
+              "name": "CallMcpTool",
+              "args": {
+                "description": "Spawn probe child session that will report one inbox message",
+                "server": "nimbalyst",
+                "arguments": {
+                  "inheritModel": "true",
+                  "notifyOnComplete": "true",
+                  "prompt": "这是一次子消息消费验收。禁止创建子会话、shell、computer use、文件读写、写记忆或发消息。不要重命名。仅按宿主要求调用 update_session_meta 设置 phase 为 validating、用 add 添加 inbox-probe 标签，然后最终只回复 INBOX_CHILD_READY_20261028。只完成一次，不等待其它消息。",
+                  "title": "Inbox 单次报告探针"
+                },
+                "toolName": "spawn_session"
+              },
+              "toolCallId": "call_6b6cb1ada1fb498f99528b6e",
+              "providerIdentifier": "cursor-byok-compat",
+              "toolName": "CallMcpTool",
+              "smartModeApprovalOnly": false,
+              "skipApproval": false,
+              "serverIdentifier": "cursor-byok-compat",
+              "symbolicPathArguments": [],
+              "argumentsRepaired": false
+            },
+            "result": {
+              "error": {
+                "error": "Exec call_6b6cb1ada1fb498f99528b6e failed: MCP error -32000: Provide the exact current Nimbalyst session ID in nimbalyst_session_id.",
+                "readToolDefReminder": "",
+                "systemReminders": []
+              }
+            },
+            "description": "Unavailable legacy or unsupported tool"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_6b6cb1ada1fb498f99528b6e",
+          "startedAtMs": "1793190726035",
+          "completedAtMs": "1793190726035"
+        },
+        "model_call_id": "e9c90b41-e25d-4e41-abf2-8375bd4c99d4:cc08740c:1",
+        "session_id": "0633dc9d-c6a1-4360-8b3c-921020520cc2",
+        "timestamp_ms": 1793190726333
+      }
+    },
+    {
+      "messageId": 149614,
+      "event": {
+        "type": "tool_call",
+        "subtype": "completed",
+        "call_id": "call_99f2f8ab8b4c4054af64f9cf",
+        "tool_call": {
+          "mcpToolCall": {
+            "args": {
+              "name": "spawn_session",
+              "args": {
+                "notifyOnComplete": "true",
+                "title": "Inbox 单次报告探针",
+                "nimbalyst_session_id": "ba791075-3a6d-4e9f-8bea-0d099b84ef41",
+                "inheritModel": "true",
+                "prompt": "这是一次子消息消费验收。禁止创建子会话、shell、computer use、文件读写、写记忆或发消息。不要重命名。仅按宿主要求调用 update_session_meta 设置 phase 为 validating、用 add 添加 inbox-probe 标签，然后最终只回复 INBOX_CHILD_READY_20261028。只完成一次，不等待其它消息。"
+              },
+              "toolCallId": "call_99f2f8ab8b4c4054af64f9cf",
+              "providerIdentifier": "",
+              "toolName": "spawn_session",
+              "smartModeApprovalOnly": false,
+              "skipApproval": false,
+              "serverIdentifier": "nimbalyst",
+              "symbolicPathArguments": [],
+              "argumentsRepaired": false
+            },
+            "result": {
+              "success": {
+                "content": [
+                  {
+                    "text": {
+                      "text": "{\n  \"sessionId\": \"b7b2b217-7158-4d91-926b-ab6913938e0e\",\n  \"title\": \"Inbox 单次报告探针\",\n  \"provider\": \"cursor-agent\",\n  \"model\": \"cursor-agent:auto\",\n  \"worktreeId\": null,\n  \"worktreePath\": null,\n  \"worktreeMode\": \"none\",\n  \"createdBySessionId\": \"ba791075-3a6d-4e9f-8bea-0d099b84ef41\",\n  \"queuedInitialPrompt\": true,\n  \"parentSessionId\": \"ba791075-3a6d-4e9f-8bea-0d099b84ef41\",\n  \"effortLevel\": null,\n  \"isolated\": false,\n  \"workstreamId\": \"ba791075-3a6d-4e9f-8bea-0d099b84ef41\",\n  \"promotedParent\": false,\n  \"notifyOnComplete\": true\n}"
+                    }
+                  }
+                ],
+                "isError": false,
+                "systemReminders": []
+              }
+            },
+            "description": "Spawn probe child session that will report one inbox message"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_99f2f8ab8b4c4054af64f9cf",
+          "startedAtMs": "1793190731141",
+          "completedAtMs": "1793190731231"
+        },
+        "model_call_id": "e9c90b41-e25d-4e41-abf2-8375bd4c99d4:cc08740c:2",
+        "session_id": "0633dc9d-c6a1-4360-8b3c-921020520cc2",
+        "timestamp_ms": 1793190731483
+      }
+    },
+    {
+      "messageId": 149643,
+      "event": {
+        "type": "tool_call",
+        "subtype": "completed",
+        "call_id": "call_af9e28d75b2e464c982031ad",
+        "tool_call": {
+          "shellToolCall": {
+            "args": {
+              "command": "powershell -NoProfile -Command \"& 'C:\\Program Files\\nodejs\\node.exe' 'D:\\Library\\10-16-handcrafted\\tools\\cursor_nimbalyst\\wait-inbox-report.cjs' 'ba791075-3a6d-4e9f-8bea-0d099b84ef41' 'b7b2b217-7158-4d91-926b-ab6913938e0e'\"",
+              "workingDirectory": "D:\\Library\\10-16-handcrafted",
+              "timeout": 0,
+              "toolCallId": "call_af9e28d75b2e464c982031ad",
+              "simpleCommands": [],
+              "hasInputRedirect": false,
+              "hasOutputRedirect": false,
+              "isBackground": false,
+              "skipApproval": false,
+              "timeoutBehavior": "TIMEOUT_BEHAVIOR_UNSPECIFIED",
+              "description": "Wait for child report to arrive",
+              "closeStdin": false,
+              "adminCommandDenylist": []
+            },
+            "result": {
+              "success": {
+                "command": "",
+                "workingDirectory": "D:\\Library\\10-16-handcrafted",
+                "exitCode": 0,
+                "signal": "",
+                "stdout": "{\"reportReady\":true,\"queueId\":\"meta-1793190762150-1kd99ol\",\"parent\":\"ba791075-3a6d-4e9f-8bea-0d099b84ef41\",\"child\":\"b7b2b217-7158-4d91-926b-ab6913938e0e\"}\n",
+                "stderr": "D:\\ProgramData\\miniconda3\\Lib\\site-packages\\requests\\__init__.py:113: RequestsDependencyWarning: urllib3 (2.5.0) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!\r\n  warnings.warn(\r\nD:\\ProgramData\\miniconda3\\Lib\\site-packages\\requests\\__init__.py:113: RequestsDependencyWarning: urllib3 (2.5.0) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!\r\n  warnings.warn(\r\n",
+                "executionTime": 0,
+                "interleavedOutput": "{\"reportReady\":true,\"queueId\":\"meta-1793190762150-1kd99ol\",\"parent\":\"ba791075-3a6d-4e9f-8bea-0d099b84ef41\",\"child\":\"b7b2b217-7158-4d91-926b-ab6913938e0e\"}\nD:\\ProgramData\\miniconda3\\Lib\\site-packages\\requests\\__init__.py:113: RequestsDependencyWarning: urllib3 (2.5.0) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!\r\n  warnings.warn(\r\nD:\\ProgramData\\miniconda3\\Lib\\site-packages\\requests\\__init__.py:113: RequestsDependencyWarning: urllib3 (2.5.0) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!\r\n  warnings.warn(\r\n",
+                "localExecutionTimeMs": 29624
+              },
+              "isBackground": false
+            },
+            "description": "Wait for child report to arrive"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_af9e28d75b2e464c982031ad",
+          "startedAtMs": "1793190735522",
+          "completedAtMs": "1793190765182"
+        },
+        "model_call_id": "e9c90b41-e25d-4e41-abf2-8375bd4c99d4:cc08740c:3",
+        "session_id": "0633dc9d-c6a1-4360-8b3c-921020520cc2",
+        "timestamp_ms": 1793190765428
+      }
+    },
+    {
+      "messageId": 149646,
+      "event": {
+        "type": "tool_call",
+        "subtype": "completed",
+        "call_id": "call_66e75a07c10b42488ef9f7fd",
+        "tool_call": {
+          "mcpToolCall": {
+            "args": {
+              "name": "CallMcpTool",
+              "args": {
+                "arguments": {
+                  "checkpointId": "live_received",
+                  "nimbalyst_session_id": "ba791075-3a6d-4e9f-8bea-0d099b84ef41"
+                },
+                "toolName": "consume_session_inbox",
+                "description": "Consume the inbox batch and read the child report",
+                "server": "nimbalyst"
+              },
+              "toolCallId": "call_66e75a07c10b42488ef9f7fd",
+              "providerIdentifier": "cursor-byok-compat",
+              "toolName": "CallMcpTool",
+              "smartModeApprovalOnly": false,
+              "skipApproval": false,
+              "serverIdentifier": "cursor-byok-compat",
+              "symbolicPathArguments": [],
+              "argumentsRepaired": false
+            },
+            "result": {
+              "error": {
+                "error": "Exec call_66e75a07c10b42488ef9f7fd failed: MCP error -32603: Inbox checkpoint could not verify a current provider tool invocation",
+                "readToolDefReminder": "",
+                "systemReminders": []
+              }
+            },
+            "description": "Unavailable legacy or unsupported tool"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_66e75a07c10b42488ef9f7fd",
+          "startedAtMs": "1793190770541",
+          "completedAtMs": "1793190770541"
+        },
+        "model_call_id": "e9c90b41-e25d-4e41-abf2-8375bd4c99d4:cc08740c:4",
+        "session_id": "0633dc9d-c6a1-4360-8b3c-921020520cc2",
+        "timestamp_ms": 1793190770811
+      }
+    },
+    {
+      "messageId": 149657,
+      "event": {
+        "type": "tool_call",
+        "subtype": "completed",
+        "call_id": "call_0fd046849a8d4feebb10c755",
+        "tool_call": {
+          "getMcpToolsToolCall": {
+            "args": {
+              "server": "nimbalyst",
+              "toolName": "consume_session_inbox",
+              "toolCallId": "call_0fd046849a8d4feebb10c755"
+            },
+            "result": {
+              "success": {
+                "content": "{\n  \"tools\": [\n    {\n      \"description\": \"Receive a bounded batch of reports for your CURRENT active turn and record receipt so they do not replay as another turn. Takes no session ID. When coordinating children, call before delegation/integration decisions, after long validation, and before final synthesis. Read the whole batch before acting. A boundary means yield at a safe point for normal queue delivery. Do not poll an empty inbox; end the turn when no independent work remains. Supports Claude Code, Codex and Cursor MCP turns with verifiable tool-call identity.\",\n      \"inputSchema\": {\n        \"properties\": {\n          \"checkpointId\": {\n            \"description\": \"Unique name for this checkpoint (letters, digits, underscores or hyphens; max 100). Reuse only when retrying this same read; use a new name for a later checkpoint.\",\n            \"type\": \"string\"\n          },\n          \"nimbalyst_session_id\": {\n            \"description\": \"Required exact current Nimbalyst session ID; copy the ID supplied in the current Nimbalyst prompt. The bridge validates that it belongs to this workspace.\",\n            \"type\": \"string\"\n          }\n        },\n        \"required\": [\n          \"checkpointId\",\n          \"nimbalyst_session_id\"\n        ],\n        \"type\": \"object\"\n      },\n      \"server\": \"nimbalyst\",\n      \"serverName\": \"nimbalyst\",\n      \"serverStatus\": \"connected\",\n      \"toolName\": \"consume_session_inbox\"\n    }\n  ]\n}"
+              }
+            }
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_0fd046849a8d4feebb10c755",
+          "startedAtMs": "1793190774517",
+          "completedAtMs": "1793190774571"
+        },
+        "model_call_id": "e9c90b41-e25d-4e41-abf2-8375bd4c99d4:cc08740c:5",
+        "session_id": "0633dc9d-c6a1-4360-8b3c-921020520cc2",
+        "timestamp_ms": 1793190774890
+      }
+    },
+    {
+      "messageId": 149694,
+      "event": {
+        "type": "tool_call",
+        "subtype": "completed",
+        "call_id": "call_5375caaef8034fea97670480",
+        "tool_call": {
+          "mcpToolCall": {
+            "args": {
+              "name": "consume_session_inbox",
+              "args": {
+                "nimbalyst_session_id": "ba791075-3a6d-4e9f-8bea-0d099b84ef41",
+                "checkpointId": "live_received"
+              },
+              "toolCallId": "call_5375caaef8034fea97670480",
+              "providerIdentifier": "",
+              "toolName": "consume_session_inbox",
+              "smartModeApprovalOnly": false,
+              "skipApproval": false,
+              "serverIdentifier": "nimbalyst",
+              "symbolicPathArguments": [],
+              "argumentsRepaired": false
+            },
+            "result": {
+              "success": {
+                "content": [
+                  {
+                    "text": {
+                      "text": "{\"deliveryId\":\"28908f46-4160-4e04-b69e-3579f23323f6\",\"deliveryMode\":\"checkpoint\",\"turnId\":\"dc23f646-65ab-4d39-b8d9-c68eb320c465\",\"messages\":[{\"id\":\"meta-1793190762150-1kd99ol\",\"sourceSessionId\":\"b7b2b217-7158-4d91-926b-ab6913938e0e\",\"createdAt\":\"2026-10-28T12:32:42.150Z\",\"kind\":\"report\",\"text\":\"[Child Session Update]\\nSession: \\\"Inbox 单次报告探针\\\" (b7b2b217-7158-4d91-926b-ab6913938e0e)\\nStatus: idle\\nEvent: session:completed\\nRecent messages:\\n- User: 这是一次子消息消费验收。禁止创建子会话、shell、computer use、文件读写、写记忆或发消息。不要重命名。仅按宿主要求调用 update_session_meta 设置 phase 为 validating、用 add 添加 inbox-probe 标签，然后最终只回复 INBOX_CHILD_READY_20261028。只完成一次，不等待其它消息。\\n- Assistant: INBOX_CHILD_READY_20261028\\n- Assistant: INBOX_CHILD_READY_20261028\"}],\"remaining\":false,\"boundary\":null}"
+                    }
+                  }
+                ],
+                "isError": false,
+                "systemReminders": []
+              }
+            },
+            "description": "Retry consuming the inbox batch"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_5375caaef8034fea97670480",
+          "startedAtMs": "1793190779383",
+          "completedAtMs": "1793190779455"
+        },
+        "model_call_id": "e9c90b41-e25d-4e41-abf2-8375bd4c99d4:cc08740c:6",
+        "session_id": "0633dc9d-c6a1-4360-8b3c-921020520cc2",
+        "timestamp_ms": 1793190779768
+      }
+    }
+  ]
+}

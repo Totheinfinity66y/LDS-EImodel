@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-28T12:38:28.100Z",
+  "target": "C:\\Users\\Totheinfinity\\AppData\\Local\\Programs\\Nimbalyst\\resources\\app.asar",
+  "backupDir": "C:\\Users\\Totheinfinity\\AppData\\Local\\NimbalystMcpBridge\\repairs\\2026-10-28T12-38-26-896Z-active-inbox",
+  "stagedArchive": "C:\\Users\\Totheinfinity\\AppData\\Local\\NimbalystMcpBridge\\repairs\\2026-10-28T12-38-26-896Z-active-inbox\\app.asar.staged",
+  "mainFile": "C:\\Users\\Totheinfinity\\AppData\\Local\\NimbalystMcpBridge\\repairs\\2026-10-28T12-38-26-896Z-active-inbox\\main-after.js",
+  "beforeSha256": "5b69210d3253d08290f726a1432bde73d439fe08e98fd821cc3dacd9fc70deb7",
+  "afterSha256": "b841427b73e2fdaceb67760bbf077d58718fd2b4f295527b2ba64b8d6425a1bc",
+  "mainBeforeSha256": "4c6856688702fb0702e5590d814cc3434ec29c7cbf9589ad1b65dfd6741aef1f",
+  "mainAfterSha256": "96afe9f9702acd06abd2c59c5c99b2956940422a8fa59e2d4cf0574c22d4927f",
+  "changedEntries": [
+    "/out/main/index.js"
+  ],
+  "archiveEntries": 894,
+  "state": "STAGED_NOT_LOADED"
+}

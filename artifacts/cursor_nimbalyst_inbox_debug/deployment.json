@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-28T12:52:07.460Z",
+  "applied": {
+    "at": "2026-10-28T12:51:38.057Z",
+    "target": "C:\\Users\\Totheinfinity\\AppData\\Local\\Programs\\Nimbalyst\\resources\\app.asar",
+    "sha256": "64f7d4d7f5788d4fba19c4148a51b3fde874a7a45dd486b3aafb5ed3498370f6"
+  },
+  "endpointPid": 3156,
+  "startedAt": "2026-10-28T12:51:40.859Z"
+}

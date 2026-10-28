@@ -1,0 +1,419 @@
+{
+  "status": "FAIL",
+  "parentId": "9a4b5310-2023-41f2-9c6e-7b31b6c59843",
+  "reason": "compatibility tool invocation and provider trace timing are not synchronized",
+  "session": {
+    "provider": "cursor-agent",
+    "status": "idle"
+  },
+  "inputTurns": 2,
+  "events": [
+    {
+      "messageId": 149850,
+      "event": {
+        "type": "tool_call",
+        "subtype": "started",
+        "call_id": "call_56c08cef4ec54d25a045d8fb",
+        "tool_call": {
+          "mcpToolCall": {
+            "args": {
+              "name": "consume_session_inbox",
+              "args": {
+                "nimbalyst_session_id": "9a4b5310-2023-41f2-9c6e-7b31b6c59843",
+                "checkpointId": "live_received"
+              },
+              "toolCallId": "call_56c08cef4ec54d25a045d8fb",
+              "providerIdentifier": "",
+              "toolName": "consume_session_inbox",
+              "smartModeApprovalOnly": false,
+              "skipApproval": false,
+              "serverIdentifier": "nimbalyst",
+              "symbolicPathArguments": [],
+              "argumentsRepaired": false
+            },
+            "description": "Consume inbox batch for live receipt verification"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_56c08cef4ec54d25a045d8fb",
+          "startedAtMs": "1793191273507"
+        },
+        "model_call_id": "5e54c406-9513-4ee2-979a-aa12e0709ce2:7f708a74:5",
+        "session_id": "276f8623-e3d8-42c6-89fb-a537d5a85dc1",
+        "timestamp_ms": 1793191273507
+      }
+    },
+    {
+      "messageId": 149851,
+      "event": {
+        "type": "tool_call",
+        "subtype": "completed",
+        "call_id": "call_56c08cef4ec54d25a045d8fb",
+        "tool_call": {
+          "mcpToolCall": {
+            "args": {
+              "name": "CallMcpTool",
+              "args": {
+                "arguments": {
+                  "checkpointId": "live_received",
+                  "nimbalyst_session_id": "9a4b5310-2023-41f2-9c6e-7b31b6c59843"
+                },
+                "description": "Consume inbox batch for live receipt verification",
+                "toolName": "consume_session_inbox",
+                "server": "nimbalyst"
+              },
+              "toolCallId": "call_56c08cef4ec54d25a045d8fb",
+              "providerIdentifier": "cursor-byok-compat",
+              "toolName": "CallMcpTool",
+              "smartModeApprovalOnly": false,
+              "skipApproval": false,
+              "serverIdentifier": "cursor-byok-compat",
+              "symbolicPathArguments": [],
+              "argumentsRepaired": false
+            },
+            "result": {
+              "error": {
+                "error": "Exec call_56c08cef4ec54d25a045d8fb failed: MCP error -32603: Inbox checkpoint could not verify a current provider tool invocation",
+                "readToolDefReminder": "",
+                "systemReminders": []
+              }
+            },
+            "description": "Unavailable legacy or unsupported tool"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_56c08cef4ec54d25a045d8fb",
+          "startedAtMs": "1793191274310",
+          "completedAtMs": "1793191274310"
+        },
+        "model_call_id": "5e54c406-9513-4ee2-979a-aa12e0709ce2:7f708a74:5",
+        "session_id": "276f8623-e3d8-42c6-89fb-a537d5a85dc1",
+        "timestamp_ms": 1793191274579
+      }
+    },
+    {
+      "messageId": 149860,
+      "event": {
+        "type": "tool_call",
+        "subtype": "started",
+        "call_id": "call_45d709625bc645c1af8ac5a3",
+        "tool_call": {
+          "mcpToolCall": {
+            "args": {
+              "name": "consume_session_inbox",
+              "args": {
+                "checkpointId": "live_received",
+                "nimbalyst_session_id": "9a4b5310-2023-41f2-9c6e-7b31b6c59843"
+              },
+              "toolCallId": "call_45d709625bc645c1af8ac5a3",
+              "providerIdentifier": "",
+              "toolName": "consume_session_inbox",
+              "smartModeApprovalOnly": false,
+              "skipApproval": false,
+              "serverIdentifier": "nimbalyst",
+              "symbolicPathArguments": [],
+              "argumentsRepaired": false
+            },
+            "description": "Retry consuming inbox batch for live receipt"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_45d709625bc645c1af8ac5a3",
+          "startedAtMs": "1793191278353"
+        },
+        "model_call_id": "5e54c406-9513-4ee2-979a-aa12e0709ce2:7f708a74:6",
+        "session_id": "276f8623-e3d8-42c6-89fb-a537d5a85dc1",
+        "timestamp_ms": 1793191278353
+      }
+    },
+    {
+      "messageId": 149861,
+      "event": {
+        "type": "tool_call",
+        "subtype": "completed",
+        "call_id": "call_45d709625bc645c1af8ac5a3",
+        "tool_call": {
+          "mcpToolCall": {
+            "args": {
+              "name": "CallMcpTool",
+              "args": {
+                "arguments": {
+                  "checkpointId": "live_received",
+                  "nimbalyst_session_id": "9a4b5310-2023-41f2-9c6e-7b31b6c59843"
+                },
+                "server": "nimbalyst",
+                "description": "Retry consuming inbox batch for live receipt",
+                "toolName": "consume_session_inbox"
+              },
+              "toolCallId": "call_45d709625bc645c1af8ac5a3",
+              "providerIdentifier": "cursor-byok-compat",
+              "toolName": "CallMcpTool",
+              "smartModeApprovalOnly": false,
+              "skipApproval": false,
+              "serverIdentifier": "cursor-byok-compat",
+              "symbolicPathArguments": [],
+              "argumentsRepaired": false
+            },
+            "result": {
+              "error": {
+                "error": "Exec call_45d709625bc645c1af8ac5a3 failed: MCP error -32603: Inbox checkpoint could not verify a current provider tool invocation",
+                "readToolDefReminder": "",
+                "systemReminders": []
+              }
+            },
+            "description": "Unavailable legacy or unsupported tool"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_45d709625bc645c1af8ac5a3",
+          "startedAtMs": "1793191279185",
+          "completedAtMs": "1793191279185"
+        },
+        "model_call_id": "5e54c406-9513-4ee2-979a-aa12e0709ce2:7f708a74:6",
+        "session_id": "276f8623-e3d8-42c6-89fb-a537d5a85dc1",
+        "timestamp_ms": 1793191279475
+      }
+    },
+    {
+      "messageId": 149945,
+      "event": {
+        "type": "tool_call",
+        "subtype": "started",
+        "call_id": "call_3e82225d4f1442ce8408e33d",
+        "tool_call": {
+          "mcpToolCall": {
+            "args": {
+              "name": "consume_session_inbox",
+              "args": {
+                "nimbalyst_session_id": "9a4b5310-2023-41f2-9c6e-7b31b6c59843",
+                "checkpointId": "live_received"
+              },
+              "toolCallId": "call_3e82225d4f1442ce8408e33d",
+              "providerIdentifier": "",
+              "toolName": "consume_session_inbox",
+              "smartModeApprovalOnly": false,
+              "skipApproval": false,
+              "serverIdentifier": "nimbalyst",
+              "symbolicPathArguments": [],
+              "argumentsRepaired": false
+            },
+            "description": "Retry consuming inbox batch for live receipt"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_3e82225d4f1442ce8408e33d",
+          "startedAtMs": "1793191284222"
+        },
+        "model_call_id": "5e54c406-9513-4ee2-979a-aa12e0709ce2:7f708a74:7",
+        "session_id": "276f8623-e3d8-42c6-89fb-a537d5a85dc1",
+        "timestamp_ms": 1793191284222
+      }
+    },
+    {
+      "messageId": 149947,
+      "event": {
+        "type": "tool_call",
+        "subtype": "completed",
+        "call_id": "call_3e82225d4f1442ce8408e33d",
+        "tool_call": {
+          "mcpToolCall": {
+            "args": {
+              "name": "CallMcpTool",
+              "args": {
+                "toolName": "consume_session_inbox",
+                "arguments": {
+                  "checkpointId": "live_received",
+                  "nimbalyst_session_id": "9a4b5310-2023-41f2-9c6e-7b31b6c59843"
+                },
+                "description": "Retry consuming inbox batch for live receipt",
+                "server": "nimbalyst"
+              },
+              "toolCallId": "call_3e82225d4f1442ce8408e33d",
+              "providerIdentifier": "cursor-byok-compat",
+              "toolName": "CallMcpTool",
+              "smartModeApprovalOnly": false,
+              "skipApproval": false,
+              "serverIdentifier": "cursor-byok-compat",
+              "symbolicPathArguments": [],
+              "argumentsRepaired": false
+            },
+            "result": {
+              "error": {
+                "error": "Exec call_3e82225d4f1442ce8408e33d failed: MCP error -32603: Inbox tool invocation already completed",
+                "readToolDefReminder": "",
+                "systemReminders": []
+              }
+            },
+            "description": "Unavailable legacy or unsupported tool"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_3e82225d4f1442ce8408e33d",
+          "startedAtMs": "1793191284254",
+          "completedAtMs": "1793191284254"
+        },
+        "model_call_id": "5e54c406-9513-4ee2-979a-aa12e0709ce2:7f708a74:7",
+        "session_id": "276f8623-e3d8-42c6-89fb-a537d5a85dc1",
+        "timestamp_ms": 1793191284540
+      }
+    },
+    {
+      "messageId": 149994,
+      "event": {
+        "type": "tool_call",
+        "subtype": "started",
+        "call_id": "call_9d2c375d15ba487e90367248",
+        "tool_call": {
+          "mcpToolCall": {
+            "args": {
+              "name": "consume_session_inbox",
+              "args": {
+                "checkpointId": "live_received_retry",
+                "nimbalyst_session_id": "9a4b5310-2023-41f2-9c6e-7b31b6c59843"
+              },
+              "toolCallId": "call_9d2c375d15ba487e90367248",
+              "providerIdentifier": "",
+              "toolName": "consume_session_inbox",
+              "smartModeApprovalOnly": false,
+              "skipApproval": false,
+              "serverIdentifier": "nimbalyst",
+              "symbolicPathArguments": [],
+              "argumentsRepaired": false
+            },
+            "description": "Read pending inbox batch under a fresh checkpoint"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_9d2c375d15ba487e90367248",
+          "startedAtMs": "1793191288824"
+        },
+        "model_call_id": "5e54c406-9513-4ee2-979a-aa12e0709ce2:7f708a74:8",
+        "session_id": "276f8623-e3d8-42c6-89fb-a537d5a85dc1",
+        "timestamp_ms": 1793191288824
+      }
+    },
+    {
+      "messageId": 149995,
+      "event": {
+        "type": "tool_call",
+        "subtype": "completed",
+        "call_id": "call_9d2c375d15ba487e90367248",
+        "tool_call": {
+          "mcpToolCall": {
+            "args": {
+              "name": "CallMcpTool",
+              "args": {
+                "arguments": {
+                  "checkpointId": "live_received_retry",
+                  "nimbalyst_session_id": "9a4b5310-2023-41f2-9c6e-7b31b6c59843"
+                },
+                "server": "nimbalyst",
+                "toolName": "consume_session_inbox",
+                "description": "Read pending inbox batch under a fresh checkpoint"
+              },
+              "toolCallId": "call_9d2c375d15ba487e90367248",
+              "providerIdentifier": "cursor-byok-compat",
+              "toolName": "CallMcpTool",
+              "smartModeApprovalOnly": false,
+              "skipApproval": false,
+              "serverIdentifier": "cursor-byok-compat",
+              "symbolicPathArguments": [],
+              "argumentsRepaired": false
+            },
+            "result": {
+              "error": {
+                "error": "Exec call_9d2c375d15ba487e90367248 failed: MCP error -32603: Inbox checkpoint could not verify a current provider tool invocation",
+                "readToolDefReminder": "",
+                "systemReminders": []
+              }
+            },
+            "description": "Unavailable legacy or unsupported tool"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_9d2c375d15ba487e90367248",
+          "startedAtMs": "1793191289597",
+          "completedAtMs": "1793191289597"
+        },
+        "model_call_id": "5e54c406-9513-4ee2-979a-aa12e0709ce2:7f708a74:8",
+        "session_id": "276f8623-e3d8-42c6-89fb-a537d5a85dc1",
+        "timestamp_ms": 1793191289909
+      }
+    },
+    {
+      "messageId": 150100,
+      "event": {
+        "type": "tool_call",
+        "subtype": "started",
+        "call_id": "call_543b5fc104eb419d89f870a4",
+        "tool_call": {
+          "mcpToolCall": {
+            "args": {
+              "name": "consume_session_inbox",
+              "args": {
+                "checkpointId": "live_received_b",
+                "nimbalyst_session_id": "9a4b5310-2023-41f2-9c6e-7b31b6c59843"
+              },
+              "toolCallId": "call_543b5fc104eb419d89f870a4",
+              "providerIdentifier": "",
+              "toolName": "consume_session_inbox",
+              "smartModeApprovalOnly": false,
+              "skipApproval": false,
+              "serverIdentifier": "nimbalyst",
+              "symbolicPathArguments": [],
+              "argumentsRepaired": false
+            },
+            "description": "Consume inbox batch after native tool anchor"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_543b5fc104eb419d89f870a4",
+          "startedAtMs": "1793191303135"
+        },
+        "model_call_id": "5e54c406-9513-4ee2-979a-aa12e0709ce2:7f708a74:10",
+        "session_id": "276f8623-e3d8-42c6-89fb-a537d5a85dc1",
+        "timestamp_ms": 1793191303135
+      }
+    },
+    {
+      "messageId": 150101,
+      "event": {
+        "type": "tool_call",
+        "subtype": "completed",
+        "call_id": "call_543b5fc104eb419d89f870a4",
+        "tool_call": {
+          "mcpToolCall": {
+            "args": {
+              "name": "CallMcpTool",
+              "args": {
+                "toolName": "consume_session_inbox",
+                "arguments": {
+                  "checkpointId": "live_received_b",
+                  "nimbalyst_session_id": "9a4b5310-2023-41f2-9c6e-7b31b6c59843"
+                },
+                "server": "nimbalyst",
+                "description": "Consume inbox batch after native tool anchor"
+              },
+              "toolCallId": "call_543b5fc104eb419d89f870a4",
+              "providerIdentifier": "cursor-byok-compat",
+              "toolName": "CallMcpTool",
+              "smartModeApprovalOnly": false,
+              "skipApproval": false,
+              "serverIdentifier": "cursor-byok-compat",
+              "symbolicPathArguments": [],
+              "argumentsRepaired": false
+            },
+            "result": {
+              "error": {
+                "error": "Exec call_543b5fc104eb419d89f870a4 failed: MCP error -32603: Inbox checkpoint could not verify a current provider tool invocation",
+                "readToolDefReminder": "",
+                "systemReminders": []
+              }
+            },
+            "description": "Unavailable legacy or unsupported tool"
+          },
+          "hookAdditionalContexts": [],
+          "toolCallId": "call_543b5fc104eb419d89f870a4",
+          "startedAtMs": "1793191303933",
+          "completedAtMs": "1793191303933"
+        },
+        "model_call_id": "5e54c406-9513-4ee2-979a-aa12e0709ce2:7f708a74:10",
+        "session_id": "276f8623-e3d8-42c6-89fb-a537d5a85dc1",
+        "timestamp_ms": 1793191304232
+      }
+    }
+  ],
+  "omittedUnrelatedDiagnosticEvents": 24,
+  "fullRecordLocalBackup": "C:\\Users\\Totheinfinity\\AppData\\Local\\NimbalystMcpBridge\\repairs\\2026-10-28T12-49-06-851Z-active-inbox\\compatibility-failure-full.json"
+}

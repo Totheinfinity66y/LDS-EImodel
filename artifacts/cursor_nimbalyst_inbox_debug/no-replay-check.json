@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-28T13:01:14.705Z",
+  "checks": [
+    {
+      "parentId": "a0eef586-6e50-4736-becc-df88d343e845",
+      "status": "idle",
+      "inputTurns": 1,
+      "pendingOrExecuting": 0,
+      "idleForSeconds": 481.064
+    },
+    {
+      "parentId": "f6b9b9c3-62a0-4e68-bddd-7c26368b0bee",
+      "status": "idle",
+      "inputTurns": 1,
+      "pendingOrExecuting": 0,
+      "idleForSeconds": 334.811
+    }
+  ]
+}

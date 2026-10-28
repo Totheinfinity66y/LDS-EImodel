@@ -1,0 +1,97 @@
+{
+  "at": "2026-10-28T12:48:36.377Z",
+  "source": "installed app.asar",
+  "failed": 2,
+  "results": [
+    {
+      "name": "host endpoint advertises the inbox tool",
+      "pass": true
+    },
+    {
+      "name": "Cursor turns begin an inbox lifecycle",
+      "pass": true
+    },
+    {
+      "name": "host handler accepts verified Cursor invocation path",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'mcp:00000000-0000-4000-8000-000000000000:1'\n"
+    },
+    {
+      "name": "authenticated Cursor MCP request works before provider trace arrives",
+      "pass": false,
+      "error": "Inbox checkpoint could not verify a current provider tool invocation"
+    },
+    {
+      "name": "Cursor request proof cannot be supplied as a tool argument",
+      "pass": true
+    },
+    {
+      "name": "invalid internal MCP proof is rejected",
+      "pass": true
+    },
+    {
+      "name": "Cursor receives reports before the parent turn ends",
+      "pass": true
+    },
+    {
+      "name": "retry returns the receipt and does not claim a second time",
+      "pass": true
+    },
+    {
+      "name": "a later checkpoint cannot replay the same report",
+      "pass": true
+    },
+    {
+      "name": "instruction boundary remains queued",
+      "pass": true
+    },
+    {
+      "name": "failed parent retires the consumed report without replay",
+      "pass": true
+    },
+    {
+      "name": "reject missing current tool invocation",
+      "pass": true
+    },
+    {
+      "name": "reject wrong caller session",
+      "pass": true
+    },
+    {
+      "name": "reject wrong MCP server",
+      "pass": true
+    },
+    {
+      "name": "reject completed tool invocation",
+      "pass": true
+    },
+    {
+      "name": "reject completed invocation with compatibility wrapper",
+      "pass": true
+    },
+    {
+      "name": "reject ambiguous concurrent invocations",
+      "pass": true
+    },
+    {
+      "name": "native Codex identity verification stays intact",
+      "pass": true
+    },
+    {
+      "name": "a retired turn cannot consume more messages",
+      "pass": true
+    },
+    {
+      "name": "cross-workspace consumption is rejected",
+      "pass": true
+    },
+    {
+      "name": "unknown providers cannot opt themselves into Cursor identity",
+      "pass": true
+    },
+    {
+      "name": "native Claude identity verification stays intact",
+      "pass": true
+    }
+  ]
+}
