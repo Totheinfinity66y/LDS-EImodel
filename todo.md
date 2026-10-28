@@ -1,5 +1,24 @@
 # Handcrafted E/I v2 — P0–P7 执行与验收
 
+## R — Figure 1–10 科研重绘（2026-10-28）
+
+独立完整任务书：[科研绘图实施与验收](docs/figure_redraw/PLAN.md)。新结果仅写 `artifacts/neural_paper_figures_v1/`；旧V/T阶段记录不等于本轮完成证据。
+
+- [x] R0：三编码本地数据契约、事件、输入/受保护源码SHA256审计。证据：manifests/data_audit.json，72条REC/RAW逐值一致。
+- [x] F01：四panel时间活动组织与按条件分组的原始率。证据：fig01_*、review_early.json。
+- [x] F02：四panel分支路由、动态选择裕量与泄漏。证据：fig02_*、review_early.json；R1竞争者NA。
+- [x] F03：五panel记忆交接、平衡规则轴及前后时序因果干预。证据：fig03_*、temporal_ablation.csv及三seed匹配控制。
+- [x] F04：共享PCA解压缩轨迹、完整状态速度与位移（重点）。证据：fig04_*、review_geometry.json。
+- [x] F05：角谱、双向cross-VAF、时变角度/距离及结构对照（重点）。证据：fig05_*、三scope独立SVD复核。
+- [x] F06：真实六位置投影、RDM与位置保持指标。证据：fig06_*、review_geometry.json。
+- [x] F07：条件留出、时间泛化、独立噪声与branch读出分别验收。证据：fig07_*、split及独立手算probe。
+- [x] F08：固定分支六端点、完整稳定性与合法二维初态切片（重点）。证据：两具名slice、全132维独立验证；sixmean全部other，three-endpoint仅三个目标盆交集，非完整六盆。
+- [x] F09：配对输入扰动、完整状态恢复、24条件三阶段实验（重点）。证据：fig09_*、stage_summary.json与648case独立复算。
+- [x] F10：三编码联合PCA、one_hot固定基及实际电流匹配对照。证据：fig10_*、648case独立复算；raw-coordinate剂量另表，不混同full132脉冲。
+- [x] R11：逐图独立数值/来源/实际渲染验收，完整manifest与提交提案。证据：export_integrity.json（49图版本/147导出）、independent_validation.json、review_geometry.json、review_early.json、fig01_03_10_visual_validation.json、fig04_07_visual_validation.json、fig08_fig09_visual_review.json；figure_manifest.json索引326个产物文件与10个项目文档哈希。状态：数值与来源适配PASS_WITH_LIMITS，source-exact为BLOCKED；Git提交提案待用户确认。
+
+依赖：R0→各图已有数据重绘→轻量补算→F03/F08/F09新模拟→F10综合→R11。各图详细输入、panel、派生文件、验收及科学边界见任务书；仅有部分panel不能勾选整图。
+
 当前规范见[architecture.md](architecture.md)，强制规则见[AGENTS.md](AGENTS.md)。下列新阶段未经独立验证不得勾选。清单只描述当前实现。
 
 ## P0 — 冻结边界、归档基线与红测试

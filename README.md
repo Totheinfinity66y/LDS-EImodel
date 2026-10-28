@@ -1,5 +1,7 @@
 # LDS-EImodel：Handcrafted E/I Decompression v2
 
+2026-10-28科研重绘入口：[Figure 1–10图索引与验收](docs/figure_redraw/RESULTS.md)、[独立完整任务书](docs/figure_redraw/PLAN.md)、[计算方法](artifacts/neural_paper_figures_v1/METHODS.md)。统一命令为 `python -m handcrafted_ei.visualization.plot_all --paper-figures --encoding all`，新图与派生数据独立保存在 `artifacts/neural_paper_figures_v1/`。
+
 ## 当前版本与主要结论
 
 当前版本包含三种位置编码、完整132维神经活动分析、经来源方法审计的Figure 8/9，以及两套独立的流线/局部不动点相图。模型固定连接、不训练；所有动力学干预均在独立评估副本进行。

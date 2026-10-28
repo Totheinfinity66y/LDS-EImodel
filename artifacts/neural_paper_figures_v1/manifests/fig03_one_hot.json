@@ -1,0 +1,447 @@
+{
+  "figure": 3,
+  "encoding": "one_hot",
+  "provenance": {
+    "recording": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_representation_v2\\data\\one_hot\\recording.npz",
+    "recording_sha256": "9b39dfcd040827662dac12d764cc9ef0540680d5edfbc820261aa4ffecbff466",
+    "metadata_sha256": "da44e34fcea5b7d2e704ba6845b9b21e73a60f536a90a4a4ee71ba7e5b346147",
+    "archive_sha256": "70b419e3203742c38f0a1b05b2ba40bf8c1ed29e92c56721eae51097d2a4573f",
+    "protected_sources": {
+      "handcrafted_ei/model/connectivity.py": {
+        "archived": "648f5f4248c9a0d543846026850aa2f314e528764f61ca5faaab5e494b3ca795",
+        "current": "648f5f4248c9a0d543846026850aa2f314e528764f61ca5faaab5e494b3ca795",
+        "matches": true
+      },
+      "handcrafted_ei/model/ei_network.py": {
+        "archived": "c04644e0bee730d5cbfd87d9b4d10a213b2d753071f193b1969822b7f1d42ce0",
+        "current": "c04644e0bee730d5cbfd87d9b4d10a213b2d753071f193b1969822b7f1d42ce0",
+        "matches": true
+      },
+      "handcrafted_ei/model/location_encoding.py": {
+        "archived": "ba432e9bbdbc908c1ebe7b85d1f18bf132fb4ad78a3f463697573f948b6d95c1",
+        "current": "ba432e9bbdbc908c1ebe7b85d1f18bf132fb4ad78a3f463697573f948b6d95c1",
+        "matches": true
+      },
+      "handcrafted_ei/model/neuron.py": {
+        "archived": "3df2ba64dc92bfe2db41a3081a829c077f945856686e68101558bf86d27b5c54",
+        "current": "3df2ba64dc92bfe2db41a3081a829c077f945856686e68101558bf86d27b5c54",
+        "matches": true
+      },
+      "handcrafted_ei/model/__init__.py": {
+        "archived": "958eafc191acdc42276e1a83d9d407a1bf6f6b2546674bfb19aa40addd930cf4",
+        "current": "958eafc191acdc42276e1a83d9d407a1bf6f6b2546674bfb19aa40addd930cf4",
+        "matches": true
+      },
+      "handcrafted_ei/simulation/__init__.py": {
+        "archived": "d11e4fd0eed0197410f939c2a0f0fe7f7e919a37be4dfb2343d764de964c3778",
+        "current": "d11e4fd0eed0197410f939c2a0f0fe7f7e919a37be4dfb2343d764de964c3778",
+        "matches": true
+      },
+      "handcrafted_ei/task/__init__.py": {
+        "archived": "755998fae22efd7f06b9ce6c44772fff3452b7a7019341eb603f0237b493020b",
+        "current": "755998fae22efd7f06b9ce6c44772fff3452b7a7019341eb603f0237b493020b",
+        "matches": true
+      },
+      "handcrafted_ei/config/baseline.yaml": {
+        "archived": "c442d2707a569e5300c8da9a136ab2c660489a077691d5f10ce5e694fa103356",
+        "current": "c442d2707a569e5300c8da9a136ab2c660489a077691d5f10ce5e694fa103356",
+        "matches": true
+      }
+    },
+    "rates_shape": [
+      24,
+      663,
+      132
+    ],
+    "units": "dimensionless",
+    "independent_repeats": false,
+    "active_threshold": 0.1,
+    "events": {
+      "sample_start": 0.0,
+      "sample_end": 200.0,
+      "delay_end": 1800.0,
+      "readout1_start": 1800.0,
+      "readout1": 1900.0,
+      "to_R2": 1910.0,
+      "retire1": 2110.0,
+      "readout2_start": 2270.0,
+      "readout2": 2370.0,
+      "to_R3": 2380.0,
+      "retire2": 2580.0,
+      "readout3_start": 2740.0,
+      "readout3": 2840.0,
+      "to_R4": 2850.0,
+      "retire3": 3050.0,
+      "readout4_start": 3210.0,
+      "readout4": 3310.0,
+      "end": 3310.0
+    },
+    "indices": {
+      "R1": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "R2": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "R3": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "R4": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "M_D": [
+        66,
+        67
+      ],
+      "M_S": [
+        68,
+        69
+      ],
+      "Y": [
+        70,
+        71,
+        72,
+        73,
+        74,
+        75
+      ],
+      "E_gate_D": [
+        76,
+        77
+      ],
+      "E_gate_S": [
+        78,
+        79
+      ],
+      "E_gate_34": [
+        80
+      ],
+      "I_tonic_R": [
+        81
+      ],
+      "I_tonic_M": [
+        82
+      ],
+      "I_decay_D": [
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94
+      ],
+      "I_decay_S": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "comp_R1": [
+        119,
+        120,
+        121,
+        122,
+        123,
+        124
+      ],
+      "comp_D": [
+        125,
+        126
+      ],
+      "comp_S": [
+        127,
+        128
+      ],
+      "retire": [
+        129,
+        130,
+        131
+      ]
+    },
+    "branch_indices": {
+      "R1": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "R2": [
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "R3": [
+        [
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        [
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ],
+        [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ]
+      ],
+      "R4": [
+        [
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        [
+          48,
+          49,
+          50,
+          51,
+          52,
+          53
+        ],
+        [
+          54,
+          55,
+          56,
+          57,
+          58,
+          59
+        ],
+        [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65
+        ]
+      ]
+    },
+    "config": {
+      "dt_ms": 5,
+      "tau_e_ms": 40,
+      "tau_i_ms": 20,
+      "tau_decay_ms": 120,
+      "sample_ms": 200,
+      "delay_ms": 1600,
+      "transfer_ms": 200,
+      "retire_ms": 160,
+      "readout_ms": 100,
+      "decision_ms": 20,
+      "gap_ms": 10,
+      "location_encoding": "one_hot",
+      "encoding_kappa": 4.0,
+      "w_rec": 2.0,
+      "tonic_e": 0.15,
+      "theta_e": 0.25,
+      "w_input": 0.8,
+      "w_projection": 0.8,
+      "w_out": 0.8,
+      "theta_y": 0.3,
+      "w_mem": 0.9,
+      "clock_activation": 0.9,
+      "theta_activation": 1.0,
+      "clock_activation3": 1.0,
+      "theta_activation3": 0.2,
+      "w_activation": 0.8,
+      "tonic_i": 1.0,
+      "w_tonic_r1": 0.1,
+      "w_tonic_response": 0.8,
+      "w_tonic_memory": 0.2,
+      "w_response_decay": 2.4,
+      "theta_decay": 1.4,
+      "w_decay": 3.0,
+      "w_comp": 0.3,
+      "w_comp_drive": 1.0,
+      "w_retire": 3.2,
+      "clock_retire": 1.1,
+      "theta_retire": 0.1,
+      "decision_threshold": 0.1,
+      "seed": 7,
+      "noise_sigma": 0.0
+    }
+  },
+  "environment": {
+    "python": "3.12.12 | packaged by conda-forge | (main, Jan 26 2026, 23:38:32) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.7",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "analysis_sources": {
+    "handcrafted_ei\\visualization\\paper_figures_early.py": "f0c59543cfd383e975bcbee60cf3962b6389adf61bfa1e167f3f0d16362b65c9",
+    "handcrafted_ei\\evaluation\\figure_data_early.py": "4ef95d63f859944da4d4d82df1cd04d344f00120898ac1c39abdb96526cb7bdf"
+  },
+  "control_archive_sha256": {
+    "baseline": "70b419e3203742c38f0a1b05b2ba40bf8c1ed29e92c56721eae51097d2a4573f",
+    "no_feedback": "002f0baca56dde3b1a09552b47e1bab345a157a3b5a0f303ec1c2e7327525666",
+    "lesion_feedback_D": "a86f88f186de5c34321a21fbb04bf5805015054991ce7c722d5a09ea9c2fcabe",
+    "lesion_feedback_S": "73a48644bdfa894c22eab7cd03df00cfaefe66a137485529cd784ab02e982633",
+    "lesion_A": "e5e2f9109cc40eb4ff420ef502f86ec062ab51d65194f5b4b1559f2c31067d48",
+    "lesion_B": "479822b18d743ce6149403967c05b5073eed5bb334f640b3db63af6fd7d1d2b3",
+    "lesion_C": "c82a6bc7f3ab2d80c2e664dd9016a2e2cb44f5c278e7057f33658deae121008a",
+    "lesion_D": "34fa7ac7f62bc2e00cb36ea9950365b9c06e69b06f8632b78ee4ee7404f42a1a",
+    "random_A_7": "38284680e00d0df3fc106706b2f043d4ffa021075e122f5ccac170129ec1e196",
+    "random_A_11": "f8faad1aa7f98a890a327f82af284c3536328245df517919440495765f562f7b",
+    "random_A_19": "24e685f7af503a12d55ed0669156d5a6e2d5f27231c59ec19e66abc807d3ba3e",
+    "random_B_7": "9e9425f7538823602b853242d5b571593d988856ef73340a9661a8ea99f75f31",
+    "random_B_11": "c2fff589dd1db35dd9ae59a3f2808a9b1d246e786bc7b9fc1904edc4c00f8fd9",
+    "random_B_19": "19a175c132694948b28dce81f243a5e332f2351d6e739647bfdc9482dde7e5d3",
+    "random_C_7": "9be0098a326adf92bca1b784d828461a3edcf38f9e6a248749069f269c65adbf",
+    "random_C_11": "1efa5767bacd7f1e2ae211a9797a97acea4c1d5ce88e87449e2e3c2ce85f7f9a",
+    "random_C_19": "3be879c6331e9b65bcd1f9810d52643ed8d969e6c1f5b5e42ceee7947ccc4aa4",
+    "random_D_7": "2670082b3031f796e11d30a4c7d520b81da077c7fb9b847b1f5b8fd6ee88d976",
+    "random_D_11": "91a5c24b66056390aa989894d48757c9fe8d262370b9281ecf74acaaab1ff87c",
+    "random_D_19": "fea62fe96e50b02a33136533371839968a976514370b0575912dcc650c6a9c2c",
+    "random_feedback_D_7": "9096caf7a93cbadda9dc34a20b57db003565702b79eda400c2f4dd1262a6050b",
+    "random_feedback_D_11": "b3eb0385280ab21fd5618b4b3e2ceef6240742c0f79a71fc7a6e4909b04a066e",
+    "random_feedback_D_19": "24a4b9802a5d25ba8378918c5f3ee1c57bf2a6e704f8f4015000e5a62810c31f",
+    "random_feedback_S_7": "5e8e3cb347c57764d7fb899938d9861b513a481635693904658ad738834c7e5d",
+    "random_feedback_S_11": "ed3b9b1579a125ff47a08cf919c1965ac343921d4f0f6add44293120ed76ab87",
+    "random_feedback_S_19": "55a0a79c60db144228a18c1e6cb1029a8f3f52775faafd41321c981e88ae59ee"
+  },
+  "decoder_source_sha256": "d5a167bb78cafd5a0c2ee4032777b8523aaa05db329f3f89741c07b79b54a683",
+  "outputs": {
+    "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\main\\fig03_one_hot.png": "6c3efb808a5d0f35d76979d41172c637ff2bd892c5af596ed44eafdb1008384d",
+    "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\main\\fig03_one_hot.svg": "e5d8d61863a7fecf49bf5e047b85af6bf82bbd8a57796aee94291d30245d5d39",
+    "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\main\\fig03_one_hot.pdf": "4746470030fde7a886af673d3070a6710eb9b980322d219b94773ee6bb7902ad",
+    "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\main\\fig03_one_hot_caption.md": "8fe9d15b85fcef86b5282e9327b19ac728d56588e5cc63ba162312a3a2d21bf2",
+    "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig03_feedback_controls.npz": "54c87587988e35614364ac6d7b280ee597174f72ab1199ff8139188c7670333b",
+    "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig03_handoff_axes.npz": "81dc8fb66d450b229ed7c2f6a7a58752cf405487f97e1e332a4ceb0394abfddb",
+    "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig03_temporal_ablation.csv": "e8281ef6016cd3011a18102e328d45bf741f5c1136bb8e0216ba67fa85fe0509"
+  },
+  "caption": "A/B: actual (not amplitude-renormalized) condition-mean peak rates in 360 ms windows after recorded transfer. C: fixed normalized rule contrast axes fitted to balanced condition means at delay end (memory) or readout (Response); projection axes and centers saved. D: feedback removed versus baseline and three matched random controls. E: existing disjoint-task-condition nearest-centroid cross-validation, fractional tie credit. Chance 0.5; activity decay does not establish information erasure. Companion temporal-ablation CSV reuses pre/post handoff edge cuts and all matched random seed controls. No noise-repeat and condition-held-out results are pooled.",
+  "reference_status": "Methods-inspired redraw; source paper panel visual verification delegated to reference audit; no claim of author-code reproduction.",
+  "visual_review": {
+    "status": "PASS",
+    "reviewer": "/root/fig01_03 (implementation author; not independent G5)",
+    "method": "actual view_image inspection of all nine final PNGs; no blank/cropped axes; R1 competitor omitted; encoding title checked",
+    "record": "docs/figure_redraw/review_inagaki.md"
+  }
+}

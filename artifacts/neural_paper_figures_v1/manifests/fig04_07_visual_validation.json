@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "reviewer": "fig04_07 rendering author",
+  "method": "Actual view_image opening of all twelve PNGs; no model or data changes",
+  "checks": "No blank/cropped panels; legible axes/units/colorbars; E/I fixed-network scope; full-state speed and distances; one PCA basis within figure; distinct deterministic-condition and noise probes",
+  "limitations": "Reference original panels not independently visually verified by this reviewer; no source-exact reproduction claim",
+  "images": {
+    "artifacts\\neural_paper_figures_v1\\figures\\main\\fig04_one_hot.png": "abafd3730791d966b25bb507b9d606dd402b4ecfbaf65a5d8531cc0ebc443132",
+    "artifacts\\neural_paper_figures_v1\\figures\\main\\fig05_one_hot.png": "5fda14ee7260e42fa20b3ff0d21625cfc56237a64308f08cf950205689b77bb1",
+    "artifacts\\neural_paper_figures_v1\\figures\\main\\fig06_one_hot.png": "272d8278ea9ae2f707ac151b10e1ee819bedaf10e246b6a9442798d0febc6215",
+    "artifacts\\neural_paper_figures_v1\\figures\\main\\fig07_one_hot.png": "76913714ce9be0f136228cca83f8b6a21a70422e2f1a4c31303574a66124009f",
+    "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig04_ring.png": "43ddda0048d2edda0635894a133868124a2db18d7785a280b2ce8dcab552497d",
+    "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig04_topology.png": "6cce064fd45f0f70c63e5998cd24d75580a6d9ed517cd16db15cc5e264f6e4b2",
+    "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig05_ring.png": "b717af3bddf4d10f94c44c2322c564308e6f647e506ced81cff94c6301926c13",
+    "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig05_topology.png": "9cda221e1ad9d5543702ff395cdc7221d76c4f824461ff541fb6272c767102d8",
+    "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig06_ring.png": "b455338d9d4c3b1b7e54df38718f8d774dfaf7223d9391e8a85c33df44bee4b4",
+    "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig06_topology.png": "6f12c23222fe7ad8dfb26d80ba65e8f2597e4c8db0a0a02e8520345eaaa9722a",
+    "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig07_ring.png": "757a76b92c9f6f7561ecca96bcc092cec9fdbd55456b03ca033155882d13b017",
+    "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig07_topology.png": "52c9a670bcc88e7b4a167910564d9f9e68e4eff173f501ba46ee5674580e4d00"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "status": "PASS_WITH_LIMITS",
+  "reviewer": "root session, independent of the Figure 1-3 and Figure 10 implementation",
+  "method": "Actual opening of each listed PNG at full size; no model or data changes",
+  "scope": "Figure 1-3 and Figure 10 for one_hot, plus the ring and topology supplementary renders of Figures 1-3",
+  "checks": [
+    "No blank panels and no cropped axes, legends or colorbars",
+    "Rate axes labelled dimensionless; no Hz claim",
+    "All 132 units retained; no silent removal of silent neurons",
+    "E/I identity and fixed-network scope stated in captions",
+    "Full-state and projected quantities visually distinguished",
+    "NA used where a quantity is undefined rather than filled with zero",
+    "Deterministic condition counts shown without invented confidence intervals"
+  ],
+  "images": {
+    "figures/main/fig01_one_hot.png": "748f511b015967c97339e8ad87ada8abdde27a271e1c1cbe3ebb22047cf1bf8c",
+    "figures/main/fig02_one_hot.png": "c518ad7a077b59f063bce3d66c68c2dc415c52b3efce54df550e82ca4ad972cb",
+    "figures/main/fig03_one_hot.png": "6c3efb808a5d0f35d76979d41172c637ff2bd892c5af596ed44eafdb1008384d",
+    "figures/main/fig10_encoding_comparison.png": "59d61fd9d259583cf2f7f830b3e605d126da2b46527a04904622091c0fa87430",
+    "figures/supplementary/fig01_ring.png": "acfdba64d29c2033b4f78b82216df8b16d4dfe8c62aabd3b09e136e5b8c74fed",
+    "figures/supplementary/fig01_topology.png": "2896f59f63b7679c224f9c7223a33328c5a2171d7e410fc07728936f5e32ea00",
+    "figures/supplementary/fig02_ring.png": "3ab0090e9c94c98ef507037a604728c8fd1af7861778826c12a5acc64654f4f1",
+    "figures/supplementary/fig02_topology.png": "846840393ef1fd48f70622d9841bc6fa3bfd59e553c3be47e4c0e268be6bccc9",
+    "figures/supplementary/fig03_ring.png": "1e95369fe8cd7dcb0961d6b917a4bac86a553117410e4c421bb0e07ee486155b",
+    "figures/supplementary/fig03_topology.png": "52fa98be4d499f8a215ad249393598caf448732ef546b2d89ef1edc8ada70353"
+  },
+  "notes": {
+    "figures/main/fig03_one_hot.png": "Panel (f) carries dense overlapping annotation text; still legible but crowded. Retained as rendered, not regenerated, because changing it would not affect any number."
+  },
+  "limitations": [
+    "Figure 4-7 and Figure 8-9 have their own separate visual receipts",
+    "Reference original panels were not re-opened in this pass; no source-exact claim is made"
+  ],
+  "environment": {
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

@@ -32,7 +32,21 @@ def main(argv=None):
     p.add_argument('--reference-grounded',action='store_true',help='Run audited source-adapted 8/9, reuse audited 1-7, and rebuild 10 in a fresh archive')
     p.add_argument('--phase-portraits',action='store_true',help='Three-condition affine flow portraits with full-state trajectories, in a separate archive')
     p.add_argument('--local-fixed-points',action='store_true',help='Closed-pair phase portrait and full-state equilibrium stability')
+    p.add_argument('--paper-figures',action='store_true',help='Independent Figure 1–10 redesign archive; full-state numerical evidence')
     args=p.parse_args(argv); requested={int(x) for x in args.figures.split(',')}; formats=args.formats.split(',')
+    if args.paper_figures:
+        if args.local_fixed_points or args.phase_portraits or args.reference_grounded:
+            p.error('choose one analysis workflow')
+        if args.input.resolve()!=DEFAULT_INPUT.resolve():
+            p.error('paper figures currently require the audited canonical v2 input archive')
+        if requested-set(range(1,11)) or args.formats!='png,svg,pdf':
+            p.error('paper figures require valid numbers 1..10 and png,svg,pdf together')
+        from .paper_figures import run, DEFAULT
+        destination=DEFAULT if args.output==DEFAULT_OUTPUT else args.output
+        if destination.resolve() in {DEFAULT_OUTPUT.resolve(), (ROOT/'artifacts/paper2agent_reproduction').resolve(), (ROOT/'artifacts/phase_portraits_v2').resolve(), (ROOT/'artifacts/local_fixed_points_v2').resolve()}:
+            p.error('paper figures require a separate output archive')
+        run(requested, MODES if args.encoding=='all' else (args.encoding,), destination)
+        return
     if args.local_fixed_points:
         if args.phase_portraits or args.reference_grounded:p.error('choose one analysis workflow')
         from .local_fixed_points import run,DEFAULT

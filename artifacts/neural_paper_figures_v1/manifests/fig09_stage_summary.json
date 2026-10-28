@@ -1,0 +1,71 @@
+{
+  "one_hot": {
+    "pre_R2": {
+      "sequence_correct": 52,
+      "R4_branch_retained": 52,
+      "R4_position_retained": 62,
+      "recovered": 42,
+      "conditions_directions": 72
+    },
+    "between_R2_R3": {
+      "sequence_correct": 53,
+      "R4_branch_retained": 56,
+      "R4_position_retained": 56,
+      "recovered": 53,
+      "conditions_directions": 72
+    },
+    "R3_hold": {
+      "sequence_correct": 51,
+      "R4_branch_retained": 51,
+      "R4_position_retained": 51,
+      "recovered": 48,
+      "conditions_directions": 72
+    }
+  },
+  "ring": {
+    "pre_R2": {
+      "sequence_correct": 52,
+      "R4_branch_retained": 52,
+      "R4_position_retained": 62,
+      "recovered": 42,
+      "conditions_directions": 72
+    },
+    "between_R2_R3": {
+      "sequence_correct": 53,
+      "R4_branch_retained": 56,
+      "R4_position_retained": 56,
+      "recovered": 53,
+      "conditions_directions": 72
+    },
+    "R3_hold": {
+      "sequence_correct": 51,
+      "R4_branch_retained": 51,
+      "R4_position_retained": 51,
+      "recovered": 48,
+      "conditions_directions": 72
+    }
+  },
+  "topology": {
+    "pre_R2": {
+      "sequence_correct": 52,
+      "R4_branch_retained": 52,
+      "R4_position_retained": 62,
+      "recovered": 42,
+      "conditions_directions": 72
+    },
+    "between_R2_R3": {
+      "sequence_correct": 53,
+      "R4_branch_retained": 56,
+      "R4_position_retained": 56,
+      "recovered": 53,
+      "conditions_directions": 72
+    },
+    "R3_hold": {
+      "sequence_correct": 51,
+      "R4_branch_retained": 51,
+      "R4_position_retained": 51,
+      "recovered": 48,
+      "conditions_directions": 72
+    }
+  }
+}

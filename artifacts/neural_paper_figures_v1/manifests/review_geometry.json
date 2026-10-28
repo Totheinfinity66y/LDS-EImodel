@@ -1,0 +1,97 @@
+{
+  "reviewer": "/root/fig01_03; independent of Figure4--7 implementation",
+  "encodings": {
+    "one_hot": {
+      "pca_projection_maxerr": 4.440892098500626e-16,
+      "speed_maxerr": 0.0,
+      "temporal_angle_maxerr_degrees": 3.1945283931956693e-06,
+      "undefined_temporal_pairs": 24,
+      "scopes": 3,
+      "decision_pairs_per_scope": 6,
+      "branch_probe_maxerr": 0.0,
+      "branch_folds": 2,
+      "class_presence": "4/4 in each train and test",
+      "input_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_representation_v2\\data\\one_hot\\recording.npz": "9b39dfcd040827662dac12d764cc9ef0540680d5edfbc820261aa4ffecbff466",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_representation_v2\\data\\one_hot\\metadata.json": "da44e34fcea5b7d2e704ba6845b9b21e73a60f536a90a4a4ee71ba7e5b346147"
+      },
+      "derived_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig04_transition_kinematics.csv": "1b96b20fe10f0c5d936c306c30f80c54171de5e4b07946fc27552b24a0568291",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig04_transition_kinematics.npz": "f6bcc49e632cfa0892484fee234d3f535e912680a2734008da5d5a8f0f9335ed",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig05_principal_angles.csv": "5f65c4c70dac4486c9db5b64e7b5b35e852de0a669145443f2e61c12a8b657c7",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig05_temporal_subspaces.npz": "d1982a8280f9d158bd933a796d97466c136ac031286492526c46c4c41687f98f",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig06_position_stability.csv": "df8ad7d83376dd3903a94c0be30a24d85a047ec9d59c8789b419c6a1b2a2dcd0",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig06_position_stability.npz": "e806ac1617a067d777ba957fbcdc1b53026fd6197cba4c58200d53967b07206f",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig07_branch_decoding.csv": "3d366633cac88f4322365e4a41d20c2593df2cfeee3aadad28903a942e204c74",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig07_branch_decoding.npz": "9c9eb193528b52584f5939544496e0545087f5d871993e446d2e8be27d57210d",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig07_branch_decoding_splits.json": "a5151b5c22d0364e974cd964d86a10bef8f62d7e0753558210956c21d4ffa844"
+      },
+      "status": "PASS"
+    },
+    "ring": {
+      "pca_projection_maxerr": 4.440892098500626e-16,
+      "speed_maxerr": 0.0,
+      "temporal_angle_maxerr_degrees": 3.1945283931956693e-06,
+      "undefined_temporal_pairs": 24,
+      "scopes": 3,
+      "decision_pairs_per_scope": 6,
+      "branch_probe_maxerr": 0.0,
+      "branch_folds": 2,
+      "class_presence": "4/4 in each train and test",
+      "input_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_representation_v2\\data\\ring\\recording.npz": "f2758f41fa4ac1d4c96f9b7fe9c7227d0c55438a5adcdf57b9a2060a5315d2f0",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_representation_v2\\data\\ring\\metadata.json": "92e30371bf845b04ca7949d8ceb8b99e400a1ebce2177371c4cd47ed3473a46d"
+      },
+      "derived_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\ring\\fig04_transition_kinematics.csv": "90d25548c7e5a02fe1b4c57152fd85bd392dd3850d75f604e0489ab3356cdf19",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\ring\\fig04_transition_kinematics.npz": "74dade3c29266839637d51154cde74179cfa180b2d59bfa400f878517aba04c4",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\ring\\fig05_principal_angles.csv": "5f65c4c70dac4486c9db5b64e7b5b35e852de0a669145443f2e61c12a8b657c7",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\ring\\fig05_temporal_subspaces.npz": "e06e6ea2b87bc51b1b102c2c03d09424788ea4d3bc6810a9133018633c61214b",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\ring\\fig06_position_stability.csv": "e9dd6593fff830c44d501b6f2104c6073f09d939b2958fc54acaff76fc381dcc",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\ring\\fig06_position_stability.npz": "64434bd6c8181a96298aa3c998d52e27e05d4c120a4b9068b37ae4abd4a2f633",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\ring\\fig07_branch_decoding.csv": "3d366633cac88f4322365e4a41d20c2593df2cfeee3aadad28903a942e204c74",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\ring\\fig07_branch_decoding.npz": "9c9eb193528b52584f5939544496e0545087f5d871993e446d2e8be27d57210d",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\ring\\fig07_branch_decoding_splits.json": "a5151b5c22d0364e974cd964d86a10bef8f62d7e0753558210956c21d4ffa844"
+      },
+      "status": "PASS"
+    },
+    "topology": {
+      "pca_projection_maxerr": 4.440892098500626e-16,
+      "speed_maxerr": 0.0,
+      "temporal_angle_maxerr_degrees": 3.1945283931956693e-06,
+      "undefined_temporal_pairs": 24,
+      "scopes": 3,
+      "decision_pairs_per_scope": 6,
+      "branch_probe_maxerr": 0.0,
+      "branch_folds": 2,
+      "class_presence": "4/4 in each train and test",
+      "input_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_representation_v2\\data\\topology\\recording.npz": "aaf47c6612a5c5f9b0d9f747e013511045b86e52e2f9215b75a6f9878f8b6ffc",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_representation_v2\\data\\topology\\metadata.json": "96f6ce6b5aa2c8e6b268cb115ebc545a2b694f594b2d5cca51c617622d57e82a"
+      },
+      "derived_sha256": {
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\topology\\fig04_transition_kinematics.csv": "90d25548c7e5a02fe1b4c57152fd85bd392dd3850d75f604e0489ab3356cdf19",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\topology\\fig04_transition_kinematics.npz": "74dade3c29266839637d51154cde74179cfa180b2d59bfa400f878517aba04c4",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\topology\\fig05_principal_angles.csv": "5f65c4c70dac4486c9db5b64e7b5b35e852de0a669145443f2e61c12a8b657c7",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\topology\\fig05_temporal_subspaces.npz": "e06e6ea2b87bc51b1b102c2c03d09424788ea4d3bc6810a9133018633c61214b",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\topology\\fig06_position_stability.csv": "e9dd6593fff830c44d501b6f2104c6073f09d939b2958fc54acaff76fc381dcc",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\topology\\fig06_position_stability.npz": "64434bd6c8181a96298aa3c998d52e27e05d4c120a4b9068b37ae4abd4a2f633",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\topology\\fig07_branch_decoding.csv": "3d366633cac88f4322365e4a41d20c2593df2cfeee3aadad28903a942e204c74",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\topology\\fig07_branch_decoding.npz": "9c9eb193528b52584f5939544496e0545087f5d871993e446d2e8be27d57210d",
+        "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\topology\\fig07_branch_decoding_splits.json": "a5151b5c22d0364e974cd964d86a10bef8f62d7e0753558210956c21d4ffa844"
+      },
+      "status": "PASS"
+    }
+  },
+  "visual_review": {
+    "status": "PASS one_hot figures 4--7; other encoding images not claimed inspected",
+    "method": "actual view_image, no blank panels or cropped axes; see docs/figure_redraw/review_geometry.md",
+    "png_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\main\\fig04_one_hot.png": "abafd3730791d966b25bb507b9d606dd402b4ecfbaf65a5d8531cc0ebc443132",
+      "artifacts\\neural_paper_figures_v1\\figures\\main\\fig05_one_hot.png": "5fda14ee7260e42fa20b3ff0d21625cfc56237a64308f08cf950205689b77bb1",
+      "artifacts\\neural_paper_figures_v1\\figures\\main\\fig06_one_hot.png": "272d8278ea9ae2f707ac151b10e1ee819bedaf10e246b6a9442798d0febc6215",
+      "artifacts\\neural_paper_figures_v1\\figures\\main\\fig07_one_hot.png": "76913714ce9be0f136228cca83f8b6a21a70422e2f1a4c31303574a66124009f"
+    }
+  },
+  "review_script_sha256": "6d09ae6255e26c6c394a679c7295308fb2635a958dffd20b9f6019c57b722030"
+}

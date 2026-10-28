@@ -1,0 +1,381 @@
+{
+  "status": "PASS_WITH_LIMITS",
+  "figure_versions": 27,
+  "format_files": 81,
+  "pngs": [
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\main\\fig08_one_hot_branch0.png",
+      "size": [
+        3932,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "dcbacada11630449e080cd0c1c1bad50bf78a8a16bbdf396f03c3d2a6b34b5f9"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch1.png",
+      "size": [
+        3932,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "d64d1044def92972efd0c017802ee0eef69c416ac3dda3d4b91511535dc94eb6"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch2.png",
+      "size": [
+        3932,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "956ee4e82ea4c6b3f18f39f971c74ec6f8f6e8111ddf8d6b6590cd6b615c1efd"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch3.png",
+      "size": [
+        3932,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "7b8ffb6a0673682d70f46379bed7b5f0c9a33e0fba78f107c9e15bafc22b6e76"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_sixmean_control_slices.png",
+      "size": [
+        3143,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "66e9339251d3761aeb8fe02c61639d822352d07c2acbae59136f87ed05377db8"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_three_endpoint_slices.png",
+      "size": [
+        3143,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "253a23217e4c8f2742b147a9d07ab95c04c8d5e711ccddf55987220de975d951"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\main\\fig09_one_hot_source_time.png",
+      "size": [
+        3926,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "03a2090ed4cb356d890490f114075d8a280fa2ba11d8aef528c075f0327dff5b"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_one_hot_R3_fixed_clock.png",
+      "size": [
+        3927,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "165bceecd9566b3b92877a402b4650fbf72d96ad06360a14e43571c7e99a125c"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_one_hot_stage_perturbations.png",
+      "size": [
+        3934,
+        2134
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "d5ce65a08b1d7e114b0f5b243999915e4040810272fb18310622bc81a865c785"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch0.png",
+      "size": [
+        3932,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "5f6e75472e862e56f1ed4cc6485d2fb46c33b8ff35b84cb451a037aebf126708"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch1.png",
+      "size": [
+        3932,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "0c0c9d91ec8d38fe8eb0ca766ba8356ecf03896200e4932acd301477d36b7a9e"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch2.png",
+      "size": [
+        3932,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "f859f8b263e7eab729c700bd041e5ca9cc7677450086a2e8eb90e7d05117dbbd"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch3.png",
+      "size": [
+        3932,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "1dd2e8dc7907145cd3e4bb598c9c72a02d58bb5448d8379f7cecbd7c341ccdb0"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_sixmean_control_slices.png",
+      "size": [
+        3143,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "1c720d6b05c0805839ce692dc72a2873e1b89be958371f350302797555b5ed4a"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_three_endpoint_slices.png",
+      "size": [
+        3143,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "1594ae0fdb6cc2c0599ed63a286a1a7713ae6890456e853986468fe0705add03"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_source_time.png",
+      "size": [
+        3926,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "283a9809bb993156676bfbe668b57ed1511d6a7ef595164829751c18a16cd0fb"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_R3_fixed_clock.png",
+      "size": [
+        3927,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "5d87bcd81ae405d2dca85dd957b396b701a27bc782b8d2e6e245775b01c60fb7"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_stage_perturbations.png",
+      "size": [
+        3934,
+        2134
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "3b0df6ca76f970a4325ee229ee26fa2d7d89e4b6476eca73b743b6fb335a0687"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch0.png",
+      "size": [
+        3932,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "be377559a6bad364bf28dfb9f8e536bf9fc3cd08e9b380cc662ce2e7764a6648"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch1.png",
+      "size": [
+        3932,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "e9a365dfb6583203db17a6ea1ed5521369cf6c8d6ef680283aa42f3b83eb21c3"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch2.png",
+      "size": [
+        3932,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "fabe8d1a5a1ef6f62e8524ea35da21188c9c70e5b76cfced6b1c767ff13c92a0"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch3.png",
+      "size": [
+        3932,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "1f948f324313a49a29fa7a842b7cf62c3ad89a8c9d10647b785c419bb3d12b1f"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_sixmean_control_slices.png",
+      "size": [
+        3143,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "ff78ee3e4c0e2b16ddda4ceeda83c7a31184b34b8300a6a53dd1d165834869de"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_three_endpoint_slices.png",
+      "size": [
+        3143,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "8e5e81050fc935597c5f5f3c14ce2d3b83e25603eeb20a7f6a4f39ac1bc478ec"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_source_time.png",
+      "size": [
+        3926,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "0679644483d48de91812a32abc4372458e95f5dc7b4c7a2d345031e6ea6fab09"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_R3_fixed_clock.png",
+      "size": [
+        3927,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "76304a081b487f4846e452d94e92a4f3f8bd77b01441ccfd815232059c0952b2"
+    },
+    {
+      "path": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_stage_perturbations.png",
+      "size": [
+        3934,
+        2134
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "exists": true,
+      "sha256": "eda54edc5eacfad965eaf1bd8562ffa4625b529c1a68273d5680ba13397fac23"
+    }
+  ],
+  "contact_sheets": [
+    "fig08_fig09_contact_one_hot.jpg",
+    "fig08_fig09_contact_ring.jpg",
+    "fig08_fig09_contact_topology.jpg"
+  ],
+  "verified_format_files": 81,
+  "visual_review": {
+    "performed": true,
+    "scope": "All27 final PNGs opened and inspected in three per-encoding contact sheets; representative main figures and new slice/stage panels additionally opened at full size.",
+    "checks": [
+      "No blank panels or cropped axes/legends",
+      "Rate labels dimensionless; full-state residual units rate/ms",
+      "Two distinct slices retained and clearly named",
+      "Slice annotation moved into invalid empty region, leaving all terminal labels visible",
+      "Cross-temporal axes control-time/perturbed-time preserved",
+      "No confidence intervals for deterministic condition counts"
+    ],
+    "limitations": [
+      "Small or degenerate PCA trajectories are retained as actual data, not aesthetically reshaped",
+      "Six-mean slice is uniformly other-equilibrium over its legal region; retained negative result",
+      "Only contact-sheet visual pass covers every encoding/branch; independent numerical review is separate"
+    ]
+  }
+}

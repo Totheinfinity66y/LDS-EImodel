@@ -38,3 +38,9 @@ audit/phase_portrait/source/*_text.txt
 audit/local_fixed_points/source/*.jpg
 audit/local_fixed_points/source/*.html
 audit/local_fixed_points/source/*_text.txt
+# Redesigned figures: large complete dynamical trajectories remain local,
+# indexed by manifests and reproducible through plot_all --paper-figures.
+artifacts/neural_paper_figures_v1/derived/*/fig08_six_point_basins*.npz
+artifacts/neural_paper_figures_v1/derived/*/fig08_sixmean_control*.npz
+artifacts/neural_paper_figures_v1/derived/*/fig09_stage_perturbations.npz
+artifacts/neural_paper_figures_v1/derived/comparison/fig10_matched_current_full.npz

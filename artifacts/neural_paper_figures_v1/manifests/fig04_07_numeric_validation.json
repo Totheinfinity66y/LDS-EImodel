@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "encoding": "one_hot",
+      "status": "PASS",
+      "independent_recomputed": "PCA scores/fit mean/full-state speed; temporal angles, NA gates, centroids; all CSV cross-VAF; six-state RDM/PCA/margin; all branch-probe times; all manifest hashes",
+      "NA_checks": 18
+    },
+    {
+      "encoding": "ring",
+      "status": "PASS",
+      "independent_recomputed": "PCA scores/fit mean/full-state speed; temporal angles, NA gates, centroids; all CSV cross-VAF; six-state RDM/PCA/margin; all branch-probe times; all manifest hashes",
+      "NA_checks": 18
+    },
+    {
+      "encoding": "topology",
+      "status": "PASS",
+      "independent_recomputed": "PCA scores/fit mean/full-state speed; temporal angles, NA gates, centroids; all CSV cross-VAF; six-state RDM/PCA/margin; all branch-probe times; all manifest hashes",
+      "NA_checks": 18
+    }
+  ],
+  "validator_source_sha256": "b61f0c434d9f833c82bdcb2506e408616a09dd46b050704194110482c6074c2a"
+}

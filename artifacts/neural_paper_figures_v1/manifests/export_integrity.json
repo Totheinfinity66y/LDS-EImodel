@@ -1,0 +1,479 @@
+{
+  "status": "PASS",
+  "figures": 49,
+  "exports": 147,
+  "checks": [
+    {
+      "png": "figures\\main\\fig01_one_hot.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\main\\fig02_one_hot.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\main\\fig03_one_hot.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\main\\fig04_one_hot.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\main\\fig05_one_hot.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\main\\fig06_one_hot.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\main\\fig07_one_hot.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\main\\fig08_one_hot_branch0.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\main\\fig09_one_hot_source_time.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\main\\fig10_encoding_comparison.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig01_ring.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig01_topology.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig02_ring.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig02_topology.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig03_ring.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig03_topology.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig04_ring.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig04_topology.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig05_ring.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig05_topology.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig06_ring.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig06_topology.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig07_ring.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig07_topology.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_one_hot_branch1.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_one_hot_branch2.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_one_hot_branch3.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_one_hot_sixmean_control_slices.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_one_hot_three_endpoint_slices.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_ring_branch0.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_ring_branch1.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_ring_branch2.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_ring_branch3.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_ring_sixmean_control_slices.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_ring_three_endpoint_slices.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_topology_branch0.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_topology_branch1.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_topology_branch2.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_topology_branch3.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_topology_sixmean_control_slices.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig08_topology_three_endpoint_slices.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig09_one_hot_R3_fixed_clock.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig09_one_hot_stage_perturbations.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig09_ring_R3_fixed_clock.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig09_ring_source_time.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig09_ring_stage_perturbations.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig09_topology_R3_fixed_clock.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig09_topology_source_time.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    },
+    {
+      "png": "figures\\supplementary\\fig09_topology_stage_perturbations.png",
+      "formats": [
+        "png300dpi",
+        "svg",
+        "pdf"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "checked_figure_manifests": [
+    "manifests\\fig01_03_10_visual_validation.json",
+    "manifests\\fig01_one_hot.json",
+    "manifests\\fig01_ring.json",
+    "manifests\\fig01_topology.json",
+    "manifests\\fig02_one_hot.json",
+    "manifests\\fig02_ring.json",
+    "manifests\\fig02_topology.json",
+    "manifests\\fig03_one_hot.json",
+    "manifests\\fig03_ring.json",
+    "manifests\\fig03_topology.json",
+    "manifests\\fig04_07_numeric_validation.json",
+    "manifests\\fig04_07_visual_validation.json",
+    "manifests\\fig04_one_hot.json",
+    "manifests\\fig04_ring.json",
+    "manifests\\fig04_topology.json",
+    "manifests\\fig05_one_hot.json",
+    "manifests\\fig05_ring.json",
+    "manifests\\fig05_topology.json",
+    "manifests\\fig06_one_hot.json",
+    "manifests\\fig06_ring.json",
+    "manifests\\fig06_topology.json",
+    "manifests\\fig07_one_hot.json",
+    "manifests\\fig07_ring.json",
+    "manifests\\fig07_topology.json",
+    "manifests\\fig08_fig09_figures.json",
+    "manifests\\fig08_fig09_visual_review.json",
+    "manifests\\fig09_stage_summary.json",
+    "manifests\\fig10_comparison.json"
+  ],
+  "note": "File integrity is separate from actual-image visual and scientific review."
+}

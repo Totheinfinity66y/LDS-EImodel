@@ -1,0 +1,230 @@
+{
+  "status": "PASS_WITH_LIMITS",
+  "reviewer": "fig04_07 agent; did not implement Figures8\u201310",
+  "checks": [
+    {
+      "encoding": "one_hot",
+      "figure8": "PASS",
+      "legal_grid_counts": [
+        551,
+        551,
+        551,
+        551
+      ],
+      "classifications": [
+        [
+          -3,
+          -1,
+          0,
+          4,
+          8
+        ],
+        [
+          -3,
+          -1,
+          1,
+          5,
+          9
+        ],
+        [
+          -3,
+          -1,
+          2,
+          6,
+          10
+        ],
+        [
+          -3,
+          -1,
+          3,
+          7,
+          11
+        ]
+      ],
+      "sixmean_control_slices_verified": 4,
+      "certified_endpoints": 24,
+      "figure9": "PASS",
+      "paired_conditions": 216,
+      "limitations": "Finite affine initial-state slices and local piecewise certificate, not exhaustive/global attractor proof"
+    },
+    {
+      "encoding": "ring",
+      "figure8": "PASS",
+      "legal_grid_counts": [
+        551,
+        551,
+        551,
+        551
+      ],
+      "classifications": [
+        [
+          -3,
+          -1,
+          0,
+          4,
+          8
+        ],
+        [
+          -3,
+          -1,
+          1,
+          5,
+          9
+        ],
+        [
+          -3,
+          -1,
+          2,
+          6,
+          10
+        ],
+        [
+          -3,
+          -1,
+          3,
+          7,
+          11
+        ]
+      ],
+      "sixmean_control_slices_verified": 4,
+      "certified_endpoints": 24,
+      "figure9": "PASS",
+      "paired_conditions": 216,
+      "limitations": "Finite affine initial-state slices and local piecewise certificate, not exhaustive/global attractor proof"
+    },
+    {
+      "encoding": "topology",
+      "figure8": "PASS",
+      "legal_grid_counts": [
+        551,
+        551,
+        551,
+        551
+      ],
+      "classifications": [
+        [
+          -3,
+          -1,
+          0,
+          4,
+          8
+        ],
+        [
+          -3,
+          -1,
+          1,
+          5,
+          9
+        ],
+        [
+          -3,
+          -1,
+          2,
+          6,
+          10
+        ],
+        [
+          -3,
+          -1,
+          3,
+          7,
+          11
+        ]
+      ],
+      "sixmean_control_slices_verified": 4,
+      "certified_endpoints": 24,
+      "figure9": "PASS",
+      "paired_conditions": 216,
+      "limitations": "Finite affine initial-state slices and local piecewise certificate, not exhaustive/global attractor proof"
+    },
+    {
+      "figure10": "PASS",
+      "matched_assays": 648,
+      "same_current_arrays_all_encodings": true,
+      "joint_PCA": "orthonormality/mean/eigenvariance/scores PASS",
+      "raw_coordinate_noise": "separate fig10_raw_noise_doses.csv; not pooled with matched R3-current assay"
+    },
+    {
+      "raw_noise_dose_rows": 216,
+      "independent_encoded_to_R1_formula_audit": "PASS",
+      "dose_types": "raw coordinate L2 and mapped R1 current RMS/L2 kept separate"
+    }
+  ],
+  "reference_Zhou": "original local Fig7 and caption actually viewed; full Euclidean distances and finite input pulse are adapted, original 17 trained-network statistics are not reproduced",
+  "source_exact": "BLOCKED: author Fig7 analysis, trained weights and original raw trajectories absent; no training executed",
+  "validator_sha256": "0d3eb6377fffecca4f8dd25ec0af1fdc01fa431be6269aba8bd64ad3ddaa05e9",
+  "reviewed_inputs_sha256": {
+    "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_six_point_basins_branch0.npz": "640c717331727689d2bf96b7f4efd5fcc0749f7907a85eec829d63181f57c3ec",
+    "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_six_point_basins_branch1.npz": "7b31bd7ed4956f1a8320153bdce4b4af8a5c5096d1f15f800d778b8686426d5e",
+    "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_six_point_basins_branch2.npz": "80a6d3a5936ad9993835508124d94b066e97c5fcae651ad935b2f70f6a9112aa",
+    "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_six_point_basins_branch3.npz": "eb7bdad6da9b1951c076ff4002015d037ba5ec6755a8ab0d894a88f4d128f4e1",
+    "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_six_point_basins_branch0.npz": "640c717331727689d2bf96b7f4efd5fcc0749f7907a85eec829d63181f57c3ec",
+    "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_six_point_basins_branch1.npz": "7b31bd7ed4956f1a8320153bdce4b4af8a5c5096d1f15f800d778b8686426d5e",
+    "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_six_point_basins_branch2.npz": "80a6d3a5936ad9993835508124d94b066e97c5fcae651ad935b2f70f6a9112aa",
+    "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_six_point_basins_branch3.npz": "eb7bdad6da9b1951c076ff4002015d037ba5ec6755a8ab0d894a88f4d128f4e1",
+    "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_six_point_basins_branch0.npz": "640c717331727689d2bf96b7f4efd5fcc0749f7907a85eec829d63181f57c3ec",
+    "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_six_point_basins_branch1.npz": "7b31bd7ed4956f1a8320153bdce4b4af8a5c5096d1f15f800d778b8686426d5e",
+    "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_six_point_basins_branch2.npz": "80a6d3a5936ad9993835508124d94b066e97c5fcae651ad935b2f70f6a9112aa",
+    "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_six_point_basins_branch3.npz": "eb7bdad6da9b1951c076ff4002015d037ba5ec6755a8ab0d894a88f4d128f4e1",
+    "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_sixmean_control_branch0.npz": "065c511c5a766dd59eed373e684f940ffa8ccab873bd67a191d52130b1b6f33b",
+    "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_sixmean_control_branch1.npz": "5dee2d16cd3d9f888a5339fb03f9490990bcd50dba84fa7d0f36dd92a221e56e",
+    "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_sixmean_control_branch2.npz": "b0f39598091afe60c02a154550692638026fb4b3725c58d85dab6dd5c1835451",
+    "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_sixmean_control_branch3.npz": "dcb3dc4ff3032684e926d9169d8579a7cbd000f5f2985f6f25e23cc2497dc3c2",
+    "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_sixmean_control_branch0.npz": "065c511c5a766dd59eed373e684f940ffa8ccab873bd67a191d52130b1b6f33b",
+    "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_sixmean_control_branch1.npz": "5dee2d16cd3d9f888a5339fb03f9490990bcd50dba84fa7d0f36dd92a221e56e",
+    "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_sixmean_control_branch2.npz": "b0f39598091afe60c02a154550692638026fb4b3725c58d85dab6dd5c1835451",
+    "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_sixmean_control_branch3.npz": "dcb3dc4ff3032684e926d9169d8579a7cbd000f5f2985f6f25e23cc2497dc3c2",
+    "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_sixmean_control_branch0.npz": "065c511c5a766dd59eed373e684f940ffa8ccab873bd67a191d52130b1b6f33b",
+    "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_sixmean_control_branch1.npz": "5dee2d16cd3d9f888a5339fb03f9490990bcd50dba84fa7d0f36dd92a221e56e",
+    "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_sixmean_control_branch2.npz": "b0f39598091afe60c02a154550692638026fb4b3725c58d85dab6dd5c1835451",
+    "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_sixmean_control_branch3.npz": "dcb3dc4ff3032684e926d9169d8579a7cbd000f5f2985f6f25e23cc2497dc3c2",
+    "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+    "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+    "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+    "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig09_stage_perturbations.npz": "8c86d5cf0ac173c9ae118fb06bf8ee154e1ce7b0364935b869a5b16717d1c944",
+    "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig09_stage_perturbations.npz": "7ca05777de56c6484c374258e225abc4325fa821fc49d85237dd968bda9bde1d",
+    "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig09_stage_perturbations.npz": "87ba27decf9da73ee4c90742c664920a0b5f08244553f65bd328d3569989e82c",
+    "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig09_recovery_by_stage.csv": "01bda9bf7835fbdc7949ae0ea89b162f44ad9742968ac06d03089efc5d395f86",
+    "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig09_recovery_by_stage.csv": "01bda9bf7835fbdc7949ae0ea89b162f44ad9742968ac06d03089efc5d395f86",
+    "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig09_recovery_by_stage.csv": "01bda9bf7835fbdc7949ae0ea89b162f44ad9742968ac06d03089efc5d395f86",
+    "artifacts\\neural_paper_figures_v1\\derived\\comparison\\fig10_common_basis.npz": "f1a299db961248eb3b8824b2d6e8a034a64e9a74d8ef61f590f393221c0d31e6",
+    "artifacts\\neural_paper_figures_v1\\derived\\comparison\\fig10_matched_current_full.npz": "1a85200adb1f802f5242781878793af682b1e87f3f91cc3dd3f0f90ac76cec0c",
+    "artifacts\\neural_paper_figures_v1\\derived\\comparison\\fig10_encoding_comparison.csv": "afb680bfd3e47df09e1cff17a8f61a1da867a7b7258d0320d809b66b6bc2f736",
+    "artifacts\\neural_paper_figures_v1\\derived\\comparison\\fig10_raw_noise_doses.csv": "cb54df02b5a37c593bad79c211fd2d0e73b4a505e99e893a80d78d75b899e4f8",
+    "audit\\paper2agent\\zhou\\INPUT_CONTRACT.json": "4937805cb62575da421ca4d427912bd1615b4524e5b89a8428715f49693862c3",
+    "audit\\paper2agent\\zhou\\FIGURE_CONTRACT.json": "5ad1d853ee716515c99badac87cae8778dea2a64a98a96bf0a9ae42cefe03f01",
+    "artifacts\\neural_representation_v2\\reference_evidence\\Zhou2023_p10.png": "a86aa3130a399a0b6472826a027a0acf7e34ae6143011aff129a5befc47f4fdf",
+    "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\input_R3_fixed_clock_11.npz": "c8db7129140a38b96214d5d5dcadd42c9302e6627b2ba6f41389b9d1736d37af",
+    "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\input_R3_fixed_clock_19.npz": "4f88cd47791e8753d6095770ca0ac084e03077c6e92178973e2167a8cf2557b0",
+    "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\input_R3_fixed_clock_7.npz": "18c89babaa4bb06363377f41964e70da7dc74768e2cb5cbbf5a2dcae509cd8d7",
+    "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\input_source_time_11.npz": "90d01b6c22ea3ed7b7a5ca2a182c11844225ab47f6a1e3539a6a64d02fa4b9ce",
+    "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\input_source_time_19.npz": "2e1b0c14c4f62424d11d1fffd6ca21c88274189e90ea241a857148d93fc246c8",
+    "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\input_source_time_7.npz": "744b26c4e7541e3595505cd6f31da701af53a52cd2c9fa54c43817ee4e778fc2",
+    "artifacts\\paper2agent_reproduction\\lds_results\\ring\\input_R3_fixed_clock_11.npz": "c8db7129140a38b96214d5d5dcadd42c9302e6627b2ba6f41389b9d1736d37af",
+    "artifacts\\paper2agent_reproduction\\lds_results\\ring\\input_R3_fixed_clock_19.npz": "4f88cd47791e8753d6095770ca0ac084e03077c6e92178973e2167a8cf2557b0",
+    "artifacts\\paper2agent_reproduction\\lds_results\\ring\\input_R3_fixed_clock_7.npz": "18c89babaa4bb06363377f41964e70da7dc74768e2cb5cbbf5a2dcae509cd8d7",
+    "artifacts\\paper2agent_reproduction\\lds_results\\ring\\input_source_time_11.npz": "0034c2b4ab74b29cd7ee91a03e8f875817121863f82eb7f280d4df6d5f9d75bb",
+    "artifacts\\paper2agent_reproduction\\lds_results\\ring\\input_source_time_19.npz": "7ab7d724c0fe1796273fdb9a58016d07c10226300cacfe35735c816707bf8736",
+    "artifacts\\paper2agent_reproduction\\lds_results\\ring\\input_source_time_7.npz": "88a19d74f0fe7b54de0399603415385235e226774f4fe285d244836f5202cdc8",
+    "artifacts\\paper2agent_reproduction\\lds_results\\topology\\input_R3_fixed_clock_11.npz": "c8db7129140a38b96214d5d5dcadd42c9302e6627b2ba6f41389b9d1736d37af",
+    "artifacts\\paper2agent_reproduction\\lds_results\\topology\\input_R3_fixed_clock_19.npz": "4f88cd47791e8753d6095770ca0ac084e03077c6e92178973e2167a8cf2557b0",
+    "artifacts\\paper2agent_reproduction\\lds_results\\topology\\input_R3_fixed_clock_7.npz": "18c89babaa4bb06363377f41964e70da7dc74768e2cb5cbbf5a2dcae509cd8d7",
+    "artifacts\\paper2agent_reproduction\\lds_results\\topology\\input_source_time_11.npz": "0034c2b4ab74b29cd7ee91a03e8f875817121863f82eb7f280d4df6d5f9d75bb",
+    "artifacts\\paper2agent_reproduction\\lds_results\\topology\\input_source_time_19.npz": "7ab7d724c0fe1796273fdb9a58016d07c10226300cacfe35735c816707bf8736",
+    "artifacts\\paper2agent_reproduction\\lds_results\\topology\\input_source_time_7.npz": "88a19d74f0fe7b54de0399603415385235e226774f4fe285d244836f5202cdc8"
+  },
+  "original_reference_visual_review": "Zhou2023_p10.png Figure7a/b/c and caption actually opened",
+  "visual_review": {
+    "status": "PASS_WITH_LIMITS",
+    "actually_opened_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\main\\fig08_one_hot_branch0.png": "dcbacada11630449e080cd0c1c1bad50bf78a8a16bbdf396f03c3d2a6b34b5f9",
+      "artifacts\\neural_paper_figures_v1\\figures\\main\\fig09_one_hot_source_time.png": "03a2090ed4cb356d890490f114075d8a280fa2ba11d8aef528c075f0327dff5b",
+      "artifacts\\neural_paper_figures_v1\\figures\\main\\fig10_encoding_comparison.png": "59d61fd9d259583cf2f7f830b3e605d126da2b46527a04904622091c0fa87430",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_three_endpoint_slices.png": "253a23217e4c8f2742b147a9d07ab95c04c8d5e711ccddf55987220de975d951",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_sixmean_control_slices.png": "66e9339251d3761aeb8fe02c61639d822352d07c2acbae59136f87ed05377db8",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_one_hot_stage_perturbations.png": "d5ce65a08b1d7e114b0f5b243999915e4040810272fb18310622bc81a865c785"
+    },
+    "scope": "Six final LDS figures plus original Zhou Figure7 actually opened; other supplement views remain implementing-author QA",
+    "findings": "No blank/cropped key axes; full-state versus projection and source-time versus state-kick distinct; minority matched grid cells not obscured"
+  }
+}

@@ -1,0 +1,665 @@
+[
+  {
+    "figure": 8,
+    "encoding": "one_hot",
+    "branch": 0,
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\main\\fig08_one_hot_branch0.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\main\\fig08_one_hot_branch0.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\main\\fig08_one_hot_branch0.pdf"
+    ],
+    "data": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_fixed_point_certificates.csv",
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_branch0_display_basis.npz": "121cd0672cead8b51b6be51aab5029ce953ffb092190628468476178b7321d2c"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\main\\fig08_one_hot_branch0.png": "dcbacada11630449e080cd0c1c1bad50bf78a8a16bbdf396f03c3d2a6b34b5f9",
+      "artifacts\\neural_paper_figures_v1\\figures\\main\\fig08_one_hot_branch0.svg": "bb877d3b3c0616341689616fa1f14cb02af6274777e4b57427137e85a2672df5",
+      "artifacts\\neural_paper_figures_v1\\figures\\main\\fig08_one_hot_branch0.pdf": "28d0346643c10705770059a5b7a02a2ca4523f47dc37c0b01378f014e41a696f"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "one_hot",
+    "branch": 1,
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch1.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch1.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch1.pdf"
+    ],
+    "data": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_fixed_point_certificates.csv",
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_branch1_display_basis.npz": "1df4e050e28a7e0988a439feba1709fe2cc5f1a7ef20cb3fa1aee1e93db8185a"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch1.png": "d64d1044def92972efd0c017802ee0eef69c416ac3dda3d4b91511535dc94eb6",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch1.svg": "f197664990d0d0b3ab4d09e0efc9f3df6d04da063937d7a12647b20e341dcfb3",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch1.pdf": "38fbab6b1dcdb24e09018f844f8d5b8e8494aa132bf3d91319160c0090b5f02c"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "one_hot",
+    "branch": 2,
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch2.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch2.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch2.pdf"
+    ],
+    "data": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_fixed_point_certificates.csv",
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_branch2_display_basis.npz": "c07891ff22edc4275c56d9e3f7c48bd3a03e5a21d377568518bdf5e9572e6355"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch2.png": "956ee4e82ea4c6b3f18f39f971c74ec6f8f6e8111ddf8d6b6590cd6b615c1efd",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch2.svg": "a2d4b52dfff7cdc8b208d01631be540241676692ad142cc1089cadb5071cb1da",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch2.pdf": "0580a26c5378c91cbc6a35a2df6b8a7ea660f8f109f70d1a68833a0b251ced0a"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "one_hot",
+    "branch": 3,
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch3.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch3.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch3.pdf"
+    ],
+    "data": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_fixed_point_certificates.csv",
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_branch3_display_basis.npz": "6a287779d56beb41065fcbc66be3a80afd29825c8b490757d419f9362e243a42"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch3.png": "7b8ffb6a0673682d70f46379bed7b5f0c9a33e0fba78f107c9e15bafc22b6e76",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch3.svg": "3581fcc0a35cac3d7b4034a9b819425a85c23b8edbbb66a3e89dae1539e24600",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_branch3.pdf": "672a8ab0c01e51d079b049b461c3d634e5127b66b09bbeaabf8c8d1f8f2fd6ac"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "one_hot",
+    "assay": "affine_initial_state_slices_sixmean_control",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_sixmean_control_slices.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_sixmean_control_slices.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_sixmean_control_slices.pdf"
+    ],
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_sixmean_control_branch0.npz": "065c511c5a766dd59eed373e684f940ffa8ccab873bd67a191d52130b1b6f33b",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_sixmean_control_branch1.npz": "5dee2d16cd3d9f888a5339fb03f9490990bcd50dba84fa7d0f36dd92a221e56e",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_sixmean_control_branch2.npz": "b0f39598091afe60c02a154550692638026fb4b3725c58d85dab6dd5c1835451",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_sixmean_control_branch3.npz": "dcb3dc4ff3032684e926d9169d8579a7cbd000f5f2985f6f25e23cc2497dc3c2"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_sixmean_control_slices.png": "66e9339251d3761aeb8fe02c61639d822352d07c2acbae59136f87ed05377db8",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_sixmean_control_slices.svg": "ec3f1fdfd9e530eaf87830ce8318cb945e3b8d2764ac160d29073491e2666a8d",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_sixmean_control_slices.pdf": "f14f5c3429929e64af8c1b774ab9a9ab88e31e8fa8c4b7001a33341fb6aa8200"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "one_hot",
+    "assay": "affine_initial_state_slices_three_endpoint",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_three_endpoint_slices.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_three_endpoint_slices.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_three_endpoint_slices.pdf"
+    ],
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_six_point_basins_branch0.npz": "640c717331727689d2bf96b7f4efd5fcc0749f7907a85eec829d63181f57c3ec",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_six_point_basins_branch1.npz": "7b31bd7ed4956f1a8320153bdce4b4af8a5c5096d1f15f800d778b8686426d5e",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_six_point_basins_branch2.npz": "80a6d3a5936ad9993835508124d94b066e97c5fcae651ad935b2f70f6a9112aa",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig08_six_point_basins_branch3.npz": "eb7bdad6da9b1951c076ff4002015d037ba5ec6755a8ab0d894a88f4d128f4e1"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_three_endpoint_slices.png": "253a23217e4c8f2742b147a9d07ab95c04c8d5e711ccddf55987220de975d951",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_three_endpoint_slices.svg": "1a337e37472764355407caa33905fdaf6a1cd3ed55eb835d3c15c03d77ad4bab",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_one_hot_three_endpoint_slices.pdf": "017a4a000ce68786c191b62376cb9c9488bea078d81cd4257dbded6c7843fa75"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 9,
+    "encoding": "one_hot",
+    "assay": "source_time",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\main\\fig09_one_hot_source_time.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\main\\fig09_one_hot_source_time.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\main\\fig09_one_hot_source_time.pdf"
+    ],
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\input_source_time_7.npz": "744b26c4e7541e3595505cd6f31da701af53a52cd2c9fa54c43817ee4e778fc2",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\input_source_time_11.npz": "90d01b6c22ea3ed7b7a5ca2a182c11844225ab47f6a1e3539a6a64d02fa4b9ce",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\input_source_time_19.npz": "2e1b0c14c4f62424d11d1fffd6ca21c88274189e90ea241a857148d93fc246c8",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\main\\fig09_one_hot_source_time.png": "03a2090ed4cb356d890490f114075d8a280fa2ba11d8aef528c075f0327dff5b",
+      "artifacts\\neural_paper_figures_v1\\figures\\main\\fig09_one_hot_source_time.svg": "c956d766c5aeecec497a788ba880377d9c6b25b27f61f41e658c5821a24da356",
+      "artifacts\\neural_paper_figures_v1\\figures\\main\\fig09_one_hot_source_time.pdf": "d40267c650cc7bce60e677d251741a44097a78e4fbe621693f525130d175a513"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 9,
+    "encoding": "one_hot",
+    "assay": "R3_fixed_clock",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_one_hot_R3_fixed_clock.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_one_hot_R3_fixed_clock.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_one_hot_R3_fixed_clock.pdf"
+    ],
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\input_R3_fixed_clock_7.npz": "18c89babaa4bb06363377f41964e70da7dc74768e2cb5cbbf5a2dcae509cd8d7",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\input_R3_fixed_clock_11.npz": "c8db7129140a38b96214d5d5dcadd42c9302e6627b2ba6f41389b9d1736d37af",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\input_R3_fixed_clock_19.npz": "4f88cd47791e8753d6095770ca0ac084e03077c6e92178973e2167a8cf2557b0",
+      "artifacts\\paper2agent_reproduction\\lds_results\\one_hot\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_one_hot_R3_fixed_clock.png": "165bceecd9566b3b92877a402b4650fbf72d96ad06360a14e43571c7e99a125c",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_one_hot_R3_fixed_clock.svg": "20dd796299ffc61235eea231a34f7a52277ecaf99936841091d4a4899f39dba3",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_one_hot_R3_fixed_clock.pdf": "acb829d3f0381b55471816d4aeb566e8d8ccd2d2c982112417caed18ec8e03cc"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 9,
+    "encoding": "one_hot",
+    "assay": "24_condition_stage_pulses",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_one_hot_stage_perturbations.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_one_hot_stage_perturbations.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_one_hot_stage_perturbations.pdf"
+    ],
+    "input_sha256": {
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig09_stage_perturbations.npz": "8c86d5cf0ac173c9ae118fb06bf8ee154e1ce7b0364935b869a5b16717d1c944",
+      "artifacts\\neural_paper_figures_v1\\derived\\one_hot\\fig09_recovery_by_stage.csv": "01bda9bf7835fbdc7949ae0ea89b162f44ad9742968ac06d03089efc5d395f86"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_one_hot_stage_perturbations.png": "d5ce65a08b1d7e114b0f5b243999915e4040810272fb18310622bc81a865c785",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_one_hot_stage_perturbations.svg": "12a67649da2c6c897f6cbc2dd6864437d95973c77b429bfcd83e45923da99e76",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_one_hot_stage_perturbations.pdf": "2f3535b8babd03bfd94d998dc3e37aed2906ad6e46c9e59c740ee6a20430e052"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "ring",
+    "branch": 0,
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch0.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch0.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch0.pdf"
+    ],
+    "data": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_fixed_point_certificates.csv",
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_branch0_display_basis.npz": "121cd0672cead8b51b6be51aab5029ce953ffb092190628468476178b7321d2c"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch0.png": "5f6e75472e862e56f1ed4cc6485d2fb46c33b8ff35b84cb451a037aebf126708",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch0.svg": "ba132c21b89ee4573e0ddf0111b9667a21170071fff6d02b55d8f5a92eb4a7cb",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch0.pdf": "06b8e451e5c699ad03e8a42f93d9fa6668a0c2daf4cb6d6b80aa36dfc2e080d3"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "ring",
+    "branch": 1,
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch1.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch1.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch1.pdf"
+    ],
+    "data": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_fixed_point_certificates.csv",
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_branch1_display_basis.npz": "1df4e050e28a7e0988a439feba1709fe2cc5f1a7ef20cb3fa1aee1e93db8185a"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch1.png": "0c0c9d91ec8d38fe8eb0ca766ba8356ecf03896200e4932acd301477d36b7a9e",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch1.svg": "909d39d54e0c280e1813d01cb4271bb2bc362557bb1a09844d9979969691bf4d",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch1.pdf": "0dd92b6a93b698e81db4eb836367c863931b5af3dbdbac61524f1a2bee18f4f3"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "ring",
+    "branch": 2,
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch2.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch2.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch2.pdf"
+    ],
+    "data": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_fixed_point_certificates.csv",
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_branch2_display_basis.npz": "c07891ff22edc4275c56d9e3f7c48bd3a03e5a21d377568518bdf5e9572e6355"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch2.png": "f859f8b263e7eab729c700bd041e5ca9cc7677450086a2e8eb90e7d05117dbbd",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch2.svg": "b74b2bdfc880a6644450c4dd96273e7e285cc84ce5d2fc17afc5bb893a2e97a9",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch2.pdf": "7bd72069eab131f4bc5057a1f6ddd95225ec24b534f5543e5e97d917291e7f52"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "ring",
+    "branch": 3,
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch3.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch3.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch3.pdf"
+    ],
+    "data": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_fixed_point_certificates.csv",
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_branch3_display_basis.npz": "6a287779d56beb41065fcbc66be3a80afd29825c8b490757d419f9362e243a42"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch3.png": "1dd2e8dc7907145cd3e4bb598c9c72a02d58bb5448d8379f7cecbd7c341ccdb0",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch3.svg": "ed4706b72df9bae310fab6f0810f0071395d376cb5d347f263d634565f0a6899",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_branch3.pdf": "70125fc6e49aec570e2ef7ee6703051480595f9c1555a0ab113f3e8055b3522e"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "ring",
+    "assay": "affine_initial_state_slices_sixmean_control",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_sixmean_control_slices.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_sixmean_control_slices.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_sixmean_control_slices.pdf"
+    ],
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_sixmean_control_branch0.npz": "065c511c5a766dd59eed373e684f940ffa8ccab873bd67a191d52130b1b6f33b",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_sixmean_control_branch1.npz": "5dee2d16cd3d9f888a5339fb03f9490990bcd50dba84fa7d0f36dd92a221e56e",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_sixmean_control_branch2.npz": "b0f39598091afe60c02a154550692638026fb4b3725c58d85dab6dd5c1835451",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_sixmean_control_branch3.npz": "dcb3dc4ff3032684e926d9169d8579a7cbd000f5f2985f6f25e23cc2497dc3c2"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_sixmean_control_slices.png": "1c720d6b05c0805839ce692dc72a2873e1b89be958371f350302797555b5ed4a",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_sixmean_control_slices.svg": "fd7e1dad73c4aa7b00a5f50e83358664657f59950f8ed2da4a1c30aea08dc2e9",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_sixmean_control_slices.pdf": "2ce01a7e9f781e8f58236c99efb5aa5e34c5b5f6756cfd2bd7031bc9a546df40"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "ring",
+    "assay": "affine_initial_state_slices_three_endpoint",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_three_endpoint_slices.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_three_endpoint_slices.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_three_endpoint_slices.pdf"
+    ],
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_six_point_basins_branch0.npz": "640c717331727689d2bf96b7f4efd5fcc0749f7907a85eec829d63181f57c3ec",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_six_point_basins_branch1.npz": "7b31bd7ed4956f1a8320153bdce4b4af8a5c5096d1f15f800d778b8686426d5e",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_six_point_basins_branch2.npz": "80a6d3a5936ad9993835508124d94b066e97c5fcae651ad935b2f70f6a9112aa",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig08_six_point_basins_branch3.npz": "eb7bdad6da9b1951c076ff4002015d037ba5ec6755a8ab0d894a88f4d128f4e1"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_three_endpoint_slices.png": "1594ae0fdb6cc2c0599ed63a286a1a7713ae6890456e853986468fe0705add03",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_three_endpoint_slices.svg": "c9178ceb23a00f207001970ac5029adcda36328861c0f5e9455dc29dbf20b6aa",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_ring_three_endpoint_slices.pdf": "b2f9d701e7846a44f16cc4e218744eb3f3ab316931a4c66e829599aa07d16f70"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 9,
+    "encoding": "ring",
+    "assay": "source_time",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_source_time.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_source_time.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_source_time.pdf"
+    ],
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\input_source_time_7.npz": "88a19d74f0fe7b54de0399603415385235e226774f4fe285d244836f5202cdc8",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\input_source_time_11.npz": "0034c2b4ab74b29cd7ee91a03e8f875817121863f82eb7f280d4df6d5f9d75bb",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\input_source_time_19.npz": "7ab7d724c0fe1796273fdb9a58016d07c10226300cacfe35735c816707bf8736",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_source_time.png": "283a9809bb993156676bfbe668b57ed1511d6a7ef595164829751c18a16cd0fb",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_source_time.svg": "916b52186d5cdb48e877c230527400b67284e31ce112fc16d620b8a80a233ec3",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_source_time.pdf": "aea450c3e6c9486debf462c47d8f2a163856d94d30f4d6ef4fea143d68f71371"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 9,
+    "encoding": "ring",
+    "assay": "R3_fixed_clock",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_R3_fixed_clock.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_R3_fixed_clock.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_R3_fixed_clock.pdf"
+    ],
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\input_R3_fixed_clock_7.npz": "18c89babaa4bb06363377f41964e70da7dc74768e2cb5cbbf5a2dcae509cd8d7",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\input_R3_fixed_clock_11.npz": "c8db7129140a38b96214d5d5dcadd42c9302e6627b2ba6f41389b9d1736d37af",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\input_R3_fixed_clock_19.npz": "4f88cd47791e8753d6095770ca0ac084e03077c6e92178973e2167a8cf2557b0",
+      "artifacts\\paper2agent_reproduction\\lds_results\\ring\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_R3_fixed_clock.png": "5d87bcd81ae405d2dca85dd957b396b701a27bc782b8d2e6e245775b01c60fb7",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_R3_fixed_clock.svg": "cb17f8991893eb91178037773ae9637b98825d5fea4ad9b6335e4d49c6267cc2",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_R3_fixed_clock.pdf": "023fba4f6a8baa15d7eb5307c8c2a5948f1ce37c92288b2740b40a1c0766c956"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 9,
+    "encoding": "ring",
+    "assay": "24_condition_stage_pulses",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_stage_perturbations.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_stage_perturbations.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_stage_perturbations.pdf"
+    ],
+    "input_sha256": {
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig09_stage_perturbations.npz": "7ca05777de56c6484c374258e225abc4325fa821fc49d85237dd968bda9bde1d",
+      "artifacts\\neural_paper_figures_v1\\derived\\ring\\fig09_recovery_by_stage.csv": "01bda9bf7835fbdc7949ae0ea89b162f44ad9742968ac06d03089efc5d395f86"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_stage_perturbations.png": "3b0df6ca76f970a4325ee229ee26fa2d7d89e4b6476eca73b743b6fb335a0687",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_stage_perturbations.svg": "4eba166a0504925ff315440c8e673df1004ab417a4fb2a700defe62bb7959ad4",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_ring_stage_perturbations.pdf": "2ae6a25630eff39e915f7d75da4cd33be26b3f3a54dff8a5e451ce77f359375e"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "topology",
+    "branch": 0,
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch0.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch0.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch0.pdf"
+    ],
+    "data": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_fixed_point_certificates.csv",
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_branch0_display_basis.npz": "121cd0672cead8b51b6be51aab5029ce953ffb092190628468476178b7321d2c"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch0.png": "be377559a6bad364bf28dfb9f8e536bf9fc3cd08e9b380cc662ce2e7764a6648",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch0.svg": "8a57965110ed5892f099d676882575c32c77eb90847b57ab037c9a1ae5cd23e4",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch0.pdf": "04d9646fbbb214428ea2c4ef98ed4dac0b8a48686fa9abc561bc469ef0cfc2cc"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "topology",
+    "branch": 1,
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch1.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch1.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch1.pdf"
+    ],
+    "data": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_fixed_point_certificates.csv",
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_branch1_display_basis.npz": "1df4e050e28a7e0988a439feba1709fe2cc5f1a7ef20cb3fa1aee1e93db8185a"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch1.png": "e9a365dfb6583203db17a6ea1ed5521369cf6c8d6ef680283aa42f3b83eb21c3",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch1.svg": "8d5a1b76ef0c8c0dbae7e354aca38bbb8d6967794586708866ec4cf52f4aeeaf",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch1.pdf": "75061117454c6d6ab5342d6ff97d6c6ca405ad0a1b5a7c787c8db0ce0c168665"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "topology",
+    "branch": 2,
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch2.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch2.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch2.pdf"
+    ],
+    "data": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_fixed_point_certificates.csv",
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_branch2_display_basis.npz": "c07891ff22edc4275c56d9e3f7c48bd3a03e5a21d377568518bdf5e9572e6355"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch2.png": "fabe8d1a5a1ef6f62e8524ea35da21188c9c70e5b76cfced6b1c767ff13c92a0",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch2.svg": "0ac3cd6a367d23cf6fcfef86e326cd654b16cf529b84959c360db1e6935caa07",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch2.pdf": "fe5c24ca398a92151ebd77e7a7dcc81f0907299e123a9dd48ad1475986211905"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "topology",
+    "branch": 3,
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch3.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch3.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch3.pdf"
+    ],
+    "data": "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_fixed_point_certificates.csv",
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_branch3_display_basis.npz": "6a287779d56beb41065fcbc66be3a80afd29825c8b490757d419f9362e243a42"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch3.png": "1f948f324313a49a29fa7a842b7cf62c3ad89a8c9d10647b785c419bb3d12b1f",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch3.svg": "2a16b6a07469237a3f613a3781cc69d2206b146c24efcabb7cd88e4505ac381b",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_branch3.pdf": "92336a70c41d7999874e6ce901df33735d6a1a5d8ab26fe720eded1414149ff1"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "topology",
+    "assay": "affine_initial_state_slices_sixmean_control",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_sixmean_control_slices.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_sixmean_control_slices.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_sixmean_control_slices.pdf"
+    ],
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_sixmean_control_branch0.npz": "065c511c5a766dd59eed373e684f940ffa8ccab873bd67a191d52130b1b6f33b",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_sixmean_control_branch1.npz": "5dee2d16cd3d9f888a5339fb03f9490990bcd50dba84fa7d0f36dd92a221e56e",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_sixmean_control_branch2.npz": "b0f39598091afe60c02a154550692638026fb4b3725c58d85dab6dd5c1835451",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_sixmean_control_branch3.npz": "dcb3dc4ff3032684e926d9169d8579a7cbd000f5f2985f6f25e23cc2497dc3c2"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_sixmean_control_slices.png": "ff78ee3e4c0e2b16ddda4ceeda83c7a31184b34b8300a6a53dd1d165834869de",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_sixmean_control_slices.svg": "b5a107bcd8e9dec24e69b0ef9637e3624703709b7dcc3b064977f6d336c3ddcb",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_sixmean_control_slices.pdf": "5741aefa964e3685f913f904b91ed6c90528a377e4e8a3943102f298eaed7abb"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 8,
+    "encoding": "topology",
+    "assay": "affine_initial_state_slices_three_endpoint",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_three_endpoint_slices.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_three_endpoint_slices.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_three_endpoint_slices.pdf"
+    ],
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\fixed_points.npz": "9f03e965241dfa67312672d0e5c6e4300e0a02f94e38695af3e39478b2c11e44",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\basin_full.npz": "0079dd77c9e53652bfbc6d4c7d99d7361581d36b751ba7892c71a632f42ddf69",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_fixed_point_certificates.csv": "4617a752810c311432baea459564994cd797ec334739209de8f5319a6e2fed18",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_six_point_basins_branch0.npz": "640c717331727689d2bf96b7f4efd5fcc0749f7907a85eec829d63181f57c3ec",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_six_point_basins_branch1.npz": "7b31bd7ed4956f1a8320153bdce4b4af8a5c5096d1f15f800d778b8686426d5e",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_six_point_basins_branch2.npz": "80a6d3a5936ad9993835508124d94b066e97c5fcae651ad935b2f70f6a9112aa",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig08_six_point_basins_branch3.npz": "eb7bdad6da9b1951c076ff4002015d037ba5ec6755a8ab0d894a88f4d128f4e1"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_three_endpoint_slices.png": "8e5e81050fc935597c5f5f3c14ce2d3b83e25603eeb20a7f6a4f39ac1bc478ec",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_three_endpoint_slices.svg": "05a4bbbee6788cc476b719ede7fc875c29e340ca288535929a71dd35d205d219",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig08_topology_three_endpoint_slices.pdf": "ce2f3e5224c6a6ea76532afc68f3ed4a8d0b48af73971d64038851ec893e0554"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 9,
+    "encoding": "topology",
+    "assay": "source_time",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_source_time.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_source_time.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_source_time.pdf"
+    ],
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\input_source_time_7.npz": "88a19d74f0fe7b54de0399603415385235e226774f4fe285d244836f5202cdc8",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\input_source_time_11.npz": "0034c2b4ab74b29cd7ee91a03e8f875817121863f82eb7f280d4df6d5f9d75bb",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\input_source_time_19.npz": "7ab7d724c0fe1796273fdb9a58016d07c10226300cacfe35735c816707bf8736",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_source_time.png": "0679644483d48de91812a32abc4372458e95f5dc7b4c7a2d345031e6ea6fab09",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_source_time.svg": "70c34215e3d35570c0dbe573c6c4a9a051fe8c059befad8ee87ba2cb95bfb8dd",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_source_time.pdf": "acdd76d4add8ab340e798514a88371ac15d9f760d58fdcc68fa905445b1c6166"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 9,
+    "encoding": "topology",
+    "assay": "R3_fixed_clock",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_R3_fixed_clock.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_R3_fixed_clock.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_R3_fixed_clock.pdf"
+    ],
+    "input_sha256": {
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\input_R3_fixed_clock_7.npz": "18c89babaa4bb06363377f41964e70da7dc74768e2cb5cbbf5a2dcae509cd8d7",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\input_R3_fixed_clock_11.npz": "c8db7129140a38b96214d5d5dcadd42c9302e6627b2ba6f41389b9d1736d37af",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\input_R3_fixed_clock_19.npz": "4f88cd47791e8753d6095770ca0ac084e03077c6e92178973e2167a8cf2557b0",
+      "artifacts\\paper2agent_reproduction\\lds_results\\topology\\basin.csv": "5350c1556d9bfc716eafd155117999a8efeb32cdeca3574f1f92b717a3364d27"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_R3_fixed_clock.png": "76304a081b487f4846e452d94e92a4f3f8bd77b01441ccfd815232059c0952b2",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_R3_fixed_clock.svg": "953c46a08e490ccaf547fad7e8ffb1870ca6a477b938a9d4d651e4d94d7861a1",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_R3_fixed_clock.pdf": "22f5e97a25544d9a7098f6ce218c7ed36f87b78992f5e752c213005e49465d2d"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  },
+  {
+    "figure": 9,
+    "encoding": "topology",
+    "assay": "24_condition_stage_pulses",
+    "paths": [
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_stage_perturbations.png",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_stage_perturbations.svg",
+      "D:\\Library\\10-16-handcrafted\\artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_stage_perturbations.pdf"
+    ],
+    "input_sha256": {
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig09_stage_perturbations.npz": "87ba27decf9da73ee4c90742c664920a0b5f08244553f65bd328d3569989e82c",
+      "artifacts\\neural_paper_figures_v1\\derived\\topology\\fig09_recovery_by_stage.csv": "01bda9bf7835fbdc7949ae0ea89b162f44ad9742968ac06d03089efc5d395f86"
+    },
+    "output_sha256": {
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_stage_perturbations.png": "eda54edc5eacfad965eaf1bd8562ffa4625b529c1a68273d5680ba13397fac23",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_stage_perturbations.svg": "7cd7d07b309f8c0b4a235c462d69dc026824f4dbd712e4e03dafb510805d0e28",
+      "artifacts\\neural_paper_figures_v1\\figures\\supplementary\\fig09_topology_stage_perturbations.pdf": "115661e2f705b579f965a28e983835ae00ec1637abb6882ba4cc504eef7912ba"
+    },
+    "render_source_sha256": "3da2e35a50495276ffe90fc882c3c7c23daf4f0b547f30d5b162169cb75d78ae",
+    "caption_status": "see fig08_fig09_CAPTIONS.md; numerical verification independent of visual review"
+  }
+]
