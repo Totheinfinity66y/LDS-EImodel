@@ -1,0 +1,7 @@
+protocol,seed,stage,final_full_l2,peak_full_l2,final_projected_l2,final_orthogonal_l2,projection_closure_error,original_position_retained,full_state_recovered,class_code,endpoint_class,converged,residual_max_per_ms,convergence_scope,branch,position,active_branch_count,active_position_count,active_unit_count
+source_time,7,4,1.8106372820991082e-05,2.078012733589294,7.777539906417748e-06,1.6350859602381888e-05,1.3322676295501878e-15,True,True,0,single_position,,nan,not_applicable_source_time,0,3,1,1,1
+source_time,11,4,2.220446049250313e-16,0.45814967027263226,0.0,2.220446049250313e-16,2.7755575615628914e-17,True,True,0,single_position,,nan,not_applicable_source_time,0,3,1,1,1
+source_time,19,4,2.220446049250313e-16,0.5841856015881873,9.789397451555153e-30,2.220446049250313e-16,5.551115123125783e-17,True,True,0,single_position,,nan,not_applicable_source_time,0,3,1,1,1
+R3_fixed_clock,7,3,1.4999999621348172,1.4999999621348172,0.3931538576074016,1.4475599920738593,8.881784197001252e-16,False,False,3,rest,True,4.551103189108462e-10,fixed_field,-1,-1,0,0,0
+R3_fixed_clock,11,3,1.499999951701412,1.499999951701412,0.3931538515071407,1.4475599829193053,8.881784197001252e-16,False,False,3,rest,True,5.85527886936468e-10,fixed_field,-1,-1,0,0,0
+R3_fixed_clock,19,3,1.1180339887498942,1.118033988755593,1.2209172662977712e-09,1.1180339887498942,2.220446049250313e-16,True,False,0,single_position,True,4.41721067131103e-11,fixed_field,0,2,1,1,1

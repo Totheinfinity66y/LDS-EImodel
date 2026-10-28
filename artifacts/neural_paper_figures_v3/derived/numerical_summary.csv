@@ -1,0 +1,7 @@
+encoding,assay,n,max_residual,single_position,multiple_positions,outside_branch,rest,unconverged,max_replay_error,full_state_recovered,readout_correct_state_not_recovered
+one_hot,basin,2772,4.1480625081171164e-10,216,0,0,2556,0,,,
+one_hot,source_time_four_stage,288,,,,56,33,,2.220446049250313e-16,196,3
+ring,basin,2772,4.1480625081171164e-10,216,0,0,2556,0,,,
+ring,source_time_four_stage,288,,,,56,33,,2.220446049250313e-16,196,3
+topology,basin,2772,4.1480625081171164e-10,216,0,0,2556,0,,,
+topology,source_time_four_stage,288,,,,56,33,,2.220446049250313e-16,196,3

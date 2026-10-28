@@ -1,0 +1,30 @@
+test_competition_classifier_all_units (handcrafted_ei.tests.test_paper_v3_numerics.PaperV3Numerics.test_competition_classifier_all_units) ... ok
+test_integrator_exact_model_step_and_euler_jacobian (handcrafted_ei.tests.test_paper_v3_numerics.PaperV3Numerics.test_integrator_exact_model_step_and_euler_jacobian) ... ok
+test_multi_branch_same_location_is_not_single_state (handcrafted_ei.tests.test_paper_v3_numerics.PaperV3Numerics.test_multi_branch_same_location_is_not_single_state) ... FAIL
+test_projection_energy (handcrafted_ei.tests.test_paper_v3_numerics.PaperV3Numerics.test_projection_energy) ... ok
+test_source_time_has_no_fixed_field_convergence_claim (handcrafted_ei.tests.test_paper_v3_numerics.PaperV3Numerics.test_source_time_has_no_fixed_field_convergence_claim) ... FAIL
+test_zero_input_pair_and_shared_history (handcrafted_ei.tests.test_paper_v3_numerics.PaperV3Numerics.test_zero_input_pair_and_shared_history) ... ok
+
+======================================================================
+FAIL: test_multi_branch_same_location_is_not_single_state (handcrafted_ei.tests.test_paper_v3_numerics.PaperV3Numerics.test_multi_branch_same_location_is_not_single_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_paper_v3_numerics.py", line 54, in test_multi_branch_same_location_is_not_single_state
+    self.assertEqual(classify(m,r,residual=0)['endpoint_class'],'outside_branch')
+AssertionError: 'single_position' != 'outside_branch'
+- single_position
++ outside_branch
+
+
+======================================================================
+FAIL: test_source_time_has_no_fixed_field_convergence_claim (handcrafted_ei.tests.test_paper_v3_numerics.PaperV3Numerics.test_source_time_has_no_fixed_field_convergence_claim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Library\10-16-handcrafted\handcrafted_ei\tests\test_paper_v3_numerics.py", line 58, in test_source_time_has_no_fixed_field_convergence_claim
+    self.assertIsNone(result['converged'])
+AssertionError: False is not None
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.047s
+
+FAILED (failures=2)

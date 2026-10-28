@@ -1,0 +1,623 @@
+{
+  "status": "PASS_FILE_INTEGRITY",
+  "groups": [
+    {
+      "path": "figures/main/fig01_one_hot.png",
+      "size": [
+        3630,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/main/fig02_one_hot.png",
+      "size": [
+        3934,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/main/fig03_one_hot.png",
+      "size": [
+        4537,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/main/fig04_one_hot_decompression_trajectories.png",
+      "size": [
+        3934,
+        3334
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/main/fig05_one_hot_branch_subspaces.png",
+      "size": [
+        4234,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/main/fig06_one_hot.png",
+      "size": [
+        4231,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/main/fig07_one_hot.png",
+      "size": [
+        4834,
+        3934
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/main/fig08_one_hot_six_point_attractors_branch0.png",
+      "size": [
+        4233,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/main/fig09_one_hot_perturbation_dynamics_source_time.png",
+      "size": [
+        4229,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/main/fig10_encoding_comparison.png",
+      "size": [
+        4834,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig01_ring.png",
+      "size": [
+        3630,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig01_topology.png",
+      "size": [
+        3630,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig02_ring.png",
+      "size": [
+        3934,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig02_topology.png",
+      "size": [
+        3934,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig03_ring.png",
+      "size": [
+        4537,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig03_topology.png",
+      "size": [
+        4537,
+        2434
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig04_one_hot_global3d.png",
+      "size": [
+        1814,
+        1834
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig04_one_hot_transition_speed_zooms.png",
+      "size": [
+        3634,
+        1174
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig04_ring_decompression_trajectories.png",
+      "size": [
+        3934,
+        3334
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig04_ring_global3d.png",
+      "size": [
+        1814,
+        1834
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig04_ring_transition_speed_zooms.png",
+      "size": [
+        3634,
+        1174
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig04_topology_decompression_trajectories.png",
+      "size": [
+        3934,
+        3334
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig04_topology_global3d.png",
+      "size": [
+        1814,
+        1834
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig04_topology_transition_speed_zooms.png",
+      "size": [
+        3634,
+        1174
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig05_one_hot_structural_controls.png",
+      "size": [
+        3323,
+        1054
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig05_ring_branch_subspaces.png",
+      "size": [
+        4234,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig05_ring_structural_controls.png",
+      "size": [
+        3323,
+        1054
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig05_topology_branch_subspaces.png",
+      "size": [
+        4234,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig05_topology_structural_controls.png",
+      "size": [
+        3323,
+        1054
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig06_ring.png",
+      "size": [
+        4231,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig06_topology.png",
+      "size": [
+        4231,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig07_ring.png",
+      "size": [
+        4834,
+        3934
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig07_topology.png",
+      "size": [
+        4834,
+        3934
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_one_hot_multiple_slices.png",
+      "size": [
+        3538,
+        3934
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_one_hot_six_endpoints_3d.png",
+      "size": [
+        3333,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_one_hot_six_point_attractors_branch1.png",
+      "size": [
+        4233,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_one_hot_six_point_attractors_branch2.png",
+      "size": [
+        4233,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_one_hot_six_point_attractors_branch3.png",
+      "size": [
+        4233,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_ring_multiple_slices.png",
+      "size": [
+        3538,
+        3934
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_ring_six_endpoints_3d.png",
+      "size": [
+        3333,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_ring_six_point_attractors_branch0.png",
+      "size": [
+        4233,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_ring_six_point_attractors_branch1.png",
+      "size": [
+        4233,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_ring_six_point_attractors_branch2.png",
+      "size": [
+        4233,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_ring_six_point_attractors_branch3.png",
+      "size": [
+        4233,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_topology_multiple_slices.png",
+      "size": [
+        3538,
+        3934
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_topology_six_endpoints_3d.png",
+      "size": [
+        3333,
+        3034
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_topology_six_point_attractors_branch0.png",
+      "size": [
+        4233,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_topology_six_point_attractors_branch1.png",
+      "size": [
+        4233,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_topology_six_point_attractors_branch2.png",
+      "size": [
+        4233,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig08_topology_six_point_attractors_branch3.png",
+      "size": [
+        4233,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig09_one_hot_perturbation_dynamics_R3_fixed_clock.png",
+      "size": [
+        4230,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig09_ring_perturbation_dynamics_R3_fixed_clock.png",
+      "size": [
+        4230,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig09_ring_perturbation_dynamics_source_time.png",
+      "size": [
+        4229,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig09_topology_perturbation_dynamics_R3_fixed_clock.png",
+      "size": [
+        4230,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "path": "figures/supplementary/fig09_topology_perturbation_dynamics_source_time.png",
+      "size": [
+        4229,
+        2734
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    }
+  ],
+  "contact_sheets": [
+    "manifests\\contact_01.jpg",
+    "manifests\\contact_02.jpg",
+    "manifests\\contact_03.jpg",
+    "manifests\\contact_04.jpg",
+    "manifests\\contact_05.jpg",
+    "manifests\\contact_06.jpg",
+    "manifests\\contact_07.jpg",
+    "manifests\\contact_08.jpg",
+    "manifests\\contact_09.jpg",
+    "manifests\\contact_10.jpg"
+  ],
+  "visual_review": "See reports/INDEPENDENT_AUDIT.md and literature round04 reports"
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "path": "artifacts/paper2agent_reproduction/references/inagaki/Inagaki2019.pdf",
+    "sha256": "ead9c08588d753cc4fad8023bdebd41fbcb95701cbe975df4ebc9a7ef6bcb326",
+    "bytes": 15509172
+  },
+  {
+    "path": "artifacts/neural_paper_figures_v3/reports/literature_inagaki/gallego_fig3_source.png",
+    "sha256": "1b49924b1bdbdc3d742411a15b753fef0a17f50395a9298a8e08bad17b7dca11",
+    "bytes": 59061
+  },
+  {
+    "path": "artifacts/neural_paper_figures_v3/reports/literature_inagaki/mante_third_party_tutorial.ipynb",
+    "sha256": "0948d9c856d1d6591e5a0b805c25f3e032da71b64ce6dfc52d26dfdcf4bb40c4",
+    "bytes": 6359853
+  },
+  {
+    "path": "artifacts/neural_paper_figures_v3/reports/literature_inagaki/mante_source.pdf",
+    "sha256": "eaa8e07b5512429a37d40d1c6c57c7040c62f5547991b927c238efac7671e078",
+    "bytes": 3205674
+  },
+  {
+    "path": "artifacts/neural_paper_figures_v3/reports/literature_inagaki/sussillo_source.pdf",
+    "sha256": "383a91968a722570a4dd41f5df15275460e1b796038c95c88c521c9cd28834c9",
+    "bytes": 1893686
+  }
+]

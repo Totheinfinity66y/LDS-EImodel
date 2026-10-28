@@ -1,0 +1,92 @@
+{
+  "expert_id": "inagaki_v3",
+  "scope": "Inagaki2019, supporting Mante/Gallego/Sussillo methods",
+  "rounds": [
+    {
+      "round": 1,
+      "request": "核对原神经矩阵、投影、重复、外驱和原图语义。",
+      "response": "原 Fig5 是 CD 而非 PCA。实验 100ms 平滑/10ms步、末600ms fit、trial交叉验证；模型末400ms fit。作者模型MATLAB与原实验数据本轮未执行。",
+      "evidence": [
+        "audit/paper2agent/inagaki/INPUT_CONTRACT.json",
+        "audit/paper2agent/inagaki/FIGURE_CONTRACT.json",
+        "audit/paper2agent/inagaki/strict_final_stdout.json",
+        "artifacts/paper2agent_reproduction/references/inagaki/inagaki2019-paper/assets/figure/figure-5.jpg",
+        "artifacts/paper2agent_reproduction/references/inagaki/inagaki2019-paper/assets/supp_figs/extended-data-figure-1.jpg"
+      ],
+      "status": "PASS_WITH_LIMITS_SOURCE_METHOD; EXACT_SOURCE_EXECUTION_NOT_PERFORMED"
+    },
+    {
+      "round": 2,
+      "request": "核验 LDS schema、共同投影、六位置固定场和几何定义的兼容性。",
+      "response": "132维dimensionless rate适配，不是原实验数据。source-time/fixed-clock/state-kick须区分；六端点不保证仅六吸引子。现有cross_vaf是target方差捕获比例，与Gallego跨/内VAF比值不同；branch axes不是dPCA。",
+      "evidence": [
+        "handcrafted_ei/evaluation/subspace_geometry.py",
+        "handcrafted_ei/evaluation/reference_dynamics.py",
+        "audit/paper2agent/inagaki/FINAL_FIDELITY_REVIEW.md"
+      ],
+      "status": "METHOD_ADAPTED; V3_ADAPTER_REVIEW_PENDING"
+    },
+    {
+      "round": 3,
+      "request": "独立审阅新affine basin、终态分类、paired input和branch geometry adapter",
+      "response": "METHOD ADAPTED; 固定场和真实全状态积分适用。必须披露Rstage-inactive非全网络rest、类别优先级、低残差混合态不自动稳定、R1-R4坐标早期角度非R3分离、source-time非平衡恢复。",
+      "evidence": [
+        {
+          "path": "handcrafted_ei/evaluation/paper_v3_dynamics.py",
+          "sha256": "958ea1af168057eb7c65e1eba43e0dcddabd12d75614239680e4ccd4e873c708"
+        },
+        {
+          "path": "handcrafted_ei/evaluation/paper_figure_v3_geometry.py",
+          "sha256": "f65536e8cd72c8a6cec771794a62474a0418a4991d62168f16466ed5d315a4ba"
+        }
+      ],
+      "status": "PASS_WITH_LIMITS; figure_review_pending"
+    },
+    {
+      "round": 4,
+      "request": "实际打开新Figure8并对照Inagaki Fig5和Sussillo Fig3，核对同场六端点、真实收敛和初态截面分类。",
+      "response": "三编码各2772合法点：216single、2556R3-inactive、无multiple/outside/unconverged。初次实图数据符合METHOD ADAPTED。要求B标明失活终点、F区分身份保持与完整状态恢复；renderer已修但最终图片待重新打开。",
+      "evidence": [
+        {
+          "path": "artifacts\\neural_paper_figures_v3\\figures\\main\\fig08_one_hot_six_point_attractors_branch0.png",
+          "sha256": "4221b9aa30ab551ddaa8ca005103879a12ea6bab9c56cdc70c40e3b8e28af849"
+        },
+        {
+          "path": "artifacts\\neural_paper_figures_v3\\figures\\supplementary\\fig08_one_hot_multiple_slices.png",
+          "sha256": "a24024e192ce2577c3c8925e5a0b2decef7c45854807317358c372e19d2ad060"
+        },
+        {
+          "path": "artifacts\\neural_paper_figures_v3\\figures\\supplementary\\fig08_ring_six_point_attractors_branch0.png",
+          "sha256": "be6d32c2f80b13c75982f4c3dd3ca24fc184362574d58db3931bc9ba6bdcd4f0"
+        }
+      ],
+      "report": "reports/literature_inagaki/round04_figure_review.md",
+      "status": "PASS_WITH_LIMITS_METHOD_ADAPTED; final_rerender_visual_recheck_pending"
+    },
+    {
+      "round": "4.1",
+      "request": "修订后实际重开Figure8主图，复查终态标记和full-state恢复语义。",
+      "response": "已实际重新打开09:02:30写盘one_hot图。B失活/其他黑空心终点、original L色语义落实；F完整恢复和相同位置但状态不同分开，并用实际postclip RMS。METHOD ADAPTED/PASS_WITH_LIMITS。",
+      "evidence": [
+        {
+          "path": "artifacts\\neural_paper_figures_v3\\figures\\main\\fig08_one_hot_six_point_attractors_branch0.png",
+          "sha256": "4221b9aa30ab551ddaa8ca005103879a12ea6bab9c56cdc70c40e3b8e28af849"
+        },
+        {
+          "path": "artifacts\\neural_paper_figures_v3\\figures\\main\\fig08_one_hot_six_point_attractors_branch0.svg",
+          "sha256": "5e0df687de2f54412af79e6d09b82ebf00b79032bab2b5c4847d19fa0c340783"
+        },
+        {
+          "path": "artifacts\\neural_paper_figures_v3\\figures\\main\\fig08_one_hot_six_point_attractors_branch0.pdf",
+          "sha256": "8616dca23dcf669e093dcc8619e5c177d23c867502400cb3bb3775eb86a5252e"
+        },
+        {
+          "path": "handcrafted_ei\\visualization\\paper_v3.py",
+          "sha256": "eff1884ff080cc1d560728d00cd80df4ddb5fc8eb5432ec96828830f5f59dcbe"
+        }
+      ],
+      "report": "reports/literature_inagaki/round04_figure_review.md",
+      "status": "PASS_WITH_LIMITS_METHOD_ADAPTED; exact_source_execution_not_performed"
+    }
+  ]
+}

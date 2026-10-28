@@ -1,0 +1,15 @@
+{
+  "signature": {
+    "analysis_sha256": "1376389d8195cda10272d28c796b131255fd4164ce691fd0a193e25cb9f97839",
+    "archives": {
+      "one_hot": "70b419e3203742c38f0a1b05b2ba40bf8c1ed29e92c56721eae51097d2a4573f",
+      "ring": "cbd1b6d070d3162d072edf6350fc796b124b5f034278f61b3d72db884f2d348c",
+      "topology": "b1f1ef777f1e49a71454ad3137c8c811e964d55a01ab8e6c778a5a10a3dcab1f"
+    }
+  },
+  "outputs": {
+    "fig10_common_basis.npz": "f1a299db961248eb3b8824b2d6e8a034a64e9a74d8ef61f590f393221c0d31e6",
+    "fig10_matched_current_full.npz": "1a85200adb1f802f5242781878793af682b1e87f3f91cc3dd3f0f90ac76cec0c",
+    "fig10_encoding_comparison.csv": "afb680bfd3e47df09e1cff17a8f61a1da867a7b7258d0320d809b66b6bc2f736"
+  }
+}

@@ -1,0 +1,10 @@
+test_angles_rotation_and_orthogonal (handcrafted_ei.tests.test_paper_v3_geometry.GeometryTests.test_angles_rotation_and_orthogonal) ... ok
+test_branch_axes_centered_rank (handcrafted_ei.tests.test_paper_v3_geometry.GeometryTests.test_branch_axes_centered_rank) ... ok
+test_cross_vaf_direct_projection (handcrafted_ei.tests.test_paper_v3_geometry.GeometryTests.test_cross_vaf_direct_projection) ... ok
+test_energy_decomposition (handcrafted_ei.tests.test_paper_v3_geometry.GeometryTests.test_energy_decomposition) ... ok
+test_inactive_subspace_is_na_rank_at_most_five (handcrafted_ei.tests.test_paper_v3_geometry.GeometryTests.test_inactive_subspace_is_na_rank_at_most_five) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.011s
+
+OK

@@ -1,0 +1,4733 @@
+{
+  "derived/comparison/fig10_common_basis.npz": {
+    "basis": [
+      132,
+      132
+    ],
+    "center": [
+      132
+    ],
+    "evr": [
+      132
+    ],
+    "scores": [
+      3,
+      24,
+      663,
+      3
+    ],
+    "one_hot_basis": [
+      132,
+      132
+    ],
+    "one_hot_center": [
+      132
+    ],
+    "one_hot_evr": [
+      132
+    ],
+    "one_hot_scores": [
+      3,
+      24,
+      663,
+      3
+    ],
+    "encodings": [
+      3
+    ],
+    "times_ms": [
+      663
+    ],
+    "conditions": [
+      24,
+      3
+    ],
+    "neuron_indices": [
+      132
+    ],
+    "neuron_labels": [
+      132
+    ],
+    "fit_stride": []
+  },
+  "derived/comparison/fig10_matched_current_full.npz": {
+    "control": [
+      3,
+      216,
+      663,
+      132
+    ],
+    "perturbed": [
+      3,
+      216,
+      663,
+      132
+    ],
+    "actual_current": [
+      3,
+      216,
+      663,
+      132
+    ],
+    "full_l2": [
+      3,
+      216,
+      663
+    ],
+    "seeds": [
+      3
+    ],
+    "amplitudes": [
+      3
+    ],
+    "trial_order": [],
+    "noise_protocol": []
+  },
+  "derived/one_hot/fig01_population_activity.npz": {
+    "times_ms": [
+      663
+    ],
+    "R1__trial_peak": [
+      24,
+      663
+    ],
+    "R1__trial_mean": [
+      24,
+      663
+    ],
+    "R2__trial_peak": [
+      24,
+      663
+    ],
+    "R2__trial_mean": [
+      24,
+      663
+    ],
+    "R3__trial_peak": [
+      24,
+      663
+    ],
+    "R3__trial_mean": [
+      24,
+      663
+    ],
+    "R4__trial_peak": [
+      24,
+      663
+    ],
+    "R4__trial_mean": [
+      24,
+      663
+    ],
+    "M_D__trial_peak": [
+      24,
+      663
+    ],
+    "M_D__trial_mean": [
+      24,
+      663
+    ],
+    "M_S__trial_peak": [
+      24,
+      663
+    ],
+    "M_S__trial_mean": [
+      24,
+      663
+    ],
+    "Y__trial_peak": [
+      24,
+      663
+    ],
+    "Y__trial_mean": [
+      24,
+      663
+    ],
+    "E_gate_D__trial_peak": [
+      24,
+      663
+    ],
+    "E_gate_D__trial_mean": [
+      24,
+      663
+    ],
+    "E_gate_S__trial_peak": [
+      24,
+      663
+    ],
+    "E_gate_S__trial_mean": [
+      24,
+      663
+    ],
+    "E_gate_34__trial_peak": [
+      24,
+      663
+    ],
+    "E_gate_34__trial_mean": [
+      24,
+      663
+    ],
+    "I_tonic_R__trial_peak": [
+      24,
+      663
+    ],
+    "I_tonic_R__trial_mean": [
+      24,
+      663
+    ],
+    "I_tonic_M__trial_peak": [
+      24,
+      663
+    ],
+    "I_tonic_M__trial_mean": [
+      24,
+      663
+    ],
+    "I_decay_D__trial_peak": [
+      24,
+      663
+    ],
+    "I_decay_D__trial_mean": [
+      24,
+      663
+    ],
+    "I_decay_S__trial_peak": [
+      24,
+      663
+    ],
+    "I_decay_S__trial_mean": [
+      24,
+      663
+    ],
+    "comp_R1__trial_peak": [
+      24,
+      663
+    ],
+    "comp_R1__trial_mean": [
+      24,
+      663
+    ],
+    "comp_D__trial_peak": [
+      24,
+      663
+    ],
+    "comp_D__trial_mean": [
+      24,
+      663
+    ],
+    "comp_S__trial_peak": [
+      24,
+      663
+    ],
+    "comp_S__trial_mean": [
+      24,
+      663
+    ],
+    "retire__trial_peak": [
+      24,
+      663
+    ],
+    "retire__trial_mean": [
+      24,
+      663
+    ],
+    "E__total": [
+      24,
+      663
+    ],
+    "E__active_fraction": [
+      24,
+      663
+    ],
+    "I__total": [
+      24,
+      663
+    ],
+    "I__active_fraction": [
+      24,
+      663
+    ]
+  },
+  "derived/one_hot/fig02_branch_dynamics.npz": {
+    "times_ms": [
+      663
+    ],
+    "R1__activity": [
+      24,
+      663,
+      1
+    ],
+    "R1__selected": [
+      24
+    ],
+    "R1__margin": [
+      24,
+      663
+    ],
+    "R1__competitor": [
+      24,
+      663
+    ],
+    "R2__activity": [
+      24,
+      663,
+      2
+    ],
+    "R2__selected": [
+      24
+    ],
+    "R2__margin": [
+      24,
+      663
+    ],
+    "R2__competitor": [
+      24,
+      663
+    ],
+    "R3__activity": [
+      24,
+      663,
+      4
+    ],
+    "R3__selected": [
+      24
+    ],
+    "R3__margin": [
+      24,
+      663
+    ],
+    "R3__competitor": [
+      24,
+      663
+    ],
+    "R4__activity": [
+      24,
+      663,
+      4
+    ],
+    "R4__selected": [
+      24
+    ],
+    "R4__margin": [
+      24,
+      663
+    ],
+    "R4__competitor": [
+      24,
+      663
+    ]
+  },
+  "derived/one_hot/fig03_feedback_controls.npz": {
+    "times_ms": [
+      663
+    ],
+    "baseline__M_D": [
+      24,
+      663
+    ],
+    "baseline__M_S": [
+      24,
+      663
+    ],
+    "baseline__R2": [
+      24,
+      663
+    ],
+    "baseline__R3": [
+      24,
+      663
+    ],
+    "no_feedback__M_D": [
+      24,
+      663
+    ],
+    "no_feedback__M_S": [
+      24,
+      663
+    ],
+    "no_feedback__R2": [
+      24,
+      663
+    ],
+    "no_feedback__R3": [
+      24,
+      663
+    ],
+    "lesion_feedback_D__M_D": [
+      24,
+      663
+    ],
+    "lesion_feedback_D__M_S": [
+      24,
+      663
+    ],
+    "lesion_feedback_D__R2": [
+      24,
+      663
+    ],
+    "lesion_feedback_D__R3": [
+      24,
+      663
+    ],
+    "lesion_feedback_S__M_D": [
+      24,
+      663
+    ],
+    "lesion_feedback_S__M_S": [
+      24,
+      663
+    ],
+    "lesion_feedback_S__R2": [
+      24,
+      663
+    ],
+    "lesion_feedback_S__R3": [
+      24,
+      663
+    ],
+    "lesion_A__M_D": [
+      24,
+      663
+    ],
+    "lesion_A__M_S": [
+      24,
+      663
+    ],
+    "lesion_A__R2": [
+      24,
+      663
+    ],
+    "lesion_A__R3": [
+      24,
+      663
+    ],
+    "lesion_B__M_D": [
+      24,
+      663
+    ],
+    "lesion_B__M_S": [
+      24,
+      663
+    ],
+    "lesion_B__R2": [
+      24,
+      663
+    ],
+    "lesion_B__R3": [
+      24,
+      663
+    ],
+    "lesion_C__M_D": [
+      24,
+      663
+    ],
+    "lesion_C__M_S": [
+      24,
+      663
+    ],
+    "lesion_C__R2": [
+      24,
+      663
+    ],
+    "lesion_C__R3": [
+      24,
+      663
+    ],
+    "lesion_D__M_D": [
+      24,
+      663
+    ],
+    "lesion_D__M_S": [
+      24,
+      663
+    ],
+    "lesion_D__R2": [
+      24,
+      663
+    ],
+    "lesion_D__R3": [
+      24,
+      663
+    ],
+    "random_A_7__M_D": [
+      24,
+      663
+    ],
+    "random_A_7__M_S": [
+      24,
+      663
+    ],
+    "random_A_7__R2": [
+      24,
+      663
+    ],
+    "random_A_7__R3": [
+      24,
+      663
+    ],
+    "random_A_11__M_D": [
+      24,
+      663
+    ],
+    "random_A_11__M_S": [
+      24,
+      663
+    ],
+    "random_A_11__R2": [
+      24,
+      663
+    ],
+    "random_A_11__R3": [
+      24,
+      663
+    ],
+    "random_A_19__M_D": [
+      24,
+      663
+    ],
+    "random_A_19__M_S": [
+      24,
+      663
+    ],
+    "random_A_19__R2": [
+      24,
+      663
+    ],
+    "random_A_19__R3": [
+      24,
+      663
+    ],
+    "random_B_7__M_D": [
+      24,
+      663
+    ],
+    "random_B_7__M_S": [
+      24,
+      663
+    ],
+    "random_B_7__R2": [
+      24,
+      663
+    ],
+    "random_B_7__R3": [
+      24,
+      663
+    ],
+    "random_B_11__M_D": [
+      24,
+      663
+    ],
+    "random_B_11__M_S": [
+      24,
+      663
+    ],
+    "random_B_11__R2": [
+      24,
+      663
+    ],
+    "random_B_11__R3": [
+      24,
+      663
+    ],
+    "random_B_19__M_D": [
+      24,
+      663
+    ],
+    "random_B_19__M_S": [
+      24,
+      663
+    ],
+    "random_B_19__R2": [
+      24,
+      663
+    ],
+    "random_B_19__R3": [
+      24,
+      663
+    ],
+    "random_C_7__M_D": [
+      24,
+      663
+    ],
+    "random_C_7__M_S": [
+      24,
+      663
+    ],
+    "random_C_7__R2": [
+      24,
+      663
+    ],
+    "random_C_7__R3": [
+      24,
+      663
+    ],
+    "random_C_11__M_D": [
+      24,
+      663
+    ],
+    "random_C_11__M_S": [
+      24,
+      663
+    ],
+    "random_C_11__R2": [
+      24,
+      663
+    ],
+    "random_C_11__R3": [
+      24,
+      663
+    ],
+    "random_C_19__M_D": [
+      24,
+      663
+    ],
+    "random_C_19__M_S": [
+      24,
+      663
+    ],
+    "random_C_19__R2": [
+      24,
+      663
+    ],
+    "random_C_19__R3": [
+      24,
+      663
+    ],
+    "random_D_7__M_D": [
+      24,
+      663
+    ],
+    "random_D_7__M_S": [
+      24,
+      663
+    ],
+    "random_D_7__R2": [
+      24,
+      663
+    ],
+    "random_D_7__R3": [
+      24,
+      663
+    ],
+    "random_D_11__M_D": [
+      24,
+      663
+    ],
+    "random_D_11__M_S": [
+      24,
+      663
+    ],
+    "random_D_11__R2": [
+      24,
+      663
+    ],
+    "random_D_11__R3": [
+      24,
+      663
+    ],
+    "random_D_19__M_D": [
+      24,
+      663
+    ],
+    "random_D_19__M_S": [
+      24,
+      663
+    ],
+    "random_D_19__R2": [
+      24,
+      663
+    ],
+    "random_D_19__R3": [
+      24,
+      663
+    ],
+    "random_feedback_D_7__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_D_7__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_D_7__R2": [
+      24,
+      663
+    ],
+    "random_feedback_D_7__R3": [
+      24,
+      663
+    ],
+    "random_feedback_D_11__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_D_11__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_D_11__R2": [
+      24,
+      663
+    ],
+    "random_feedback_D_11__R3": [
+      24,
+      663
+    ],
+    "random_feedback_D_19__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_D_19__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_D_19__R2": [
+      24,
+      663
+    ],
+    "random_feedback_D_19__R3": [
+      24,
+      663
+    ],
+    "random_feedback_S_7__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_S_7__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_S_7__R2": [
+      24,
+      663
+    ],
+    "random_feedback_S_7__R3": [
+      24,
+      663
+    ],
+    "random_feedback_S_11__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_S_11__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_S_11__R2": [
+      24,
+      663
+    ],
+    "random_feedback_S_11__R3": [
+      24,
+      663
+    ],
+    "random_feedback_S_19__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_S_19__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_S_19__R2": [
+      24,
+      663
+    ],
+    "random_feedback_S_19__R3": [
+      24,
+      663
+    ]
+  },
+  "derived/one_hot/fig03_handoff_axes.npz": {
+    "times_ms": [
+      663
+    ],
+    "M_D__axis": [
+      2
+    ],
+    "M_D__center": [
+      2
+    ],
+    "M_D__axis_anchor_ms": [],
+    "M_D__contrast": [
+      663,
+      2
+    ],
+    "M_D__projection": [
+      24,
+      663
+    ],
+    "M_D__levels": [
+      2
+    ],
+    "R2__axis": [
+      12
+    ],
+    "R2__center": [
+      12
+    ],
+    "R2__axis_anchor_ms": [],
+    "R2__contrast": [
+      663,
+      12
+    ],
+    "R2__projection": [
+      24,
+      663
+    ],
+    "R2__levels": [
+      2
+    ],
+    "M_S__axis": [
+      2
+    ],
+    "M_S__center": [
+      2
+    ],
+    "M_S__axis_anchor_ms": [],
+    "M_S__contrast": [
+      663,
+      2
+    ],
+    "M_S__projection": [
+      24,
+      663
+    ],
+    "M_S__levels": [
+      2
+    ],
+    "R3__axis": [
+      24
+    ],
+    "R3__center": [
+      24
+    ],
+    "R3__axis_anchor_ms": [],
+    "R3__contrast": [
+      663,
+      24
+    ],
+    "R3__projection": [
+      24,
+      663
+    ],
+    "R3__levels": [
+      2
+    ]
+  },
+  "derived/one_hot/fig04_trajectories.npz": {
+    "times_ms": [
+      663
+    ],
+    "conditions": [
+      24,
+      3
+    ],
+    "fixed_L_trials": [
+      4
+    ],
+    "branch_basis": [
+      132,
+      4
+    ],
+    "branch_center": [
+      132
+    ],
+    "branch_scores": [
+      24,
+      663,
+      4
+    ],
+    "branch_singular_values": [
+      6
+    ],
+    "branch_contrast_evr": [
+      4
+    ],
+    "R2_D_centroids": [
+      2,
+      132
+    ],
+    "R3_branch_centroids": [
+      4,
+      132
+    ],
+    "R3_centroid_distances": [
+      6
+    ],
+    "R3_branch_variance_captured_2d": [],
+    "speed": [
+      24,
+      662
+    ],
+    "speed_times_ms": [
+      662
+    ],
+    "global_scores": [
+      24,
+      663,
+      3
+    ],
+    "global_components": [
+      3,
+      132
+    ],
+    "global_mean": [
+      132
+    ],
+    "global_evr": [
+      132
+    ]
+  },
+  "derived/one_hot/fig05_time_resolved_geometry.npz": {
+    "times_ms": [
+      663
+    ],
+    "pairs": [
+      6,
+      2
+    ],
+    "absolute_singular_threshold": [],
+    "relative_singular_threshold": [],
+    "whole_angles_degrees": [
+      663,
+      6,
+      5
+    ],
+    "whole_centroid_distance": [
+      663,
+      6
+    ],
+    "whole_ranks": [
+      663,
+      4
+    ],
+    "whole_singular_values": [
+      663,
+      4,
+      6
+    ],
+    "response_angles_degrees": [
+      663,
+      6,
+      5
+    ],
+    "response_centroid_distance": [
+      663,
+      6
+    ],
+    "response_ranks": [
+      663,
+      4
+    ],
+    "response_singular_values": [
+      663,
+      4,
+      6
+    ],
+    "folded_angles_degrees": [
+      663,
+      6,
+      5
+    ],
+    "folded_centroid_distance": [
+      663,
+      6
+    ],
+    "folded_ranks": [
+      663,
+      4
+    ],
+    "folded_singular_values": [
+      663,
+      4,
+      6
+    ]
+  },
+  "derived/one_hot/fig06_position_stability.npz": {
+    "times_ms": [
+      663
+    ],
+    "trial_indices": [
+      6
+    ],
+    "states": [
+      6,
+      132
+    ],
+    "pca_scores": [
+      6,
+      2
+    ],
+    "pca_mean": [
+      132
+    ],
+    "pca_components": [
+      2,
+      132
+    ],
+    "pca_evr": [
+      6
+    ],
+    "whole_rdm": [
+      6,
+      6
+    ],
+    "response_rdm": [
+      6,
+      6
+    ],
+    "response_indices": [
+      66
+    ],
+    "active_branch_indices": [
+      6
+    ],
+    "position_identity": [
+      6,
+      663
+    ],
+    "expected_position": [
+      6
+    ],
+    "selected_rate": [
+      6,
+      663
+    ],
+    "competitor_rate": [
+      6,
+      663
+    ],
+    "position_margin": [
+      6,
+      663
+    ],
+    "position_drift": [
+      6,
+      663
+    ]
+  },
+  "derived/one_hot/fig07_branch_decoding.npz": {
+    "times_ms": [
+      41
+    ],
+    "branch_accuracy": [
+      41
+    ],
+    "branch_chance": [],
+    "response_indices": [
+      66
+    ],
+    "baseline__times_ms": [
+      41
+    ],
+    "baseline__whole__L": [
+      41
+    ],
+    "baseline__response__L": [
+      41
+    ],
+    "baseline__memory__L": [
+      41
+    ],
+    "baseline__M_D__L": [
+      41
+    ],
+    "baseline__M_S__L": [
+      41
+    ],
+    "baseline__R2__L": [
+      41
+    ],
+    "baseline__R3__L": [
+      41
+    ],
+    "baseline__R1_branch0__L": [
+      41
+    ],
+    "baseline__R2_branch0__L": [
+      41
+    ],
+    "baseline__R2_branch1__L": [
+      41
+    ],
+    "baseline__R3_branch0__L": [
+      41
+    ],
+    "baseline__R3_branch1__L": [
+      41
+    ],
+    "baseline__R3_branch2__L": [
+      41
+    ],
+    "baseline__R3_branch3__L": [
+      41
+    ],
+    "baseline__R4_branch0__L": [
+      41
+    ],
+    "baseline__R4_branch1__L": [
+      41
+    ],
+    "baseline__R4_branch2__L": [
+      41
+    ],
+    "baseline__R4_branch3__L": [
+      41
+    ],
+    "baseline__cross_temporal__L": [
+      41,
+      41
+    ],
+    "baseline__whole__D": [
+      41
+    ],
+    "baseline__response__D": [
+      41
+    ],
+    "baseline__memory__D": [
+      41
+    ],
+    "baseline__M_D__D": [
+      41
+    ],
+    "baseline__M_S__D": [
+      41
+    ],
+    "baseline__R2__D": [
+      41
+    ],
+    "baseline__R3__D": [
+      41
+    ],
+    "baseline__R1_branch0__D": [
+      41
+    ],
+    "baseline__R2_branch0__D": [
+      41
+    ],
+    "baseline__R2_branch1__D": [
+      41
+    ],
+    "baseline__R3_branch0__D": [
+      41
+    ],
+    "baseline__R3_branch1__D": [
+      41
+    ],
+    "baseline__R3_branch2__D": [
+      41
+    ],
+    "baseline__R3_branch3__D": [
+      41
+    ],
+    "baseline__R4_branch0__D": [
+      41
+    ],
+    "baseline__R4_branch1__D": [
+      41
+    ],
+    "baseline__R4_branch2__D": [
+      41
+    ],
+    "baseline__R4_branch3__D": [
+      41
+    ],
+    "baseline__cross_temporal__D": [
+      41,
+      41
+    ],
+    "baseline__whole__S": [
+      41
+    ],
+    "baseline__response__S": [
+      41
+    ],
+    "baseline__memory__S": [
+      41
+    ],
+    "baseline__M_D__S": [
+      41
+    ],
+    "baseline__M_S__S": [
+      41
+    ],
+    "baseline__R2__S": [
+      41
+    ],
+    "baseline__R3__S": [
+      41
+    ],
+    "baseline__R1_branch0__S": [
+      41
+    ],
+    "baseline__R2_branch0__S": [
+      41
+    ],
+    "baseline__R2_branch1__S": [
+      41
+    ],
+    "baseline__R3_branch0__S": [
+      41
+    ],
+    "baseline__R3_branch1__S": [
+      41
+    ],
+    "baseline__R3_branch2__S": [
+      41
+    ],
+    "baseline__R3_branch3__S": [
+      41
+    ],
+    "baseline__R4_branch0__S": [
+      41
+    ],
+    "baseline__R4_branch1__S": [
+      41
+    ],
+    "baseline__R4_branch2__S": [
+      41
+    ],
+    "baseline__R4_branch3__S": [
+      41
+    ],
+    "baseline__cross_temporal__S": [
+      41,
+      41
+    ],
+    "noise__times_ms": [
+      43
+    ],
+    "noise__seed_ids": [
+      3
+    ],
+    "noise__whole__L": [
+      43
+    ],
+    "noise__whole__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__response__L": [
+      43
+    ],
+    "noise__response__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__memory__L": [
+      43
+    ],
+    "noise__memory__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_D__L": [
+      43
+    ],
+    "noise__M_D__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_S__L": [
+      43
+    ],
+    "noise__M_S__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R2__L": [
+      43
+    ],
+    "noise__R2__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R3__L": [
+      43
+    ],
+    "noise__R3__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__whole__D": [
+      43
+    ],
+    "noise__whole__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__response__D": [
+      43
+    ],
+    "noise__response__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__memory__D": [
+      43
+    ],
+    "noise__memory__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_D__D": [
+      43
+    ],
+    "noise__M_D__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_S__D": [
+      43
+    ],
+    "noise__M_S__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R2__D": [
+      43
+    ],
+    "noise__R2__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R3__D": [
+      43
+    ],
+    "noise__R3__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__whole__S": [
+      43
+    ],
+    "noise__whole__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__response__S": [
+      43
+    ],
+    "noise__response__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__memory__S": [
+      43
+    ],
+    "noise__memory__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_D__S": [
+      43
+    ],
+    "noise__M_D__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_S__S": [
+      43
+    ],
+    "noise__M_S__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R2__S": [
+      43
+    ],
+    "noise__R2__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R3__S": [
+      43
+    ],
+    "noise__R3__S__seed_accuracies": [
+      3,
+      43
+    ]
+  },
+  "derived/one_hot/fig08_basin_slices_v3.npz": {
+    "grid_axis": [
+      21
+    ],
+    "grid_xy": [
+      441,
+      2
+    ],
+    "triples": [
+      3,
+      3
+    ],
+    "selected_trials": [
+      4,
+      6
+    ],
+    "initial_rates": [
+      4,
+      3,
+      441,
+      132
+    ],
+    "endpoints": [
+      4,
+      3,
+      441,
+      132
+    ],
+    "legal_mask": [
+      4,
+      3,
+      441
+    ],
+    "class_code": [
+      4,
+      3,
+      441
+    ],
+    "class_names": [
+      5
+    ],
+    "residual_max_per_ms": [
+      4,
+      3,
+      441
+    ],
+    "R3_competition": [
+      4,
+      3,
+      441,
+      4,
+      6
+    ],
+    "reference_endpoints": [
+      24,
+      132
+    ],
+    "reference_conditions": [
+      24,
+      3
+    ],
+    "duration_ms": [],
+    "representative_rates": [
+      48,
+      401,
+      132
+    ],
+    "representative_indices": [
+      48,
+      3
+    ],
+    "representative_times_ms": [
+      401
+    ],
+    "clock": [
+      132
+    ],
+    "stimulus": [
+      132
+    ],
+    "tonic": [
+      132
+    ],
+    "neuron_labels": [
+      132
+    ]
+  },
+  "derived/one_hot/fig08_six_position_fixed_points.npz": {
+    "endpoints": [
+      24,
+      132
+    ],
+    "conditions": [
+      24,
+      3
+    ],
+    "selected_trials": [
+      4,
+      6
+    ],
+    "rates": [
+      24,
+      401,
+      132
+    ],
+    "eigenvalues": [
+      24,
+      132
+    ],
+    "basis": [
+      4,
+      132,
+      3
+    ],
+    "pca_center": [
+      4,
+      132
+    ],
+    "explained_variance_ratio": [
+      4,
+      3
+    ],
+    "residual_max_per_ms": [
+      24
+    ],
+    "max_real_eigenvalue_per_ms": [
+      24
+    ],
+    "euler_spectral_radius": [
+      24
+    ],
+    "clock": [
+      132
+    ],
+    "stimulus": [
+      132
+    ],
+    "tonic": [
+      132
+    ]
+  },
+  "derived/one_hot/fig08_six_position_fixed_points_branch0.npz": {
+    "endpoints": [
+      6,
+      132
+    ],
+    "conditions": [
+      6,
+      3
+    ],
+    "center": [
+      132
+    ],
+    "basis": [
+      132,
+      3
+    ],
+    "evr": [
+      6
+    ]
+  },
+  "derived/one_hot/fig08_six_position_fixed_points_branch1.npz": {
+    "endpoints": [
+      6,
+      132
+    ],
+    "conditions": [
+      6,
+      3
+    ],
+    "center": [
+      132
+    ],
+    "basis": [
+      132,
+      3
+    ],
+    "evr": [
+      6
+    ]
+  },
+  "derived/one_hot/fig08_six_position_fixed_points_branch2.npz": {
+    "endpoints": [
+      6,
+      132
+    ],
+    "conditions": [
+      6,
+      3
+    ],
+    "center": [
+      132
+    ],
+    "basis": [
+      132,
+      3
+    ],
+    "evr": [
+      6
+    ]
+  },
+  "derived/one_hot/fig08_six_position_fixed_points_branch3.npz": {
+    "endpoints": [
+      6,
+      132
+    ],
+    "conditions": [
+      6,
+      3
+    ],
+    "center": [
+      132
+    ],
+    "basis": [
+      132,
+      3
+    ],
+    "evr": [
+      6
+    ]
+  },
+  "derived/one_hot/fig09_stage_perturbation_v3.npz": {
+    "control": [
+      24,
+      663,
+      132
+    ],
+    "perturbed": [
+      4,
+      3,
+      24,
+      663,
+      132
+    ],
+    "times_ms": [
+      663
+    ],
+    "stages": [
+      4
+    ],
+    "seeds": [
+      3
+    ],
+    "onsets_ms": [
+      4
+    ],
+    "pulse_mask": [
+      4,
+      663
+    ],
+    "directions": [
+      3,
+      132
+    ],
+    "actual_current_rms": [
+      4,
+      3
+    ],
+    "integrated_rms_ms": [
+      4,
+      3
+    ],
+    "base_stimulus": [
+      24,
+      663,
+      132
+    ],
+    "clock": [
+      24,
+      663,
+      132
+    ],
+    "tonic": [
+      132
+    ],
+    "conditions": [
+      24,
+      3
+    ],
+    "neuron_labels": [
+      132
+    ]
+  },
+  "derived/ring/fig01_population_activity.npz": {
+    "times_ms": [
+      663
+    ],
+    "R1__trial_peak": [
+      24,
+      663
+    ],
+    "R1__trial_mean": [
+      24,
+      663
+    ],
+    "R2__trial_peak": [
+      24,
+      663
+    ],
+    "R2__trial_mean": [
+      24,
+      663
+    ],
+    "R3__trial_peak": [
+      24,
+      663
+    ],
+    "R3__trial_mean": [
+      24,
+      663
+    ],
+    "R4__trial_peak": [
+      24,
+      663
+    ],
+    "R4__trial_mean": [
+      24,
+      663
+    ],
+    "M_D__trial_peak": [
+      24,
+      663
+    ],
+    "M_D__trial_mean": [
+      24,
+      663
+    ],
+    "M_S__trial_peak": [
+      24,
+      663
+    ],
+    "M_S__trial_mean": [
+      24,
+      663
+    ],
+    "Y__trial_peak": [
+      24,
+      663
+    ],
+    "Y__trial_mean": [
+      24,
+      663
+    ],
+    "E_gate_D__trial_peak": [
+      24,
+      663
+    ],
+    "E_gate_D__trial_mean": [
+      24,
+      663
+    ],
+    "E_gate_S__trial_peak": [
+      24,
+      663
+    ],
+    "E_gate_S__trial_mean": [
+      24,
+      663
+    ],
+    "E_gate_34__trial_peak": [
+      24,
+      663
+    ],
+    "E_gate_34__trial_mean": [
+      24,
+      663
+    ],
+    "I_tonic_R__trial_peak": [
+      24,
+      663
+    ],
+    "I_tonic_R__trial_mean": [
+      24,
+      663
+    ],
+    "I_tonic_M__trial_peak": [
+      24,
+      663
+    ],
+    "I_tonic_M__trial_mean": [
+      24,
+      663
+    ],
+    "I_decay_D__trial_peak": [
+      24,
+      663
+    ],
+    "I_decay_D__trial_mean": [
+      24,
+      663
+    ],
+    "I_decay_S__trial_peak": [
+      24,
+      663
+    ],
+    "I_decay_S__trial_mean": [
+      24,
+      663
+    ],
+    "comp_R1__trial_peak": [
+      24,
+      663
+    ],
+    "comp_R1__trial_mean": [
+      24,
+      663
+    ],
+    "comp_D__trial_peak": [
+      24,
+      663
+    ],
+    "comp_D__trial_mean": [
+      24,
+      663
+    ],
+    "comp_S__trial_peak": [
+      24,
+      663
+    ],
+    "comp_S__trial_mean": [
+      24,
+      663
+    ],
+    "retire__trial_peak": [
+      24,
+      663
+    ],
+    "retire__trial_mean": [
+      24,
+      663
+    ],
+    "E__total": [
+      24,
+      663
+    ],
+    "E__active_fraction": [
+      24,
+      663
+    ],
+    "I__total": [
+      24,
+      663
+    ],
+    "I__active_fraction": [
+      24,
+      663
+    ]
+  },
+  "derived/ring/fig02_branch_dynamics.npz": {
+    "times_ms": [
+      663
+    ],
+    "R1__activity": [
+      24,
+      663,
+      1
+    ],
+    "R1__selected": [
+      24
+    ],
+    "R1__margin": [
+      24,
+      663
+    ],
+    "R1__competitor": [
+      24,
+      663
+    ],
+    "R2__activity": [
+      24,
+      663,
+      2
+    ],
+    "R2__selected": [
+      24
+    ],
+    "R2__margin": [
+      24,
+      663
+    ],
+    "R2__competitor": [
+      24,
+      663
+    ],
+    "R3__activity": [
+      24,
+      663,
+      4
+    ],
+    "R3__selected": [
+      24
+    ],
+    "R3__margin": [
+      24,
+      663
+    ],
+    "R3__competitor": [
+      24,
+      663
+    ],
+    "R4__activity": [
+      24,
+      663,
+      4
+    ],
+    "R4__selected": [
+      24
+    ],
+    "R4__margin": [
+      24,
+      663
+    ],
+    "R4__competitor": [
+      24,
+      663
+    ]
+  },
+  "derived/ring/fig03_feedback_controls.npz": {
+    "times_ms": [
+      663
+    ],
+    "baseline__M_D": [
+      24,
+      663
+    ],
+    "baseline__M_S": [
+      24,
+      663
+    ],
+    "baseline__R2": [
+      24,
+      663
+    ],
+    "baseline__R3": [
+      24,
+      663
+    ],
+    "no_feedback__M_D": [
+      24,
+      663
+    ],
+    "no_feedback__M_S": [
+      24,
+      663
+    ],
+    "no_feedback__R2": [
+      24,
+      663
+    ],
+    "no_feedback__R3": [
+      24,
+      663
+    ],
+    "lesion_feedback_D__M_D": [
+      24,
+      663
+    ],
+    "lesion_feedback_D__M_S": [
+      24,
+      663
+    ],
+    "lesion_feedback_D__R2": [
+      24,
+      663
+    ],
+    "lesion_feedback_D__R3": [
+      24,
+      663
+    ],
+    "lesion_feedback_S__M_D": [
+      24,
+      663
+    ],
+    "lesion_feedback_S__M_S": [
+      24,
+      663
+    ],
+    "lesion_feedback_S__R2": [
+      24,
+      663
+    ],
+    "lesion_feedback_S__R3": [
+      24,
+      663
+    ],
+    "lesion_A__M_D": [
+      24,
+      663
+    ],
+    "lesion_A__M_S": [
+      24,
+      663
+    ],
+    "lesion_A__R2": [
+      24,
+      663
+    ],
+    "lesion_A__R3": [
+      24,
+      663
+    ],
+    "lesion_B__M_D": [
+      24,
+      663
+    ],
+    "lesion_B__M_S": [
+      24,
+      663
+    ],
+    "lesion_B__R2": [
+      24,
+      663
+    ],
+    "lesion_B__R3": [
+      24,
+      663
+    ],
+    "lesion_C__M_D": [
+      24,
+      663
+    ],
+    "lesion_C__M_S": [
+      24,
+      663
+    ],
+    "lesion_C__R2": [
+      24,
+      663
+    ],
+    "lesion_C__R3": [
+      24,
+      663
+    ],
+    "lesion_D__M_D": [
+      24,
+      663
+    ],
+    "lesion_D__M_S": [
+      24,
+      663
+    ],
+    "lesion_D__R2": [
+      24,
+      663
+    ],
+    "lesion_D__R3": [
+      24,
+      663
+    ],
+    "random_A_7__M_D": [
+      24,
+      663
+    ],
+    "random_A_7__M_S": [
+      24,
+      663
+    ],
+    "random_A_7__R2": [
+      24,
+      663
+    ],
+    "random_A_7__R3": [
+      24,
+      663
+    ],
+    "random_A_11__M_D": [
+      24,
+      663
+    ],
+    "random_A_11__M_S": [
+      24,
+      663
+    ],
+    "random_A_11__R2": [
+      24,
+      663
+    ],
+    "random_A_11__R3": [
+      24,
+      663
+    ],
+    "random_A_19__M_D": [
+      24,
+      663
+    ],
+    "random_A_19__M_S": [
+      24,
+      663
+    ],
+    "random_A_19__R2": [
+      24,
+      663
+    ],
+    "random_A_19__R3": [
+      24,
+      663
+    ],
+    "random_B_7__M_D": [
+      24,
+      663
+    ],
+    "random_B_7__M_S": [
+      24,
+      663
+    ],
+    "random_B_7__R2": [
+      24,
+      663
+    ],
+    "random_B_7__R3": [
+      24,
+      663
+    ],
+    "random_B_11__M_D": [
+      24,
+      663
+    ],
+    "random_B_11__M_S": [
+      24,
+      663
+    ],
+    "random_B_11__R2": [
+      24,
+      663
+    ],
+    "random_B_11__R3": [
+      24,
+      663
+    ],
+    "random_B_19__M_D": [
+      24,
+      663
+    ],
+    "random_B_19__M_S": [
+      24,
+      663
+    ],
+    "random_B_19__R2": [
+      24,
+      663
+    ],
+    "random_B_19__R3": [
+      24,
+      663
+    ],
+    "random_C_7__M_D": [
+      24,
+      663
+    ],
+    "random_C_7__M_S": [
+      24,
+      663
+    ],
+    "random_C_7__R2": [
+      24,
+      663
+    ],
+    "random_C_7__R3": [
+      24,
+      663
+    ],
+    "random_C_11__M_D": [
+      24,
+      663
+    ],
+    "random_C_11__M_S": [
+      24,
+      663
+    ],
+    "random_C_11__R2": [
+      24,
+      663
+    ],
+    "random_C_11__R3": [
+      24,
+      663
+    ],
+    "random_C_19__M_D": [
+      24,
+      663
+    ],
+    "random_C_19__M_S": [
+      24,
+      663
+    ],
+    "random_C_19__R2": [
+      24,
+      663
+    ],
+    "random_C_19__R3": [
+      24,
+      663
+    ],
+    "random_D_7__M_D": [
+      24,
+      663
+    ],
+    "random_D_7__M_S": [
+      24,
+      663
+    ],
+    "random_D_7__R2": [
+      24,
+      663
+    ],
+    "random_D_7__R3": [
+      24,
+      663
+    ],
+    "random_D_11__M_D": [
+      24,
+      663
+    ],
+    "random_D_11__M_S": [
+      24,
+      663
+    ],
+    "random_D_11__R2": [
+      24,
+      663
+    ],
+    "random_D_11__R3": [
+      24,
+      663
+    ],
+    "random_D_19__M_D": [
+      24,
+      663
+    ],
+    "random_D_19__M_S": [
+      24,
+      663
+    ],
+    "random_D_19__R2": [
+      24,
+      663
+    ],
+    "random_D_19__R3": [
+      24,
+      663
+    ],
+    "random_feedback_D_7__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_D_7__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_D_7__R2": [
+      24,
+      663
+    ],
+    "random_feedback_D_7__R3": [
+      24,
+      663
+    ],
+    "random_feedback_D_11__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_D_11__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_D_11__R2": [
+      24,
+      663
+    ],
+    "random_feedback_D_11__R3": [
+      24,
+      663
+    ],
+    "random_feedback_D_19__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_D_19__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_D_19__R2": [
+      24,
+      663
+    ],
+    "random_feedback_D_19__R3": [
+      24,
+      663
+    ],
+    "random_feedback_S_7__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_S_7__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_S_7__R2": [
+      24,
+      663
+    ],
+    "random_feedback_S_7__R3": [
+      24,
+      663
+    ],
+    "random_feedback_S_11__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_S_11__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_S_11__R2": [
+      24,
+      663
+    ],
+    "random_feedback_S_11__R3": [
+      24,
+      663
+    ],
+    "random_feedback_S_19__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_S_19__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_S_19__R2": [
+      24,
+      663
+    ],
+    "random_feedback_S_19__R3": [
+      24,
+      663
+    ]
+  },
+  "derived/ring/fig03_handoff_axes.npz": {
+    "times_ms": [
+      663
+    ],
+    "M_D__axis": [
+      2
+    ],
+    "M_D__center": [
+      2
+    ],
+    "M_D__axis_anchor_ms": [],
+    "M_D__contrast": [
+      663,
+      2
+    ],
+    "M_D__projection": [
+      24,
+      663
+    ],
+    "M_D__levels": [
+      2
+    ],
+    "R2__axis": [
+      12
+    ],
+    "R2__center": [
+      12
+    ],
+    "R2__axis_anchor_ms": [],
+    "R2__contrast": [
+      663,
+      12
+    ],
+    "R2__projection": [
+      24,
+      663
+    ],
+    "R2__levels": [
+      2
+    ],
+    "M_S__axis": [
+      2
+    ],
+    "M_S__center": [
+      2
+    ],
+    "M_S__axis_anchor_ms": [],
+    "M_S__contrast": [
+      663,
+      2
+    ],
+    "M_S__projection": [
+      24,
+      663
+    ],
+    "M_S__levels": [
+      2
+    ],
+    "R3__axis": [
+      24
+    ],
+    "R3__center": [
+      24
+    ],
+    "R3__axis_anchor_ms": [],
+    "R3__contrast": [
+      663,
+      24
+    ],
+    "R3__projection": [
+      24,
+      663
+    ],
+    "R3__levels": [
+      2
+    ]
+  },
+  "derived/ring/fig04_trajectories.npz": {
+    "times_ms": [
+      663
+    ],
+    "conditions": [
+      24,
+      3
+    ],
+    "fixed_L_trials": [
+      4
+    ],
+    "branch_basis": [
+      132,
+      4
+    ],
+    "branch_center": [
+      132
+    ],
+    "branch_scores": [
+      24,
+      663,
+      4
+    ],
+    "branch_singular_values": [
+      6
+    ],
+    "branch_contrast_evr": [
+      4
+    ],
+    "R2_D_centroids": [
+      2,
+      132
+    ],
+    "R3_branch_centroids": [
+      4,
+      132
+    ],
+    "R3_centroid_distances": [
+      6
+    ],
+    "R3_branch_variance_captured_2d": [],
+    "speed": [
+      24,
+      662
+    ],
+    "speed_times_ms": [
+      662
+    ],
+    "global_scores": [
+      24,
+      663,
+      3
+    ],
+    "global_components": [
+      3,
+      132
+    ],
+    "global_mean": [
+      132
+    ],
+    "global_evr": [
+      132
+    ]
+  },
+  "derived/ring/fig05_time_resolved_geometry.npz": {
+    "times_ms": [
+      663
+    ],
+    "pairs": [
+      6,
+      2
+    ],
+    "absolute_singular_threshold": [],
+    "relative_singular_threshold": [],
+    "whole_angles_degrees": [
+      663,
+      6,
+      5
+    ],
+    "whole_centroid_distance": [
+      663,
+      6
+    ],
+    "whole_ranks": [
+      663,
+      4
+    ],
+    "whole_singular_values": [
+      663,
+      4,
+      6
+    ],
+    "response_angles_degrees": [
+      663,
+      6,
+      5
+    ],
+    "response_centroid_distance": [
+      663,
+      6
+    ],
+    "response_ranks": [
+      663,
+      4
+    ],
+    "response_singular_values": [
+      663,
+      4,
+      6
+    ],
+    "folded_angles_degrees": [
+      663,
+      6,
+      5
+    ],
+    "folded_centroid_distance": [
+      663,
+      6
+    ],
+    "folded_ranks": [
+      663,
+      4
+    ],
+    "folded_singular_values": [
+      663,
+      4,
+      6
+    ]
+  },
+  "derived/ring/fig06_position_stability.npz": {
+    "times_ms": [
+      663
+    ],
+    "trial_indices": [
+      6
+    ],
+    "states": [
+      6,
+      132
+    ],
+    "pca_scores": [
+      6,
+      2
+    ],
+    "pca_mean": [
+      132
+    ],
+    "pca_components": [
+      2,
+      132
+    ],
+    "pca_evr": [
+      6
+    ],
+    "whole_rdm": [
+      6,
+      6
+    ],
+    "response_rdm": [
+      6,
+      6
+    ],
+    "response_indices": [
+      66
+    ],
+    "active_branch_indices": [
+      6
+    ],
+    "position_identity": [
+      6,
+      663
+    ],
+    "expected_position": [
+      6
+    ],
+    "selected_rate": [
+      6,
+      663
+    ],
+    "competitor_rate": [
+      6,
+      663
+    ],
+    "position_margin": [
+      6,
+      663
+    ],
+    "position_drift": [
+      6,
+      663
+    ]
+  },
+  "derived/ring/fig07_branch_decoding.npz": {
+    "times_ms": [
+      41
+    ],
+    "branch_accuracy": [
+      41
+    ],
+    "branch_chance": [],
+    "response_indices": [
+      66
+    ],
+    "baseline__times_ms": [
+      41
+    ],
+    "baseline__whole__L": [
+      41
+    ],
+    "baseline__response__L": [
+      41
+    ],
+    "baseline__memory__L": [
+      41
+    ],
+    "baseline__M_D__L": [
+      41
+    ],
+    "baseline__M_S__L": [
+      41
+    ],
+    "baseline__R2__L": [
+      41
+    ],
+    "baseline__R3__L": [
+      41
+    ],
+    "baseline__R1_branch0__L": [
+      41
+    ],
+    "baseline__R2_branch0__L": [
+      41
+    ],
+    "baseline__R2_branch1__L": [
+      41
+    ],
+    "baseline__R3_branch0__L": [
+      41
+    ],
+    "baseline__R3_branch1__L": [
+      41
+    ],
+    "baseline__R3_branch2__L": [
+      41
+    ],
+    "baseline__R3_branch3__L": [
+      41
+    ],
+    "baseline__R4_branch0__L": [
+      41
+    ],
+    "baseline__R4_branch1__L": [
+      41
+    ],
+    "baseline__R4_branch2__L": [
+      41
+    ],
+    "baseline__R4_branch3__L": [
+      41
+    ],
+    "baseline__cross_temporal__L": [
+      41,
+      41
+    ],
+    "baseline__whole__D": [
+      41
+    ],
+    "baseline__response__D": [
+      41
+    ],
+    "baseline__memory__D": [
+      41
+    ],
+    "baseline__M_D__D": [
+      41
+    ],
+    "baseline__M_S__D": [
+      41
+    ],
+    "baseline__R2__D": [
+      41
+    ],
+    "baseline__R3__D": [
+      41
+    ],
+    "baseline__R1_branch0__D": [
+      41
+    ],
+    "baseline__R2_branch0__D": [
+      41
+    ],
+    "baseline__R2_branch1__D": [
+      41
+    ],
+    "baseline__R3_branch0__D": [
+      41
+    ],
+    "baseline__R3_branch1__D": [
+      41
+    ],
+    "baseline__R3_branch2__D": [
+      41
+    ],
+    "baseline__R3_branch3__D": [
+      41
+    ],
+    "baseline__R4_branch0__D": [
+      41
+    ],
+    "baseline__R4_branch1__D": [
+      41
+    ],
+    "baseline__R4_branch2__D": [
+      41
+    ],
+    "baseline__R4_branch3__D": [
+      41
+    ],
+    "baseline__cross_temporal__D": [
+      41,
+      41
+    ],
+    "baseline__whole__S": [
+      41
+    ],
+    "baseline__response__S": [
+      41
+    ],
+    "baseline__memory__S": [
+      41
+    ],
+    "baseline__M_D__S": [
+      41
+    ],
+    "baseline__M_S__S": [
+      41
+    ],
+    "baseline__R2__S": [
+      41
+    ],
+    "baseline__R3__S": [
+      41
+    ],
+    "baseline__R1_branch0__S": [
+      41
+    ],
+    "baseline__R2_branch0__S": [
+      41
+    ],
+    "baseline__R2_branch1__S": [
+      41
+    ],
+    "baseline__R3_branch0__S": [
+      41
+    ],
+    "baseline__R3_branch1__S": [
+      41
+    ],
+    "baseline__R3_branch2__S": [
+      41
+    ],
+    "baseline__R3_branch3__S": [
+      41
+    ],
+    "baseline__R4_branch0__S": [
+      41
+    ],
+    "baseline__R4_branch1__S": [
+      41
+    ],
+    "baseline__R4_branch2__S": [
+      41
+    ],
+    "baseline__R4_branch3__S": [
+      41
+    ],
+    "baseline__cross_temporal__S": [
+      41,
+      41
+    ],
+    "noise__times_ms": [
+      43
+    ],
+    "noise__seed_ids": [
+      3
+    ],
+    "noise__whole__L": [
+      43
+    ],
+    "noise__whole__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__response__L": [
+      43
+    ],
+    "noise__response__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__memory__L": [
+      43
+    ],
+    "noise__memory__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_D__L": [
+      43
+    ],
+    "noise__M_D__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_S__L": [
+      43
+    ],
+    "noise__M_S__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R2__L": [
+      43
+    ],
+    "noise__R2__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R3__L": [
+      43
+    ],
+    "noise__R3__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__whole__D": [
+      43
+    ],
+    "noise__whole__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__response__D": [
+      43
+    ],
+    "noise__response__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__memory__D": [
+      43
+    ],
+    "noise__memory__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_D__D": [
+      43
+    ],
+    "noise__M_D__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_S__D": [
+      43
+    ],
+    "noise__M_S__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R2__D": [
+      43
+    ],
+    "noise__R2__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R3__D": [
+      43
+    ],
+    "noise__R3__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__whole__S": [
+      43
+    ],
+    "noise__whole__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__response__S": [
+      43
+    ],
+    "noise__response__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__memory__S": [
+      43
+    ],
+    "noise__memory__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_D__S": [
+      43
+    ],
+    "noise__M_D__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_S__S": [
+      43
+    ],
+    "noise__M_S__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R2__S": [
+      43
+    ],
+    "noise__R2__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R3__S": [
+      43
+    ],
+    "noise__R3__S__seed_accuracies": [
+      3,
+      43
+    ]
+  },
+  "derived/ring/fig08_basin_slices_v3.npz": {
+    "grid_axis": [
+      21
+    ],
+    "grid_xy": [
+      441,
+      2
+    ],
+    "triples": [
+      3,
+      3
+    ],
+    "selected_trials": [
+      4,
+      6
+    ],
+    "initial_rates": [
+      4,
+      3,
+      441,
+      132
+    ],
+    "endpoints": [
+      4,
+      3,
+      441,
+      132
+    ],
+    "legal_mask": [
+      4,
+      3,
+      441
+    ],
+    "class_code": [
+      4,
+      3,
+      441
+    ],
+    "class_names": [
+      5
+    ],
+    "residual_max_per_ms": [
+      4,
+      3,
+      441
+    ],
+    "R3_competition": [
+      4,
+      3,
+      441,
+      4,
+      6
+    ],
+    "reference_endpoints": [
+      24,
+      132
+    ],
+    "reference_conditions": [
+      24,
+      3
+    ],
+    "duration_ms": [],
+    "representative_rates": [
+      48,
+      401,
+      132
+    ],
+    "representative_indices": [
+      48,
+      3
+    ],
+    "representative_times_ms": [
+      401
+    ],
+    "clock": [
+      132
+    ],
+    "stimulus": [
+      132
+    ],
+    "tonic": [
+      132
+    ],
+    "neuron_labels": [
+      132
+    ]
+  },
+  "derived/ring/fig08_six_position_fixed_points.npz": {
+    "endpoints": [
+      24,
+      132
+    ],
+    "conditions": [
+      24,
+      3
+    ],
+    "selected_trials": [
+      4,
+      6
+    ],
+    "rates": [
+      24,
+      401,
+      132
+    ],
+    "eigenvalues": [
+      24,
+      132
+    ],
+    "basis": [
+      4,
+      132,
+      3
+    ],
+    "pca_center": [
+      4,
+      132
+    ],
+    "explained_variance_ratio": [
+      4,
+      3
+    ],
+    "residual_max_per_ms": [
+      24
+    ],
+    "max_real_eigenvalue_per_ms": [
+      24
+    ],
+    "euler_spectral_radius": [
+      24
+    ],
+    "clock": [
+      132
+    ],
+    "stimulus": [
+      132
+    ],
+    "tonic": [
+      132
+    ]
+  },
+  "derived/ring/fig08_six_position_fixed_points_branch0.npz": {
+    "endpoints": [
+      6,
+      132
+    ],
+    "conditions": [
+      6,
+      3
+    ],
+    "center": [
+      132
+    ],
+    "basis": [
+      132,
+      3
+    ],
+    "evr": [
+      6
+    ]
+  },
+  "derived/ring/fig08_six_position_fixed_points_branch1.npz": {
+    "endpoints": [
+      6,
+      132
+    ],
+    "conditions": [
+      6,
+      3
+    ],
+    "center": [
+      132
+    ],
+    "basis": [
+      132,
+      3
+    ],
+    "evr": [
+      6
+    ]
+  },
+  "derived/ring/fig08_six_position_fixed_points_branch2.npz": {
+    "endpoints": [
+      6,
+      132
+    ],
+    "conditions": [
+      6,
+      3
+    ],
+    "center": [
+      132
+    ],
+    "basis": [
+      132,
+      3
+    ],
+    "evr": [
+      6
+    ]
+  },
+  "derived/ring/fig08_six_position_fixed_points_branch3.npz": {
+    "endpoints": [
+      6,
+      132
+    ],
+    "conditions": [
+      6,
+      3
+    ],
+    "center": [
+      132
+    ],
+    "basis": [
+      132,
+      3
+    ],
+    "evr": [
+      6
+    ]
+  },
+  "derived/ring/fig09_stage_perturbation_v3.npz": {
+    "control": [
+      24,
+      663,
+      132
+    ],
+    "perturbed": [
+      4,
+      3,
+      24,
+      663,
+      132
+    ],
+    "times_ms": [
+      663
+    ],
+    "stages": [
+      4
+    ],
+    "seeds": [
+      3
+    ],
+    "onsets_ms": [
+      4
+    ],
+    "pulse_mask": [
+      4,
+      663
+    ],
+    "directions": [
+      3,
+      132
+    ],
+    "actual_current_rms": [
+      4,
+      3
+    ],
+    "integrated_rms_ms": [
+      4,
+      3
+    ],
+    "base_stimulus": [
+      24,
+      663,
+      132
+    ],
+    "clock": [
+      24,
+      663,
+      132
+    ],
+    "tonic": [
+      132
+    ],
+    "conditions": [
+      24,
+      3
+    ],
+    "neuron_labels": [
+      132
+    ]
+  },
+  "derived/topology/fig01_population_activity.npz": {
+    "times_ms": [
+      663
+    ],
+    "R1__trial_peak": [
+      24,
+      663
+    ],
+    "R1__trial_mean": [
+      24,
+      663
+    ],
+    "R2__trial_peak": [
+      24,
+      663
+    ],
+    "R2__trial_mean": [
+      24,
+      663
+    ],
+    "R3__trial_peak": [
+      24,
+      663
+    ],
+    "R3__trial_mean": [
+      24,
+      663
+    ],
+    "R4__trial_peak": [
+      24,
+      663
+    ],
+    "R4__trial_mean": [
+      24,
+      663
+    ],
+    "M_D__trial_peak": [
+      24,
+      663
+    ],
+    "M_D__trial_mean": [
+      24,
+      663
+    ],
+    "M_S__trial_peak": [
+      24,
+      663
+    ],
+    "M_S__trial_mean": [
+      24,
+      663
+    ],
+    "Y__trial_peak": [
+      24,
+      663
+    ],
+    "Y__trial_mean": [
+      24,
+      663
+    ],
+    "E_gate_D__trial_peak": [
+      24,
+      663
+    ],
+    "E_gate_D__trial_mean": [
+      24,
+      663
+    ],
+    "E_gate_S__trial_peak": [
+      24,
+      663
+    ],
+    "E_gate_S__trial_mean": [
+      24,
+      663
+    ],
+    "E_gate_34__trial_peak": [
+      24,
+      663
+    ],
+    "E_gate_34__trial_mean": [
+      24,
+      663
+    ],
+    "I_tonic_R__trial_peak": [
+      24,
+      663
+    ],
+    "I_tonic_R__trial_mean": [
+      24,
+      663
+    ],
+    "I_tonic_M__trial_peak": [
+      24,
+      663
+    ],
+    "I_tonic_M__trial_mean": [
+      24,
+      663
+    ],
+    "I_decay_D__trial_peak": [
+      24,
+      663
+    ],
+    "I_decay_D__trial_mean": [
+      24,
+      663
+    ],
+    "I_decay_S__trial_peak": [
+      24,
+      663
+    ],
+    "I_decay_S__trial_mean": [
+      24,
+      663
+    ],
+    "comp_R1__trial_peak": [
+      24,
+      663
+    ],
+    "comp_R1__trial_mean": [
+      24,
+      663
+    ],
+    "comp_D__trial_peak": [
+      24,
+      663
+    ],
+    "comp_D__trial_mean": [
+      24,
+      663
+    ],
+    "comp_S__trial_peak": [
+      24,
+      663
+    ],
+    "comp_S__trial_mean": [
+      24,
+      663
+    ],
+    "retire__trial_peak": [
+      24,
+      663
+    ],
+    "retire__trial_mean": [
+      24,
+      663
+    ],
+    "E__total": [
+      24,
+      663
+    ],
+    "E__active_fraction": [
+      24,
+      663
+    ],
+    "I__total": [
+      24,
+      663
+    ],
+    "I__active_fraction": [
+      24,
+      663
+    ]
+  },
+  "derived/topology/fig02_branch_dynamics.npz": {
+    "times_ms": [
+      663
+    ],
+    "R1__activity": [
+      24,
+      663,
+      1
+    ],
+    "R1__selected": [
+      24
+    ],
+    "R1__margin": [
+      24,
+      663
+    ],
+    "R1__competitor": [
+      24,
+      663
+    ],
+    "R2__activity": [
+      24,
+      663,
+      2
+    ],
+    "R2__selected": [
+      24
+    ],
+    "R2__margin": [
+      24,
+      663
+    ],
+    "R2__competitor": [
+      24,
+      663
+    ],
+    "R3__activity": [
+      24,
+      663,
+      4
+    ],
+    "R3__selected": [
+      24
+    ],
+    "R3__margin": [
+      24,
+      663
+    ],
+    "R3__competitor": [
+      24,
+      663
+    ],
+    "R4__activity": [
+      24,
+      663,
+      4
+    ],
+    "R4__selected": [
+      24
+    ],
+    "R4__margin": [
+      24,
+      663
+    ],
+    "R4__competitor": [
+      24,
+      663
+    ]
+  },
+  "derived/topology/fig03_feedback_controls.npz": {
+    "times_ms": [
+      663
+    ],
+    "baseline__M_D": [
+      24,
+      663
+    ],
+    "baseline__M_S": [
+      24,
+      663
+    ],
+    "baseline__R2": [
+      24,
+      663
+    ],
+    "baseline__R3": [
+      24,
+      663
+    ],
+    "no_feedback__M_D": [
+      24,
+      663
+    ],
+    "no_feedback__M_S": [
+      24,
+      663
+    ],
+    "no_feedback__R2": [
+      24,
+      663
+    ],
+    "no_feedback__R3": [
+      24,
+      663
+    ],
+    "lesion_feedback_D__M_D": [
+      24,
+      663
+    ],
+    "lesion_feedback_D__M_S": [
+      24,
+      663
+    ],
+    "lesion_feedback_D__R2": [
+      24,
+      663
+    ],
+    "lesion_feedback_D__R3": [
+      24,
+      663
+    ],
+    "lesion_feedback_S__M_D": [
+      24,
+      663
+    ],
+    "lesion_feedback_S__M_S": [
+      24,
+      663
+    ],
+    "lesion_feedback_S__R2": [
+      24,
+      663
+    ],
+    "lesion_feedback_S__R3": [
+      24,
+      663
+    ],
+    "lesion_A__M_D": [
+      24,
+      663
+    ],
+    "lesion_A__M_S": [
+      24,
+      663
+    ],
+    "lesion_A__R2": [
+      24,
+      663
+    ],
+    "lesion_A__R3": [
+      24,
+      663
+    ],
+    "lesion_B__M_D": [
+      24,
+      663
+    ],
+    "lesion_B__M_S": [
+      24,
+      663
+    ],
+    "lesion_B__R2": [
+      24,
+      663
+    ],
+    "lesion_B__R3": [
+      24,
+      663
+    ],
+    "lesion_C__M_D": [
+      24,
+      663
+    ],
+    "lesion_C__M_S": [
+      24,
+      663
+    ],
+    "lesion_C__R2": [
+      24,
+      663
+    ],
+    "lesion_C__R3": [
+      24,
+      663
+    ],
+    "lesion_D__M_D": [
+      24,
+      663
+    ],
+    "lesion_D__M_S": [
+      24,
+      663
+    ],
+    "lesion_D__R2": [
+      24,
+      663
+    ],
+    "lesion_D__R3": [
+      24,
+      663
+    ],
+    "random_A_7__M_D": [
+      24,
+      663
+    ],
+    "random_A_7__M_S": [
+      24,
+      663
+    ],
+    "random_A_7__R2": [
+      24,
+      663
+    ],
+    "random_A_7__R3": [
+      24,
+      663
+    ],
+    "random_A_11__M_D": [
+      24,
+      663
+    ],
+    "random_A_11__M_S": [
+      24,
+      663
+    ],
+    "random_A_11__R2": [
+      24,
+      663
+    ],
+    "random_A_11__R3": [
+      24,
+      663
+    ],
+    "random_A_19__M_D": [
+      24,
+      663
+    ],
+    "random_A_19__M_S": [
+      24,
+      663
+    ],
+    "random_A_19__R2": [
+      24,
+      663
+    ],
+    "random_A_19__R3": [
+      24,
+      663
+    ],
+    "random_B_7__M_D": [
+      24,
+      663
+    ],
+    "random_B_7__M_S": [
+      24,
+      663
+    ],
+    "random_B_7__R2": [
+      24,
+      663
+    ],
+    "random_B_7__R3": [
+      24,
+      663
+    ],
+    "random_B_11__M_D": [
+      24,
+      663
+    ],
+    "random_B_11__M_S": [
+      24,
+      663
+    ],
+    "random_B_11__R2": [
+      24,
+      663
+    ],
+    "random_B_11__R3": [
+      24,
+      663
+    ],
+    "random_B_19__M_D": [
+      24,
+      663
+    ],
+    "random_B_19__M_S": [
+      24,
+      663
+    ],
+    "random_B_19__R2": [
+      24,
+      663
+    ],
+    "random_B_19__R3": [
+      24,
+      663
+    ],
+    "random_C_7__M_D": [
+      24,
+      663
+    ],
+    "random_C_7__M_S": [
+      24,
+      663
+    ],
+    "random_C_7__R2": [
+      24,
+      663
+    ],
+    "random_C_7__R3": [
+      24,
+      663
+    ],
+    "random_C_11__M_D": [
+      24,
+      663
+    ],
+    "random_C_11__M_S": [
+      24,
+      663
+    ],
+    "random_C_11__R2": [
+      24,
+      663
+    ],
+    "random_C_11__R3": [
+      24,
+      663
+    ],
+    "random_C_19__M_D": [
+      24,
+      663
+    ],
+    "random_C_19__M_S": [
+      24,
+      663
+    ],
+    "random_C_19__R2": [
+      24,
+      663
+    ],
+    "random_C_19__R3": [
+      24,
+      663
+    ],
+    "random_D_7__M_D": [
+      24,
+      663
+    ],
+    "random_D_7__M_S": [
+      24,
+      663
+    ],
+    "random_D_7__R2": [
+      24,
+      663
+    ],
+    "random_D_7__R3": [
+      24,
+      663
+    ],
+    "random_D_11__M_D": [
+      24,
+      663
+    ],
+    "random_D_11__M_S": [
+      24,
+      663
+    ],
+    "random_D_11__R2": [
+      24,
+      663
+    ],
+    "random_D_11__R3": [
+      24,
+      663
+    ],
+    "random_D_19__M_D": [
+      24,
+      663
+    ],
+    "random_D_19__M_S": [
+      24,
+      663
+    ],
+    "random_D_19__R2": [
+      24,
+      663
+    ],
+    "random_D_19__R3": [
+      24,
+      663
+    ],
+    "random_feedback_D_7__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_D_7__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_D_7__R2": [
+      24,
+      663
+    ],
+    "random_feedback_D_7__R3": [
+      24,
+      663
+    ],
+    "random_feedback_D_11__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_D_11__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_D_11__R2": [
+      24,
+      663
+    ],
+    "random_feedback_D_11__R3": [
+      24,
+      663
+    ],
+    "random_feedback_D_19__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_D_19__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_D_19__R2": [
+      24,
+      663
+    ],
+    "random_feedback_D_19__R3": [
+      24,
+      663
+    ],
+    "random_feedback_S_7__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_S_7__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_S_7__R2": [
+      24,
+      663
+    ],
+    "random_feedback_S_7__R3": [
+      24,
+      663
+    ],
+    "random_feedback_S_11__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_S_11__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_S_11__R2": [
+      24,
+      663
+    ],
+    "random_feedback_S_11__R3": [
+      24,
+      663
+    ],
+    "random_feedback_S_19__M_D": [
+      24,
+      663
+    ],
+    "random_feedback_S_19__M_S": [
+      24,
+      663
+    ],
+    "random_feedback_S_19__R2": [
+      24,
+      663
+    ],
+    "random_feedback_S_19__R3": [
+      24,
+      663
+    ]
+  },
+  "derived/topology/fig03_handoff_axes.npz": {
+    "times_ms": [
+      663
+    ],
+    "M_D__axis": [
+      2
+    ],
+    "M_D__center": [
+      2
+    ],
+    "M_D__axis_anchor_ms": [],
+    "M_D__contrast": [
+      663,
+      2
+    ],
+    "M_D__projection": [
+      24,
+      663
+    ],
+    "M_D__levels": [
+      2
+    ],
+    "R2__axis": [
+      12
+    ],
+    "R2__center": [
+      12
+    ],
+    "R2__axis_anchor_ms": [],
+    "R2__contrast": [
+      663,
+      12
+    ],
+    "R2__projection": [
+      24,
+      663
+    ],
+    "R2__levels": [
+      2
+    ],
+    "M_S__axis": [
+      2
+    ],
+    "M_S__center": [
+      2
+    ],
+    "M_S__axis_anchor_ms": [],
+    "M_S__contrast": [
+      663,
+      2
+    ],
+    "M_S__projection": [
+      24,
+      663
+    ],
+    "M_S__levels": [
+      2
+    ],
+    "R3__axis": [
+      24
+    ],
+    "R3__center": [
+      24
+    ],
+    "R3__axis_anchor_ms": [],
+    "R3__contrast": [
+      663,
+      24
+    ],
+    "R3__projection": [
+      24,
+      663
+    ],
+    "R3__levels": [
+      2
+    ]
+  },
+  "derived/topology/fig04_trajectories.npz": {
+    "times_ms": [
+      663
+    ],
+    "conditions": [
+      24,
+      3
+    ],
+    "fixed_L_trials": [
+      4
+    ],
+    "branch_basis": [
+      132,
+      4
+    ],
+    "branch_center": [
+      132
+    ],
+    "branch_scores": [
+      24,
+      663,
+      4
+    ],
+    "branch_singular_values": [
+      6
+    ],
+    "branch_contrast_evr": [
+      4
+    ],
+    "R2_D_centroids": [
+      2,
+      132
+    ],
+    "R3_branch_centroids": [
+      4,
+      132
+    ],
+    "R3_centroid_distances": [
+      6
+    ],
+    "R3_branch_variance_captured_2d": [],
+    "speed": [
+      24,
+      662
+    ],
+    "speed_times_ms": [
+      662
+    ],
+    "global_scores": [
+      24,
+      663,
+      3
+    ],
+    "global_components": [
+      3,
+      132
+    ],
+    "global_mean": [
+      132
+    ],
+    "global_evr": [
+      132
+    ]
+  },
+  "derived/topology/fig05_time_resolved_geometry.npz": {
+    "times_ms": [
+      663
+    ],
+    "pairs": [
+      6,
+      2
+    ],
+    "absolute_singular_threshold": [],
+    "relative_singular_threshold": [],
+    "whole_angles_degrees": [
+      663,
+      6,
+      5
+    ],
+    "whole_centroid_distance": [
+      663,
+      6
+    ],
+    "whole_ranks": [
+      663,
+      4
+    ],
+    "whole_singular_values": [
+      663,
+      4,
+      6
+    ],
+    "response_angles_degrees": [
+      663,
+      6,
+      5
+    ],
+    "response_centroid_distance": [
+      663,
+      6
+    ],
+    "response_ranks": [
+      663,
+      4
+    ],
+    "response_singular_values": [
+      663,
+      4,
+      6
+    ],
+    "folded_angles_degrees": [
+      663,
+      6,
+      5
+    ],
+    "folded_centroid_distance": [
+      663,
+      6
+    ],
+    "folded_ranks": [
+      663,
+      4
+    ],
+    "folded_singular_values": [
+      663,
+      4,
+      6
+    ]
+  },
+  "derived/topology/fig06_position_stability.npz": {
+    "times_ms": [
+      663
+    ],
+    "trial_indices": [
+      6
+    ],
+    "states": [
+      6,
+      132
+    ],
+    "pca_scores": [
+      6,
+      2
+    ],
+    "pca_mean": [
+      132
+    ],
+    "pca_components": [
+      2,
+      132
+    ],
+    "pca_evr": [
+      6
+    ],
+    "whole_rdm": [
+      6,
+      6
+    ],
+    "response_rdm": [
+      6,
+      6
+    ],
+    "response_indices": [
+      66
+    ],
+    "active_branch_indices": [
+      6
+    ],
+    "position_identity": [
+      6,
+      663
+    ],
+    "expected_position": [
+      6
+    ],
+    "selected_rate": [
+      6,
+      663
+    ],
+    "competitor_rate": [
+      6,
+      663
+    ],
+    "position_margin": [
+      6,
+      663
+    ],
+    "position_drift": [
+      6,
+      663
+    ]
+  },
+  "derived/topology/fig07_branch_decoding.npz": {
+    "times_ms": [
+      41
+    ],
+    "branch_accuracy": [
+      41
+    ],
+    "branch_chance": [],
+    "response_indices": [
+      66
+    ],
+    "baseline__times_ms": [
+      41
+    ],
+    "baseline__whole__L": [
+      41
+    ],
+    "baseline__response__L": [
+      41
+    ],
+    "baseline__memory__L": [
+      41
+    ],
+    "baseline__M_D__L": [
+      41
+    ],
+    "baseline__M_S__L": [
+      41
+    ],
+    "baseline__R2__L": [
+      41
+    ],
+    "baseline__R3__L": [
+      41
+    ],
+    "baseline__R1_branch0__L": [
+      41
+    ],
+    "baseline__R2_branch0__L": [
+      41
+    ],
+    "baseline__R2_branch1__L": [
+      41
+    ],
+    "baseline__R3_branch0__L": [
+      41
+    ],
+    "baseline__R3_branch1__L": [
+      41
+    ],
+    "baseline__R3_branch2__L": [
+      41
+    ],
+    "baseline__R3_branch3__L": [
+      41
+    ],
+    "baseline__R4_branch0__L": [
+      41
+    ],
+    "baseline__R4_branch1__L": [
+      41
+    ],
+    "baseline__R4_branch2__L": [
+      41
+    ],
+    "baseline__R4_branch3__L": [
+      41
+    ],
+    "baseline__cross_temporal__L": [
+      41,
+      41
+    ],
+    "baseline__whole__D": [
+      41
+    ],
+    "baseline__response__D": [
+      41
+    ],
+    "baseline__memory__D": [
+      41
+    ],
+    "baseline__M_D__D": [
+      41
+    ],
+    "baseline__M_S__D": [
+      41
+    ],
+    "baseline__R2__D": [
+      41
+    ],
+    "baseline__R3__D": [
+      41
+    ],
+    "baseline__R1_branch0__D": [
+      41
+    ],
+    "baseline__R2_branch0__D": [
+      41
+    ],
+    "baseline__R2_branch1__D": [
+      41
+    ],
+    "baseline__R3_branch0__D": [
+      41
+    ],
+    "baseline__R3_branch1__D": [
+      41
+    ],
+    "baseline__R3_branch2__D": [
+      41
+    ],
+    "baseline__R3_branch3__D": [
+      41
+    ],
+    "baseline__R4_branch0__D": [
+      41
+    ],
+    "baseline__R4_branch1__D": [
+      41
+    ],
+    "baseline__R4_branch2__D": [
+      41
+    ],
+    "baseline__R4_branch3__D": [
+      41
+    ],
+    "baseline__cross_temporal__D": [
+      41,
+      41
+    ],
+    "baseline__whole__S": [
+      41
+    ],
+    "baseline__response__S": [
+      41
+    ],
+    "baseline__memory__S": [
+      41
+    ],
+    "baseline__M_D__S": [
+      41
+    ],
+    "baseline__M_S__S": [
+      41
+    ],
+    "baseline__R2__S": [
+      41
+    ],
+    "baseline__R3__S": [
+      41
+    ],
+    "baseline__R1_branch0__S": [
+      41
+    ],
+    "baseline__R2_branch0__S": [
+      41
+    ],
+    "baseline__R2_branch1__S": [
+      41
+    ],
+    "baseline__R3_branch0__S": [
+      41
+    ],
+    "baseline__R3_branch1__S": [
+      41
+    ],
+    "baseline__R3_branch2__S": [
+      41
+    ],
+    "baseline__R3_branch3__S": [
+      41
+    ],
+    "baseline__R4_branch0__S": [
+      41
+    ],
+    "baseline__R4_branch1__S": [
+      41
+    ],
+    "baseline__R4_branch2__S": [
+      41
+    ],
+    "baseline__R4_branch3__S": [
+      41
+    ],
+    "baseline__cross_temporal__S": [
+      41,
+      41
+    ],
+    "noise__times_ms": [
+      43
+    ],
+    "noise__seed_ids": [
+      3
+    ],
+    "noise__whole__L": [
+      43
+    ],
+    "noise__whole__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__response__L": [
+      43
+    ],
+    "noise__response__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__memory__L": [
+      43
+    ],
+    "noise__memory__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_D__L": [
+      43
+    ],
+    "noise__M_D__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_S__L": [
+      43
+    ],
+    "noise__M_S__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R2__L": [
+      43
+    ],
+    "noise__R2__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R3__L": [
+      43
+    ],
+    "noise__R3__L__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__whole__D": [
+      43
+    ],
+    "noise__whole__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__response__D": [
+      43
+    ],
+    "noise__response__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__memory__D": [
+      43
+    ],
+    "noise__memory__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_D__D": [
+      43
+    ],
+    "noise__M_D__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_S__D": [
+      43
+    ],
+    "noise__M_S__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R2__D": [
+      43
+    ],
+    "noise__R2__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R3__D": [
+      43
+    ],
+    "noise__R3__D__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__whole__S": [
+      43
+    ],
+    "noise__whole__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__response__S": [
+      43
+    ],
+    "noise__response__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__memory__S": [
+      43
+    ],
+    "noise__memory__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_D__S": [
+      43
+    ],
+    "noise__M_D__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__M_S__S": [
+      43
+    ],
+    "noise__M_S__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R2__S": [
+      43
+    ],
+    "noise__R2__S__seed_accuracies": [
+      3,
+      43
+    ],
+    "noise__R3__S": [
+      43
+    ],
+    "noise__R3__S__seed_accuracies": [
+      3,
+      43
+    ]
+  },
+  "derived/topology/fig08_basin_slices_v3.npz": {
+    "grid_axis": [
+      21
+    ],
+    "grid_xy": [
+      441,
+      2
+    ],
+    "triples": [
+      3,
+      3
+    ],
+    "selected_trials": [
+      4,
+      6
+    ],
+    "initial_rates": [
+      4,
+      3,
+      441,
+      132
+    ],
+    "endpoints": [
+      4,
+      3,
+      441,
+      132
+    ],
+    "legal_mask": [
+      4,
+      3,
+      441
+    ],
+    "class_code": [
+      4,
+      3,
+      441
+    ],
+    "class_names": [
+      5
+    ],
+    "residual_max_per_ms": [
+      4,
+      3,
+      441
+    ],
+    "R3_competition": [
+      4,
+      3,
+      441,
+      4,
+      6
+    ],
+    "reference_endpoints": [
+      24,
+      132
+    ],
+    "reference_conditions": [
+      24,
+      3
+    ],
+    "duration_ms": [],
+    "representative_rates": [
+      48,
+      401,
+      132
+    ],
+    "representative_indices": [
+      48,
+      3
+    ],
+    "representative_times_ms": [
+      401
+    ],
+    "clock": [
+      132
+    ],
+    "stimulus": [
+      132
+    ],
+    "tonic": [
+      132
+    ],
+    "neuron_labels": [
+      132
+    ]
+  },
+  "derived/topology/fig08_six_position_fixed_points.npz": {
+    "endpoints": [
+      24,
+      132
+    ],
+    "conditions": [
+      24,
+      3
+    ],
+    "selected_trials": [
+      4,
+      6
+    ],
+    "rates": [
+      24,
+      401,
+      132
+    ],
+    "eigenvalues": [
+      24,
+      132
+    ],
+    "basis": [
+      4,
+      132,
+      3
+    ],
+    "pca_center": [
+      4,
+      132
+    ],
+    "explained_variance_ratio": [
+      4,
+      3
+    ],
+    "residual_max_per_ms": [
+      24
+    ],
+    "max_real_eigenvalue_per_ms": [
+      24
+    ],
+    "euler_spectral_radius": [
+      24
+    ],
+    "clock": [
+      132
+    ],
+    "stimulus": [
+      132
+    ],
+    "tonic": [
+      132
+    ]
+  },
+  "derived/topology/fig08_six_position_fixed_points_branch0.npz": {
+    "endpoints": [
+      6,
+      132
+    ],
+    "conditions": [
+      6,
+      3
+    ],
+    "center": [
+      132
+    ],
+    "basis": [
+      132,
+      3
+    ],
+    "evr": [
+      6
+    ]
+  },
+  "derived/topology/fig08_six_position_fixed_points_branch1.npz": {
+    "endpoints": [
+      6,
+      132
+    ],
+    "conditions": [
+      6,
+      3
+    ],
+    "center": [
+      132
+    ],
+    "basis": [
+      132,
+      3
+    ],
+    "evr": [
+      6
+    ]
+  },
+  "derived/topology/fig08_six_position_fixed_points_branch2.npz": {
+    "endpoints": [
+      6,
+      132
+    ],
+    "conditions": [
+      6,
+      3
+    ],
+    "center": [
+      132
+    ],
+    "basis": [
+      132,
+      3
+    ],
+    "evr": [
+      6
+    ]
+  },
+  "derived/topology/fig08_six_position_fixed_points_branch3.npz": {
+    "endpoints": [
+      6,
+      132
+    ],
+    "conditions": [
+      6,
+      3
+    ],
+    "center": [
+      132
+    ],
+    "basis": [
+      132,
+      3
+    ],
+    "evr": [
+      6
+    ]
+  },
+  "derived/topology/fig09_stage_perturbation_v3.npz": {
+    "control": [
+      24,
+      663,
+      132
+    ],
+    "perturbed": [
+      4,
+      3,
+      24,
+      663,
+      132
+    ],
+    "times_ms": [
+      663
+    ],
+    "stages": [
+      4
+    ],
+    "seeds": [
+      3
+    ],
+    "onsets_ms": [
+      4
+    ],
+    "pulse_mask": [
+      4,
+      663
+    ],
+    "directions": [
+      3,
+      132
+    ],
+    "actual_current_rms": [
+      4,
+      3
+    ],
+    "integrated_rms_ms": [
+      4,
+      3
+    ],
+    "base_stimulus": [
+      24,
+      663,
+      132
+    ],
+    "clock": [
+      24,
+      663,
+      132
+    ],
+    "tonic": [
+      132
+    ],
+    "conditions": [
+      24,
+      3
+    ],
+    "neuron_labels": [
+      132
+    ]
+  }
+}

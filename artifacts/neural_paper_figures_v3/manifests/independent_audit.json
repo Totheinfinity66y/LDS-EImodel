@@ -1,0 +1,1245 @@
+{
+  "reviewer": "independent_audit (no implementation edits)",
+  "commit": "971704664740ecad33ea2a8d3ae30fb8ab964ee1",
+  "protected_source": {
+    "handcrafted_ei/model/connectivity.py": {
+      "archived": "648f5f4248c9a0d543846026850aa2f314e528764f61ca5faaab5e494b3ca795",
+      "current": "648f5f4248c9a0d543846026850aa2f314e528764f61ca5faaab5e494b3ca795",
+      "matches": true
+    },
+    "handcrafted_ei/model/ei_network.py": {
+      "archived": "c04644e0bee730d5cbfd87d9b4d10a213b2d753071f193b1969822b7f1d42ce0",
+      "current": "c04644e0bee730d5cbfd87d9b4d10a213b2d753071f193b1969822b7f1d42ce0",
+      "matches": true
+    },
+    "handcrafted_ei/model/location_encoding.py": {
+      "archived": "ba432e9bbdbc908c1ebe7b85d1f18bf132fb4ad78a3f463697573f948b6d95c1",
+      "current": "ba432e9bbdbc908c1ebe7b85d1f18bf132fb4ad78a3f463697573f948b6d95c1",
+      "matches": true
+    },
+    "handcrafted_ei/model/neuron.py": {
+      "archived": "3df2ba64dc92bfe2db41a3081a829c077f945856686e68101558bf86d27b5c54",
+      "current": "3df2ba64dc92bfe2db41a3081a829c077f945856686e68101558bf86d27b5c54",
+      "matches": true
+    },
+    "handcrafted_ei/model/__init__.py": {
+      "archived": "958eafc191acdc42276e1a83d9d407a1bf6f6b2546674bfb19aa40addd930cf4",
+      "current": "958eafc191acdc42276e1a83d9d407a1bf6f6b2546674bfb19aa40addd930cf4",
+      "matches": true
+    },
+    "handcrafted_ei/simulation/__init__.py": {
+      "archived": "d11e4fd0eed0197410f939c2a0f0fe7f7e919a37be4dfb2343d764de964c3778",
+      "current": "d11e4fd0eed0197410f939c2a0f0fe7f7e919a37be4dfb2343d764de964c3778",
+      "matches": true
+    },
+    "handcrafted_ei/task/__init__.py": {
+      "archived": "755998fae22efd7f06b9ce6c44772fff3452b7a7019341eb603f0237b493020b",
+      "current": "755998fae22efd7f06b9ce6c44772fff3452b7a7019341eb603f0237b493020b",
+      "matches": true
+    },
+    "handcrafted_ei/config/baseline.yaml": {
+      "archived": "c442d2707a569e5300c8da9a136ab2c660489a077691d5f10ce5e694fa103356",
+      "current": "c442d2707a569e5300c8da9a136ab2c660489a077691d5f10ce5e694fa103356",
+      "matches": true
+    }
+  },
+  "encodings": {
+    "one_hot": {
+      "recording_shape": [
+        24,
+        663,
+        132
+      ],
+      "archive_equality_error": 0.0,
+      "inputs": {
+        "artifacts\\neural_representation_v2\\data\\one_hot\\recording.npz": "9b39dfcd040827662dac12d764cc9ef0540680d5edfbc820261aa4ffecbff466",
+        "artifacts\\neural_representation_v2\\data\\one_hot\\metadata.json": "da44e34fcea5b7d2e704ba6845b9b21e73a60f536a90a4a4ee71ba7e5b346147",
+        "handcrafted_ei\\artifacts\\v2\\run\\one_hot__baseline.zip": "70b419e3203742c38f0a1b05b2ba40bf8c1ed29e92c56721eae51097d2a4573f"
+      },
+      "geometry": {
+        "balanced_fixed_L": true,
+        "fixed_basis_rank": 4,
+        "R3_branch_variance_2d": 0.3666879623836658,
+        "angle_rows_verbatim": 6,
+        "whole_max_rank": 5,
+        "response_max_rank": 5,
+        "folded_max_rank": 5
+      },
+      "fixed_points": {
+        "count": 24,
+        "max_full_residual_per_ms": 4.275570176061969e-11,
+        "max_finite_difference_Jacobian_error": 3.174387835924719e-11,
+        "kinks_per_point": 13,
+        "strict_smooth_stability": false,
+        "piecewise_cascade_certificate_reported": true,
+        "warning": "Smooth eigenvalues alone are not a kink stability proof; separate cascade certificate is required."
+      },
+      "basin": {
+        "shape": [
+          4,
+          3,
+          441
+        ],
+        "legal_count": 2772,
+        "class_counts_by_branch": {
+          "0": {
+            "0": 54,
+            "3": 639
+          },
+          "1": {
+            "0": 54,
+            "3": 639
+          },
+          "2": {
+            "0": 54,
+            "3": 639
+          },
+          "3": {
+            "0": 54,
+            "3": 639
+          }
+        },
+        "sample_replays": 12,
+        "all_endpoints_full_field_classification": true
+      },
+      "stage_pulse": {
+        "shape": [
+          4,
+          3,
+          24,
+          663,
+          132
+        ],
+        "paired_histories": 288,
+        "independent_control_and_pulse_replays": 4,
+        "zero_pulse_replays": 4,
+        "max_replay_error": 1.1102230246251565e-16,
+        "duration_ms": 50,
+        "current_rms": 0.25,
+        "all_288_readouts_intermediate_flags_and_doses_recomputed": true
+      },
+      "input_projection": {
+        "source_time_7": 1.7763568394002505e-15,
+        "source_time_11": 2.7755575615628914e-17,
+        "source_time_19": 5.551115123125783e-17,
+        "R3_fixed_clock_7": 8.881784197001252e-16,
+        "R3_fixed_clock_11": 8.881784197001252e-16,
+        "R3_fixed_clock_19": 2.220446049250313e-16
+      }
+    },
+    "ring": {
+      "recording_shape": [
+        24,
+        663,
+        132
+      ],
+      "archive_equality_error": 0.0,
+      "inputs": {
+        "artifacts\\neural_representation_v2\\data\\ring\\recording.npz": "f2758f41fa4ac1d4c96f9b7fe9c7227d0c55438a5adcdf57b9a2060a5315d2f0",
+        "artifacts\\neural_representation_v2\\data\\ring\\metadata.json": "92e30371bf845b04ca7949d8ceb8b99e400a1ebce2177371c4cd47ed3473a46d",
+        "handcrafted_ei\\artifacts\\v2\\run\\ring__baseline.zip": "cbd1b6d070d3162d072edf6350fc796b124b5f034278f61b3d72db884f2d348c"
+      },
+      "geometry": {
+        "balanced_fixed_L": true,
+        "fixed_basis_rank": 4,
+        "R3_branch_variance_2d": 0.3666879623836658,
+        "angle_rows_verbatim": 6,
+        "whole_max_rank": 5,
+        "response_max_rank": 5,
+        "folded_max_rank": 5
+      },
+      "fixed_points": {
+        "count": 24,
+        "max_full_residual_per_ms": 4.275570176061969e-11,
+        "max_finite_difference_Jacobian_error": 3.174387835924719e-11,
+        "kinks_per_point": 13,
+        "strict_smooth_stability": false,
+        "piecewise_cascade_certificate_reported": true,
+        "warning": "Smooth eigenvalues alone are not a kink stability proof; separate cascade certificate is required."
+      },
+      "basin": {
+        "shape": [
+          4,
+          3,
+          441
+        ],
+        "legal_count": 2772,
+        "class_counts_by_branch": {
+          "0": {
+            "0": 54,
+            "3": 639
+          },
+          "1": {
+            "0": 54,
+            "3": 639
+          },
+          "2": {
+            "0": 54,
+            "3": 639
+          },
+          "3": {
+            "0": 54,
+            "3": 639
+          }
+        },
+        "sample_replays": 12,
+        "all_endpoints_full_field_classification": true
+      },
+      "stage_pulse": {
+        "shape": [
+          4,
+          3,
+          24,
+          663,
+          132
+        ],
+        "paired_histories": 288,
+        "independent_control_and_pulse_replays": 4,
+        "zero_pulse_replays": 4,
+        "max_replay_error": 1.1102230246251565e-16,
+        "duration_ms": 50,
+        "current_rms": 0.25,
+        "all_288_readouts_intermediate_flags_and_doses_recomputed": true
+      },
+      "input_projection": {
+        "source_time_7": 4.440892098500626e-15,
+        "source_time_11": 5.551115123125783e-17,
+        "source_time_19": 1.1102230246251565e-16,
+        "R3_fixed_clock_7": 8.881784197001252e-16,
+        "R3_fixed_clock_11": 8.881784197001252e-16,
+        "R3_fixed_clock_19": 2.220446049250313e-16
+      }
+    },
+    "topology": {
+      "recording_shape": [
+        24,
+        663,
+        132
+      ],
+      "archive_equality_error": 0.0,
+      "inputs": {
+        "artifacts\\neural_representation_v2\\data\\topology\\recording.npz": "aaf47c6612a5c5f9b0d9f747e013511045b86e52e2f9215b75a6f9878f8b6ffc",
+        "artifacts\\neural_representation_v2\\data\\topology\\metadata.json": "96f6ce6b5aa2c8e6b268cb115ebc545a2b694f594b2d5cca51c617622d57e82a",
+        "handcrafted_ei\\artifacts\\v2\\run\\topology__baseline.zip": "b1f1ef777f1e49a71454ad3137c8c811e964d55a01ab8e6c778a5a10a3dcab1f"
+      },
+      "geometry": {
+        "balanced_fixed_L": true,
+        "fixed_basis_rank": 4,
+        "R3_branch_variance_2d": 0.3666879623836658,
+        "angle_rows_verbatim": 6,
+        "whole_max_rank": 5,
+        "response_max_rank": 5,
+        "folded_max_rank": 5
+      },
+      "fixed_points": {
+        "count": 24,
+        "max_full_residual_per_ms": 4.275570176061969e-11,
+        "max_finite_difference_Jacobian_error": 3.174387835924719e-11,
+        "kinks_per_point": 13,
+        "strict_smooth_stability": false,
+        "piecewise_cascade_certificate_reported": true,
+        "warning": "Smooth eigenvalues alone are not a kink stability proof; separate cascade certificate is required."
+      },
+      "basin": {
+        "shape": [
+          4,
+          3,
+          441
+        ],
+        "legal_count": 2772,
+        "class_counts_by_branch": {
+          "0": {
+            "0": 54,
+            "3": 639
+          },
+          "1": {
+            "0": 54,
+            "3": 639
+          },
+          "2": {
+            "0": 54,
+            "3": 639
+          },
+          "3": {
+            "0": 54,
+            "3": 639
+          }
+        },
+        "sample_replays": 12,
+        "all_endpoints_full_field_classification": true
+      },
+      "stage_pulse": {
+        "shape": [
+          4,
+          3,
+          24,
+          663,
+          132
+        ],
+        "paired_histories": 288,
+        "independent_control_and_pulse_replays": 4,
+        "zero_pulse_replays": 4,
+        "max_replay_error": 1.1102230246251565e-16,
+        "duration_ms": 50,
+        "current_rms": 0.25,
+        "all_288_readouts_intermediate_flags_and_doses_recomputed": true
+      },
+      "input_projection": {
+        "source_time_7": 4.440892098500626e-15,
+        "source_time_11": 5.551115123125783e-17,
+        "source_time_19": 1.1102230246251565e-16,
+        "R3_fixed_clock_7": 8.881784197001252e-16,
+        "R3_fixed_clock_11": 8.881784197001252e-16,
+        "R3_fixed_clock_19": 2.220446049250313e-16
+      }
+    }
+  },
+  "input_and_analysis_hashes": {
+    "handcrafted_ei\\evaluation\\paper_figure_v3_geometry.py": "f65536e8cd72c8a6cec771794a62474a0418a4991d62168f16466ed5d315a4ba",
+    "handcrafted_ei\\evaluation\\paper_v3_dynamics.py": "6f6647fa557fc4308e3d57e5eb78637991380f92f637700a74ed2e6e5eae4865",
+    "handcrafted_ei\\visualization\\paper_v3.py": "eff1884ff080cc1d560728d00cd80df4ddb5fc8eb5432ec96828830f5f59dcbe",
+    "artifacts\\neural_paper_figures_v3\\reports\\independent_check.py": "fb3ba42fd1a8b3cfd8193acb846b31d164bcf7e4c96b086a8615077ecccd2737",
+    "handcrafted_ei/visualization/paper_v3_reports.py": "61b608fad1d575dab0a6e99a0da86b2c6e53d0adf79c4c02ba25561858048afc"
+  },
+  "protected_source_after": {
+    "handcrafted_ei/model/connectivity.py": {
+      "archived": "648f5f4248c9a0d543846026850aa2f314e528764f61ca5faaab5e494b3ca795",
+      "current": "648f5f4248c9a0d543846026850aa2f314e528764f61ca5faaab5e494b3ca795",
+      "matches": true
+    },
+    "handcrafted_ei/model/ei_network.py": {
+      "archived": "c04644e0bee730d5cbfd87d9b4d10a213b2d753071f193b1969822b7f1d42ce0",
+      "current": "c04644e0bee730d5cbfd87d9b4d10a213b2d753071f193b1969822b7f1d42ce0",
+      "matches": true
+    },
+    "handcrafted_ei/model/location_encoding.py": {
+      "archived": "ba432e9bbdbc908c1ebe7b85d1f18bf132fb4ad78a3f463697573f948b6d95c1",
+      "current": "ba432e9bbdbc908c1ebe7b85d1f18bf132fb4ad78a3f463697573f948b6d95c1",
+      "matches": true
+    },
+    "handcrafted_ei/model/neuron.py": {
+      "archived": "3df2ba64dc92bfe2db41a3081a829c077f945856686e68101558bf86d27b5c54",
+      "current": "3df2ba64dc92bfe2db41a3081a829c077f945856686e68101558bf86d27b5c54",
+      "matches": true
+    },
+    "handcrafted_ei/model/__init__.py": {
+      "archived": "958eafc191acdc42276e1a83d9d407a1bf6f6b2546674bfb19aa40addd930cf4",
+      "current": "958eafc191acdc42276e1a83d9d407a1bf6f6b2546674bfb19aa40addd930cf4",
+      "matches": true
+    },
+    "handcrafted_ei/simulation/__init__.py": {
+      "archived": "d11e4fd0eed0197410f939c2a0f0fe7f7e919a37be4dfb2343d764de964c3778",
+      "current": "d11e4fd0eed0197410f939c2a0f0fe7f7e919a37be4dfb2343d764de964c3778",
+      "matches": true
+    },
+    "handcrafted_ei/task/__init__.py": {
+      "archived": "755998fae22efd7f06b9ce6c44772fff3452b7a7019341eb603f0237b493020b",
+      "current": "755998fae22efd7f06b9ce6c44772fff3452b7a7019341eb603f0237b493020b",
+      "matches": true
+    },
+    "handcrafted_ei/config/baseline.yaml": {
+      "archived": "c442d2707a569e5300c8da9a136ab2c660489a077691d5f10ce5e694fa103356",
+      "current": "c442d2707a569e5300c8da9a136ab2c660489a077691d5f10ce5e694fa103356",
+      "matches": true
+    }
+  },
+  "reused_artifacts_independently_hash_checked": 105,
+  "derived_and_figure_sha256": {
+    "derived\\comparison\\fig10_cache.json": "b10124fb9b0e302c51ff4aa8e15ba02ba2f1b1753f9a6b09c6dc2bb5cadf97c3",
+    "derived\\comparison\\fig10_common_basis.npz": "f1a299db961248eb3b8824b2d6e8a034a64e9a74d8ef61f590f393221c0d31e6",
+    "derived\\comparison\\fig10_encoding_comparison.csv": "afb680bfd3e47df09e1cff17a8f61a1da867a7b7258d0320d809b66b6bc2f736",
+    "derived\\comparison\\fig10_matched_current_full.npz": "1a85200adb1f802f5242781878793af682b1e87f3f91cc3dd3f0f90ac76cec0c",
+    "derived\\comparison\\fig10_raw_noise_doses.csv": "cb54df02b5a37c593bad79c211fd2d0e73b4a505e99e893a80d78d75b899e4f8",
+    "derived\\numerical_summary.csv": "3656d82ad9da106f7b9c9bbb2378fe4d1ac5b37130cce90c9f7273caadca67d7",
+    "derived\\one_hot\\fig01_population_activity.npz": "a6a5d71fae7b4c06582886245f2059eb2502bdb100fefea4f4744d4bf400865d",
+    "derived\\one_hot\\fig01_stage_branch_position.csv": "2ab3b49d1a19f73f3cb94fd89c344d27c9f11eb31133e3931cb03ddcb2fbf99d",
+    "derived\\one_hot\\fig02_branch_dynamics.csv": "7526f036ff128d88ab6a5edb2a9d6ecd64a51b963bd2b37efcf2c2685ec37793",
+    "derived\\one_hot\\fig02_branch_dynamics.npz": "a48f4355038708ee200e5e55f7e63965d20a372df999fe0ecfeff858f067e3e0",
+    "derived\\one_hot\\fig03_feedback_controls.npz": "54c87587988e35614364ac6d7b280ee597174f72ab1199ff8139188c7670333b",
+    "derived\\one_hot\\fig03_handoff_axes.npz": "81dc8fb66d450b229ed7c2f6a7a58752cf405487f97e1e332a4ceb0394abfddb",
+    "derived\\one_hot\\fig03_temporal_ablation.csv": "e8281ef6016cd3011a18102e328d45bf741f5c1136bb8e0216ba67fa85fe0509",
+    "derived\\one_hot\\fig04_trajectories.npz": "7738c6aabd5cc12b65f132ffdc6cf985735848990af8c8cf679b88f7ea392c61",
+    "derived\\one_hot\\fig05_principal_angle_spectra.csv": "42041a9f6376c42393dc677938fe8309af71cc7cf58f52a72e775b5212b9b85c",
+    "derived\\one_hot\\fig05_time_resolved_geometry.npz": "d9e82aa3f6c188bc667b69571907cf19a00172c5e2cc91dd32c25b08759823fc",
+    "derived\\one_hot\\fig06_position_stability.csv": "df8ad7d83376dd3903a94c0be30a24d85a047ec9d59c8789b419c6a1b2a2dcd0",
+    "derived\\one_hot\\fig06_position_stability.npz": "e806ac1617a067d777ba957fbcdc1b53026fd6197cba4c58200d53967b07206f",
+    "derived\\one_hot\\fig07_branch_decoding.csv": "3d366633cac88f4322365e4a41d20c2593df2cfeee3aadad28903a942e204c74",
+    "derived\\one_hot\\fig07_branch_decoding.npz": "9c9eb193528b52584f5939544496e0545087f5d871993e446d2e8be27d57210d",
+    "derived\\one_hot\\fig07_branch_decoding_splits.json": "a5151b5c22d0364e974cd964d86a10bef8f62d7e0753558210956c21d4ffa844",
+    "derived\\one_hot\\fig08_basin_slices_v3.npz": "010fcb7adb5fb687af4a8f5b25d166afffdeab5a783dabe45b844ee12cc61498",
+    "derived\\one_hot\\fig08_endpoint_classes.csv": "17950c2e983eea18ca51d1aa5208ee4281f28ee390c6791e8bc52e4a42ede6fc",
+    "derived\\one_hot\\fig08_six_position_fixed_points.npz": "845e8a08f4549476be94d0d9397a6823b9952deed3eac9ee0682a1e19d6677f7",
+    "derived\\one_hot\\fig08_six_position_fixed_points_branch0.npz": "7e7443ffb4ecd54a20eb7857f41b519f28a0058d8971abc16c5382c219ecce21",
+    "derived\\one_hot\\fig08_six_position_fixed_points_branch1.npz": "2a6a46f8f141aa9c618ffde0cff350f4141c5855a2a6544a9fd04ce56dad838d",
+    "derived\\one_hot\\fig08_six_position_fixed_points_branch2.npz": "479b40f3b5ee16e2a4e6b73a3e8c46fe426244b60b96937ea96a5ffad6f38795",
+    "derived\\one_hot\\fig08_six_position_fixed_points_branch3.npz": "e54a2853d8376fb5d61e6ee666c46a6cfb78dbbc75a907c4c86542f0bd7fe00d",
+    "derived\\one_hot\\fig08_v3_fixed_point_certificates.csv": "190d72320487305ad559aa73b395592bc20320639ff3d75dd27a00fd007b5114",
+    "derived\\one_hot\\fig08_v3_manifest.json": "43f2335531f2c43f2d9822f80f979f85de4959e95fb23da6f8a0a5e71e11e6a2",
+    "derived\\one_hot\\fig09_existing_input_classification.csv": "081b20752d556ae0af3c7f355444f5722d36e8908da0a07cf51ba05a9167097f",
+    "derived\\one_hot\\fig09_perturbation_classification.csv": "33d76d43121a250ee82735c1655bb78db862b49c271e0f43f841bd469ccef6ef",
+    "derived\\one_hot\\fig09_stage_perturbation_v3.npz": "95d25c614822391d660e8e09046ffd7127329919b569fc61272a93505734758b",
+    "derived\\one_hot\\fig09_state_kick_classification.csv": "2bc63d8474473e10bb37886f4bb473deb83e34298e2093108c0cd60caa64bd07",
+    "derived\\one_hot\\fig09_v3_manifest.json": "cc690d458560522237ac976fbff1e665e542132da1a966a504eb6f47a6aa5d82",
+    "derived\\ring\\fig01_population_activity.npz": "787172c50580872cfa3c100d400bd864b3e1806b1574a4879322ca2efe87dc87",
+    "derived\\ring\\fig01_stage_branch_position.csv": "2ab3b49d1a19f73f3cb94fd89c344d27c9f11eb31133e3931cb03ddcb2fbf99d",
+    "derived\\ring\\fig02_branch_dynamics.csv": "9f9366122ef2f776cb73b8cb9da79caa7c4de42111ebe631410e36ef7138987e",
+    "derived\\ring\\fig02_branch_dynamics.npz": "4595a9ca75b6b708c4a27407923fe6a15e42a2a3876bc9545d84d346d70fc70c",
+    "derived\\ring\\fig03_feedback_controls.npz": "54c87587988e35614364ac6d7b280ee597174f72ab1199ff8139188c7670333b",
+    "derived\\ring\\fig03_handoff_axes.npz": "81dc8fb66d450b229ed7c2f6a7a58752cf405487f97e1e332a4ceb0394abfddb",
+    "derived\\ring\\fig03_temporal_ablation.csv": "e8281ef6016cd3011a18102e328d45bf741f5c1136bb8e0216ba67fa85fe0509",
+    "derived\\ring\\fig04_trajectories.npz": "247e5fdaaea1f2244f2446fc19f5e0615466e62c28ccfdc943328dcca07f8faf",
+    "derived\\ring\\fig05_principal_angle_spectra.csv": "42041a9f6376c42393dc677938fe8309af71cc7cf58f52a72e775b5212b9b85c",
+    "derived\\ring\\fig05_time_resolved_geometry.npz": "6dd017089ca64a0b63a0d4047edec8bee086e2394641a9c551904498808ecc12",
+    "derived\\ring\\fig06_position_stability.csv": "e9dd6593fff830c44d501b6f2104c6073f09d939b2958fc54acaff76fc381dcc",
+    "derived\\ring\\fig06_position_stability.npz": "64434bd6c8181a96298aa3c998d52e27e05d4c120a4b9068b37ae4abd4a2f633",
+    "derived\\ring\\fig07_branch_decoding.csv": "3d366633cac88f4322365e4a41d20c2593df2cfeee3aadad28903a942e204c74",
+    "derived\\ring\\fig07_branch_decoding.npz": "9c9eb193528b52584f5939544496e0545087f5d871993e446d2e8be27d57210d",
+    "derived\\ring\\fig07_branch_decoding_splits.json": "a5151b5c22d0364e974cd964d86a10bef8f62d7e0753558210956c21d4ffa844",
+    "derived\\ring\\fig08_basin_slices_v3.npz": "010fcb7adb5fb687af4a8f5b25d166afffdeab5a783dabe45b844ee12cc61498",
+    "derived\\ring\\fig08_endpoint_classes.csv": "34150af1ae7dadca5c3bc37b9f98b5544177a63af9bb131d62cfa473210c773a",
+    "derived\\ring\\fig08_six_position_fixed_points.npz": "845e8a08f4549476be94d0d9397a6823b9952deed3eac9ee0682a1e19d6677f7",
+    "derived\\ring\\fig08_six_position_fixed_points_branch0.npz": "7e7443ffb4ecd54a20eb7857f41b519f28a0058d8971abc16c5382c219ecce21",
+    "derived\\ring\\fig08_six_position_fixed_points_branch1.npz": "2a6a46f8f141aa9c618ffde0cff350f4141c5855a2a6544a9fd04ce56dad838d",
+    "derived\\ring\\fig08_six_position_fixed_points_branch2.npz": "479b40f3b5ee16e2a4e6b73a3e8c46fe426244b60b96937ea96a5ffad6f38795",
+    "derived\\ring\\fig08_six_position_fixed_points_branch3.npz": "e54a2853d8376fb5d61e6ee666c46a6cfb78dbbc75a907c4c86542f0bd7fe00d",
+    "derived\\ring\\fig08_v3_fixed_point_certificates.csv": "190d72320487305ad559aa73b395592bc20320639ff3d75dd27a00fd007b5114",
+    "derived\\ring\\fig08_v3_manifest.json": "26ab99cf3cb36ba480c74f6a416afda54121963b7e803d92d1c6b862d17d703e",
+    "derived\\ring\\fig09_existing_input_classification.csv": "11be2e96811c4a0cd3fc3e638275ee3f18927d542e84e564886a5e586e3dc57b",
+    "derived\\ring\\fig09_perturbation_classification.csv": "a2c5c636a90560aa8414f765e03ba1649ed1fa973f945a3c3c47f485202405cc",
+    "derived\\ring\\fig09_stage_perturbation_v3.npz": "0c498c149b9ca94000d6a6c1dc433dcb1e7aed7c6768ddf4159ba778f492cb28",
+    "derived\\ring\\fig09_state_kick_classification.csv": "c5f483385ee6be0d8e4912022c3963df50f325f02ba50c1da8b9c5f83ab97746",
+    "derived\\ring\\fig09_v3_manifest.json": "c1aa5ddf593d6ddca6c095bb422a0fea5ff9770ac838476cda39f131f9e5ade9",
+    "derived\\topology\\fig01_population_activity.npz": "787172c50580872cfa3c100d400bd864b3e1806b1574a4879322ca2efe87dc87",
+    "derived\\topology\\fig01_stage_branch_position.csv": "2ab3b49d1a19f73f3cb94fd89c344d27c9f11eb31133e3931cb03ddcb2fbf99d",
+    "derived\\topology\\fig02_branch_dynamics.csv": "9f9366122ef2f776cb73b8cb9da79caa7c4de42111ebe631410e36ef7138987e",
+    "derived\\topology\\fig02_branch_dynamics.npz": "4595a9ca75b6b708c4a27407923fe6a15e42a2a3876bc9545d84d346d70fc70c",
+    "derived\\topology\\fig03_feedback_controls.npz": "54c87587988e35614364ac6d7b280ee597174f72ab1199ff8139188c7670333b",
+    "derived\\topology\\fig03_handoff_axes.npz": "81dc8fb66d450b229ed7c2f6a7a58752cf405487f97e1e332a4ceb0394abfddb",
+    "derived\\topology\\fig03_temporal_ablation.csv": "e8281ef6016cd3011a18102e328d45bf741f5c1136bb8e0216ba67fa85fe0509",
+    "derived\\topology\\fig04_trajectories.npz": "247e5fdaaea1f2244f2446fc19f5e0615466e62c28ccfdc943328dcca07f8faf",
+    "derived\\topology\\fig05_principal_angle_spectra.csv": "42041a9f6376c42393dc677938fe8309af71cc7cf58f52a72e775b5212b9b85c",
+    "derived\\topology\\fig05_time_resolved_geometry.npz": "6dd017089ca64a0b63a0d4047edec8bee086e2394641a9c551904498808ecc12",
+    "derived\\topology\\fig06_position_stability.csv": "e9dd6593fff830c44d501b6f2104c6073f09d939b2958fc54acaff76fc381dcc",
+    "derived\\topology\\fig06_position_stability.npz": "64434bd6c8181a96298aa3c998d52e27e05d4c120a4b9068b37ae4abd4a2f633",
+    "derived\\topology\\fig07_branch_decoding.csv": "3d366633cac88f4322365e4a41d20c2593df2cfeee3aadad28903a942e204c74",
+    "derived\\topology\\fig07_branch_decoding.npz": "9c9eb193528b52584f5939544496e0545087f5d871993e446d2e8be27d57210d",
+    "derived\\topology\\fig07_branch_decoding_splits.json": "a5151b5c22d0364e974cd964d86a10bef8f62d7e0753558210956c21d4ffa844",
+    "derived\\topology\\fig08_basin_slices_v3.npz": "010fcb7adb5fb687af4a8f5b25d166afffdeab5a783dabe45b844ee12cc61498",
+    "derived\\topology\\fig08_endpoint_classes.csv": "9d699872b821f7672d03749173c6d9f62ae8305e33fce0f0bcc4131ccddb9d55",
+    "derived\\topology\\fig08_six_position_fixed_points.npz": "845e8a08f4549476be94d0d9397a6823b9952deed3eac9ee0682a1e19d6677f7",
+    "derived\\topology\\fig08_six_position_fixed_points_branch0.npz": "7e7443ffb4ecd54a20eb7857f41b519f28a0058d8971abc16c5382c219ecce21",
+    "derived\\topology\\fig08_six_position_fixed_points_branch1.npz": "2a6a46f8f141aa9c618ffde0cff350f4141c5855a2a6544a9fd04ce56dad838d",
+    "derived\\topology\\fig08_six_position_fixed_points_branch2.npz": "479b40f3b5ee16e2a4e6b73a3e8c46fe426244b60b96937ea96a5ffad6f38795",
+    "derived\\topology\\fig08_six_position_fixed_points_branch3.npz": "e54a2853d8376fb5d61e6ee666c46a6cfb78dbbc75a907c4c86542f0bd7fe00d",
+    "derived\\topology\\fig08_v3_fixed_point_certificates.csv": "190d72320487305ad559aa73b395592bc20320639ff3d75dd27a00fd007b5114",
+    "derived\\topology\\fig08_v3_manifest.json": "983bcaf5352bfd5d73ba4340dbae23973a7fc8d4c981d6245f126db6ad1d480e",
+    "derived\\topology\\fig09_existing_input_classification.csv": "63a930dceaadd236588bb6a1713c751558e042a4e03e63bfd78de512f38a6e9a",
+    "derived\\topology\\fig09_perturbation_classification.csv": "b57dea19001528957495a9b9cf0e68f59c0ac15d0c97784027c81bbe1661f17a",
+    "derived\\topology\\fig09_stage_perturbation_v3.npz": "73cdb6eb8b54e0de9b3e9865f9a23beaf52725f017c85e235d9e2d08eb0f7a1b",
+    "derived\\topology\\fig09_state_kick_classification.csv": "2bc63d8474473e10bb37886f4bb473deb83e34298e2093108c0cd60caa64bd07",
+    "derived\\topology\\fig09_v3_manifest.json": "7ded1aa6de11c005b9cd616da8b22bfd900e616564955a2d72de3c0fdae3e442",
+    "figures\\main\\fig01_one_hot.pdf": "ee1e19215b75cef3681ab320f6d65ee9d85093891b881d7ef459642405fe1f6a",
+    "figures\\main\\fig01_one_hot.png": "748f511b015967c97339e8ad87ada8abdde27a271e1c1cbe3ebb22047cf1bf8c",
+    "figures\\main\\fig01_one_hot.svg": "1fcfa4269e64b92426289d341673429b78a13fab66f0383571380adc243f00eb",
+    "figures\\main\\fig01_one_hot_caption.md": "b046a88aee84352eb1c9dc0157760a2ed1a1286dbf5b04dfb1fbfd84a07f4f12",
+    "figures\\main\\fig02_one_hot.pdf": "3a875379bcefb804736b0ab63ee644c71dbc8297a084bf815d81740ccc238d50",
+    "figures\\main\\fig02_one_hot.png": "c518ad7a077b59f063bce3d66c68c2dc415c52b3efce54df550e82ca4ad972cb",
+    "figures\\main\\fig02_one_hot.svg": "d6646378b7c3f9b87bfa488d79521376c7900cde27fa6dbaf3e611f87c89949f",
+    "figures\\main\\fig02_one_hot_caption.md": "58a5ff37ed6077d98e5fbf5a849e0aac78960e6cf2bbcc3469297c1d60dcd9f4",
+    "figures\\main\\fig03_one_hot.pdf": "4746470030fde7a886af673d3070a6710eb9b980322d219b94773ee6bb7902ad",
+    "figures\\main\\fig03_one_hot.png": "6c3efb808a5d0f35d76979d41172c637ff2bd892c5af596ed44eafdb1008384d",
+    "figures\\main\\fig03_one_hot.svg": "e5d8d61863a7fecf49bf5e047b85af6bf82bbd8a57796aee94291d30245d5d39",
+    "figures\\main\\fig03_one_hot_caption.md": "8fe9d15b85fcef86b5282e9327b19ac728d56588e5cc63ba162312a3a2d21bf2",
+    "figures\\main\\fig04_one_hot_decompression_trajectories.caption.md": "8d25058be54881f0c4e52684e89492dfdf27bbca92ee868f2c715421b6f7fe87",
+    "figures\\main\\fig04_one_hot_decompression_trajectories.pdf": "a9f9c00791c207aef7b9251bfc73e77a479938e2901551ebf3489fc46669260c",
+    "figures\\main\\fig04_one_hot_decompression_trajectories.png": "ed87cff6ce056391c8656576f37936e8e499204b975be3e07ce426091a826d1c",
+    "figures\\main\\fig04_one_hot_decompression_trajectories.svg": "613398f2ebd7b72786de74444ac6c369e6a8741465224a8b6558245ed0d7ef05",
+    "figures\\main\\fig05_one_hot_branch_subspaces.caption.md": "ed203ff5bbf024c78f87172c7dd1d86763bf2523a6d429df66267c6d89c921e4",
+    "figures\\main\\fig05_one_hot_branch_subspaces.pdf": "6425a84c3e75414fb8add842e781ffe3ce1dbc8266ea77c3ceffc3997e33439d",
+    "figures\\main\\fig05_one_hot_branch_subspaces.png": "8c0e34216fb8536cd1fc6159aac23952f936f6118f44bc13ffa483f6be91ec09",
+    "figures\\main\\fig05_one_hot_branch_subspaces.svg": "57d1b00475cce57f6bab7b0a3239f137500014b67a10ee36b553732cf09668fc",
+    "figures\\main\\fig06_one_hot.pdf": "21bbd1310dc7c02bf2ce7cd5eae17d5620508dcb89bc745450d20ceea05baeb4",
+    "figures\\main\\fig06_one_hot.png": "272d8278ea9ae2f707ac151b10e1ee819bedaf10e246b6a9442798d0febc6215",
+    "figures\\main\\fig06_one_hot.svg": "224f687bf0a5c7a9d98c2ca747c82eea54fdf5b894978630ad51284e2363c6ac",
+    "figures\\main\\fig06_one_hot_caption.md": "ce127a1fabe5bcfb1ee6fee003db58b0deb64315e4f14c309dbf8297b51af1e0",
+    "figures\\main\\fig07_one_hot.pdf": "31790da0c4378e5db1b0a4b868dcf4a50c94c8ca6624125636c3744b0096a41c",
+    "figures\\main\\fig07_one_hot.png": "76913714ce9be0f136228cca83f8b6a21a70422e2f1a4c31303574a66124009f",
+    "figures\\main\\fig07_one_hot.svg": "6fe4ee83686c2302affa4d665a18a924cc646489e6df9e44651f623a1adb1325",
+    "figures\\main\\fig07_one_hot_caption.md": "3462fdce72f79815bd7f0d08cc2ad898701fef03260594c5a2949caf6904a32b",
+    "figures\\main\\fig08_one_hot_six_point_attractors_branch0.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\main\\fig08_one_hot_six_point_attractors_branch0.pdf": "8616dca23dcf669e093dcc8619e5c177d23c867502400cb3bb3775eb86a5252e",
+    "figures\\main\\fig08_one_hot_six_point_attractors_branch0.png": "4221b9aa30ab551ddaa8ca005103879a12ea6bab9c56cdc70c40e3b8e28af849",
+    "figures\\main\\fig08_one_hot_six_point_attractors_branch0.svg": "5e0df687de2f54412af79e6d09b82ebf00b79032bab2b5c4847d19fa0c340783",
+    "figures\\main\\fig09_one_hot_perturbation_dynamics_source_time.caption.md": "a6bb7bb4a5085bbea172c89f8403177338eb1a0094fa225130a9ef254b843963",
+    "figures\\main\\fig09_one_hot_perturbation_dynamics_source_time.pdf": "d05018f4fae7a19c0286af72b0b0772d71bc6fe40b1b21686bae35b018281d1c",
+    "figures\\main\\fig09_one_hot_perturbation_dynamics_source_time.png": "68cf1c176f46a6d16e468810f1fdd3eb0a3d99a4d9062ba1422a47f56f0f0e6d",
+    "figures\\main\\fig09_one_hot_perturbation_dynamics_source_time.svg": "90925015d7887a7960429fe443dc8ad83bb2710fa73605963f59ed21a2205d35",
+    "figures\\main\\fig10_encoding_comparison.caption.md": "1a2cf6e627a176039afb38dfde613cd072b96018510e820dc771f2d21a8d4021",
+    "figures\\main\\fig10_encoding_comparison.pdf": "96ce0c4e2675e96015eddd947688758e353a3cc43a80103b9cf121a7d1eda251",
+    "figures\\main\\fig10_encoding_comparison.png": "59d61fd9d259583cf2f7f830b3e605d126da2b46527a04904622091c0fa87430",
+    "figures\\main\\fig10_encoding_comparison.svg": "7f7d13a11a3dc790f06d745f24db964858f79f75a47e395fc025965fd15b3f4c",
+    "figures\\supplementary\\fig01_ring.pdf": "7f6b941b60ecc153d3ac69d24429985aad6e13d114659904987e1ee269022468",
+    "figures\\supplementary\\fig01_ring.png": "acfdba64d29c2033b4f78b82216df8b16d4dfe8c62aabd3b09e136e5b8c74fed",
+    "figures\\supplementary\\fig01_ring.svg": "6d2d64ad8d2f65bacde1b2435b50f6c064f34938d70c6cc1e26b34f1e1bf066b",
+    "figures\\supplementary\\fig01_ring_caption.md": "b046a88aee84352eb1c9dc0157760a2ed1a1286dbf5b04dfb1fbfd84a07f4f12",
+    "figures\\supplementary\\fig01_topology.pdf": "c70540a08cf052c1ae5db8818b36116e05e50db851a1aa20162574e53f8dae19",
+    "figures\\supplementary\\fig01_topology.png": "2896f59f63b7679c224f9c7223a33328c5a2171d7e410fc07728936f5e32ea00",
+    "figures\\supplementary\\fig01_topology.svg": "5deb5ffae196e9f35bc170c65827d20a564943190e33929978f1cf7692a9616d",
+    "figures\\supplementary\\fig01_topology_caption.md": "b046a88aee84352eb1c9dc0157760a2ed1a1286dbf5b04dfb1fbfd84a07f4f12",
+    "figures\\supplementary\\fig02_ring.pdf": "f1a1f83f74759b08c07677f3130c57021b56a7ac0bbfd8e86e788d3e793e2be2",
+    "figures\\supplementary\\fig02_ring.png": "3ab0090e9c94c98ef507037a604728c8fd1af7861778826c12a5acc64654f4f1",
+    "figures\\supplementary\\fig02_ring.svg": "a7920ce51ca19f033872be562437e8751a1ea82b7f442e4cabb78767b846d7b1",
+    "figures\\supplementary\\fig02_ring_caption.md": "58a5ff37ed6077d98e5fbf5a849e0aac78960e6cf2bbcc3469297c1d60dcd9f4",
+    "figures\\supplementary\\fig02_topology.pdf": "50c665c8d0354f5cb95a99f12eef0e748c92a62ab8f157ce0efd2c04a49595b9",
+    "figures\\supplementary\\fig02_topology.png": "846840393ef1fd48f70622d9841bc6fa3bfd59e553c3be47e4c0e268be6bccc9",
+    "figures\\supplementary\\fig02_topology.svg": "ff2f3e354a1337728d18cd6eaf6c2226b34dc4bda430e6cd8ff92fb3484f79c4",
+    "figures\\supplementary\\fig02_topology_caption.md": "58a5ff37ed6077d98e5fbf5a849e0aac78960e6cf2bbcc3469297c1d60dcd9f4",
+    "figures\\supplementary\\fig03_ring.pdf": "3a34f17ae6b3cd4f83046451f1c9f83143bdb227cd3039c2453039ecee8a1269",
+    "figures\\supplementary\\fig03_ring.png": "1e95369fe8cd7dcb0961d6b917a4bac86a553117410e4c421bb0e07ee486155b",
+    "figures\\supplementary\\fig03_ring.svg": "e6890d8435dbd55e3a1e356180a3227b65d8b35cb7675ca746839263afb89294",
+    "figures\\supplementary\\fig03_ring_caption.md": "8fe9d15b85fcef86b5282e9327b19ac728d56588e5cc63ba162312a3a2d21bf2",
+    "figures\\supplementary\\fig03_topology.pdf": "c151ea6854220cefc92bce96d39b1fc170445cf8c682ccd422e37373b8c65ae6",
+    "figures\\supplementary\\fig03_topology.png": "52fa98be4d499f8a215ad249393598caf448732ef546b2d89ef1edc8ada70353",
+    "figures\\supplementary\\fig03_topology.svg": "6c7d7f0de26f8c0bfed17070fa5f1bb30458f3430260fbbb339d1244839e1db4",
+    "figures\\supplementary\\fig03_topology_caption.md": "8fe9d15b85fcef86b5282e9327b19ac728d56588e5cc63ba162312a3a2d21bf2",
+    "figures\\supplementary\\fig04_one_hot_global3d.caption.md": "8d25058be54881f0c4e52684e89492dfdf27bbca92ee868f2c715421b6f7fe87",
+    "figures\\supplementary\\fig04_one_hot_global3d.pdf": "ced60e4b59926ce8b1486ee7ea55df809e4766764a6c6ef8211a1c917c50d2d1",
+    "figures\\supplementary\\fig04_one_hot_global3d.png": "bd09951816330e58fa747ec73468d72c986206fc3cff6199d5090871ba29ede7",
+    "figures\\supplementary\\fig04_one_hot_global3d.svg": "48fe8877a26fb5faa77e546393df182240a93d6234be6523e4bd6029dbb83fe2",
+    "figures\\supplementary\\fig04_one_hot_transition_speed_zooms.caption.md": "8d25058be54881f0c4e52684e89492dfdf27bbca92ee868f2c715421b6f7fe87",
+    "figures\\supplementary\\fig04_one_hot_transition_speed_zooms.pdf": "5b8df97f39d4af157ea571e255715746f1283f4432e1a2a319471c19b990d085",
+    "figures\\supplementary\\fig04_one_hot_transition_speed_zooms.png": "82be9e6b83acb912a10b7c4b2dc4c70e1b2d787c4fb82dec13441e68dc8fc056",
+    "figures\\supplementary\\fig04_one_hot_transition_speed_zooms.svg": "ae76395b0a9d12152d495e0cb5d06b76d7e0b0f1212e08760c5cf4989fb9f1b0",
+    "figures\\supplementary\\fig04_ring_decompression_trajectories.caption.md": "8d25058be54881f0c4e52684e89492dfdf27bbca92ee868f2c715421b6f7fe87",
+    "figures\\supplementary\\fig04_ring_decompression_trajectories.pdf": "f81095f89d3a74d0c396075f41ff4f9d7ea07a9e6eb1d7afd8138f9aedc2c300",
+    "figures\\supplementary\\fig04_ring_decompression_trajectories.png": "ca2117c6e57a8197fc9f463b33cdd7027c7a459186e135ab749d0d2965148885",
+    "figures\\supplementary\\fig04_ring_decompression_trajectories.svg": "f1d03c72455a97c19d14a9798fa6408e83a04b1c6a40ce4311af3cf9a7741139",
+    "figures\\supplementary\\fig04_ring_global3d.caption.md": "8d25058be54881f0c4e52684e89492dfdf27bbca92ee868f2c715421b6f7fe87",
+    "figures\\supplementary\\fig04_ring_global3d.pdf": "6e6e29efb08235d5c41cf044317f0181b72433df601e87a92b9bdea4fbff1ab7",
+    "figures\\supplementary\\fig04_ring_global3d.png": "651f2c16183b4ddd001000f098602230358948b6671307bbe86dae108b1d0113",
+    "figures\\supplementary\\fig04_ring_global3d.svg": "55163472f70db8a3cc8e6c2b24909ceb87fa600cfd0593d8c3b2a9d7c41cf0f3",
+    "figures\\supplementary\\fig04_ring_transition_speed_zooms.caption.md": "8d25058be54881f0c4e52684e89492dfdf27bbca92ee868f2c715421b6f7fe87",
+    "figures\\supplementary\\fig04_ring_transition_speed_zooms.pdf": "41a7fcb6596eec2997422d20138b340692a712143245541f5c4e1375afa35bd1",
+    "figures\\supplementary\\fig04_ring_transition_speed_zooms.png": "82be9e6b83acb912a10b7c4b2dc4c70e1b2d787c4fb82dec13441e68dc8fc056",
+    "figures\\supplementary\\fig04_ring_transition_speed_zooms.svg": "cd8b53890e353d82b9d8aa4797f12e4bb3d1474fc9379b779a7adb61eb741e3a",
+    "figures\\supplementary\\fig04_topology_decompression_trajectories.caption.md": "8d25058be54881f0c4e52684e89492dfdf27bbca92ee868f2c715421b6f7fe87",
+    "figures\\supplementary\\fig04_topology_decompression_trajectories.pdf": "233009f1efa2c23c44da2441fd5acf46cc711c6593c02ac066036c336548a428",
+    "figures\\supplementary\\fig04_topology_decompression_trajectories.png": "aaa9a9b807b5e2407b31662a97d38c40f1d9eac3d8dfb7951cd51ba46e2425ad",
+    "figures\\supplementary\\fig04_topology_decompression_trajectories.svg": "0638b6cbfd0e270748e88f2b7adf5f906af31bac62fe4c3a6b6e246dd1c10cf6",
+    "figures\\supplementary\\fig04_topology_global3d.caption.md": "8d25058be54881f0c4e52684e89492dfdf27bbca92ee868f2c715421b6f7fe87",
+    "figures\\supplementary\\fig04_topology_global3d.pdf": "0b5384c5f0d4f46d20a10074d7ee4a4bd006295201af7a96026225ad878ee2a9",
+    "figures\\supplementary\\fig04_topology_global3d.png": "651f2c16183b4ddd001000f098602230358948b6671307bbe86dae108b1d0113",
+    "figures\\supplementary\\fig04_topology_global3d.svg": "c249139be9b7f442495e781b6e37c11be3c654adae0981661ee37b4fcbaac48d",
+    "figures\\supplementary\\fig04_topology_transition_speed_zooms.caption.md": "8d25058be54881f0c4e52684e89492dfdf27bbca92ee868f2c715421b6f7fe87",
+    "figures\\supplementary\\fig04_topology_transition_speed_zooms.pdf": "5383a2253a8efd8e81b6aca74797717f8f125b185e3c9e0143ea1879966a59e6",
+    "figures\\supplementary\\fig04_topology_transition_speed_zooms.png": "82be9e6b83acb912a10b7c4b2dc4c70e1b2d787c4fb82dec13441e68dc8fc056",
+    "figures\\supplementary\\fig04_topology_transition_speed_zooms.svg": "7786946625db571e74064ae13a695906e039ef3052a05f6d2c395843a57e57fc",
+    "figures\\supplementary\\fig05_one_hot_structural_controls.caption.md": "ed203ff5bbf024c78f87172c7dd1d86763bf2523a6d429df66267c6d89c921e4",
+    "figures\\supplementary\\fig05_one_hot_structural_controls.pdf": "52d1baed72cceb53f4c6d2953b3c4511d52da69f9070c754257e11840b5d8dd5",
+    "figures\\supplementary\\fig05_one_hot_structural_controls.png": "4d21631de081b714d524872da29c163cb7723e56697b9d409126ef6c4fbacc79",
+    "figures\\supplementary\\fig05_one_hot_structural_controls.svg": "0d5d9ff020233b76c2fe933b327493ac87542ae18a9ce100a12ae2531e31adec",
+    "figures\\supplementary\\fig05_ring_branch_subspaces.caption.md": "ed203ff5bbf024c78f87172c7dd1d86763bf2523a6d429df66267c6d89c921e4",
+    "figures\\supplementary\\fig05_ring_branch_subspaces.pdf": "1692cc801ed78c176dc9f51ba859244265fc5a13b8dae06fec4bb1808140a4c3",
+    "figures\\supplementary\\fig05_ring_branch_subspaces.png": "b17bbc5a2ed11220f3ae87ba1f5c0e1ed0c259cd91a22aa6d1a0feed62416a80",
+    "figures\\supplementary\\fig05_ring_branch_subspaces.svg": "3ed94855848f7c925cf91a70fb982dbc6f567437ffbcde9de022778028a60cfa",
+    "figures\\supplementary\\fig05_ring_structural_controls.caption.md": "ed203ff5bbf024c78f87172c7dd1d86763bf2523a6d429df66267c6d89c921e4",
+    "figures\\supplementary\\fig05_ring_structural_controls.pdf": "5a56b5c3e8af342c6a3bfbbc5f3775aa347735c038378098395fc4309efe6dd6",
+    "figures\\supplementary\\fig05_ring_structural_controls.png": "5b260550069412496bceb683c672e77c5b3e598ce809cdeed2ee555f32085d10",
+    "figures\\supplementary\\fig05_ring_structural_controls.svg": "5ac2b16b61d70b41c7c876b3215a4603ac710a1716e95838139f8b090e83e19d",
+    "figures\\supplementary\\fig05_topology_branch_subspaces.caption.md": "ed203ff5bbf024c78f87172c7dd1d86763bf2523a6d429df66267c6d89c921e4",
+    "figures\\supplementary\\fig05_topology_branch_subspaces.pdf": "edc26fa6227569192bbdb426c1ee82ee02815c3b9c39a8261e35638ba7a0aaba",
+    "figures\\supplementary\\fig05_topology_branch_subspaces.png": "908022069ab7df45e5feada682436f2ffbb231a905fe387188c260f5a94d9260",
+    "figures\\supplementary\\fig05_topology_branch_subspaces.svg": "87cebd4aa1400ad7188280de14d29086650e969cf2c858e56bac173994d205f5",
+    "figures\\supplementary\\fig05_topology_structural_controls.caption.md": "ed203ff5bbf024c78f87172c7dd1d86763bf2523a6d429df66267c6d89c921e4",
+    "figures\\supplementary\\fig05_topology_structural_controls.pdf": "874e57506b06583630b2a030bd825d8160c53deb53975f0b18ddf019aa01e9fb",
+    "figures\\supplementary\\fig05_topology_structural_controls.png": "9e9cf47e2a3bfa7209d5226c6b4a58aeaa392f4b89e16b1c0e78b0753833e049",
+    "figures\\supplementary\\fig05_topology_structural_controls.svg": "1f99b12596e7b4999196226b40396837d6ef1840e1ba7bb7f6e3a5d11971e7a0",
+    "figures\\supplementary\\fig06_ring.pdf": "edae6176b131b044840584facb4941f8d19738f8fcf37f3811785fe29be4d074",
+    "figures\\supplementary\\fig06_ring.png": "b455338d9d4c3b1b7e54df38718f8d774dfaf7223d9391e8a85c33df44bee4b4",
+    "figures\\supplementary\\fig06_ring.svg": "858cff4c36ca4b1bad58685b0f0ee9ceea91d31894bd6902cc202812fb69500d",
+    "figures\\supplementary\\fig06_ring_caption.md": "ce127a1fabe5bcfb1ee6fee003db58b0deb64315e4f14c309dbf8297b51af1e0",
+    "figures\\supplementary\\fig06_topology.pdf": "301971a36da1b266e3e2bd4d3460f570b2a78cb8b13ff56f42bfe998c47ac888",
+    "figures\\supplementary\\fig06_topology.png": "6f12c23222fe7ad8dfb26d80ba65e8f2597e4c8db0a0a02e8520345eaaa9722a",
+    "figures\\supplementary\\fig06_topology.svg": "6e70f0560e533b88d04671a4f5a49be517c6896acee305ee25644fca94ca2f32",
+    "figures\\supplementary\\fig06_topology_caption.md": "ce127a1fabe5bcfb1ee6fee003db58b0deb64315e4f14c309dbf8297b51af1e0",
+    "figures\\supplementary\\fig07_ring.pdf": "44a106fc9006a9835367f4fd1431d9ff6669a8172d47ca900deb8bd9a0474ef7",
+    "figures\\supplementary\\fig07_ring.png": "757a76b92c9f6f7561ecca96bcc092cec9fdbd55456b03ca033155882d13b017",
+    "figures\\supplementary\\fig07_ring.svg": "56f0e833a1a993a483ee1f6c4f84405fc8954acca75e7ff0d6d31fd85ce9ab9b",
+    "figures\\supplementary\\fig07_ring_caption.md": "3462fdce72f79815bd7f0d08cc2ad898701fef03260594c5a2949caf6904a32b",
+    "figures\\supplementary\\fig07_topology.pdf": "87cf9a404a2e70647121d04bae748f64b16316f378a4a18a1fc1e465e9249ff3",
+    "figures\\supplementary\\fig07_topology.png": "52c9a670bcc88e7b4a167910564d9f9e68e4eff173f501ba46ee5674580e4d00",
+    "figures\\supplementary\\fig07_topology.svg": "c2d36387cb49db8c40114365e0ba8ad1e25cbdcda9a4398e1bbb808092599092",
+    "figures\\supplementary\\fig07_topology_caption.md": "3462fdce72f79815bd7f0d08cc2ad898701fef03260594c5a2949caf6904a32b",
+    "figures\\supplementary\\fig08_one_hot_multiple_slices.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_one_hot_multiple_slices.pdf": "0c6261db3717ce5a61e49c837589705c73e45eb5dafdf937ee907d20ac2f6f18",
+    "figures\\supplementary\\fig08_one_hot_multiple_slices.png": "a24024e192ce2577c3c8925e5a0b2decef7c45854807317358c372e19d2ad060",
+    "figures\\supplementary\\fig08_one_hot_multiple_slices.svg": "112e4816e5262f079eea105b5c81b3aa67d278791f44ac4ad526b2a42bf2bb3b",
+    "figures\\supplementary\\fig08_one_hot_six_endpoints_3d.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_one_hot_six_endpoints_3d.pdf": "be6d8ba99e89b9e5bdab31699f629df2402c4437acc65ab2742b6e85971f36ad",
+    "figures\\supplementary\\fig08_one_hot_six_endpoints_3d.png": "65edc3d13ab88e107bee8d1fc54090e0d251bc885f111bfca2393f3c3bf0bee3",
+    "figures\\supplementary\\fig08_one_hot_six_endpoints_3d.svg": "bdeed9319f5f80dcbe50af5a5a5d7631bc8a986e45e676aa672dc0576a8e7e49",
+    "figures\\supplementary\\fig08_one_hot_six_point_attractors_branch1.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_one_hot_six_point_attractors_branch1.pdf": "bdfc1b63bc410500e9cc982c12884e3767886164edcdcf22b9fba0914e44e2fb",
+    "figures\\supplementary\\fig08_one_hot_six_point_attractors_branch1.png": "0fc643fb614fd5c214562758e028102c3d99941465ec00932910c08388a8f0fb",
+    "figures\\supplementary\\fig08_one_hot_six_point_attractors_branch1.svg": "b7a637258d3507ce49490a7b65c138c0964be31aca4f54e42bbf1bfc0ce17aef",
+    "figures\\supplementary\\fig08_one_hot_six_point_attractors_branch2.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_one_hot_six_point_attractors_branch2.pdf": "93170c96d6af2dd4b48f155bd43e4ac0e3e59278edc4948c663e20d62ddeb267",
+    "figures\\supplementary\\fig08_one_hot_six_point_attractors_branch2.png": "2820c46faa74d9f3083ecb52b00c73010812eaa7a347ca2d065800cdd5fe4a25",
+    "figures\\supplementary\\fig08_one_hot_six_point_attractors_branch2.svg": "0a6369cc0c765c862d4c5580d60f935be6fce6dd9bd409132a105450df33592b",
+    "figures\\supplementary\\fig08_one_hot_six_point_attractors_branch3.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_one_hot_six_point_attractors_branch3.pdf": "863c441ff5a9976d1af7c1d127a1061124996e825e5dd82eb115a71aec8a3132",
+    "figures\\supplementary\\fig08_one_hot_six_point_attractors_branch3.png": "b02b84e70db5affd1ae832b3efc68632830354f45a7a26636b3d436c28a647a2",
+    "figures\\supplementary\\fig08_one_hot_six_point_attractors_branch3.svg": "04f6e4110d6a7c2ab2795f8a52b5498e74402d35dd55efcee6ab47c4b044bc94",
+    "figures\\supplementary\\fig08_ring_multiple_slices.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_ring_multiple_slices.pdf": "871a04b07e5c409e9747e606b0c2ed8f5cd4df405d3a82cfaee7452c3d065dd0",
+    "figures\\supplementary\\fig08_ring_multiple_slices.png": "a24024e192ce2577c3c8925e5a0b2decef7c45854807317358c372e19d2ad060",
+    "figures\\supplementary\\fig08_ring_multiple_slices.svg": "904a0876edb4896bbb69c69b710f1815e4902e388bc57691b7fc069e2928b22e",
+    "figures\\supplementary\\fig08_ring_six_endpoints_3d.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_ring_six_endpoints_3d.pdf": "129cb86af431ebf9224086ed7af138653d0cc2cb68208a65cd9dd69fa3bde26b",
+    "figures\\supplementary\\fig08_ring_six_endpoints_3d.png": "65edc3d13ab88e107bee8d1fc54090e0d251bc885f111bfca2393f3c3bf0bee3",
+    "figures\\supplementary\\fig08_ring_six_endpoints_3d.svg": "27c7f257bbaba57b56f6a96d33cd0276bf653d26e4c0d38af68b963949f82a1a",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch0.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch0.pdf": "20f81546a7b57db5aee0a23e8e42c01c8bc827d496c73b3974b936fce477f1eb",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch0.png": "be6d32c2f80b13c75982f4c3dd3ca24fc184362574d58db3931bc9ba6bdcd4f0",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch0.svg": "4d0ea1a4bbe333bafb3acb86a53cc2a76f7d26106d42e771e27509df08fd4f6e",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch1.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch1.pdf": "7bf4a7f295b6c89021e85aebc5d46ca7d58b4fba2a860e51b8ebbbcb8e4ba9b9",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch1.png": "003754fadbc3fc771558b712888216d3016404119ccd10938544cc3ff9b1aadc",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch1.svg": "252bd79508942c77fed0701051805b20a0f53fbe4446b2a91fdd9a5a8e1615a7",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch2.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch2.pdf": "44762a564bd24900314ec6c604f2fed46f21170642d8793c31e43c378cf493d8",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch2.png": "85ee90db47e7add6aedb8c867f0c06abfabc9e43044b64ce0a125c38f28f15d4",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch2.svg": "9f3846ac28e62a501808c659393aa1c6384491278f59a7465b0fc35778c775cd",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch3.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch3.pdf": "a0c9703ec96438820533b0b4b1678a79582ce002b984d1e0824815dee5c23a05",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch3.png": "650603e7f8947ac2ef74ac42fe4b59954a87f4c1036c49cc4bd67f38829cbfde",
+    "figures\\supplementary\\fig08_ring_six_point_attractors_branch3.svg": "2c5c461e808b3e88e1d6b58d15653320c3abc4b08e73325460a233e406f95039",
+    "figures\\supplementary\\fig08_topology_multiple_slices.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_topology_multiple_slices.pdf": "03f1be10ac1b508fde0e15fe2d2f91f3122f1c64f329be232410646e045920d0",
+    "figures\\supplementary\\fig08_topology_multiple_slices.png": "a24024e192ce2577c3c8925e5a0b2decef7c45854807317358c372e19d2ad060",
+    "figures\\supplementary\\fig08_topology_multiple_slices.svg": "42988ca0a104fac43fa2e38d08649806a952c6458667658bd4430b8a8ff2e5ac",
+    "figures\\supplementary\\fig08_topology_six_endpoints_3d.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_topology_six_endpoints_3d.pdf": "b690832c640d981b3c8039d14d80b4a0fcbe96a0d4e18d07d9f776d282931478",
+    "figures\\supplementary\\fig08_topology_six_endpoints_3d.png": "65edc3d13ab88e107bee8d1fc54090e0d251bc885f111bfca2393f3c3bf0bee3",
+    "figures\\supplementary\\fig08_topology_six_endpoints_3d.svg": "46aac4c84c3ec5d1a863155b12d672ba4a898ceb77f7db2786caf4dd77995069",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch0.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch0.pdf": "040eef44b6b9c64b1d2e01bf271e7d2a5c224b7f26f1b0dc42ef81b78e3e646e",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch0.png": "5361ee0ce16670168dcb554efc708cf344710a29e19e718d3e5967cea34b28b6",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch0.svg": "985c81c5ec77f4aa5465afe6ff0c01e2d1a911a39db6b2d6c47e76c1672ec127",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch1.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch1.pdf": "a1695498ed52869d3a78a493a0995be19f64c6fdda7ed56408c1d522a7f7db9b",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch1.png": "7b0ff9b70a948209ad7ef879e039306ea0e247cb1a624ea28e57221748533131",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch1.svg": "4cef3f8441de7d22bc01a9c229a2888ded21184a52218f3f47cc3b7fdb4b94cc",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch2.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch2.pdf": "287cab2098bd8f9087d8bb45f7eb9cabca58edfb83d3f5d555e71766524768b8",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch2.png": "87dd8194789afae9c769f74e2a7ee7910155195ccf17ed547dfb49a536abfb01",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch2.svg": "67a7afb351f7d185034eda046f36e5eb4d58e467a7de4628170b7b33f8e3ccd1",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch3.caption.md": "bd8f3b5f1678c48d3d79a16ec94446857452806beb9142609420b7e20bdb7d26",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch3.pdf": "20115bb2df21197c93b83b4cc89c51ae43b799d7caca123f3455f519c71c90f4",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch3.png": "2deea293ee746edfd8c529fb6370bca5c1b44d32ef0248a143b4d612315b1358",
+    "figures\\supplementary\\fig08_topology_six_point_attractors_branch3.svg": "e5f703c61271af35f04dcce4b4a93f072fed021e356d21aece3c6787a01e2fcd",
+    "figures\\supplementary\\fig09_one_hot_perturbation_dynamics_R3_fixed_clock.caption.md": "a6bb7bb4a5085bbea172c89f8403177338eb1a0094fa225130a9ef254b843963",
+    "figures\\supplementary\\fig09_one_hot_perturbation_dynamics_R3_fixed_clock.pdf": "af444c8051c3eaef6a5e300f3806f69c761fa7cf31923becc8ec8c780c965f6e",
+    "figures\\supplementary\\fig09_one_hot_perturbation_dynamics_R3_fixed_clock.png": "c8d5769c522f34dbdc6bd5a8bd3b651b32515875823d76b35341d15f0eb405c4",
+    "figures\\supplementary\\fig09_one_hot_perturbation_dynamics_R3_fixed_clock.svg": "8bf07c37669f909b796108d3576252a48900768f1493d97396464b46334f2b86",
+    "figures\\supplementary\\fig09_ring_perturbation_dynamics_R3_fixed_clock.caption.md": "a6bb7bb4a5085bbea172c89f8403177338eb1a0094fa225130a9ef254b843963",
+    "figures\\supplementary\\fig09_ring_perturbation_dynamics_R3_fixed_clock.pdf": "fc087071cd3cb6dabba6120d9115319ea11249e269266caf4fc3845d00188bd3",
+    "figures\\supplementary\\fig09_ring_perturbation_dynamics_R3_fixed_clock.png": "5b415c2835c637a0837d6b0a05b493874049ea8f3077fd96885e8cd2b28d6680",
+    "figures\\supplementary\\fig09_ring_perturbation_dynamics_R3_fixed_clock.svg": "108100ac766edc8d2d7d2a4b1cac00c2adf9ef1aa3f2c3e4b8fdcf979fef28e7",
+    "figures\\supplementary\\fig09_ring_perturbation_dynamics_source_time.caption.md": "a6bb7bb4a5085bbea172c89f8403177338eb1a0094fa225130a9ef254b843963",
+    "figures\\supplementary\\fig09_ring_perturbation_dynamics_source_time.pdf": "152ce738eb7b87fc46237ecf3a66c4747c59d45f6fbdd64cd7c57abef0e913d4",
+    "figures\\supplementary\\fig09_ring_perturbation_dynamics_source_time.png": "9716db437d59cc6daa6d727a850373ef1e7e4c1126317beb99234e59c53516a0",
+    "figures\\supplementary\\fig09_ring_perturbation_dynamics_source_time.svg": "dc02b9d494da4ae88f6fa20b4d1a277dad3667ec52411f4dc0b0d606e6e97f61",
+    "figures\\supplementary\\fig09_topology_perturbation_dynamics_R3_fixed_clock.caption.md": "a6bb7bb4a5085bbea172c89f8403177338eb1a0094fa225130a9ef254b843963",
+    "figures\\supplementary\\fig09_topology_perturbation_dynamics_R3_fixed_clock.pdf": "88feaa8742e322318d05438abd9b4dc37a03462f6fdb232ade287c0f6df46a70",
+    "figures\\supplementary\\fig09_topology_perturbation_dynamics_R3_fixed_clock.png": "01c88b38928f3960123258358d532f1e9b70569220b1ad130b0d614fdacea282",
+    "figures\\supplementary\\fig09_topology_perturbation_dynamics_R3_fixed_clock.svg": "3476e5cbf105875dcef44119aa2e4ab7c38650aa1143cb0c78c0bf97f5ca8558",
+    "figures\\supplementary\\fig09_topology_perturbation_dynamics_source_time.caption.md": "a6bb7bb4a5085bbea172c89f8403177338eb1a0094fa225130a9ef254b843963",
+    "figures\\supplementary\\fig09_topology_perturbation_dynamics_source_time.pdf": "da8f7cdfa9517eafcb149be00df6dd6e33876be3e09ca3d8d1ce50aae960389a",
+    "figures\\supplementary\\fig09_topology_perturbation_dynamics_source_time.png": "72da53f92e37d17607f8dbde194630725a369bc6858d68bbade71e731281cef2",
+    "figures\\supplementary\\fig09_topology_perturbation_dynamics_source_time.svg": "d51212002f9d47fe09da168a8f77a5266d4659a3c2372074b3c57fa63cfec0fa"
+  },
+  "status": "PASS_WITH_LIMITS",
+  "visual_review": {
+    "status": "PASS_WITH_LIMITS",
+    "png_pdf_svg_triplets": 55,
+    "png_integrity_and_300dpi": {
+      "figures\\main\\fig01_one_hot.png": {
+        "size": [
+          3630,
+          2434
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\main\\fig02_one_hot.png": {
+        "size": [
+          3934,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\main\\fig03_one_hot.png": {
+        "size": [
+          4537,
+          2434
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\main\\fig04_one_hot_decompression_trajectories.png": {
+        "size": [
+          3934,
+          3334
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\main\\fig05_one_hot_branch_subspaces.png": {
+        "size": [
+          4234,
+          3034
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\main\\fig06_one_hot.png": {
+        "size": [
+          4231,
+          3034
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\main\\fig07_one_hot.png": {
+        "size": [
+          4834,
+          3934
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\main\\fig08_one_hot_six_point_attractors_branch0.png": {
+        "size": [
+          4233,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\main\\fig09_one_hot_perturbation_dynamics_source_time.png": {
+        "size": [
+          4229,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\main\\fig10_encoding_comparison.png": {
+        "size": [
+          4834,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig01_ring.png": {
+        "size": [
+          3630,
+          2434
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig01_topology.png": {
+        "size": [
+          3630,
+          2434
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig02_ring.png": {
+        "size": [
+          3934,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig02_topology.png": {
+        "size": [
+          3934,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig03_ring.png": {
+        "size": [
+          4537,
+          2434
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig03_topology.png": {
+        "size": [
+          4537,
+          2434
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig04_one_hot_global3d.png": {
+        "size": [
+          1814,
+          1834
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig04_one_hot_transition_speed_zooms.png": {
+        "size": [
+          3634,
+          1174
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig04_ring_decompression_trajectories.png": {
+        "size": [
+          3934,
+          3334
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig04_ring_global3d.png": {
+        "size": [
+          1814,
+          1834
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig04_ring_transition_speed_zooms.png": {
+        "size": [
+          3634,
+          1174
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig04_topology_decompression_trajectories.png": {
+        "size": [
+          3934,
+          3334
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig04_topology_global3d.png": {
+        "size": [
+          1814,
+          1834
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig04_topology_transition_speed_zooms.png": {
+        "size": [
+          3634,
+          1174
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig05_one_hot_structural_controls.png": {
+        "size": [
+          3323,
+          1054
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig05_ring_branch_subspaces.png": {
+        "size": [
+          4234,
+          3034
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig05_ring_structural_controls.png": {
+        "size": [
+          3323,
+          1054
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig05_topology_branch_subspaces.png": {
+        "size": [
+          4234,
+          3034
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig05_topology_structural_controls.png": {
+        "size": [
+          3323,
+          1054
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig06_ring.png": {
+        "size": [
+          4231,
+          3034
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig06_topology.png": {
+        "size": [
+          4231,
+          3034
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig07_ring.png": {
+        "size": [
+          4834,
+          3934
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig07_topology.png": {
+        "size": [
+          4834,
+          3934
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_one_hot_multiple_slices.png": {
+        "size": [
+          3538,
+          3934
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_one_hot_six_endpoints_3d.png": {
+        "size": [
+          3333,
+          3034
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_one_hot_six_point_attractors_branch1.png": {
+        "size": [
+          4233,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_one_hot_six_point_attractors_branch2.png": {
+        "size": [
+          4233,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_one_hot_six_point_attractors_branch3.png": {
+        "size": [
+          4233,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_ring_multiple_slices.png": {
+        "size": [
+          3538,
+          3934
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_ring_six_endpoints_3d.png": {
+        "size": [
+          3333,
+          3034
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_ring_six_point_attractors_branch0.png": {
+        "size": [
+          4233,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_ring_six_point_attractors_branch1.png": {
+        "size": [
+          4233,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_ring_six_point_attractors_branch2.png": {
+        "size": [
+          4233,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_ring_six_point_attractors_branch3.png": {
+        "size": [
+          4233,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_topology_multiple_slices.png": {
+        "size": [
+          3538,
+          3934
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_topology_six_endpoints_3d.png": {
+        "size": [
+          3333,
+          3034
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_topology_six_point_attractors_branch0.png": {
+        "size": [
+          4233,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_topology_six_point_attractors_branch1.png": {
+        "size": [
+          4233,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_topology_six_point_attractors_branch2.png": {
+        "size": [
+          4233,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig08_topology_six_point_attractors_branch3.png": {
+        "size": [
+          4233,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig09_one_hot_perturbation_dynamics_R3_fixed_clock.png": {
+        "size": [
+          4230,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig09_ring_perturbation_dynamics_R3_fixed_clock.png": {
+        "size": [
+          4230,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig09_ring_perturbation_dynamics_source_time.png": {
+        "size": [
+          4229,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig09_topology_perturbation_dynamics_R3_fixed_clock.png": {
+        "size": [
+          4230,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      },
+      "figures\\supplementary\\fig09_topology_perturbation_dynamics_source_time.png": {
+        "size": [
+          4229,
+          2734
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      }
+    },
+    "actual_opened_contact_sheets": [
+      "reports/independent_main_contact.png",
+      "reports/independent_supp_contact.png",
+      "reports/independent_final_contact.png",
+      "reports/independent_structural_contact.png"
+    ],
+    "actual_opened_full_resolution": [
+      "figures/main/fig08_one_hot_six_point_attractors_branch0.png",
+      "figures/main/fig09_one_hot_perturbation_dynamics_source_time.png",
+      "figures/supplementary/fig09_one_hot_perturbation_dynamics_R3_fixed_clock.png"
+    ],
+    "final_seven_class_statekick_review": "latest one_hot full images and ring/topology contact inspected; resolved other collapse",
+    "limitations": [
+      "2D projection may overlap full-state separated endpoints",
+      "degenerate endpoint PCA directions are not unique",
+      "fixed-clock PC2 has approximately zero control variance",
+      "21x21 finite slices do not estimate global basin",
+      "literature-source exact reproduction is outside this numerical audit"
+    ],
+    "structural_controls": "All three encoding supplements actually opened; source code checked against R3_angles/R3_folded_overlap/R3_b*_evr; cumulative VAF is direct cumulative sum."
+  },
+  "new_tests": {
+    "passed": 12,
+    "failed": 0,
+    "log": "reports/independent_tests.txt"
+  },
+  "audit_report_sha256": "198021320a7f10e190a04299e729c4ec5ad80b82c2c45cd6d287d23a1f4acd63"
+}

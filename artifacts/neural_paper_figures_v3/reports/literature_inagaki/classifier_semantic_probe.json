@@ -1,0 +1,12 @@
+{
+  "expert_id": "inagaki_v3",
+  "status": "PASS_CATEGORY_SEMANTICS_ONLY",
+  "execution": "analysis Python 3.12.12, per-process analysis/Library/bin DLL routing; OPENBLAS_NUM_THREADS=1, OMP_NUM_THREADS=1",
+  "scope": "Synthetic full-state vectors with explicitly supplied residual=0 to isolate priority semantics. These are NOT claims of dynamically converged states or new scientific experiments.",
+  "cases": [
+    {"input": "R3 branch0 positions0/1=1; all remaining rates=0", "expected": "multiple_positions", "actual": "multiple_positions", "active_branches": 1, "active_positions": 2},
+    {"input": "above plus R3 branch1 position0=1", "expected": "outside_branch", "actual": "outside_branch", "active_branches": 2, "active_positions": 2},
+    {"input": "all-zero rate vector", "expected": "rest", "actual": "rest", "active_branches": 0, "active_positions": 0}
+  ],
+  "earlier_failures": "Two Python starts exited1 without stdout; resolved using main-Agent verified DLL PATH routing. No dependencies installed or modified."
+}

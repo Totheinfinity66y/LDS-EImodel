@@ -1,0 +1,1 @@
+A: single-condition R1–R4 maxima; B: memory/gate/feedback actual peak rates; C: fixed R1 position-0 unit across six L, D=+1 S=1; D: all-condition E/I active fractions (>0.1) and total rates. Vertical markers come from recorded events; dotted readout, green transfer, dashed retire. All rates dimensionless.

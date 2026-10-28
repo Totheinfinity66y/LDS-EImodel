@@ -1,0 +1,35 @@
+{
+  "one_hot": {
+    "class_counts": {
+      "single": 216,
+      "multiple": 0,
+      "outside": 0,
+      "R3-inactive": 2556,
+      "unconverged": 0
+    },
+    "valid_points": 2772,
+    "max_residual": 4.1480625081171164e-10
+  },
+  "ring": {
+    "class_counts": {
+      "single": 216,
+      "multiple": 0,
+      "outside": 0,
+      "R3-inactive": 2556,
+      "unconverged": 0
+    },
+    "valid_points": 2772,
+    "max_residual": 4.1480625081171164e-10
+  },
+  "topology": {
+    "class_counts": {
+      "single": 216,
+      "multiple": 0,
+      "outside": 0,
+      "R3-inactive": 2556,
+      "unconverged": 0
+    },
+    "valid_points": 2772,
+    "max_residual": 4.1480625081171164e-10
+  }
+}

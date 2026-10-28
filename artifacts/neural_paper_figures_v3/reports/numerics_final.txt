@@ -1,0 +1,72 @@
+v3 basin one_hot branch 0 slice (0, 1, 2): 231 legal
+v3 basin one_hot branch 0 slice (0, 2, 4): 231 legal
+v3 basin one_hot branch 0 slice (1, 3, 5): 231 legal
+v3 basin one_hot branch 1 slice (0, 1, 2): 231 legal
+v3 basin one_hot branch 1 slice (0, 2, 4): 231 legal
+v3 basin one_hot branch 1 slice (1, 3, 5): 231 legal
+v3 basin one_hot branch 2 slice (0, 1, 2): 231 legal
+v3 basin one_hot branch 2 slice (0, 2, 4): 231 legal
+v3 basin one_hot branch 2 slice (1, 3, 5): 231 legal
+v3 basin one_hot branch 3 slice (0, 1, 2): 231 legal
+v3 basin one_hot branch 3 slice (0, 2, 4): 231 legal
+v3 basin one_hot branch 3 slice (1, 3, 5): 231 legal
+v3 perturb one_hot pre_R2_selection seed 7
+v3 perturb one_hot pre_R2_selection seed 11
+v3 perturb one_hot pre_R2_selection seed 19
+v3 perturb one_hot post_R2_formed seed 7
+v3 perturb one_hot post_R2_formed seed 11
+v3 perturb one_hot post_R2_formed seed 19
+v3 perturb one_hot pre_R3_selection seed 7
+v3 perturb one_hot pre_R3_selection seed 11
+v3 perturb one_hot pre_R3_selection seed 19
+v3 perturb one_hot post_R3_formed seed 7
+v3 perturb one_hot post_R3_formed seed 11
+v3 perturb one_hot post_R3_formed seed 19
+v3 basin ring branch 0 slice (0, 1, 2): 231 legal
+v3 basin ring branch 0 slice (0, 2, 4): 231 legal
+v3 basin ring branch 0 slice (1, 3, 5): 231 legal
+v3 basin ring branch 1 slice (0, 1, 2): 231 legal
+v3 basin ring branch 1 slice (0, 2, 4): 231 legal
+v3 basin ring branch 1 slice (1, 3, 5): 231 legal
+v3 basin ring branch 2 slice (0, 1, 2): 231 legal
+v3 basin ring branch 2 slice (0, 2, 4): 231 legal
+v3 basin ring branch 2 slice (1, 3, 5): 231 legal
+v3 basin ring branch 3 slice (0, 1, 2): 231 legal
+v3 basin ring branch 3 slice (0, 2, 4): 231 legal
+v3 basin ring branch 3 slice (1, 3, 5): 231 legal
+v3 perturb ring pre_R2_selection seed 7
+v3 perturb ring pre_R2_selection seed 11
+v3 perturb ring pre_R2_selection seed 19
+v3 perturb ring post_R2_formed seed 7
+v3 perturb ring post_R2_formed seed 11
+v3 perturb ring post_R2_formed seed 19
+v3 perturb ring pre_R3_selection seed 7
+v3 perturb ring pre_R3_selection seed 11
+v3 perturb ring pre_R3_selection seed 19
+v3 perturb ring post_R3_formed seed 7
+v3 perturb ring post_R3_formed seed 11
+v3 perturb ring post_R3_formed seed 19
+v3 basin topology branch 0 slice (0, 1, 2): 231 legal
+v3 basin topology branch 0 slice (0, 2, 4): 231 legal
+v3 basin topology branch 0 slice (1, 3, 5): 231 legal
+v3 basin topology branch 1 slice (0, 1, 2): 231 legal
+v3 basin topology branch 1 slice (0, 2, 4): 231 legal
+v3 basin topology branch 1 slice (1, 3, 5): 231 legal
+v3 basin topology branch 2 slice (0, 1, 2): 231 legal
+v3 basin topology branch 2 slice (0, 2, 4): 231 legal
+v3 basin topology branch 2 slice (1, 3, 5): 231 legal
+v3 basin topology branch 3 slice (0, 1, 2): 231 legal
+v3 basin topology branch 3 slice (0, 2, 4): 231 legal
+v3 basin topology branch 3 slice (1, 3, 5): 231 legal
+v3 perturb topology pre_R2_selection seed 7
+v3 perturb topology pre_R2_selection seed 11
+v3 perturb topology pre_R2_selection seed 19
+v3 perturb topology post_R2_formed seed 7
+v3 perturb topology post_R2_formed seed 11
+v3 perturb topology post_R2_formed seed 19
+v3 perturb topology pre_R3_selection seed 7
+v3 perturb topology pre_R3_selection seed 11
+v3 perturb topology pre_R3_selection seed 19
+v3 perturb topology post_R3_formed seed 7
+v3 perturb topology post_R3_formed seed 11
+v3 perturb topology post_R3_formed seed 19

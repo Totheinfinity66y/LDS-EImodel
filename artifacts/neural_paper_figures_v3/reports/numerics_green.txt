@@ -1,0 +1,12 @@
+test_archived_kick_preclip_and_postclip_doses_are_distinct (handcrafted_ei.tests.test_paper_v3_numerics.PaperV3Numerics.test_archived_kick_preclip_and_postclip_doses_are_distinct) ... ok
+test_competition_classifier_all_units (handcrafted_ei.tests.test_paper_v3_numerics.PaperV3Numerics.test_competition_classifier_all_units) ... ok
+test_integrator_exact_model_step_and_euler_jacobian (handcrafted_ei.tests.test_paper_v3_numerics.PaperV3Numerics.test_integrator_exact_model_step_and_euler_jacobian) ... ok
+test_multi_branch_same_location_is_not_single_state (handcrafted_ei.tests.test_paper_v3_numerics.PaperV3Numerics.test_multi_branch_same_location_is_not_single_state) ... ok
+test_projection_energy (handcrafted_ei.tests.test_paper_v3_numerics.PaperV3Numerics.test_projection_energy) ... ok
+test_source_time_has_no_fixed_field_convergence_claim (handcrafted_ei.tests.test_paper_v3_numerics.PaperV3Numerics.test_source_time_has_no_fixed_field_convergence_claim) ... ok
+test_zero_input_pair_and_shared_history (handcrafted_ei.tests.test_paper_v3_numerics.PaperV3Numerics.test_zero_input_pair_and_shared_history) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.465s
+
+OK

@@ -1,0 +1,82 @@
+#average trajectory for different conditions (ie motion, color, context)
+def trial_average_by_condition(all_r, y_full):
+    # y_full[:,0]=motion,[:,1]=color,[:,2]=context
+    motion = y_full[:,0].cpu().numpy()
+    color  = y_full[:,1].cpu().numpy()
+    context = y_full[:,2].cpu().numpy()
+    conds = {}
+    for m in [-1,1]:
+        for c in [-1,1]:
+            for ctx in [-1,1]:
+                mask = (motion==m) & (color==c) & (context==ctx)
+                if mask.sum() == 0:
+                    continue
+
+                # average over trials for that condition
+                avg = all_r[mask].mean(dim=0).cpu().detach().numpy()   # (H, T) #average trajectory over each condition
+                conds[(m,c,ctx)] = avg
+    return conds
+
+#plot average trajectories in a common PCA space
+def pca_plot_condition_trajectories(cond_trajs, n_components=3):
+    # stack and fit PCA on concatenated time X conditions
+    trajs = []
+    keys = []
+    for k,v in cond_trajs.items():
+        # v: (H, T) -> transpose to (T, H)
+        trajs.append(v.T)
+        keys.append(k)
+
+    big = np.concatenate(trajs, axis=0)   # (T*conds, H)
+    print("trajs.shape", big.shape)
+
+    pca = PCA(n_components=n_components)
+    big_p = pca.fit_transform(big)        # (T*conds, n_components)
+    print("big_p.shape", big_p.shape)
+
+    # split back and plot
+    idx = 0
+    from mpl_toolkits.mplot3d import Axes3D
+    fig = plt.figure(figsize=(7,6))
+    ax = fig.add_subplot(111, projection='3d')
+    for k,v in zip(keys, trajs):
+        T = v.shape[0]
+        seg = big_p[idx:idx+T]
+        ctx = k[2]
+        color = 'C0' if ctx==-1 else 'C1'
+        ax.plot(seg[:,0], seg[:,1], seg[:,2], color=color, alpha=0.9)
+        idx += T
+    ax.set_xlabel('PC1'); ax.set_ylabel('PC2'); ax.set_zlabel('PC3')
+    plt.title('Condition-averaged PCA trajectories')
+    plt.show()
+
+conds = trial_average_by_condition(all_r, y_dataset_full2)
+pca_plot_condition_trajectories(conds)
+
+
+#do PCA on all trajectories
+#the dimensionality being reduced is the unit dimension (from 100 to 2 or 3, so we can visualize)
+def pca_plot_trajectories(all_r, list_of_trials, n_components=3):
+    # stack and fit PCA on concatenated time X conditions
+
+    batch, n_units, t = all_r.shape
+
+    big = np.transpose(all_r.cpu().detach().numpy(), (0,2,1)).reshape(-1, all_r.shape[1])   # (T*conds, H)
+    print("trajs.shape", big.shape)
+
+    pca = PCA(n_components=n_components)
+    big_p = pca.fit_transform(big)        # (T*batch, n_components)
+    big_p = big_p.reshape(...) #Exercise 5
+    print("big_p.shape", big_p.shape)
+
+    # split back and plot
+    from mpl_toolkits.mplot3d import Axes3D
+    fig = plt.figure(figsize=(7,6))
+    ax = fig.add_subplot(111, projection='3d')
+
+    for idx in list_of_trials:
+      ax.plot(big_p[idx,:,0], big_p[idx,:,1], big_p[idx,:,2])
+
+    ax.set_xlabel('PC1'); ax.set_ylabel('PC2'); ax.set_zlabel('PC3')
+    plt.title('Condition-averaged PCA trajectories')
+    plt.show()

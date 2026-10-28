@@ -44,3 +44,11 @@ artifacts/neural_paper_figures_v1/derived/*/fig08_six_point_basins*.npz
 artifacts/neural_paper_figures_v1/derived/*/fig08_sixmean_control*.npz
 artifacts/neural_paper_figures_v1/derived/*/fig09_stage_perturbations.npz
 artifacts/neural_paper_figures_v1/derived/comparison/fig10_matched_current_full.npz
+# V3 full perturbation trajectories remain local and hash-indexed.
+artifacts/neural_paper_figures_v3/derived/*/fig09_stage_perturbation_v3.npz
+artifacts/neural_paper_figures_v3/derived/comparison/fig10_matched_current_full.npz
+# Copyrighted original figures/PDFs and upstream notebook copies are local only.
+artifacts/neural_paper_figures_v3/reports/literature_*/**/*.pdf
+artifacts/neural_paper_figures_v3/reports/literature_*/**/*.png
+artifacts/neural_paper_figures_v3/reports/literature_*/**/*.jpg
+artifacts/neural_paper_figures_v3/reports/literature_*/**/*.ipynb

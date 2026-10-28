@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "inputs": {
+    "handcrafted_ei\\artifacts\\v2\\run\\one_hot__baseline.zip": "70b419e3203742c38f0a1b05b2ba40bf8c1ed29e92c56721eae51097d2a4573f",
+    "artifacts\\neural_paper_figures_v3\\derived\\one_hot\\fig09_stage_perturbation_v3.npz": "95d25c614822391d660e8e09046ffd7127329919b569fc61272a93505734758b"
+  },
+  "parameters": {
+    "duration_ms": 50,
+    "amplitude": 0.25,
+    "onsets_ms": [
+      1860.0,
+      2270.0,
+      2330.0,
+      2740.0
+    ],
+    "event_times_ms": {
+      "sample_start": 0.0,
+      "sample_end": 200.0,
+      "delay_end": 1800.0,
+      "readout1_start": 1800.0,
+      "readout1": 1900.0,
+      "to_R2": 1910.0,
+      "retire1": 2110.0,
+      "readout2_start": 2270.0,
+      "readout2": 2370.0,
+      "to_R3": 2380.0,
+      "retire2": 2580.0,
+      "readout3_start": 2740.0,
+      "readout3": 2840.0,
+      "to_R4": 2850.0,
+      "retire3": 3050.0,
+      "readout4_start": 3210.0,
+      "readout4": 3310.0,
+      "end": 3310.0
+    },
+    "seeds": [
+      7,
+      11,
+      19
+    ],
+    "activity_threshold": 0.2,
+    "recovery_maxnorm": 0.02,
+    "protocol": "source-time paired archived currents; readout and stage pattern comparison; no equilibrium claim",
+    "prehistory": "bitwise identical",
+    "control_replay_max_error": 2.220446049250313e-16
+  },
+  "source_sha256": "dc6369731f5beb5269c717fbac1f6791bfa2289d4506471b8ba673dedd5dfd80",
+  "source": "independent evaluation arrays; no model/task changes",
+  "python": "3.12.12 | packaged by conda-forge | (main, Jan 26 2026, 23:38:32) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "rates_units": "dimensionless",
+  "seeds": [
+    7,
+    11,
+    19
+  ],
+  "analysis_source_sha256": "6f6647fa557fc4308e3d57e5eb78637991380f92f637700a74ed2e6e5eae4865",
+  "analysis_source": "handcrafted_ei/evaluation/paper_v3_dynamics.py"
+}
