@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-28T11:15:57.420Z",
+  "target": "C:\\Users\\Totheinfinity\\AppData\\Local\\NimbalystMcpBridge\\bridge.cjs",
+  "backupDir": "C:\\Users\\Totheinfinity\\AppData\\Local\\NimbalystMcpBridge\\repairs\\2026-10-28T11-15-57-418Z-session-memory",
+  "beforeSha256": "77e8b4c2fce83b66c4b90b80b858f8c7294ebbe3d07893754146c9df282fc713",
+  "afterSha256": "256905a37e3b8bf4626d9f9eb2a4621bdc47a8c9ced730f9308390d6c7cf7f86",
+  "changes": [
+    "Expose child-session creation, follow-up and inspection tools",
+    "Include existing read-only memory route in default catalog"
+  ]
+}

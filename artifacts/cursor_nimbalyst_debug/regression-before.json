@@ -1,0 +1,72 @@
+{
+  "at": "2026-10-28T11:18:29.997Z",
+  "bridge": "C:\\Users\\Totheinfinity\\AppData\\Local\\NimbalystMcpBridge\\repairs\\2026-10-28T11-15-57-418Z-session-memory\\bridge.cjs.bak",
+  "failed": 9,
+  "results": [
+    {
+      "name": "spawn_session routes with caller identity",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   code: -32000,\n+   message: 'Tool spawn_session is not exposed by this bridge.'\n+ }\n- undefined\n"
+    },
+    {
+      "name": "create_session routes with caller identity",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   code: -32000,\n+   message: 'Tool create_session is not exposed by this bridge.'\n+ }\n- undefined\n"
+    },
+    {
+      "name": "send_prompt routes with caller identity",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   code: -32000,\n+   message: 'Tool send_prompt is not exposed by this bridge.'\n+ }\n- undefined\n"
+    },
+    {
+      "name": "get_session_status routes with caller identity",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   code: -32000,\n+   message: 'Tool get_session_status is not exposed by this bridge.'\n+ }\n- undefined\n"
+    },
+    {
+      "name": "get_session_result routes with caller identity",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   code: -32000,\n+   message: 'Tool get_session_result is not exposed by this bridge.'\n+ }\n- undefined\n"
+    },
+    {
+      "name": "list_recent_sessions routes with caller identity",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   code: -32000,\n+   message: 'Tool list_recent_sessions is not exposed by this bridge.'\n+ }\n- undefined\n"
+    },
+    {
+      "name": "memory_recall routes with caller identity",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   code: -32000,\n+   message: 'Tool memory_recall is not exposed by this bridge.'\n+ }\n- undefined\n"
+    },
+    {
+      "name": "memory_status routes with caller identity",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   code: -32000,\n+   message: 'Tool memory_status is not exposed by this bridge.'\n+ }\n- undefined\n"
+    },
+    {
+      "name": "memory_search_project_knowledge routes with caller identity",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   code: -32000,\n+   message: 'Tool memory_search_project_knowledge is not exposed by this bridge.'\n+ }\n- undefined\n"
+    },
+    {
+      "name": "update_session_meta routes with caller identity",
+      "pass": true
+    },
+    {
+      "name": "readCollabDoc routes with caller identity",
+      "pass": true
+    },
+    {
+      "name": "invalid caller identity never reaches upstream",
+      "pass": true
+    },
+    {
+      "name": "read-only memory boundary retained",
+      "pass": true
+    },
+    {
+      "name": "session metadata rejects invalid phase",
+      "pass": true
+    }
+  ]
+}

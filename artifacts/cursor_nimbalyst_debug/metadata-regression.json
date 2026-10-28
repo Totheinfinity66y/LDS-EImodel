@@ -1,0 +1,94 @@
+{
+  "failed": 0,
+  "results": [
+    {
+      "name": "bad phase",
+      "pass": true,
+      "forwarded": 0,
+      "error": true
+    },
+    {
+      "name": "unknown tags",
+      "pass": true,
+      "forwarded": 0,
+      "error": true
+    },
+    {
+      "name": "atomic reject mixed bad input",
+      "pass": true,
+      "forwarded": 0,
+      "error": true
+    },
+    {
+      "name": "canonical array",
+      "pass": true,
+      "forwarded": 1,
+      "args": {
+        "add": [
+          "feature",
+          "handcrafted-ei"
+        ],
+        "phase": "implementing"
+      },
+      "error": false
+    },
+    {
+      "name": "Cursor array wrapper",
+      "pass": true,
+      "forwarded": 1,
+      "args": {
+        "add": [
+          "feature",
+          "handcrafted-ei"
+        ]
+      },
+      "error": false
+    },
+    {
+      "name": "Cursor singleton wrapper",
+      "pass": true,
+      "forwarded": 1,
+      "args": {
+        "remove": [
+          "probe-tag"
+        ]
+      },
+      "error": false
+    },
+    {
+      "name": "reject JSON-string tag recovery",
+      "pass": true,
+      "forwarded": 0,
+      "error": true
+    },
+    {
+      "name": "reject non-string tag",
+      "pass": true,
+      "forwarded": 0,
+      "error": true
+    },
+    {
+      "name": "allow removal of preexisting malformed tag",
+      "pass": true,
+      "forwarded": 1,
+      "args": {
+        "remove": [
+          "[\"feature\",\"handcrafted-ei\"]"
+        ]
+      },
+      "error": false
+    },
+    {
+      "name": "reject malformed added tag",
+      "pass": true,
+      "forwarded": 0,
+      "error": true
+    },
+    {
+      "name": "reject invalid workflow",
+      "pass": true,
+      "forwarded": 0,
+      "error": true
+    }
+  ]
+}

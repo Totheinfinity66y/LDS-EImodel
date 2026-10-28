@@ -1,0 +1,101 @@
+{
+  "at": "2026-10-28T11:22:28.079Z",
+  "bridge": "C:\\Users\\Totheinfinity\\AppData\\Local\\NimbalystMcpBridge\\bridge.cjs",
+  "initialized": {
+    "name": "nimbalyst",
+    "version": "2.0.0-local-bridge"
+  },
+  "count": 48,
+  "names": [
+    "capture_editor_screenshot",
+    "display_to_user",
+    "update_session_meta",
+    "get_session_summary",
+    "get_session_coaching_signals",
+    "get_workstream_overview",
+    "list_recent_sessions",
+    "get_workstream_edited_files",
+    "list_citable_inputs",
+    "create_session",
+    "spawn_session",
+    "get_session_status",
+    "get_session_result",
+    "send_prompt",
+    "list_spawned_sessions",
+    "tracker_list",
+    "tracker_ready",
+    "work_radar",
+    "tracker_get",
+    "tracker_list_types",
+    "tracker_get_by_urn",
+    "readCollabDoc",
+    "applyCollabDocEdit",
+    "readCollabDocComments",
+    "replyToCollabDocComment",
+    "createCollabDocComment",
+    "declareCanvasWorkingSet",
+    "releaseCanvasWorkingSet",
+    "listPages",
+    "searchPages",
+    "createSharedDoc",
+    "importFileToPages",
+    "createSharedFolder",
+    "moveSharedItem",
+    "renameSharedItem",
+    "deleteSharedItem",
+    "setPageType",
+    "setPageFields",
+    "getResourceSharingStatus",
+    "memory_search_project_knowledge",
+    "memory_recall",
+    "memory_expand",
+    "memory_read_doc",
+    "memory_get_latest_plan",
+    "memory_read_plan",
+    "memory_status",
+    "list_workspace_guidance",
+    "read_workspace_document"
+  ],
+  "missing": [],
+  "calls": {
+    "memory_status": {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"ready\": true,\n  \"chunks\": 120,\n  \"denseChunks\": 0,\n  \"bySourceClass\": {\n    \"docs\": 95,\n    \"rules\": 25\n  },\n  \"sourceFiles\": 8,\n  \"lastIndexedAt\": 1793186438195,\n  \"embedder\": {\n    \"id\": \"sparse\",\n    \"model\": \"bm25\",\n    \"dims\": 0\n  },\n  \"embedderChanged\": false,\n  \"indexing\": false,\n  \"retrieval\": {\n    \"mode\": \"keyword-only\",\n    \"semantic\": {\n      \"available\": false,\n      \"reason\": \"optional-embedding-provider-unavailable\"\n    },\n    \"keyword\": {\n      \"available\": true,\n      \"source\": \"local-project-index\"\n    }\n  },\n  \"root\": \"D:\\\\Library\\\\10-16-handcrafted\",\n  \"indexSizeBytes\": 969976\n}"
+          }
+        ],
+        "isError": false
+      },
+      "jsonrpc": "2.0",
+      "id": 3
+    },
+    "memory_recall": {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"facts\": []\n}"
+          }
+        ],
+        "isError": false
+      },
+      "jsonrpc": "2.0",
+      "id": 4
+    },
+    "list_recent_sessions": {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Recent sessions (showing 1 of 55 total):\n\n1. \"Cursor CLI 集成调试\" (e8aa7849-9a20-48fa-b004-ab3226b5b185) - just now [RUNNING] [CURRENT]\n   Provider: openai-codex | Phase: validating | Tags: #bug-fix, #cursor, #nimbalyst, #uncommitted"
+          }
+        ],
+        "isError": false
+      },
+      "jsonrpc": "2.0",
+      "id": 5
+    }
+  }
+}

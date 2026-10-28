@@ -1,0 +1,83 @@
+{
+  "at": "2026-10-28T11:22:59.327Z",
+  "bridge": "C:\\Users\\Totheinfinity\\AppData\\Local\\NimbalystMcpBridge\\bridge.cjs",
+  "failed": 0,
+  "results": [
+    {
+      "name": "spawn_session routes with caller identity",
+      "pass": true
+    },
+    {
+      "name": "create_session routes with caller identity",
+      "pass": true
+    },
+    {
+      "name": "send_prompt routes with caller identity",
+      "pass": true
+    },
+    {
+      "name": "get_session_status routes with caller identity",
+      "pass": true
+    },
+    {
+      "name": "get_session_result routes with caller identity",
+      "pass": true
+    },
+    {
+      "name": "list_recent_sessions routes with caller identity",
+      "pass": true
+    },
+    {
+      "name": "memory_recall routes with caller identity",
+      "pass": true
+    },
+    {
+      "name": "memory_status routes with caller identity",
+      "pass": true
+    },
+    {
+      "name": "memory_search_project_knowledge routes with caller identity",
+      "pass": true
+    },
+    {
+      "name": "update_session_meta routes with caller identity",
+      "pass": true
+    },
+    {
+      "name": "readCollabDoc routes with caller identity",
+      "pass": true
+    },
+    {
+      "name": "invalid caller identity never reaches upstream",
+      "pass": true
+    },
+    {
+      "name": "read-only memory boundary retained",
+      "pass": true
+    },
+    {
+      "name": "session metadata rejects invalid phase",
+      "pass": true
+    },
+    {
+      "name": "Cursor string false remains false at upstream",
+      "pass": true
+    },
+    {
+      "name": "Cursor numeric limit reaches upstream as a number",
+      "pass": true
+    },
+    {
+      "name": "string fields are not coerced",
+      "pass": true
+    },
+    {
+      "name": "native false stays false",
+      "pass": true
+    },
+    {
+      "name": "nonfinite and noncanonical numeric strings are not guessed",
+      "pass": true
+    }
+  ]
+}
